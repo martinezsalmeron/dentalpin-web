@@ -34,17 +34,116 @@ const locale = lang as Locale;
 const kind = (Object.keys(SLUG_MAP[locale]) as Kind[]).find((k) => SLUG_MAP[locale][k] === slug);
 if (!kind) return Astro.redirect(`/${locale}/`, 308);
 const title = TITLES[locale][kind];
+
+const cookiesPath = `/${locale}/legal/${SLUG_MAP[locale].cookies}/`;
 ---
 
 <BaseLayout locale={locale} title={`${title} · Dentalpin`} noindex>
   <Section maxWidth="narrow" padY="lg">
     <h1 class="text-marketing-h1 text-[var(--color-text)]">{title}</h1>
+
     <div class="prose prose-sm mt-8 max-w-none text-[var(--color-text-muted)]">
-      <p>
-        {locale === 'es'
-          ? 'Documento pendiente de redacción legal. Actualízalo antes del lanzamiento.'
-          : 'Legal document pending drafting. Update before launch.'}
-      </p>
+      {kind === 'privacy' && locale === 'es' && (
+        <>
+          <p><em>Última actualización: 23 de abril de 2026.</em></p>
+
+          <h2>1. Responsable del tratamiento</h2>
+          <p>
+            Dentared Odontology Services S.L.<br />
+            CIF: B86142809<br />
+            Calle Torres Quevedo 13, 28108 Alcobendas, Madrid (España)<br />
+            Contacto: <a href="mailto:hola@dentalpin.com">hola@dentalpin.com</a>
+          </p>
+
+          <h2>2. Datos que tratamos</h2>
+          <ul>
+            <li>Datos identificativos y de contacto que nos facilitas al escribirnos, suscribirte a la lista de espera del Cloud o solicitar servicios (nombre, email, nombre de la clínica).</li>
+            <li>Datos técnicos mínimos asociados a la navegación (dirección IP, tipo de navegador, páginas vistas, fechas), recogidos sin cookies de seguimiento de terceros.</li>
+            <li>Datos de la conversación que mantengamos por email u otros canales que abras tú.</li>
+          </ul>
+
+          <h2>3. Finalidades y base legal</h2>
+          <ul>
+            <li>Atender tus consultas y prestarte el servicio solicitado. Base legal: ejecución de un contrato o aplicación de medidas precontractuales (art. 6.1.b RGPD).</li>
+            <li>Gestionar la lista de espera del Cloud y avisarte cuando abramos plazas. Base legal: tu consentimiento (art. 6.1.a RGPD).</li>
+            <li>Cumplir obligaciones legales, contables y fiscales. Base legal: cumplimiento de una obligación legal (art. 6.1.c RGPD).</li>
+            <li>Mejorar el sitio web y el producto a partir de métricas agregadas. Base legal: interés legítimo (art. 6.1.f RGPD).</li>
+          </ul>
+
+          <h2>4. Conservación</h2>
+          <p>Conservamos tus datos el tiempo necesario para la finalidad por la que los recogimos y, después, durante los plazos legales aplicables (típicamente seis años para documentación contable). Si retiras el consentimiento, los suprimiremos salvo que debamos conservarlos por ley.</p>
+
+          <h2>5. Destinatarios</h2>
+          <p>No cedemos tus datos a terceros salvo obligación legal. Trabajamos con encargados del tratamiento que nos prestan servicios de hosting, email y analítica, todos ellos con contrato de encargo conforme al art. 28 RGPD. La lista actualizada está disponible escribiéndonos a <a href="mailto:hola@dentalpin.com">hola@dentalpin.com</a>.</p>
+
+          <h2>6. Transferencias internacionales</h2>
+          <p>Priorizamos proveedores con infraestructura en la Unión Europea. Cuando algún proveedor opere fuera del EEE, garantizamos la transferencia mediante Cláusulas Contractuales Tipo aprobadas por la Comisión Europea u otro mecanismo válido del Capítulo V del RGPD.</p>
+
+          <h2>7. Tus derechos</h2>
+          <p>Puedes ejercer en cualquier momento tus derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento, portabilidad y a no ser objeto de decisiones automatizadas. Para hacerlo, escríbenos a <a href="mailto:hola@dentalpin.com">hola@dentalpin.com</a> indicando el derecho que quieres ejercer y adjuntando un documento que acredite tu identidad. Si consideras que no hemos atendido correctamente tu solicitud, puedes presentar una reclamación ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>).</p>
+
+          <h2>8. Cookies</h2>
+          <p>Este sitio usa cookies estrictamente necesarias para su funcionamiento. Puedes consultar el detalle en nuestra <a href={cookiesPath}>Política de cookies</a>.</p>
+
+          <h2>9. Cambios en esta política</h2>
+          <p>Podemos actualizar esta política para reflejar cambios legales o de producto. Publicaremos siempre la versión vigente en esta misma URL e indicaremos la fecha de la última revisión.</p>
+        </>
+      )}
+
+      {kind === 'privacy' && locale === 'en' && (
+        <>
+          <p><em>Last updated: April 23, 2026.</em></p>
+
+          <h2>1. Data controller</h2>
+          <p>
+            Dentared Odontology Services S.L.<br />
+            Tax ID (CIF): B86142809<br />
+            Calle Torres Quevedo 13, 28108 Alcobendas, Madrid (Spain)<br />
+            Contact: <a href="mailto:hola@dentalpin.com">hola@dentalpin.com</a>
+          </p>
+
+          <h2>2. Data we process</h2>
+          <ul>
+            <li>Identification and contact data you give us when you write to us, join the Cloud waitlist or request services (name, email, clinic name).</li>
+            <li>Minimal technical data tied to your browsing (IP address, browser type, pages viewed, timestamps), collected without third-party tracking cookies.</li>
+            <li>Conversation data from any email or channel you open with us.</li>
+          </ul>
+
+          <h2>3. Purposes and legal basis</h2>
+          <ul>
+            <li>Answer your queries and deliver the service you request. Legal basis: performance of a contract or precontractual measures (art. 6.1.b GDPR).</li>
+            <li>Manage the Cloud waitlist and notify you when slots open. Legal basis: your consent (art. 6.1.a GDPR).</li>
+            <li>Comply with legal, accounting and tax obligations. Legal basis: compliance with a legal obligation (art. 6.1.c GDPR).</li>
+            <li>Improve the website and product through aggregate metrics. Legal basis: legitimate interest (art. 6.1.f GDPR).</li>
+          </ul>
+
+          <h2>4. Retention</h2>
+          <p>We keep your data for as long as needed for the purpose it was collected and, after that, for the applicable legal periods (typically six years for accounting records). If you withdraw consent, we delete it unless the law requires otherwise.</p>
+
+          <h2>5. Recipients</h2>
+          <p>We do not share your data with third parties except where legally required. We work with processors that provide hosting, email and analytics, all under a data processing agreement as required by art. 28 GDPR. An up to date list is available on request at <a href="mailto:hola@dentalpin.com">hola@dentalpin.com</a>.</p>
+
+          <h2>6. International transfers</h2>
+          <p>We prioritise providers with EU infrastructure. When a provider operates outside the EEA, transfers rely on Standard Contractual Clauses approved by the European Commission or another valid mechanism under Chapter V of the GDPR.</p>
+
+          <h2>7. Your rights</h2>
+          <p>You can exercise your rights of access, rectification, erasure, objection, restriction of processing, portability and not to be subject to automated decisions at any time. Write to <a href="mailto:hola@dentalpin.com">hola@dentalpin.com</a> stating the right you wish to exercise and attaching proof of identity. If you believe we have not handled your request properly, you can file a complaint with the Spanish Data Protection Agency (<a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>).</p>
+
+          <h2>8. Cookies</h2>
+          <p>This site uses strictly necessary cookies only. See our <a href={cookiesPath}>Cookie policy</a> for details.</p>
+
+          <h2>9. Changes to this policy</h2>
+          <p>We may update this policy to reflect legal or product changes. The current version will always be available at this URL with the date of the latest revision.</p>
+        </>
+      )}
+
+      {kind !== 'privacy' && (
+        <p>
+          {locale === 'es'
+            ? 'Documento pendiente de redacción legal. Actualízalo antes del lanzamiento.'
+            : 'Legal document pending drafting. Update before launch.'}
+        </p>
+      )}
     </div>
   </Section>
 </BaseLayout>
