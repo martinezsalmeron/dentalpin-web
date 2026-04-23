@@ -1,28 +1,39 @@
 ---
-import { isLocale, useTranslations, type Locale } from '~/i18n';
+import { isLocale, type Locale } from '~/i18n';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Section from '@dentalpin/ui/Section.astro';
 
-type Slug = 'privacidad' | 'terminos' | 'cookies';
-
 export function getStaticPaths() {
-  const slugs: Slug[] = ['privacidad', 'terminos', 'cookies'];
-  return (['es', 'en'] as const).flatMap((lang) =>
-    slugs.map((slug) => ({ params: { lang, slug } })),
-  );
+  const SLUGS = {
+    es: { privacy: 'privacidad', terms: 'terminos', cookies: 'cookies' },
+    en: { privacy: 'privacy', terms: 'terms', cookies: 'cookies' },
+  } as const;
+  const out: { params: { lang: 'es' | 'en'; slug: string } }[] = [];
+  (['es', 'en'] as const).forEach((l) => {
+    (['privacy', 'terms', 'cookies'] as const).forEach((k) => {
+      out.push({ params: { lang: l, slug: SLUGS[l][k] } });
+    });
+  });
+  return out;
 }
 
-const { lang, slug } = Astro.params;
-const validSlugs: Slug[] = ['privacidad', 'terminos', 'cookies'];
-if (!isLocale(lang) || !validSlugs.includes(slug as Slug)) return Astro.redirect('/es/', 308);
-const locale = lang as Locale;
-const t = useTranslations(locale);
-
-const titles: Record<Locale, Record<Slug, string>> = {
-  es: { privacidad: 'Política de privacidad', terminos: 'Términos de uso', cookies: 'Política de cookies' },
-  en: { privacidad: 'Privacy policy', terminos: 'Terms of use', cookies: 'Cookie policy' },
+type Kind = 'privacy' | 'terms' | 'cookies';
+const SLUG_MAP: Record<Locale, Record<Kind, string>> = {
+  es: { privacy: 'privacidad', terms: 'terminos', cookies: 'cookies' },
+  en: { privacy: 'privacy', terms: 'terms', cookies: 'cookies' },
 };
-const title = titles[locale][slug as Slug];
+const TITLES: Record<Locale, Record<Kind, string>> = {
+  es: { privacy: 'Política de privacidad', terms: 'Términos de uso', cookies: 'Política de cookies' },
+  en: { privacy: 'Privacy policy', terms: 'Terms of use', cookies: 'Cookie policy' },
+};
+
+const { lang, slug } = Astro.params;
+if (!isLocale(lang)) return Astro.redirect('/es/', 308);
+const locale = lang as Locale;
+
+const kind = (Object.keys(SLUG_MAP[locale]) as Kind[]).find((k) => SLUG_MAP[locale][k] === slug);
+if (!kind) return Astro.redirect(`/${locale}/`, 308);
+const title = TITLES[locale][kind];
 ---
 
 <BaseLayout locale={locale} title={`${title} · Dentalpin`} noindex>

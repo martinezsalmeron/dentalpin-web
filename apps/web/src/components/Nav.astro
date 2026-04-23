@@ -1,5 +1,5 @@
 ---
-import { useDict, localisedPath, type Locale } from '~/i18n';
+import { useDict, localisedPath, pagePath, type Locale } from '~/i18n';
 import Button from '@dentalpin/ui/Button.astro';
 import Icon from '@dentalpin/ui/Icon.astro';
 import LanguagePicker from './LanguagePicker.astro';
@@ -33,12 +33,12 @@ const stars = await getGithubStars('martinezsalmeron', 'dentalpin');
     <ul class="hidden flex-1 items-center gap-1 lg:flex">
       <li><MegaMenuFeatures locale={locale} /></li>
       <li>
-        <a class="rounded-[var(--radius-sm)] px-3 py-2 text-[14px] text-[var(--color-text-muted)] hover:bg-[var(--color-surface-muted)] hover:text-[var(--color-text)]" href={localisedPath(locale, 'precios')}>
+        <a class="rounded-[var(--radius-sm)] px-3 py-2 text-[14px] text-[var(--color-text-muted)] hover:bg-[var(--color-surface-muted)] hover:text-[var(--color-text)]" href={pagePath(locale, 'pricing')}>
           {dict.nav.pricing}
         </a>
       </li>
       <li>
-        <a class="rounded-[var(--radius-sm)] px-3 py-2 text-[14px] text-[var(--color-text-muted)] hover:bg-[var(--color-surface-muted)] hover:text-[var(--color-text)]" href={localisedPath(locale, 'manifiesto')}>
+        <a class="rounded-[var(--radius-sm)] px-3 py-2 text-[14px] text-[var(--color-text-muted)] hover:bg-[var(--color-surface-muted)] hover:text-[var(--color-text)]" href={pagePath(locale, 'manifesto')}>
           {dict.nav.manifesto}
         </a>
       </li>

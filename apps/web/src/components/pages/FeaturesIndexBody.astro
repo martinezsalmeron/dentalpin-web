@@ -1,0 +1,196 @@
+---
+import { pagePath, useDict, type Locale } from '~/i18n';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Section from '@dentalpin/ui/Section.astro';
+import Icon from '@dentalpin/ui/Icon.astro';
+import ScreenshotPlaceholder from '~/components/ScreenshotPlaceholder.astro';
+import ModularOrbit from '~/components/ModularOrbit.astro';
+import CTASection from '~/components/CTASection.astro';
+import { MODULES, modulesByDomain, moduleSlug, type ModuleDomain, type ModuleEntry } from '~/data/modules';
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const dict = useDict(locale);
+
+const domains: { key: ModuleDomain; label: string; tagline: string }[] = [
+  { key: 'clinical', label: dict.megamenu.columns.clinical, tagline: dict.featuresIndex.domains.clinical },
+  { key: 'operations', label: dict.megamenu.columns.operations, tagline: dict.featuresIndex.domains.operations },
+  { key: 'platform', label: dict.megamenu.columns.platform, tagline: dict.featuresIndex.domains.platform },
+];
+
+const moduleHref = (mod: ModuleEntry) => pagePath(locale, 'features', moduleSlug(mod, locale));
+const totalModules = MODULES.length;
+---
+
+<BaseLayout locale={locale} title={`${dict.nav.features} · Dentalpin`}>
+  <Section padY="md">
+    <div class="grid gap-12 lg:grid-cols-[1.1fr,0.9fr] lg:items-end">
+      <div>
+        <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">
+          {dict.featuresIndex.eyebrow}
+        </p>
+        <h1 class="text-marketing-h1 mt-3 max-w-3xl text-[var(--color-text)]">
+          {dict.featuresIndex.title}
+        </h1>
+        <p class="mt-5 max-w-2xl text-[16px] leading-[1.6] text-[var(--color-text-muted)]">
+          {dict.featuresIndex.subtitle}
+        </p>
+      </div>
+      <dl class="grid grid-cols-3 gap-6 border-t border-[var(--color-border-subtle)] pt-6 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
+        <div>
+          <dt class="text-[11px] font-medium uppercase tracking-wider text-[var(--color-text-subtle)]">
+            {dict.featuresIndex.stats.modules}
+          </dt>
+          <dd class="mt-2 text-[32px] font-semibold leading-none tracking-tight text-[var(--color-text)]">
+            {totalModules}
+          </dd>
+        </div>
+        <div>
+          <dt class="text-[11px] font-medium uppercase tracking-wider text-[var(--color-text-subtle)]">
+            {dict.featuresIndex.stats.domains}
+          </dt>
+          <dd class="mt-2 text-[32px] font-semibold leading-none tracking-tight text-[var(--color-text)]">
+            {domains.length}
+          </dd>
+        </div>
+        <div>
+          <dt class="text-[11px] font-medium uppercase tracking-wider text-[var(--color-text-subtle)]">
+            {dict.featuresIndex.stats.openSource}
+          </dt>
+          <dd class="mt-2 text-[32px] font-semibold leading-none tracking-tight text-[var(--color-text)]">
+            100%
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </Section>
+
+  <Section padY="sm" maxWidth="wide">
+    <div class="grid gap-4 md:grid-cols-3 md:grid-rows-2">
+      <div class="md:col-span-2 md:row-span-2">
+        <ScreenshotPlaceholder
+          file="dental-chart.png"
+          alt="Dentalpin · Odontograma"
+          class="h-full"
+        />
+      </div>
+      <ScreenshotPlaceholder file="schedule-week.png" alt="Dentalpin · Agenda" />
+      <ScreenshotPlaceholder file="budgets.png" alt="Dentalpin · Presupuestos" />
+    </div>
+  </Section>
+
+  {domains.map((domain, i) => {
+    const mods = modulesByDomain(domain.key);
+    const featured = mods.find((m) => m.screenshot && m.status !== 'roadmap') ?? mods[0];
+    const rest = mods.filter((m) => m.slug !== featured.slug);
+    const useOrbit = featured.slug === 'modulos';
+    const hasVisual = !!featured.screenshot || useOrbit;
+    const flip = i % 2 === 1;
+
+    return (
+      <Section padY="md">
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">
+              0{i + 1} · {domain.label}
+            </p>
+            <h2 class="text-marketing-h2 mt-3 max-w-2xl text-[var(--color-text)]">
+              {domain.tagline}
+            </h2>
+          </div>
+          <span class="inline-flex items-center gap-1.5 rounded-[var(--radius-pill)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] px-3 py-1 text-[12px] font-medium text-[var(--color-text-muted)]">
+            <span class="h-1.5 w-1.5 rounded-full bg-[var(--color-primary)]"></span>
+            {mods.length} {dict.featuresIndex.modulesLabel}
+          </span>
+        </div>
+
+        {hasVisual && (
+          <a
+            href={moduleHref(featured)}
+            class="group mt-10 grid overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-sm)] transition-all hover:border-[var(--color-border-strong)] hover:shadow-[var(--shadow-md)] lg:grid-cols-2"
+          >
+            <div class={`flex flex-col justify-center gap-5 p-8 lg:p-10 ${flip ? 'lg:order-2' : ''}`}>
+              <div class="flex items-center gap-3">
+                <span class="inline-flex h-11 w-11 items-center justify-center rounded-[var(--radius-md)] bg-[var(--color-primary-soft)] text-[var(--color-primary-soft-text)]">
+                  <Icon name={featured.icon} size={22} />
+                </span>
+                <span class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-text-subtle)]">
+                  {domain.label}
+                </span>
+              </div>
+              <h3 class="text-[28px] font-semibold leading-tight tracking-tight text-[var(--color-text)]">
+                {featured.title[locale]}
+              </h3>
+              <p class="text-[15px] leading-[1.6] text-[var(--color-text-muted)]">
+                {featured.tagline[locale]}
+              </p>
+              <ul class="grid gap-2.5">
+                {featured.features.slice(0, 3).map((f) => (
+                  <li class="flex items-start gap-2.5 text-[14px] leading-[1.5] text-[var(--color-text)]">
+                    <span class="mt-0.5 inline-flex h-4 w-4 flex-none items-center justify-center rounded-full bg-[var(--color-primary-soft)] text-[var(--color-primary-soft-text)]">
+                      <Icon name="check" size={10} />
+                    </span>
+                    {f[locale]}
+                  </li>
+                ))}
+              </ul>
+              <span class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-[var(--color-primary)]">
+                {dict.featuresIndex.viewModule}
+                <span class="transition-transform group-hover:translate-x-0.5">
+                  <Icon name="arrow-right" size={14} />
+                </span>
+              </span>
+            </div>
+            <div class={`relative overflow-hidden bg-[var(--color-surface-muted)] p-6 lg:p-8 ${flip ? 'lg:order-1' : ''}`}>
+              {useOrbit ? (
+                <ModularOrbit locale={locale} />
+              ) : (
+                <ScreenshotPlaceholder
+                  file={featured.screenshot}
+                  alt={featured.title[locale]}
+                  class="shadow-[var(--shadow-lg)]"
+                />
+              )}
+            </div>
+          </a>
+        )}
+
+        <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {rest.map((mod) => (
+            <li>
+              <a
+                href={moduleHref(mod)}
+                class="group relative flex h-full flex-col gap-4 rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[var(--shadow-sm)] transition-all hover:-translate-y-0.5 hover:border-[var(--color-border-strong)] hover:shadow-[var(--shadow-md)]"
+              >
+                <div class="flex items-start justify-between">
+                  <span class="inline-flex h-11 w-11 items-center justify-center rounded-[var(--radius-md)] bg-gradient-to-br from-[var(--color-primary-soft)] to-[var(--color-surface-muted)] text-[var(--color-primary-soft-text)] ring-1 ring-[var(--color-border-subtle)]">
+                    <Icon name={mod.icon} size={20} />
+                  </span>
+                  {mod.status === 'roadmap' && (
+                    <span class="inline-flex rounded-[var(--radius-pill)] bg-[var(--color-warning-soft)] px-2 py-0.5 text-[11px] font-medium text-[var(--color-warning-text)]">
+                      {dict.featurePage.statusRoadmap}
+                    </span>
+                  )}
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-[17px] font-semibold tracking-tight text-[var(--color-text)]">
+                    {mod.title[locale]}
+                  </h3>
+                  <p class="mt-2 text-[14px] leading-[1.55] text-[var(--color-text-muted)]">
+                    {mod.tagline[locale]}
+                  </p>
+                </div>
+                <span class="inline-flex items-center gap-1 text-[13px] font-semibold text-[var(--color-primary)] opacity-0 transition-opacity group-hover:opacity-100">
+                  {dict.featuresIndex.viewModule}
+                  <Icon name="arrow-right" size={12} />
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </Section>
+    );
+  })}
+
+  <CTASection locale={locale} />
+</BaseLayout>

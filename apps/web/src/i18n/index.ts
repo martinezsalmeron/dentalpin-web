@@ -42,6 +42,24 @@ export function localisedPath(locale: Locale, path: string = ''): string {
   return clean ? `/${locale}/${clean}` : `/${locale}/`;
 }
 
+export const LOCALE_PATHS = {
+  manifesto: { es: 'manifiesto', en: 'manifesto' },
+  features: { es: 'funcionalidades', en: 'features' },
+  pricing: { es: 'precios', en: 'pricing' },
+  contact: { es: 'contacto', en: 'contact' },
+  legalPrivacy: { es: 'legal/privacidad', en: 'legal/privacy' },
+  legalTerms: { es: 'legal/terminos', en: 'legal/terms' },
+  legalCookies: { es: 'legal/cookies', en: 'legal/cookies' },
+} as const;
+
+export type PagePathKey = keyof typeof LOCALE_PATHS;
+
+export function pagePath(locale: Locale, key: PagePathKey, extra?: string): string {
+  const slug = LOCALE_PATHS[key][locale];
+  const tail = extra ? `/${extra.replace(/^\/+|\/+$/g, '')}` : '';
+  return `/${locale}/${slug}${tail}/`;
+}
+
 export function moduleTitle(locale: Locale, title: { es: string; en: string }): string {
   return title[locale];
 }
