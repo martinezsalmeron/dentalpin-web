@@ -157,6 +157,60 @@
     "title": "Un stack moderno y deliberadamente aburrido.",
     "body": "Elegimos lo que eligen los equipos serios. Nada exótico, nada heredado."
   },
+  "vsLegacy": {
+    "eyebrow": "DENTALPIN VS LEGACY",
+    "title": "El software dental tenía que actualizarse. Empezamos por aquí.",
+    "lead": "Los programas que el sector ha usado durante veinte años hicieron su trabajo. Pero ya no encajan con cómo se gestiona una clínica en 2026. Esta es la diferencia, sin maquillaje.",
+    "legacy": {
+      "title": "Software dental tradicional",
+      "subtitle": "Una década atrás. O dos.",
+      "tag": "v.~2010",
+      "bullets": [
+        "Licencia cerrada y opaca",
+        "Tu base de datos, en su servidor",
+        "Tarifa por usuario, por módulo y por sucursal",
+        "Migrar cuesta semanas y dinero",
+        "Actualizan cuando ellos quieren",
+        "API limitada o de pago"
+      ]
+    },
+    "dentalpin": {
+      "badge": "2026",
+      "title": "Dentalpin",
+      "subtitle": "Construido para la era de la IA.",
+      "tag": "v.2026",
+      "bullets": [
+        "BSL 1.1 hoy, Apache 2.0 mañana",
+        "Tus datos, en tu servidor",
+        "Un precio, todos los módulos",
+        "Exporta tu base de datos cuando quieras",
+        "Actualizas cuando te conviene",
+        "API pública y documentada"
+      ]
+    },
+    "table": {
+      "headers": {
+        "attr": "Atributo",
+        "legacy": "Software tradicional",
+        "dentalpin": "Dentalpin"
+      },
+      "rows": [
+        { "attr": "Licencia", "legacy": "Privativa", "dentalpin": "BSL 1.1 → Apache 2.0" },
+        { "attr": "Código fuente", "legacy": "Cerrado", "dentalpin": "Abierto y auditable" },
+        { "attr": "Despliegue", "legacy": "SaaS rígido o on-premise opaco", "dentalpin": "Self-hosted o Cloud gestionado" },
+        { "attr": "Modularidad", "legacy": "Tiers cerrados", "dentalpin": "Activas solo lo que usas" },
+        { "attr": "API", "legacy": "Limitada o de pago", "dentalpin": "Pública y documentada" },
+        { "attr": "Tus datos", "legacy": "En su nube", "dentalpin": "En tu servidor" },
+        { "attr": "Modelo de precios", "legacy": "Por usuario, módulo y sucursal", "dentalpin": "Pago único o gratis" },
+        { "attr": "Actualizaciones", "legacy": "Cuando ellos lo decidan", "dentalpin": "Cuando lo decidas tú" },
+        { "attr": "IA", "legacy": "Atornillada después", "dentalpin": "Diseñada para agentes" },
+        { "attr": "UX", "legacy": "Heredada de los 2000", "dentalpin": "Calma, oscura por defecto, rápida" },
+        { "attr": "Migración", "legacy": "Costosa, lenta y opaca", "dentalpin": "Exporta tu BD sin pedir permiso" },
+        { "attr": "Comunidad", "legacy": "Eres cliente", "dentalpin": "Eres contribuidor" }
+      ]
+    },
+    "punchline": "El cambio no va de funcionalidades. Va de quién manda en tu clínica."
+  },
   "oss": {
     "eyebrow": "LICENCIA",
     "title": "BSL 1.1 hoy. Apache 2.0 mañana.",
@@ -243,7 +297,7 @@
     "cloud": {
       "badge": "Próximamente",
       "title": "Cloud gestionado",
-      "price": "Próximamente",
+      "price": "A definir",
       "priceSuffix": "lo operamos nosotros",
       "description": "La misma Dentalpin, pero la operamos nosotros. Backups, actualizaciones, TLS y un humano al otro lado del email.",
       "features": [
@@ -257,7 +311,12 @@
       "formLabel": "Entra a la lista de espera",
       "emailField": "Email",
       "clinicField": "Nombre de la clínica (opcional)",
-      "submit": "Avísame cuando esté listo",
+      "submit": "Avísame cuando esté disponible",
+      "consentBefore": "Acepto las condiciones y la ",
+      "consentLink": "política de privacidad",
+      "consentAfter": ".",
+      "consentNote": "Puedes cancelar tu suscripción cuando quieras desde el enlace al pie de cada email.",
+      "consentRequired": "Necesitamos que aceptes la política para apuntarte.",
       "success": "Anotado. Te avisamos cuando abramos plazas.",
       "error": "Algo falló por nuestro lado. Escríbenos a hola@dentalpin.com."
     },
@@ -296,12 +355,16 @@
           "a": "Business Source License. Gratis para cualquier clínica, gratis para cualquier dev. La única restricción: no puedes lanzar Dentalpin como SaaS dental competidor. A los cuatro años, cada release pasa automáticamente a Apache 2.0."
         },
         {
-          "q": "¿Puedo revenderlo como SaaS?",
-          "a": "Como SaaS dental que compita con la versión gestionada, no — mientras la licencia sea BSL. Cualquier otra cosa sí: implantación, hosting privado, soporte, módulos a medida."
+          "q": "¿Puedo utilizarlo gratis en mi clínica?",
+          "a": "Sí. La licencia BSL 1.1 permite que cualquier clínica, del tamaño que sea, use Dentalpin gratis y sin límite de pacientes, usuarios o sucursales. No hay versión recortada: tienes el producto entero."
         },
         {
           "q": "¿Cómo se instala?",
           "a": "Clonas el repo, copias el .env y lanzas docker compose up. La documentación cubre el resto. En un VPS razonable, menos de media hora."
+        },
+        {
+          "q": "¿Cómo hago la migración de datos?",
+          "a": "Vamos a intentar ofrecer scripts para que la migración desde tu software actual sea sencilla. Mientras llegan, puedes apoyarte en el integrador que mantiene tu programa actual o <a href=\"/es/contacto/\" class=\"underline underline-offset-2 hover:text-[var(--color-primary)]\">escribirnos a nosotros</a> para que te echemos una mano."
         },
         {
           "q": "¿Y si mi clínica es pequeña?",

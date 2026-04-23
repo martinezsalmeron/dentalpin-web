@@ -5,6 +5,7 @@ import Hero from '~/components/Hero.astro';
 import HomeManifesto from '~/components/HomeManifesto.astro';
 import BentoFeatures from '~/components/BentoFeatures.astro';
 import BuiltModular from '~/components/BuiltModular.astro';
+import VsLegacy from '~/components/VsLegacy.astro';
 import LiveDemoCard from '~/components/LiveDemoCard.astro';
 import TechStackStrip from '~/components/TechStackStrip.astro';
 
@@ -22,6 +23,7 @@ const locale = lang as Locale;
   <HomeManifesto locale={locale} />
   <BentoFeatures locale={locale} />
   <BuiltModular locale={locale} />
+  <VsLegacy locale={locale} />
   <LiveDemoCard locale={locale} />
   <TechStackStrip locale={locale} />
 </BaseLayout>
