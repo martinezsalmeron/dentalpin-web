@@ -1,0 +1,101 @@
+---
+import { useTranslations, type Locale } from '~/i18n';
+import Button from '@dentalpin/ui/Button.astro';
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+const turnstileKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
+---
+
+<form
+  id="contact-form"
+  class="flex flex-col gap-4 rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[var(--shadow-sm)] sm:p-8"
+  novalidate
+>
+  <div class="grid gap-4 sm:grid-cols-2">
+    <label class="flex flex-col gap-1.5">
+      <span class="text-ui text-[var(--color-text)]">{t('contact.fields.name')}</span>
+      <input
+        required
+        type="text"
+        name="name"
+        autocomplete="name"
+        class="h-10 rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-surface-sunken)] px-3 text-[14px] text-[var(--color-text)] placeholder:text-[var(--color-text-subtle)] focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)] focus:outline-none"
+      />
+    </label>
+    <label class="flex flex-col gap-1.5">
+      <span class="text-ui text-[var(--color-text)]">{t('contact.fields.email')}</span>
+      <input
+        required
+        type="email"
+        name="email"
+        autocomplete="email"
+        class="h-10 rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-surface-sunken)] px-3 text-[14px] text-[var(--color-text)] placeholder:text-[var(--color-text-subtle)] focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)] focus:outline-none"
+      />
+    </label>
+  </div>
+  <label class="flex flex-col gap-1.5">
+    <span class="text-ui text-[var(--color-text)]">{t('contact.fields.clinic')}</span>
+    <input
+      type="text"
+      name="clinic"
+      autocomplete="organization"
+      class="h-10 rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-surface-sunken)] px-3 text-[14px] text-[var(--color-text)] placeholder:text-[var(--color-text-subtle)] focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)] focus:outline-none"
+    />
+  </label>
+  <label class="flex flex-col gap-1.5">
+    <span class="text-ui text-[var(--color-text)]">{t('contact.fields.message')}</span>
+    <textarea
+      name="message"
+      rows="4"
+      class="resize-y rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-surface-sunken)] p-3 text-[14px] text-[var(--color-text)] placeholder:text-[var(--color-text-subtle)] focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)] focus:outline-none"
+    ></textarea>
+  </label>
+
+  {/* Honeypot — spam bots fill this; real users never see it. */}
+  <label class="sr-only" aria-hidden="true">
+    Website
+    <input type="text" name="website" tabindex="-1" autocomplete="off" />
+  </label>
+
+  {turnstileKey && (
+    <div class="cf-turnstile" data-sitekey={turnstileKey} data-theme="light"></div>
+  )}
+
+  <div class="flex items-center justify-between gap-3">
+    <p id="contact-status" class="text-[13px] text-[var(--color-text-muted)]" role="status" aria-live="polite"></p>
+    <Button type="submit" size="md">{t('contact.fields.submit')}</Button>
+  </div>
+</form>
+
+{turnstileKey && (
+  <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+)}
+
+<script is:inline define:vars={{ successMsg: t('contact.success'), errorMsg: t('contact.error') }}>
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('contact-status');
+  if (form && status) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      status.textContent = '…';
+      status.style.color = 'var(--color-text-muted)';
+      const data = Object.fromEntries(new FormData(form).entries());
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+        if (!res.ok) throw new Error(String(res.status));
+        status.textContent = successMsg;
+        status.style.color = 'var(--color-success-text)';
+        form.reset();
+      } catch (_) {
+        status.textContent = errorMsg;
+        status.style.color = 'var(--color-danger-text)';
+      }
+    });
+  }
+</script>

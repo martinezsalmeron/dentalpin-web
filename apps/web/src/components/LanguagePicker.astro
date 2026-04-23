@@ -1,0 +1,55 @@
+---
+import { LOCALES, localisedPath, useTranslations, type Locale } from '~/i18n';
+import Icon from '@dentalpin/ui/Icon.astro';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+
+// Strip current locale prefix, keep rest of the path.
+const pathname = Astro.url.pathname;
+const stripped = pathname.replace(/^\/(es|en)/, '') || '/';
+---
+
+<div class="relative">
+  <details class="group">
+    <summary
+      class="flex h-9 cursor-pointer list-none items-center gap-1.5 rounded-[var(--radius-sm)] px-2.5 text-[13px] font-medium text-[var(--color-text-muted)] hover:bg-[var(--color-surface-muted)] hover:text-[var(--color-text)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)]"
+      aria-label={t('lang.label')}
+    >
+      <Icon name="globe" size={16} />
+      <span class="uppercase">{locale}</span>
+    </summary>
+    <ul
+      class="absolute right-0 top-full mt-1 min-w-[160px] rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-surface)] p-1 shadow-[var(--shadow-md)]"
+      role="menu"
+    >
+      {LOCALES.map((loc) => (
+        <li role="none">
+          <a
+            role="menuitem"
+            href={`/${loc}${stripped === '/' ? '/' : stripped}`}
+            class:list={[
+              'flex items-center justify-between rounded-[var(--radius-sm)] px-2.5 py-1.5 text-[13px]',
+              loc === locale
+                ? 'bg-[var(--color-primary-soft)] text-[var(--color-primary-soft-text)]'
+                : 'hover:bg-[var(--color-surface-muted)]',
+            ]}
+          >
+            <span>{t(`lang.${loc}`)}</span>
+            <span class="text-[var(--color-text-subtle)]">{loc.toUpperCase()}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </details>
+</div>
+
+<style>
+  details[open] > summary {
+    color: var(--color-text);
+    background: var(--color-surface-muted);
+  }
+</style>

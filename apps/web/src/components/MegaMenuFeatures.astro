@@ -1,0 +1,161 @@
+---
+import { localisedPath, useDict, type Locale } from '~/i18n';
+import { modulesByDomain, type ModuleDomain } from '~/data/modules';
+import Icon from '@dentalpin/ui/Icon.astro';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const dict = useDict(locale);
+
+const domains: { key: ModuleDomain; label: string }[] = [
+  { key: 'clinical', label: dict.megamenu.columns.clinical },
+  { key: 'operations', label: dict.megamenu.columns.operations },
+  { key: 'platform', label: dict.megamenu.columns.platform },
+];
+---
+
+<details class="megamenu group relative" data-megamenu>
+  <summary
+    class="flex h-9 cursor-pointer list-none items-center gap-1 rounded-[var(--radius-sm)] px-3 text-[14px] font-medium text-[var(--color-text-muted)] hover:bg-[var(--color-surface-muted)] hover:text-[var(--color-text)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)]"
+    aria-haspopup="true"
+    aria-expanded="false"
+  >
+    <span>{dict.megamenu.trigger}</span>
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform group-open:rotate-180" aria-hidden="true">
+      <path d="M6 9l6 6 6-6" />
+    </svg>
+  </summary>
+
+  <div
+    class="megamenu-panel absolute left-0 top-full z-50 w-[min(96vw,960px)] max-w-[calc(100vw-2rem)] pt-2"
+    role="menu"
+  >
+    <div class="rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[var(--shadow-lg)]">
+    <div class="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-3">
+      {domains.map((domain) => (
+        <div>
+          <p class="mb-3 text-[11px] font-semibold uppercase tracking-wider text-[var(--color-text-subtle)]">
+            {domain.label}
+          </p>
+          <ul class="flex flex-col gap-1">
+            {modulesByDomain(domain.key).map((mod) => (
+              <li>
+                <a
+                  href={localisedPath(locale, `features/${mod.slug}`)}
+                  role="menuitem"
+                  class="group/item flex items-start gap-3 rounded-[var(--radius-md)] p-2 transition-colors hover:bg-[var(--color-surface-muted)] focus-visible:bg-[var(--color-surface-muted)] focus-visible:outline-none"
+                >
+                  <span class="mt-0.5 inline-flex h-8 w-8 flex-none items-center justify-center rounded-[var(--radius-md)] bg-[var(--color-primary-soft)] text-[var(--color-primary-soft-text)] transition-colors group-hover/item:bg-[var(--color-primary)] group-hover/item:text-white">
+                    <Icon name={mod.icon} size={16} />
+                  </span>
+                  <span class="flex flex-col">
+                    <span class="text-[14px] font-semibold tracking-tight text-[var(--color-text)]">
+                      {mod.title[locale]}
+                    </span>
+                    <span class="text-[12px] leading-snug text-[var(--color-text-muted)]">
+                      {mod.tagline[locale]}
+                    </span>
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-6 border-t border-[var(--color-border-subtle)] pt-4">
+      <a
+        href={localisedPath(locale, 'funcionalidades')}
+        class="inline-flex items-center gap-1 text-[13px] font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
+      >
+        {dict.megamenu.footer}
+      </a>
+    </div>
+    </div>
+  </div>
+</details>
+
+<style>
+  /* Remove the default summary marker across browsers. */
+  details.megamenu > summary::-webkit-details-marker {
+    display: none;
+  }
+  details.megamenu > summary {
+    list-style: none;
+  }
+  /* Hide the panel until open — <details> handles the rest. */
+  details.megamenu:not([open]) .megamenu-panel {
+    display: none;
+  }
+</style>
+
+<script is:inline>
+  /* Desktop (≥ 1024px): open on hover + focus-within, close on outside click / Esc.
+     Mobile: plain <details> click-to-toggle — no JS needed. */
+  (() => {
+    const mql = window.matchMedia('(min-width: 1024px)');
+    const CLOSE_DELAY = 180; // ms grace period — prevents flicker on gap crossings.
+    const details = document.querySelectorAll('details[data-megamenu]');
+    details.forEach((el) => {
+      const summary = el.querySelector('summary');
+      let closeTimer = 0;
+      const clearClose = () => {
+        if (closeTimer) {
+          window.clearTimeout(closeTimer);
+          closeTimer = 0;
+        }
+      };
+      const close = () => {
+        clearClose();
+        el.removeAttribute('open');
+        summary?.setAttribute('aria-expanded', 'false');
+      };
+      const scheduleClose = () => {
+        clearClose();
+        closeTimer = window.setTimeout(close, CLOSE_DELAY);
+      };
+      const open = () => {
+        clearClose();
+        el.setAttribute('open', '');
+        summary?.setAttribute('aria-expanded', 'true');
+      };
+
+      el.addEventListener('mouseenter', () => {
+        if (mql.matches) open();
+      });
+      el.addEventListener('mouseleave', () => {
+        if (mql.matches) scheduleClose();
+      });
+      el.addEventListener('toggle', () => {
+        summary?.setAttribute('aria-expanded', el.hasAttribute('open') ? 'true' : 'false');
+      });
+      el.addEventListener('focusout', (e) => {
+        if (!mql.matches) return;
+        const next = e.relatedTarget;
+        if (!next || !el.contains(next)) scheduleClose();
+      });
+      el.addEventListener('focusin', clearClose);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('details[data-megamenu][open]').forEach((el) => {
+          el.removeAttribute('open');
+          el.querySelector('summary')?.setAttribute('aria-expanded', 'false');
+        });
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      document.querySelectorAll('details[data-megamenu][open]').forEach((el) => {
+        if (!el.contains(e.target)) {
+          el.removeAttribute('open');
+          el.querySelector('summary')?.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  })();
+</script>

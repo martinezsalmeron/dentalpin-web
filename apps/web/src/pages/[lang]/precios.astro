@@ -1,0 +1,226 @@
+---
+import { isLocale, useDict, localisedPath, type Locale } from '~/i18n';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Section from '@dentalpin/ui/Section.astro';
+import Button from '@dentalpin/ui/Button.astro';
+import Badge from '@dentalpin/ui/Badge.astro';
+import Icon from '@dentalpin/ui/Icon.astro';
+
+export function getStaticPaths() {
+  return [{ params: { lang: 'es' } }, { params: { lang: 'en' } }];
+}
+const { lang } = Astro.params;
+if (!isLocale(lang)) return Astro.redirect('/es/', 308);
+const locale = lang as Locale;
+const dict = useDict(locale);
+
+import { DEMO_URL, GITHUB_REPO, GITHUB_SPONSORS, OPEN_COLLECTIVE } from '~/config/links';
+
+const demoUrl = DEMO_URL;
+const ghUrl = GITHUB_REPO;
+const sponsorsUrl = GITHUB_SPONSORS;
+const openCollectiveUrl = OPEN_COLLECTIVE;
+---
+
+<BaseLayout locale={locale} title={`${dict.nav.pricing} · Dentalpin`}>
+  <Section padY="lg">
+    <div class="max-w-2xl">
+      <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">
+        {dict.pricing.eyebrow}
+      </p>
+      <h1 class="text-marketing-h1 mt-3 text-[var(--color-text)]">
+        {dict.pricing.title}
+      </h1>
+      <p class="mt-4 text-[15px] text-[var(--color-text-muted)]">
+        {dict.pricing.subtitle}
+      </p>
+    </div>
+
+    <div class="mt-12 grid gap-4 lg:grid-cols-2">
+      <!-- Self-hosted card -->
+      <article class="relative flex flex-col rounded-[var(--radius-xl)] border-[1.5px] border-[var(--color-primary)] bg-[var(--color-surface)] p-8 shadow-[var(--shadow-md)]">
+        <div class="flex items-center justify-between">
+          <h2 class="text-[20px] font-semibold tracking-tight">{dict.pricing.selfhost.title}</h2>
+          <Badge role="primary">{dict.pricing.selfhost.badge}</Badge>
+        </div>
+        <div class="mt-6">
+          <div class="flex items-baseline gap-2">
+            <span class="text-[48px] font-bold tracking-tight text-[var(--color-text)]">
+              {dict.pricing.selfhost.price}
+            </span>
+            <span class="text-[14px] text-[var(--color-text-muted)]">{dict.pricing.selfhost.priceSuffix}</span>
+          </div>
+          <p class="mt-3 text-[14px] text-[var(--color-text-muted)]">{dict.pricing.selfhost.description}</p>
+        </div>
+        <ul class="mt-6 space-y-2 text-[14px]">
+          {dict.pricing.selfhost.features.map((f) => (
+            <li class="flex items-start gap-2">
+              <span class="mt-0.5 text-[var(--color-primary)]"><Icon name="check" size={16} /></span>
+              <span class="text-[var(--color-text)]">{f}</span>
+            </li>
+          ))}
+        </ul>
+        <div class="mt-8 flex flex-col gap-2 sm:flex-row">
+          <Button href={ghUrl} variant="solid" size="md" class="w-full">
+            {dict.pricing.selfhost.ctaPrimary}
+          </Button>
+          <Button href={demoUrl} variant="outline" size="md" class="w-full">
+            {dict.pricing.selfhost.ctaSecondary}
+          </Button>
+        </div>
+      </article>
+
+      <!-- Cloud (waitlist) card -->
+      <article class="relative flex flex-col rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-8 shadow-[var(--shadow-sm)]">
+        <div class="flex items-center justify-between">
+          <h2 class="text-[20px] font-semibold tracking-tight">{dict.pricing.cloud.title}</h2>
+          <Badge role="warning">{dict.pricing.cloud.badge}</Badge>
+        </div>
+        <div class="mt-6">
+          <div class="flex items-baseline gap-2">
+            <span class="text-[40px] font-bold tracking-tight text-[var(--color-text-muted)]">
+              {dict.pricing.cloud.price}
+            </span>
+            <span class="text-[14px] text-[var(--color-text-muted)]">{dict.pricing.cloud.priceSuffix}</span>
+          </div>
+          <p class="mt-3 text-[14px] text-[var(--color-text-muted)]">{dict.pricing.cloud.description}</p>
+        </div>
+        <ul class="mt-6 space-y-2 text-[14px]">
+          {dict.pricing.cloud.features.map((f) => (
+            <li class="flex items-start gap-2">
+              <span class="mt-0.5 text-[var(--color-text-subtle)]"><Icon name="check" size={16} /></span>
+              <span class="text-[var(--color-text-muted)]">{f}</span>
+            </li>
+          ))}
+        </ul>
+
+        <form
+          id="waitlist-form"
+          class="mt-6 flex flex-col gap-3 rounded-[var(--radius-lg)] border border-[var(--color-border-subtle)] bg-[var(--color-surface-muted)] p-4"
+          novalidate
+        >
+          <label class="flex flex-col gap-1.5">
+            <span class="text-[12px] font-semibold uppercase tracking-wider text-[var(--color-text-muted)]">
+              {dict.pricing.cloud.formLabel}
+            </span>
+            <input
+              required
+              type="email"
+              name="email"
+              placeholder="you@clinic.com"
+              autocomplete="email"
+              aria-label={dict.pricing.cloud.emailField}
+              class="h-10 rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-surface)] px-3 text-[14px] text-[var(--color-text)] placeholder:text-[var(--color-text-subtle)] focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)] focus:outline-none"
+            />
+          </label>
+          <input
+            type="text"
+            name="clinic"
+            placeholder={dict.pricing.cloud.clinicField}
+            autocomplete="organization"
+            aria-label={dict.pricing.cloud.clinicField}
+            class="h-10 rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-surface)] px-3 text-[14px] text-[var(--color-text)] placeholder:text-[var(--color-text-subtle)] focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)] focus:outline-none"
+          />
+          <!-- Honeypot -->
+          <label class="sr-only" aria-hidden="true">
+            Website
+            <input type="text" name="website" tabindex="-1" autocomplete="off" />
+          </label>
+          <Button type="submit" size="md" class="w-full">{dict.pricing.cloud.submit}</Button>
+          <p id="waitlist-status" class="text-[12.5px] text-[var(--color-text-muted)]" role="status" aria-live="polite"></p>
+        </form>
+      </article>
+    </div>
+  </Section>
+
+  <!-- Optional services -->
+  <Section padY="md">
+    <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">
+      {dict.pricing.services.eyebrow}
+    </p>
+    <h2 class="text-marketing-h1 mt-3 text-[var(--color-text)]">
+      {dict.pricing.services.title}
+    </h2>
+    <ul class="mt-8 grid gap-4 md:grid-cols-3">
+      {dict.pricing.services.items.map((s) => (
+        <li class="flex flex-col rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[var(--shadow-sm)]">
+          <h3 class="text-[17px] font-semibold tracking-tight">{s.title}</h3>
+          <p class="mt-2 text-[14px] leading-[1.55] text-[var(--color-text-muted)]">{s.body}</p>
+          <a
+            href={localisedPath(locale, 'contacto')}
+            class="mt-5 inline-flex items-center gap-1 text-[14px] font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
+          >
+            {dict.pricing.services.cta} →
+          </a>
+        </li>
+      ))}
+    </ul>
+  </Section>
+
+  <!-- Sponsors -->
+  <Section padY="md">
+    <div class="rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface-muted)] p-8 sm:p-10">
+      <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">
+        {dict.pricing.sponsors.eyebrow}
+      </p>
+      <h2 class="text-marketing-h1 mt-3 text-[var(--color-text)]">
+        {dict.pricing.sponsors.title}
+      </h2>
+      <p class="mt-4 max-w-2xl text-[15px] text-[var(--color-text-muted)]">
+        {dict.pricing.sponsors.body}
+      </p>
+      <div class="mt-6 flex flex-wrap items-center gap-3">
+        <Button href={sponsorsUrl} variant="solid" size="md">{dict.pricing.sponsors.github}</Button>
+        <Button href={openCollectiveUrl} variant="outline" size="md">{dict.pricing.sponsors.opencollective}</Button>
+        <span class="ml-2 text-[13px] text-[var(--color-text-muted)]">· {dict.pricing.sponsors.backed}</span>
+      </div>
+    </div>
+  </Section>
+
+  <!-- FAQ -->
+  <Section padY="lg" maxWidth="narrow">
+    <h2 class="text-marketing-h1 text-[var(--color-text)]">
+      {dict.pricing.faq.title}
+    </h2>
+    <ul class="mt-8 divide-y divide-[var(--color-border-subtle)]">
+      {dict.pricing.faq.items.map((item) => (
+        <li>
+          <details class="group py-4">
+            <summary class="flex cursor-pointer list-none items-start justify-between gap-4">
+              <span class="text-[16px] font-semibold text-[var(--color-text)]">{item.q}</span>
+              <span class="mt-1 text-[var(--color-text-muted)] transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <p class="mt-3 text-[14px] leading-[1.65] text-[var(--color-text-muted)]">{item.a}</p>
+          </details>
+        </li>
+      ))}
+    </ul>
+  </Section>
+
+  <script is:inline define:vars={{ successMsg: dict.pricing.cloud.success, errorMsg: dict.pricing.cloud.error }}>
+    const form = document.getElementById('waitlist-form');
+    const status = document.getElementById('waitlist-status');
+    if (form && status) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        status.textContent = '…';
+        status.style.color = 'var(--color-text-muted)';
+        const data = Object.fromEntries(new FormData(form).entries());
+        try {
+          const res = await fetch('/api/waitlist', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+          });
+          if (!res.ok) throw new Error(String(res.status));
+          status.textContent = successMsg;
+          status.style.color = 'var(--color-success-text)';
+          form.reset();
+        } catch (_) {
+          status.textContent = errorMsg;
+          status.style.color = 'var(--color-danger-text)';
+        }
+      });
+    }
+  </script>
+</BaseLayout>

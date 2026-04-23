@@ -1,0 +1,75 @@
+---
+import { useDict, type Locale } from '~/i18n';
+import { MODULES } from '~/data/modules';
+import Section from '@dentalpin/ui/Section.astro';
+import Icon from '@dentalpin/ui/Icon.astro';
+import { GITHUB_REPO } from '~/config/links';
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const dict = useDict(locale);
+
+// Pick a compact set of modules for the diagram. Show max 8.
+const plugged = MODULES.slice(0, 8);
+---
+
+<Section id="modular" padY="md">
+  <div class="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-center">
+    <div class="max-w-xl">
+      <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">
+        {dict.modular.eyebrow}
+      </p>
+      <h2 class="text-marketing-h1 mt-3 text-[var(--color-text)]">
+        {dict.modular.title}
+      </h2>
+      <p class="mt-5 text-[15px] leading-[1.7] text-[var(--color-text-muted)]">
+        {dict.modular.body}
+      </p>
+      <a
+        href={GITHUB_REPO}
+        target="_blank"
+        rel="noopener"
+        class="mt-6 inline-flex items-center gap-1 text-[14px] font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
+      >
+        {dict.modular.cta}
+      </a>
+    </div>
+
+    <div class="relative">
+      <!-- Core + pluggable diagram -->
+      <div class="relative mx-auto aspect-square w-full max-w-[480px]">
+        <!-- Core in the middle -->
+        <div class="absolute left-1/2 top-1/2 flex h-40 w-40 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-1 rounded-full bg-[var(--color-primary-soft)] text-[var(--color-primary-soft-text)] ring-1 ring-[var(--color-primary)] ring-offset-4 ring-offset-[var(--color-canvas)]">
+          <span class="text-[11px] font-semibold uppercase tracking-wider">
+            {dict.modular.core}
+          </span>
+          <ul class="text-center text-[12px] font-medium">
+            {dict.modular.coreItems.map((item) => <li>{item}</li>)}
+          </ul>
+        </div>
+        <!-- 8 pluggable modules around -->
+        {plugged.map((mod, i) => {
+          const angle = (i / plugged.length) * Math.PI * 2 - Math.PI / 2;
+          const r = 42; // % from center
+          const left = 50 + Math.cos(angle) * r;
+          const top = 50 + Math.sin(angle) * r;
+          return (
+            <div
+              class="absolute flex -translate-x-1/2 -translate-y-1/2 items-center gap-2 rounded-[var(--radius-pill)] border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-1.5 text-[12px] font-medium shadow-[var(--shadow-sm)]"
+              style={`left: ${left}%; top: ${top}%`}
+            >
+              <span class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[var(--color-surface-muted)] text-[var(--color-text-muted)]">
+                <Icon name={mod.icon} size={12} />
+              </span>
+              <span>{mod.title[locale]}</span>
+            </div>
+          );
+        })}
+        <!-- Decorative dashed ring -->
+        <svg viewBox="0 0 100 100" class="absolute inset-0 h-full w-full" aria-hidden="true">
+          <circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-dasharray="0.5 2" stroke-width="0.25" class="text-[var(--color-border-strong)]" />
+        </svg>
+      </div>
+    </div>
+  </div>
+</Section>

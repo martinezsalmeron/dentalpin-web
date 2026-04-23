@@ -1,0 +1,54 @@
+---
+type Variant = 'solid' | 'soft' | 'outline' | 'ghost' | 'link';
+type Size = 'sm' | 'md' | 'lg';
+
+interface Props {
+  variant?: Variant;
+  size?: Size;
+  href?: string;
+  type?: 'button' | 'submit' | 'reset';
+  class?: string;
+  disabled?: boolean;
+  ariaLabel?: string;
+}
+
+const {
+  variant = 'solid',
+  size = 'md',
+  href,
+  type = 'button',
+  class: extra = '',
+  disabled = false,
+  ariaLabel,
+} = Astro.props;
+
+const base =
+  'inline-flex items-center justify-center gap-2 font-semibold rounded-[var(--radius-sm)] transition-colors focus-visible:outline-none whitespace-nowrap';
+const sizes: Record<Size, string> = {
+  sm: 'h-9 px-3 text-[13px]',
+  md: 'h-11 px-5 text-[14px]',
+  lg: 'h-12 px-6 text-[15px]',
+};
+const variants: Record<Variant, string> = {
+  solid:
+    'bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-hover)] shadow-[var(--shadow-xs)]',
+  soft: 'bg-[var(--color-primary-soft)] text-[var(--color-primary-soft-text)] hover:brightness-95',
+  outline:
+    'bg-transparent text-[var(--color-text)] ring-1 ring-[var(--color-border)] hover:ring-[var(--color-border-strong)] hover:bg-[var(--color-surface)]',
+  ghost: 'bg-transparent text-[var(--color-text)] hover:bg-[var(--color-surface-muted)]',
+  link: 'bg-transparent text-[var(--color-primary)] hover:text-[var(--color-primary-hover)] px-0 h-auto',
+};
+const cls = [base, sizes[size], variants[variant], extra].join(' ');
+const Tag = href ? 'a' : 'button';
+---
+
+<Tag
+  class={cls}
+  href={href}
+  type={!href ? type : undefined}
+  aria-label={ariaLabel}
+  disabled={!href && disabled ? true : undefined}
+  aria-disabled={disabled ? 'true' : undefined}
+>
+  <slot />
+</Tag>

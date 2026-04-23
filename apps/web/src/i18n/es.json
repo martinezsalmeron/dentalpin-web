@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "title": "Dentalpin — El software dental open source que tu clínica posee",
+    "description": "Pacientes, agenda, odontograma, presupuestos y facturación en una sola plataforma. Open source, modular y moderna. Tus datos en tu servidor, no en la nube de otro."
+  },
+  "nav": {
+    "features": "Funcionalidades",
+    "pricing": "Precios",
+    "docs": "Documentación",
+    "community": "Comunidad",
+    "liveDemo": "Prueba la demo",
+    "github": "GitHub",
+    "skip": "Saltar al contenido",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
+  },
+  "megamenu": {
+    "trigger": "Funcionalidades",
+    "columns": {
+      "clinical": "Clínica",
+      "operations": "Operaciones",
+      "platform": "Plataforma"
+    },
+    "footer": "Ver todas las funcionalidades →"
+  },
+  "hero": {
+    "eyebrow": "OPEN SOURCE · LISTO PARA IA",
+    "titleBefore": "La alternativa ",
+    "titleHighlight": "open source",
+    "titleAfter": " al software dental tradicional.",
+    "titleAccent": "Construido para era de la IA.",
+    "subtitle": "Pacientes, agenda, odontograma, presupuestos y facturación en una sola plataforma. La instalas tú, la extiendes tú, te la quedas tú.",
+    "ctaPrimary": "Probar la demo en vivo",
+    "ctaSecondary": "Star en GitHub",
+    "trust": "Respaldado por Dentaltix · BSL 1.1 → Apache 2.0"
+  },
+  "manifesto": {
+    "eyebrow": "POR QUÉ EXISTE",
+    "title": "El mercado dental lleva años vendiendo lo mismo. Decidimos no esperar más.",
+    "body": "Decenas de productos cerrados, caros y atados a una región. Interfaces que parecen de hace quince años, datos cautivos y cero camino hacia la IA. Dentalpin es la respuesta: una plataforma abierta y moderna que cualquier clínica puede usar, cualquier desarrollador puede extender y cualquier comunidad puede traducir. Sin rehenes."
+  },
+  "pillars": {
+    "eyebrow": "PRINCIPIOS",
+    "title": "Seis principios. En este orden.",
+    "items": {
+      "oss": {
+        "title": "Open Source",
+        "body": "Los datos de tu clínica son tuyos. Tu software también debería serlo."
+      },
+      "modular": {
+        "title": "Modular",
+        "body": "Empieza con lo básico. Activa lo que necesites. Olvídate de pagar por lo que no usas."
+      },
+      "global": {
+        "title": "Global por diseño",
+        "body": "Localización desde el día uno. Mismo core, cualquier idioma, cualquier país."
+      },
+      "api": {
+        "title": "API-first",
+        "body": "Cada funcionalidad expone su API. Conecta lo que quieras, automatiza lo que duela."
+      },
+      "ai": {
+        "title": "AI-Ready",
+        "body": "Pensado para colaborar con agentes: agenda inteligente, soporte clínico y follow-ups que se ejecutan solos."
+      },
+      "ux": {
+        "title": "Modern UX",
+        "body": "Interfaz calmada, modo oscuro, atajos de teclado. Hecho para usar ocho horas al día sin cansar la vista."
+      }
+    }
+  },
+  "bento": {
+    "eyebrow": "MÓDULOS PRINCIPALES",
+    "title": "Pensado para cómo trabaja una clínica de verdad. No para cómo lo pinta un comercial.",
+    "subtitle": "Cada funcionalidad es un módulo. Lo activas, lo quitas o lo reemplazas cuando quieras."
+  },
+  "modular": {
+    "eyebrow": "ARQUITECTURA DE PLUGINS",
+    "title": "Un núcleo pequeño. Módulos que enchufan.",
+    "body": "El sistema de módulos no es una metáfora: cada uno trae su manifest, sus migraciones Alembic, sus seeds YAML, su navegación auto-registrada y se suscribe al event bus interno. Activas los que tu clínica necesita y te olvidas del resto.",
+    "core": "Core",
+    "coreItems": ["Auth", "RBAC", "Clínicas", "Usuarios"],
+    "pluggable": "Módulos enchufables",
+    "cta": "Ver la arquitectura en GitHub →"
+  },
+  "demo": {
+    "eyebrow": "DEMO EN VIVO",
+    "title": "Toca todo lo que quieras. Mañana vuelve a estar como nueva.",
+    "body": "Demo pública con datos realistas. Cinco roles preconfigurados, todos con la misma contraseña.",
+    "url": "demo.dentalpin.com",
+    "credentials": {
+      "label": "Credenciales públicas",
+      "admin": "admin@demo.clinic",
+      "password": "demo1234",
+      "others": "dentist@… · hygienist@… · assistant@… · receptionist@…"
+    },
+    "disclaimer": "La base de datos se resetea cada noche.",
+    "cta": "Abrir la demo"
+  },
+  "stack": {
+    "eyebrow": "TECH STACK",
+    "title": "Un stack moderno y deliberadamente aburrido.",
+    "body": "Elegimos lo que eligen los equipos serios. Nada exótico, nada heredado."
+  },
+  "oss": {
+    "eyebrow": "LICENCIA",
+    "title": "BSL 1.1 hoy. Apache 2.0 mañana.",
+    "body": "Dentalpin se publica bajo Business Source License 1.1: gratis para cualquier clínica, gratis para leer, forkear, contribuir y construir módulos encima. La única línea roja: no puedes lanzar Dentalpin como SaaS dental competidor. A los cuatro años, cada release pasa automáticamente a Apache 2.0.",
+    "ctaLicense": "Leer la licencia completa →",
+    "ctaRepo": "Ver el repositorio",
+    "sponsors": {
+      "title": "Apoya el proyecto",
+      "github": "GitHub Sponsors",
+      "opencollective": "OpenCollective",
+      "backed": "Respaldado por Dentaltix"
+    }
+  },
+  "roadmap": {
+    "eyebrow": "ROADMAP",
+    "title": "Lo que viene (sin prometer fechas).",
+    "items": [
+      {
+        "title": "Módulo Payments dedicado",
+        "body": "Ciclo completo: cobrar, reembolsar, anular, conciliar. Con eventos para que el resto de módulos reaccionen solos."
+      },
+      {
+        "title": "Más idiomas",
+        "body": "PT, FR, DE y lo que la comunidad sume. La arquitectura ya lo aguanta."
+      },
+      {
+        "title": "Agentes IA reales",
+        "body": "Agenda inteligente, follow-ups automáticos y soporte a la decisión clínica — siempre con un humano que aprueba antes de ejecutar."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Listo en minutos. Tuyo para siempre.",
+    "subtitle": "Un docker compose up y ya estás dentro.",
+    "ctaPrimary": "Probar la demo",
+    "ctaSecondary": "Clonar el repo"
+  },
+  "footer": {
+    "product": "Producto",
+    "community": "Comunidad",
+    "resources": "Recursos",
+    "legal": "Legal",
+    "rights": "Todos los derechos reservados.",
+    "backed": "Respaldado por Dentaltix",
+    "links": {
+      "features": "Funcionalidades",
+      "pricing": "Precios",
+      "modules": "Sistema de módulos",
+      "api": "API",
+      "github": "GitHub",
+      "issues": "Issues",
+      "discussions": "Discussions",
+      "contribute": "Contribuir",
+      "docs": "Documentación",
+      "demo": "Demo en vivo",
+      "changelog": "Changelog",
+      "license": "Licencia",
+      "privacy": "Privacidad de la demo"
+    }
+  },
+  "pricing": {
+    "eyebrow": "PRECIOS",
+    "title": "Gratis. Para siempre. El core, todos los módulos.",
+    "subtitle": "Dentalpin es open source. Lo levantas tú o esperas a que abramos la versión gestionada.",
+    "selfhost": {
+      "badge": "Recomendado",
+      "title": "Self-hosted",
+      "price": "0 €",
+      "priceSuffix": "para siempre",
+      "description": "Clona el repo, lanza docker compose y ya está. Todos los módulos incluidos.",
+      "features": [
+        "Todos los módulos, sin tiers",
+        "Código auditable en GitHub",
+        "Tus datos, en tu servidor",
+        "BSL 1.1 hoy → Apache 2.0 en cuatro años",
+        "Actualizaciones de la comunidad",
+        "Ayuda en GitHub Discussions"
+      ],
+      "ctaPrimary": "Clonar el repo",
+      "ctaSecondary": "Probar la demo"
+    },
+    "cloud": {
+      "badge": "Próximamente",
+      "title": "Cloud gestionado",
+      "price": "A definir",
+      "priceSuffix": "lo operamos nosotros",
+      "description": "La misma Dentalpin, pero la operamos nosotros. Backups, actualizaciones, TLS y un humano al otro lado del email.",
+      "features": [
+        "Hosting en la UE",
+        "Backups y restauración",
+        "Actualizaciones automáticas",
+        "TLS y dominio propio",
+        "Soporte humano por email",
+        "SLA para grupos multi-centro"
+      ],
+      "formLabel": "Entra a la lista de espera",
+      "emailField": "Email",
+      "clinicField": "Nombre de la clínica (opcional)",
+      "submit": "Avísame cuando esté listo",
+      "success": "Anotado. Te avisamos cuando abramos plazas.",
+      "error": "Algo falló por nuestro lado. Escríbenos a hola@dentalpin.com."
+    },
+    "services": {
+      "eyebrow": "¿NECESITAS AYUDA?",
+      "title": "Servicios opcionales por si quieres ir más rápido.",
+      "items": [
+        {
+          "title": "Setup asistido",
+          "body": "Te montamos Dentalpin en tu servidor, migramos tus pacientes y formamos a tu equipo."
+        },
+        {
+          "title": "Soporte anual",
+          "body": "Canal directo, respuesta en horario laboral y tus bugs en lo más alto de la cola."
+        },
+        {
+          "title": "Módulos a medida",
+          "body": "Construimos los módulos que tu clínica o cadena necesita y los liberamos como OSS."
+        }
+      ],
+      "cta": "Hablar con nosotros"
+    },
+    "sponsors": {
+      "eyebrow": "APOYA EL PROYECTO",
+      "title": "Dentalpin se sostiene gracias a su comunidad.",
+      "body": "Si Dentalpin te ahorra horas cada semana, hay formas de devolverlo:",
+      "github": "GitHub Sponsors",
+      "opencollective": "OpenCollective",
+      "backed": "Respaldado por Dentaltix"
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "items": [
+        {
+          "q": "¿Qué significa BSL 1.1?",
+          "a": "Business Source License. Gratis para cualquier clínica, gratis para cualquier dev. La única restricción: no puedes lanzar Dentalpin como SaaS dental competidor. A los cuatro años, cada release pasa automáticamente a Apache 2.0."
+        },
+        {
+          "q": "¿Puedo revenderlo como SaaS?",
+          "a": "Como SaaS dental que compita con la versión gestionada, no — mientras la licencia sea BSL. Cualquier otra cosa sí: implantación, hosting privado, soporte, módulos a medida."
+        },
+        {
+          "q": "¿Cómo se instala?",
+          "a": "Clonas el repo, copias el .env y lanzas docker compose up. La documentación cubre el resto. En un VPS razonable, menos de media hora."
+        },
+        {
+          "q": "¿Y si mi clínica es pequeña?",
+          "a": "Mejor para ti. Dentalpin corre cómodamente en un VPS de 4 € al mes. Sin usuarios mínimos, sin facturas mensuales que vigilar."
+        },
+        {
+          "q": "¿Y si necesito ayuda seria?",
+          "a": "Para eso están los servicios opcionales de arriba: setup asistido, soporte anual o módulos a medida."
+        }
+      ]
+    }
+  },
+  "featuresIndex": {
+    "eyebrow": "FUNCIONALIDADES",
+    "title": "Cada funcionalidad, un módulo. Cada módulo, su propia página.",
+    "subtitle": "Funcionan independientes. Activas los que tu clínica necesita y desactivas el resto sin tocar nada más.",
+    "viewModule": "Ver módulo",
+    "modulesLabel": "módulos",
+    "stats": {
+      "modules": "Módulos disponibles",
+      "domains": "Dominios funcionales",
+      "openSource": "Open source"
+    },
+    "domains": {
+      "clinical": "Lo que tu equipo clínico toca cada día.",
+      "operations": "Lo que mantiene la clínica funcionando como un negocio.",
+      "platform": "La base sobre la que todo se monta y se extiende."
+    }
+  },
+  "featurePage": {
+    "backToIndex": "← Todas las funcionalidades",
+    "capabilities": "Capacidades",
+    "screenshotPending": "Captura pendiente",
+    "statusRoadmap": "Roadmap",
+    "ctaDemo": "Pruébalo en la demo",
+    "ctaGithub": "Ver el código"
+  },
+  "contact": {
+    "title": "Cuéntanos tu caso.",
+    "subtitle": "¿Una clínica pensando en migrar? ¿Un dev construyendo un módulo? ¿Un integrador? Escribe sin filtros: leemos todos los mensajes.",
+    "fields": {
+      "name": "Nombre",
+      "email": "Email",
+      "clinic": "Organización",
+      "message": "¿En qué podemos ayudarte?",
+      "submit": "Enviar"
+    },
+    "success": "Recibido. Te respondemos en menos de un día laborable.",
+    "error": "No pudimos enviar tu mensaje. Escríbenos directamente a hola@dentalpin.com."
+  },
+  "lang": {
+    "label": "Idioma",
+    "es": "Español",
+    "en": "English"
+  }
+}

@@ -1,0 +1,97 @@
+---
+import '~/styles/global.css';
+import { DEFAULT_LOCALE, altLocale, isLocale, localisedPath, useTranslations } from '~/i18n';
+import type { Locale } from '~/i18n';
+import Nav from '~/components/Nav.astro';
+import Footer from '~/components/Footer.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonicalPath?: string;
+  locale?: Locale;
+  ogImage?: string;
+  noindex?: boolean;
+}
+
+const rawLocale = Astro.currentLocale ?? DEFAULT_LOCALE;
+const locale = isLocale(rawLocale) ? rawLocale : DEFAULT_LOCALE;
+const t = useTranslations(locale);
+
+const {
+  title = t('meta.title'),
+  description = t('meta.description'),
+  canonicalPath,
+  ogImage = '/og-default.png',
+  noindex = false,
+} = Astro.props as Props;
+
+const site = Astro.site?.toString().replace(/\/$/, '') ?? 'https://dentalpin.com';
+const pathname = canonicalPath ?? new URL(Astro.request.url).pathname;
+const canonical = `${site}${pathname}`;
+const alternate = `${site}${pathname.replace(/^\/(es|en)/, `/${altLocale(locale)}`)}`;
+const ogFull = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Dentalpin',
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web',
+  description,
+  url: site,
+  offers: { '@type': 'Offer', category: 'SaaS' },
+  provider: {
+    '@type': 'Organization',
+    name: 'Dentalpin',
+    url: site,
+  },
+};
+---
+
+<!doctype html>
+<html lang={locale === 'es' ? 'es-ES' : 'en-US'}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#FBFAF8" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#161513" media="(prefers-color-scheme: dark)" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex,nofollow" />}
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang={locale} href={canonical} />
+    <link rel="alternate" hreflang={altLocale(locale)} href={alternate} />
+    <link rel="alternate" hreflang="x-default" href={`${site}${localisedPath(DEFAULT_LOCALE)}`} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogFull} />
+    <meta property="og:site_name" content="Dentalpin" />
+    <meta property="og:locale" content={locale === 'es' ? 'es_ES' : 'en_US'} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogFull} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body class="bg-[var(--color-canvas)] text-[var(--color-text)] antialiased">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:rounded-[var(--radius-sm)] focus:bg-[var(--color-surface)] focus:px-3 focus:py-2 focus:ring-2 focus:ring-[var(--color-primary)]"
+    >
+      {t('nav.skip')}
+    </a>
+    <Nav locale={locale} />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer locale={locale} />
+  </body>
+</html>

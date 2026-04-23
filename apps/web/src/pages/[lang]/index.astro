@@ -1,0 +1,35 @@
+---
+import { isLocale, type Locale } from '~/i18n';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Hero from '~/components/Hero.astro';
+import Manifesto from '~/components/Manifesto.astro';
+import ValuePillars from '~/components/ValuePillars.astro';
+import BentoFeatures from '~/components/BentoFeatures.astro';
+import BuiltModular from '~/components/BuiltModular.astro';
+import LiveDemoCard from '~/components/LiveDemoCard.astro';
+import TechStackStrip from '~/components/TechStackStrip.astro';
+import OpenSourceSection from '~/components/OpenSourceSection.astro';
+import RoadmapTeaser from '~/components/RoadmapTeaser.astro';
+import CTASection from '~/components/CTASection.astro';
+
+export function getStaticPaths() {
+  return [{ params: { lang: 'es' } }, { params: { lang: 'en' } }];
+}
+
+const { lang } = Astro.params;
+if (!isLocale(lang)) return Astro.redirect('/es/', 308);
+const locale = lang as Locale;
+---
+
+<BaseLayout locale={locale}>
+  <Hero locale={locale} />
+  <Manifesto locale={locale} />
+  <ValuePillars locale={locale} />
+  <BentoFeatures locale={locale} />
+  <BuiltModular locale={locale} />
+  <LiveDemoCard locale={locale} />
+  <TechStackStrip locale={locale} />
+  <OpenSourceSection locale={locale} />
+  <RoadmapTeaser locale={locale} />
+  <CTASection locale={locale} />
+</BaseLayout>

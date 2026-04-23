@@ -1,0 +1,64 @@
+---
+import { useDict, type Locale } from '~/i18n';
+import Section from '@dentalpin/ui/Section.astro';
+import Button from '@dentalpin/ui/Button.astro';
+import { GITHUB_REPO, GITHUB_LICENSE, GITHUB_SPONSORS, OPEN_COLLECTIVE } from '~/config/links';
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const dict = useDict(locale);
+
+const ghUrl = GITHUB_REPO;
+const licenseUrl = GITHUB_LICENSE;
+const sponsorsUrl = GITHUB_SPONSORS;
+const openCollectiveUrl = OPEN_COLLECTIVE;
+---
+
+<Section id="open-source" padY="md">
+  <div class="rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-8 shadow-[var(--shadow-sm)] sm:p-12">
+    <div class="grid gap-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-start">
+      <div class="max-w-2xl">
+        <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">
+          {dict.oss.eyebrow}
+        </p>
+        <h2 class="text-marketing-h1 mt-3 text-[var(--color-text)]">
+          {dict.oss.title}
+        </h2>
+        <p class="mt-5 text-[15px] leading-[1.7] text-[var(--color-text-muted)]">
+          {dict.oss.body}
+        </p>
+        <div class="mt-6 flex flex-wrap items-center gap-3">
+          <Button href={ghUrl} variant="solid" size="md">
+            {dict.oss.ctaRepo}
+          </Button>
+          <a href={licenseUrl} class="text-[14px] font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]" target="_blank" rel="noopener">
+            {dict.oss.ctaLicense}
+          </a>
+        </div>
+      </div>
+
+      <aside class="rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-surface-muted)] p-5 lg:min-w-[280px]">
+        <p class="text-[12px] font-semibold uppercase tracking-wider text-[var(--color-text-muted)]">
+          {dict.oss.sponsors.title}
+        </p>
+        <ul class="mt-3 space-y-2 text-[14px]">
+          <li>
+            <a href={sponsorsUrl} target="_blank" rel="noopener" class="flex items-center justify-between rounded-[var(--radius-sm)] px-2 py-1.5 hover:bg-[var(--color-surface)]">
+              <span>{dict.oss.sponsors.github}</span>
+              <span class="text-[var(--color-text-subtle)]">→</span>
+            </a>
+          </li>
+          <li>
+            <a href={openCollectiveUrl} target="_blank" rel="noopener" class="flex items-center justify-between rounded-[var(--radius-sm)] px-2 py-1.5 hover:bg-[var(--color-surface)]">
+              <span>{dict.oss.sponsors.opencollective}</span>
+              <span class="text-[var(--color-text-subtle)]">→</span>
+            </a>
+          </li>
+        </ul>
+        <p class="mt-4 border-t border-[var(--color-border-subtle)] pt-3 text-[12px] text-[var(--color-text-muted)]">
+          {dict.oss.sponsors.backed}
+        </p>
+      </aside>
+    </div>
+  </div>
+</Section>

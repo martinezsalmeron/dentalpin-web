@@ -1,0 +1,52 @@
+---
+import { useDict, type Locale } from '~/i18n';
+import Section from '@dentalpin/ui/Section.astro';
+import Icon from '@dentalpin/ui/Icon.astro';
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const dict = useDict(locale);
+
+type IconName = 'plug' | 'sparkles' | 'globe' | 'shield' | 'card' | 'chart';
+
+const PILLARS: { key: keyof typeof dict.pillars.items; icon: IconName }[] = [
+  { key: 'oss', icon: 'shield' },
+  { key: 'modular', icon: 'plug' },
+  { key: 'global', icon: 'globe' },
+  { key: 'api', icon: 'plug' },
+  { key: 'ai', icon: 'sparkles' },
+  { key: 'ux', icon: 'sparkles' },
+];
+---
+
+<Section id="principles" padY="md">
+  <div class="max-w-2xl">
+    <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">
+      {dict.pillars.eyebrow}
+    </p>
+    <h2 class="text-marketing-h1 mt-3 text-[var(--color-text)]">
+      {dict.pillars.title}
+    </h2>
+  </div>
+
+  <ul class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    {PILLARS.map((p, idx) => (
+      <li class="rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[var(--shadow-sm)]">
+        <div class="flex items-start justify-between">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-[var(--radius-md)] bg-[var(--color-primary-soft)] text-[var(--color-primary-soft-text)]">
+            <Icon name={p.icon} size={18} />
+          </span>
+          <span class="text-[12px] font-mono tabular-nums text-[var(--color-text-subtle)]">
+            0{idx + 1}
+          </span>
+        </div>
+        <h3 class="mt-5 text-[17px] font-semibold tracking-tight text-[var(--color-text)]">
+          {dict.pillars.items[p.key].title}
+        </h3>
+        <p class="mt-2 text-[14px] leading-[1.6] text-[var(--color-text-muted)]">
+          {dict.pillars.items[p.key].body}
+        </p>
+      </li>
+    ))}
+  </ul>
+</Section>

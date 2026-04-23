@@ -1,0 +1,20 @@
+---
+interface Props {
+  class?: string;
+  as?: 'div' | 'article' | 'section';
+  elevated?: boolean;
+}
+
+const { class: extra = '', as: Tag = 'div', elevated = false } = Astro.props;
+
+const cls = [
+  'bg-[var(--color-surface)] ring-1 ring-[var(--color-border)] rounded-[var(--radius-xl)] p-6',
+  elevated ? 'shadow-[var(--shadow-md)]' : 'shadow-[var(--shadow-sm)]',
+  'transition-colors',
+  extra,
+].join(' ');
+---
+
+<Tag class={cls}>
+  <slot />
+</Tag>

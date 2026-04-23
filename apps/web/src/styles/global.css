@@ -1,0 +1,58 @@
+@import '@fontsource-variable/inter';
+@import '@dentalpin/tokens/tokens.css';
+@import '@dentalpin/tokens/reset.css';
+@import '@dentalpin/tokens/typography.css';
+@import 'tailwindcss';
+
+@source "../../../../packages/ui/src/**/*.{astro,ts,tsx,js,jsx}";
+
+/*
+ * Tailwind v4 @theme — map Dentalpin CSS vars into Tailwind's design tokens
+ * so utilities like bg-canvas, text-muted, rounded-lg all resolve to our tokens.
+ */
+@theme {
+  --color-canvas: var(--color-canvas);
+  --color-surface: var(--color-surface);
+  --color-surface-muted: var(--color-surface-muted);
+  --color-surface-sunken: var(--color-surface-sunken);
+  --color-border: var(--color-border);
+  --color-border-subtle: var(--color-border-subtle);
+  --color-border-strong: var(--color-border-strong);
+  --color-ink: var(--color-text);
+  --color-muted: var(--color-text-muted);
+  --color-subtle: var(--color-text-subtle);
+  --color-brand: var(--color-primary);
+  --color-brand-hover: var(--color-primary-hover);
+  --color-brand-soft: var(--color-primary-soft);
+
+  --font-sans:
+    'Inter Variable', -apple-system, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif;
+
+  --radius-xs: var(--radius-xs);
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+
+  --shadow-xs: var(--shadow-xs);
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+}
+
+/* App-level defaults. */
+body {
+  font-size: var(--text-body-size);
+  line-height: var(--text-body-line);
+}
+
+/* Make external links render with a subtle underline offset — legibility. */
+a[href^='http'] {
+  text-underline-offset: 3px;
+}
+
+/* Selection uses brand. */
+::selection {
+  background: var(--color-primary-soft);
+  color: var(--color-primary-soft-text);
+}

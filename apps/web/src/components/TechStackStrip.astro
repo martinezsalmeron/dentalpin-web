@@ -1,0 +1,46 @@
+---
+import { useDict, type Locale } from '~/i18n';
+import Section from '@dentalpin/ui/Section.astro';
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const dict = useDict(locale);
+
+const stack = [
+  { name: 'Nuxt 3', role: 'Frontend' },
+  { name: 'Vue 3', role: 'UI' },
+  { name: 'Nuxt UI', role: 'Components' },
+  { name: 'TypeScript', role: 'Type safety' },
+  { name: 'Tailwind', role: 'Styling' },
+  { name: 'FastAPI', role: 'Backend' },
+  { name: 'SQLAlchemy 2.0', role: 'ORM' },
+  { name: 'Pydantic v2', role: 'Schemas' },
+  { name: 'PostgreSQL 15', role: 'Database' },
+  { name: 'Alembic', role: 'Migrations' },
+  { name: 'Docker', role: 'Runtime' },
+  { name: 'Playwright', role: 'E2E tests' },
+];
+---
+
+<Section id="stack" padY="md">
+  <div class="max-w-2xl">
+    <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">
+      {dict.stack.eyebrow}
+    </p>
+    <h2 class="text-marketing-h1 mt-3 text-[var(--color-text)]">
+      {dict.stack.title}
+    </h2>
+    <p class="mt-4 text-[15px] text-[var(--color-text-muted)]">
+      {dict.stack.body}
+    </p>
+  </div>
+
+  <ul class="mt-10 flex flex-wrap gap-2">
+    {stack.map((s) => (
+      <li class="inline-flex items-baseline gap-2 rounded-[var(--radius-pill)] border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-1.5 text-[13px] shadow-[var(--shadow-xs)]">
+        <span class="font-semibold text-[var(--color-text)]">{s.name}</span>
+        <span class="text-[11px] uppercase tracking-wider text-[var(--color-text-subtle)]">{s.role}</span>
+      </li>
+    ))}
+  </ul>
+</Section>

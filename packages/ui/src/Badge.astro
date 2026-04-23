@@ -1,0 +1,33 @@
+---
+type Role = 'neutral' | 'success' | 'info' | 'warning' | 'danger' | 'primary';
+
+interface Props {
+  role?: Role;
+  class?: string;
+}
+
+const { role = 'neutral', class: extra = '' } = Astro.props;
+
+const roles: Record<Role, string> = {
+  neutral:
+    'bg-[var(--color-surface-muted)] text-[var(--color-text-muted)] ring-[var(--color-border-subtle)]',
+  primary:
+    'bg-[var(--color-primary-soft)] text-[var(--color-primary-soft-text)] ring-transparent',
+  success:
+    'bg-[var(--color-success-soft)] text-[var(--color-success-text)] ring-transparent',
+  info: 'bg-[var(--color-info-soft)] text-[var(--color-info-text)] ring-transparent',
+  warning:
+    'bg-[var(--color-warning-soft)] text-[var(--color-warning-text)] ring-transparent',
+  danger:
+    'bg-[var(--color-danger-soft)] text-[var(--color-danger-text)] ring-transparent',
+};
+const cls = [
+  'inline-flex items-center gap-1.5 px-2 py-0.5 rounded-[var(--radius-pill)] text-[12px] font-medium ring-1',
+  roles[role],
+  extra,
+].join(' ');
+---
+
+<span class={cls}>
+  <slot />
+</span>

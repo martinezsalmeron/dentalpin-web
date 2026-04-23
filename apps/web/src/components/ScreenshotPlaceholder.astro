@@ -1,0 +1,47 @@
+---
+/*
+ * Renders a product screenshot if present at /public/screenshots/<file>,
+ * otherwise a labelled dashed-border placeholder so missing assets are
+ * obvious at review time.
+ */
+import fs from 'node:fs';
+import path from 'node:path';
+
+interface Props {
+  file: string;
+  alt: string;
+  aspect?: string;
+  class?: string;
+}
+
+const { file, alt, aspect = '16 / 10', class: extra = '' } = Astro.props;
+
+const publicDir = path.join(process.cwd(), 'public');
+const full = path.join(publicDir, 'screenshots', file);
+const exists = fs.existsSync(full);
+const src = `/screenshots/${file}`;
+---
+
+{exists ? (
+  <figure
+    class={`relative overflow-hidden rounded-[var(--radius-xl)] bg-[var(--color-surface)] shadow-[var(--shadow-md)] ${extra}`}
+  >
+    <img src={src} alt={alt} loading="lazy" decoding="async" class="block h-auto w-full" />
+  </figure>
+) : (
+  <figure
+    class={`relative flex flex-col items-center justify-center gap-2 rounded-[var(--radius-xl)] border-[1.5px] border-dashed border-[var(--color-border-strong)] bg-[var(--color-surface-muted)] p-6 text-center ${extra}`}
+    style={`aspect-ratio: ${aspect}`}
+    aria-label={alt}
+  >
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-[var(--color-text-subtle)]">
+      <rect x="3" y="5" width="18" height="14" rx="2" />
+      <circle cx="8.5" cy="10.5" r="1.5" />
+      <path d="M21 15l-5-5-9 9" />
+    </svg>
+    <figcaption class="text-[12px] font-medium text-[var(--color-text-muted)]">
+      Screenshot pending
+    </figcaption>
+    <code class="text-[11px] text-[var(--color-text-subtle)]">/screenshots/{file}</code>
+  </figure>
+)}

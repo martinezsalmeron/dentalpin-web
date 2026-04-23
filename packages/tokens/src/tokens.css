@@ -1,0 +1,177 @@
+/*
+ * Dentalpin design tokens.
+ * Mirrors /Users/ramonmartinez/Documents/dentalpin/DESIGN.md verbatim.
+ * Never hardcode hex in components — always reference these vars.
+ */
+
+:root {
+  /* ─── Surfaces — light ─── */
+  --color-canvas: #fbfaf8;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f4f2ef;
+  --color-surface-sunken: #efede9;
+
+  --color-border-subtle: rgba(15, 17, 22, 0.06);
+  --color-border: rgba(15, 17, 22, 0.1);
+  --color-border-strong: rgba(15, 17, 22, 0.16);
+
+  --color-text: rgba(15, 17, 22, 0.92);
+  --color-text-muted: #615d59;
+  --color-text-subtle: #94908a;
+  --color-text-disabled: #bab6b0;
+
+  /* ─── Primary (sky) ─── */
+  --color-primary: #0ea5e9;
+  --color-primary-hover: #0284c7;
+  --color-primary-soft: #e0f2fe;
+  --color-primary-soft-text: #0369a1;
+
+  /* ─── Semantic — success ─── */
+  --color-success-accent: #0f9d58;
+  --color-success-soft: #e6f6ec;
+  --color-success-text: #15803d;
+
+  /* ─── Semantic — info ─── */
+  --color-info-accent: #0284c7;
+  --color-info-soft: #e0f2fe;
+  --color-info-text: #075985;
+
+  /* ─── Semantic — warning ─── */
+  --color-warning-accent: #d97706;
+  --color-warning-soft: #fef3e2;
+  --color-warning-text: #9a3412;
+
+  /* ─── Semantic — danger ─── */
+  --color-danger-accent: #dc2626;
+  --color-danger-soft: #fee7e7;
+  --color-danger-text: #991b1b;
+
+  /* ─── Radius ─── */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-pill: 9999px;
+
+  /* ─── Elevation (light) ─── */
+  --shadow-xs: 0 1px 1px rgba(15, 17, 22, 0.02);
+  --shadow-sm: 0 1px 2px rgba(15, 17, 22, 0.03), 0 1px 1px rgba(15, 17, 22, 0.02);
+  --shadow-md: 0 4px 12px rgba(15, 17, 22, 0.04), 0 1px 3px rgba(15, 17, 22, 0.03);
+  --shadow-lg: 0 14px 28px rgba(15, 17, 22, 0.05), 0 4px 12px rgba(15, 17, 22, 0.03);
+
+  /* ─── Typography scale ─── */
+  --text-display-size: 28px;
+  --text-display-line: 1.15;
+  --text-display-track: -0.4px;
+  --text-display-weight: 700;
+
+  --text-h1-size: 22px;
+  --text-h1-line: 1.25;
+  --text-h1-track: -0.25px;
+  --text-h1-weight: 700;
+
+  --text-h2-size: 18px;
+  --text-h2-line: 1.3;
+  --text-h2-track: -0.15px;
+  --text-h2-weight: 600;
+
+  --text-h3-size: 15px;
+  --text-h3-line: 1.35;
+  --text-h3-weight: 600;
+
+  --text-body-size: 14px;
+  --text-body-line: 1.5;
+  --text-body-weight: 400;
+
+  --text-body-prose-size: 15px;
+  --text-body-prose-line: 1.55;
+  --text-body-prose-weight: 400;
+
+  --text-ui-size: 14px;
+  --text-ui-line: 1.3;
+  --text-ui-weight: 500;
+
+  --text-button-size: 14px;
+  --text-button-line: 1.2;
+  --text-button-weight: 600;
+
+  --text-caption-size: 12px;
+  --text-caption-line: 1.4;
+  --text-caption-track: 0.1px;
+  --text-caption-weight: 500;
+
+  --text-micro-size: 11px;
+  --text-micro-line: 1.3;
+  --text-micro-track: 0.2px;
+  --text-micro-weight: 600;
+
+  /* ─── Marketing-only display scale (Stripe-inspired hero sizing) ─── */
+  --text-marketing-hero: clamp(2.5rem, 4vw + 1.5rem, 4.5rem); /* 40→72px */
+  --text-marketing-h1: clamp(1.875rem, 2vw + 1rem, 3rem); /* 30→48px */
+  --text-marketing-h2: clamp(1.5rem, 1vw + 1rem, 2rem); /* 24→32px */
+
+  /* ─── Motion ─── */
+  --motion-duration: 150ms;
+  --motion-easing: cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+/* ─── Dark mode (inverse elevation: lighter = higher) ─── */
+.dark {
+  --color-canvas: #161513;
+  --color-surface: #1e1c19;
+  --color-surface-muted: #252320;
+  --color-surface-sunken: #121110;
+
+  --color-border-subtle: rgba(255, 250, 240, 0.06);
+  --color-border: rgba(255, 250, 240, 0.1);
+  --color-border-strong: rgba(255, 250, 240, 0.18);
+
+  --color-text: rgba(255, 250, 240, 0.92);
+  --color-text-muted: #a39e97;
+  --color-text-subtle: #787570;
+  --color-text-disabled: #525049;
+
+  --color-primary: #38bdf8;
+  --color-primary-hover: #7dd3fc;
+  --color-primary-soft: rgba(56, 189, 248, 0.12);
+  --color-primary-soft-text: #7dd3fc;
+
+  --color-success-accent: #34d399;
+  --color-success-soft: rgba(52, 211, 153, 0.1);
+  --color-success-text: #86efac;
+
+  --color-info-accent: #7dd3fc;
+  --color-info-soft: rgba(125, 211, 252, 0.1);
+  --color-info-text: #bae6fd;
+
+  --color-warning-accent: #f59e0b;
+  --color-warning-soft: rgba(245, 158, 11, 0.12);
+  --color-warning-text: #fcd34d;
+
+  --color-danger-accent: #f87171;
+  --color-danger-soft: rgba(248, 113, 113, 0.12);
+  --color-danger-text: #fca5a5;
+
+  /* Shadows off in dark — elevation via surface steps. */
+  --shadow-xs: none;
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    color-scheme: dark;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

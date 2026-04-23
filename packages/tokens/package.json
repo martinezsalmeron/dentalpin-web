@@ -1,0 +1,13 @@
+{
+  "name": "@dentalpin/tokens",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Dentalpin design tokens (CSS variables mirroring DESIGN.md).",
+  "type": "module",
+  "exports": {
+    "./tokens.css": "./src/tokens.css",
+    "./typography.css": "./src/typography.css",
+    "./reset.css": "./src/reset.css"
+  },
+  "files": ["src"]
+}

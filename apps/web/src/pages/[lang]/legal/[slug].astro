@@ -1,0 +1,39 @@
+---
+import { isLocale, useTranslations, type Locale } from '~/i18n';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Section from '@dentalpin/ui/Section.astro';
+
+type Slug = 'privacidad' | 'terminos' | 'cookies';
+
+export function getStaticPaths() {
+  const slugs: Slug[] = ['privacidad', 'terminos', 'cookies'];
+  return (['es', 'en'] as const).flatMap((lang) =>
+    slugs.map((slug) => ({ params: { lang, slug } })),
+  );
+}
+
+const { lang, slug } = Astro.params;
+const validSlugs: Slug[] = ['privacidad', 'terminos', 'cookies'];
+if (!isLocale(lang) || !validSlugs.includes(slug as Slug)) return Astro.redirect('/es/', 308);
+const locale = lang as Locale;
+const t = useTranslations(locale);
+
+const titles: Record<Locale, Record<Slug, string>> = {
+  es: { privacidad: 'Política de privacidad', terminos: 'Términos de uso', cookies: 'Política de cookies' },
+  en: { privacidad: 'Privacy policy', terminos: 'Terms of use', cookies: 'Cookie policy' },
+};
+const title = titles[locale][slug as Slug];
+---
+
+<BaseLayout locale={locale} title={`${title} · Dentalpin`} noindex>
+  <Section maxWidth="narrow" padY="lg">
+    <h1 class="text-marketing-h1 text-[var(--color-text)]">{title}</h1>
+    <div class="prose prose-sm mt-8 max-w-none text-[var(--color-text-muted)]">
+      <p>
+        {locale === 'es'
+          ? 'Documento pendiente de redacción legal. Actualízalo antes del lanzamiento.'
+          : 'Legal document pending drafting. Update before launch.'}
+      </p>
+    </div>
+  </Section>
+</BaseLayout>

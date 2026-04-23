@@ -1,0 +1,113 @@
+/*
+ * Typography utilities. Mirror DESIGN.md §3.
+ * Use these instead of Tailwind text-3xl/2xl.
+ */
+
+html {
+  font-family:
+    "Inter Variable",
+    -apple-system,
+    system-ui,
+    "Segoe UI",
+    Helvetica,
+    Arial,
+    sans-serif;
+  font-feature-settings: "cv11", "ss01";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.text-display {
+  font-size: var(--text-display-size);
+  line-height: var(--text-display-line);
+  letter-spacing: var(--text-display-track);
+  font-weight: var(--text-display-weight);
+}
+
+.text-h1 {
+  font-size: var(--text-h1-size);
+  line-height: var(--text-h1-line);
+  letter-spacing: var(--text-h1-track);
+  font-weight: var(--text-h1-weight);
+}
+
+.text-h2 {
+  font-size: var(--text-h2-size);
+  line-height: var(--text-h2-line);
+  letter-spacing: var(--text-h2-track);
+  font-weight: var(--text-h2-weight);
+}
+
+.text-h3 {
+  font-size: var(--text-h3-size);
+  line-height: var(--text-h3-line);
+  font-weight: var(--text-h3-weight);
+}
+
+.text-body {
+  font-size: var(--text-body-size);
+  line-height: var(--text-body-line);
+  font-weight: var(--text-body-weight);
+}
+
+.text-body-prose {
+  font-size: var(--text-body-prose-size);
+  line-height: var(--text-body-prose-line);
+  font-weight: var(--text-body-prose-weight);
+}
+
+.text-ui {
+  font-size: var(--text-ui-size);
+  line-height: var(--text-ui-line);
+  font-weight: var(--text-ui-weight);
+}
+
+.text-button {
+  font-size: var(--text-button-size);
+  line-height: var(--text-button-line);
+  font-weight: var(--text-button-weight);
+}
+
+.text-caption {
+  font-size: var(--text-caption-size);
+  line-height: var(--text-caption-line);
+  letter-spacing: var(--text-caption-track);
+  font-weight: var(--text-caption-weight);
+}
+
+.text-micro {
+  font-size: var(--text-micro-size);
+  line-height: var(--text-micro-line);
+  letter-spacing: var(--text-micro-track);
+  font-weight: var(--text-micro-weight);
+}
+
+/* Marketing display sizes (only used in apps/web). */
+.text-marketing-hero {
+  font-size: var(--text-marketing-hero);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+.text-marketing-h1 {
+  font-size: var(--text-marketing-h1);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+.text-marketing-h2 {
+  font-size: var(--text-marketing-h2);
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
