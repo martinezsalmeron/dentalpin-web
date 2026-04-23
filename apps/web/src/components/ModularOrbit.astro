@@ -1,0 +1,137 @@
+---
+import { useDict, type Locale } from '~/i18n';
+import { MODULES } from '~/data/modules';
+import Icon from '@dentalpin/ui/Icon.astro';
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const dict = useDict(locale);
+
+type IconName =
+  | 'calendar' | 'tooth' | 'chart' | 'card' | 'shield' | 'sparkles'
+  | 'plug' | 'globe' | 'plus' | 'message' | 'flask';
+
+const innerSlugs = ['odontograma','pacientes','agenda','presupuestos','facturacion','reportes'];
+const inner = innerSlugs
+  .map((s) => MODULES.find((m) => m.slug === s))
+  .filter((m): m is NonNullable<typeof m> => Boolean(m))
+  .map((mod) => ({ kind: 'official' as const, label: mod.title[locale], icon: mod.icon as IconName }));
+
+const community = (dict.modular.communityItems as { label: string; icon: string }[]).map((c) => ({
+  kind: 'community' as const,
+  label: c.label,
+  icon: c.icon as IconName,
+}));
+
+const outer: ({ kind: 'community'; label: string; icon: IconName } | { kind: 'add'; label: string; icon: IconName })[] = [
+  ...community,
+  { kind: 'add', label: dict.modular.addYours, icon: 'plus' },
+];
+
+function pos(i: number, total: number, r: number, offsetDeg: number) {
+  const angle = ((i / total) * 360 + offsetDeg) * Math.PI / 180;
+  return { x: 50 + Math.cos(angle) * r, y: 50 + Math.sin(angle) * r };
+}
+
+const innerR = 30;
+const outerR = 46;
+const innerOffset = -90;
+const outerOffset = -90 + 360 / outer.length / 2;
+
+const innerPlaced = inner.map((m, i) => ({ ...m, ...pos(i, inner.length, innerR, innerOffset) }));
+const outerPlaced = outer.map((m, i) => ({ ...m, ...pos(i, outer.length, outerR, outerOffset) }));
+---
+
+<div class="relative">
+  <div class="relative mx-auto aspect-square w-full max-w-[560px]">
+    <svg viewBox="0 0 100 100" class="absolute inset-0 h-full w-full" aria-hidden="true">
+      <defs>
+        <radialGradient id="modular-haze" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="currentColor" stop-opacity="0.18" class="text-[var(--color-primary)]" />
+          <stop offset="55%" stop-color="currentColor" stop-opacity="0.04" class="text-[var(--color-primary)]" />
+          <stop offset="100%" stop-color="currentColor" stop-opacity="0" class="text-[var(--color-primary)]" />
+        </radialGradient>
+      </defs>
+
+      <circle cx="50" cy="50" r="48" fill="url(#modular-haze)" />
+
+      <circle cx="50" cy="50" r={innerR} fill="none" stroke="currentColor" stroke-width="0.18" class="text-[var(--color-border-strong)]" />
+
+      <circle cx="50" cy="50" r={outerR} fill="none" stroke="currentColor" stroke-width="0.18" stroke-dasharray="0.8 1.2" class="text-[var(--color-primary)] opacity-50" />
+
+      {innerPlaced.map((m) => (
+        <line x1="50" y1="50" x2={m.x} y2={m.y} stroke="currentColor" stroke-width="0.18" class="text-[var(--color-primary)] opacity-35" />
+      ))}
+
+      {outerPlaced.map((m) => {
+        const nearest = innerPlaced
+          .map((i) => ({ i, d: Math.hypot(i.x - m.x, i.y - m.y) }))
+          .sort((a, b) => a.d - b.d)[0].i;
+        return (
+          <line x1={nearest.x} y1={nearest.y} x2={m.x} y2={m.y} stroke="currentColor" stroke-width="0.14" stroke-dasharray="0.6 0.9" class={`text-[var(--color-primary)] ${m.kind === 'add' ? 'opacity-60' : 'opacity-30'}`} />
+        );
+      })}
+
+      {outerPlaced.map((m) => (
+        <circle cx={m.x} cy={m.y} r="0.6" fill="currentColor" class="text-[var(--color-primary)]" />
+      ))}
+    </svg>
+
+    <div class="absolute left-1/2 top-1/2 z-10 flex h-36 w-36 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-1 rounded-full bg-gradient-to-br from-[var(--color-primary-soft)] to-[var(--color-surface)] text-[var(--color-primary-soft-text)] shadow-[var(--shadow-md)] ring-1 ring-[var(--color-primary)] ring-offset-4 ring-offset-[var(--color-canvas)]">
+      <span class="absolute inset-0 -z-10 animate-[modular-pulse_3.2s_ease-in-out_infinite] rounded-full bg-[var(--color-primary)] opacity-10"></span>
+      <span class="text-[10px] font-semibold uppercase tracking-[0.14em]">
+        {dict.modular.core}
+      </span>
+      <ul class="text-center text-[12px] font-medium leading-tight">
+        {dict.modular.coreItems.map((item) => <li>{item}</li>)}
+      </ul>
+    </div>
+
+    {innerPlaced.map((m) => (
+      <div
+        class="group absolute z-10 flex -translate-x-1/2 -translate-y-1/2 items-center gap-2 rounded-[var(--radius-pill)] border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-1.5 text-[12px] font-medium text-[var(--color-text)] shadow-[var(--shadow-sm)] transition-transform hover:-translate-y-[calc(50%+2px)]"
+        style={`left: ${m.x}%; top: ${m.y}%`}
+      >
+        <span class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[var(--color-primary-soft)] text-[var(--color-primary-soft-text)]">
+          <Icon name={m.icon} size={12} />
+        </span>
+        <span class="whitespace-nowrap">{m.label}</span>
+      </div>
+    ))}
+
+    {outerPlaced.map((m) => {
+      const isAdd = m.kind === 'add';
+      const base = 'group absolute z-10 flex -translate-x-1/2 -translate-y-1/2 items-center gap-2 rounded-[var(--radius-pill)] px-3 py-1.5 text-[12px] font-medium transition-transform hover:-translate-y-[calc(50%+2px)]';
+      const cls = isAdd
+        ? `${base} border border-[var(--color-primary)] bg-[var(--color-primary)] text-white shadow-[var(--shadow-sm)]`
+        : `${base} border border-dashed border-[var(--color-primary)]/55 bg-[var(--color-surface)]/85 text-[var(--color-text-muted)] backdrop-blur`;
+      const iconWrap = isAdd
+        ? 'inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/20 text-white'
+        : 'inline-flex h-5 w-5 items-center justify-center rounded-full bg-[var(--color-surface-muted)] text-[var(--color-primary)]';
+      const positionStyle = `left: ${m.x}%; top: ${m.y}%`;
+      const wrapStyle = isAdd ? `${positionStyle}; color:#fff` : positionStyle;
+      return (
+        <div class={cls} style={wrapStyle}>
+          <span class={iconWrap}>
+            <Icon name={m.icon} size={12} />
+          </span>
+          <span class="whitespace-nowrap">{m.label}</span>
+        </div>
+      );
+    })}
+  </div>
+
+  <p class="mt-4 text-center text-[12px] italic text-[var(--color-text-muted)]">
+    {dict.modular.communityNote}
+  </p>
+</div>
+
+<style>
+  @keyframes modular-pulse {
+    0%, 100% { transform: scale(1); opacity: 0.10; }
+    50% { transform: scale(1.18); opacity: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    :global([class*='modular-pulse']) { animation: none !important; }
+  }
+</style>

@@ -3,7 +3,7 @@ interface Props {
   class?: string;
   id?: string;
   maxWidth?: 'narrow' | 'default' | 'wide' | 'full';
-  padY?: 'sm' | 'md' | 'lg' | 'xl';
+  padY?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 }
 
 const {
@@ -21,6 +21,7 @@ const widths = {
 } as const;
 
 const pads = {
+  xs: 'py-8',
   sm: 'py-10',
   md: 'py-16',
   lg: 'py-24',

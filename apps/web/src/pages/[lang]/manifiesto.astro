@@ -1,0 +1,99 @@
+---
+import { isLocale, useDict, type Locale } from '~/i18n';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Section from '@dentalpin/ui/Section.astro';
+import GradientBackdrop from '@dentalpin/ui/GradientBackdrop.astro';
+import Button from '@dentalpin/ui/Button.astro';
+import Icon from '@dentalpin/ui/Icon.astro';
+import { DEMO_URL, GITHUB_REPO } from '~/config/links';
+
+export function getStaticPaths() {
+  return [{ params: { lang: 'es' } }, { params: { lang: 'en' } }];
+}
+
+const { lang } = Astro.params;
+if (!isLocale(lang)) return Astro.redirect('/es/', 308);
+const locale = lang as Locale;
+const dict = useDict(locale);
+const page = dict.manifestoPage;
+
+const demoUrl = DEMO_URL;
+const ghUrl = GITHUB_REPO;
+---
+
+<BaseLayout
+  locale={locale}
+  title={page.meta.title}
+  description={page.meta.description}
+>
+  <section class="relative overflow-hidden">
+    <GradientBackdrop variant="hero" />
+
+    <Section maxWidth="default" padY="xl">
+      <div class="max-w-3xl">
+        <span class="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-[var(--color-primary)]">
+          <span class="h-1.5 w-1.5 rounded-full bg-[var(--color-primary)]"></span>
+          {page.eyebrow}
+        </span>
+        <h1 class="mt-6 text-[clamp(2.25rem,3.2vw+1rem,4.25rem)] font-semibold leading-[1.02] tracking-[-0.025em] text-[var(--color-text)]">
+          {page.title}
+        </h1>
+      </div>
+
+      <div class="mt-12 grid gap-10 lg:grid-cols-[minmax(0,2.5fr)_minmax(0,1fr)]">
+        <p class="text-[19px] leading-[1.65] text-[var(--color-text)] sm:text-[20px]">
+          {page.lead}
+        </p>
+        <aside class="border-l-2 border-[var(--color-primary)] pl-5 text-[13px] uppercase tracking-[0.16em] text-[var(--color-text-muted)]">
+          <div class="font-mono text-[11px] tabular-nums text-[var(--color-text-subtle)]">§ 00</div>
+          <div class="mt-2 font-semibold text-[var(--color-text)]">{page.eyebrow}</div>
+        </aside>
+      </div>
+    </Section>
+  </section>
+
+  <Section maxWidth="default" padY="md">
+    <ol class="relative space-y-16 border-l border-[var(--color-border-subtle)] pl-8 sm:pl-12">
+      {page.sections.map((s, idx) => (
+        <li class="relative">
+          <span
+            aria-hidden="true"
+            class="absolute -left-[41px] top-1 flex h-5 w-5 items-center justify-center rounded-full border border-[var(--color-border)] bg-[var(--color-canvas)] sm:-left-[49px]"
+          >
+            <span class="h-1.5 w-1.5 rounded-full bg-[var(--color-primary)]"></span>
+          </span>
+          <div class="font-mono text-[11px] tabular-nums tracking-[0.2em] text-[var(--color-text-subtle)]">
+            § {String(idx + 1).padStart(2, '0')}
+          </div>
+          <h2 class="mt-2 text-[clamp(1.5rem,1.4vw+1rem,2.25rem)] font-semibold leading-[1.15] tracking-[-0.015em] text-[var(--color-text)]">
+            {s.heading}
+          </h2>
+          <p class="mt-5 max-w-2xl text-[17px] leading-[1.75] text-[var(--color-text-muted)]">
+            {s.body}
+          </p>
+        </li>
+      ))}
+    </ol>
+  </Section>
+
+  <Section maxWidth="default" padY="lg">
+    <div class="relative overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] px-8 py-14 shadow-[var(--shadow-sm)] sm:px-14">
+      <GradientBackdrop variant="subtle" />
+      <p class="text-[clamp(1.5rem,1.6vw+1rem,2.25rem)] font-semibold leading-[1.2] tracking-[-0.015em] text-[var(--color-text)]">
+        {page.closing}
+      </p>
+      <p class="mt-6 text-[13px] uppercase tracking-[0.18em] text-[var(--color-text-muted)]">
+        {page.signature}
+      </p>
+      <div class="mt-10 flex flex-wrap items-center gap-3">
+        <Button href={demoUrl} size="lg">
+          {page.ctaPrimary}
+          <Icon name="arrow-right" size={16} />
+        </Button>
+        <Button href={ghUrl} variant="outline" size="lg">
+          {page.ctaSecondary}
+        </Button>
+      </div>
+    </div>
+  </Section>
+</BaseLayout>
