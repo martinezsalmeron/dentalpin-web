@@ -111,6 +111,16 @@
   --text-marketing-h1: clamp(1.875rem, 2vw + 1rem, 3rem); /* 30→48px */
   --text-marketing-h2: clamp(1.5rem, 1vw + 1rem, 2rem); /* 24→32px */
 
+  /* ─── Marketing-only pastel accents ─── */
+  /* Decorative use only (hero gradient text, backdrop glows, illustration washes).
+     Never used inside the clinical app — those surfaces stick to --color-primary. */
+  --color-marketing-glow-a: #bae6fd; /* sky-200 */
+  --color-marketing-glow-b: #99f6e4; /* teal-200 (mint) */
+  --color-marketing-glow-c: #7dd3fc; /* sky-300 */
+  --color-marketing-text-from: #0369a1; /* sky-700 */
+  --color-marketing-text-via: #0ea5e9; /* sky-500 */
+  --color-marketing-text-to: #0d9488; /* teal-600 (mint accent) */
+
   /* ─── Motion ─── */
   --motion-duration: 150ms;
   --motion-easing: cubic-bezier(0.2, 0, 0.2, 1);
@@ -158,6 +168,14 @@
   --shadow-sm: none;
   --shadow-md: none;
   --shadow-lg: none;
+
+  /* Marketing pastel accents — softer, brighter on dark canvas. */
+  --color-marketing-glow-a: #38bdf8; /* sky-400 */
+  --color-marketing-glow-b: #5eead4; /* teal-300 (mint) */
+  --color-marketing-glow-c: #7dd3fc; /* sky-300 */
+  --color-marketing-text-from: #7dd3fc; /* sky-300 */
+  --color-marketing-text-via: #38bdf8; /* sky-400 */
+  --color-marketing-text-to: #5eead4; /* teal-300 (mint) */
 }
 
 @media (prefers-color-scheme: dark) {

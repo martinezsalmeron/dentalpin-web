@@ -9,13 +9,14 @@ interface Props { locale: Locale; }
 const { locale } = Astro.props;
 const dict = useDict(locale);
 const demoUrl = 'https://demo.dentalpin.com';
+const steps = (dict.demo.steps as string[]) ?? [];
 ---
 
-<Section id="demo" padY="md">
+<Section id="demo" padY="xs">
   <div class="relative overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-8 shadow-[var(--shadow-md)] sm:p-12">
     <GradientBackdrop variant="subtle" />
 
-    <div class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,380px)] lg:items-center">
+    <div class="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,400px)] lg:items-start">
       <div>
         <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">
           {dict.demo.eyebrow}
@@ -23,40 +24,67 @@ const demoUrl = 'https://demo.dentalpin.com';
         <h2 class="text-marketing-h1 mt-3 text-[var(--color-text)]">
           {dict.demo.title}
         </h2>
-        <p class="mt-4 max-w-[55ch] text-[15px] text-[var(--color-text-muted)]">
+        <p class="mt-4 max-w-[58ch] text-[16px] leading-[1.65] text-[var(--color-text-muted)]">
           {dict.demo.body}
         </p>
-        <div class="mt-6 flex flex-wrap items-center gap-3">
+
+        <p class="mt-7 text-[12px] font-semibold uppercase tracking-wider text-[var(--color-text-subtle)]">
+          {dict.demo.stepsLabel}
+        </p>
+        <ol class="mt-3 space-y-3">
+          {steps.map((step, i) => (
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[var(--color-primary-soft)] text-[13px] font-semibold text-[var(--color-primary-soft-text)]">
+                {i + 1}
+              </span>
+              <span class="text-[15px] leading-[1.55] text-[var(--color-text)]">{step}</span>
+            </li>
+          ))}
+        </ol>
+
+        <div class="mt-8 flex flex-wrap items-center gap-4">
           <Button href={demoUrl} size="lg" variant="solid">
             {dict.demo.cta}
             <Icon name="arrow-right" size={16} />
           </Button>
-          <a href={demoUrl} class="font-mono text-[13px] text-[var(--color-text-muted)] underline decoration-dotted underline-offset-4 hover:text-[var(--color-primary)]">
-            {dict.demo.url}
-          </a>
+          <span class="inline-flex items-center gap-2 text-[13px] text-[var(--color-text-muted)]">
+            <Icon name="check" size={14} class="text-[var(--color-primary)]" />
+            {dict.demo.noInstall}
+          </span>
         </div>
       </div>
 
-      <div class="rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-surface-muted)] p-5">
-        <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-text-muted)]">
+      <div class="rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-surface-muted)] p-6">
+        <p class="text-[12px] font-semibold uppercase tracking-wider text-[var(--color-text-subtle)]">
           {dict.demo.credentials.label}
         </p>
-        <dl class="mt-3 space-y-2 font-mono text-[12.5px]">
-          <div class="flex items-center justify-between gap-4">
-            <dt class="text-[var(--color-text-subtle)]">admin</dt>
-            <dd class="truncate text-[var(--color-text)]">{dict.demo.credentials.admin}</dd>
+
+        <div class="mt-4 space-y-3">
+          <div>
+            <p class="text-[11px] uppercase tracking-wider text-[var(--color-text-subtle)]">
+              {dict.demo.credentials.userLabel}
+            </p>
+            <p class="mt-1 select-all break-all font-mono text-[14px] text-[var(--color-text)]">
+              {dict.demo.credentials.admin}
+            </p>
           </div>
-          <div class="flex items-center justify-between gap-4">
-            <dt class="text-[var(--color-text-subtle)]">password</dt>
-            <dd class="truncate text-[var(--color-text)]">{dict.demo.credentials.password}</dd>
+          <div>
+            <p class="text-[11px] uppercase tracking-wider text-[var(--color-text-subtle)]">
+              {dict.demo.credentials.passwordLabel}
+            </p>
+            <p class="mt-1 select-all font-mono text-[14px] text-[var(--color-text)]">
+              {dict.demo.credentials.password}
+            </p>
           </div>
-          <div class="flex flex-col gap-1">
-            <dt class="text-[var(--color-text-subtle)]">others</dt>
-            <dd class="text-[var(--color-text-muted)]">{dict.demo.credentials.others}</dd>
-          </div>
-        </dl>
-        <p class="mt-4 text-[12px] text-[var(--color-warning-text)]">
-          ⓘ {dict.demo.disclaimer}
+        </div>
+
+        <p class="mt-5 border-t border-[var(--color-border)] pt-4 text-[12.5px] leading-[1.5] text-[var(--color-text-muted)]">
+          {dict.demo.credentials.rolesNote}
+        </p>
+
+        <p class="mt-4 flex items-start gap-2 text-[12.5px] leading-[1.5] text-[var(--color-text-muted)]">
+          <span aria-hidden="true">⚠︎</span>
+          <span>{dict.demo.disclaimer}</span>
         </p>
       </div>
     </div>

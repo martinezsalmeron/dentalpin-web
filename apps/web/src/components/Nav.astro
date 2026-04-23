@@ -4,7 +4,7 @@ import Button from '@dentalpin/ui/Button.astro';
 import Icon from '@dentalpin/ui/Icon.astro';
 import LanguagePicker from './LanguagePicker.astro';
 import MegaMenuFeatures from './MegaMenuFeatures.astro';
-import { DEMO_URL, DOCS_URL, GITHUB_REPO } from '~/config/links';
+import { DEMO_URL, GITHUB_REPO } from '~/config/links';
 import { getGithubStars, formatStars } from '~/lib/github-stars';
 
 interface Props {
@@ -13,7 +13,6 @@ interface Props {
 const { locale } = Astro.props;
 const dict = useDict(locale);
 
-const docsUrl = DOCS_URL;
 const demoUrl = DEMO_URL;
 const githubUrl = GITHUB_REPO;
 
@@ -23,7 +22,7 @@ const stars = await getGithubStars('martinezsalmeron', 'dentalpin');
 <header class="sticky top-0 z-40 border-b border-[var(--color-border-subtle)] bg-[color-mix(in_oklab,var(--color-canvas)_88%,transparent)] backdrop-blur">
   <nav class="mx-auto flex h-14 max-w-7xl items-center gap-4 px-6 sm:px-8" aria-label="Principal">
     <a href={localisedPath(locale)} class="flex flex-none items-center gap-2 font-semibold">
-      <span aria-hidden="true" class="inline-flex h-7 w-7 items-center justify-center rounded-[var(--radius-sm)] bg-[var(--color-primary)] text-white">
+      <span aria-hidden="true" style="color:#fff" class="inline-flex h-7 w-7 items-center justify-center rounded-[var(--radius-sm)] bg-[var(--color-primary)] text-white">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M8 3c-2.5 0-4 2-4 5 0 2 .8 3 1.2 5 .3 1.5.2 3 .6 5 .3 1.5 1 3 2.2 3 1.5 0 1.5-3 2-4.5.3-.9.7-1 1-1s.7.1 1 1c.5 1.5.5 4.5 2 4.5 1.2 0 1.9-1.5 2.2-3 .4-2 .3-3.5.6-5 .4-2 1.2-3 1.2-5 0-3-1.5-5-4-5-1.3 0-2 .7-3 .7s-1.7-.7-3-.7z" />
         </svg>
@@ -39,13 +38,8 @@ const stars = await getGithubStars('martinezsalmeron', 'dentalpin');
         </a>
       </li>
       <li>
-        <a class="rounded-[var(--radius-sm)] px-3 py-2 text-[14px] text-[var(--color-text-muted)] hover:bg-[var(--color-surface-muted)] hover:text-[var(--color-text)]" href={docsUrl} rel="noopener">
-          {dict.nav.docs}
-        </a>
-      </li>
-      <li>
-        <a class="rounded-[var(--radius-sm)] px-3 py-2 text-[14px] text-[var(--color-text-muted)] hover:bg-[var(--color-surface-muted)] hover:text-[var(--color-text)]" href={githubUrl} rel="noopener" target="_blank">
-          {dict.nav.community}
+        <a class="rounded-[var(--radius-sm)] px-3 py-2 text-[14px] text-[var(--color-text-muted)] hover:bg-[var(--color-surface-muted)] hover:text-[var(--color-text)]" href={localisedPath(locale, 'manifiesto')}>
+          {dict.nav.manifesto}
         </a>
       </li>
     </ul>
@@ -64,14 +58,16 @@ const stars = await getGithubStars('martinezsalmeron', 'dentalpin');
         </svg>
         <span class="flex items-center gap-1">
           <span>Star</span>
-          {stars !== null && (
-            <span class="flex items-center gap-0.5 rounded-[var(--radius-xs)] bg-[var(--color-surface-sunken)] px-1.5 py-0.5 font-mono text-[11px] tabular-nums text-[var(--color-text)]">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="text-[var(--color-warning-accent)]">
-                <path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-              </svg>
-              {formatStars(stars)}
-            </span>
-          )}
+          <span
+            data-gh-stars
+            data-gh-repo="martinezsalmeron/dentalpin"
+            class={`items-center gap-0.5 rounded-[var(--radius-xs)] bg-[var(--color-surface-sunken)] px-1.5 py-0.5 font-mono text-[11px] tabular-nums text-[var(--color-text)] ${stars !== null ? 'flex' : 'hidden'}`}
+          >
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="text-[var(--color-warning-accent)]">
+              <path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <span data-gh-stars-count>{stars !== null ? formatStars(stars) : ''}</span>
+          </span>
         </span>
       </a>
       <Button href={demoUrl} size="sm">
@@ -81,3 +77,50 @@ const stars = await getGithubStars('martinezsalmeron', 'dentalpin');
     </div>
   </nav>
 </header>
+
+<script is:inline>
+  (function () {
+    var badge = document.querySelector('[data-gh-stars]');
+    if (!badge) return;
+    var target = badge.querySelector('[data-gh-stars-count]');
+    if (!target) return;
+    var repo = badge.getAttribute('data-gh-repo') || 'martinezsalmeron/dentalpin';
+    var key = 'gh-stars:' + repo;
+    var TTL = 5 * 60 * 1000;
+
+    function format(n) {
+      if (n < 1000) return String(n);
+      if (n < 10000) return (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k';
+      return Math.round(n / 1000) + 'k';
+    }
+    function show(n) {
+      if (typeof n !== 'number') return;
+      target.textContent = format(n);
+      badge.classList.remove('hidden');
+      badge.classList.add('flex');
+    }
+
+    try {
+      var raw = localStorage.getItem(key);
+      if (raw) {
+        var cached = JSON.parse(raw);
+        if (cached && typeof cached.count === 'number' && Date.now() - cached.ts < TTL) {
+          show(cached.count);
+        }
+      }
+    } catch (_) {}
+
+    fetch('https://api.github.com/repos/' + repo, {
+      headers: { Accept: 'application/vnd.github+json' },
+    })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) {
+        if (!d || typeof d.stargazers_count !== 'number') return;
+        show(d.stargazers_count);
+        try {
+          localStorage.setItem(key, JSON.stringify({ count: d.stargazers_count, ts: Date.now() }));
+        } catch (_) {}
+      })
+      .catch(function () {});
+  })();
+</script>

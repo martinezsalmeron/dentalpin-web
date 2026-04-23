@@ -40,10 +40,12 @@ const variants: Record<Variant, string> = {
 };
 const cls = [base, sizes[size], variants[variant], extra].join(' ');
 const Tag = href ? 'a' : 'button';
+const inlineStyle = variant === 'solid' ? 'color:#fff' : undefined;
 ---
 
 <Tag
   class={cls}
+  style={inlineStyle}
   href={href}
   type={!href ? type : undefined}
   aria-label={ariaLabel}

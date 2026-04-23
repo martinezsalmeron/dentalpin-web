@@ -1,0 +1,66 @@
+---
+import { useDict, localisedPath, type Locale } from '~/i18n';
+import Section from '@dentalpin/ui/Section.astro';
+import GradientBackdrop from '@dentalpin/ui/GradientBackdrop.astro';
+import Icon from '@dentalpin/ui/Icon.astro';
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const dict = useDict(locale);
+
+type ItemKey = keyof typeof dict.manifesto.items;
+const ORDER: ItemKey[] = ['oss', 'modular', 'global', 'api', 'ai', 'ux'];
+---
+
+<section id="manifesto" class="relative overflow-hidden">
+  <GradientBackdrop variant="subtle" />
+
+  <Section padY="md" maxWidth="wide">
+    <div class="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.35fr)] lg:gap-16">
+      <header class="relative">
+        <span class="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--color-primary)]">
+          <span class="h-px w-8 bg-[var(--color-primary)]"></span>
+          {dict.manifesto.eyebrow}
+        </span>
+        <h2 class="mt-5 text-[clamp(2rem,2.4vw+1rem,3.25rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-[var(--color-text)]">
+          {dict.manifesto.title}
+        </h2>
+        <p class="mt-6 max-w-md text-[16px] leading-[1.65] text-[var(--color-text-muted)]">
+          {dict.manifesto.lead}
+        </p>
+        <a
+          href={localisedPath(locale, 'manifiesto')}
+          class="group mt-8 inline-flex items-center gap-2 text-[14px] font-semibold text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
+        >
+          {dict.manifesto.cta}
+          <span class="transition-transform group-hover:translate-x-0.5">
+            <Icon name="arrow-right" size={16} />
+          </span>
+        </a>
+      </header>
+
+      <ol class="relative grid gap-px bg-[var(--color-border-subtle)] sm:grid-cols-2 rounded-[var(--radius-xl)] overflow-hidden border border-[var(--color-border-subtle)]">
+        {ORDER.map((key, idx) => (
+          <li class="group relative bg-[var(--color-surface)] p-6 transition-colors duration-300 hover:bg-[var(--color-surface-muted)] sm:p-7">
+            <div class="flex items-baseline justify-between gap-4">
+              <span class="font-mono text-[12px] tabular-nums tracking-wider text-[var(--color-text-subtle)]">
+                {String(idx + 1).padStart(2, '0')}
+              </span>
+              <span aria-hidden="true" class="h-px flex-1 bg-gradient-to-r from-[var(--color-border)] to-transparent"></span>
+            </div>
+            <h3 class="mt-4 text-[18px] font-semibold leading-tight tracking-tight text-[var(--color-text)]">
+              {dict.manifesto.items[key].title}
+            </h3>
+            <p class="mt-2.5 text-[14px] leading-[1.6] text-[var(--color-text-muted)]">
+              {dict.manifesto.items[key].body}
+            </p>
+            <span
+              aria-hidden="true"
+              class="pointer-events-none absolute inset-y-0 left-0 w-[3px] origin-top scale-y-0 bg-[var(--color-primary)] transition-transform duration-300 group-hover:scale-y-100"
+            ></span>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </Section>
+</section>

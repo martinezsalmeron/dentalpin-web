@@ -6,6 +6,7 @@
   "nav": {
     "features": "Funcionalidades",
     "pricing": "Precios",
+    "manifesto": "Manifiesto",
     "docs": "Documentación",
     "community": "Comunidad",
     "liveDemo": "Prueba la demo",
@@ -32,69 +33,123 @@
     "subtitle": "Pacientes, agenda, odontograma, presupuestos y facturación en una sola plataforma. La instalas tú, la extiendes tú, te la quedas tú.",
     "ctaPrimary": "Probar la demo en vivo",
     "ctaSecondary": "Star en GitHub",
-    "trust": "Respaldado por Dentaltix · BSL 1.1 → Apache 2.0"
+    "trust": "Respaldado por Dentaltix · BSL 1.1 → Apache 2.0",
+    "trustPre": "Respaldado por ",
+    "trustPost": " · BSL 1.1 → Apache 2.0"
   },
   "manifesto": {
-    "eyebrow": "POR QUÉ EXISTE",
-    "title": "El mercado dental lleva años vendiendo lo mismo. Decidimos no esperar más.",
-    "body": "Decenas de productos cerrados, caros y atados a una región. Interfaces que parecen de hace quince años, datos cautivos y cero camino hacia la IA. Dentalpin es la respuesta: una plataforma abierta y moderna que cualquier clínica puede usar, cualquier desarrollador puede extender y cualquier comunidad puede traducir. Sin rehenes."
-  },
-  "pillars": {
-    "eyebrow": "PRINCIPIOS",
-    "title": "Seis principios. En este orden.",
+    "eyebrow": "MANIFIESTO",
+    "title": "No estamos aquí para vender otro software dental.",
+    "lead": "Estamos aquí porque un software de gestión que esté a la altura del sector dental. Esa misión está muy por encima de un negocio. Seis principios sobre el software que una clínica merece en 2026.",
     "items": {
       "oss": {
-        "title": "Open Source",
-        "body": "Los datos de tu clínica son tuyos. Tu software también debería serlo."
+        "title": "Tus datos, solo tuyos",
+        "body": "Los datos de tu clínica deben estar donde tú decidas: en un servidor propio, o en la nube que tú elijas. Nunca rehenes de otra empresa."
       },
       "modular": {
-        "title": "Modular",
-        "body": "Empieza con lo básico. Activa lo que necesites. Olvídate de pagar por lo que no usas."
+        "title": "Código abierto, auditable",
+        "body": "Cada línea de código se lee, se audita y se forkea. Cualquiera puede reportar errores y aportar mejoras."
       },
       "global": {
-        "title": "Global por diseño",
-        "body": "Localización desde el día uno. Mismo core, cualquier idioma, cualquier país."
+        "title": "Modular de verdad",
+        "body": "Instalas lo que usas. Ignoras el resto. Sin tiers, sin extorsiones, sin “contáctanos para conocer el precio”."
       },
       "api": {
-        "title": "API-first",
-        "body": "Cada funcionalidad expone su API. Conecta lo que quieras, automatiza lo que duela."
+        "title": "API First",
+        "body": "Todo lo que ves en la interfaz es accesible por API. Puedes integrar el software con todo lo que necesites."
       },
       "ai": {
-        "title": "AI-Ready",
-        "body": "Pensado para colaborar con agentes: agenda inteligente, soporte clínico y follow-ups que se ejecutan solos."
+        "title": "IA Ready",
+        "body": "En la era de la IA, el software debe estar diseñado para que todas las acciones puedan ser ejecutadas por un agente si quieres hacerlo."
       },
       "ux": {
-        "title": "Modern UX",
-        "body": "Interfaz calmada, modo oscuro, atajos de teclado. Hecho para usar ocho horas al día sin cansar la vista."
+        "title": "Calma en la interfaz",
+        "body": "Ocho horas frente al ordenador merecen una interfaz con un buen diseño. Modo oscuro por defecto, flujos bien diseñados, menos clics."
       }
-    }
+    },
+    "cta": "Leer el manifiesto completo"
+  },
+  "manifestoPage": {
+    "meta": {
+      "title": "Manifiesto · Dentalpin",
+      "description": "Por qué existe Dentalpin y qué le prometemos al sector dental: software abierto, modular y calmado. Para clínicas que llevan años esperando algo mejor."
+    },
+    "eyebrow": "MANIFIESTO · ABRIL 2026",
+    "title": "El software que trajo al sector hasta aquí no es el que lo va a llevar al siguiente sitio.",
+    "lead": "Llevamos años trabajando junto al sector dental y sabemos lo que el software le ha dado: clínicas que facturan, agendan y cuidan historiales en segundos donde antes había carpetas y llamadas. Parte del motivo por el que el sector es hoy uno de los más profesionalizados del mundo se lo debemos a esos programas que nos trajeron hasta aquí. Pero esa primera generación ya no da para más: interfaces que llevan quince años sin repensarse, migraciones imposibles cuando una clínica quiere crecer, datos que cuesta exportar y modelos de licencia que encajan a unos y ahogan a otros. El sector está listo para un nuevo salto, uno que recoja los aciertos del anterior y añada todo lo que 2026 permite. Este manifiesto es nuestra manera de empujar ese salto, con respeto por lo hecho y ambición por lo que falta.",
+    "sections": [
+      {
+        "heading": "Lo que llevamos años viendo",
+        "body": "Hemos visto a odontólogas apoyarse en su programa de gestión durante años para recordar citas, guardar historiales y facturar con rigor. Lo que hoy parece obvio, todo el paciente a un clic, es algo que esos programas conquistaron, y merece reconocimiento. Pero también hemos visto a esas mismas profesionales abrir la pantalla y notar que el día va a ir más lento; a recepcionistas que cuelgan el teléfono para pelearse con un cuadro de búsqueda; a propietarios que descubren que exportar su propia base de datos cuesta una cifra con varios dígitos y seis semanas de espera. No es que el sector haya elegido mal: es que la alternativa todavía no se había construido. Hasta ahora."
+      },
+      {
+        "heading": "En qué creemos",
+        "body": "Creemos en el software libre, y en que debería existir una alternativa abierta donde una clínica pueda gestionar los datos de sus pacientes. Creemos que un programa que una higienista va a abrir cincuenta veces al día merece ser bonito, rápido y bien diseñado. Creemos que el dueño de una clínica debería poder decidir si tener sus datos en la nube o en un servidor de su clínica. Creemos que el código que gestiona información de salud debe poder leerse, auditarse y discutirse a la luz del día. Creemos que la IA va a transformar este sector, para bien, solo si se construye con humanos al volante. Y creemos que ningún dentista en Santiago, Bogotá, Nueva York, Madrid o Lisboa debería esperar cinco años a que “llegue el software a su mercado”."
+      },
+      {
+        "heading": "Lo que te prometemos",
+        "body": "No vamos a venderte planes o usuarios. No vamos a subirte el precio cuando crezcas. No vamos a esconder funcionalidad detrás de “contacta con ventas”. No vamos a atarte a nuestros servidores. No vamos a cerrar el código cuando la cosa vaya bien. Y te prometemos que lo que uses hoy seguirá existiendo mañana. Porque vive en GitHub, porque cualquiera puede mantenerlo, porque no depende de que sigamos vivos nosotros."
+      },
+      {
+        "heading": "Lo que te pedimos",
+        "body": "Si Dentalpin te gusta y te ahorra unas horas esta semana, cuéntaselo a otra clínica. Si encuentras un bug, abre una issue en GitHub. Si te falta un módulo, descríbelo y alguien (tú, nosotros o la comunidad) lo construirá. Si hablas otro idioma, tradúcelo. Si lo pruebas y no te convence, escríbenos con todo el cariño del mundo: el feedback nos hace mejores. Esto no es una compañía vendiéndote un producto. Es una comunidad construyendo la infraestructura que todo un sector necesita."
+      },
+      {
+        "heading": "A dónde vamos",
+        "body": "Queremos que, en cinco años, abrir una clínica nueva sea decidir qué hacer con los pacientes, no qué software evitar. Queremos que la próxima generación de dentistas aprenda en un sistema que le ayuda y respeta su tiempo. Queremos que el software de gestión dental deje de ser un problema para volverse, por fin, invisible, como la luz o el agua caliente."
+      }
+    ],
+    "closing": "Esto es Dentalpin. Si has llegado hasta aquí, quizás no vuelvas a ver el software de tu clínica de la misma forma.",
+    "signature": "El equipo Dentalpin · Abril de 2026",
+    "ctaPrimary": "Probar la demo",
+    "ctaSecondary": "Ver el código"
   },
   "bento": {
     "eyebrow": "MÓDULOS PRINCIPALES",
-    "title": "Pensado para cómo trabaja una clínica de verdad. No para cómo lo pinta un comercial.",
+    "title": "Pensado para cómo trabaja una clínica de verdad",
     "subtitle": "Cada funcionalidad es un módulo. Lo activas, lo quitas o lo reemplazas cuando quieras."
   },
   "modular": {
     "eyebrow": "ARQUITECTURA DE PLUGINS",
     "title": "Un núcleo pequeño. Módulos que enchufan.",
-    "body": "El sistema de módulos no es una metáfora: cada uno trae su manifest, sus migraciones Alembic, sus seeds YAML, su navegación auto-registrada y se suscribe al event bus interno. Activas los que tu clínica necesita y te olvidas del resto.",
+    "body": "El sistema de módulos no es una metáfora: cada uno trae su manifest, sus migraciones Alembic, sus seeds YAML, su navegación auto-registrada y se suscribe al event bus interno. Activas los que tu clínica necesita, ignoras el resto y, si te falta algo, lo construyes tú y lo enchufas.",
     "core": "Core",
     "coreItems": ["Auth", "RBAC", "Clínicas", "Usuarios"],
-    "pluggable": "Módulos enchufables",
+    "pluggable": "Módulos oficiales",
+    "community": "Módulos de la comunidad",
+    "communityNote": "En camino. Constrúyelos tú o únete a quien ya los está montando.",
+    "addYours": "Crea el tuyo",
+    "legend": { "official": "Oficial", "community": "Comunidad", "yours": "Tuyo" },
+    "communityItems": [
+      { "label": "WhatsApp", "icon": "message" },
+      { "label": "Stripe", "icon": "card" },
+      { "label": "Laboratorio", "icon": "flask" },
+      { "label": "Marketing", "icon": "sparkles" },
+      { "label": "Aseguradoras", "icon": "shield" }
+    ],
     "cta": "Ver la arquitectura en GitHub →"
   },
   "demo": {
-    "eyebrow": "DEMO EN VIVO",
-    "title": "Toca todo lo que quieras. Mañana vuelve a estar como nueva.",
-    "body": "Demo pública con datos realistas. Cinco roles preconfigurados, todos con la misma contraseña.",
+    "eyebrow": "DEMO ONLINE",
+    "title": "Pruébalo tú mismo, sin instalar nada.",
+    "body": "Te abrimos una clínica de ejemplo en tu navegador, ya con pacientes y citas. Mira cómo se siente, anota una cita, haz un presupuesto. No tienes que registrarte, ni dejar el correo, ni descargar nada.",
     "url": "demo.dentalpin.com",
+    "stepsLabel": "Cómo entrar",
+    "steps": [
+      "Pulsa el botón \"Abrir la demo\". Se abre en otra pestaña.",
+      "Entra con el usuario y la contraseña que ves abajo.",
+      "Trastea sin miedo: pacientes, agenda, presupuestos, facturas…"
+    ],
     "credentials": {
-      "label": "Credenciales públicas",
+      "label": "Entra con esto",
+      "userLabel": "Usuario",
+      "passwordLabel": "Contraseña",
       "admin": "admin@demo.clinic",
       "password": "demo1234",
-      "others": "dentist@… · hygienist@… · assistant@… · receptionist@…"
+      "rolesNote": "También hay accesos como dentista, higienista, auxiliar y recepción. Todos con la misma contraseña."
     },
-    "disclaimer": "La base de datos se resetea cada noche.",
+    "disclaimer": "Cada noche borramos los datos. No uses datos reales de pacientes.",
+    "noInstall": "Funciona en cualquier ordenador, tablet o móvil. Solo necesitas un navegador.",
     "cta": "Abrir la demo"
   },
   "stack": {
@@ -146,9 +201,11 @@
     "legal": "Legal",
     "rights": "Todos los derechos reservados.",
     "backed": "Respaldado por Dentaltix",
+    "backedPre": "Respaldado por ",
     "links": {
       "features": "Funcionalidades",
       "pricing": "Precios",
+      "manifesto": "Manifiesto",
       "modules": "Sistema de módulos",
       "api": "API",
       "github": "GitHub",
@@ -156,7 +213,7 @@
       "discussions": "Discussions",
       "contribute": "Contribuir",
       "docs": "Documentación",
-      "demo": "Demo en vivo",
+      "demo": "Demo online",
       "changelog": "Changelog",
       "license": "Licencia",
       "privacy": "Privacidad de la demo"
@@ -276,9 +333,20 @@
   },
   "featurePage": {
     "backToIndex": "← Todas las funcionalidades",
+    "breadcrumbRoot": "Funcionalidades",
     "capabilities": "Capacidades",
+    "capabilitiesTitle": "Lo que este módulo te da",
+    "capabilitiesCountSuffix": "capacidades",
     "screenshotPending": "Captura pendiente",
     "statusRoadmap": "Roadmap",
+    "statusStable": "Disponible",
+    "quickFacts": "En resumen",
+    "factDomain": "Dominio",
+    "factCapabilities": "Capacidades",
+    "factStatus": "Estado",
+    "factLicense": "Licencia",
+    "relatedTitle": "Otros módulos de este dominio",
+    "ctaOpenModule": "Abrir módulo",
     "ctaDemo": "Pruébalo en la demo",
     "ctaGithub": "Ver el código"
   },
