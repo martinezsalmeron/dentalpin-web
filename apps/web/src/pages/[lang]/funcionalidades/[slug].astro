@@ -5,7 +5,7 @@ import { MODULES, moduleBySlug } from '~/data/modules';
 
 export function getStaticPaths() {
   return MODULES.map((m) => ({
-    params: { lang: 'en', slug: m.slugEn ?? m.slug },
+    params: { lang: 'es', slug: m.slug },
   }));
 }
 

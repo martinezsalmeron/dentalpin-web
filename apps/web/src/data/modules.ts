@@ -15,8 +15,11 @@ export type ModuleIcon =
   | 'sparkles'
   | 'globe';
 
+import type { Locale } from '~/i18n';
+
 export interface ModuleEntry {
   slug: string;
+  slugEn?: string;
   domain: ModuleDomain;
   icon: ModuleIcon;
   title: { es: string; en: string };
@@ -31,6 +34,7 @@ export interface ModuleEntry {
 export const MODULES: ModuleEntry[] = [
   {
     slug: 'odontograma',
+    slugEn: 'odontogram',
     domain: 'clinical',
     icon: 'tooth',
     title: { es: 'Odontograma', en: 'Odontogram' },
@@ -84,6 +88,7 @@ export const MODULES: ModuleEntry[] = [
   },
   {
     slug: 'pacientes',
+    slugEn: 'patients',
     domain: 'clinical',
     icon: 'shield',
     title: { es: 'Pacientes', en: 'Patients' },
@@ -124,6 +129,7 @@ export const MODULES: ModuleEntry[] = [
   },
   {
     slug: 'historial-clinico',
+    slugEn: 'clinical-history',
     domain: 'clinical',
     icon: 'shield',
     title: { es: 'Historial clínico', en: 'Clinical history' },
@@ -161,6 +167,7 @@ export const MODULES: ModuleEntry[] = [
   },
   {
     slug: 'plan-tratamiento',
+    slugEn: 'treatment-plan',
     domain: 'clinical',
     icon: 'sparkles',
     title: { es: 'Plan de tratamiento', en: 'Treatment plan' },
@@ -195,6 +202,7 @@ export const MODULES: ModuleEntry[] = [
   },
   {
     slug: 'agenda',
+    slugEn: 'calendar',
     domain: 'operations',
     icon: 'calendar',
     title: { es: 'Agenda', en: 'Calendar' },
@@ -260,6 +268,7 @@ export const MODULES: ModuleEntry[] = [
   },
   {
     slug: 'presupuestos',
+    slugEn: 'budgets',
     domain: 'operations',
     icon: 'card',
     title: { es: 'Presupuestos', en: 'Budgets' },
@@ -301,6 +310,7 @@ export const MODULES: ModuleEntry[] = [
   },
   {
     slug: 'facturacion',
+    slugEn: 'invoicing',
     domain: 'operations',
     icon: 'card',
     title: { es: 'Facturación', en: 'Invoicing' },
@@ -348,6 +358,7 @@ export const MODULES: ModuleEntry[] = [
   },
   {
     slug: 'reportes',
+    slugEn: 'reports',
     domain: 'operations',
     icon: 'chart',
     title: { es: 'Reportes', en: 'Reports' },
@@ -381,6 +392,7 @@ export const MODULES: ModuleEntry[] = [
   },
   {
     slug: 'modulos',
+    slugEn: 'modules',
     domain: 'platform',
     icon: 'plug',
     title: { es: 'Sistema de módulos', en: 'Module system' },
@@ -507,5 +519,9 @@ export function modulesByDomain(domain: ModuleDomain): ModuleEntry[] {
 }
 
 export function moduleBySlug(slug: string): ModuleEntry | undefined {
-  return MODULES.find((m) => m.slug === slug);
+  return MODULES.find((m) => m.slug === slug || m.slugEn === slug);
+}
+
+export function moduleSlug(mod: ModuleEntry, locale: Locale): string {
+  return locale === 'en' ? mod.slugEn ?? mod.slug : mod.slug;
 }

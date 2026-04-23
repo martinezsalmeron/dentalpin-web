@@ -1,9 +1,9 @@
 ---
 import { isLocale, type Locale } from '~/i18n';
-import FeaturesIndexBody from '~/components/pages/FeaturesIndexBody.astro';
+import ContactBody from '~/components/pages/ContactBody.astro';
 
 export function getStaticPaths() {
-  return [{ params: { lang: 'es' } }];
+  return [{ params: { lang: 'en' } }];
 }
 
 const { lang } = Astro.params;
@@ -11,4 +11,4 @@ if (!isLocale(lang)) return Astro.redirect('/es/', 308);
 const locale = lang as Locale;
 ---
 
-<FeaturesIndexBody locale={locale} />
+<ContactBody locale={locale} />

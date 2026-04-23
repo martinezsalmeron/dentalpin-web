@@ -1,5 +1,5 @@
 ---
-import { useDict, localisedPath, type Locale } from '~/i18n';
+import { useDict, pagePath, type Locale } from '~/i18n';
 import {
   DEMO_URL,
   GITHUB_REPO,
@@ -42,11 +42,11 @@ const licenseUrl = GITHUB_LICENSE;
     <div>
       <h3 class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-text-muted)]">{dict.footer.product}</h3>
       <ul class="mt-3 space-y-2 text-[14px]">
-        <li><a class="hover:text-[var(--color-primary)]" href={localisedPath(locale, 'funcionalidades')}>{dict.footer.links.features}</a></li>
-        <li><a class="hover:text-[var(--color-primary)]" href={localisedPath(locale, 'precios')}>{dict.footer.links.pricing}</a></li>
-        <li><a class="hover:text-[var(--color-primary)]" href={localisedPath(locale, 'manifiesto')}>{dict.footer.links.manifesto}</a></li>
-        <li><a class="hover:text-[var(--color-primary)]" href={localisedPath(locale, 'features/modulos')}>{dict.footer.links.modules}</a></li>
-        <li><a class="hover:text-[var(--color-primary)]" href={localisedPath(locale, 'features/api')}>{dict.footer.links.api}</a></li>
+        <li><a class="hover:text-[var(--color-primary)]" href={pagePath(locale, 'features')}>{dict.footer.links.features}</a></li>
+        <li><a class="hover:text-[var(--color-primary)]" href={pagePath(locale, 'pricing')}>{dict.footer.links.pricing}</a></li>
+        <li><a class="hover:text-[var(--color-primary)]" href={pagePath(locale, 'manifesto')}>{dict.footer.links.manifesto}</a></li>
+        <li><a class="hover:text-[var(--color-primary)]" href={pagePath(locale, 'features', locale === 'en' ? 'modules' : 'modulos')}>{dict.footer.links.modules}</a></li>
+        <li><a class="hover:text-[var(--color-primary)]" href={pagePath(locale, 'features', 'api')}>{dict.footer.links.api}</a></li>
       </ul>
     </div>
 
@@ -64,7 +64,7 @@ const licenseUrl = GITHUB_LICENSE;
       <ul class="mt-3 space-y-2 text-[14px]">
         <li><a class="hover:text-[var(--color-primary)]" href={demoUrl} target="_blank" rel="noopener">{dict.footer.links.demo}</a></li>
         <li><a class="hover:text-[var(--color-primary)]" href={licenseUrl} target="_blank" rel="noopener">{dict.footer.links.license}</a></li>
-        <li><a class="hover:text-[var(--color-primary)]" href={localisedPath(locale, 'legal/privacidad')}>{dict.footer.links.privacy}</a></li>
+        <li><a class="hover:text-[var(--color-primary)]" href={pagePath(locale, 'legalPrivacy')}>{dict.footer.links.privacy}</a></li>
       </ul>
     </div>
   </div>

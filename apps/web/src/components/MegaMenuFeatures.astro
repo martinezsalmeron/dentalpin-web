@@ -1,6 +1,6 @@
 ---
-import { localisedPath, useDict, type Locale } from '~/i18n';
-import { modulesByDomain, type ModuleDomain } from '~/data/modules';
+import { pagePath, useDict, type Locale } from '~/i18n';
+import { modulesByDomain, moduleSlug, type ModuleDomain } from '~/data/modules';
 import Icon from '@dentalpin/ui/Icon.astro';
 
 interface Props {
@@ -43,7 +43,7 @@ const domains: { key: ModuleDomain; label: string }[] = [
             {modulesByDomain(domain.key).map((mod) => (
               <li>
                 <a
-                  href={localisedPath(locale, `features/${mod.slug}`)}
+                  href={pagePath(locale, 'features', moduleSlug(mod, locale))}
                   role="menuitem"
                   class="group/item flex items-start gap-3 rounded-[var(--radius-md)] p-2 transition-colors hover:bg-[var(--color-surface-muted)] focus-visible:bg-[var(--color-surface-muted)] focus-visible:outline-none"
                 >
@@ -68,7 +68,7 @@ const domains: { key: ModuleDomain; label: string }[] = [
 
     <div class="mt-6 border-t border-[var(--color-border-subtle)] pt-4">
       <a
-        href={localisedPath(locale, 'funcionalidades')}
+        href={pagePath(locale, 'features')}
         class="inline-flex items-center gap-1 text-[13px] font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
       >
         {dict.megamenu.footer}

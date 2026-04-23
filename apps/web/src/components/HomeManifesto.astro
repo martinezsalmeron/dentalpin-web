@@ -1,5 +1,5 @@
 ---
-import { useDict, localisedPath, type Locale } from '~/i18n';
+import { useDict, pagePath, type Locale } from '~/i18n';
 import Section from '@dentalpin/ui/Section.astro';
 import GradientBackdrop from '@dentalpin/ui/GradientBackdrop.astro';
 import Icon from '@dentalpin/ui/Icon.astro';
@@ -29,7 +29,7 @@ const ORDER: ItemKey[] = ['oss', 'modular', 'global', 'api', 'ai', 'ux'];
           {dict.manifesto.lead}
         </p>
         <a
-          href={localisedPath(locale, 'manifiesto')}
+          href={pagePath(locale, 'manifesto')}
           class="group mt-8 inline-flex items-center gap-2 text-[14px] font-semibold text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
         >
           {dict.manifesto.cta}
