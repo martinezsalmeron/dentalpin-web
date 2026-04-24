@@ -102,7 +102,7 @@ const mobileDomains: { key: ModuleDomain; label: string }[] = [
           </svg>
         </summary>
 
-        <div class="mobile-nav-panel absolute left-0 right-0 top-full border-t border-[var(--color-border)] bg-[var(--color-canvas)] shadow-[var(--shadow-lg)]" role="menu">
+        <div class="mobile-nav-panel absolute left-0 right-0 top-full max-h-[calc(100vh-3.5rem)] overflow-y-auto overscroll-contain border-t border-[var(--color-border)] bg-[var(--color-canvas)] shadow-[var(--shadow-lg)]" role="menu">
           <ul class="mx-auto flex max-w-7xl flex-col gap-1 px-6 py-3 sm:px-8">
             <li>
               <details class="mobile-nav-sub group/sub">
@@ -175,6 +175,7 @@ const mobileDomains: { key: ModuleDomain; label: string }[] = [
   details.mobile-nav[open] .mobile-nav-icon-open { display: none; }
   details.mobile-nav-sub > summary::-webkit-details-marker { display: none; }
   details.mobile-nav-sub > summary { list-style: none; }
+  body:has(details[data-mobile-nav][open]) { overflow: hidden; }
 </style>
 
 <script is:inline>
