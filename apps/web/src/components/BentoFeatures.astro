@@ -1,5 +1,5 @@
 ---
-import { useDict, localisedPath, type Locale } from '~/i18n';
+import { useDict, pagePath, type Locale } from '~/i18n';
 import { moduleBySlug } from '~/data/modules';
 import Section from '@dentalpin/ui/Section.astro';
 import Icon from '@dentalpin/ui/Icon.astro';
@@ -42,7 +42,7 @@ const ctaLabel = locale === 'es' ? 'Ver módulo' : 'Open module';
         'group relative overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-sm)] transition-all hover:-translate-y-0.5 hover:border-[var(--color-border-strong)] hover:shadow-[var(--shadow-md)]',
       ]}>
         <a
-          href={localisedPath(locale, `features/${mod.slug}`)}
+          href={pagePath(locale, 'features', mod.slug)}
           class="flex h-full flex-col p-6 focus-visible:outline-none lg:p-7"
         >
           <div class="flex items-start justify-between">
