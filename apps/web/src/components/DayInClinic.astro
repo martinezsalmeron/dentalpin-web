@@ -22,58 +22,72 @@ const section = dict.dayInClinic;
     </p>
   </div>
 
-  <ol class="day-timeline relative mt-14 space-y-10 md:space-y-12 md:pl-10">
-    <span aria-hidden="true" class="pointer-events-none absolute left-4 top-2 hidden h-[calc(100%-1rem)] w-px bg-gradient-to-b from-[var(--color-border-strong)] via-[var(--color-border)] to-transparent md:block"></span>
+  <ol class="mt-14 space-y-16 lg:space-y-24">
+    {section.scenes.map((scene, idx) => {
+      const imageFirst = idx % 2 === 0;
+      return (
+        <li class="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-14">
+          <figure class:list={[
+            'relative overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface-muted)] shadow-[var(--shadow-md)]',
+            imageFirst ? 'lg:order-1' : 'lg:order-2',
+          ]}>
+            <img
+              src={`/scenes/${scene.image}`}
+              alt={scene.imageAlt}
+              loading="lazy"
+              decoding="async"
+              class="block h-full w-full object-cover"
+              style="aspect-ratio: 4 / 3"
+            />
+          </figure>
 
-    {section.scenes.map((scene, idx) => (
-      <li class="relative">
-        <span
-          aria-hidden="true"
-          class="absolute -left-6 top-1 hidden h-8 w-8 -translate-x-1/2 items-center justify-center rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] font-mono text-[11px] font-semibold tabular-nums tracking-tight text-[var(--color-text-muted)] shadow-[var(--shadow-xs)] md:inline-flex"
-        >
-          {String(idx + 1).padStart(2, '0')}
-        </span>
+          <div class:list={[imageFirst ? 'lg:order-2' : 'lg:order-1']}>
+            <div class="flex items-center gap-3">
+              <span class="inline-flex h-7 w-7 flex-none items-center justify-center rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] font-mono text-[11px] font-semibold tabular-nums tracking-tight text-[var(--color-text-muted)] shadow-[var(--shadow-xs)]">
+                {String(idx + 1).padStart(2, '0')}
+              </span>
+              <span class="inline-flex items-center gap-1.5 rounded-[var(--radius-pill)] border border-[var(--color-border)] bg-[var(--color-surface)] px-2.5 py-1 font-mono text-[11px] tabular-nums tracking-wider text-[var(--color-text-subtle)]">
+                <span class="h-1.5 w-1.5 rounded-full bg-[var(--color-primary)]"></span>
+                {scene.time}
+              </span>
+              <span class="h-px flex-1 bg-gradient-to-r from-[var(--color-border)] to-transparent"></span>
+            </div>
+            <h3 class="mt-4 text-[clamp(1.35rem,1.1vw+1rem,1.85rem)] font-semibold leading-[1.15] tracking-[-0.015em] text-[var(--color-text)]">
+              {scene.moment}
+            </h3>
 
-        <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-          <span class="inline-flex items-center gap-1.5 rounded-[var(--radius-pill)] border border-[var(--color-border)] bg-[var(--color-surface)] px-2.5 py-1 font-mono text-[11px] tabular-nums tracking-wider text-[var(--color-text-subtle)]">
-            <span class="h-1.5 w-1.5 rounded-full bg-[var(--color-primary)]"></span>
-            {scene.time}
-          </span>
-          <h3 class="text-[clamp(1.2rem,0.8vw+1rem,1.55rem)] font-semibold leading-[1.2] tracking-[-0.015em] text-[var(--color-text)]">
-            {scene.moment}
-          </h3>
-        </div>
+            <div class="mt-6 space-y-3">
+              <div class="flex items-start gap-3 rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-surface-muted)] p-4">
+                <span class="mt-0.5 inline-flex h-6 w-6 flex-none items-center justify-center rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-text-subtle)]">
+                  <Icon name="close" size={12} />
+                </span>
+                <div class="min-w-0">
+                  <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-text-subtle)]">
+                    {section.legacyLabel}
+                  </p>
+                  <p class="mt-1 text-[15px] leading-[1.55] text-[var(--color-text-muted)]">
+                    {scene.legacy}
+                  </p>
+                </div>
+              </div>
 
-        <div class="mt-4 grid gap-3 md:grid-cols-2 md:gap-4">
-          <div class="relative flex items-start gap-3 rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-surface-muted)] p-4">
-            <span class="mt-0.5 inline-flex h-6 w-6 flex-none items-center justify-center rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-text-subtle)]">
-              <Icon name="close" size={12} />
-            </span>
-            <div class="min-w-0">
-              <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-text-subtle)]">
-                {section.legacyLabel}
-              </p>
-              <p class="mt-1 text-[15px] leading-[1.55] text-[var(--color-text-muted)]">
-                {scene.legacy}
-              </p>
+              <div class="flex items-start gap-3 rounded-[var(--radius-lg)] border-[1.5px] border-[var(--color-primary)] bg-[var(--color-surface)] p-4 shadow-[var(--shadow-xs)]">
+                <span class="mt-0.5 inline-flex h-6 w-6 flex-none items-center justify-center rounded-full bg-[var(--color-primary)] text-white" style="color:#fff">
+                  <Icon name="check" size={12} />
+                </span>
+                <div class="min-w-0">
+                  <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">
+                    {section.dentalpinLabel}
+                  </p>
+                  <p class="mt-1 text-[15px] leading-[1.55] text-[var(--color-text)]">
+                    {scene.dentalpin}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-
-          <div class="relative flex items-start gap-3 rounded-[var(--radius-lg)] border-[1.5px] border-[var(--color-primary)] bg-[var(--color-surface)] p-4 shadow-[var(--shadow-xs)]">
-            <span class="mt-0.5 inline-flex h-6 w-6 flex-none items-center justify-center rounded-full bg-[var(--color-primary)] text-white" style="color:#fff">
-              <Icon name="check" size={12} />
-            </span>
-            <div class="min-w-0">
-              <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">
-                {section.dentalpinLabel}
-              </p>
-              <p class="mt-1 text-[15px] leading-[1.55] text-[var(--color-text)]">
-                {scene.dentalpin}
-              </p>
-            </div>
-          </div>
-        </div>
-      </li>
-    ))}
+        </li>
+      );
+    })}
   </ol>
 </Section>

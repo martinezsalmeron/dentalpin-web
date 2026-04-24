@@ -252,37 +252,49 @@
         "time": "07:45",
         "moment": "Antes de abrir la clínica",
         "legacy": "Enciendes el PC del despacho para saber cuántos pacientes tienes hoy.",
-        "dentalpin": "Abres la agenda de mañana desde el sofá, en tu móvil, mientras tomas un café."
+        "dentalpin": "Abres la agenda de mañana desde el sofá, en tu móvil, mientras tomas un café.",
+        "image": "scene-morning-agenda.png",
+        "imageAlt": "Dentista revisando la agenda en el móvil desde casa"
       },
       {
         "time": "09:10",
         "moment": "Entra el paciente",
         "legacy": "Buscas en la tabla hasta que aparece. Un minuto, dos. El paciente espera de pie.",
-        "dentalpin": "Escribes tres letras y la ficha se abre. Con historial, fotos y presupuestos a un clic."
+        "dentalpin": "Escribes tres letras y la ficha se abre. Con historial, fotos y presupuestos a un clic.",
+        "image": "scene-reception-search.png",
+        "imageAlt": "Auxiliar buscando un paciente desde la recepción"
       },
       {
         "time": "10:30",
         "moment": "En el sillón",
         "legacy": "Apuntas el tratamiento en papel y lo pasas al ordenador luego. Si te acuerdas.",
-        "dentalpin": "El odontograma se abre en la tablet al lado del sillón. Marcas, se guarda solo, ya está."
+        "dentalpin": "El odontograma se abre en la tablet al lado del sillón. Marcas, se guarda solo, ya está.",
+        "image": "scene-chairside-tablet.png",
+        "imageAlt": "Odontóloga usando el odontograma en una tablet durante la consulta"
       },
       {
         "time": "13:20",
         "moment": "El presupuesto del día",
         "legacy": "Abres otro programa, copias precios, imprimes en papel y lo firmas a mano.",
-        "dentalpin": "Un clic, se genera firmado y lo envías por WhatsApp al momento."
+        "dentalpin": "Un clic, se genera firmado y lo envías por WhatsApp al momento.",
+        "image": "scene-treatment-quote.png",
+        "imageAlt": "Dentista enviando un presupuesto por WhatsApp desde la consulta"
       },
       {
         "time": "22:00",
         "moment": "Una urgencia",
         "legacy": "No hay forma de ver la ficha hasta que abras la clínica mañana.",
-        "dentalpin": "Abres la app desde casa, miras su última radiografía y llamas con la info delante."
+        "dentalpin": "Abres la app desde casa, miras su última radiografía y llamas con la info delante.",
+        "image": "scene-urgency-home.png",
+        "imageAlt": "Odontóloga consultando la ficha de un paciente desde casa"
       },
       {
         "time": "Fin de mes",
         "moment": "Toca cerrar el mes",
         "legacy": "Pides a la gestoría que te mande los datos. Dicen que en dos semanas te los pasan.",
-        "dentalpin": "Abres reportes y ves qué has facturado, por tratamiento y por profesional."
+        "dentalpin": "Abres reportes y ves qué has facturado, por tratamiento y por profesional.",
+        "image": "scene-owner-reports.png",
+        "imageAlt": "Dueña de clínica revisando reportes en su despacho"
       }
     ]
   },

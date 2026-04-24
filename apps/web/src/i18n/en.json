@@ -252,37 +252,49 @@
         "time": "07:45",
         "moment": "Before opening the clinic",
         "legacy": "You boot the back-office PC just to see how many patients you have today.",
-        "dentalpin": "You open tomorrow's calendar from the sofa, on your phone, over morning coffee."
+        "dentalpin": "You open tomorrow's calendar from the sofa, on your phone, over morning coffee.",
+        "image": "scene-morning-agenda.png",
+        "imageAlt": "Dentist checking the calendar on a phone from home"
       },
       {
         "time": "09:10",
         "moment": "Patient walks in",
         "legacy": "You search the table until they show up. A minute, two. The patient is standing there.",
-        "dentalpin": "Type three letters and the record opens. History, photos and quotes, one click away."
+        "dentalpin": "Type three letters and the record opens. History, photos and quotes, one click away.",
+        "image": "scene-reception-search.png",
+        "imageAlt": "Reception searching for a patient record"
       },
       {
         "time": "10:30",
         "moment": "Chair-side",
         "legacy": "You scribble the treatment on paper and copy it into the computer later. If you remember.",
-        "dentalpin": "The odontogram opens on the tablet next to the chair. Mark it, it saves itself, done."
+        "dentalpin": "The odontogram opens on the tablet next to the chair. Mark it, it saves itself, done.",
+        "image": "scene-chairside-tablet.png",
+        "imageAlt": "Dentist using the odontogram on a tablet during treatment"
       },
       {
         "time": "13:20",
         "moment": "Today's treatment quote",
         "legacy": "Open another program, copy prices, print it and sign it by hand.",
-        "dentalpin": "One click, the quote is ready and you send it over WhatsApp on the spot."
+        "dentalpin": "One click, the quote is ready and you send it over WhatsApp on the spot.",
+        "image": "scene-treatment-quote.png",
+        "imageAlt": "Dentist sending a treatment quote via WhatsApp"
       },
       {
         "time": "22:00",
         "moment": "A late emergency",
         "legacy": "No way to see the record until the clinic opens tomorrow.",
-        "dentalpin": "Open the app from home, check their last x-ray, call them with the info in front of you."
+        "dentalpin": "Open the app from home, check their last x-ray, call them with the info in front of you.",
+        "image": "scene-urgency-home.png",
+        "imageAlt": "Dentist looking up a patient record from home at night"
       },
       {
         "time": "Month-end",
         "moment": "Closing the month",
         "legacy": "You ask the admin to export the numbers. They say two weeks.",
-        "dentalpin": "Open reports and see what you billed, by treatment and by practitioner."
+        "dentalpin": "Open reports and see what you billed, by treatment and by practitioner.",
+        "image": "scene-owner-reports.png",
+        "imageAlt": "Clinic owner reviewing reports in the office"
       }
     ]
   },
