@@ -6,6 +6,7 @@ import LanguagePicker from './LanguagePicker.astro';
 import MegaMenuFeatures from './MegaMenuFeatures.astro';
 import { DEMO_URL, GITHUB_REPO } from '~/config/links';
 import { getGithubStars, formatStars } from '~/lib/github-stars';
+import { modulesByDomain, moduleSlug, type ModuleDomain } from '~/data/modules';
 
 interface Props {
   locale: Locale;
@@ -17,6 +18,12 @@ const demoUrl = DEMO_URL;
 const githubUrl = GITHUB_REPO;
 
 const stars = await getGithubStars('martinezsalmeron', 'dentalpin');
+
+const mobileDomains: { key: ModuleDomain; label: string }[] = [
+  { key: 'clinical', label: dict.megamenu.columns.clinical },
+  { key: 'operations', label: dict.megamenu.columns.operations },
+  { key: 'platform', label: dict.megamenu.columns.platform },
+];
 ---
 
 <header class="sticky top-0 z-40 border-b border-[var(--color-border-subtle)] bg-[color-mix(in_oklab,var(--color-canvas)_88%,transparent)] backdrop-blur">
@@ -70,13 +77,134 @@ const stars = await getGithubStars('martinezsalmeron', 'dentalpin');
           </span>
         </span>
       </a>
-      <Button href={demoUrl} size="sm">
-        <Icon name="arrow-right" size={14} />
-        {dict.nav.liveDemo}
-      </Button>
+      <div class="hidden lg:block">
+        <Button href={demoUrl} size="sm">
+          <Icon name="arrow-right" size={14} />
+          {dict.nav.liveDemo}
+        </Button>
+      </div>
+
+      <details class="mobile-nav static lg:hidden" data-mobile-nav>
+        <summary
+          class="flex h-9 w-9 cursor-pointer list-none items-center justify-center rounded-[var(--radius-sm)] text-[var(--color-text-muted)] hover:bg-[var(--color-surface-muted)] hover:text-[var(--color-text)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)]"
+          aria-haspopup="true"
+          aria-expanded="false"
+          aria-label={dict.nav.openMenu}
+        >
+          <svg class="mobile-nav-icon-open" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="4" y1="7" x2="20" y2="7" />
+            <line x1="4" y1="12" x2="20" y2="12" />
+            <line x1="4" y1="17" x2="20" y2="17" />
+          </svg>
+          <svg class="mobile-nav-icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="6" y1="6" x2="18" y2="18" />
+            <line x1="6" y1="18" x2="18" y2="6" />
+          </svg>
+        </summary>
+
+        <div class="mobile-nav-panel absolute left-0 right-0 top-full border-t border-[var(--color-border)] bg-[var(--color-canvas)] shadow-[var(--shadow-lg)]" role="menu">
+          <ul class="mx-auto flex max-w-7xl flex-col gap-1 px-6 py-3 sm:px-8">
+            <li>
+              <details class="mobile-nav-sub group/sub">
+                <summary class="flex cursor-pointer list-none items-center justify-between rounded-[var(--radius-sm)] px-3 py-2.5 text-[15px] font-medium text-[var(--color-text)] hover:bg-[var(--color-surface-muted)]">
+                  <span>{dict.nav.features}</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-open/sub:rotate-180" aria-hidden="true">
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
+                </summary>
+                <div class="mt-1 flex flex-col gap-4 rounded-[var(--radius-md)] bg-[var(--color-surface-muted)] px-3 py-3">
+                  {mobileDomains.map((domain) => (
+                    <div>
+                      <p class="mb-1.5 px-2 text-[11px] font-semibold uppercase tracking-wider text-[var(--color-text-subtle)]">
+                        {domain.label}
+                      </p>
+                      <ul class="flex flex-col">
+                        {modulesByDomain(domain.key).map((mod) => (
+                          <li>
+                            <a
+                              href={pagePath(locale, 'features', moduleSlug(mod, locale))}
+                              class="flex items-start gap-2.5 rounded-[var(--radius-sm)] px-2 py-2 text-[14px] text-[var(--color-text)] hover:bg-[var(--color-surface)]"
+                            >
+                              <span class="mt-0.5 inline-flex h-6 w-6 flex-none items-center justify-center rounded-[var(--radius-sm)] bg-[var(--color-primary-soft)] text-[var(--color-primary-soft-text)]">
+                                <Icon name={mod.icon} size={14} />
+                              </span>
+                              <span class="font-medium">{mod.title[locale]}</span>
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                  <a
+                    href={pagePath(locale, 'features')}
+                    class="mt-1 inline-flex items-center gap-1 px-2 text-[13px] font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
+                  >
+                    {dict.megamenu.footer}
+                  </a>
+                </div>
+              </details>
+            </li>
+            <li>
+              <a class="block rounded-[var(--radius-sm)] px-3 py-2.5 text-[15px] font-medium text-[var(--color-text)] hover:bg-[var(--color-surface-muted)]" href={pagePath(locale, 'pricing')}>
+                {dict.nav.pricing}
+              </a>
+            </li>
+            <li>
+              <a class="block rounded-[var(--radius-sm)] px-3 py-2.5 text-[15px] font-medium text-[var(--color-text)] hover:bg-[var(--color-surface-muted)]" href={pagePath(locale, 'manifesto')}>
+                {dict.nav.manifesto}
+              </a>
+            </li>
+            <li class="mt-2 border-t border-[var(--color-border-subtle)] pt-3">
+              <a class="inline-flex items-center gap-2 rounded-[var(--radius-sm)] bg-[var(--color-primary)] px-4 py-2.5 text-[14px] font-semibold text-white shadow-[var(--shadow-xs)] hover:bg-[var(--color-primary-hover)]" style="color:#fff" href={demoUrl}>
+                <Icon name="arrow-right" size={14} />
+                {dict.nav.liveDemo}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </details>
     </div>
   </nav>
 </header>
+
+<style>
+  details.mobile-nav > summary::-webkit-details-marker { display: none; }
+  details.mobile-nav > summary { list-style: none; }
+  details.mobile-nav:not([open]) .mobile-nav-panel { display: none; }
+  details.mobile-nav:not([open]) .mobile-nav-icon-close { display: none; }
+  details.mobile-nav[open] .mobile-nav-icon-open { display: none; }
+  details.mobile-nav-sub > summary::-webkit-details-marker { display: none; }
+  details.mobile-nav-sub > summary { list-style: none; }
+</style>
+
+<script is:inline>
+  (() => {
+    const details = document.querySelectorAll('details[data-mobile-nav]');
+    if (!details.length) return;
+    const mql = window.matchMedia('(min-width: 1024px)');
+    const closeAll = () => {
+      details.forEach((el) => {
+        el.removeAttribute('open');
+        el.querySelector('summary')?.setAttribute('aria-expanded', 'false');
+      });
+    };
+    details.forEach((el) => {
+      el.addEventListener('toggle', () => {
+        el.querySelector('summary')?.setAttribute('aria-expanded', el.hasAttribute('open') ? 'true' : 'false');
+      });
+    });
+    document.addEventListener('click', (e) => {
+      details.forEach((el) => {
+        if (el.hasAttribute('open') && !el.contains(e.target)) {
+          el.removeAttribute('open');
+          el.querySelector('summary')?.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAll(); });
+    mql.addEventListener('change', (e) => { if (e.matches) closeAll(); });
+  })();
+</script>
 
 <script is:inline>
   (function () {
