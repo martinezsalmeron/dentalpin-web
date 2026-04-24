@@ -26,7 +26,7 @@ const {
   noindex = false,
 } = Astro.props as Props;
 
-const site = Astro.site?.toString().replace(/\/$/, '') ?? 'https://dentalpin.com';
+const site = Astro.site?.toString().replace(/\/$/, '') ?? 'https://www.dentalpin.com';
 const pathname = canonicalPath ?? new URL(Astro.request.url).pathname;
 const canonical = `${site}${pathname}`;
 const alternate = `${site}${pathname.replace(/^\/(es|en)/, `/${altLocale(locale)}`)}`;

@@ -34,7 +34,7 @@ jobs:
       - name: Build web
         run: pnpm --filter @dentalpin/web build
         env:
-          PUBLIC_SITE_URL: https://dentalpin.com
+          PUBLIC_SITE_URL: https://www.dentalpin.com
           RESEND_API_KEY: dummy_for_build
           CONTACT_TO_EMAIL: ventas@dentalpin.com
 

@@ -3,7 +3,7 @@ import node from '@astrojs/node';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
-const site = process.env.PUBLIC_SITE_URL ?? 'https://dentalpin.com';
+const site = process.env.PUBLIC_SITE_URL ?? 'https://www.dentalpin.com';
 
 export default defineConfig({
   site,
