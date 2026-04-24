@@ -16,7 +16,7 @@ const steps = (dict.demo.steps as string[]) ?? [];
   <div class="relative overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-8 shadow-[var(--shadow-md)] sm:p-12">
     <GradientBackdrop variant="subtle" />
 
-    <div class="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,400px)] lg:items-start">
+    <div class="max-w-[62ch]">
       <div>
         <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">
           {dict.demo.eyebrow}
@@ -52,40 +52,6 @@ const steps = (dict.demo.steps as string[]) ?? [];
             {dict.demo.noInstall}
           </span>
         </div>
-      </div>
-
-      <div class="rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-surface-muted)] p-6">
-        <p class="text-[12px] font-semibold uppercase tracking-wider text-[var(--color-text-subtle)]">
-          {dict.demo.credentials.label}
-        </p>
-
-        <div class="mt-4 space-y-3">
-          <div>
-            <p class="text-[11px] uppercase tracking-wider text-[var(--color-text-subtle)]">
-              {dict.demo.credentials.userLabel}
-            </p>
-            <p class="mt-1 select-all break-all font-mono text-[14px] text-[var(--color-text)]">
-              {dict.demo.credentials.admin}
-            </p>
-          </div>
-          <div>
-            <p class="text-[11px] uppercase tracking-wider text-[var(--color-text-subtle)]">
-              {dict.demo.credentials.passwordLabel}
-            </p>
-            <p class="mt-1 select-all font-mono text-[14px] text-[var(--color-text)]">
-              {dict.demo.credentials.password}
-            </p>
-          </div>
-        </div>
-
-        <p class="mt-5 border-t border-[var(--color-border)] pt-4 text-[12.5px] leading-[1.5] text-[var(--color-text-muted)]">
-          {dict.demo.credentials.rolesNote}
-        </p>
-
-        <p class="mt-4 flex items-start gap-2 text-[12.5px] leading-[1.5] text-[var(--color-text-muted)]">
-          <span aria-hidden="true">⚠︎</span>
-          <span>{dict.demo.disclaimer}</span>
-        </p>
       </div>
     </div>
   </div>

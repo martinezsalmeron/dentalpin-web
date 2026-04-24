@@ -45,6 +45,7 @@ export function localisedPath(locale: Locale, path: string = ''): string {
 export const LOCALE_PATHS = {
   manifesto: { es: 'manifiesto', en: 'manifesto' },
   features: { es: 'funcionalidades', en: 'features' },
+  technology: { es: 'tecnologia', en: 'technology' },
   pricing: { es: 'precios', en: 'pricing' },
   contact: { es: 'contacto', en: 'contact' },
   legalPrivacy: { es: 'legal/privacidad', en: 'legal/privacy' },

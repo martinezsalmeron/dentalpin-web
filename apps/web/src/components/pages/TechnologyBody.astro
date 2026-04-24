@@ -1,0 +1,194 @@
+---
+import { useDict, type Locale } from '~/i18n';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Section from '@dentalpin/ui/Section.astro';
+import GradientBackdrop from '@dentalpin/ui/GradientBackdrop.astro';
+import Button from '@dentalpin/ui/Button.astro';
+import Icon from '@dentalpin/ui/Icon.astro';
+import ModularOrbit from '~/components/ModularOrbit.astro';
+import { DEMO_URL, GITHUB_REPO } from '~/config/links';
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const dict = useDict(locale);
+const page = dict.techPage;
+---
+
+<BaseLayout
+  locale={locale}
+  title={page.meta.title}
+  description={page.meta.description}
+>
+  <section class="relative overflow-hidden">
+    <GradientBackdrop variant="hero" />
+
+    <Section maxWidth="default" padY="xl">
+      <div class="max-w-3xl">
+        <span class="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-[var(--color-primary)]">
+          <span class="h-1.5 w-1.5 rounded-full bg-[var(--color-primary)]"></span>
+          {page.eyebrow}
+        </span>
+        <h1 class="mt-6 text-[clamp(2.25rem,3.2vw+1rem,4.25rem)] font-semibold leading-[1.02] tracking-[-0.025em] text-[var(--color-text)]">
+          {page.title}
+        </h1>
+        <p class="mt-8 max-w-2xl text-[19px] leading-[1.65] text-[var(--color-text-muted)] sm:text-[20px]">
+          {page.lead}
+        </p>
+      </div>
+    </Section>
+  </section>
+
+  <Section id="principles" maxWidth="default" padY="md">
+    <div class="max-w-2xl">
+      <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">
+        {page.principles.eyebrow}
+      </p>
+      <h2 class="text-marketing-h1 mt-3 text-[var(--color-text)]">
+        {page.principles.title}
+      </h2>
+    </div>
+
+    <ul class="mt-12 grid gap-4 sm:grid-cols-2">
+      {page.principles.items.map((item, idx) => (
+        <li class="relative flex flex-col rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[var(--shadow-xs)]">
+          <div class="font-mono text-[11px] tabular-nums tracking-[0.2em] text-[var(--color-text-subtle)]">
+            {String(idx + 1).padStart(2, '0')}
+          </div>
+          <h3 class="mt-3 text-[18px] font-semibold leading-[1.25] tracking-[-0.01em] text-[var(--color-text)]">
+            {item.title}
+          </h3>
+          <p class="mt-3 text-[14.5px] leading-[1.65] text-[var(--color-text-muted)]">
+            {item.body}
+          </p>
+        </li>
+      ))}
+    </ul>
+  </Section>
+
+  <Section id="architecture" maxWidth="default" padY="md">
+    <div class="grid gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-center">
+      <div class="max-w-xl">
+        <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">
+          {dict.modular.eyebrow}
+        </p>
+        <h2 class="text-marketing-h1 mt-3 text-[var(--color-text)]">
+          {dict.modular.title}
+        </h2>
+        <p class="mt-5 text-[15px] leading-[1.7] text-[var(--color-text-muted)]">
+          {dict.modular.body}
+        </p>
+
+        <ul class="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-[12px] text-[var(--color-text-muted)]">
+          <li class="inline-flex items-center gap-2">
+            <span class="h-2.5 w-2.5 rounded-full bg-[var(--color-primary)]"></span>
+            {dict.modular.legend.official}
+          </li>
+          <li class="inline-flex items-center gap-2">
+            <span class="h-2.5 w-2.5 rounded-full border border-dashed border-[var(--color-primary)]"></span>
+            {dict.modular.legend.community}
+          </li>
+          <li class="inline-flex items-center gap-2">
+            <span style="color:#fff" class="inline-flex h-2.5 w-2.5 items-center justify-center rounded-full bg-[var(--color-primary)] text-[8px] font-bold text-white">+</span>
+            {dict.modular.legend.yours}
+          </li>
+        </ul>
+
+        <a
+          href={GITHUB_REPO}
+          target="_blank"
+          rel="noopener"
+          class="mt-7 inline-flex items-center gap-1 text-[14px] font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
+        >
+          {dict.modular.cta}
+        </a>
+      </div>
+
+      <ModularOrbit locale={locale} />
+    </div>
+  </Section>
+
+  <Section id="anatomy" maxWidth="default" padY="md">
+    <div class="max-w-2xl">
+      <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">
+        {page.anatomy.eyebrow}
+      </p>
+      <h2 class="text-marketing-h1 mt-3 text-[var(--color-text)]">
+        {page.anatomy.title}
+      </h2>
+      <p class="mt-4 text-[15px] leading-[1.7] text-[var(--color-text-muted)]">
+        {page.anatomy.body}
+      </p>
+    </div>
+
+    <ol class="mt-10 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+      {page.anatomy.items.map((item, idx) => (
+        <li class="flex flex-col rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-surface)] p-5 shadow-[var(--shadow-xs)] transition-shadow hover:shadow-[var(--shadow-sm)]">
+          <div class="flex items-center gap-2">
+            <span class="font-mono text-[11px] tabular-nums text-[var(--color-text-subtle)]">
+              {String(idx + 1).padStart(2, '0')}
+            </span>
+            <code class="rounded-[var(--radius-xs)] bg-[var(--color-surface-sunken)] px-2 py-0.5 font-mono text-[12.5px] font-medium text-[var(--color-text)]">
+              {item.name}
+            </code>
+          </div>
+          <p class="mt-3 text-[14px] leading-[1.6] text-[var(--color-text-muted)]">
+            {item.what}
+          </p>
+        </li>
+      ))}
+    </ol>
+  </Section>
+
+  <Section id="stack" maxWidth="default" padY="md">
+    <div class="max-w-2xl">
+      <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">
+        {page.stackHeader.eyebrow}
+      </p>
+      <h2 class="text-marketing-h1 mt-3 text-[var(--color-text)]">
+        {page.stackHeader.title}
+      </h2>
+      <p class="mt-4 text-[15px] text-[var(--color-text-muted)]">
+        {page.stackHeader.body}
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2">
+      {page.stackGroups.map((group) => (
+        <div class="rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[var(--shadow-xs)]">
+          <h3 class="text-[12px] font-semibold uppercase tracking-wider text-[var(--color-text-subtle)]">
+            {group.label}
+          </h3>
+          <ul class="mt-4 flex flex-wrap gap-2">
+            {group.items.map((s) => (
+              <li class="inline-flex items-baseline gap-2 rounded-[var(--radius-pill)] border border-[var(--color-border)] bg-[var(--color-canvas)] px-3 py-1.5 text-[13px]">
+                <span class="font-semibold text-[var(--color-text)]">{s.name}</span>
+                <span class="text-[11px] uppercase tracking-wider text-[var(--color-text-subtle)]">{s.role}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <Section maxWidth="default" padY="lg">
+    <div class="relative overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] px-8 py-14 shadow-[var(--shadow-sm)] sm:px-14">
+      <GradientBackdrop variant="subtle" />
+      <h2 class="text-[clamp(1.5rem,1.6vw+1rem,2.25rem)] font-semibold leading-[1.2] tracking-[-0.015em] text-[var(--color-text)]">
+        {page.cta.title}
+      </h2>
+      <p class="mt-5 max-w-2xl text-[16px] leading-[1.7] text-[var(--color-text-muted)]">
+        {page.cta.body}
+      </p>
+      <div class="mt-8 flex flex-wrap items-center gap-3">
+        <Button href={GITHUB_REPO} size="lg">
+          {page.cta.ctaPrimary}
+          <Icon name="arrow-right" size={16} />
+        </Button>
+        <Button href={DEMO_URL} variant="outline" size="lg">
+          {page.cta.ctaSecondary}
+        </Button>
+      </div>
+    </div>
+  </Section>
+</BaseLayout>

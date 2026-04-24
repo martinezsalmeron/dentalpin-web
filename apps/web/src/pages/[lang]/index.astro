@@ -2,12 +2,12 @@
 import { isLocale, type Locale } from '~/i18n';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Hero from '~/components/Hero.astro';
-import HomeManifesto from '~/components/HomeManifesto.astro';
-import BentoFeatures from '~/components/BentoFeatures.astro';
-import BuiltModular from '~/components/BuiltModular.astro';
+import DayInClinic from '~/components/DayInClinic.astro';
 import VsLegacy from '~/components/VsLegacy.astro';
+import BentoFeatures from '~/components/BentoFeatures.astro';
+import WhereYouWork from '~/components/WhereYouWork.astro';
+import HomeManifesto from '~/components/HomeManifesto.astro';
 import LiveDemoCard from '~/components/LiveDemoCard.astro';
-import TechStackStrip from '~/components/TechStackStrip.astro';
 
 export function getStaticPaths() {
   return [{ params: { lang: 'es' } }, { params: { lang: 'en' } }];
@@ -20,10 +20,10 @@ const locale = lang as Locale;
 
 <BaseLayout locale={locale}>
   <Hero locale={locale} />
-  <HomeManifesto locale={locale} />
-  <BentoFeatures locale={locale} />
-  <BuiltModular locale={locale} />
+  <DayInClinic locale={locale} />
   <VsLegacy locale={locale} />
+  <BentoFeatures locale={locale} />
+  <WhereYouWork locale={locale} />
+  <HomeManifesto locale={locale} />
   <LiveDemoCard locale={locale} />
-  <TechStackStrip locale={locale} />
 </BaseLayout>

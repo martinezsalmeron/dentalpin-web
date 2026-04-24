@@ -40,6 +40,11 @@ const mobileDomains: { key: ModuleDomain; label: string }[] = [
     <ul class="hidden flex-1 items-center gap-1 lg:flex">
       <li><MegaMenuFeatures locale={locale} /></li>
       <li>
+        <a class="rounded-[var(--radius-sm)] px-3 py-2 text-[14px] text-[var(--color-text-muted)] hover:bg-[var(--color-surface-muted)] hover:text-[var(--color-text)]" href={pagePath(locale, 'technology')}>
+          {dict.nav.technology}
+        </a>
+      </li>
+      <li>
         <a class="rounded-[var(--radius-sm)] px-3 py-2 text-[14px] text-[var(--color-text-muted)] hover:bg-[var(--color-surface-muted)] hover:text-[var(--color-text)]" href={pagePath(locale, 'pricing')}>
           {dict.nav.pricing}
         </a>
@@ -143,6 +148,11 @@ const mobileDomains: { key: ModuleDomain; label: string }[] = [
                   </a>
                 </div>
               </details>
+            </li>
+            <li>
+              <a class="block rounded-[var(--radius-sm)] px-3 py-2.5 text-[15px] font-medium text-[var(--color-text)] hover:bg-[var(--color-surface-muted)]" href={pagePath(locale, 'technology')}>
+                {dict.nav.technology}
+              </a>
             </li>
             <li>
               <a class="block rounded-[var(--radius-sm)] px-3 py-2.5 text-[15px] font-medium text-[var(--color-text)] hover:bg-[var(--color-surface-muted)]" href={pagePath(locale, 'pricing')}>

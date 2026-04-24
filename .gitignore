@@ -29,3 +29,5 @@ coverage
 # Build caches
 .turbo
 .cache
+.gstack/
+.claude/

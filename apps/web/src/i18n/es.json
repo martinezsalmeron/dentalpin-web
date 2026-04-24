@@ -5,6 +5,7 @@
   },
   "nav": {
     "features": "Funcionalidades",
+    "technology": "Tecnología",
     "pricing": "Precios",
     "manifesto": "Manifiesto",
     "docs": "Documentación",
@@ -25,46 +26,46 @@
     "footer": "Ver todas las funcionalidades →"
   },
   "hero": {
-    "eyebrow": "OPEN SOURCE · LISTO PARA IA",
-    "titleBefore": "La alternativa ",
-    "titleHighlight": "open source",
-    "titleAfter": " al software dental tradicional.",
-    "titleAccent": "Construido para era de la IA.",
-    "subtitle": "Pacientes, agenda, odontograma, presupuestos y facturación en una sola plataforma. La instalas tú, la extiendes tú, te la quedas tú.",
-    "ctaPrimary": "Probar la demo en vivo",
+    "eyebrow": "POR FIN UN SOFTWARE A LA ALTURA DE TU CLÍNICA",
+    "titleBefore": "",
+    "titleHighlight": "Tu clínica, abierta en cualquier pantalla.",
+    "titleAfter": "",
+    "titleAccent": "Y tus datos, siempre tuyos.",
+    "subtitle": "Agenda, pacientes, odontograma y facturación en un único software que vive donde tú trabajas: en la consulta, en recepción y en tu móvil cuando sales. Sin cuotas escondidas, sin ataduras, sin migraciones imposibles.",
+    "ctaPrimary": "Pruébalo ahora",
     "ctaSecondary": "Star en GitHub",
-    "trust": "Respaldado por Dentaltix · BSL 1.1 → Apache 2.0",
+    "trust": "Respaldado por Dentaltix",
     "trustPre": "Respaldado por ",
-    "trustPost": " · BSL 1.1 → Apache 2.0"
+    "trustPost": ""
   },
   "manifesto": {
     "eyebrow": "MANIFIESTO",
     "title": "No estamos aquí para vender otro software dental.",
-    "lead": "Estamos aquí porque un software de gestión que esté a la altura del sector dental. Esa misión está muy por encima de un negocio. Seis principios sobre el software que una clínica merece en 2026.",
+    "lead": "Estamos aquí porque el sector dental merece un software a su altura. Esa misión está muy por encima de un negocio. Seis promesas sobre el software que tu clínica merece en 2026.",
     "items": {
       "oss": {
-        "title": "Tus datos, solo tuyos",
-        "body": "Los datos de tu clínica deben estar donde tú decidas: en un servidor propio, o en la nube que tú elijas. Nunca rehenes de otra empresa."
+        "title": "Tus datos son tuyos",
+        "body": "Los datos de tu clínica viven donde tú decidas: en tu servidor, en la nube que elijas o en un portátil que se va contigo. Nunca rehenes de otra empresa."
       },
       "modular": {
-        "title": "Código abierto, auditable",
-        "body": "Cada línea de código se lee, se audita y se forkea. Cualquiera puede reportar errores y aportar mejoras."
+        "title": "Un programa que evoluciona contigo",
+        "body": "Activas lo que tu clínica usa, ignoras el resto. Cuando tu manera de trabajar cambia, el software se adapta, no al revés."
       },
       "global": {
-        "title": "Modular de verdad",
-        "body": "Instalas lo que usas. Ignoras el resto. Sin tiers, sin extorsiones, sin “contáctanos para conocer el precio”."
+        "title": "Un precio claro, para siempre",
+        "body": "Sin cuotas ocultas, sin 'paga más si creces', sin 'contacta con ventas'. Gratis si te lo autoalojas. Lo que ves es lo que hay."
       },
       "api": {
-        "title": "API First",
-        "body": "Todo lo que ves en la interfaz es accesible por API. Puedes integrar el software con todo lo que necesites."
+        "title": "Abierto para conectarse",
+        "body": "Se enlaza con lo que ya usas: pasarelas de pago, WhatsApp, facturación electrónica, laboratorios. Sin barreras ni licencias extra."
       },
       "ai": {
-        "title": "IA Ready",
-        "body": "En la era de la IA, el software debe estar diseñado para que todas las acciones puedan ser ejecutadas por un agente si quieres hacerlo."
+        "title": "Preparado para la IA",
+        "body": "Pensado para que, cuando tú quieras, un asistente de IA se ocupe de lo repetitivo: recordatorios, seguimientos, búsquedas. Siempre con un humano aprobando."
       },
       "ux": {
-        "title": "Calma en la interfaz",
-        "body": "Ocho horas frente al ordenador merecen una interfaz con un buen diseño. Modo oscuro por defecto, flujos bien diseñados, menos clics."
+        "title": "Una pantalla con la que da gusto trabajar",
+        "body": "Ocho horas al día delante del ordenador merecen una interfaz calma, rápida y con menos clics. Modo oscuro por defecto, diseñado para clínicas reales."
       }
     },
     "cta": "Leer el manifiesto completo"
@@ -104,10 +105,121 @@
     "ctaPrimary": "Probar la demo",
     "ctaSecondary": "Ver el código"
   },
+  "techPage": {
+    "meta": {
+      "title": "Tecnología · Dentalpin",
+      "description": "Cómo está construida Dentalpin por dentro: arquitectura de plugins, anatomía de un módulo y el stack que hace que todo encaje."
+    },
+    "eyebrow": "TECNOLOGÍA",
+    "title": "El stack que elegirías si pudieras empezar de cero.",
+    "lead": "Dentalpin no es una caja negra. Todo lo que la hace funcionar está en GitHub y documentado: un núcleo pequeño, módulos que enchufan, un stack elegido por equipos serios y ninguna magia oculta.",
+    "principles": {
+      "eyebrow": "PRINCIPIOS",
+      "title": "Cuatro decisiones que gobiernan el código.",
+      "items": [
+        {
+          "title": "Núcleo pequeño, módulos que enchufan",
+          "body": "El core gestiona auth, RBAC, clínicas y usuarios. Todo lo demás vive como módulo, instalable y desmontable sin tocar el resto."
+        },
+        {
+          "title": "Contratos antes que clases",
+          "body": "Cada módulo expone eventos y endpoints tipados con Pydantic. Los otros módulos reaccionan a eventos, no a imports internos."
+        },
+        {
+          "title": "API primero, interfaz después",
+          "body": "Todo lo que ves en la UI pasa por la misma API pública que usan los integradores y los agentes de IA."
+        },
+        {
+          "title": "Stack deliberadamente aburrido",
+          "body": "Elegimos herramientas probadas con años de producción detrás. Lo exótico lo dejamos para los side projects."
+        }
+      ]
+    },
+    "anatomy": {
+      "eyebrow": "ANATOMÍA DE UN MÓDULO",
+      "title": "Qué trae dentro cada módulo.",
+      "body": "Un módulo no es un plugin improvisado. Sigue un contrato claro para que Dentalpin lo reconozca y el resto del sistema pueda construir sobre él.",
+      "items": [
+        {
+          "name": "manifest.yaml",
+          "what": "Nombre, versión, dependencias, permisos y eventos que publica o escucha."
+        },
+        {
+          "name": "Migraciones Alembic",
+          "what": "Su propia rama de migración. Activar el módulo aplica sus tablas, desactivarlo las deja en pie hasta que tú decidas."
+        },
+        {
+          "name": "Seeds YAML",
+          "what": "Datos de ejemplo y catálogos base para arrancar sin escribir SQL a mano."
+        },
+        {
+          "name": "Navegación autoregistrada",
+          "what": "El módulo declara sus entradas de menú y rutas. La UI las muestra solo si el rol tiene permiso."
+        },
+        {
+          "name": "Event bus",
+          "what": "Se suscribe a eventos del core o de otros módulos y publica los suyos. Ese es el pegamento entre piezas."
+        },
+        {
+          "name": "Endpoints FastAPI",
+          "what": "Todo el dominio del módulo expuesto como API pública, tipada con Pydantic y documentada con OpenAPI."
+        }
+      ]
+    },
+    "stackHeader": {
+      "eyebrow": "TECH STACK",
+      "title": "Un stack moderno y deliberadamente aburrido.",
+      "body": "Elegimos lo que eligen los equipos serios. Nada exótico, nada heredado."
+    },
+    "stackGroups": [
+      {
+        "label": "Frontend",
+        "items": [
+          { "name": "Nuxt 3", "role": "Framework" },
+          { "name": "Vue 3", "role": "UI" },
+          { "name": "Nuxt UI", "role": "Componentes" },
+          { "name": "TypeScript", "role": "Tipado" },
+          { "name": "Tailwind", "role": "Estilos" }
+        ]
+      },
+      {
+        "label": "Backend",
+        "items": [
+          { "name": "FastAPI", "role": "API HTTP" },
+          { "name": "Pydantic v2", "role": "Esquemas" },
+          { "name": "SQLAlchemy 2.0", "role": "ORM" },
+          { "name": "Alembic", "role": "Migraciones" }
+        ]
+      },
+      {
+        "label": "Datos",
+        "items": [
+          { "name": "PostgreSQL 15", "role": "Base de datos" },
+          { "name": "Redis", "role": "Cache y cola" },
+          { "name": "S3 compatible", "role": "Archivos" }
+        ]
+      },
+      {
+        "label": "Runtime y QA",
+        "items": [
+          { "name": "Docker", "role": "Runtime" },
+          { "name": "docker-compose", "role": "Orquestación" },
+          { "name": "Playwright", "role": "Tests E2E" },
+          { "name": "Pytest", "role": "Tests backend" }
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Abre el capó cuando quieras.",
+      "body": "Todo está en GitHub: el código, las issues, los módulos, la documentación. Puedes leerlo, forkearlo o simplemente probar la demo.",
+      "ctaPrimary": "Ver el repo",
+      "ctaSecondary": "Probar la demo"
+    }
+  },
   "bento": {
-    "eyebrow": "MÓDULOS PRINCIPALES",
-    "title": "Pensado para cómo trabaja una clínica de verdad",
-    "subtitle": "Cada funcionalidad es un módulo. Lo activas, lo quitas o lo reemplazas cuando quieras."
+    "eyebrow": "LO QUE HACES TODOS LOS DÍAS",
+    "title": "Agenda, pacientes, odontograma y más, bien hechos",
+    "subtitle": "Las cosas que abres cien veces al día, por fin pensadas para una clínica real. Activas las que usas, ocultas las que no."
   },
   "modular": {
     "eyebrow": "ARQUITECTURA DE PLUGINS",
@@ -128,6 +240,74 @@
       { "label": "Aseguradoras", "icon": "shield" }
     ],
     "cta": "Ver la arquitectura en GitHub →"
+  },
+  "dayInClinic": {
+    "eyebrow": "UN DÍA EN TU CLÍNICA",
+    "title": "Cómo cambia tu mañana el día que cambias de software.",
+    "lead": "Lo notas desde la primera cita. No es una función suelta: es cómo se siente todo el día.",
+    "legacyLabel": "Con software tradicional",
+    "dentalpinLabel": "Con Dentalpin",
+    "scenes": [
+      {
+        "time": "07:45",
+        "moment": "Antes de abrir la clínica",
+        "legacy": "Enciendes el PC del despacho para saber cuántos pacientes tienes hoy.",
+        "dentalpin": "Abres la agenda de mañana desde el sofá, en tu móvil, mientras tomas un café."
+      },
+      {
+        "time": "09:10",
+        "moment": "Entra el paciente",
+        "legacy": "Buscas en la tabla hasta que aparece. Un minuto, dos. El paciente espera de pie.",
+        "dentalpin": "Escribes tres letras y la ficha se abre. Con historial, fotos y presupuestos a un clic."
+      },
+      {
+        "time": "10:30",
+        "moment": "En el sillón",
+        "legacy": "Apuntas el tratamiento en papel y lo pasas al ordenador luego. Si te acuerdas.",
+        "dentalpin": "El odontograma se abre en la tablet al lado del sillón. Marcas, se guarda solo, ya está."
+      },
+      {
+        "time": "13:20",
+        "moment": "El presupuesto del día",
+        "legacy": "Abres otro programa, copias precios, imprimes en papel y lo firmas a mano.",
+        "dentalpin": "Un clic, se genera firmado y lo envías por WhatsApp al momento."
+      },
+      {
+        "time": "22:00",
+        "moment": "Una urgencia",
+        "legacy": "No hay forma de ver la ficha hasta que abras la clínica mañana.",
+        "dentalpin": "Abres la app desde casa, miras su última radiografía y llamas con la info delante."
+      },
+      {
+        "time": "Fin de mes",
+        "moment": "Toca cerrar el mes",
+        "legacy": "Pides a la gestoría que te mande los datos. Dicen que en dos semanas te los pasan.",
+        "dentalpin": "Abres reportes y ves qué has facturado, por tratamiento y por profesional."
+      }
+    ]
+  },
+  "whereYouWork": {
+    "eyebrow": "DONDE TÚ TRABAJES, DENTALPIN VA",
+    "title": "La clínica no vive solo en el PC del despacho.",
+    "lead": "Tú entras y sales, saltas del sillón a la recepción, respondes un mensaje desde casa. Tu software debería moverse contigo.",
+    "syncPill": "Sincronizado en tiempo real",
+    "scenes": [
+      {
+        "device": "Tablet",
+        "title": "En el sillón",
+        "body": "Tablet al lado del paciente: odontograma, historial y fotos a un toque. Sin levantarse a teclear."
+      },
+      {
+        "device": "Recepción",
+        "title": "En recepción",
+        "body": "Agenda del día, llamadas pendientes, cobros y presupuestos firmados. Una sola pantalla."
+      },
+      {
+        "device": "Móvil",
+        "title": "Fuera de la clínica",
+        "body": "Ver agenda, aprobar un presupuesto o contestar una urgencia desde tu móvil. Desde cualquier lugar."
+      }
+    ]
   },
   "demo": {
     "eyebrow": "DEMO ONLINE",
@@ -158,55 +338,50 @@
     "body": "Elegimos lo que eligen los equipos serios. Nada exótico, nada heredado."
   },
   "vsLegacy": {
-    "eyebrow": "DENTALPIN VS LEGACY",
-    "title": "El software dental tenía que actualizarse. Empezamos por aquí.",
-    "lead": "Los programas que el sector ha usado durante veinte años hicieron su trabajo. Pero ya no encajan con cómo se gestiona una clínica en 2026. Esta es la diferencia, sin maquillaje.",
+    "eyebrow": "DENTALPIN VS SOFTWARE TRADICIONAL",
+    "title": "Lo que cambia, el día que cambias.",
+    "lead": "Los programas que el sector ha usado veinte años hicieron su trabajo. Pero ya no encajan con cómo se trabaja en una clínica hoy. Esta es la diferencia, en lo que notas cada mañana.",
     "legacy": {
       "title": "Software dental tradicional",
       "subtitle": "Una década atrás. O dos.",
       "tag": "v.~2010",
       "bullets": [
-        "Licencia cerrada y opaca",
-        "Tu base de datos, en su servidor",
-        "Tarifa por usuario, por módulo y por sucursal",
-        "Migrar cuesta semanas y dinero",
-        "Actualizan cuando ellos quieren",
-        "API limitada o de pago"
+        "Funciona solo en el PC de la clínica",
+        "Tu historial, en su servidor, sin copia para ti",
+        "No hay app móvil, o la cobran aparte",
+        "Pagas por usuario, sede y módulo",
+        "Pantallas heredadas de Windows XP",
+        "Exportar tus datos cuesta semanas y dinero"
       ]
     },
     "dentalpin": {
       "badge": "2026",
       "title": "Dentalpin",
-      "subtitle": "Construido para la era de la IA.",
+      "subtitle": "Abierto, moderno y donde tú trabajes.",
       "tag": "v.2026",
       "bullets": [
-        "BSL 1.1 hoy, Apache 2.0 mañana",
-        "Tus datos, en tu servidor",
-        "Un precio, todos los módulos",
-        "Exporta tu base de datos cuando quieras",
-        "Actualizas cuando te conviene",
-        "API pública y documentada"
+        "Abierto en consulta, en casa y en tu móvil",
+        "Tus datos en tu servidor o donde tú elijas",
+        "Mismo software en cualquier dispositivo, gratis",
+        "Todos los módulos incluidos, sin sorpresas",
+        "Interfaz calma, rápida y con modo oscuro",
+        "Exporta tu base de datos cuando te apetezca"
       ]
     },
     "table": {
       "headers": {
-        "attr": "Atributo",
+        "attr": "Lo que notas",
         "legacy": "Software tradicional",
         "dentalpin": "Dentalpin"
       },
       "rows": [
-        { "attr": "Licencia", "legacy": "Privativa", "dentalpin": "BSL 1.1 → Apache 2.0" },
-        { "attr": "Código fuente", "legacy": "Cerrado", "dentalpin": "Abierto y auditable" },
-        { "attr": "Despliegue", "legacy": "SaaS rígido o on-premise opaco", "dentalpin": "Self-hosted o Cloud gestionado" },
-        { "attr": "Modularidad", "legacy": "Tiers cerrados", "dentalpin": "Activas solo lo que usas" },
-        { "attr": "API", "legacy": "Limitada o de pago", "dentalpin": "Pública y documentada" },
-        { "attr": "Tus datos", "legacy": "En su nube", "dentalpin": "En tu servidor" },
-        { "attr": "Modelo de precios", "legacy": "Por usuario, módulo y sucursal", "dentalpin": "Pago único o gratis" },
-        { "attr": "Actualizaciones", "legacy": "Cuando ellos lo decidan", "dentalpin": "Cuando lo decidas tú" },
-        { "attr": "IA", "legacy": "Atornillada después", "dentalpin": "Diseñada para agentes" },
-        { "attr": "UX", "legacy": "Heredada de los 2000", "dentalpin": "Calma, oscura por defecto, rápida" },
-        { "attr": "Migración", "legacy": "Costosa, lenta y opaca", "dentalpin": "Exporta tu BD sin pedir permiso" },
-        { "attr": "Comunidad", "legacy": "Eres cliente", "dentalpin": "Eres contribuidor" }
+        { "attr": "Acceso", "legacy": "Solo en el PC de la clínica", "dentalpin": "Cualquier ordenador, tablet o móvil" },
+        { "attr": "Tus datos", "legacy": "En su nube o su servidor", "dentalpin": "En tu servidor o donde tú decidas" },
+        { "attr": "Precio", "legacy": "Por usuario, sede y módulo", "dentalpin": "Gratis y todos los módulos incluidos" },
+        { "attr": "Migración", "legacy": "Semanas y cuatro cifras", "dentalpin": "Exportas tu base cuando quieres" },
+        { "attr": "Actualizaciones", "legacy": "Cuando ellos deciden", "dentalpin": "Cuando te viene bien" },
+        { "attr": "Soporte", "legacy": "Tickets y esperar", "dentalpin": "GitHub abierto y comunidad activa" },
+        { "attr": "Interfaz", "legacy": "Heredada de los 2000", "dentalpin": "Calma, oscura por defecto, rápida" }
       ]
     },
     "punchline": "El cambio no va de funcionalidades. Va de quién manda en tu clínica."
