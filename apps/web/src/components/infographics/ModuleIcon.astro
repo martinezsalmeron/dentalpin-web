@@ -1,0 +1,111 @@
+---
+/*
+ * Inline-SVG icon set for the LiveModulesGrid.
+ * Local to this section to avoid widening the global Icon set.
+ */
+type IconKey =
+  | 'calendar'
+  | 'users'
+  | 'tooth'
+  | 'clipboard'
+  | 'file-text'
+  | 'card'
+  | 'image'
+  | 'bell'
+  | 'globe'
+  | 'building'
+  | 'shield'
+  | 'message'
+  | 'sparkles';
+
+interface Props {
+  name: IconKey;
+  size?: number;
+  class?: string;
+}
+const { name, size = 16, class: extra = '' } = Astro.props;
+---
+
+<svg
+  width={size}
+  height={size}
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.75"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class={`inline-block align-[-0.125em] ${extra}`}
+  aria-hidden="true"
+>
+  {name === 'calendar' && (
+    <>
+      <rect x="3" y="4.5" width="18" height="16" rx="2.5" />
+      <path d="M3 9h18M8 3v3M16 3v3" />
+    </>
+  )}
+  {name === 'users' && (
+    <>
+      <circle cx="9" cy="9" r="3.5" />
+      <path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6" />
+      <circle cx="17" cy="10" r="2.5" />
+      <path d="M15 20c0-2.5 2-4.5 4.5-4.5" />
+    </>
+  )}
+  {name === 'tooth' && (
+    <path d="M8 3c-2.5 0-4 2-4 5 0 2 .8 3 1.2 5 .3 1.5.2 3 .6 5 .3 1.5 1 3 2.2 3 1.5 0 1.5-3 2-4.5.3-.9.7-1 1-1s.7.1 1 1c.5 1.5.5 4.5 2 4.5 1.2 0 1.9-1.5 2.2-3 .4-2 .3-3.5.6-5 .4-2 1.2-3 1.2-5 0-3-1.5-5-4-5-1.3 0-2 .7-3 .7s-1.7-.7-3-.7z" />
+  )}
+  {name === 'clipboard' && (
+    <>
+      <rect x="6" y="4" width="12" height="17" rx="2" />
+      <rect x="9" y="2.5" width="6" height="3.5" rx="1" />
+      <path d="M9 11h6M9 14h6M9 17h4" />
+    </>
+  )}
+  {name === 'file-text' && (
+    <>
+      <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" />
+      <path d="M14 3v5h5M9 13h6M9 17h6M9 9h2" />
+    </>
+  )}
+  {name === 'card' && (
+    <>
+      <rect x="2.5" y="5" width="19" height="14" rx="2.5" />
+      <path d="M2.5 10h19M6 15h4" />
+    </>
+  )}
+  {name === 'image' && (
+    <>
+      <rect x="3" y="4" width="18" height="16" rx="2" />
+      <circle cx="9" cy="10" r="2" />
+      <path d="M21 17l-5-5-9 9" />
+    </>
+  )}
+  {name === 'bell' && (
+    <>
+      <path d="M6 16h12l-1.5-2V10a4.5 4.5 0 0 0-9 0v4z" />
+      <path d="M10 19a2 2 0 0 0 4 0" />
+    </>
+  )}
+  {name === 'globe' && (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M3 12h18M12 3c3 3.5 3 14 0 18M12 3c-3 3.5-3 14 0 18" />
+    </>
+  )}
+  {name === 'building' && (
+    <>
+      <rect x="4" y="3" width="16" height="18" rx="1.5" />
+      <path d="M8 7h2M14 7h2M8 11h2M14 11h2M8 15h2M14 15h2M10 21v-3h4v3" />
+    </>
+  )}
+  {name === 'shield' && (
+    <path d="M12 3l8 3v6c0 4.5-3.5 7.8-8 9-4.5-1.2-8-4.5-8-9V6l8-3z" />
+  )}
+  {name === 'message' && (
+    <path d="M4 5h16v11H8.5L4 19.5V5z" />
+  )}
+  {name === 'sparkles' && (
+    <path d="M12 3l1.8 4.7L18.5 9l-4.7 1.5L12 15l-1.8-4.5L5.5 9l4.7-1.3L12 3zM18 14l.9 2.3L21 17l-2.1.8L18 20l-.9-2.2L15 17l2.1-.7L18 14z" />
+  )}
+</svg>

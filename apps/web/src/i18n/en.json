@@ -26,17 +26,152 @@
     "footer": "See all features →"
   },
   "hero": {
-    "eyebrow": "FINALLY, SOFTWARE WORTHY OF YOUR CLINIC",
+    "eyebrow": "OPEN DENTAL SOFTWARE",
     "titleBefore": "",
-    "titleHighlight": "Your clinic, open on any screen.",
+    "titleHighlight": "The modern, free alternative to the typical clinic management software.",
     "titleAfter": "",
-    "titleAccent": "And your data, always yours.",
-    "subtitle": "Calendar, patients, odontogram and invoicing in one software that lives where you work: in the chair, at reception, on your phone when you leave the clinic. No hidden fees, no lock-in, no impossible migrations.",
-    "ctaPrimary": "Try it now",
-    "ctaSecondary": "Star on GitHub",
+    "titleAccent": "Built for the AI era.",
+    "subtitle": "Calendar, patients, odontogram, quotes and billing. The code is yours: install it wherever you want and open it from anywhere you need. Free core, open, modular.",
+    "ctaPrimary": "Try the demo",
+    "ctaSecondary": "Download and install",
+    "ghPill": "See the code on GitHub",
     "trust": "Backed by Dentaltix",
     "trustPre": "Backed by ",
     "trustPost": ""
+  },
+  "pillars": {
+    "eyebrow": "WHAT NO OTHER DENTAL SOFTWARE DOES",
+    "title": "Three things that make us different.",
+    "lead": "Beyond modules and screens, three deeper decisions set Dentalpin apart from the rest.",
+    "items": [
+      {
+        "key": "yours",
+        "label": "It's yours",
+        "title": "The code is yours. You decide where it lives.",
+        "body": "Install it wherever you want (in your clinic, on a VPS, on the cloud you pick) and open it from anywhere you need.",
+        "linkLabel": "How pricing works",
+        "anchor": "#price"
+      },
+      {
+        "key": "modular",
+        "label": "It's modular",
+        "title": "Only what you use, switched on.",
+        "body": "Turn on calendar, odontogram, the features you need. The rest stay off and out of the way.",
+        "linkLabel": "See the modules",
+        "anchor": "#modules"
+      },
+      {
+        "key": "open",
+        "label": "It's open",
+        "title": "The code is public. Anyone you trust can audit it.",
+        "body": "Any IT person you hire can read it, improve it, or adapt it to fit your clinic.",
+        "linkLabel": "Why it matters",
+        "anchor": "#open-source"
+      }
+    ]
+  },
+  "priceClarity": {
+    "eyebrow": "PRICE",
+    "title": "The core, at zero. Forever.",
+    "lead": "What every clinic uses every day (calendar, patients, odontogram, quotes, billing) lives in the core. And the core is free. No fees per chair, dentist or patient.",
+    "claims": [
+      "No fees per chair, dentist or patient.",
+      "Full core, no tiers hidden inside.",
+      "If extra paid modules ever exist, they'll be optional and transparent."
+    ],
+    "footnote": "Prefer us to run it for you in the cloud? Coming soon, optional, transparent.",
+    "footnoteCta": "See pricing options"
+  },
+  "liveModules": {
+    "eyebrow": "MODULES",
+    "title": "A solid core, optional extras you switch on.",
+    "lead": "Every clinic needs the same essentials at the centre: calendar, patients, odontogram. What sits around them varies. You decide what's on.",
+    "coreLabel": "ALWAYS INCLUDED",
+    "coreSubtitle": "The core every clinic needs. Free forever, no hidden tiers.",
+    "core": [
+      { "name": "Calendar", "icon": "calendar" },
+      { "name": "Patients", "icon": "users" },
+      { "name": "Odontogram", "icon": "tooth" },
+      { "name": "Clinical history", "icon": "clipboard" },
+      { "name": "Quotes", "icon": "file-text" },
+      { "name": "Billing", "icon": "card" },
+      { "name": "X-rays and imaging", "icon": "image" }
+    ],
+    "optionalLabel": "TURN ON WHAT YOU NEED",
+    "optionalSubtitle": "Extras some clinics want and others don't. Switch them on or off with a click.",
+    "optional": [
+      { "name": "Automatic reminders", "icon": "bell", "soon": false, "defaultOn": true },
+      { "name": "Patient portal", "icon": "globe", "soon": false, "defaultOn": false },
+      { "name": "Multi-clinic", "icon": "building", "soon": false, "defaultOn": false },
+      { "name": "Verifactu", "icon": "shield", "soon": true, "defaultOn": false },
+      { "name": "WhatsApp Business", "icon": "message", "soon": true, "defaultOn": false },
+      { "name": "AI assistant", "icon": "sparkles", "soon": true, "defaultOn": false }
+    ],
+    "soonBadge": "Coming soon",
+    "summaryPrefix": "Your Dentalpin:",
+    "summaryCoreLabel": "from the core",
+    "summaryOptionalLabel": "optional",
+    "summaryPrice": "Core at €0 always",
+    "caption": "The core is free forever. Some optional modules may be paid in the future: always opt-in, always transparent. What you don't use doesn't get in the way."
+  },
+  "openSourceDentists": {
+    "eyebrow": "OPEN SOURCE",
+    "title": "\"Open source\" sounds nerdy. What it means for your clinic is very concrete.",
+    "lead": "You don't need to understand a line of code. What matters is what changes for you.",
+    "ctaLabel": "Browse the repository on GitHub",
+    "items": [
+      {
+        "title": "If Dentalpin disappears tomorrow, your software keeps running.",
+        "body": "The code is published. It doesn't depend on us staying around. No vendor can leave you stranded."
+      },
+      {
+        "title": "Any IT person you hire can work on it.",
+        "body": "You're not tied to \"the Dentalpin person\". Your IT team, a local company, or us, anyone can read it or adapt it for your clinic."
+      },
+      {
+        "title": "What other clinics improve, you get to use too.",
+        "body": "If a clinic in Madrid publishes an open module, tomorrow you can use it in Barcelona. Core improvements reach everyone."
+      }
+    ],
+    "flow": {
+      "label": "WHO TOUCHES THE CODE",
+      "sources": [
+        { "title": "Dentalpin team", "body": "The core and the official modules." },
+        { "title": "Your IT person", "body": "Your IT team or the local company you hire." },
+        { "title": "Community", "body": "Other clinics and developers who share." }
+      ],
+      "hub": "Public repository",
+      "destination": "Your Dentalpin install"
+    }
+  },
+  "demoDual": {
+    "pullquote": "We're not here to sell you another dental software.",
+    "pullquoteCta": "Read the full manifesto",
+    "eyebrow": "START TODAY",
+    "title": "Two ways to start. Both free.",
+    "lead": "Try it in your browser, or download and install it on your own server. No account, no card, no limits.",
+    "tryIt": {
+      "label": "OPTION 1",
+      "title": "Try it without installing anything.",
+      "body": "We spin up a sample clinic in your browser, already filled with patients and appointments. No sign-up, no email, nothing to download.",
+      "credentialsLabel": "Use these to log in",
+      "userLabel": "Username",
+      "passwordLabel": "Password",
+      "user": "admin@demo.clinic",
+      "password": "demo1234",
+      "rolesNote": "There are also dentist, hygienist, assistant and reception logins. Same password.",
+      "cta": "Open the demo"
+    },
+    "selfHost": {
+      "label": "OPTION 2",
+      "title": "Download and install it free.",
+      "body": "One docker compose and you're in. Under thirty minutes on a reasonable VPS. Step-by-step guides for your IT person.",
+      "code": "docker compose up",
+      "cta": "See instructions",
+      "ctaSecondary": "Browse the code"
+    },
+    "help": "Need help with the install? We can lend a hand.",
+    "helpCta": "Talk to us"
   },
   "manifesto": {
     "eyebrow": "MANIFESTO",
@@ -219,7 +354,8 @@
   "bento": {
     "eyebrow": "WHAT YOU DO EVERY DAY",
     "title": "Calendar, patients, odontogram and more, done right",
-    "subtitle": "The things you open a hundred times a day, finally built for a real clinic. Turn on what you use, hide the rest."
+    "subtitle": "The things you open a hundred times a day, finally built for a real clinic. Turn on what you use, hide the rest.",
+    "ctaAll": "See every module"
   },
   "modular": {
     "eyebrow": "PLUGIN ARCHITECTURE",
@@ -242,7 +378,7 @@
     "cta": "See the architecture on GitHub →"
   },
   "dayInClinic": {
-    "eyebrow": "A DAY AT YOUR CLINIC",
+    "eyebrow": "HOW YOUR DAY CHANGES",
     "title": "How your morning changes the day you switch software.",
     "lead": "You feel it from the first appointment. It isn't one feature, it's how the whole day feels.",
     "legacyLabel": "With legacy software",
@@ -350,7 +486,7 @@
     "body": "We pick what serious teams pick. Nothing exotic, nothing legacy."
   },
   "vsLegacy": {
-    "eyebrow": "DENTALPIN VS LEGACY",
+    "eyebrow": "WHAT YOU HAVE TODAY VS WHAT YOU CAN HAVE",
     "title": "What changes, the day you switch.",
     "lead": "The tools the industry has used for twenty years did their job. They no longer match how a clinic is run today. Here is the difference, in what you notice every morning.",
     "legacy": {
@@ -363,6 +499,8 @@
         "No mobile app, or charged separately",
         "You pay per user, per location, per module",
         "Screens inherited from Windows XP",
+        "A weird app to install on every machine",
+        "Proprietary tech that ages on its own",
         "Exporting your data takes weeks and money"
       ]
     },
@@ -377,6 +515,8 @@
         "Same software on any device, free",
         "Every module included, no surprises",
         "Calm, fast interface with dark mode",
+        "Runs in the browser, nothing to install",
+        "Open web standards, not closed tech",
         "Export your database whenever you want"
       ]
     },

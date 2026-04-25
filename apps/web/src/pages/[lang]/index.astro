@@ -2,11 +2,13 @@
 import { isLocale, type Locale } from '~/i18n';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Hero from '~/components/Hero.astro';
+import PillarsStrip from '~/components/PillarsStrip.astro';
 import DayInClinic from '~/components/DayInClinic.astro';
+import PriceClarity from '~/components/PriceClarity.astro';
+import LiveModulesGrid from '~/components/LiveModulesGrid.astro';
+import OpenSourceForDentists from '~/components/OpenSourceForDentists.astro';
 import VsLegacy from '~/components/VsLegacy.astro';
 import BentoFeatures from '~/components/BentoFeatures.astro';
-import WhereYouWork from '~/components/WhereYouWork.astro';
-import HomeManifesto from '~/components/HomeManifesto.astro';
 import LiveDemoCard from '~/components/LiveDemoCard.astro';
 
 export function getStaticPaths() {
@@ -20,10 +22,12 @@ const locale = lang as Locale;
 
 <BaseLayout locale={locale}>
   <Hero locale={locale} />
+  <PillarsStrip locale={locale} />
   <DayInClinic locale={locale} />
+  <PriceClarity locale={locale} />
+  <LiveModulesGrid locale={locale} />
+  <OpenSourceForDentists locale={locale} />
   <VsLegacy locale={locale} />
   <BentoFeatures locale={locale} />
-  <WhereYouWork locale={locale} />
-  <HomeManifesto locale={locale} />
   <LiveDemoCard locale={locale} />
 </BaseLayout>

@@ -1,58 +1,120 @@
 ---
-import { useDict, type Locale } from '~/i18n';
+import { useDict, pagePath, type Locale } from '~/i18n';
 import Section from '@dentalpin/ui/Section.astro';
 import Button from '@dentalpin/ui/Button.astro';
 import Icon from '@dentalpin/ui/Icon.astro';
 import GradientBackdrop from '@dentalpin/ui/GradientBackdrop.astro';
+import { DEMO_URL, GITHUB_REPO, DOCS_URL } from '~/config/links';
 
 interface Props { locale: Locale; }
 const { locale } = Astro.props;
 const dict = useDict(locale);
-const demoUrl = 'https://demo.dentalpin.com';
-const steps = (dict.demo.steps as string[]) ?? [];
+const d = dict.demoDual;
+const manifestoHref = pagePath(locale, 'manifesto');
+const contactHref = pagePath(locale, 'contact');
 ---
+
+<!-- Manifesto pull-quote, sits above the dual-path card -->
+<Section id="manifesto-pullquote" padY="sm">
+  <blockquote class="mx-auto max-w-3xl text-center">
+    <p class="text-[clamp(1.25rem,1.4vw+1rem,1.85rem)] font-semibold leading-[1.25] tracking-[-0.01em] text-[var(--color-text)]">
+      "{d.pullquote}"
+    </p>
+    <a
+      href={manifestoHref}
+      class="mt-4 inline-flex items-center gap-1.5 text-[13px] font-semibold text-[var(--color-primary)] transition-colors hover:text-[var(--color-primary-hover)]"
+    >
+      {d.pullquoteCta}
+      <Icon name="arrow-right" size={13} />
+    </a>
+  </blockquote>
+</Section>
 
 <Section id="demo" padY="xs">
   <div class="relative overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-8 shadow-[var(--shadow-md)] sm:p-12">
     <GradientBackdrop variant="subtle" />
 
-    <div class="max-w-[62ch]">
-      <div>
+    <div class="relative">
+      <div class="max-w-2xl">
         <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">
-          {dict.demo.eyebrow}
+          {d.eyebrow}
         </p>
         <h2 class="text-marketing-h1 mt-3 text-[var(--color-text)]">
-          {dict.demo.title}
+          {d.title}
         </h2>
-        <p class="mt-4 max-w-[58ch] text-[16px] leading-[1.65] text-[var(--color-text-muted)]">
-          {dict.demo.body}
+        <p class="mt-4 text-[16px] leading-[1.65] text-[var(--color-text-muted)]">
+          {d.lead}
         </p>
-
-        <p class="mt-7 text-[12px] font-semibold uppercase tracking-wider text-[var(--color-text-subtle)]">
-          {dict.demo.stepsLabel}
-        </p>
-        <ol class="mt-3 space-y-3">
-          {steps.map((step, i) => (
-            <li class="flex items-start gap-3">
-              <span class="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[var(--color-primary-soft)] text-[13px] font-semibold text-[var(--color-primary-soft-text)]">
-                {i + 1}
-              </span>
-              <span class="text-[15px] leading-[1.55] text-[var(--color-text)]">{step}</span>
-            </li>
-          ))}
-        </ol>
-
-        <div class="mt-8 flex flex-wrap items-center gap-4">
-          <Button href={demoUrl} size="lg" variant="solid">
-            {dict.demo.cta}
-            <Icon name="arrow-right" size={16} />
-          </Button>
-          <span class="inline-flex items-center gap-2 text-[13px] text-[var(--color-text-muted)]">
-            <Icon name="check" size={14} class="text-[var(--color-primary)]" />
-            {dict.demo.noInstall}
-          </span>
-        </div>
       </div>
+
+      <div class="mt-10 grid gap-5 lg:grid-cols-2">
+        <!-- Try it (browser demo) -->
+        <article class="flex flex-col rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface-muted)] p-6 sm:p-7">
+          <span class="inline-flex w-fit items-center gap-2 rounded-[var(--radius-pill)] border border-[var(--color-border)] bg-[var(--color-surface)] px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--color-text-muted)]">
+            {d.tryIt.label}
+          </span>
+          <h3 class="mt-4 text-[20px] font-semibold leading-[1.25] tracking-[-0.01em] text-[var(--color-text)]">
+            {d.tryIt.title}
+          </h3>
+          <p class="mt-3 text-[14.5px] leading-[1.6] text-[var(--color-text-muted)]">
+            {d.tryIt.body}
+          </p>
+
+          <dl class="mt-5 grid gap-2 rounded-[var(--radius-md)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-4 text-[13px]">
+            <div class="flex items-baseline justify-between gap-3">
+              <dt class="font-mono uppercase tracking-wider text-[var(--color-text-subtle)]">{d.tryIt.userLabel}</dt>
+              <dd class="font-mono text-[var(--color-text)]">{d.tryIt.user}</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-3">
+              <dt class="font-mono uppercase tracking-wider text-[var(--color-text-subtle)]">{d.tryIt.passwordLabel}</dt>
+              <dd class="font-mono text-[var(--color-text)]">{d.tryIt.password}</dd>
+            </div>
+          </dl>
+          <p class="mt-3 text-[12.5px] text-[var(--color-text-subtle)]">{d.tryIt.rolesNote}</p>
+
+          <div class="mt-6">
+            <Button href={DEMO_URL} size="lg" variant="solid">
+              {d.tryIt.cta}
+              <Icon name="arrow-right" size={16} />
+            </Button>
+          </div>
+        </article>
+
+        <!-- Self-host (download + install) -->
+        <article class="flex flex-col rounded-[var(--radius-xl)] border-[1.5px] border-[var(--color-primary)] bg-[var(--color-surface)] p-6 shadow-[var(--shadow-sm)] sm:p-7">
+          <span class="inline-flex w-fit items-center gap-2 rounded-[var(--radius-pill)] border border-[var(--color-primary)] bg-[var(--color-primary-soft)] px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--color-primary-soft-text)]">
+            {d.selfHost.label}
+          </span>
+          <h3 class="mt-4 text-[20px] font-semibold leading-[1.25] tracking-[-0.01em] text-[var(--color-text)]">
+            {d.selfHost.title}
+          </h3>
+          <p class="mt-3 text-[14.5px] leading-[1.6] text-[var(--color-text-muted)]">
+            {d.selfHost.body}
+          </p>
+
+          <pre class="mt-5 overflow-x-auto rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-canvas)] px-4 py-3 font-mono text-[13px] text-[var(--color-text)]"><code>$ {d.selfHost.code}</code></pre>
+
+          <div class="mt-6 flex flex-wrap items-center gap-3">
+            <Button href={DOCS_URL} size="lg" variant="solid">
+              {d.selfHost.cta}
+              <Icon name="arrow-right" size={16} />
+            </Button>
+            <Button href={GITHUB_REPO} size="lg" variant="outline">
+              {d.selfHost.ctaSecondary}
+            </Button>
+          </div>
+        </article>
+      </div>
+
+      <p class="mt-8 text-center text-[13px] text-[var(--color-text-muted)]">
+        {d.help}{' '}
+        <a
+          href={contactHref}
+          class="font-semibold text-[var(--color-primary)] underline decoration-dotted underline-offset-4 hover:text-[var(--color-primary-hover)]"
+        >
+          {d.helpCta}
+        </a>
+      </p>
     </div>
   </div>
 </Section>

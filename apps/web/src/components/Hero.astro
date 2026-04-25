@@ -1,9 +1,8 @@
 ---
-import { useDict, type Locale } from '~/i18n';
+import { useDict, pagePath, type Locale } from '~/i18n';
 import GradientBackdrop from '@dentalpin/ui/GradientBackdrop.astro';
 import Button from '@dentalpin/ui/Button.astro';
 import Icon from '@dentalpin/ui/Icon.astro';
-import ScreenshotPlaceholder from './ScreenshotPlaceholder.astro';
 import { DEMO_URL, GITHUB_REPO } from '~/config/links';
 
 interface Props { locale: Locale; }
@@ -12,19 +11,20 @@ const dict = useDict(locale);
 
 const demoUrl = DEMO_URL;
 const ghUrl = GITHUB_REPO;
+const installPath = `${pagePath(locale, 'pricing')}#self-hosted`;
 ---
 
 <section class="relative overflow-hidden">
   <GradientBackdrop variant="hero" />
 
-  <div class="mx-auto flex max-w-6xl flex-col items-center px-6 pt-20 pb-12 text-center sm:px-8 sm:pt-28">
+  <div class="mx-auto flex max-w-6xl flex-col items-center px-6 pt-20 pb-10 text-center sm:px-8 sm:pt-28">
     <span class="inline-flex items-center gap-1.5 rounded-[var(--radius-pill)] border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--color-primary)] backdrop-blur">
       <span class="h-1.5 w-1.5 rounded-full bg-[var(--color-primary)]"></span>
       {dict.hero.eyebrow}
     </span>
 
     <h1 class="text-marketing-hero mt-6 max-w-5xl text-[var(--color-text)]">
-      {dict.hero.titleBefore}<span class="font-extrabold">{dict.hero.titleHighlight}</span>{dict.hero.titleAfter}{' '}
+      <span class="font-extrabold">{dict.hero.titleHighlight}</span>{' '}
       <span class="bg-gradient-to-r from-[var(--color-primary)] via-[#22d3ee] to-[#a78bfa] bg-clip-text text-transparent">
         {dict.hero.titleAccent}
       </span>
@@ -35,25 +35,107 @@ const ghUrl = GITHUB_REPO;
     </p>
 
     <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
-      <Button href={demoUrl} size="lg">
+      <Button href={demoUrl} size="lg" variant="solid">
         {dict.hero.ctaPrimary}
         <Icon name="arrow-right" size={16} />
       </Button>
-      <Button href={ghUrl} variant="outline" size="lg">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.52 2.87 8.36 6.85 9.71.5.1.68-.22.68-.48v-1.7c-2.78.62-3.37-1.37-3.37-1.37-.46-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.57 2.34 1.12 2.91.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.74-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.04A9.42 9.42 0 0 1 12 7.1c.85 0 1.7.12 2.5.34 1.9-1.32 2.74-1.04 2.74-1.04.55 1.4.2 2.44.1 2.7.64.71 1.03 1.62 1.03 2.74 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9v2.81c0 .26.18.59.69.48A10.03 10.03 0 0 0 22 12.25C22 6.58 17.52 2 12 2z" />
-        </svg>
+      <Button href={installPath} size="lg" variant="outline">
         {dict.hero.ctaSecondary}
       </Button>
     </div>
 
-    <p class="mt-8 text-[12px] uppercase tracking-wider text-[var(--color-text-subtle)]">
+    <a
+      href={ghUrl}
+      target="_blank"
+      rel="noopener"
+      class="mt-6 inline-flex items-center gap-2 rounded-[var(--radius-pill)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)]/70 px-3 py-1.5 text-[12px] font-medium text-[var(--color-text-muted)] backdrop-blur transition-colors hover:border-[var(--color-border)] hover:text-[var(--color-text)]"
+    >
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.52 2.87 8.36 6.85 9.71.5.1.68-.22.68-.48v-1.7c-2.78.62-3.37-1.37-3.37-1.37-.46-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.57 2.34 1.12 2.91.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.74-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.04A9.42 9.42 0 0 1 12 7.1c.85 0 1.7.12 2.5.34 1.9-1.32 2.74-1.04 2.74-1.04.55 1.4.2 2.44.1 2.7.64.71 1.03 1.62 1.03 2.74 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9v2.81c0 .26.18.59.69.48A10.03 10.03 0 0 0 22 12.25C22 6.58 17.52 2 12 2z" />
+      </svg>
+      {dict.hero.ghPill}
+    </a>
+
+    <p class="mt-6 text-[12px] uppercase tracking-wider text-[var(--color-text-subtle)]">
       {dict.hero.trustPre}<a href="https://www.dentaltix.com" target="_blank" rel="noopener" class="underline decoration-dotted underline-offset-4 hover:text-[var(--color-primary)]">Dentaltix</a>{dict.hero.trustPost}
     </p>
   </div>
 
-  <!-- Product screenshot — placeholder until user provides home.png -->
-  <div class="relative mx-auto max-w-6xl px-6 pb-4 sm:px-8">
-    <ScreenshotPlaceholder file="home.png" alt="Dentalpin dashboard" aspect="16 / 10" />
+  <!-- Three-viewport mosaic. Phone + tablet overlap a desktop frame. -->
+  <div class="relative mx-auto max-w-6xl px-6 pb-8 sm:px-8" data-hero-mosaic>
+    <div class="relative mx-auto aspect-[16/10] w-full max-w-5xl">
+      <!-- Desktop frame (back) -->
+      <figure
+        class="hero-mosaic-item absolute inset-0 flex flex-col overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-md)]"
+        style="--delay: 0ms"
+      >
+        <div class="flex flex-none items-center gap-1.5 border-b border-[var(--color-border-subtle)] bg-[var(--color-surface-muted)] px-4 py-2.5">
+          <span class="h-2.5 w-2.5 rounded-full bg-[#ff5f57]"></span>
+          <span class="h-2.5 w-2.5 rounded-full bg-[#febc2e]"></span>
+          <span class="h-2.5 w-2.5 rounded-full bg-[#28c840]"></span>
+        </div>
+        <div class="relative min-h-0 flex-1">
+          <img
+            src="/screenshots/home.png"
+            alt={locale === 'es' ? 'Panel principal de Dentalpin' : 'Dentalpin dashboard'}
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+            class="absolute inset-0 block h-full w-full object-cover object-top"
+          />
+        </div>
+      </figure>
+
+      <!-- Tablet (mid, bottom-left) -->
+      <figure
+        class="hero-mosaic-item absolute bottom-[-6%] left-[3%] hidden w-[34%] overflow-hidden rounded-[var(--radius-lg)] border-[1.5px] border-[var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-md)] sm:block"
+        style="--delay: 180ms"
+      >
+        <img
+          src="/screenshots/dental-chart.png"
+          alt={locale === 'es' ? 'Odontograma en tablet' : 'Odontogram on tablet'}
+          loading="lazy"
+          decoding="async"
+          class="block h-full w-full object-cover"
+          style="aspect-ratio: 4 / 3"
+        />
+      </figure>
+
+      <!-- Phone (front, bottom-right) -->
+      <figure
+        class="hero-mosaic-item absolute bottom-[-12%] right-[4%] w-[22%] overflow-hidden rounded-[1.4rem] border-[2px] border-[var(--color-border-strong)] bg-[var(--color-surface)] shadow-[var(--shadow-lg)] sm:w-[18%]"
+        style="--delay: 360ms"
+      >
+        <img
+          src="/screenshots/schedule-day.png"
+          alt={locale === 'es' ? 'Agenda en móvil' : 'Calendar on mobile'}
+          loading="lazy"
+          decoding="async"
+          class="block h-full w-full object-cover object-top"
+          style="aspect-ratio: 9 / 16"
+        />
+      </figure>
+    </div>
   </div>
 </section>
+
+<style>
+  .hero-mosaic-item {
+    opacity: 0;
+    transform: translateY(8px);
+    animation: hero-mosaic-in var(--motion-duration-lg, 420ms) var(--motion-easing, cubic-bezier(0.2, 0, 0.2, 1)) var(--delay, 0ms) forwards;
+  }
+  @keyframes hero-mosaic-in {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-mosaic-item {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style>

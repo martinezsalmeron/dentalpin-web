@@ -1,0 +1,133 @@
+---
+import { useDict, type Locale } from '~/i18n';
+import Section from '@dentalpin/ui/Section.astro';
+import ModuleIcon from './infographics/ModuleIcon.astro';
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const dict = useDict(locale);
+const m = dict.liveModules;
+const defaultOptionalCount = m.optional.filter((o: any) => o.defaultOn && !o.soon).length;
+---
+
+<Section id="modules" padY="md">
+  <div class="max-w-2xl">
+    <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">
+      {m.eyebrow}
+    </p>
+    <h2 class="text-marketing-h1 mt-3 text-[var(--color-text)]">
+      {m.title}
+    </h2>
+    <p class="mt-4 text-[15px] text-[var(--color-text-muted)]">
+      {m.lead}
+    </p>
+  </div>
+
+  <div
+    class="mt-12 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-sm)]"
+    data-modules-root
+  >
+    <!-- Core zone -->
+    <div class="border-b border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-6 sm:p-8">
+      <div class="flex flex-wrap items-baseline gap-x-4 gap-y-2">
+        <span class="inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--color-primary)]">
+          <span class="h-1.5 w-1.5 rounded-full bg-[var(--color-primary)]"></span>
+          {m.coreLabel}
+        </span>
+        <p class="text-[13px] text-[var(--color-text-muted)]">{m.coreSubtitle}</p>
+      </div>
+
+      <ul class="mt-5 grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-7">
+        {m.core.map((mod: any) => (
+          <li class="flex items-center gap-2.5 rounded-[var(--radius-md)] border border-[var(--color-primary)] bg-[var(--color-primary-soft)] px-3 py-2.5">
+            <span class="flex h-7 w-7 flex-none items-center justify-center rounded-[var(--radius-sm)] bg-[var(--color-surface)] text-[var(--color-primary)]">
+              <ModuleIcon name={mod.icon} size={15} />
+            </span>
+            <span class="truncate text-[13px] font-semibold text-[var(--color-primary-soft-text)]">
+              {mod.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- Optional zone -->
+    <div class="bg-[var(--color-surface-muted)] p-6 sm:p-8">
+      <div class="flex flex-wrap items-baseline gap-x-4 gap-y-2">
+        <span class="inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--color-text-muted)]">
+          <span class="h-1.5 w-1.5 rounded-full bg-[var(--color-text-muted)]"></span>
+          {m.optionalLabel}
+        </span>
+        <p class="text-[13px] text-[var(--color-text-muted)]">{m.optionalSubtitle}</p>
+      </div>
+
+      <ul class="mt-5 grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
+        {m.optional.map((mod: any) => (
+          <li>
+            <button
+              type="button"
+              role="switch"
+              aria-checked={mod.defaultOn && !mod.soon ? 'true' : 'false'}
+              data-module-toggle
+              data-soon={mod.soon ? 'true' : 'false'}
+              class="group flex w-full items-center gap-3 rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-surface)] px-3.5 py-3 text-left transition-all hover:border-[var(--color-border-strong)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-surface-muted)] aria-checked:border-[var(--color-primary)] aria-checked:bg-[var(--color-primary-soft)]"
+            >
+              <span class="flex h-8 w-8 flex-none items-center justify-center rounded-[var(--radius-sm)] bg-[var(--color-surface-muted)] text-[var(--color-text-muted)] group-aria-checked:bg-[var(--color-surface)] group-aria-checked:text-[var(--color-primary)]">
+                <ModuleIcon name={mod.icon} size={16} />
+              </span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-[13.5px] font-semibold text-[var(--color-text)]">
+                  {mod.name}
+                </span>
+                {mod.soon && (
+                  <span class="mt-0.5 inline-block rounded-[var(--radius-pill)] bg-[var(--color-surface-muted)] px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-[var(--color-text-subtle)]">
+                    {m.soonBadge}
+                  </span>
+                )}
+              </span>
+              <span aria-hidden="true" class="relative inline-flex h-5 w-9 flex-none items-center rounded-full bg-[var(--color-border-strong)] transition-colors group-aria-checked:bg-[var(--color-primary)]">
+                <span class="ml-0.5 h-4 w-4 rounded-full shadow-[var(--shadow-xs)] transition-transform group-aria-checked:translate-x-4" style="background:#fff"></span>
+              </span>
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- Live summary -->
+    <div class="border-t border-[var(--color-border-subtle)] bg-[var(--color-surface)] px-6 py-5 sm:px-8">
+      <p class="text-[14.5px] text-[var(--color-text)]" aria-live="polite">
+        <span class="font-semibold">{m.summaryPrefix}</span>{' '}
+        <span class="font-mono tabular-nums">{m.core.length}</span> {m.summaryCoreLabel} +{' '}
+        <span class="font-mono tabular-nums" data-modules-optional-count>{defaultOptionalCount}</span>{' '}
+        {m.summaryOptionalLabel}.{' '}
+        <span class="font-semibold text-[var(--color-primary)]">{m.summaryPrice}</span>.
+      </p>
+    </div>
+  </div>
+
+  <p class="mt-6 max-w-3xl text-[13.5px] leading-[1.6] text-[var(--color-text-muted)]">
+    {m.caption}
+  </p>
+</Section>
+
+<script>
+  const root = document.querySelector('[data-modules-root]');
+  if (root) {
+    const toggles = root.querySelectorAll<HTMLButtonElement>('[data-module-toggle]');
+    const counter = root.querySelector<HTMLElement>('[data-modules-optional-count]');
+    const update = () => {
+      if (!counter) return;
+      const n = root.querySelectorAll('[data-module-toggle][aria-checked="true"]').length;
+      counter.textContent = String(n);
+    };
+    toggles.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const next = btn.getAttribute('aria-checked') === 'true' ? 'false' : 'true';
+        btn.setAttribute('aria-checked', next);
+        update();
+      });
+    });
+    update();
+  }
+</script>

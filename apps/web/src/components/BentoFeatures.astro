@@ -9,17 +9,21 @@ const { locale } = Astro.props;
 const dict = useDict(locale);
 
 // Six flagship modules for the bento, in an asymmetric layout.
-// Feature card = odontograma (8 cols), flanked by smaller ones.
+// Featured card = agenda (the panoramic, dashboard-like view); the
+// odontograma already has its own visual moment in DayInClinic and the
+// pillars, so we lead the bento with the calendar/dashboard instead.
 const FEATURED = [
-  { slug: 'odontograma', colClass: 'lg:col-span-8 lg:row-span-2', featured: true },
-  { slug: 'agenda', colClass: 'lg:col-span-4' },
-  { slug: 'plan-tratamiento', colClass: 'lg:col-span-4' },
-  { slug: 'presupuestos', colClass: 'lg:col-span-4' },
+  { slug: 'agenda', colClass: 'lg:col-span-8 lg:row-span-2', featured: true, screenshot: '/screenshots/schedule-week.png' },
+  { slug: 'odontograma', colClass: 'lg:col-span-4' },
   { slug: 'pacientes', colClass: 'lg:col-span-4' },
+  { slug: 'presupuestos', colClass: 'lg:col-span-4' },
+  { slug: 'plan-tratamiento', colClass: 'lg:col-span-4' },
   { slug: 'reportes', colClass: 'lg:col-span-4' },
 ].map((item) => ({ ...item, mod: moduleBySlug(item.slug)! }));
 
 const ctaLabel = locale === 'es' ? 'Ver módulo' : 'Open module';
+const ctaAll = (dict.bento as any).ctaAll ?? (locale === 'es' ? 'Ver todos los módulos' : 'See every module');
+const featuresHref = pagePath(locale, 'features');
 ---
 
 <Section id="features" padY="xs">
@@ -71,7 +75,7 @@ const ctaLabel = locale === 'es' ? 'Ver módulo' : 'Open module';
           {featured && (
             <figure class="mt-6 flex-1 overflow-hidden rounded-[var(--radius-lg)] border border-[var(--color-border-subtle)] bg-[var(--color-surface-muted)] shadow-[var(--shadow-sm)]">
               <img
-                src="/screenshots/dental-chart.png"
+                src={(FEATURED.find((f) => f.featured)?.screenshot) ?? '/screenshots/home.png'}
                 alt={mod.title[locale]}
                 loading="lazy"
                 decoding="async"
@@ -83,4 +87,14 @@ const ctaLabel = locale === 'es' ? 'Ver módulo' : 'Open module';
       </li>
     ))}
   </ul>
+
+  <div class="mt-10 flex justify-center">
+    <a
+      href={featuresHref}
+      class="inline-flex items-center gap-2 rounded-[var(--radius-pill)] border border-[var(--color-border)] bg-[var(--color-surface)] px-5 py-2.5 text-[14px] font-semibold text-[var(--color-text)] transition-colors hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
+    >
+      {ctaAll}
+      <Icon name="arrow-right" size={14} />
+    </a>
+  </div>
 </Section>
