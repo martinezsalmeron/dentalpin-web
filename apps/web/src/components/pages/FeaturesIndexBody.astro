@@ -166,11 +166,19 @@ const totalModules = MODULES.length;
                   <span class="inline-flex h-11 w-11 items-center justify-center rounded-[var(--radius-md)] bg-gradient-to-br from-[var(--color-primary-soft)] to-[var(--color-surface-muted)] text-[var(--color-primary-soft-text)] ring-1 ring-[var(--color-border-subtle)]">
                     <Icon name={mod.icon} size={20} />
                   </span>
-                  {mod.status === 'roadmap' && (
-                    <span class="inline-flex rounded-[var(--radius-pill)] bg-[var(--color-warning-soft)] px-2 py-0.5 text-[11px] font-medium text-[var(--color-warning-text)]">
-                      {dict.featurePage.statusRoadmap}
-                    </span>
-                  )}
+                  <div class="flex items-center gap-1.5">
+                    {mod.country === 'ES' && (
+                      <span class="inline-flex items-center gap-1 rounded-[var(--radius-pill)] border border-[var(--color-border-subtle)] bg-[var(--color-surface-muted)] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--color-text-muted)]">
+                        <span aria-hidden="true">🇪🇸</span>
+                        ES
+                      </span>
+                    )}
+                    {mod.status === 'roadmap' && (
+                      <span class="inline-flex rounded-[var(--radius-pill)] bg-[var(--color-warning-soft)] px-2 py-0.5 text-[11px] font-medium text-[var(--color-warning-text)]">
+                        {dict.featurePage.statusRoadmap}
+                      </span>
+                    )}
+                  </div>
                 </div>
                 <div class="flex-1">
                   <h3 class="text-[17px] font-semibold tracking-tight text-[var(--color-text)]">

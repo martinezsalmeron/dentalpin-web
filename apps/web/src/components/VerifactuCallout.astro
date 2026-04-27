@@ -1,0 +1,84 @@
+---
+import { useDict, pagePath, type Locale } from '~/i18n';
+import Section from '@dentalpin/ui/Section.astro';
+import Icon from '@dentalpin/ui/Icon.astro';
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const dict = useDict(locale);
+const v = (dict as any).verifactuPage;
+const verifactuHref = pagePath(locale, 'features', 'verifactu');
+---
+
+<Section padY="md">
+  <a
+    href={verifactuHref}
+    class="group relative block overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-sm)] transition-all hover:-translate-y-0.5 hover:border-[var(--color-primary)]/40 hover:shadow-[var(--shadow-md)]"
+  >
+    <!-- Decorative ES flag stripe -->
+    <span aria-hidden="true" class="absolute inset-x-0 top-0 grid h-1 grid-cols-3">
+      <span class="bg-[#aa151b]"></span>
+      <span class="bg-[#f1bf00]"></span>
+      <span class="bg-[#aa151b]"></span>
+    </span>
+
+    <div class="grid gap-6 p-6 sm:p-8 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] lg:items-center lg:gap-10 lg:p-10">
+      <div>
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="inline-flex items-center gap-1.5 rounded-[var(--radius-pill)] border border-[var(--color-border)] bg-[var(--color-surface)] px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--color-primary)]">
+            <span class="h-1.5 w-1.5 rounded-full bg-[var(--color-primary)]"></span>
+            {v.callout.eyebrow}
+          </span>
+          <span class="inline-flex items-center gap-1.5 rounded-[var(--radius-pill)] border border-[var(--color-border-subtle)] bg-[var(--color-surface-muted)] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--color-text-muted)]">
+            <span aria-hidden="true">🇪🇸</span>
+            {v.esBadge}
+          </span>
+        </div>
+
+        <h2 class="text-marketing-h2 mt-5 max-w-2xl text-[var(--color-text)]">
+          {v.callout.title}
+        </h2>
+        <p class="mt-4 max-w-2xl text-[15px] leading-[1.6] text-[var(--color-text-muted)]">
+          {v.callout.body}
+        </p>
+
+        <span class="mt-6 inline-flex items-center gap-1.5 text-[14px] font-semibold text-[var(--color-primary)] transition-transform group-hover:translate-x-0.5">
+          {v.callout.cta}
+          <Icon name="arrow-right" size={14} />
+        </span>
+      </div>
+
+      <div class="rounded-[var(--radius-xl)] border border-[var(--color-border-subtle)] bg-gradient-to-br from-[var(--color-primary-soft)] via-[var(--color-surface)] to-[var(--color-surface)] p-5">
+        <p class="text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--color-primary)]">
+          {v.deadlineHero.label}
+        </p>
+        <p class="mt-2 font-mono text-[clamp(1.4rem,1.6vw+0.8rem,2rem)] font-bold leading-none tracking-tight text-[var(--color-text)]">
+          {v.deadlineHero.main}
+        </p>
+        <p class="mt-2 text-[13px] font-semibold text-[var(--color-text)]">{v.deadlineHero.sub}</p>
+        <p class="mt-1 text-[12.5px] text-[var(--color-text-muted)]">{v.deadlineHero.secondary}</p>
+
+        <ul class="mt-5 grid gap-2 border-t border-[var(--color-border-subtle)] pt-4 text-[12.5px] text-[var(--color-text)]">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 inline-flex h-4 w-4 flex-none items-center justify-center rounded-full bg-[var(--color-primary-soft)] text-[var(--color-primary-soft-text)]">
+              <Icon name="check" size={10} />
+            </span>
+            <span>{locale === 'es' ? 'Cadena SHA-256 + envío SOAP a la AEAT' : 'SHA-256 chain + SOAP submission to AEAT'}</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 inline-flex h-4 w-4 flex-none items-center justify-center rounded-full bg-[var(--color-primary-soft)] text-[var(--color-primary-soft-text)]">
+              <Icon name="check" size={10} />
+            </span>
+            <span>{locale === 'es' ? 'Certificado FNMT cifrado · QR tributario en el PDF' : 'Encrypted FNMT certificate · tax QR on the PDF'}</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 inline-flex h-4 w-4 flex-none items-center justify-center rounded-full bg-[var(--color-primary-soft)] text-[var(--color-primary-soft-text)]">
+              <Icon name="check" size={10} />
+            </span>
+            <span>{locale === 'es' ? 'Activable y desactivable. Solo si tu clínica está en España.' : 'Install / uninstall on demand. Only for clinics in Spain.'}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </a>
+</Section>

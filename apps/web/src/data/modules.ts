@@ -29,6 +29,10 @@ export interface ModuleEntry {
   screenshot: string;
   extraScreenshots?: { file: string; caption: { es: string; en: string } }[];
   status?: 'stable' | 'roadmap';
+  /** ISO-3166 country code for country-locked modules (renders an "ES" badge etc). */
+  country?: 'ES';
+  /** Set to true for modules that ship a custom feature page instead of the generic body. */
+  customPage?: boolean;
 }
 
 export const MODULES: ModuleEntry[] = [
@@ -355,6 +359,75 @@ export const MODULES: ModuleEntry[] = [
       },
     ],
     screenshot: 'invoices.png',
+  },
+  {
+    slug: 'verifactu',
+    slugEn: 'verifactu',
+    domain: 'operations',
+    icon: 'shield',
+    country: 'ES',
+    customPage: true,
+    title: { es: 'Verifactu', en: 'Verifactu' },
+    tagline: {
+      es: 'Cumple Veri*Factu sin tocar tu flujo de facturación. Solo para clínicas en España.',
+      en: 'Comply with Spain\u2019s Veri*Factu without touching your invoicing flow. Spain only.',
+    },
+    description: {
+      es: 'Módulo opcional pensado exclusivamente para clínicas en España. Firma cada factura, encadena registros con SHA-256, los envía a la AEAT por SOAP con tu certificado FNMT y embebe el QR tributario en el PDF. Cumple RD 1007/2023 y la Orden HAC/1177/2024 desde el primer día.',
+      en: 'Optional module built exclusively for clinics operating in Spain. Signs every invoice, chains records with SHA-256, submits them to AEAT over SOAP with your FNMT certificate and embeds the tax QR in the PDF. RD 1007/2023 and Orden HAC/1177/2024 compliant from day one.',
+    },
+    features: [
+      {
+        es: 'Cadena SHA-256 firmada: cada factura enlaza con la anterior, libro fiscal append-only.',
+        en: 'Signed SHA-256 chain: each invoice links to the previous one, append-only fiscal ledger.',
+      },
+      {
+        es: 'Envío SOAP a AEAT con tu certificado FNMT vía mTLS.',
+        en: 'SOAP submission to AEAT with your FNMT certificate over mTLS.',
+      },
+      {
+        es: 'QR tributario embebido en el PDF (verificación pública en sede electrónica).',
+        en: 'Tax QR embedded in the invoice PDF (public verification on AEAT\u2019s portal).',
+      },
+      {
+        es: 'Worker periódico cada 60 s con reintentos y back-pressure según `TiempoEsperaEnvio`.',
+        en: 'Periodic worker every 60 s with retries and back-pressure honouring `TiempoEsperaEnvio`.',
+      },
+      {
+        es: 'Cola de subsanación con motivo de rechazo y reenvío `Subsanacion=S`.',
+        en: 'Resubmission queue with rejection reason and `Subsanacion=S` retry.',
+      },
+      {
+        es: 'Mapeo de IVA a clasificaciones AEAT (S1, E1\u2013E6, N1, N2) por clínica.',
+        en: 'Per-clinic VAT mapping to AEAT classifications (S1, E1\u2013E6, N1, N2).',
+      },
+      {
+        es: 'Asistente de productor SIF con declaración responsable firmada electrónicamente.',
+        en: 'SIF producer wizard with electronically-signed declaración responsable.',
+      },
+      {
+        es: 'Almacén cifrado del PFX y la contraseña con Fernet.',
+        en: 'Encrypted PFX and password vault using Fernet.',
+      },
+      {
+        es: 'Banner de caducidad del certificado: verde >60 d, ámbar 15\u201360 d, rojo <15 d.',
+        en: 'Certificate expiry banner: green >60 d, amber 15\u201360 d, red <15 d.',
+      },
+      {
+        es: 'Entornos prueba (preproducción AEAT) y real intercambiables sin redeploy.',
+        en: 'Test (AEAT pre-production) and real environments switched live, no redeploy.',
+      },
+      {
+        es: 'Soporte F1, F2, F3, R1\u2013R5 y anulaciones.',
+        en: 'Support for F1, F2, F3, R1\u2013R5 invoices and anulaciones.',
+      },
+      {
+        es: 'Retención legal a 4 a\u00f1os garantizada en el modelo de datos.',
+        en: 'Four-year legal retention enforced in the data model.',
+      },
+    ],
+    screenshot: 'verifactu-dashboard.png',
+    status: 'stable',
   },
   {
     slug: 'reportes',

@@ -103,7 +103,7 @@
       { "name": "Recordatorios automáticos", "icon": "bell", "soon": false, "defaultOn": true },
       { "name": "Portal del paciente", "icon": "globe", "soon": false, "defaultOn": false },
       { "name": "Multi-clínica", "icon": "building", "soon": false, "defaultOn": false },
-      { "name": "Verifactu", "icon": "shield", "soon": true, "defaultOn": false },
+      { "name": "Verifactu", "icon": "shield", "soon": false, "defaultOn": false, "country": "ES" },
       { "name": "WhatsApp Business", "icon": "message", "soon": true, "defaultOn": false },
       { "name": "Asistente de IA", "icon": "sparkles", "soon": true, "defaultOn": false }
     ],
@@ -719,6 +719,291 @@
       "clinical": "Lo que tu equipo clínico toca cada día.",
       "operations": "Lo que mantiene la clínica funcionando como un negocio.",
       "platform": "La base sobre la que todo se monta y se extiende."
+    }
+  },
+  "verifactuPage": {
+    "meta": {
+      "title": "Verifactu para clínicas dentales · Dentalpin",
+      "description": "Módulo opcional para España: cumple Veri*Factu (RD 1007/2023, Orden HAC/1177/2024) sin cambiar tu flujo de facturación. Activación obligatoria desde enero de 2027."
+    },
+    "esBadge": "España",
+    "moduleBadge": "MÓDULO OPCIONAL · ES",
+    "title": "Verifactu, listo para 2027.",
+    "tagline": "El módulo que cumple Veri*Factu sin que tu equipo lo note.",
+    "lead": "A partir del 1 de enero de 2027, cualquier clínica en España que emita una factura tendrá que enviarla a la AEAT en tiempo real. Verifactu lo hace por ti, sin cambiar la forma en que facturas hoy. Activas el módulo, configuras una vez y olvídate.",
+    "ctaDemo": "Probar la demo",
+    "ctaDocs": "Leer la documentación",
+    "ctaContact": "Hablar con nosotros",
+    "factsTitle": "En resumen",
+    "facts": [
+      { "label": "País", "value": "España" },
+      { "label": "Estado", "value": "Disponible" },
+      { "label": "Modo", "value": "Opcional · activable" },
+      { "label": "Cumplimiento", "value": "RD 1007/2023" },
+      { "label": "Licencia", "value": "BSL 1.1" }
+    ],
+    "deadlineHero": {
+      "label": "OBLIGATORIO",
+      "main": "01 ENE 2027",
+      "sub": "Sociedades (IS)",
+      "secondary": "01 jul 2027 · Autónomos / IRPF",
+      "footnote": "Fase voluntaria abierta desde 2026 sin sanciones por errores técnicos."
+    },
+    "what": {
+      "eyebrow": "QUÉ ES VERI*FACTU",
+      "title": "Una obligación legal nueva. Una pieza del software que la resuelve.",
+      "body": "Veri*Factu es el sistema de la AEAT que obliga a todo software de facturación en España (los SIF) a registrar cada factura emitida en una cadena firmada y enviarla a Hacienda en tiempo casi real. Quien factura tiene que cumplirlo. Quien fabrica el software tiene que adaptarlo. Dentalpin lo trae de serie como módulo opcional, listo para que tu clínica lo encienda cuando quiera.",
+      "items": [
+        {
+          "title": "Cadena de huellas SHA-256",
+          "body": "Cada factura genera un registro encadenado con la anterior. La cadena se vuelve un libro fiscal append-only que ningún operador puede manipular sin romper el hash."
+        },
+        {
+          "title": "Envío firmado a la AEAT",
+          "body": "Tu certificado FNMT firma cada envío SOAP por mTLS. Pre-producción y producción reales se conmutan con un clic, sin redeploy."
+        },
+        {
+          "title": "QR verificable en el PDF",
+          "body": "Cada factura sale con un QR que cualquier paciente puede escanear y validar en la sede electrónica de la AEAT."
+        }
+      ]
+    },
+    "timeline": {
+      "eyebrow": "FECHAS CLAVE",
+      "title": "Lo que tu clínica tiene que tener listo, y para cuándo.",
+      "body": "La transición a Veri*Factu no es un evento, es un calendario. Estas son las fechas que importan.",
+      "items": [
+        {
+          "date": "29 jul 2025",
+          "label": "Cumplido",
+          "title": "Los fabricantes de software (SIF) entran en modo voluntario.",
+          "body": "Dentalpin ya integra el envío real a preproducción AEAT desde esta fecha."
+        },
+        {
+          "date": "Durante 2026",
+          "label": "Ahora",
+          "title": "Fase voluntaria sin sanciones por errores técnicos.",
+          "body": "El momento ideal para activar Verifactu, probarlo en preproducción y dejar tu cadena lista."
+        },
+        {
+          "date": "01 ene 2027",
+          "label": "Obligatorio",
+          "title": "Sociedades (Impuesto sobre Sociedades): obligatorio.",
+          "body": "Cualquier clínica que tribute por IS debe enviar sus facturas a la AEAT desde el primer día del año."
+        },
+        {
+          "date": "01 jul 2027",
+          "label": "Obligatorio",
+          "title": "Autónomos, IRPF y resto: obligatorio.",
+          "body": "El resto de obligados entra en vigor seis meses después. Antes de esa fecha, tu clínica debería tener Verifactu funcionando con un certificado real."
+        }
+      ]
+    },
+    "flow": {
+      "eyebrow": "CÓMO FUNCIONA",
+      "title": "Pasa por debajo de la facturación. Sin tocar tu flujo.",
+      "body": "Tu equipo factura como siempre. Verifactu se activa solo en el momento de emitir y deja la factura conforme a Hacienda antes de que termines de imprimirla.",
+      "steps": [
+        {
+          "n": "01",
+          "title": "Emites la factura",
+          "body": "Pulsas \"Emitir\" en Dentalpin. El módulo construye el registro RegistroAlta con los campos AEAT obligatorios."
+        },
+        {
+          "n": "02",
+          "title": "Calcula la huella",
+          "body": "SHA-256 que enlaza esta factura con la anterior. El registro entra en la cadena en estado pendiente."
+        },
+        {
+          "n": "03",
+          "title": "Devuelve QR + huella",
+          "body": "Antes de imprimir el PDF, Verifactu devuelve la huella, la URL del QR tributario y el tipo de factura. Tu PDF sale conforme."
+        },
+        {
+          "n": "04",
+          "title": "Worker envía a la AEAT",
+          "body": "Cada 60 s un worker drena los registros pendientes, firma la trama SOAP con tu certificado FNMT por mTLS y la envía en lotes hasta 1 000."
+        },
+        {
+          "n": "05",
+          "title": "AEAT responde",
+          "body": "El módulo parsea la respuesta, actualiza el estado (Correcto, AceptadoConErrores, Incorrecto) y guarda el CSV de la AEAT en el registro."
+        }
+      ]
+    },
+    "setup": {
+      "eyebrow": "ACTIVACIÓN",
+      "title": "Cinco pasos guiados. Una sola vez.",
+      "body": "El módulo trae un panel de checklist en el backoffice. Cada paso muestra su estado en verde, ámbar o rojo y bloquea la activación hasta que todo está listo.",
+      "steps": [
+        {
+          "title": "Identidad de la clínica",
+          "body": "CIF/NIF y razón social. Verifactu lo lee desde la ficha de clínica para no duplicar datos fiscales en distintos sitios."
+        },
+        {
+          "title": "Certificado digital FNMT",
+          "body": "Subes tu .pfx con la contraseña. Se guarda cifrado con Fernet. La UI muestra caducidad y avisa cuando se acerca el vencimiento."
+        },
+        {
+          "title": "Productor del SIF",
+          "body": "Asistente con declaración responsable firmada electrónicamente. Después puedes descargar el PDF firmado para tu archivo o para entregarlo a la AEAT en una inspección."
+        },
+        {
+          "title": "Mapeo de IVA a AEAT",
+          "body": "Cada tipo de IVA del catálogo se enlaza con su clasificación AEAT (S1 sujeto, E1 exento sanitario, N1 no sujeta…). El módulo siembra E1 por defecto en los tipos al 0 % (servicios sanitarios)."
+        },
+        {
+          "title": "Activar el módulo",
+          "body": "Cuando los cuatro pasos están en verde, el botón \"Activar Verifactu\" se enciende. Empiezas en pruebas (preproducción AEAT) y pasas a producción cuando estés listo."
+        }
+      ]
+    },
+    "compare": {
+      "eyebrow": "ENTORNOS",
+      "title": "Pruebas y producción real, intercambiables.",
+      "body": "El mismo módulo, dos endpoints. Cambias con un clic. Sin migrar datos, sin reinstalar nada.",
+      "rows": [
+        { "attr": "Endpoint AEAT", "test": "prewww1.aeat.es", "prod": "www1.agenciatributaria.gob.es" },
+        { "attr": "Efecto fiscal", "test": "Ninguno", "prod": "Real" },
+        { "attr": "Certificados aceptados", "test": "FNMT real o cert. test AEAT", "prod": "Solo FNMT real" },
+        { "attr": "QR del PDF", "test": "Apunta a preproducción", "prod": "Apunta a sede AEAT" },
+        { "attr": "Cadena de huellas", "test": "Misma lógica que producción", "prod": "Misma lógica que pruebas" }
+      ],
+      "footnote": "Switching `prod → test` no rompe la cadena local (es global por NIF), pero la AEAT verá un hueco en el entorno que dejes."
+    },
+    "datamodel": {
+      "eyebrow": "DATOS",
+      "title": "Cuatro tablas. Cero columnas tocadas en el resto del sistema.",
+      "body": "Verifactu vive en su propio espacio. Lee de clínicas y catálogo, pero nunca añade columnas. Si lo desinstalas (y no tienes registros aceptados), vuelves al estado anterior sin huella.",
+      "tables": [
+        {
+          "name": "verifactu_settings",
+          "what": "Una fila por clínica. Estado, entorno, NIF productor, cabeza de cadena, ventanas de envío."
+        },
+        {
+          "name": "verifactu_certificates",
+          "what": "Almacén cifrado del PFX y la contraseña con Fernet. Subject CN, NIF titular y fechas de validez para el banner."
+        },
+        {
+          "name": "verifactu_records",
+          "what": "Libro fiscal append-only. XML verbatim, huella, huella anterior, estado AEAT y CSV de respuesta. Retenido 4 años por LGT."
+        },
+        {
+          "name": "verifactu_vat_classifications",
+          "what": "Mapeo S1/E1\u2013E6/N1/N2 por tipo de IVA y clínica. Mantiene el catálogo de Dentalpin agnóstico de país."
+        }
+      ]
+    },
+    "isolation": {
+      "eyebrow": "ARQUITECTURA",
+      "title": "Un módulo de país. No una rama del producto.",
+      "body": "Dentalpin es software internacional. Veri*Factu es España. La frontera es nítida: el módulo enchufa en `BillingHookRegistry` solo cuando `clinic.settings.country == \"ES\"`, no toca tablas de billing ni de catálogo y desaparece sin secuelas si lo desinstalas.",
+      "items": [
+        {
+          "title": "Modular y opcional",
+          "body": "No se instala por defecto. Las clínicas fuera de España no ven una sola pantalla extra; las españolas lo activan desde Admin → Módulos."
+        },
+        {
+          "title": "Aislado por diseño",
+          "body": "Todas sus tablas viven con prefijo `verifactu_*`. Ninguna columna fiscal española entra en el core; ningún módulo del core habla AEAT."
+        },
+        {
+          "title": "Reusable como patrón",
+          "body": "Mañana llega `factur-x-fr` para Francia o `sdi-it` para Italia con la misma forma. Cada país, su propia complejidad."
+        }
+      ]
+    },
+    "queue": {
+      "eyebrow": "OPERACIÓN DIARIA",
+      "title": "Cuando algo va mal, lo ves donde tiene que estar.",
+      "body": "Si la AEAT rechaza un envío o la red falla, el problema aparece en la cola y se reintenta solo. Tú ves los códigos reales con su descripción legal, no genéricos.",
+      "tabs": [
+        {
+          "key": "pending",
+          "label": "Pendientes",
+          "body": "Registros en estado pending o sending. El worker los procesa cada 60 segundos."
+        },
+        {
+          "key": "rejected",
+          "label": "Rechazados",
+          "body": "Rechazo de negocio AEAT (Incorrecto). Se muestra el código exacto, descripción y un botón \"Reintentar (Subsanación)\" que reenvía con `Subsanacion=S` y `RechazoPrevio=X`."
+        },
+        {
+          "key": "transient",
+          "label": "Errores temporales",
+          "body": "Fallos de transporte o caídas de la AEAT. El worker reintenta solo con back-off exponencial."
+        }
+      ]
+    },
+    "penalties": {
+      "eyebrow": "POR QUÉ IMPORTA",
+      "title": "El precio de no estar listo en enero de 2027.",
+      "body": "La Ley General Tributaria (LGT 201 bis) regula la responsabilidad por usar SIF que no cumplan. Los importes pueden ir hasta 50 000 \u20ac por ejercicio. Para una clínica que factura todos los días, no usar Verifactu (o equivalente) deja de ser una opción.",
+      "items": [
+        {
+          "title": "Para tu clínica",
+          "body": "Multa por uso de software no homologado. Riesgo continuado mientras siga emitiendo facturas no conformes."
+        },
+        {
+          "title": "Para tu gestoría",
+          "body": "Inspecciones más exigentes y trazabilidad obligatoria de cada factura. Veri*Factu reduce el papel de las gestorías a revisión, no a captura."
+        },
+        {
+          "title": "Para tu paciente",
+          "body": "El QR de la factura le permite verificar que su gasto está en la AEAT, requisito habitual para reembolsos sanitarios."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "items": [
+        {
+          "q": "¿Tengo que activarlo ya?",
+          "a": "No. Si tu clínica tributa por Sociedades, la fecha límite es el 1 de enero de 2027. Si tributas por IRPF (autónomos), tienes hasta el 1 de julio de 2027. Mientras tanto estás en fase voluntaria, sin sanciones por errores técnicos. Es el mejor momento para activarlo y dejarlo rodado en preproducción."
+        },
+        {
+          "q": "¿Funciona si mi clínica está fuera de España?",
+          "a": "El módulo es España exclusivamente. Si tu clínica no factura en España, ni lo veas: no se instala por defecto. Para Francia y otros países, prevemos módulos hermanos (factur-x, SDI…) que enchufan exactamente igual."
+        },
+        {
+          "q": "¿Qué necesito para empezar?",
+          "a": "Tres cosas: (1) tu CIF/NIF en la ficha de clínica, (2) un certificado FNMT válido (Representante de Persona Jurídica, Persona Física o Sello de Empresa) y (3) decidir quién firma la declaración responsable de productor (la SaaS, tu integrador o tu clínica si te autoalojas)."
+        },
+        {
+          "q": "¿Y si tengo facturas anteriores a la activación?",
+          "a": "No entran a Verifactu retroactivamente: la cadena empieza el día que activas el módulo. La normativa solo exige que las nuevas vayan firmadas y enviadas. Las anteriores siguen siendo legalmente válidas."
+        },
+        {
+          "q": "¿Qué pasa si la AEAT cae?",
+          "a": "Verifactu marca los registros como errores temporales y los reintenta solo cada 60 segundos con back-off. Tu clínica sigue facturando con normalidad: el envío se completa cuando la AEAT vuelve."
+        },
+        {
+          "q": "¿Puedo desinstalarlo?",
+          "a": "Sí, mientras no tengas registros aceptados. Una vez tu cadena tiene un solo registro Correcto, debes conservarla cuatro años (LGT). El backoffice te lo avisa antes de dejarte desinstalar."
+        },
+        {
+          "q": "¿Los pagos parciales y rectificativas funcionan?",
+          "a": "Sí. Soporta F1, F2, F3 y todas las rectificativas R1\u2013R5 además de anulaciones (RegistroAnulacion). Los simplificados con tope de 400 \u20ac sin destinatario están validados."
+        },
+        {
+          "q": "¿Puedo verificar una factura emitida desde fuera?",
+          "a": "Sí. El QR del PDF apunta a la URL `ValidarQR` de la sede electrónica de la AEAT. Cualquiera puede escanearlo y comprobar que tu factura está registrada."
+        }
+      ]
+    },
+    "linksTitle": "Para profundizar",
+    "links": [
+      { "label": "RD 1007/2023 (BOE)", "href": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-24840" },
+      { "label": "Orden HAC/1177/2024 (BOE)", "href": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2024-22138" },
+      { "label": "VERI*FACTU \u00b7 sede AEAT", "href": "https://sede.agenciatributaria.gob.es/Sede/iva/sistemas-informaticos-facturacion-verifactu.html" },
+      { "label": "Validaciones y errores Veri*Factu", "href": "https://www.agenciatributaria.es/static_files/AEAT_Desarrolladores/EEDD/IVA/VERI-FACTU/Validaciones_Errores_Veri-Factu.pdf" },
+      { "label": "Certificados FNMT v\u00e1lidos", "href": "https://www.sede.fnmt.gob.es/preguntas-frecuentes/certificado-de-persona-fisica/-/asset_publisher/eIal9z2VE0Kb/content/certificados-electr%C3%B3nicos-v%C3%A1lidos-para-el-sistema-veri*factu" }
+    ],
+    "callout": {
+      "eyebrow": "ESPAÑA · VERI*FACTU",
+      "title": "¿Tu clínica factura en España? Estás a un clic de cumplir 2027.",
+      "body": "Verifactu es un módulo opcional integrado en Dentalpin. Cumple RD 1007/2023, firma cada factura y la envía a la AEAT en tiempo real. Lo activas cuando quieras y lo dejas listo antes de la fecha límite.",
+      "cta": "Ver el módulo Verifactu"
     }
   },
   "featurePage": {

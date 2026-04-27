@@ -103,7 +103,7 @@
       { "name": "Automatic reminders", "icon": "bell", "soon": false, "defaultOn": true },
       { "name": "Patient portal", "icon": "globe", "soon": false, "defaultOn": false },
       { "name": "Multi-clinic", "icon": "building", "soon": false, "defaultOn": false },
-      { "name": "Verifactu", "icon": "shield", "soon": true, "defaultOn": false },
+      { "name": "Verifactu", "icon": "shield", "soon": false, "defaultOn": false, "country": "ES" },
       { "name": "WhatsApp Business", "icon": "message", "soon": true, "defaultOn": false },
       { "name": "AI assistant", "icon": "sparkles", "soon": true, "defaultOn": false }
     ],
@@ -719,6 +719,291 @@
       "clinical": "What your clinical team touches every day.",
       "operations": "What keeps the clinic running as a business.",
       "platform": "The foundation everything is built on and extends from."
+    }
+  },
+  "verifactuPage": {
+    "meta": {
+      "title": "Verifactu for dental clinics · Dentalpin",
+      "description": "Optional Spain-only module: comply with Veri*Factu (RD 1007/2023, Orden HAC/1177/2024) without changing your invoicing flow. Mandatory from January 2027."
+    },
+    "esBadge": "Spain",
+    "moduleBadge": "OPTIONAL MODULE · ES",
+    "title": "Verifactu, ready for 2027.",
+    "tagline": "The module that meets Veri*Factu without anyone on your team noticing.",
+    "lead": "From January 1st, 2027, every clinic in Spain that issues an invoice must submit it to AEAT in real time. Verifactu does it for you, without changing how you invoice today. Turn the module on, configure it once, forget it.",
+    "ctaDemo": "Try the demo",
+    "ctaDocs": "Read the docs",
+    "ctaContact": "Talk to us",
+    "factsTitle": "Quick facts",
+    "facts": [
+      { "label": "Country", "value": "Spain" },
+      { "label": "Status", "value": "Available" },
+      { "label": "Mode", "value": "Optional · install on demand" },
+      { "label": "Compliance", "value": "RD 1007/2023" },
+      { "label": "Licence", "value": "BSL 1.1" }
+    ],
+    "deadlineHero": {
+      "label": "MANDATORY",
+      "main": "JAN 01 2027",
+      "sub": "Companies (IS)",
+      "secondary": "Jul 01 2027 · Self-employed / IRPF",
+      "footnote": "Voluntary phase open since 2026 with no penalties for technical errors."
+    },
+    "what": {
+      "eyebrow": "WHAT VERI*FACTU IS",
+      "title": "A new legal duty. One module that resolves it.",
+      "body": "Veri*Factu is the AEAT regime that forces every invoicing system in Spain (the SIFs) to record each issued invoice in a signed chain and submit it to the tax authority in near real time. Whoever invoices must comply. Whoever builds the software must adapt it. Dentalpin ships this as an optional module, ready for your clinic to switch on whenever you want.",
+      "items": [
+        {
+          "title": "SHA-256 hash chain",
+          "body": "Every invoice produces a record that links to the previous one. The chain becomes an append-only fiscal ledger no operator can tamper with without breaking the hash."
+        },
+        {
+          "title": "Signed AEAT submission",
+          "body": "Your FNMT certificate signs every SOAP envelope over mTLS. Pre-production and production swap with one click, no redeploy."
+        },
+        {
+          "title": "Verifiable PDF QR",
+          "body": "Every invoice ships with a QR that any patient can scan and validate on AEAT\u2019s public portal."
+        }
+      ]
+    },
+    "timeline": {
+      "eyebrow": "KEY DATES",
+      "title": "What your clinic must have ready, and when.",
+      "body": "The Veri*Factu transition is not an event, it\u2019s a calendar. These are the dates that matter.",
+      "items": [
+        {
+          "date": "Jul 29, 2025",
+          "label": "Done",
+          "title": "Software vendors (SIFs) enter voluntary mode.",
+          "body": "Dentalpin already ships real submissions to AEAT pre-production from this date."
+        },
+        {
+          "date": "During 2026",
+          "label": "Now",
+          "title": "Voluntary phase, no penalties for technical errors.",
+          "body": "The right window to enable Verifactu, validate it against pre-production and leave your chain ready."
+        },
+        {
+          "date": "Jan 1, 2027",
+          "label": "Mandatory",
+          "title": "Companies (Impuesto sobre Sociedades): mandatory.",
+          "body": "Any clinic taxed under IS must submit invoices to AEAT from day one of the year."
+        },
+        {
+          "date": "Jul 1, 2027",
+          "label": "Mandatory",
+          "title": "Self-employed, IRPF and others: mandatory.",
+          "body": "The remaining payers go live six months later. Before that date, your clinic should already have Verifactu running with a real certificate."
+        }
+      ]
+    },
+    "flow": {
+      "eyebrow": "HOW IT WORKS",
+      "title": "Sits below your invoicing. Without touching your flow.",
+      "body": "Your team invoices as always. Verifactu only kicks in at issue time and brings the invoice into compliance before you finish printing it.",
+      "steps": [
+        {
+          "n": "01",
+          "title": "You issue the invoice",
+          "body": "You hit \"Issue\" in Dentalpin. The module builds the RegistroAlta payload with all AEAT-mandated fields."
+        },
+        {
+          "n": "02",
+          "title": "Hash is computed",
+          "body": "SHA-256 linking this invoice to the previous one. The record enters the chain in pending state."
+        },
+        {
+          "n": "03",
+          "title": "QR + huella returned",
+          "body": "Before printing the PDF, Verifactu returns the hash, the tax-QR URL and the invoice type. Your PDF is born compliant."
+        },
+        {
+          "n": "04",
+          "title": "Worker submits to AEAT",
+          "body": "Every 60 s, a worker drains pending records, signs the SOAP envelope with your FNMT certificate over mTLS and ships them in batches up to 1,000."
+        },
+        {
+          "n": "05",
+          "title": "AEAT replies",
+          "body": "The module parses the response, updates the state (Correct, AcceptedWithErrors, Incorrect) and stores AEAT\u2019s CSV receipt in the record."
+        }
+      ]
+    },
+    "setup": {
+      "eyebrow": "ACTIVATION",
+      "title": "Five guided steps. One time only.",
+      "body": "The module ships with a checklist panel in the back office. Each step shows green, amber or red and blocks activation until everything is ready.",
+      "steps": [
+        {
+          "title": "Clinic identity",
+          "body": "Tax ID and legal name. Verifactu reads them from the clinic record so no fiscal data is duplicated."
+        },
+        {
+          "title": "FNMT digital certificate",
+          "body": "You upload your .pfx with the password. It\u2019s stored encrypted with Fernet. The UI shows expiry and warns near renewal."
+        },
+        {
+          "title": "SIF producer",
+          "body": "A wizard with an electronically-signed declaración responsable. After signing you can download the signed PDF for your archive or for AEAT inspections."
+        },
+        {
+          "title": "VAT to AEAT mapping",
+          "body": "Each catalog VAT type maps to its AEAT classification (S1 standard, E1 health-services exemption, N1 non-taxable\u2026). The module seeds E1 by default for 0% types (clinical services)."
+        },
+        {
+          "title": "Activate the module",
+          "body": "When all four steps are green, the \"Activate Verifactu\" button lights up. You start in test (AEAT pre-production) and switch to production whenever you\u2019re ready."
+        }
+      ]
+    },
+    "compare": {
+      "eyebrow": "ENVIRONMENTS",
+      "title": "Test and live, hot-swappable.",
+      "body": "Same module, two endpoints. Switch with a click. No data migration, no reinstall.",
+      "rows": [
+        { "attr": "AEAT endpoint", "test": "prewww1.aeat.es", "prod": "www1.agenciatributaria.gob.es" },
+        { "attr": "Fiscal effect", "test": "None", "prod": "Real" },
+        { "attr": "Accepted certs", "test": "Real FNMT or AEAT test cert", "prod": "Real FNMT only" },
+        { "attr": "PDF QR", "test": "Points to pre-production", "prod": "Points to AEAT portal" },
+        { "attr": "Hash chain", "test": "Same logic as production", "prod": "Same logic as test" }
+      ],
+      "footnote": "Switching `prod → test` doesn\u2019t break the local chain (it\u2019s global per NIF), but AEAT will see a gap in whichever environment you skip."
+    },
+    "datamodel": {
+      "eyebrow": "DATA",
+      "title": "Four tables. Zero columns added to anything else.",
+      "body": "Verifactu lives in its own space. It reads from clinics and catalog, but never adds columns. Uninstall it (with no accepted records) and you\u2019re back to before, with no trace.",
+      "tables": [
+        {
+          "name": "verifactu_settings",
+          "what": "One row per clinic. State, environment, producer NIF, chain head, send-window timings."
+        },
+        {
+          "name": "verifactu_certificates",
+          "what": "Encrypted PFX + password vault using Fernet. Subject CN, holder NIF and validity dates power the expiry banner."
+        },
+        {
+          "name": "verifactu_records",
+          "what": "Append-only fiscal ledger. Verbatim XML, hash, previous hash, AEAT state and response CSV. Retained 4 years per LGT."
+        },
+        {
+          "name": "verifactu_vat_classifications",
+          "what": "Per-clinic mapping S1/E1\u2013E6/N1/N2 by VAT type. Keeps the Dentalpin catalog country-agnostic."
+        }
+      ]
+    },
+    "isolation": {
+      "eyebrow": "ARCHITECTURE",
+      "title": "A country module. Not a fork of the product.",
+      "body": "Dentalpin is international software. Veri*Factu is Spain. The boundary is sharp: the module wires into `BillingHookRegistry` only when `clinic.settings.country == \"ES\"`, never touches billing or catalog tables and disappears without aftermath when uninstalled.",
+      "items": [
+        {
+          "title": "Modular and optional",
+          "body": "Not installed by default. Clinics outside Spain see zero extra screens; Spanish ones turn it on from Admin → Modules."
+        },
+        {
+          "title": "Isolated by design",
+          "body": "All its tables live with `verifactu_*` prefixes. No Spanish fiscal columns leak into the core; no core module speaks AEAT."
+        },
+        {
+          "title": "Reusable as a pattern",
+          "body": "Tomorrow `factur-x-fr` for France or `sdi-it` for Italy ship with the same shape. Each country owns its complexity."
+        }
+      ]
+    },
+    "queue": {
+      "eyebrow": "DAILY OPERATION",
+      "title": "When something goes wrong, you see it where it should be.",
+      "body": "If AEAT rejects a submission or the network fails, the issue surfaces in the queue and is retried for you. You see the real codes with their legal description, not generic ones.",
+      "tabs": [
+        {
+          "key": "pending",
+          "label": "Pending",
+          "body": "Records in pending or sending state. The worker processes them every 60 seconds."
+        },
+        {
+          "key": "rejected",
+          "label": "Rejected",
+          "body": "AEAT business rejection (Incorrect). Shows the exact code, description and a \"Retry (Subsanación)\" button that resends with `Subsanacion=S` and `RechazoPrevio=X`."
+        },
+        {
+          "key": "transient",
+          "label": "Transient errors",
+          "body": "Transport failures or AEAT outages. The worker retries on its own with exponential back-off."
+        }
+      ]
+    },
+    "penalties": {
+      "eyebrow": "WHY IT MATTERS",
+      "title": "The price of not being ready by January 2027.",
+      "body": "Spain\u2019s LGT 201 bis governs liability for using non-compliant SIFs. Fines can reach \u20ac50,000 per fiscal year. For a clinic that invoices every day, skipping Verifactu (or an equivalent) stops being an option.",
+      "items": [
+        {
+          "title": "For your clinic",
+          "body": "Fines for using non-homologated software. Risk continues for as long as you keep issuing non-compliant invoices."
+        },
+        {
+          "title": "For your accountant",
+          "body": "Tighter inspections and mandatory traceability of every invoice. Veri*Factu turns accountants into reviewers, not capturers."
+        },
+        {
+          "title": "For your patient",
+          "body": "The QR on the invoice lets them verify the expense is logged with AEAT, which is often required for health insurance reimbursements."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "q": "Do I need to enable it now?",
+          "a": "No. If your clinic is taxed under Sociedades, the deadline is January 1st, 2027. If you\u2019re self-employed (IRPF) it\u2019s July 1st, 2027. Until then you\u2019re in voluntary mode with no penalties for technical errors. The best time to enable it is now and let it run against pre-production."
+        },
+        {
+          "q": "Does it work outside Spain?",
+          "a": "The module is Spain only. If your clinic doesn\u2019t invoice in Spain, you\u2019ll never see it: it\u2019s not installed by default. For France and other countries we plan sibling modules (factur-x, SDI\u2026) that plug in the same way."
+        },
+        {
+          "q": "What do I need to start?",
+          "a": "Three things: (1) your CIF/NIF in the clinic record, (2) a valid FNMT certificate (Representante de Persona Jurídica, Persona Física or Sello de Empresa) and (3) decide who signs the producer\u2019s declaración responsable (the SaaS, your integrator or your clinic if you self-host)."
+        },
+        {
+          "q": "What about invoices issued before activation?",
+          "a": "They don\u2019t flow into Verifactu retroactively: the chain starts the day you enable the module. The law only requires new invoices to be signed and submitted. Older ones remain legally valid."
+        },
+        {
+          "q": "What happens if AEAT goes down?",
+          "a": "Verifactu marks records as transient errors and retries on its own every 60 seconds with back-off. Your clinic keeps invoicing as usual: submissions complete when AEAT comes back."
+        },
+        {
+          "q": "Can I uninstall it?",
+          "a": "Yes, while you have no accepted records. Once a single Correct record exists, you must keep the chain for four years (LGT). The back office tells you before letting you uninstall."
+        },
+        {
+          "q": "Do partial payments and credit notes work?",
+          "a": "Yes. F1, F2, F3 and every credit note R1\u2013R5 are supported, plus anulaciones (RegistroAnulacion). Simplified invoices capped at \u20ac400 with no recipient are validated."
+        },
+        {
+          "q": "Can I verify an issued invoice from outside?",
+          "a": "Yes. The PDF QR points to AEAT\u2019s `ValidarQR` URL. Anyone can scan it and confirm the invoice is registered."
+        }
+      ]
+    },
+    "linksTitle": "Go deeper",
+    "links": [
+      { "label": "RD 1007/2023 (BOE)", "href": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-24840" },
+      { "label": "Orden HAC/1177/2024 (BOE)", "href": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2024-22138" },
+      { "label": "VERI*FACTU \u00b7 AEAT portal", "href": "https://sede.agenciatributaria.gob.es/Sede/iva/sistemas-informaticos-facturacion-verifactu.html" },
+      { "label": "Veri*Factu validations and errors", "href": "https://www.agenciatributaria.es/static_files/AEAT_Desarrolladores/EEDD/IVA/VERI-FACTU/Validaciones_Errores_Veri-Factu.pdf" },
+      { "label": "Valid FNMT certificates", "href": "https://www.sede.fnmt.gob.es/preguntas-frecuentes/certificado-de-persona-fisica/-/asset_publisher/eIal9z2VE0Kb/content/certificados-electr%C3%B3nicos-v%C3%A1lidos-para-el-sistema-veri*factu" }
+    ],
+    "callout": {
+      "eyebrow": "SPAIN · VERI*FACTU",
+      "title": "Does your clinic invoice in Spain? You\u2019re a click away from being 2027-ready.",
+      "body": "Verifactu is an optional module bundled with Dentalpin. It complies with RD 1007/2023, signs every invoice and submits it to AEAT in real time. Turn it on whenever you want and have it ready before the deadline.",
+      "cta": "Open the Verifactu module"
     }
   },
   "featurePage": {

@@ -1,0 +1,559 @@
+---
+import { pagePath, useDict, type Locale } from '~/i18n';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Section from '@dentalpin/ui/Section.astro';
+import GradientBackdrop from '@dentalpin/ui/GradientBackdrop.astro';
+import Button from '@dentalpin/ui/Button.astro';
+import Icon from '@dentalpin/ui/Icon.astro';
+import CTASection from '~/components/CTASection.astro';
+import { modulesByDomain, moduleSlug, moduleBySlug } from '~/data/modules';
+import { DEMO_URL, GITHUB_REPO } from '~/config/links';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const dict = useDict(locale);
+const v = (dict as any).verifactuPage;
+const mod = moduleBySlug('verifactu')!;
+
+const demoUrl = DEMO_URL;
+const ghUrl = GITHUB_REPO;
+const docsUrl = `${ghUrl}/blob/main/backend/modules/verifactu/README.md`;
+const contactHref = pagePath(locale, 'contact');
+const featuresHref = pagePath(locale, 'features');
+
+const related = modulesByDomain('operations')
+  .filter((m) => m.slug !== mod.slug)
+  .slice(0, 3);
+
+const labelMap: Record<string, string> = {
+  Cumplido: 'success',
+  Done: 'success',
+  Ahora: 'primary',
+  Now: 'primary',
+  Obligatorio: 'warning',
+  Mandatory: 'warning',
+};
+
+function badgeClass(label: string) {
+  const tone = labelMap[label] ?? 'neutral';
+  switch (tone) {
+    case 'success':
+      return 'bg-[var(--color-success-soft)] text-[var(--color-success-text)]';
+    case 'primary':
+      return 'bg-[var(--color-primary-soft)] text-[var(--color-primary-soft-text)]';
+    case 'warning':
+      return 'bg-[var(--color-warning-soft)] text-[var(--color-warning-text)]';
+    default:
+      return 'bg-[var(--color-surface-muted)] text-[var(--color-text-muted)]';
+  }
+}
+---
+
+<BaseLayout locale={locale} title={v.meta.title} description={v.meta.description}>
+  <!-- HERO -->
+  <section class="relative overflow-hidden">
+    <GradientBackdrop variant="subtle" />
+
+    <Section padY="md">
+      <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-[12px] text-[var(--color-text-muted)]">
+        <a href={featuresHref} class="hover:text-[var(--color-primary)]">
+          {dict.featurePage.breadcrumbRoot}
+        </a>
+        <span class="text-[var(--color-text-subtle)]">/</span>
+        <span class="text-[var(--color-text-muted)]">{dict.megamenu.columns.operations}</span>
+        <span class="text-[var(--color-text-subtle)]">/</span>
+        <span class="font-medium text-[var(--color-text)]">{mod.title[locale]}</span>
+      </nav>
+
+      <div class="mt-10 grid gap-10 lg:grid-cols-[minmax(0,1.55fr)_minmax(0,1fr)] lg:items-start">
+        <div class="max-w-2xl">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="inline-flex items-center gap-1.5 rounded-[var(--radius-pill)] border border-[var(--color-border)] bg-[var(--color-surface)] px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--color-primary)]">
+              <span class="h-1.5 w-1.5 rounded-full bg-[var(--color-primary)]"></span>
+              {v.moduleBadge}
+            </span>
+            <span class="inline-flex items-center gap-1.5 rounded-[var(--radius-pill)] bg-[var(--color-success-soft)] px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--color-success-text)]">
+              {dict.featurePage.statusStable}
+            </span>
+            <span aria-label={v.esBadge} class="inline-flex items-center gap-1.5 rounded-[var(--radius-pill)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] px-2 py-0.5 text-[11px] font-semibold tracking-wider text-[var(--color-text-muted)]">
+              <span aria-hidden="true" class="font-mono text-[10px]">🇪🇸</span>
+              <span>{v.esBadge}</span>
+            </span>
+          </div>
+
+          <div class="mt-7 flex items-start gap-5">
+            <span class="relative inline-flex h-16 w-16 flex-none items-center justify-center rounded-[var(--radius-lg)] bg-gradient-to-br from-[var(--color-primary-soft)] to-[var(--color-surface)] text-[var(--color-primary-soft-text)] shadow-[var(--shadow-sm)] ring-1 ring-[var(--color-primary)]/25">
+              <Icon name="shield" size={30} />
+            </span>
+            <div class="min-w-0">
+              <h1 class="text-[clamp(2rem,2.4vw+1rem,3.5rem)] font-semibold leading-[1.05] tracking-[-0.025em] text-[var(--color-text)]">
+                {v.title}
+              </h1>
+              <p class="mt-3 text-[18px] leading-[1.5] text-[var(--color-primary)]">
+                {v.tagline}
+              </p>
+            </div>
+          </div>
+
+          <p class="mt-6 text-[16px] leading-[1.65] text-[var(--color-text-muted)]">
+            {v.lead}
+          </p>
+
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <Button href={demoUrl} size="md">
+              {v.ctaDemo}
+              <Icon name="arrow-right" size={14} />
+            </Button>
+            <Button href={docsUrl} variant="outline" size="md">{v.ctaDocs}</Button>
+            <Button href={contactHref} variant="ghost" size="md">{v.ctaContact}</Button>
+          </div>
+        </div>
+
+        <!-- Quick facts + deadline countdown card -->
+        <aside class="flex flex-col gap-5">
+          <div class="relative overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-gradient-to-br from-[var(--color-primary-soft)] via-[var(--color-surface)] to-[var(--color-surface)] p-6 shadow-[var(--shadow-sm)]">
+            <p class="text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--color-primary)]">
+              {v.deadlineHero.label}
+            </p>
+            <p class="mt-3 font-mono text-[clamp(1.5rem,1.4vw+1rem,2.25rem)] font-bold leading-none tracking-tight text-[var(--color-text)]">
+              {v.deadlineHero.main}
+            </p>
+            <p class="mt-2 text-[14px] font-semibold text-[var(--color-text)]">{v.deadlineHero.sub}</p>
+            <p class="mt-1 text-[13px] text-[var(--color-text-muted)]">{v.deadlineHero.secondary}</p>
+            <p class="mt-4 border-t border-[var(--color-border-subtle)] pt-3 text-[12px] leading-[1.5] text-[var(--color-text-muted)]">
+              {v.deadlineHero.footnote}
+            </p>
+          </div>
+
+          <div class="rounded-[var(--radius-xl)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-6 shadow-[var(--shadow-sm)]">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--color-text-muted)]">
+              {v.factsTitle}
+            </p>
+            <dl class="mt-4 space-y-3 text-[13px]">
+              {v.facts.map((f: { label: string; value: string }, i: number) => (
+                <div class:list={[
+                  'flex items-baseline justify-between gap-4',
+                  i < v.facts.length - 1 ? 'border-b border-[var(--color-border-subtle)] pb-3' : '',
+                ]}>
+                  <dt class="text-[var(--color-text-muted)]">{f.label}</dt>
+                  <dd class="font-medium text-[var(--color-text)]">{f.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </aside>
+      </div>
+    </Section>
+  </section>
+
+  <!-- WHAT VERI*FACTU IS -->
+  <Section padY="md">
+    <header class="max-w-2xl">
+      <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">
+        {v.what.eyebrow}
+      </p>
+      <h2 class="text-marketing-h2 mt-3 text-[var(--color-text)]">
+        {v.what.title}
+      </h2>
+      <p class="mt-4 text-[15px] leading-[1.6] text-[var(--color-text-muted)]">
+        {v.what.body}
+      </p>
+    </header>
+
+    <ul class="mt-10 grid gap-5 md:grid-cols-3">
+      {v.what.items.map((it: { title: string; body: string }, i: number) => (
+        <li class="group relative flex h-full flex-col gap-3 rounded-[var(--radius-xl)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-6 shadow-[var(--shadow-sm)] transition-all hover:border-[var(--color-border-strong)] hover:shadow-[var(--shadow-md)]">
+          <span class="font-mono text-[11px] tabular-nums tracking-[0.16em] text-[var(--color-primary)]">
+            {String(i + 1).padStart(2, '0')}
+          </span>
+          <h3 class="text-[18px] font-semibold tracking-tight text-[var(--color-text)]">
+            {it.title}
+          </h3>
+          <p class="text-[14.5px] leading-[1.55] text-[var(--color-text-muted)]">
+            {it.body}
+          </p>
+        </li>
+      ))}
+    </ul>
+  </Section>
+
+  <!-- TIMELINE -->
+  <Section padY="md">
+    <header class="max-w-2xl">
+      <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">
+        {v.timeline.eyebrow}
+      </p>
+      <h2 class="text-marketing-h2 mt-3 text-[var(--color-text)]">
+        {v.timeline.title}
+      </h2>
+      <p class="mt-4 text-[15px] leading-[1.6] text-[var(--color-text-muted)]">
+        {v.timeline.body}
+      </p>
+    </header>
+
+    <ol class="mt-10 relative grid gap-5 md:grid-cols-4">
+      <span aria-hidden="true" class="hidden md:block absolute left-0 right-0 top-[34px] h-px bg-gradient-to-r from-[var(--color-border-subtle)] via-[var(--color-primary)]/40 to-[var(--color-border-subtle)]"></span>
+      {v.timeline.items.map((it: { date: string; label: string; title: string; body: string }) => (
+        <li class="relative flex flex-col gap-3 rounded-[var(--radius-xl)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-5 shadow-[var(--shadow-sm)]">
+          <span aria-hidden="true" class="absolute left-1/2 -top-[6px] hidden md:block h-3 w-3 -translate-x-1/2 rounded-full border-2 border-[var(--color-primary)] bg-[var(--color-surface)]"></span>
+          <p class="font-mono text-[11px] tabular-nums uppercase tracking-[0.16em] text-[var(--color-text-muted)]">
+            {it.date}
+          </p>
+          <span class:list={[
+            'self-start inline-flex rounded-[var(--radius-pill)] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.16em]',
+            badgeClass(it.label),
+          ]}>
+            {it.label}
+          </span>
+          <h3 class="text-[15px] font-semibold leading-tight tracking-tight text-[var(--color-text)]">
+            {it.title}
+          </h3>
+          <p class="text-[13px] leading-[1.55] text-[var(--color-text-muted)]">
+            {it.body}
+          </p>
+        </li>
+      ))}
+    </ol>
+  </Section>
+
+  <!-- HOW IT WORKS -->
+  <Section padY="md">
+    <header class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+      <div class="max-w-2xl">
+        <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">
+          {v.flow.eyebrow}
+        </p>
+        <h2 class="text-marketing-h2 mt-3 text-[var(--color-text)]">
+          {v.flow.title}
+        </h2>
+        <p class="mt-4 text-[15px] leading-[1.6] text-[var(--color-text-muted)]">
+          {v.flow.body}
+        </p>
+      </div>
+    </header>
+
+    <ol class="mt-10 grid gap-px overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border-subtle)] bg-[var(--color-border-subtle)] md:grid-cols-5">
+      {v.flow.steps.map((s: { n: string; title: string; body: string }) => (
+        <li class="group relative flex flex-col gap-3 bg-[var(--color-surface)] p-6 transition-colors hover:bg-[var(--color-surface-muted)]">
+          <span class="font-mono text-[10px] tabular-nums tracking-[0.18em] text-[var(--color-primary)]">
+            {s.n}
+          </span>
+          <h3 class="text-[15px] font-semibold leading-tight tracking-tight text-[var(--color-text)]">
+            {s.title}
+          </h3>
+          <p class="text-[13.5px] leading-[1.55] text-[var(--color-text-muted)]">
+            {s.body}
+          </p>
+          <span aria-hidden="true" class="pointer-events-none absolute inset-y-0 left-0 w-[2px] origin-top scale-y-0 bg-[var(--color-primary)] transition-transform duration-300 group-hover:scale-y-100"></span>
+        </li>
+      ))}
+    </ol>
+
+    <!-- AEAT submission diagram -->
+    <div class="mt-10 grid gap-5 rounded-[var(--radius-xl)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-6 shadow-[var(--shadow-sm)] md:grid-cols-[1fr_auto_1fr_auto_1fr] md:items-center">
+      <div class="flex flex-col items-center gap-3 text-center">
+        <span class="inline-flex h-12 w-12 items-center justify-center rounded-[var(--radius-md)] bg-[var(--color-primary-soft)] text-[var(--color-primary-soft-text)]">
+          <Icon name="card" size={22} />
+        </span>
+        <p class="text-[13px] font-semibold tracking-tight text-[var(--color-text)]">Dentalpin</p>
+        <p class="font-mono text-[11px] uppercase tracking-wider text-[var(--color-text-muted)]">{locale === 'es' ? 'Emisión + huella' : 'Issue + hash'}</p>
+      </div>
+      <span aria-hidden="true" class="hidden md:flex justify-center text-[var(--color-text-subtle)]">
+        <Icon name="arrow-right" size={18} />
+      </span>
+      <div class="flex flex-col items-center gap-3 text-center">
+        <span class="inline-flex h-12 w-12 items-center justify-center rounded-[var(--radius-md)] bg-[var(--color-surface-muted)] text-[var(--color-text)]">
+          <Icon name="plug" size={22} />
+        </span>
+        <p class="text-[13px] font-semibold tracking-tight text-[var(--color-text)]">{locale === 'es' ? 'Worker · 60 s · mTLS' : 'Worker · 60 s · mTLS'}</p>
+        <p class="font-mono text-[11px] uppercase tracking-wider text-[var(--color-text-muted)]">SOAP · FNMT</p>
+      </div>
+      <span aria-hidden="true" class="hidden md:flex justify-center text-[var(--color-text-subtle)]">
+        <Icon name="arrow-right" size={18} />
+      </span>
+      <div class="flex flex-col items-center gap-3 text-center">
+        <span class="inline-flex h-12 w-12 items-center justify-center rounded-[var(--radius-md)] bg-[var(--color-success-soft)] text-[var(--color-success-text)]">
+          <Icon name="check" size={22} />
+        </span>
+        <p class="text-[13px] font-semibold tracking-tight text-[var(--color-text)]">AEAT</p>
+        <p class="font-mono text-[11px] uppercase tracking-wider text-[var(--color-text-muted)]">{locale === 'es' ? 'CSV + estado' : 'CSV + state'}</p>
+      </div>
+    </div>
+  </Section>
+
+  <!-- SETUP / 5 STEPS -->
+  <Section padY="md">
+    <header class="max-w-2xl">
+      <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">
+        {v.setup.eyebrow}
+      </p>
+      <h2 class="text-marketing-h2 mt-3 text-[var(--color-text)]">
+        {v.setup.title}
+      </h2>
+      <p class="mt-4 text-[15px] leading-[1.6] text-[var(--color-text-muted)]">
+        {v.setup.body}
+      </p>
+    </header>
+
+    <ul class="mt-10 grid gap-4 lg:grid-cols-5">
+      {v.setup.steps.map((s: { title: string; body: string }, i: number) => (
+        <li class="relative flex h-full flex-col gap-3 rounded-[var(--radius-xl)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-5 shadow-[var(--shadow-sm)]">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[var(--color-primary)] font-mono text-[12px] tabular-nums font-semibold text-white" style="color:#fff">
+              {i + 1}
+            </span>
+            <h3 class="text-[14.5px] font-semibold leading-tight tracking-tight text-[var(--color-text)]">
+              {s.title}
+            </h3>
+          </div>
+          <p class="text-[13px] leading-[1.55] text-[var(--color-text-muted)]">
+            {s.body}
+          </p>
+        </li>
+      ))}
+    </ul>
+  </Section>
+
+  <!-- CAPABILITIES -->
+  <Section padY="md">
+    <header class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+      <div class="max-w-xl">
+        <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">
+          {dict.featurePage.capabilities}
+        </p>
+        <h2 class="mt-3 text-[clamp(1.5rem,1.6vw+1rem,2.25rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-[var(--color-text)]">
+          {dict.featurePage.capabilitiesTitle}
+        </h2>
+      </div>
+      <p class="font-mono text-[12px] tabular-nums uppercase tracking-[0.14em] text-[var(--color-text-muted)]">
+        {mod.features.length} · {dict.featurePage.capabilitiesCountSuffix}
+      </p>
+    </header>
+
+    <ul class="mt-8 grid gap-px overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border-subtle)] bg-[var(--color-border-subtle)] sm:grid-cols-2 lg:grid-cols-3">
+      {mod.features.map((f, idx) => (
+        <li class="group relative bg-[var(--color-surface)] p-6 transition-colors duration-200 hover:bg-[var(--color-surface-muted)]">
+          <div class="flex items-baseline justify-between gap-4">
+            <span class="font-mono text-[11px] tabular-nums tracking-wider text-[var(--color-primary)]">
+              {String(idx + 1).padStart(2, '0')}
+            </span>
+            <span class="text-[var(--color-text-subtle)] transition-colors duration-200 group-hover:text-[var(--color-primary)]">
+              <Icon name="check" size={14} />
+            </span>
+          </div>
+          <p class="mt-4 text-[14.5px] leading-[1.55] text-[var(--color-text)]">
+            {f[locale]}
+          </p>
+          <span
+            aria-hidden="true"
+            class="pointer-events-none absolute inset-y-0 left-0 w-[2px] origin-top scale-y-0 bg-[var(--color-primary)] transition-transform duration-300 group-hover:scale-y-100"
+          ></span>
+        </li>
+      ))}
+    </ul>
+  </Section>
+
+  <!-- ENVIRONMENTS COMPARE -->
+  <Section padY="md">
+    <header class="max-w-2xl">
+      <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">
+        {v.compare.eyebrow}
+      </p>
+      <h2 class="text-marketing-h2 mt-3 text-[var(--color-text)]">
+        {v.compare.title}
+      </h2>
+      <p class="mt-4 text-[15px] leading-[1.6] text-[var(--color-text-muted)]">
+        {v.compare.body}
+      </p>
+    </header>
+
+    <div class="mt-8 overflow-x-auto rounded-[var(--radius-xl)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] shadow-[var(--shadow-sm)]">
+      <table class="w-full min-w-[640px] border-collapse text-[14px]">
+        <thead>
+          <tr class="border-b border-[var(--color-border-subtle)] bg-[var(--color-surface-muted)] text-left">
+            <th class="px-5 py-3 text-[12px] font-semibold uppercase tracking-wider text-[var(--color-text-muted)]"></th>
+            <th class="px-5 py-3 text-[12px] font-semibold uppercase tracking-wider text-[var(--color-text-muted)]">{locale === 'es' ? 'Pruebas' : 'Test'}</th>
+            <th class="px-5 py-3 text-[12px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">{locale === 'es' ? 'Producción' : 'Production'}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {v.compare.rows.map((r: { attr: string; test: string; prod: string }, i: number) => (
+            <tr class:list={[i < v.compare.rows.length - 1 ? 'border-b border-[var(--color-border-subtle)]' : '']}>
+              <td class="px-5 py-3 font-medium text-[var(--color-text)]">{r.attr}</td>
+              <td class="px-5 py-3 font-mono text-[13px] text-[var(--color-text-muted)]">{r.test}</td>
+              <td class="px-5 py-3 font-mono text-[13px] text-[var(--color-text)]">{r.prod}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-3 text-[12.5px] leading-[1.55] text-[var(--color-text-muted)]">
+      {v.compare.footnote}
+    </p>
+  </Section>
+
+  <!-- DAILY OPERATION / QUEUE -->
+  <Section padY="md">
+    <header class="max-w-2xl">
+      <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">
+        {v.queue.eyebrow}
+      </p>
+      <h2 class="text-marketing-h2 mt-3 text-[var(--color-text)]">
+        {v.queue.title}
+      </h2>
+      <p class="mt-4 text-[15px] leading-[1.6] text-[var(--color-text-muted)]">
+        {v.queue.body}
+      </p>
+    </header>
+
+    <div class="mt-8 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] shadow-[var(--shadow-sm)]">
+      <div class="flex flex-wrap items-center gap-2 border-b border-[var(--color-border-subtle)] bg-[var(--color-surface-muted)] px-5 py-3">
+        {v.queue.tabs.map((t: { key: string; label: string }, i: number) => (
+          <span class:list={[
+            'inline-flex items-center gap-2 rounded-[var(--radius-pill)] px-3 py-1 text-[12px] font-semibold',
+            i === 0
+              ? 'bg-[var(--color-primary-soft)] text-[var(--color-primary-soft-text)]'
+              : 'border border-[var(--color-border-subtle)] bg-[var(--color-surface)] text-[var(--color-text-muted)]',
+          ]}>
+            <span aria-hidden="true" class:list={[
+              'h-1.5 w-1.5 rounded-full',
+              i === 0 ? 'bg-[var(--color-primary)]' : i === 1 ? 'bg-[var(--color-warning-text)]' : 'bg-[var(--color-text-subtle)]',
+            ]}></span>
+            {t.label}
+          </span>
+        ))}
+      </div>
+      <ul class="grid gap-px bg-[var(--color-border-subtle)] md:grid-cols-3">
+        {v.queue.tabs.map((t: { key: string; label: string; body: string }) => (
+          <li class="bg-[var(--color-surface)] p-5">
+            <p class="text-[12px] font-semibold uppercase tracking-wider text-[var(--color-text-subtle)]">
+              {t.label}
+            </p>
+            <p class="mt-3 text-[13.5px] leading-[1.55] text-[var(--color-text)]">
+              {t.body}
+            </p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </Section>
+
+  <!-- PENALTIES / WHY IT MATTERS -->
+  <Section padY="md">
+    <header class="max-w-2xl">
+      <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">
+        {v.penalties.eyebrow}
+      </p>
+      <h2 class="text-marketing-h2 mt-3 text-[var(--color-text)]">
+        {v.penalties.title}
+      </h2>
+      <p class="mt-4 text-[15px] leading-[1.6] text-[var(--color-text-muted)]">
+        {v.penalties.body}
+      </p>
+    </header>
+
+    <ul class="mt-8 grid gap-4 md:grid-cols-3">
+      {v.penalties.items.map((it: { title: string; body: string }) => (
+        <li class="rounded-[var(--radius-xl)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-6 shadow-[var(--shadow-sm)]">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-[var(--radius-md)] bg-[var(--color-warning-soft)] text-[var(--color-warning-text)]">
+            <Icon name="shield" size={18} />
+          </span>
+          <h3 class="mt-4 text-[16px] font-semibold tracking-tight text-[var(--color-text)]">{it.title}</h3>
+          <p class="mt-2 text-[13.5px] leading-[1.55] text-[var(--color-text-muted)]">{it.body}</p>
+        </li>
+      ))}
+    </ul>
+  </Section>
+
+  <!-- FAQ -->
+  <Section padY="md">
+    <header class="max-w-2xl">
+      <h2 class="text-marketing-h2 text-[var(--color-text)]">{v.faq.title}</h2>
+    </header>
+
+    <ul class="mt-8 grid gap-3">
+      {v.faq.items.map((it: { q: string; a: string }, i: number) => (
+        <li>
+          <details class="group rounded-[var(--radius-xl)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-5 shadow-[var(--shadow-sm)] transition-colors hover:border-[var(--color-border-strong)]" open={i === 0}>
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-[15px] font-semibold tracking-tight text-[var(--color-text)] [&::-webkit-details-marker]:hidden">
+              <span>{it.q}</span>
+              <span aria-hidden="true" class="inline-flex h-7 w-7 flex-none items-center justify-center rounded-full bg-[var(--color-surface-muted)] text-[var(--color-text-muted)] transition-transform group-open:rotate-45">
+                <Icon name="plus" size={14} />
+              </span>
+            </summary>
+            <p class="mt-3 text-[14px] leading-[1.65] text-[var(--color-text-muted)]">
+              {it.a}
+            </p>
+          </details>
+        </li>
+      ))}
+    </ul>
+  </Section>
+
+  <!-- LINKS -->
+  <Section padY="md">
+    <h2 class="text-[18px] font-semibold tracking-tight text-[var(--color-text)]">{v.linksTitle}</h2>
+    <ul class="mt-5 grid gap-2 md:grid-cols-2 lg:grid-cols-3">
+      {v.links.map((l: { label: string; href: string }) => (
+        <li>
+          <a
+            href={l.href}
+            target="_blank"
+            rel="noopener"
+            class="group flex items-center gap-3 rounded-[var(--radius-md)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-3 text-[13.5px] text-[var(--color-text)] shadow-[var(--shadow-sm)] transition-all hover:-translate-y-0.5 hover:border-[var(--color-primary)]/40 hover:shadow-[var(--shadow-md)]"
+          >
+            <span class="inline-flex h-8 w-8 flex-none items-center justify-center rounded-[var(--radius-sm)] bg-[var(--color-primary-soft)] text-[var(--color-primary-soft-text)]">
+              <Icon name="globe" size={14} />
+            </span>
+            <span class="min-w-0 flex-1 truncate">{l.label}</span>
+            <Icon name="arrow-right" size={14} class="text-[var(--color-text-subtle)] transition-colors group-hover:text-[var(--color-primary)]" />
+          </a>
+        </li>
+      ))}
+    </ul>
+  </Section>
+
+  <!-- RELATED -->
+  {related.length > 0 && (
+    <Section padY="md">
+      <header class="max-w-2xl">
+        <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">
+          {dict.megamenu.columns.operations}
+        </p>
+        <h2 class="mt-3 text-[clamp(1.5rem,1.6vw+1rem,2.25rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-[var(--color-text)]">
+          {dict.featurePage.relatedTitle}
+        </h2>
+      </header>
+
+      <ul class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {related.map((r) => (
+          <li>
+            <a
+              href={pagePath(locale, 'features', moduleSlug(r, locale))}
+              class="group relative flex h-full flex-col gap-3 rounded-[var(--radius-xl)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-[var(--color-primary)]/40 hover:shadow-[var(--shadow-md)]"
+            >
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-[var(--radius-md)] bg-[var(--color-primary-soft)] text-[var(--color-primary-soft-text)]">
+                <Icon name={r.icon} size={18} />
+              </span>
+              <h3 class="text-[17px] font-semibold tracking-tight text-[var(--color-text)]">
+                {r.title[locale]}
+              </h3>
+              <p class="text-[14px] leading-[1.55] text-[var(--color-text-muted)]">
+                {r.tagline[locale]}
+              </p>
+              <span class="mt-auto inline-flex items-center gap-1 text-[13px] font-semibold text-[var(--color-primary)] transition-transform duration-200 group-hover:translate-x-0.5">
+                {dict.featurePage.ctaOpenModule}
+                <Icon name="arrow-right" size={14} />
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </Section>
+  )}
+
+  <CTASection locale={locale} />
+</BaseLayout>

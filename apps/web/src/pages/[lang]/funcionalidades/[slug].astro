@@ -1,6 +1,7 @@
 ---
 import { isLocale, pagePath, type Locale } from '~/i18n';
 import FeatureDetailBody from '~/components/pages/FeatureDetailBody.astro';
+import VerifactuFeatureBody from '~/components/pages/VerifactuFeatureBody.astro';
 import { MODULES, moduleBySlug } from '~/data/modules';
 
 export function getStaticPaths() {
@@ -16,4 +17,8 @@ const mod = moduleBySlug(slug!);
 if (!mod) return Astro.redirect(pagePath(locale, 'features'), 308);
 ---
 
-<FeatureDetailBody locale={locale} mod={mod} />
+{mod.slug === 'verifactu' ? (
+  <VerifactuFeatureBody locale={locale} />
+) : (
+  <FeatureDetailBody locale={locale} mod={mod} />
+)}
