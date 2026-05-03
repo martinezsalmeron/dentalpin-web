@@ -41,7 +41,7 @@
   },
   "pillars": {
     "eyebrow": "LO QUE NINGÚN OTRO SOFTWARE DENTAL HACE",
-    "title": "Tres cosas en las que somos diferentes.",
+    "title": "Tres cosas que nos hacen diferentes.",
     "lead": "Más allá de los módulos y las pantallas, hay tres decisiones de fondo que separan a Dentalpin del resto.",
     "items": [
       {
@@ -73,10 +73,10 @@
   "priceClarity": {
     "eyebrow": "PRECIO",
     "title": "El núcleo, a cero. Para siempre.",
-    "lead": "Lo que cualquier clínica usa cada día (agenda, pacientes, odontograma, presupuestos, facturación) está en el núcleo. Y el núcleo es gratis. Sin cuotas por silla, ni doctor, ni paciente.",
+    "lead": "Lo que cualquier clínica usa cada día (agenda, pacientes, odontograma, presupuestos, facturación) está en el núcleo. Y el núcleo es gratis. Sin cuotas por sillón, ni dentista, ni paciente.",
     "claims": [
-      "Sin cuotas por silla, doctor o paciente.",
-      "Núcleo completo, sin tiers escondidos dentro.",
+      "Sin cuotas por sillón, dentista o paciente.",
+      "Núcleo completo, sin extras escondidos dentro.",
       "Si algún día hay módulos extra de pago, serán opcionales y transparentes."
     ],
     "footnote": "¿Prefieres que lo gestionemos nosotros en la nube? Próximamente, opcional, transparente.",
@@ -85,9 +85,9 @@
   "liveModules": {
     "eyebrow": "MÓDULOS",
     "title": "Un núcleo sólido, opcionales que tú enciendes.",
-    "lead": "Toda clínica necesita lo mismo en el centro: agenda, pacientes, odontograma. Lo de alrededor varía. Tú decides qué se enciende.",
+    "lead": "Toda clínica necesita la misma base: agenda, pacientes, odontograma. Lo demás varía. Tú decides qué se enciende.",
     "coreLabel": "INCLUIDO SIEMPRE",
-    "coreSubtitle": "El núcleo que cualquier clínica necesita. Gratis para siempre, sin tiers escondidos.",
+    "coreSubtitle": "El núcleo que cualquier clínica necesita. Gratis para siempre, sin extras escondidos.",
     "core": [
       { "name": "Agenda", "icon": "calendar" },
       { "name": "Pacientes", "icon": "users" },
@@ -111,8 +111,8 @@
     "summaryPrefix": "Tu Dentalpin:",
     "summaryCoreLabel": "del núcleo",
     "summaryOptionalLabel": "opcionales",
-    "summaryPrice": "Núcleo a 0 € siempre",
-    "caption": "El núcleo es gratis para siempre. Algunos opcionales podrán ser de pago en el futuro: siempre opt-in, siempre transparentes. Lo que no usas, no estorba."
+    "summaryPrice": "Núcleo a 0 € para siempre",
+    "caption": "El núcleo es gratis para siempre. Algunos opcionales podrán ser de pago en el futuro: siempre opcionales, siempre transparentes. Lo que no usas, no estorba."
   },
   "openSourceDentists": {
     "eyebrow": "CÓDIGO ABIERTO",
@@ -353,7 +353,7 @@
   },
   "bento": {
     "eyebrow": "LO QUE HACES TODOS LOS DÍAS",
-    "title": "Agenda, pacientes, odontograma y más, bien hechos",
+    "title": "Agenda, pacientes, odontograma y más. Bien hechos.",
     "subtitle": "Las cosas que abres cien veces al día, por fin pensadas para una clínica real. Activas las que usas, ocultas las que no.",
     "ctaAll": "Ver todos los módulos"
   },
@@ -380,7 +380,7 @@
   "dayInClinic": {
     "eyebrow": "ASÍ TE CAMBIA EL DÍA",
     "title": "Cómo cambia tu mañana el día que cambias de software.",
-    "lead": "Lo notas desde la primera cita. No es una función suelta: es cómo se siente todo el día.",
+    "lead": "Lo notas desde la primera cita. No es una función suelta: es cómo se nota durante todo el día.",
     "legacyLabel": "Con software tradicional",
     "dentalpinLabel": "Con Dentalpin",
     "scenes": [
@@ -388,7 +388,7 @@
         "time": "07:45",
         "moment": "Antes de abrir la clínica",
         "legacy": "Enciendes el PC del despacho para saber cuántos pacientes tienes hoy.",
-        "dentalpin": "Abres la agenda de mañana desde el sofá, en tu móvil, mientras tomas un café.",
+        "dentalpin": "Abres la agenda del día desde el sofá, en tu móvil, mientras te tomas un café.",
         "image": "scene-morning-agenda.png",
         "imageAlt": "Dentista revisando la agenda en el móvil desde casa"
       },
@@ -428,9 +428,9 @@
         "time": "Fin de mes",
         "moment": "Toca cerrar el mes",
         "legacy": "Pides a la gestoría que te mande los datos. Dicen que en dos semanas te los pasan.",
-        "dentalpin": "Abres reportes y ves qué has facturado, por tratamiento y por profesional.",
+        "dentalpin": "Abres los informes y ves qué has facturado, por tratamiento y por profesional.",
         "image": "scene-owner-reports.png",
-        "imageAlt": "Dueña de clínica revisando reportes en su despacho"
+        "imageAlt": "Dueña de clínica revisando informes en su despacho"
       }
     ]
   },
