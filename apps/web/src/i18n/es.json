@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Dentalpin - El software de gestión gratuito y abierto para tu clínica dental",
+    "title": "Dentalpin - Software de gestión de clínica dental open source",
     "description": "Pacientes, agenda, odontograma, presupuestos y facturación en una sola plataforma. Open source, modular y moderna. Tus datos en tu servidor, no en la nube de otro."
   },
   "nav": {
@@ -28,7 +28,7 @@
   "hero": {
     "eyebrow": "SOFTWARE DENTAL ABIERTO",
     "titleBefore": "",
-    "titleHighlight": "La alternativa moderna y gratuita al típico software de gestión de clínica.",
+    "titleHighlight": "La alternativa open source y gratis al típico software de gestión de clínica dental",
     "titleAfter": "",
     "titleAccent": "Pensado para la era de la IA.",
     "subtitle": "Agenda, pacientes, odontograma, presupuestos y facturación. Te llevas el código, lo instalas donde quieras y lo abres desde donde te haga falta. Núcleo gratis, abierto, modular.",

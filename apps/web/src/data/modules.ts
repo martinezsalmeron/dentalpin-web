@@ -91,6 +91,68 @@ export const MODULES: ModuleEntry[] = [
     screenshot: 'dental-chart.png',
   },
   {
+    slug: 'periodontograma',
+    slugEn: 'periodontogram',
+    domain: 'clinical',
+    icon: 'chart',
+    title: { es: 'Periodontograma', en: 'Periodontogram' },
+    tagline: {
+      es: 'Exploración periodontal SEPA, con histórico inmutable e índices al cerrar.',
+      en: 'SEPA periodontal exam, with an immutable history and indices on close.',
+    },
+    description: {
+      es: 'Una exploración periodontal completa que vive como sub-pestaña dentro del modo Diagnóstico, junto al odontograma. Cada sesión es un snapshot fechado e inmutable: capturas profundidad de sondaje, margen, sangrado, placa y supuración por sitio, y comparas la evolución del paciente con un slider de histórico. Los índices SEPA (BoP, PI, CAL medio, bolsas ≥5 mm) se computan al cerrar y quedan congelados en el snapshot. Módulo opcional, se instala desde Admin → Módulos.',
+      en: 'A full periodontal exam that lives as a sub-tab inside Diagnosis, next to the odontogram. Each session is a dated, immutable snapshot: you capture probing depth, gingival margin, bleeding, plaque and suppuration per site, then compare the patient over time with a history slider. SEPA indices (BoP, PI, mean CAL, ≥5 mm pockets) are computed on close and frozen into the snapshot. Optional module, installed from Admin → Modules.',
+    },
+    features: [
+      {
+        es: 'Captura SEPA por diente y 6 sitios (MV, V, DV, ML, L, DL): sondaje, margen, sangrado, placa y supuración.',
+        en: 'SEPA capture per tooth and 6 sites (MB, B, DB, ML, L, DL): probing, margin, bleeding, plaque and suppuration.',
+      },
+      {
+        es: 'Movilidad Miller (0–3), furca vestibular y lingual/palatina, y anchura de encía queratinizada.',
+        en: 'Miller mobility (0–3), buccal and lingual/palatine furcation, and keratinised gingiva width.',
+      },
+      {
+        es: 'Pronóstico individual por diente: bueno, medio, dudoso o sin esperanza.',
+        en: 'Per-tooth prognosis — good, fair, doubtful or hopeless.',
+      },
+      {
+        es: 'Chart SEPA en 4 filas con heatmap y marcadores pastel.',
+        en: 'SEPA chart in 4 rows with heatmap and pastel markers.',
+      },
+      {
+        es: 'Edición tipo hoja de cálculo: navegas y editas cada celda inline.',
+        en: 'Spreadsheet-style inline editing — navigate and edit any cell from the keyboard.',
+      },
+      {
+        es: 'Autoguardado a 600 ms, con guard de cambios pendientes al cerrar la pestaña.',
+        en: 'Autosave at 600 ms, with a beforeunload guard for pending changes.',
+      },
+      {
+        es: 'Prerellenado de implantes y ausentes leyendo el odontograma del paciente.',
+        en: 'Pre-fills implants and missing teeth from the patient odontogram.',
+      },
+      {
+        es: 'Slider de histórico: cada nodo es un snapshot cerrado e inmutable.',
+        en: 'History slider — every node is a closed, immutable snapshot.',
+      },
+      {
+        es: 'Índices SEPA (BoP %, PI %, CAL medio, bolsas ≥5 mm) computados y congelados al cerrar.',
+        en: 'SEPA indices (BoP %, PI %, mean CAL, ≥5 mm pockets) computed and frozen on close.',
+      },
+      {
+        es: 'Render de fixture de implante en lugar de la raíz natural cuando el diente está implantado.',
+        en: 'Implant fixture rendered in place of the natural root for implanted teeth.',
+      },
+      {
+        es: 'Dark mode y layout pensado para tablet horizontal en sillón.',
+        en: 'Dark mode and a layout tuned for landscape tablets chair-side.',
+      },
+    ],
+    screenshot: 'periodontogram.png',
+  },
+  {
     slug: 'pacientes',
     slugEn: 'patients',
     domain: 'clinical',
