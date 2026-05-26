@@ -12,16 +12,22 @@ const dict = useDict(locale);
 const demoUrl = DEMO_URL;
 const ghUrl = GITHUB_REPO;
 const installPath = `${pagePath(locale, 'pricing')}#self-hosted`;
+const manifestoPath = pagePath(locale, 'manifesto');
 ---
 
 <section class="relative overflow-hidden">
   <GradientBackdrop variant="hero" />
 
   <div class="mx-auto flex max-w-6xl flex-col items-center px-6 pt-20 pb-10 text-center sm:px-8 sm:pt-28">
-    <span class="inline-flex items-center gap-1.5 rounded-[var(--radius-pill)] border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--color-primary)] backdrop-blur">
-      <span class="h-1.5 w-1.5 rounded-full bg-[var(--color-primary)]"></span>
-      {dict.hero.eyebrow}
-    </span>
+    <a
+      href={manifestoPath}
+      class="group inline-flex max-w-2xl items-baseline gap-2 text-[14px] italic leading-snug text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text)]"
+    >
+      <span class="opacity-70 transition-opacity group-hover:opacity-100">&ldquo;{dict.hero.eyebrow}&rdquo;</span>
+      <span class="whitespace-nowrap text-[12px] font-medium not-italic text-[var(--color-primary)] underline decoration-dotted underline-offset-4">
+        {dict.hero.eyebrowCta}
+      </span>
+    </a>
 
     <h1 class="text-marketing-hero mt-6 max-w-5xl text-[var(--color-text)]">
       <span class="font-extrabold">{dict.hero.titleHighlight}</span>{' '}

@@ -1,0 +1,81 @@
+---
+import { useDict, pagePath, type Locale } from '~/i18n';
+import Section from '@dentalpin/ui/Section.astro';
+import GradientBackdrop from '@dentalpin/ui/GradientBackdrop.astro';
+import Icon from '@dentalpin/ui/Icon.astro';
+import { GITHUB_REPO, DOCS_URL } from '~/config/links';
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const dict = useDict(locale);
+const f = dict.forDevelopers;
+const techPath = pagePath(locale, 'technology');
+
+const targets: Record<string, string> = {
+  repo: GITHUB_REPO,
+  api: DOCS_URL,
+  modules: techPath,
+};
+---
+
+<section id="for-developers" class="relative overflow-hidden border-y border-[var(--color-border-subtle)] bg-[var(--color-surface-muted)]/40">
+  <GradientBackdrop variant="subtle" />
+
+  <Section padY="md">
+    <div class="max-w-3xl">
+      <p class="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--color-primary)]">
+        <span class="font-mono text-[10px] text-[var(--color-text-subtle)]">&lt;/&gt;</span>
+        {f.eyebrow}
+      </p>
+      <h2 class="text-marketing-h1 mt-3 text-[var(--color-text)]">
+        {f.title}
+      </h2>
+      <p class="mt-4 text-[15px] leading-[1.65] text-[var(--color-text-muted)]">
+        {f.lead}
+      </p>
+    </div>
+
+    <ul class="mt-12 grid gap-5 md:grid-cols-3">
+      {f.cards.map((card) => (
+        <li class="group relative flex flex-col rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 transition-all hover:-translate-y-0.5 hover:border-[var(--color-border-strong)] hover:shadow-[var(--shadow-md)]">
+          <span class="font-mono text-[10.5px] uppercase tracking-[0.18em] text-[var(--color-text-subtle)]">
+            {card.label}
+          </span>
+          <h3 class="mt-2 text-[18px] font-semibold leading-tight tracking-[-0.01em] text-[var(--color-text)]">
+            {card.title}
+          </h3>
+          <p class="mt-3 flex-1 text-[14px] leading-[1.6] text-[var(--color-text-muted)]">
+            {card.body}
+          </p>
+          <a
+            href={targets[card.key]}
+            target={card.key === 'repo' ? '_blank' : undefined}
+            rel={card.key === 'repo' ? 'noopener' : undefined}
+            class="mt-5 inline-flex items-center gap-1.5 text-[13px] font-semibold text-[var(--color-primary)] transition-colors hover:text-[var(--color-primary-hover)]"
+          >
+            {card.cta}
+            <span class="transition-transform group-hover:translate-x-0.5">
+              <Icon name="arrow-right" size={13} />
+            </span>
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <div class="mt-10 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[#0b0a09]">
+      <div class="flex items-center gap-2 border-b border-white/5 px-4 py-2.5">
+        <span class="h-2.5 w-2.5 rounded-full bg-[#ff5f57]"></span>
+        <span class="h-2.5 w-2.5 rounded-full bg-[#febc2e]"></span>
+        <span class="h-2.5 w-2.5 rounded-full bg-[#28c840]"></span>
+        <span class="ml-3 font-mono text-[11px] uppercase tracking-wider text-white/40">
+          {f.snippetLabel}
+        </span>
+      </div>
+      <pre class="overflow-x-auto px-5 py-4 font-mono text-[14px] leading-relaxed text-white/90"><code><span class="text-white/40">$</span> {f.snippet}</code></pre>
+    </div>
+
+    <p class="mt-3 text-[12.5px] text-[var(--color-text-subtle)]">
+      {f.snippetFootnote}
+    </p>
+  </Section>
+</section>

@@ -26,12 +26,13 @@
     "footer": "Ver todas las funcionalidades →"
   },
   "hero": {
-    "eyebrow": "SOFTWARE DENTAL ABIERTO",
+    "eyebrow": "Ninguna clínica debería ser rehén de su software.",
+    "eyebrowCta": "Leer el manifiesto",
     "titleBefore": "",
-    "titleHighlight": "La alternativa open source y gratis al típico software de gestión de clínica dental",
+    "titleHighlight": "El software dental que tu clínica merece en 2026.",
     "titleAfter": "",
-    "titleAccent": "Pensado para la era de la IA.",
-    "subtitle": "Agenda, pacientes, odontograma, presupuestos y facturación. Te llevas el código, lo instalas donde quieras y lo abres desde donde te haga falta. Núcleo gratis, abierto, modular.",
+    "titleAccent": "Gratis. Tuyo. Donde trabajes.",
+    "subtitle": "Agenda, pacientes, odontograma, presupuestos y facturación. Sin cuotas por sillón, sin datos cautivos, sin pantallas de 2010.",
     "ctaPrimary": "Probar la demo",
     "ctaSecondary": "Descargar e instalar",
     "ghPill": "Ver el código en GitHub",
@@ -39,48 +40,44 @@
     "trustPre": "Respaldado por ",
     "trustPost": ""
   },
-  "pillars": {
-    "eyebrow": "LO QUE NINGÚN OTRO SOFTWARE DENTAL HACE",
-    "title": "Tres cosas que nos hacen diferentes.",
-    "lead": "Más allá de los módulos y las pantallas, hay tres decisiones de fondo que separan a Dentalpin del resto.",
+  "promises": {
+    "eyebrow": "LO QUE TU CLÍNICA NOTA EL PRIMER DÍA",
+    "title": "Cuatro promesas, no cuatro funciones.",
+    "lead": "Esto es lo que cambia el día que cambias. No son adjetivos: son consecuencias.",
     "items": [
       {
         "key": "yours",
-        "label": "Es tuyo",
-        "title": "El código es tuyo. Decides tú dónde vive.",
-        "body": "Lo instalas donde quieras (en tu clínica, en un VPS, en la nube que elijas) y lo abres desde donde te haga falta.",
-        "linkLabel": "Cómo funciona el precio",
-        "anchor": "#price"
+        "label": "Tus datos",
+        "title": "Tus datos no son rehenes.",
+        "body": "Viven en tu servidor, en la nube que tú elijas, o en un portátil que se va contigo. Si Dentalpin desaparece mañana, tu clínica sigue trabajando.",
+        "linkLabel": "Cómo funciona",
+        "anchor": "#where-you-work"
       },
       {
-        "key": "modular",
-        "label": "Es modular",
-        "title": "Solo lo que tú usas, encendido.",
-        "body": "Activas la agenda, el odontograma, las funciones que necesites. Las demás se quedan apagadas y no estorban.",
-        "linkLabel": "Ver los módulos",
+        "key": "price",
+        "label": "Tu factura",
+        "title": "Tu factura no crece con tu clínica.",
+        "body": "Sin cuotas por sillón, dentista o paciente. El núcleo es cero euros y se queda en cero euros.",
+        "linkLabel": "Ver los módulos y el precio",
         "anchor": "#modules"
       },
       {
         "key": "open",
-        "label": "Es libre",
-        "title": "El código es público. Lo audita quien tú quieras.",
-        "body": "Cualquier informático que contrates puede revisarlo, mejorarlo o adaptarlo a tu clínica.",
-        "linkLabel": "Por qué importa",
-        "anchor": "#open-source"
+        "label": "Tu software",
+        "title": "Tu software no envejece contigo.",
+        "body": "Código público y modular. Cualquier informático puede revisarlo, mejorarlo o construir encima. Lo que mejoran otras clínicas, lo aprovechas tú.",
+        "linkLabel": "Para tu informático",
+        "anchor": "#for-developers"
+      },
+      {
+        "key": "ux",
+        "label": "Tu pantalla",
+        "title": "Tu pantalla, pensada para 8 horas al día.",
+        "body": "Modo oscuro por defecto, espacios calmados, sin clics de más. Hecha para una clínica real, no para una demo.",
+        "linkLabel": "Ver un día completo",
+        "anchor": "#day-in-clinic"
       }
     ]
-  },
-  "priceClarity": {
-    "eyebrow": "PRECIO",
-    "title": "El núcleo, a cero. Para siempre.",
-    "lead": "Lo que cualquier clínica usa cada día (agenda, pacientes, odontograma, presupuestos, facturación) está en el núcleo. Y el núcleo es gratis. Sin cuotas por sillón, ni dentista, ni paciente.",
-    "claims": [
-      "Sin cuotas por sillón, dentista o paciente.",
-      "Núcleo completo, sin extras escondidos dentro.",
-      "Si algún día hay módulos extra de pago, serán opcionales y transparentes."
-    ],
-    "footnote": "¿Prefieres que lo gestionemos nosotros en la nube? Próximamente, opcional, transparente.",
-    "footnoteCta": "Ver opciones de precio"
   },
   "liveModules": {
     "eyebrow": "MÓDULOS",
@@ -112,37 +109,47 @@
     "summaryCoreLabel": "del núcleo",
     "summaryOptionalLabel": "opcionales",
     "summaryPrice": "Núcleo a 0 € para siempre",
-    "caption": "El núcleo es gratis para siempre. Algunos opcionales podrán ser de pago en el futuro: siempre opcionales, siempre transparentes. Lo que no usas, no estorba."
+    "caption": "El núcleo es gratis para siempre. Algunos opcionales podrán ser de pago en el futuro: siempre opcionales, siempre transparentes. Lo que no usas, no estorba.",
+    "priceStrip": "El núcleo, gratis para siempre. Sin cuotas por sillón, dentista o paciente.",
+    "comparison": {
+      "legacyLabel": "Software tradicional",
+      "legacyValue": "Cientos de euros al mes",
+      "dentalpinLabel": "Dentalpin",
+      "dentalpinValue": "0 €",
+      "footnote": "Sin cuotas por sillón ni por dentista. Cifras orientativas de software dental tradicional."
+    },
+    "allFeaturesCta": "Ver todas las funcionalidades"
   },
-  "openSourceDentists": {
-    "eyebrow": "CÓDIGO ABIERTO",
-    "title": "\"Open source\" suena a friki. Lo que significa para tu clínica es muy concreto.",
-    "lead": "No tienes que entender una línea de código. Lo importante es lo que cambia para ti.",
-    "ctaLabel": "Ver el repositorio en GitHub",
-    "items": [
+  "forDevelopers": {
+    "eyebrow": "PARA TU INFORMÁTICO O EQUIPO TÉCNICO",
+    "title": "Abierto, documentado y fácil de tocar.",
+    "lead": "Repositorio público, API REST con OpenAPI, módulos que se montan en una tarde. Como esperarías de un proyecto serio en 2026.",
+    "cards": [
       {
-        "title": "Si Dentalpin desaparece mañana, tu software sigue funcionando.",
-        "body": "El código está publicado. No depende de que nosotros sigamos vivos. Ningún proveedor te puede dejar tirado."
+        "key": "repo",
+        "label": "Repositorio público",
+        "title": "El código vive en GitHub.",
+        "body": "Lo clonas, lo auditas y construyes encima. Hoy bajo BSL 1.1, mañana Apache 2.0.",
+        "cta": "Ver el repositorio"
       },
       {
-        "title": "Cualquier informático que contrates puede tocarlo.",
-        "body": "No estás atado a \"el de Dentalpin\". Tu equipo IT, una empresa local, o nosotros, cualquiera puede revisarlo o adaptarlo a tu clínica."
+        "key": "api",
+        "label": "API REST",
+        "title": "OpenAPI documentado.",
+        "body": "FastAPI, Pydantic, contratos claros. Cualquier integración que quieras hacer la haces tú, sin pedirnos permiso.",
+        "cta": "Ver la documentación"
       },
       {
-        "title": "Lo que mejoran otras clínicas, lo aprovechas tú.",
-        "body": "Si una clínica en Madrid publica un módulo abierto, mañana lo puedes usar tú en Barcelona. Las mejoras del núcleo llegan a todos."
+        "key": "modules",
+        "label": "Módulos",
+        "title": "Un módulo en una tarde.",
+        "body": "manifest.yaml, migraciones de Alembic, hooks de UI y un bus de eventos. Tres pasos: declarar, migrar, registrar.",
+        "cta": "Cómo se construye"
       }
     ],
-    "flow": {
-      "label": "QUIÉN TOCA EL CÓDIGO",
-      "sources": [
-        { "title": "Equipo Dentalpin", "body": "El núcleo y los módulos oficiales." },
-        { "title": "Tu informático", "body": "Tu equipo IT o la empresa local que contrates." },
-        { "title": "Comunidad", "body": "Otras clínicas y desarrolladores que comparten." }
-      ],
-      "hub": "Repositorio público",
-      "destination": "Tu instalación de Dentalpin"
-    }
+    "snippetLabel": "Self-host en un comando",
+    "snippet": "docker compose up -d",
+    "snippetFootnote": "Listo en menos de media hora en un VPS razonable."
   },
   "demoDual": {
     "pullquote": "No estamos aquí para vender otro software dental.",
@@ -351,12 +358,6 @@
       "ctaSecondary": "Probar la demo"
     }
   },
-  "bento": {
-    "eyebrow": "LO QUE HACES TODOS LOS DÍAS",
-    "title": "Agenda, pacientes, odontograma y más. Bien hechos.",
-    "subtitle": "Las cosas que abres cien veces al día, por fin pensadas para una clínica real. Activas las que usas, ocultas las que no.",
-    "ctaAll": "Ver todos los módulos"
-  },
   "modular": {
     "eyebrow": "ARQUITECTURA DE PLUGINS",
     "title": "Un núcleo pequeño. Módulos que enchufan.",
@@ -485,59 +486,6 @@
     "title": "Un stack moderno y deliberadamente aburrido.",
     "body": "Elegimos lo que eligen los equipos serios. Nada exótico, nada heredado."
   },
-  "vsLegacy": {
-    "eyebrow": "LO QUE TIENES HOY VS LO QUE PUEDES TENER",
-    "title": "Lo que cambia, el día que cambias.",
-    "lead": "Los programas que el sector ha usado veinte años hicieron su trabajo. Pero ya no encajan con cómo se trabaja en una clínica hoy. Esta es la diferencia, en lo que notas cada mañana.",
-    "legacy": {
-      "title": "Software dental tradicional",
-      "subtitle": "Una década atrás. O dos.",
-      "tag": "v.~2010",
-      "bullets": [
-        "Funciona solo en el PC de la clínica",
-        "Tu historial, en su servidor, sin copia para ti",
-        "No hay app móvil, o la cobran aparte",
-        "Pagas por usuario, sede y módulo",
-        "Pantallas heredadas de Windows XP",
-        "Hay que instalar una app rara en cada equipo",
-        "Tecnología propietaria que envejece sola",
-        "Exportar tus datos cuesta semanas y dinero"
-      ]
-    },
-    "dentalpin": {
-      "badge": "2026",
-      "title": "Dentalpin",
-      "subtitle": "Abierto, moderno y donde tú trabajes.",
-      "tag": "v.2026",
-      "bullets": [
-        "Abierto en consulta, en casa y en tu móvil",
-        "Tus datos en tu servidor o donde tú elijas",
-        "Mismo software en cualquier dispositivo, gratis",
-        "Todos los módulos incluidos, sin sorpresas",
-        "Interfaz calma, rápida y con modo oscuro",
-        "Funciona en el navegador, sin nada que instalar",
-        "Estándares web abiertos, no tecnología cerrada",
-        "Exporta tu base de datos cuando te apetezca"
-      ]
-    },
-    "table": {
-      "headers": {
-        "attr": "Lo que notas",
-        "legacy": "Software tradicional",
-        "dentalpin": "Dentalpin"
-      },
-      "rows": [
-        { "attr": "Acceso", "legacy": "Solo en el PC de la clínica", "dentalpin": "Cualquier ordenador, tablet o móvil" },
-        { "attr": "Tus datos", "legacy": "En su nube o su servidor", "dentalpin": "En tu servidor o donde tú decidas" },
-        { "attr": "Precio", "legacy": "Por usuario, sede y módulo", "dentalpin": "Gratis y todos los módulos incluidos" },
-        { "attr": "Migración", "legacy": "Semanas y cuatro cifras", "dentalpin": "Exportas tu base cuando quieres" },
-        { "attr": "Actualizaciones", "legacy": "Cuando ellos deciden", "dentalpin": "Cuando te viene bien" },
-        { "attr": "Soporte", "legacy": "Tickets y esperar", "dentalpin": "GitHub abierto y comunidad activa" },
-        { "attr": "Interfaz", "legacy": "Heredada de los 2000", "dentalpin": "Calma, oscura por defecto, rápida" }
-      ]
-    },
-    "punchline": "El cambio no va de funcionalidades. Va de quién manda en tu clínica."
-  },
   "oss": {
     "eyebrow": "LICENCIA",
     "title": "BSL 1.1 hoy. Apache 2.0 mañana.",
@@ -565,7 +513,7 @@
       },
       {
         "title": "Agentes IA reales",
-        "body": "Agenda inteligente, follow-ups automáticos y soporte a la decisión clínica — siempre con un humano que aprueba antes de ejecutar."
+        "body": "Agenda inteligente, follow-ups automáticos y soporte a la decisión clínica. Siempre con un humano que aprueba antes de ejecutar."
       }
     ]
   },

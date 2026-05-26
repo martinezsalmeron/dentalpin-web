@@ -3,14 +3,14 @@ import { isLocale, type Locale } from '~/i18n';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Hero from '~/components/Hero.astro';
 import PillarsStrip from '~/components/PillarsStrip.astro';
+import WhereYouWork from '~/components/WhereYouWork.astro';
 import DayInClinic from '~/components/DayInClinic.astro';
-import PriceClarity from '~/components/PriceClarity.astro';
 import LiveModulesGrid from '~/components/LiveModulesGrid.astro';
 import VerifactuCallout from '~/components/VerifactuCallout.astro';
-import OpenSourceForDentists from '~/components/OpenSourceForDentists.astro';
-import VsLegacy from '~/components/VsLegacy.astro';
-import BentoFeatures from '~/components/BentoFeatures.astro';
+import ForDevelopers from '~/components/ForDevelopers.astro';
 import LiveDemoCard from '~/components/LiveDemoCard.astro';
+import SectionAnchor from '~/components/SectionAnchor.astro';
+import ToothScrollIndicator from '~/components/ToothScrollIndicator.astro';
 
 export function getStaticPaths() {
   return [{ params: { lang: 'es' } }, { params: { lang: 'en' } }];
@@ -22,14 +22,33 @@ const locale = lang as Locale;
 ---
 
 <BaseLayout locale={locale}>
+  <SectionAnchor fdi="11" />
   <Hero locale={locale} />
+
+  <SectionAnchor fdi="12" />
   <PillarsStrip locale={locale} />
+
+  <SectionAnchor fdi="13" />
+  <WhereYouWork locale={locale} />
+
+  <SectionAnchor fdi="14" />
   <DayInClinic locale={locale} />
-  <PriceClarity locale={locale} />
+
+  <SectionAnchor fdi="15" />
   <LiveModulesGrid locale={locale} />
-  <VerifactuCallout locale={locale} />
-  <OpenSourceForDentists locale={locale} />
-  <VsLegacy locale={locale} />
-  <BentoFeatures locale={locale} />
+
+  {locale === 'es' && (
+    <>
+      <SectionAnchor fdi="16" />
+      <VerifactuCallout locale={locale} />
+    </>
+  )}
+
+  <SectionAnchor fdi="17" />
+  <ForDevelopers locale={locale} />
+
+  <SectionAnchor fdi="18" />
   <LiveDemoCard locale={locale} />
+
+  <ToothScrollIndicator />
 </BaseLayout>

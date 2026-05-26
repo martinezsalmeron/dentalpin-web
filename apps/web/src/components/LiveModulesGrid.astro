@@ -1,6 +1,7 @@
 ---
-import { useDict, type Locale } from '~/i18n';
+import { useDict, pagePath, type Locale } from '~/i18n';
 import Section from '@dentalpin/ui/Section.astro';
+import Icon from '@dentalpin/ui/Icon.astro';
 import ModuleIcon from './infographics/ModuleIcon.astro';
 
 interface Props { locale: Locale; }
@@ -8,6 +9,7 @@ const { locale } = Astro.props;
 const dict = useDict(locale);
 const m = dict.liveModules;
 const defaultOptionalCount = m.optional.filter((o: any) => o.defaultOn && !o.soon).length;
+const featuresHref = pagePath(locale, 'features');
 ---
 
 <Section id="modules" padY="md">
@@ -20,6 +22,15 @@ const defaultOptionalCount = m.optional.filter((o: any) => o.defaultOn && !o.soo
     </h2>
     <p class="mt-4 text-[15px] text-[var(--color-text-muted)]">
       {m.lead}
+    </p>
+  </div>
+
+  <!-- Price strip: absorbs PriceClarity into a single confident line -->
+  <div class="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 rounded-[var(--radius-lg)] border border-[var(--color-primary)] bg-[var(--color-primary-soft)] px-5 py-4">
+    <span class="font-mono text-[clamp(1.4rem,2vw+0.5rem,1.9rem)] font-black leading-none text-[var(--color-primary)]">0 €</span>
+    <span class="h-7 w-px bg-[var(--color-primary)] opacity-30"></span>
+    <p class="flex-1 min-w-[12rem] text-[14.5px] font-medium leading-[1.45] text-[var(--color-primary-soft-text)]">
+      {m.priceStrip}
     </p>
   </div>
 
@@ -101,21 +112,45 @@ const defaultOptionalCount = m.optional.filter((o: any) => o.defaultOn && !o.soo
       </ul>
     </div>
 
-    <!-- Live summary -->
+    <!-- Live summary + comparison chip -->
     <div class="border-t border-[var(--color-border-subtle)] bg-[var(--color-surface)] px-6 py-5 sm:px-8">
-      <p class="text-[14.5px] text-[var(--color-text)]" aria-live="polite">
-        <span class="font-semibold">{m.summaryPrefix}</span>{' '}
-        <span class="font-mono tabular-nums">{m.core.length}</span> {m.summaryCoreLabel} +{' '}
-        <span class="font-mono tabular-nums" data-modules-optional-count>{defaultOptionalCount}</span>{' '}
-        {m.summaryOptionalLabel}.{' '}
-        <span class="font-semibold text-[var(--color-primary)]">{m.summaryPrice}</span>.
-      </p>
+      <div class="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
+        <p class="text-[14.5px] text-[var(--color-text)]" aria-live="polite">
+          <span class="font-semibold">{m.summaryPrefix}</span>{' '}
+          <span class="font-mono tabular-nums">{m.core.length}</span> {m.summaryCoreLabel} +{' '}
+          <span class="font-mono tabular-nums" data-modules-optional-count>{defaultOptionalCount}</span>{' '}
+          {m.summaryOptionalLabel}.{' '}
+          <span class="font-semibold text-[var(--color-primary)]">{m.summaryPrice}</span>.
+        </p>
+
+        <div class="flex items-center gap-2 rounded-[var(--radius-pill)] border border-[var(--color-border)] bg-[var(--color-surface-muted)] px-3 py-1.5 text-[12px]">
+          <span class="text-[var(--color-text-muted)]">
+            <span class="font-medium">{m.comparison.legacyLabel}:</span>{' '}
+            <span class="line-through opacity-70">{m.comparison.legacyValue}</span>
+          </span>
+          <span class="text-[var(--color-border-strong)]">→</span>
+          <span class="font-mono font-bold text-[var(--color-primary)]">{m.comparison.dentalpinValue}</span>
+        </div>
+      </div>
     </div>
   </div>
 
   <p class="mt-6 max-w-3xl text-[13.5px] leading-[1.6] text-[var(--color-text-muted)]">
     {m.caption}
   </p>
+  <p class="mt-1 max-w-3xl text-[11.5px] leading-[1.5] text-[var(--color-text-subtle)]">
+    {m.comparison.footnote}
+  </p>
+
+  <div class="mt-8">
+    <a
+      href={featuresHref}
+      class="inline-flex items-center gap-1.5 rounded-[var(--radius-pill)] border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-2 text-[13px] font-semibold text-[var(--color-text)] transition-colors hover:border-[var(--color-border-strong)] hover:text-[var(--color-primary)]"
+    >
+      {m.allFeaturesCta}
+      <Icon name="arrow-right" size={13} />
+    </a>
+  </div>
 </Section>
 
 <script>
