@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Dentalpin - The free and open management software for your dental clinic",
-    "description": "Patients, calendar, odontogram, budgets and billing in one open, modular, modern platform. Your data, on your server. Never on someone else's cloud."
+    "title": "Dentalpin · Free and open source dental clinic management software",
+    "description": "Free and open source dental clinic management software: calendar, patients, odontogram, quotes and billing. The code is yours, install it wherever you want, with no per-chair or per-dentist fees."
   },
   "nav": {
     "features": "Features",
@@ -31,8 +31,9 @@
     "titleBefore": "",
     "titleHighlight": "The dental software your clinic deserves in 2026.",
     "titleAfter": "",
-    "titleAccent": "Free. Yours. Wherever you work.",
-    "subtitle": "Calendar, patients, odontogram, quotes and billing. No per-chair fees, no captive data, no Windows XP screens.",
+    "titleAccent": "Open source. Free. Yours.",
+    "subtitle": "Free, open source dental clinic management software. Calendar, patients, odontogram, quotes and billing. The code is yours, install it wherever you want, with no per-chair or per-dentist fees.",
+    "subPill": "Open source · Free forever · Self-host on your server",
     "ctaPrimary": "Try the demo",
     "ctaSecondary": "Download and install",
     "ghPill": "See the code on GitHub",
@@ -63,9 +64,9 @@
       },
       {
         "key": "open",
-        "label": "Your software",
-        "title": "Your software does not age with you.",
-        "body": "Public, modular code. Any IT person can read it, improve it or build on it. What other clinics improve, you get to use too.",
+        "label": "Open source",
+        "title": "Open source for real. Not as a label.",
+        "body": "The code is published on GitHub. Any IT person can audit it, improve it or build modules on top. If Dentalpin disappears tomorrow, your clinic keeps running. What other clinics improve, you get to use too.",
         "linkLabel": "For your IT team",
         "anchor": "#for-developers"
       },

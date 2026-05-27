@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Dentalpin - Software de gestión de clínica dental open source",
-    "description": "Pacientes, agenda, odontograma, presupuestos y facturación en una sola plataforma. Open source, modular y moderna. Tus datos en tu servidor, no en la nube de otro."
+    "title": "Dentalpin · Software de gestión de clínica dental open source y gratis",
+    "description": "Software de gestión de clínica dental gratis y open source: agenda, pacientes, odontograma, presupuestos y facturación. Te llevas el código, lo instalas donde quieras, sin cuotas por sillón ni por dentista."
   },
   "nav": {
     "features": "Funcionalidades",
@@ -31,8 +31,9 @@
     "titleBefore": "",
     "titleHighlight": "El software dental que tu clínica merece en 2026.",
     "titleAfter": "",
-    "titleAccent": "Gratis. Tuyo. Donde trabajes.",
-    "subtitle": "Agenda, pacientes, odontograma, presupuestos y facturación. Sin cuotas por sillón, sin datos cautivos, sin pantallas de 2010.",
+    "titleAccent": "Open source. Gratis. Tuyo.",
+    "subtitle": "Software de gestión de clínica dental open source y gratis. Agenda, pacientes, odontograma, presupuestos y facturación. Te llevas el código, lo instalas donde quieras, sin cuotas por sillón ni por dentista.",
+    "subPill": "Open source · Gratis para siempre · Self-host en tu servidor",
     "ctaPrimary": "Probar la demo",
     "ctaSecondary": "Descargar e instalar",
     "ghPill": "Ver el código en GitHub",
@@ -63,9 +64,9 @@
       },
       {
         "key": "open",
-        "label": "Tu software",
-        "title": "Tu software no envejece contigo.",
-        "body": "Código público y modular. Cualquier informático puede revisarlo, mejorarlo o construir encima. Lo que mejoran otras clínicas, lo aprovechas tú.",
+        "label": "Open source",
+        "title": "Open source de verdad. No de adorno.",
+        "body": "El código está publicado en GitHub. Cualquier informático puede auditarlo, mejorarlo o construir módulos encima. Si Dentalpin desaparece mañana, tu clínica sigue. Lo que mejoran otras clínicas, lo aprovechas tú.",
         "linkLabel": "Para tu informático",
         "anchor": "#for-developers"
       },
