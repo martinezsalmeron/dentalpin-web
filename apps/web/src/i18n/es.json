@@ -103,7 +103,7 @@
       { "name": "Multi-clínica", "icon": "building", "soon": false, "defaultOn": false },
       { "name": "Verifactu", "icon": "shield", "soon": false, "defaultOn": false, "country": "ES" },
       { "name": "WhatsApp Business", "icon": "message", "soon": true, "defaultOn": false },
-      { "name": "Asistente de IA", "icon": "sparkles", "soon": true, "defaultOn": false }
+      { "name": "Agente de IA", "icon": "sparkles", "soon": false, "defaultOn": false }
     ],
     "soonBadge": "Próximamente",
     "summaryPrefix": "Tu Dentalpin:",
@@ -120,6 +120,20 @@
       "footnote": "Sin cuotas por sillón ni por dentista. Cifras orientativas de software dental tradicional."
     },
     "allFeaturesCta": "Ver todas las funcionalidades"
+  },
+  "aiAgentCallout": {
+    "eyebrow": "Agente de IA",
+    "title": "Habla con tu clínica y deja que el agente la maneje",
+    "body": "Pídele encontrar un paciente, liberar un hueco, perseguir un presupuesto sin respuesta o resumirte el día. Ejecuta las mismas operaciones que harías tú en la interfaz, en español o inglés y sobre tus datos reales. Las escrituras se detienen a pedirte confirmación y los datos del paciente se tokenizan antes de salir hacia el proveedor de IA.",
+    "cta": "Ver el Agente de IA",
+    "panelLabel": "En cualquier pantalla",
+    "panelKey": "⌘ / Ctrl + K",
+    "panelSub": "Abre el agente con el paciente o la cita que tienes delante.",
+    "checks": [
+      "Hace, no solo responde: agenda, reprograma y cobra encadenando pasos.",
+      "Paridad RBAC: nunca ve ni hace más de lo que tú puedes en la interfaz.",
+      "PHI tokenizada y confirmación humana antes de cualquier escritura."
+    ]
   },
   "forDevelopers": {
     "eyebrow": "PARA TU INFORMÁTICO O EQUIPO TÉCNICO",

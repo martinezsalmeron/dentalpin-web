@@ -614,38 +614,63 @@ export const MODULES: ModuleEntry[] = [
     screenshot: 'api-docs.png',
   },
   {
-    slug: 'ai-ready',
+    slug: 'agente-ia',
+    slugEn: 'ai-agent',
     domain: 'platform',
     icon: 'sparkles',
-    title: { es: 'AI-Ready', en: 'AI-Ready' },
+    title: { es: 'Agente de IA', en: 'AI agent' },
     tagline: {
-      es: 'Tool registry y cola de aprobación humana, para automatizar con cabeza.',
-      en: 'A tool registry and a human approval queue — automation with a brain.',
+      es: 'Habla con tu clínica. El agente busca, agenda y cobra ejecutando las mismas acciones que la interfaz.',
+      en: 'Talk to your clinic. The agent searches, books and bills by running the same operations the UI does.',
     },
     description: {
-      es: 'La plataforma viene preparada para trabajar con agentes. Una registry expone acciones internas de forma segura; una cola de aprobación deja que un humano revise lo que el agente propone antes de ejecutarlo. IA seria, sin teatro.',
-      en: 'The platform is prepared to work with agents. A registry exposes internal actions safely; an approval queue lets a human review what an agent proposes before it runs. Serious AI, no theatre.',
+      es: 'No es un chatbot pegado encima. Es un agente que planifica y ejecuta tareas de varios pasos llamando a las operaciones reales de Dentalpin: pacientes, agenda, recordatorios, presupuestos, pagos y reportes. Cada acción se vuelve a comprobar contra los permisos del usuario, así que el agente solo ve y hace lo que esa persona haría desde la interfaz, dentro de su clínica. Los datos del paciente se tokenizan antes de salir hacia el proveedor de IA, y cualquier acción que modifique datos se detiene a pedirte confirmación.',
+      en: 'Not a chatbot bolted on top. It is an agent that plans and executes multi-step tasks by calling the real operations in Dentalpin: patients, schedule, recalls, budgets, payments and reports. Every action is re-checked against the user’s permissions, so the agent only sees and does what that person could through the UI, scoped to their clinic. Patient data is tokenized before it leaves for the AI provider, and any action that changes data pauses to ask for your confirmation.',
     },
     features: [
       {
-        es: 'Tool registry: expone acciones internas a agentes de forma segura.',
-        en: 'Tool registry: exposes internal actions to agents safely.',
+        es: 'Hace, no solo responde: busca pacientes, agenda o reprograma citas, registra pagos y saca la facturación del mes, encadenando pasos hasta cerrar la tarea.',
+        en: 'It does, not just answers: searches patients, books or reschedules appointments, records payments and pulls the month’s collections, chaining steps until the task is done.',
       },
       {
-        es: 'Approval queue: humanos revisan antes de ejecutar.',
-        en: 'Approval queue: humans review before execution.',
+        es: 'Paridad RBAC: cada llamada se revalida contra los permisos del usuario en el punto de control de ejecución. Nunca hace más de lo que esa persona puede en la interfaz.',
+        en: 'RBAC parity: every call is re-checked against the user’s permissions at the execution chokepoint. Never does more than that person could through the UI.',
       },
       {
-        es: 'Base para agenda inteligente, follow-ups automáticos y clinical decision support.',
-        en: 'Foundation for intelligent scheduling, automated follow-ups and clinical decision support.',
+        es: 'Redacción de PHI por defecto: nombres, teléfonos, emails e IDs de paciente se cambian por tokens deterministas antes de salir; el texto clínico libre se queda fuera de la nube.',
+        en: 'PHI redaction on by default: patient names, phones, emails and IDs are swapped for deterministic tokens before they leave; free-text clinical data stays off the cloud path.',
       },
       {
-        es: 'Sin teatro de IA: se envía cuando se envía.',
-        en: 'No AI theatre — we ship when we ship.',
+        es: 'Las escrituras piden confirmación: agendar, cobrar o editar se pausa a mitad de conversación hasta tu visto bueno explícito.',
+        en: 'Writes ask first: booking, billing or editing pauses mid-conversation until you explicitly confirm.',
+      },
+      {
+        es: 'Playbooks guiados: resumen del día, preparar una visita, llenar un hueco, recalls pendientes o presupuestos sin respuesta, en un toque.',
+        en: 'Guided playbooks: daily briefing, prepare a visit, fill a gap, due recalls or unanswered budgets, in one tap.',
+      },
+      {
+        es: 'Briefings proactivos: resumen matinal determinista por email, sin LLM y sin PHI fuera, con la agenda del día, recalls y presupuestos abiertos.',
+        en: 'Proactive briefings: a deterministic morning digest by email, no LLM and no PHI off-site, with the day’s schedule, due recalls and open budgets.',
+      },
+      {
+        es: 'Cmd/Ctrl+K en cualquier pantalla: abre el agente con el contexto del paciente o la cita que tienes delante, sin repetir nada.',
+        en: 'Cmd/Ctrl+K on any screen: opens the agent with the patient or appointment in front of you as context, nothing to restate.',
+      },
+      {
+        es: 'Modular por diseño: consume las herramientas que publica cada módulo en un registry compartido, así que crece solo según instalas módulos.',
+        en: 'Modular by design: it consumes the tools each module publishes through a shared registry, so it grows automatically as you install modules.',
+      },
+      {
+        es: 'Agnóstico de proveedor: abstracción de proveedor LLM, con modelo y presupuesto de tokens por clínica configurables en cada despliegue.',
+        en: 'Vendor-agnostic: an LLM-provider abstraction, with model and per-clinic token budgets configurable per deployment.',
+      },
+      {
+        es: 'Todo queda auditado: cada herramienta que invoca el agente se registra en el log de auditoría.',
+        en: 'Everything is audited: every tool the agent invokes lands in the audit log.',
       },
     ],
-    screenshot: 'ai-approval-queue.png',
-    status: 'roadmap',
+    screenshot: 'ai-copilot.png',
+    status: 'stable',
   },
 ];
 

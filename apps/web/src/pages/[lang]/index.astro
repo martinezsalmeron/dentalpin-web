@@ -9,6 +9,7 @@ import LiveModulesGrid from '~/components/LiveModulesGrid.astro';
 import VerifactuCallout from '~/components/VerifactuCallout.astro';
 import ForDevelopers from '~/components/ForDevelopers.astro';
 import LiveDemoCard from '~/components/LiveDemoCard.astro';
+import AiAgentCallout from '~/components/AiAgentCallout.astro';
 
 export function getStaticPaths() {
   return [{ params: { lang: 'es' } }, { params: { lang: 'en' } }];
@@ -23,6 +24,8 @@ const locale = lang as Locale;
   <Hero locale={locale} />
 
   <PillarsStrip locale={locale} />
+
+  <AiAgentCallout locale={locale} />
 
   <WhereYouWork locale={locale} />
 

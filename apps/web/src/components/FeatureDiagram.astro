@@ -3,7 +3,7 @@ import type { Locale } from '~/i18n';
 import ModularOrbit from './ModularOrbit.astro';
 
 interface Props {
-  slug: 'modulos' | 'api' | 'ai-ready';
+  slug: 'modulos' | 'api';
   locale: Locale;
 }
 
@@ -26,20 +26,6 @@ const methodClasses: Record<string, string> = {
   post: 'bg-[var(--color-success-soft)] text-[var(--color-success-text)]',
   patch: 'bg-[var(--color-warning-soft)] text-[var(--color-warning-text)]',
 };
-
-const aiSteps = isEs
-  ? [
-      { title: 'Agente IA', body: 'Propone una acción (agendar, redactar, cobrar).' },
-      { title: 'Tool Registry', body: 'Traduce la intención a una llamada interna segura.' },
-      { title: 'Aprobación humana', body: 'Un profesional revisa, ajusta y confirma.' },
-      { title: 'Ejecución', body: 'La acción se ejecuta con traza completa.' },
-    ]
-  : [
-      { title: 'AI agent', body: 'Proposes an action (schedule, draft, charge).' },
-      { title: 'Tool registry', body: 'Translates intent into a safe internal call.' },
-      { title: 'Human approval', body: 'A professional reviews, tweaks, confirms.' },
-      { title: 'Execution', body: 'The action runs, with a full audit trail.' },
-    ];
 ---
 
 {slug === 'modulos' && (
@@ -76,38 +62,5 @@ const aiSteps = isEs
       <span>JWT · RBAC · {isEs ? 'Misma API que la app web' : 'Same API the web app uses'}</span>
       <span class="font-mono normal-case tracking-normal text-[var(--color-text-subtle)]">+ {isEs ? '120 endpoints más' : '120 more endpoints'}</span>
     </footer>
-  </figure>
-)}
-
-{slug === 'ai-ready' && (
-  <figure class="relative overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-8 shadow-[var(--shadow-sm)] sm:p-10">
-    <ol class="relative grid gap-4 md:grid-cols-4">
-      {aiSteps.map((step, idx) => (
-        <li class="relative flex flex-col gap-3 rounded-[var(--radius-lg)] border border-[var(--color-border-subtle)] bg-[var(--color-surface-muted)] p-5">
-          <div class="flex items-center justify-between">
-            <span class="font-mono text-[11px] tabular-nums tracking-wider text-[var(--color-text-subtle)]">
-              {String(idx + 1).padStart(2, '0')}
-            </span>
-            {idx === 2 && (
-              <span class="rounded-[var(--radius-pill)] bg-[var(--color-primary-soft)] px-2 py-0.5 font-mono text-[10px] font-semibold uppercase tracking-wider text-[var(--color-primary-soft-text)]">
-                {isEs ? 'Humano al mando' : 'Human in charge'}
-              </span>
-            )}
-          </div>
-          <h3 class="text-[15px] font-semibold tracking-tight text-[var(--color-text)]">
-            {step.title}
-          </h3>
-          <p class="text-[13px] leading-[1.55] text-[var(--color-text-muted)]">
-            {step.body}
-          </p>
-          {idx < aiSteps.length - 1 && (
-            <span aria-hidden="true" class="pointer-events-none absolute right-[-14px] top-1/2 hidden h-px w-7 -translate-y-1/2 bg-[var(--color-border)] md:block"></span>
-          )}
-        </li>
-      ))}
-    </ol>
-    <figcaption class="mt-6 text-center text-[12px] uppercase tracking-[0.18em] text-[var(--color-text-muted)]">
-      {isEs ? 'La IA propone. El humano aprueba. La plataforma ejecuta.' : 'AI proposes. The human approves. The platform executes.'}
-    </figcaption>
   </figure>
 )}

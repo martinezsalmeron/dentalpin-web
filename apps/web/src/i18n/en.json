@@ -103,7 +103,7 @@
       { "name": "Multi-clinic", "icon": "building", "soon": false, "defaultOn": false },
       { "name": "Verifactu", "icon": "shield", "soon": false, "defaultOn": false, "country": "ES" },
       { "name": "WhatsApp Business", "icon": "message", "soon": true, "defaultOn": false },
-      { "name": "AI assistant", "icon": "sparkles", "soon": true, "defaultOn": false }
+      { "name": "AI agent", "icon": "sparkles", "soon": false, "defaultOn": false }
     ],
     "soonBadge": "Coming soon",
     "summaryPrefix": "Your Dentalpin:",
@@ -120,6 +120,20 @@
       "footnote": "No fees per chair or dentist. Indicative figures for traditional dental software."
     },
     "allFeaturesCta": "See all features"
+  },
+  "aiAgentCallout": {
+    "eyebrow": "AI agent",
+    "title": "Talk to your clinic and let the agent run it",
+    "body": "Ask it to find a patient, free up a slot, chase an unanswered budget or brief you on the day. It runs the same operations you would through the UI, in Spanish or English and on your real data. Writes pause for your confirmation, and patient data is tokenized before it leaves for the AI provider.",
+    "cta": "See the AI agent",
+    "panelLabel": "On any screen",
+    "panelKey": "⌘ / Ctrl + K",
+    "panelSub": "Opens the agent with the patient or appointment in front of you.",
+    "checks": [
+      "It does, not just answers: books, reschedules and bills, chaining steps.",
+      "RBAC parity: never sees or does more than you could through the UI.",
+      "Tokenized PHI and a human confirmation before any write."
+    ]
   },
   "forDevelopers": {
     "eyebrow": "FOR YOUR IT PERSON OR TECH TEAM",

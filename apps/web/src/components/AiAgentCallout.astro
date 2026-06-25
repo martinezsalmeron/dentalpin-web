@@ -1,0 +1,64 @@
+---
+import { useDict, pagePath, type Locale } from '~/i18n';
+import Section from '@dentalpin/ui/Section.astro';
+import Icon from '@dentalpin/ui/Icon.astro';
+import { moduleBySlug, moduleSlug } from '~/data/modules';
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const dict = useDict(locale);
+const a = (dict as any).aiAgentCallout;
+const mod = moduleBySlug('agente-ia')!;
+const href = pagePath(locale, 'features', moduleSlug(mod, locale));
+---
+
+<Section padY="md">
+  <a
+    href={href}
+    class="group relative block overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-sm)] transition-all hover:-translate-y-0.5 hover:border-[var(--color-primary)]/40 hover:shadow-[var(--shadow-md)]"
+  >
+    <span aria-hidden="true" class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[var(--color-primary)] via-[var(--color-primary)]/40 to-transparent"></span>
+
+    <div class="grid gap-6 p-6 sm:p-8 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] lg:items-center lg:gap-10 lg:p-10">
+      <div>
+        <span class="inline-flex items-center gap-1.5 rounded-[var(--radius-pill)] border border-[var(--color-border)] bg-[var(--color-surface)] px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--color-primary)]">
+          <Icon name="sparkles" size={12} />
+          {a.eyebrow}
+        </span>
+
+        <h2 class="text-marketing-h2 mt-5 max-w-2xl text-[var(--color-text)]">
+          {a.title}
+        </h2>
+        <p class="mt-4 max-w-2xl text-[15px] leading-[1.6] text-[var(--color-text-muted)]">
+          {a.body}
+        </p>
+
+        <span class="mt-6 inline-flex items-center gap-1.5 text-[14px] font-semibold text-[var(--color-primary)] transition-transform group-hover:translate-x-0.5">
+          {a.cta}
+          <Icon name="arrow-right" size={14} />
+        </span>
+      </div>
+
+      <div class="rounded-[var(--radius-xl)] border border-[var(--color-border-subtle)] bg-gradient-to-br from-[var(--color-primary-soft)] via-[var(--color-surface)] to-[var(--color-surface)] p-5">
+        <p class="text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--color-primary)]">
+          {a.panelLabel}
+        </p>
+        <p class="mt-2 font-mono text-[clamp(1.3rem,1.6vw+0.8rem,1.8rem)] font-bold leading-none tracking-tight text-[var(--color-text)]">
+          {a.panelKey}
+        </p>
+        <p class="mt-2 text-[12.5px] text-[var(--color-text-muted)]">{a.panelSub}</p>
+
+        <ul class="mt-5 grid gap-2 border-t border-[var(--color-border-subtle)] pt-4 text-[12.5px] text-[var(--color-text)]">
+          {a.checks.map((c: string) => (
+            <li class="flex items-start gap-2">
+              <span class="mt-0.5 inline-flex h-4 w-4 flex-none items-center justify-center rounded-full bg-[var(--color-primary-soft)] text-[var(--color-primary-soft-text)]">
+                <Icon name="check" size={10} />
+              </span>
+              <span>{c}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </a>
+</Section>

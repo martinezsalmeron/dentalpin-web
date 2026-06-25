@@ -25,7 +25,7 @@ const ghUrl = GITHUB_REPO;
 const domainLabel = dict.megamenu.columns[mod.domain];
 const domainCopy = dict.featuresIndex.domains[mod.domain];
 const related = modulesByDomain(mod.domain).filter((m) => m.slug !== mod.slug).slice(0, 3);
-const useDiagram = mod.slug === 'modulos' || mod.slug === 'api' || mod.slug === 'ai-ready';
+const useDiagram = mod.slug === 'modulos' || mod.slug === 'api';
 const capabilityCount = mod.features.length;
 const isRoadmap = mod.status === 'roadmap';
 ---
@@ -125,7 +125,7 @@ const isRoadmap = mod.status === 'roadmap';
 
   <Section padY="xs">
     {useDiagram ? (
-      <FeatureDiagram slug={mod.slug as 'modulos' | 'api' | 'ai-ready'} locale={locale} />
+      <FeatureDiagram slug={mod.slug as 'modulos' | 'api'} locale={locale} />
     ) : (
       <ScreenshotPlaceholder file={mod.screenshot} alt={mod.title[locale]} />
     )}
