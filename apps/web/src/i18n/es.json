@@ -969,6 +969,222 @@
       "cta": "Ver el módulo Verifactu"
     }
   },
+  "whatsappPage": {
+    "meta": {
+      "title": "WhatsApp para clínicas dentales · Dentalpin",
+      "description": "Módulo de comunidad para enviar recordatorios, confirmaciones y recalls por WhatsApp, con respuestas del paciente en un hilo dentro de la app. Plantillas aprobadas, ventana de 24 h y webhook firmado."
+    },
+    "channelBadge": "MÓDULO COMUNIDAD · CANAL",
+    "removableBadge": "Desinstalable",
+    "title": "WhatsApp, donde tus pacientes ya están.",
+    "tagline": "Recordatorios y recalls por WhatsApp, y el paciente te responde en el mismo hilo.",
+    "lead": "El 90 % de tus pacientes abre un WhatsApp en minutos. Este módulo conecta tus notificaciones de Dentalpin con WhatsApp a través de Kapso: envías recordatorios de cita, confirmaciones y recalls con plantillas aprobadas, y cuando contestan, su mensaje entra en un hilo por paciente dentro de la app. Es un canal más sobre el mismo gateway, opcional y desinstalable.",
+    "ctaDemo": "Probar la demo",
+    "ctaDocs": "Leer la documentación",
+    "ctaContact": "Hablar con nosotros",
+    "chat": {
+      "contactName": "Clínica Dental Sonría",
+      "contactStatus": "en línea",
+      "templateTag": "Plantilla",
+      "messages": [
+        { "from": "clinic", "kind": "template", "text": "Hola Marta 👋 Te recordamos tu cita de revisión el jueves 3 de julio a las 10:00 con la Dra. Ruiz. ¿Nos confirmas que vendrás?", "time": "09:01" },
+        { "from": "patient", "text": "¡Sí, allí estaré! Gracias 🙏", "time": "09:04" },
+        { "from": "clinic", "text": "Genial, te esperamos. Si necesitas cambiarla, responde a este mensaje y lo vemos.", "time": "09:05" },
+        { "from": "patient", "text": "Perfecto. ¿Tengo que ir en ayunas?", "time": "09:06" }
+      ],
+      "windowNote": "Ventana de 24 h abierta · puedes responder en texto libre",
+      "replyPlaceholder": "Escribe una respuesta…"
+    },
+    "factsTitle": "En resumen",
+    "facts": [
+      { "label": "Categoría", "value": "Comunidad" },
+      { "label": "Estado", "value": "Disponible" },
+      { "label": "Modo", "value": "Opcional · desinstalable" },
+      { "label": "Proveedor", "value": "Kapso (WhatsApp)" },
+      { "label": "Canal base", "value": "Gateway de notificaciones" }
+    ],
+    "what": {
+      "eyebrow": "QUÉ AÑADE",
+      "title": "Un canal de mensajería de doble sentido, sobre lo que ya tienes.",
+      "body": "Dentalpin ya manda avisos por email desde un gateway agnóstico de canal. Este módulo enchufa WhatsApp como un adaptador más: las mismas notificaciones, ahora también por el canal que tus pacientes abren de verdad, y con la respuesta de vuelta dentro de la ficha.",
+      "items": [
+        {
+          "title": "Conversaciones bidireccionales",
+          "body": "Cada paciente tiene un hilo: lo que le envías y lo que te responde, en orden, en la misma ficha. No es un envío a ciegas, es una conversación."
+        },
+        {
+          "title": "Plantillas aprobadas",
+          "body": "Las plantillas HSM se sincronizan solas desde Kapso y se mapean por tipo de aviso. Recordatorio, confirmación o recall salen con el texto correcto y aprobado por WhatsApp."
+        },
+        {
+          "title": "Ventana de 24 horas",
+          "body": "Cuando un paciente te escribe, se abre una ventana de 24 h para responder en texto libre. Fuera de ella, solo plantillas. La regla de WhatsApp, aplicada por el módulo sin que tengas que pensarlo."
+        }
+      ]
+    },
+    "window": {
+      "eyebrow": "VENTANA DE SESIÓN",
+      "title": "Dentro de 24 h hablas libre. Fuera, plantilla.",
+      "body": "WhatsApp solo permite mensajes libres durante 24 horas tras el último mensaje del paciente. El módulo controla esa ventana por ti: registra cada entrante, abre el contador y decide qué se puede enviar en cada momento.",
+      "insideLabel": "Ventana abierta · 0–24 h",
+      "insideBody": "El paciente te ha escrito. Puedes responder cualquier cosa en texto libre: resolver una duda, mandar una indicación, cerrar la cita. La conversación fluye como en cualquier chat.",
+      "outsideLabel": "Ventana cerrada · +24 h",
+      "outsideBody": "Han pasado más de 24 h sin respuesta. Para reabrir el contacto solo puedes enviar una plantilla aprobada (un recordatorio, un recall). Cuando el paciente conteste, la ventana se abre de nuevo.",
+      "note": "El módulo guarda `last_inbound_at` por paciente y publica un evento `notification.reply_received` en cada entrante, para que el resto del sistema reaccione."
+    },
+    "flow": {
+      "eyebrow": "CÓMO FUNCIONA",
+      "title": "Del recordatorio automático a la respuesta del paciente.",
+      "body": "El recorrido completo, sin que nadie copie un número ni cambie de pestaña.",
+      "steps": [
+        {
+          "n": "01",
+          "title": "Dentalpin dispara el aviso",
+          "body": "Una cita próxima o un recall pendiente genera una notificación en el gateway, como siempre."
+        },
+        {
+          "n": "02",
+          "title": "Sale por WhatsApp",
+          "body": "El adaptador de Kapso elige la plantilla aprobada según el tipo de aviso y la envía al número del paciente."
+        },
+        {
+          "n": "03",
+          "title": "El paciente responde",
+          "body": "Su respuesta llega al webhook firmado, se valida la firma HMAC y se resuelve el paciente por su teléfono."
+        },
+        {
+          "n": "04",
+          "title": "Entra en el hilo",
+          "body": "El mensaje se guarda en la conversación del paciente y abre la ventana de 24 h. Tu equipo lo ve en la ficha."
+        },
+        {
+          "n": "05",
+          "title": "Respondes desde la app",
+          "body": "Dentro de la ventana, contestas en texto libre desde la propia ficha. Sin móvil de empresa pasando de mano en mano."
+        }
+      ]
+    },
+    "templates": {
+      "eyebrow": "PLANTILLAS",
+      "title": "Cada aviso, su plantilla.",
+      "body": "Las plantillas viven en Kapso (aprobadas por WhatsApp) y el módulo las mapea por tipo. Tú eliges cuál usar para cada notificación; el texto sale conforme a las reglas.",
+      "items": [
+        {
+          "type": "Recordatorio de cita",
+          "icon": "calendar",
+          "sample": "Hola {{nombre}}, te recordamos tu cita el {{fecha}} a las {{hora}}. ¿Nos confirmas?"
+        },
+        {
+          "type": "Confirmación",
+          "icon": "check",
+          "sample": "¡Cita confirmada! Te esperamos el {{fecha}} a las {{hora}}. Gracias, {{nombre}}."
+        },
+        {
+          "type": "Recall / revisión",
+          "icon": "bell",
+          "sample": "Hola {{nombre}}, ha pasado un tiempo desde tu última revisión. ¿Reservamos tu próxima visita?"
+        },
+        {
+          "type": "Presupuesto",
+          "icon": "card",
+          "sample": "Hola {{nombre}}, tienes un presupuesto pendiente de revisar. ¿Lo comentamos por aquí?"
+        }
+      ]
+    },
+    "arch": {
+      "eyebrow": "ARQUITECTURA",
+      "title": "Un canal más, no un parche.",
+      "body": "El núcleo de notificaciones es agnóstico de canal: define un protocolo de adaptador y trae el email de serie. WhatsApp llega como un adaptador que se registra al instalar y se borra al desinstalar, sin tocar el resto.",
+      "coreLabel": "Gateway de notificaciones",
+      "coreSub": "Agnóstico de canal · outbox + dispatch",
+      "adapters": [
+        { "name": "Email", "sub": "De serie", "icon": "message", "tone": "muted" },
+        { "name": "WhatsApp · Kapso", "sub": "Módulo comunidad", "icon": "whatsapp", "tone": "primary" },
+        { "name": "Próximos canales", "sub": "Mismo contrato", "icon": "plug", "tone": "subtle" }
+      ],
+      "note": "Instalar añade el adaptador y sus plantillas; desinstalar lo quita por completo, con test de roundtrip que verifica que no deja residuos."
+    },
+    "privacy": {
+      "eyebrow": "PRIVACIDAD Y CONTROL",
+      "title": "Mensajería seria, no un bot suelto.",
+      "body": "Hablar con pacientes por WhatsApp es tratar datos de salud. El módulo lo asume desde el diseño.",
+      "items": [
+        {
+          "title": "Webhook firmado",
+          "icon": "lock",
+          "body": "Cada clínica tiene su firma HMAC-SHA256. Los mensajes entrantes y los estados de entrega se validan antes de aceptarse, y el manejo es idempotente: un reenvío no duplica nada."
+        },
+        {
+          "title": "Secretos cifrados",
+          "icon": "shield",
+          "body": "El token de Kapso y la firma del webhook se guardan cifrados con Fernet, por clínica. Nada en claro en la base de datos."
+        },
+        {
+          "title": "Consentimiento y permisos",
+          "icon": "check",
+          "body": "Solo se escribe a pacientes que han dado su consentimiento, y el acceso a los ajustes está bajo permisos `whatsapp_kapso.settings.*`. Quien no debe, no toca la configuración."
+        }
+      ]
+    },
+    "setup": {
+      "eyebrow": "ACTIVACIÓN",
+      "title": "Cuatro pasos y a enviar.",
+      "body": "Se instala desde Admin → Módulos como cualquier módulo de comunidad. La configuración vive en una página de ajustes bilingüe.",
+      "steps": [
+        {
+          "title": "Instala el módulo",
+          "body": "Desde el gestor de módulos. El adaptador de WhatsApp se registra y aparece como canal disponible en el gateway."
+        },
+        {
+          "title": "Conecta Kapso",
+          "body": "Pegas tu token de Kapso y la firma del webhook. Se guardan cifrados. Configuras la URL del webhook para los entrantes."
+        },
+        {
+          "title": "Sincroniza plantillas",
+          "body": "El módulo trae tus plantillas aprobadas desde Kapso y las mapea por tipo de aviso. Revisas el mapeo en un clic."
+        },
+        {
+          "title": "Envío de prueba",
+          "body": "Mandas un mensaje de prueba a tu propio número para validar la conexión de punta a punta antes de usarlo con pacientes."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "items": [
+        {
+          "q": "¿Necesito un número de WhatsApp Business?",
+          "a": "Sí. El módulo se apoya en Kapso como proveedor de WhatsApp Business. Conectas tu cuenta, pegas el token en los ajustes y el resto lo gestiona el adaptador."
+        },
+        {
+          "q": "¿Por qué a veces solo puedo enviar plantillas?",
+          "a": "Es una regla de WhatsApp, no de Dentalpin. Fuera de la ventana de 24 h desde el último mensaje del paciente, solo se permiten plantillas aprobadas (HSM). En cuanto el paciente responde, se abre la ventana y puedes escribir en texto libre."
+        },
+        {
+          "q": "¿Dónde veo las respuestas de los pacientes?",
+          "a": "En la ficha del paciente. Cada conversación es un hilo con los mensajes salientes y entrantes en orden. Hay un endpoint de conversación y una tarjeta de hilo integrada en el resumen del paciente."
+        },
+        {
+          "q": "¿Es obligatorio? ¿Puedo quitarlo?",
+          "a": "Es un módulo de comunidad, opcional y desinstalable. Si no lo instalas, Dentalpin sigue notificando por email. Si lo desinstalas, el adaptador y sus plantillas se eliminan sin dejar residuos (hay un test de roundtrip que lo comprueba)."
+        },
+        {
+          "q": "¿Es seguro para datos de pacientes?",
+          "a": "El webhook va firmado con HMAC-SHA256 por clínica y el manejo de entrantes es idempotente. Los secretos (token, firma) se guardan cifrados con Fernet, y el acceso a los ajustes está bajo permisos dedicados."
+        },
+        {
+          "q": "¿Sirve para otros canales en el futuro?",
+          "a": "Sí. El gateway es agnóstico de canal: WhatsApp es un adaptador sobre el mismo contrato que ya usa el email. Cualquier canal nuevo (SMS, otro proveedor) encaja igual sin reescribir las notificaciones."
+        }
+      ]
+    },
+    "linksTitle": "Para profundizar",
+    "links": [
+      { "label": "Guía del módulo WhatsApp", "href": "https://github.com/martinezsalmeron/dentalpin/blob/main/docs/modules/whatsapp_kapso.md" },
+      { "label": "ADR · Conversaciones entrantes", "href": "https://github.com/martinezsalmeron/dentalpin/blob/main/docs/adr/0017-inbound-conversation.md" },
+      { "label": "Permisos del módulo", "href": "https://github.com/martinezsalmeron/dentalpin/tree/main/docs/technical/whatsapp_kapso" }
+    ]
+  },
   "featurePage": {
     "backToIndex": "← Todas las funcionalidades",
     "breadcrumbRoot": "Funcionalidades",

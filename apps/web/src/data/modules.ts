@@ -13,7 +13,8 @@ export type ModuleIcon =
   | 'chart'
   | 'plug'
   | 'sparkles'
-  | 'globe';
+  | 'globe'
+  | 'whatsapp';
 
 import type { Locale } from '~/i18n';
 
@@ -670,6 +671,70 @@ export const MODULES: ModuleEntry[] = [
       },
     ],
     screenshot: 'ai-copilot.png',
+    status: 'stable',
+  },
+  {
+    slug: 'whatsapp',
+    slugEn: 'whatsapp',
+    domain: 'operations',
+    icon: 'whatsapp',
+    customPage: true,
+    title: { es: 'WhatsApp', en: 'WhatsApp' },
+    tagline: {
+      es: 'Recordatorios y recalls por WhatsApp, y el paciente te responde en el mismo hilo.',
+      en: 'Reminders and recalls over WhatsApp, with the patient replying in the same thread.',
+    },
+    description: {
+      es: 'Módulo de comunidad, opcional y desinstalable, que añade WhatsApp como canal de notificaciones encima del gateway de Dentalpin. Envías recordatorios de cita, confirmaciones y recalls con plantillas aprobadas, y cuando el paciente contesta, su respuesta entra en un hilo por paciente dentro de la app. El núcleo de notificaciones es agnóstico de canal: WhatsApp llega como un adaptador conectado a Kapso que puedes quitar sin tocar el resto del sistema.',
+      en: 'An optional, removable community module that adds WhatsApp as a notifications channel on top of Dentalpin’s gateway. You send appointment reminders, confirmations and recalls with approved templates, and when the patient replies, their message lands in a per-patient thread inside the app. The notifications core is channel-agnostic: WhatsApp arrives as a Kapso-backed adapter you can remove without touching the rest of the system.',
+    },
+    features: [
+      {
+        es: 'Conversaciones bidireccionales: cada paciente tiene un hilo con mensajes salientes y entrantes en orden.',
+        en: 'Two-way conversations: every patient gets a thread with outbound and inbound messages in order.',
+      },
+      {
+        es: 'Plantillas HSM aprobadas, sincronizadas automáticamente desde Kapso y mapeadas por tipo de aviso.',
+        en: 'Approved HSM templates, auto-synced from Kapso and mapped per notification type.',
+      },
+      {
+        es: 'Ventana de sesión de 24 h: dentro de ella respondes en texto libre; fuera, solo plantillas, como exige WhatsApp.',
+        en: '24-hour session window: free-form replies inside it, templates only outside, exactly as WhatsApp requires.',
+      },
+      {
+        es: 'Webhook público firmado con HMAC-SHA256 por clínica, con manejo idempotente de entrantes y estados de entrega.',
+        en: 'Public webhook signed with per-clinic HMAC-SHA256, idempotent handling of inbound messages and delivery states.',
+      },
+      {
+        es: 'Hilo de conversación en la ficha del paciente, sin saltar a otra herramienta.',
+        en: 'Conversation thread on the patient record, without jumping to another tool.',
+      },
+      {
+        es: 'Resolución de paciente por número de teléfono al recibir un mensaje entrante.',
+        en: 'Patient resolution by phone number when an inbound message arrives.',
+      },
+      {
+        es: 'Gating por consentimiento: solo escribe a quien aceptó recibir mensajes.',
+        en: 'Consent gating: only messages patients who opted in.',
+      },
+      {
+        es: 'Secretos cifrados con Fernet y ajustes por clínica (token, plantillas, firma de webhook).',
+        en: 'Fernet-encrypted secrets and per-clinic settings (token, templates, webhook signature).',
+      },
+      {
+        es: 'Arquitectura de canal-adaptador: el adaptador se registra al instalar y se elimina al desinstalar, sin residuos.',
+        en: 'Channel-adapter architecture: the adapter registers on install and is removed on uninstall, no residue.',
+      },
+      {
+        es: 'Permisos dedicados (`whatsapp_kapso.settings.*`) y UI bilingüe ES/EN.',
+        en: 'Dedicated permissions (`whatsapp_kapso.settings.*`) and a bilingual ES/EN UI.',
+      },
+      {
+        es: 'Envío de prueba desde ajustes para validar la conexión antes de usarlo en real.',
+        en: 'Test send from settings to validate the connection before going live.',
+      },
+    ],
+    screenshot: 'whatsapp-conversation.png',
     status: 'stable',
   },
 ];

@@ -1,0 +1,462 @@
+---
+import { pagePath, useDict, type Locale } from '~/i18n';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Section from '@dentalpin/ui/Section.astro';
+import GradientBackdrop from '@dentalpin/ui/GradientBackdrop.astro';
+import Button from '@dentalpin/ui/Button.astro';
+import Icon from '@dentalpin/ui/Icon.astro';
+import CTASection from '~/components/CTASection.astro';
+import { modulesByDomain, moduleSlug, moduleBySlug } from '~/data/modules';
+import { DEMO_URL } from '~/config/links';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const dict = useDict(locale);
+const w = (dict as any).whatsappPage;
+const mod = moduleBySlug('whatsapp')!;
+
+const demoUrl = DEMO_URL;
+const docsUrl = w.links[0].href;
+const contactHref = pagePath(locale, 'contact');
+const featuresHref = pagePath(locale, 'features');
+
+const related = modulesByDomain('operations')
+  .filter((m) => m.slug !== mod.slug)
+  .slice(0, 3);
+
+const toneClass: Record<string, string> = {
+  primary: 'border-[var(--color-primary)]/35 bg-[var(--color-primary-soft)] text-[var(--color-primary-soft-text)]',
+  muted: 'border-[var(--color-border-subtle)] bg-[var(--color-surface)] text-[var(--color-text-muted)]',
+  subtle: 'border-dashed border-[var(--color-border-subtle)] bg-[var(--color-surface)] text-[var(--color-text-subtle)]',
+};
+---
+
+<BaseLayout locale={locale} title={w.meta.title} description={w.meta.description}>
+  <!-- HERO -->
+  <section class="relative overflow-hidden">
+    <GradientBackdrop variant="subtle" />
+
+    <Section padY="md">
+      <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-[12px] text-[var(--color-text-muted)]">
+        <a href={featuresHref} class="hover:text-[var(--color-primary)]">
+          {dict.featurePage.breadcrumbRoot}
+        </a>
+        <span class="text-[var(--color-text-subtle)]">/</span>
+        <span class="text-[var(--color-text-muted)]">{dict.megamenu.columns.operations}</span>
+        <span class="text-[var(--color-text-subtle)]">/</span>
+        <span class="font-medium text-[var(--color-text)]">{mod.title[locale]}</span>
+      </nav>
+
+      <div class="mt-10 grid gap-12 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:items-center">
+        <div class="max-w-2xl">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="inline-flex items-center gap-1.5 rounded-[var(--radius-pill)] border border-[var(--color-border)] bg-[var(--color-surface)] px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#1fa855]">
+              <span class="h-1.5 w-1.5 rounded-full bg-[#25d366]"></span>
+              {w.channelBadge}
+            </span>
+            <span class="inline-flex items-center gap-1.5 rounded-[var(--radius-pill)] bg-[var(--color-success-soft)] px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--color-success-text)]">
+              {dict.featurePage.statusStable}
+            </span>
+            <span class="inline-flex items-center gap-1.5 rounded-[var(--radius-pill)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] px-2 py-0.5 text-[11px] font-semibold tracking-wider text-[var(--color-text-muted)]">
+              {w.removableBadge}
+            </span>
+          </div>
+
+          <div class="mt-7 flex items-start gap-5">
+            <span class="relative inline-flex h-16 w-16 flex-none items-center justify-center rounded-[var(--radius-lg)] bg-gradient-to-br from-[#25d366] to-[#1fa855] text-white shadow-[var(--shadow-md)]">
+              <Icon name="whatsapp" size={32} />
+            </span>
+            <div class="min-w-0">
+              <h1 class="text-[clamp(2rem,2.4vw+1rem,3.5rem)] font-semibold leading-[1.05] tracking-[-0.025em] text-[var(--color-text)]">
+                {w.title}
+              </h1>
+              <p class="mt-3 text-[18px] leading-[1.5] text-[var(--color-primary)]">
+                {w.tagline}
+              </p>
+            </div>
+          </div>
+
+          <p class="mt-6 text-[16px] leading-[1.65] text-[var(--color-text-muted)]">
+            {w.lead}
+          </p>
+
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <Button href={demoUrl} size="md">
+              {w.ctaDemo}
+              <Icon name="arrow-right" size={14} />
+            </Button>
+            <Button href={docsUrl} variant="outline" size="md">{w.ctaDocs}</Button>
+            <Button href={contactHref} variant="ghost" size="md">{w.ctaContact}</Button>
+          </div>
+        </div>
+
+        <!-- CHAT MOCKUP -->
+        <div class="relative mx-auto w-full max-w-[380px]">
+          <div aria-hidden="true" class="absolute -inset-6 -z-10 rounded-[40px] bg-gradient-to-br from-[#25d366]/15 via-transparent to-[var(--color-primary)]/10 blur-2xl"></div>
+          <div class="overflow-hidden rounded-[28px] border border-[var(--color-border)] bg-[#efeae2] shadow-[var(--shadow-lg)]">
+            <!-- chat header -->
+            <div class="flex items-center gap-3 bg-[#075e54] px-4 py-3 text-white">
+              <span class="inline-flex h-9 w-9 flex-none items-center justify-center rounded-full bg-white/15 text-white">
+                <Icon name="tooth" size={18} />
+              </span>
+              <div class="min-w-0 flex-1">
+                <p class="truncate text-[14px] font-semibold leading-tight">{w.chat.contactName}</p>
+                <p class="text-[11px] text-white/70">{w.chat.contactStatus}</p>
+              </div>
+              <Icon name="whatsapp" size={18} class="text-[#25d366]" />
+            </div>
+
+            <!-- chat body -->
+            <div class="flex flex-col gap-2 px-3.5 py-4" style="min-height: 360px;">
+              {w.chat.messages.map((m: { from: string; kind?: string; text: string; time: string }) => (
+                <div class:list={['flex', m.from === 'clinic' ? 'justify-end' : 'justify-start']}>
+                  <div class:list={[
+                    'relative max-w-[80%] rounded-[10px] px-2.5 py-1.5 text-[13px] leading-[1.4] shadow-[0_1px_0.5px_rgba(0,0,0,0.13)]',
+                    m.from === 'clinic' ? 'bg-[#d9fdd3] text-[#111b21]' : 'bg-white text-[#111b21]',
+                  ]}>
+                    {m.kind === 'template' && (
+                      <span class="mb-1 inline-flex items-center gap-1 rounded-[4px] bg-black/5 px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-[#1fa855]">
+                        <Icon name="check" size={9} />
+                        {w.chat.templateTag}
+                      </span>
+                    )}
+                    <p>{m.text}</p>
+                    <span class="mt-0.5 flex items-center justify-end gap-1 text-[10px] text-[#667781]">
+                      {m.time}
+                      {m.from === 'clinic' && <Icon name="check" size={11} class="text-[#53bdeb]" />}
+                    </span>
+                  </div>
+                </div>
+              ))}
+
+              <div class="mt-1 flex justify-center">
+                <span class="inline-flex items-center gap-1.5 rounded-full bg-[#25d366]/12 px-2.5 py-1 text-[10px] font-medium text-[#1a7d43]">
+                  <span class="h-1.5 w-1.5 rounded-full bg-[#25d366]"></span>
+                  {w.chat.windowNote}
+                </span>
+              </div>
+            </div>
+
+            <!-- input bar -->
+            <div class="flex items-center gap-2 border-t border-black/5 bg-[#f0f2f5] px-3 py-2.5">
+              <span class="flex-1 rounded-full bg-white px-3 py-2 text-[12px] text-[#8696a0]">{w.chat.replyPlaceholder}</span>
+              <span class="inline-flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[#25d366] text-white">
+                <Icon name="arrow-right" size={15} />
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Section>
+
+    <!-- FACTS STRIP -->
+    <Section padY="sm">
+      <dl class="grid gap-px overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border-subtle)] bg-[var(--color-border-subtle)] sm:grid-cols-2 lg:grid-cols-5">
+        {w.facts.map((f: { label: string; value: string }) => (
+          <div class="bg-[var(--color-surface)] px-5 py-4">
+            <dt class="text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--color-text-muted)]">{f.label}</dt>
+            <dd class="mt-1.5 text-[14px] font-semibold tracking-tight text-[var(--color-text)]">{f.value}</dd>
+          </div>
+        ))}
+      </dl>
+    </Section>
+  </section>
+
+  <!-- WHAT IT ADDS -->
+  <Section padY="md">
+    <header class="max-w-2xl">
+      <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">{w.what.eyebrow}</p>
+      <h2 class="text-marketing-h2 mt-3 text-[var(--color-text)]">{w.what.title}</h2>
+      <p class="mt-4 text-[15px] leading-[1.6] text-[var(--color-text-muted)]">{w.what.body}</p>
+    </header>
+
+    <ul class="mt-10 grid gap-5 md:grid-cols-3">
+      {w.what.items.map((it: { title: string; body: string }, i: number) => (
+        <li class="group relative flex h-full flex-col gap-3 rounded-[var(--radius-xl)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-6 shadow-[var(--shadow-sm)] transition-all hover:border-[var(--color-border-strong)] hover:shadow-[var(--shadow-md)]">
+          <span class="font-mono text-[11px] tabular-nums tracking-[0.16em] text-[#1fa855]">
+            {String(i + 1).padStart(2, '0')}
+          </span>
+          <h3 class="text-[18px] font-semibold tracking-tight text-[var(--color-text)]">{it.title}</h3>
+          <p class="text-[14.5px] leading-[1.55] text-[var(--color-text-muted)]">{it.body}</p>
+        </li>
+      ))}
+    </ul>
+  </Section>
+
+  <!-- 24H WINDOW -->
+  <Section padY="md">
+    <header class="max-w-2xl">
+      <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">{w.window.eyebrow}</p>
+      <h2 class="text-marketing-h2 mt-3 text-[var(--color-text)]">{w.window.title}</h2>
+      <p class="mt-4 text-[15px] leading-[1.6] text-[var(--color-text-muted)]">{w.window.body}</p>
+    </header>
+
+    <div class="mt-10 grid gap-5 md:grid-cols-2">
+      <div class="relative overflow-hidden rounded-[var(--radius-xl)] border border-[#25d366]/30 bg-gradient-to-br from-[#25d366]/8 to-[var(--color-surface)] p-6 shadow-[var(--shadow-sm)]">
+        <div class="flex items-center gap-2">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#25d366]/15 text-[#1a7d43]">
+            <Icon name="message" size={18} />
+          </span>
+          <span class="rounded-[var(--radius-pill)] bg-[#25d366]/15 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#1a7d43]">
+            {w.window.insideLabel}
+          </span>
+        </div>
+        <p class="mt-4 text-[14.5px] leading-[1.6] text-[var(--color-text)]">{w.window.insideBody}</p>
+      </div>
+
+      <div class="rounded-[var(--radius-xl)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-6 shadow-[var(--shadow-sm)]">
+        <div class="flex items-center gap-2">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[var(--color-surface-muted)] text-[var(--color-text-muted)]">
+            <Icon name="lock" size={16} />
+          </span>
+          <span class="rounded-[var(--radius-pill)] bg-[var(--color-surface-muted)] px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--color-text-muted)]">
+            {w.window.outsideLabel}
+          </span>
+        </div>
+        <p class="mt-4 text-[14.5px] leading-[1.6] text-[var(--color-text-muted)]">{w.window.outsideBody}</p>
+      </div>
+    </div>
+    <p class="mt-4 rounded-[var(--radius-md)] border border-[var(--color-border-subtle)] bg-[var(--color-surface-muted)] px-4 py-3 font-mono text-[12px] leading-[1.55] text-[var(--color-text-muted)]">
+      {w.window.note}
+    </p>
+  </Section>
+
+  <!-- FLOW -->
+  <Section padY="md">
+    <header class="max-w-2xl">
+      <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">{w.flow.eyebrow}</p>
+      <h2 class="text-marketing-h2 mt-3 text-[var(--color-text)]">{w.flow.title}</h2>
+      <p class="mt-4 text-[15px] leading-[1.6] text-[var(--color-text-muted)]">{w.flow.body}</p>
+    </header>
+
+    <ol class="mt-10 grid gap-px overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border-subtle)] bg-[var(--color-border-subtle)] md:grid-cols-5">
+      {w.flow.steps.map((s: { n: string; title: string; body: string }) => (
+        <li class="group relative flex flex-col gap-3 bg-[var(--color-surface)] p-6 transition-colors hover:bg-[var(--color-surface-muted)]">
+          <span class="font-mono text-[10px] tabular-nums tracking-[0.18em] text-[#1fa855]">{s.n}</span>
+          <h3 class="text-[15px] font-semibold leading-tight tracking-tight text-[var(--color-text)]">{s.title}</h3>
+          <p class="text-[13.5px] leading-[1.55] text-[var(--color-text-muted)]">{s.body}</p>
+          <span aria-hidden="true" class="pointer-events-none absolute inset-y-0 left-0 w-[2px] origin-top scale-y-0 bg-[#25d366] transition-transform duration-300 group-hover:scale-y-100"></span>
+        </li>
+      ))}
+    </ol>
+  </Section>
+
+  <!-- TEMPLATES -->
+  <Section padY="md">
+    <header class="max-w-2xl">
+      <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">{w.templates.eyebrow}</p>
+      <h2 class="text-marketing-h2 mt-3 text-[var(--color-text)]">{w.templates.title}</h2>
+      <p class="mt-4 text-[15px] leading-[1.6] text-[var(--color-text-muted)]">{w.templates.body}</p>
+    </header>
+
+    <ul class="mt-10 grid gap-5 sm:grid-cols-2">
+      {w.templates.items.map((t: { type: string; icon: string; sample: string }) => (
+        <li class="flex flex-col gap-4 rounded-[var(--radius-xl)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-6 shadow-[var(--shadow-sm)]">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex h-10 w-10 flex-none items-center justify-center rounded-[var(--radius-md)] bg-[#25d366]/12 text-[#1a7d43]">
+              <Icon name={t.icon as any} size={18} />
+            </span>
+            <h3 class="text-[15px] font-semibold tracking-tight text-[var(--color-text)]">{t.type}</h3>
+          </div>
+          <div class="rounded-[12px] rounded-tl-[3px] border border-[#25d366]/20 bg-[#d9fdd3]/40 px-3.5 py-2.5 text-[13px] leading-[1.5] text-[var(--color-text)]">
+            {t.sample}
+          </div>
+        </li>
+      ))}
+    </ul>
+  </Section>
+
+  <!-- ARCHITECTURE -->
+  <Section padY="md">
+    <header class="max-w-2xl">
+      <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">{w.arch.eyebrow}</p>
+      <h2 class="text-marketing-h2 mt-3 text-[var(--color-text)]">{w.arch.title}</h2>
+      <p class="mt-4 text-[15px] leading-[1.6] text-[var(--color-text-muted)]">{w.arch.body}</p>
+    </header>
+
+    <div class="mt-10 rounded-[var(--radius-xl)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-6 shadow-[var(--shadow-sm)] sm:p-8">
+      <div class="grid items-center gap-6 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1.4fr)]">
+        <div class="flex flex-col items-center gap-2 rounded-[var(--radius-lg)] bg-gradient-to-br from-[var(--color-primary-soft)] to-[var(--color-surface)] p-5 text-center ring-1 ring-[var(--color-primary)]/20">
+          <span class="inline-flex h-12 w-12 items-center justify-center rounded-[var(--radius-md)] bg-[var(--color-primary-soft)] text-[var(--color-primary-soft-text)]">
+            <Icon name="bell" size={22} />
+          </span>
+          <p class="text-[14px] font-semibold tracking-tight text-[var(--color-text)]">{w.arch.coreLabel}</p>
+          <p class="font-mono text-[11px] uppercase tracking-wider text-[var(--color-text-muted)]">{w.arch.coreSub}</p>
+        </div>
+
+        <span aria-hidden="true" class="mx-auto hidden text-[var(--color-text-subtle)] md:flex">
+          <Icon name="arrow-right" size={20} />
+        </span>
+
+        <ul class="grid gap-3 sm:grid-cols-3">
+          {w.arch.adapters.map((a: { name: string; sub: string; icon: string; tone: string }) => (
+            <li class:list={['flex flex-col items-center gap-2 rounded-[var(--radius-lg)] border p-4 text-center', toneClass[a.tone]]}>
+              <Icon name={a.icon as any} size={22} />
+              <p class="text-[13px] font-semibold tracking-tight text-[var(--color-text)]">{a.name}</p>
+              <p class="text-[11px] text-[var(--color-text-muted)]">{a.sub}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <p class="mt-6 border-t border-[var(--color-border-subtle)] pt-4 text-[13px] leading-[1.6] text-[var(--color-text-muted)]">
+        {w.arch.note}
+      </p>
+    </div>
+  </Section>
+
+  <!-- CAPABILITIES -->
+  <Section padY="md">
+    <header class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+      <div class="max-w-xl">
+        <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">{dict.featurePage.capabilities}</p>
+        <h2 class="mt-3 text-[clamp(1.5rem,1.6vw+1rem,2.25rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-[var(--color-text)]">
+          {dict.featurePage.capabilitiesTitle}
+        </h2>
+      </div>
+      <p class="font-mono text-[12px] tabular-nums uppercase tracking-[0.14em] text-[var(--color-text-muted)]">
+        {mod.features.length} · {dict.featurePage.capabilitiesCountSuffix}
+      </p>
+    </header>
+
+    <ul class="mt-8 grid gap-px overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border-subtle)] bg-[var(--color-border-subtle)] sm:grid-cols-2 lg:grid-cols-3">
+      {mod.features.map((f, idx) => (
+        <li class="group relative bg-[var(--color-surface)] p-6 transition-colors duration-200 hover:bg-[var(--color-surface-muted)]">
+          <div class="flex items-baseline justify-between gap-4">
+            <span class="font-mono text-[11px] tabular-nums tracking-wider text-[#1fa855]">
+              {String(idx + 1).padStart(2, '0')}
+            </span>
+            <span class="text-[var(--color-text-subtle)] transition-colors duration-200 group-hover:text-[#1fa855]">
+              <Icon name="check" size={14} />
+            </span>
+          </div>
+          <p class="mt-4 text-[14.5px] leading-[1.55] text-[var(--color-text)]">{f[locale]}</p>
+          <span aria-hidden="true" class="pointer-events-none absolute inset-y-0 left-0 w-[2px] origin-top scale-y-0 bg-[#25d366] transition-transform duration-300 group-hover:scale-y-100"></span>
+        </li>
+      ))}
+    </ul>
+  </Section>
+
+  <!-- PRIVACY -->
+  <Section padY="md">
+    <header class="max-w-2xl">
+      <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">{w.privacy.eyebrow}</p>
+      <h2 class="text-marketing-h2 mt-3 text-[var(--color-text)]">{w.privacy.title}</h2>
+      <p class="mt-4 text-[15px] leading-[1.6] text-[var(--color-text-muted)]">{w.privacy.body}</p>
+    </header>
+
+    <ul class="mt-8 grid gap-4 md:grid-cols-3">
+      {w.privacy.items.map((it: { title: string; icon: string; body: string }) => (
+        <li class="rounded-[var(--radius-xl)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-6 shadow-[var(--shadow-sm)]">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-[var(--radius-md)] bg-[#25d366]/12 text-[#1a7d43]">
+            <Icon name={it.icon as any} size={18} />
+          </span>
+          <h3 class="mt-4 text-[16px] font-semibold tracking-tight text-[var(--color-text)]">{it.title}</h3>
+          <p class="mt-2 text-[13.5px] leading-[1.55] text-[var(--color-text-muted)]">{it.body}</p>
+        </li>
+      ))}
+    </ul>
+  </Section>
+
+  <!-- SETUP -->
+  <Section padY="md">
+    <header class="max-w-2xl">
+      <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">{w.setup.eyebrow}</p>
+      <h2 class="text-marketing-h2 mt-3 text-[var(--color-text)]">{w.setup.title}</h2>
+      <p class="mt-4 text-[15px] leading-[1.6] text-[var(--color-text-muted)]">{w.setup.body}</p>
+    </header>
+
+    <ul class="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+      {w.setup.steps.map((s: { title: string; body: string }, i: number) => (
+        <li class="relative flex h-full flex-col gap-3 rounded-[var(--radius-xl)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-5 shadow-[var(--shadow-sm)]">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[#25d366] font-mono text-[12px] tabular-nums font-semibold" style="color:#fff">
+              {i + 1}
+            </span>
+            <h3 class="text-[14.5px] font-semibold leading-tight tracking-tight text-[var(--color-text)]">{s.title}</h3>
+          </div>
+          <p class="text-[13px] leading-[1.55] text-[var(--color-text-muted)]">{s.body}</p>
+        </li>
+      ))}
+    </ul>
+  </Section>
+
+  <!-- FAQ -->
+  <Section padY="md">
+    <header class="max-w-2xl">
+      <h2 class="text-marketing-h2 text-[var(--color-text)]">{w.faq.title}</h2>
+    </header>
+
+    <ul class="mt-8 grid gap-3">
+      {w.faq.items.map((it: { q: string; a: string }, i: number) => (
+        <li>
+          <details class="group rounded-[var(--radius-xl)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-5 shadow-[var(--shadow-sm)] transition-colors hover:border-[var(--color-border-strong)]" open={i === 0}>
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-[15px] font-semibold tracking-tight text-[var(--color-text)] [&::-webkit-details-marker]:hidden">
+              <span>{it.q}</span>
+              <span aria-hidden="true" class="inline-flex h-7 w-7 flex-none items-center justify-center rounded-full bg-[var(--color-surface-muted)] text-[var(--color-text-muted)] transition-transform group-open:rotate-45">
+                <Icon name="plus" size={14} />
+              </span>
+            </summary>
+            <p class="mt-3 text-[14px] leading-[1.65] text-[var(--color-text-muted)]">{it.a}</p>
+          </details>
+        </li>
+      ))}
+    </ul>
+  </Section>
+
+  <!-- LINKS -->
+  <Section padY="md">
+    <h2 class="text-[18px] font-semibold tracking-tight text-[var(--color-text)]">{w.linksTitle}</h2>
+    <ul class="mt-5 grid gap-2 md:grid-cols-2 lg:grid-cols-3">
+      {w.links.map((l: { label: string; href: string }) => (
+        <li>
+          <a href={l.href} target="_blank" rel="noopener"
+            class="group flex items-center gap-3 rounded-[var(--radius-md)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-3 text-[13.5px] text-[var(--color-text)] shadow-[var(--shadow-sm)] transition-all hover:-translate-y-0.5 hover:border-[var(--color-primary)]/40 hover:shadow-[var(--shadow-md)]">
+            <span class="inline-flex h-8 w-8 flex-none items-center justify-center rounded-[var(--radius-sm)] bg-[var(--color-primary-soft)] text-[var(--color-primary-soft-text)]">
+              <Icon name="globe" size={14} />
+            </span>
+            <span class="min-w-0 flex-1 truncate">{l.label}</span>
+            <Icon name="arrow-right" size={14} class="text-[var(--color-text-subtle)] transition-colors group-hover:text-[var(--color-primary)]" />
+          </a>
+        </li>
+      ))}
+    </ul>
+  </Section>
+
+  <!-- RELATED -->
+  {related.length > 0 && (
+    <Section padY="md">
+      <header class="max-w-2xl">
+        <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">
+          {dict.megamenu.columns.operations}
+        </p>
+        <h2 class="mt-3 text-[clamp(1.5rem,1.6vw+1rem,2.25rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-[var(--color-text)]">
+          {dict.featurePage.relatedTitle}
+        </h2>
+      </header>
+
+      <ul class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {related.map((r) => (
+          <li>
+            <a href={pagePath(locale, 'features', moduleSlug(r, locale))}
+              class="group relative flex h-full flex-col gap-3 rounded-[var(--radius-xl)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-[var(--color-primary)]/40 hover:shadow-[var(--shadow-md)]">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-[var(--radius-md)] bg-[var(--color-primary-soft)] text-[var(--color-primary-soft-text)]">
+                <Icon name={r.icon} size={18} />
+              </span>
+              <h3 class="text-[17px] font-semibold tracking-tight text-[var(--color-text)]">{r.title[locale]}</h3>
+              <p class="text-[14px] leading-[1.55] text-[var(--color-text-muted)]">{r.tagline[locale]}</p>
+              <span class="mt-auto inline-flex items-center gap-1 text-[13px] font-semibold text-[var(--color-primary)] transition-transform duration-200 group-hover:translate-x-0.5">
+                {dict.featurePage.ctaOpenModule}
+                <Icon name="arrow-right" size={14} />
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </Section>
+  )}
+
+  <CTASection locale={locale} />
+</BaseLayout>

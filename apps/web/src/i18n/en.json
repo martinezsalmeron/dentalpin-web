@@ -969,6 +969,222 @@
       "cta": "Open the Verifactu module"
     }
   },
+  "whatsappPage": {
+    "meta": {
+      "title": "WhatsApp for dental clinics · Dentalpin",
+      "description": "Community module to send reminders, confirmations and recalls over WhatsApp, with patient replies landing in a thread inside the app. Approved templates, 24-hour window and signed webhook."
+    },
+    "channelBadge": "COMMUNITY MODULE · CHANNEL",
+    "removableBadge": "Removable",
+    "title": "WhatsApp, where your patients already are.",
+    "tagline": "Reminders and recalls over WhatsApp, with the patient replying in the same thread.",
+    "lead": "90% of your patients open a WhatsApp within minutes. This module connects your Dentalpin notifications to WhatsApp through Kapso: you send appointment reminders, confirmations and recalls with approved templates, and when they reply, their message lands in a per-patient thread inside the app. It’s one more channel on the same gateway, optional and removable.",
+    "ctaDemo": "Try the demo",
+    "ctaDocs": "Read the docs",
+    "ctaContact": "Talk to us",
+    "chat": {
+      "contactName": "Sonría Dental Clinic",
+      "contactStatus": "online",
+      "templateTag": "Template",
+      "messages": [
+        { "from": "clinic", "kind": "template", "text": "Hi Marta 👋 A reminder for your check-up on Thursday 3 July at 10:00 with Dr. Ruiz. Can you confirm you’ll come?", "time": "09:01" },
+        { "from": "patient", "text": "Yes, I’ll be there! Thanks 🙏", "time": "09:04" },
+        { "from": "clinic", "text": "Great, see you then. If you need to move it, just reply here and we’ll sort it out.", "time": "09:05" },
+        { "from": "patient", "text": "Perfect. Should I come on an empty stomach?", "time": "09:06" }
+      ],
+      "windowNote": "24h window open · you can reply free-form",
+      "replyPlaceholder": "Type a reply…"
+    },
+    "factsTitle": "At a glance",
+    "facts": [
+      { "label": "Category", "value": "Community" },
+      { "label": "Status", "value": "Available" },
+      { "label": "Mode", "value": "Optional · removable" },
+      { "label": "Provider", "value": "Kapso (WhatsApp)" },
+      { "label": "Base channel", "value": "Notifications gateway" }
+    ],
+    "what": {
+      "eyebrow": "WHAT IT ADDS",
+      "title": "A two-way messaging channel, on top of what you already have.",
+      "body": "Dentalpin already sends notices by email from a channel-agnostic gateway. This module plugs WhatsApp in as one more adapter: the same notifications, now also through the channel your patients actually open, with the reply landing back inside the record.",
+      "items": [
+        {
+          "title": "Two-way conversations",
+          "body": "Every patient gets a thread: what you send and what they reply, in order, on the same record. Not a blind blast, an actual conversation."
+        },
+        {
+          "title": "Approved templates",
+          "body": "HSM templates sync themselves from Kapso and map per notification type. Reminder, confirmation or recall go out with the right, WhatsApp-approved text."
+        },
+        {
+          "title": "24-hour window",
+          "body": "When a patient writes to you, a 24h window opens for free-form replies. Outside it, templates only. WhatsApp’s rule, enforced by the module so you don’t have to think about it."
+        }
+      ]
+    },
+    "window": {
+      "eyebrow": "SESSION WINDOW",
+      "title": "Inside 24h you talk free. Outside, a template.",
+      "body": "WhatsApp only allows free-form messages for 24 hours after the patient’s last message. The module tracks that window for you: it records every inbound, starts the counter and decides what can be sent at any moment.",
+      "insideLabel": "Window open · 0–24h",
+      "insideBody": "The patient has written to you. You can reply with anything in free text: answer a question, send an instruction, close the appointment. The conversation flows like any chat.",
+      "outsideLabel": "Window closed · 24h+",
+      "outsideBody": "More than 24h have passed with no reply. To reopen contact you can only send an approved template (a reminder, a recall). When the patient replies, the window opens again.",
+      "note": "The module stores `last_inbound_at` per patient and publishes a `notification.reply_received` event on every inbound, so the rest of the system can react."
+    },
+    "flow": {
+      "eyebrow": "HOW IT WORKS",
+      "title": "From the automatic reminder to the patient’s reply.",
+      "body": "The full round trip, with nobody copying a number or switching tabs.",
+      "steps": [
+        {
+          "n": "01",
+          "title": "Dentalpin fires the notice",
+          "body": "An upcoming appointment or a due recall raises a notification in the gateway, as usual."
+        },
+        {
+          "n": "02",
+          "title": "It goes out on WhatsApp",
+          "body": "The Kapso adapter picks the approved template for the notification type and sends it to the patient’s number."
+        },
+        {
+          "n": "03",
+          "title": "The patient replies",
+          "body": "Their reply hits the signed webhook, the HMAC signature is validated and the patient is resolved by phone number."
+        },
+        {
+          "n": "04",
+          "title": "It enters the thread",
+          "body": "The message is saved into the patient conversation and opens the 24h window. Your team sees it on the record."
+        },
+        {
+          "n": "05",
+          "title": "You reply from the app",
+          "body": "Inside the window, you answer in free text from the record itself. No company phone passed around hand to hand."
+        }
+      ]
+    },
+    "templates": {
+      "eyebrow": "TEMPLATES",
+      "title": "Every notice, its template.",
+      "body": "Templates live in Kapso (WhatsApp-approved) and the module maps them per type. You pick which to use for each notification; the text goes out within the rules.",
+      "items": [
+        {
+          "type": "Appointment reminder",
+          "icon": "calendar",
+          "sample": "Hi {{name}}, a reminder for your appointment on {{date}} at {{time}}. Can you confirm?"
+        },
+        {
+          "type": "Confirmation",
+          "icon": "check",
+          "sample": "Appointment confirmed! See you on {{date}} at {{time}}. Thanks, {{name}}."
+        },
+        {
+          "type": "Recall / check-up",
+          "icon": "bell",
+          "sample": "Hi {{name}}, it’s been a while since your last check-up. Shall we book your next visit?"
+        },
+        {
+          "type": "Budget",
+          "icon": "card",
+          "sample": "Hi {{name}}, you have a budget pending review. Want to go over it here?"
+        }
+      ]
+    },
+    "arch": {
+      "eyebrow": "ARCHITECTURE",
+      "title": "One more channel, not a patch.",
+      "body": "The notifications core is channel-agnostic: it defines an adapter protocol and ships email built-in. WhatsApp arrives as an adapter that registers on install and is removed on uninstall, without touching the rest.",
+      "coreLabel": "Notifications gateway",
+      "coreSub": "Channel-agnostic · outbox + dispatch",
+      "adapters": [
+        { "name": "Email", "sub": "Built-in", "icon": "message", "tone": "muted" },
+        { "name": "WhatsApp · Kapso", "sub": "Community module", "icon": "whatsapp", "tone": "primary" },
+        { "name": "Future channels", "sub": "Same contract", "icon": "plug", "tone": "subtle" }
+      ],
+      "note": "Installing adds the adapter and its templates; uninstalling removes it entirely, with a roundtrip test verifying it leaves no residue."
+    },
+    "privacy": {
+      "eyebrow": "PRIVACY & CONTROL",
+      "title": "Serious messaging, not a loose bot.",
+      "body": "Talking to patients over WhatsApp means handling health data. The module assumes that from the design.",
+      "items": [
+        {
+          "title": "Signed webhook",
+          "icon": "lock",
+          "body": "Each clinic has its own HMAC-SHA256 signature. Inbound messages and delivery states are validated before being accepted, and handling is idempotent: a resend duplicates nothing."
+        },
+        {
+          "title": "Encrypted secrets",
+          "icon": "shield",
+          "body": "The Kapso token and webhook signature are stored Fernet-encrypted, per clinic. Nothing in plaintext in the database."
+        },
+        {
+          "title": "Consent & permissions",
+          "icon": "check",
+          "body": "Only patients who opted in get messaged, and access to settings is gated behind `whatsapp_kapso.settings.*` permissions. Whoever shouldn’t, doesn’t touch the config."
+        }
+      ]
+    },
+    "setup": {
+      "eyebrow": "ACTIVATION",
+      "title": "Four steps and you’re sending.",
+      "body": "Install it from Admin → Modules like any community module. Configuration lives on a bilingual settings page.",
+      "steps": [
+        {
+          "title": "Install the module",
+          "body": "From the module manager. The WhatsApp adapter registers and shows up as an available channel in the gateway."
+        },
+        {
+          "title": "Connect Kapso",
+          "body": "Paste your Kapso token and webhook signature. They’re stored encrypted. Set the webhook URL for inbound messages."
+        },
+        {
+          "title": "Sync templates",
+          "body": "The module pulls your approved templates from Kapso and maps them per notification type. You review the mapping in one click."
+        },
+        {
+          "title": "Test send",
+          "body": "Send a test message to your own number to validate the connection end to end before using it with patients."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "q": "Do I need a WhatsApp Business number?",
+          "a": "Yes. The module relies on Kapso as the WhatsApp Business provider. You connect your account, paste the token into settings, and the adapter handles the rest."
+        },
+        {
+          "q": "Why can I sometimes only send templates?",
+          "a": "That’s a WhatsApp rule, not a Dentalpin one. Outside the 24h window since the patient’s last message, only approved (HSM) templates are allowed. As soon as the patient replies, the window opens and you can write free-form."
+        },
+        {
+          "q": "Where do I see patient replies?",
+          "a": "On the patient record. Each conversation is a thread with outbound and inbound messages in order. There’s a conversation endpoint and a thread card built into the patient summary."
+        },
+        {
+          "q": "Is it mandatory? Can I remove it?",
+          "a": "It’s a community module, optional and removable. If you don’t install it, Dentalpin keeps notifying by email. If you uninstall it, the adapter and its templates are removed with no residue (a roundtrip test checks exactly that)."
+        },
+        {
+          "q": "Is it safe for patient data?",
+          "a": "The webhook is signed with per-clinic HMAC-SHA256 and inbound handling is idempotent. Secrets (token, signature) are stored Fernet-encrypted, and access to settings is gated behind dedicated permissions."
+        },
+        {
+          "q": "Will it work for other channels later?",
+          "a": "Yes. The gateway is channel-agnostic: WhatsApp is an adapter on the same contract email already uses. Any new channel (SMS, another provider) fits the same way without rewriting notifications."
+        }
+      ]
+    },
+    "linksTitle": "Go deeper",
+    "links": [
+      { "label": "WhatsApp module guide", "href": "https://github.com/martinezsalmeron/dentalpin/blob/main/docs/modules/whatsapp_kapso.md" },
+      { "label": "ADR · Inbound conversations", "href": "https://github.com/martinezsalmeron/dentalpin/blob/main/docs/adr/0017-inbound-conversation.md" },
+      { "label": "Module permissions", "href": "https://github.com/martinezsalmeron/dentalpin/tree/main/docs/technical/whatsapp_kapso" }
+    ]
+  },
   "featurePage": {
     "backToIndex": "← All features",
     "breadcrumbRoot": "Features",
