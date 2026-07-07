@@ -6,6 +6,7 @@ import {
   GITHUB_LICENSE,
   GITHUB_ISSUES,
   GITHUB_CONTRIBUTING,
+  TELEGRAM_URL,
 } from '~/config/links';
 
 interface Props {
@@ -56,6 +57,7 @@ const licenseUrl = GITHUB_LICENSE;
         <li><a class="hover:text-[var(--color-primary)]" href={ghUrl} target="_blank" rel="noopener">{dict.footer.links.github}</a></li>
         <li><a class="hover:text-[var(--color-primary)]" href={GITHUB_ISSUES} target="_blank" rel="noopener">{dict.footer.links.issues}</a></li>
         <li><a class="hover:text-[var(--color-primary)]" href={GITHUB_CONTRIBUTING} target="_blank" rel="noopener">{dict.footer.links.contribute}</a></li>
+        <li><a class="hover:text-[var(--color-primary)]" href={TELEGRAM_URL} target="_blank" rel="noopener">{dict.footer.links.telegram}</a></li>
       </ul>
     </div>
 

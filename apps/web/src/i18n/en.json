@@ -556,6 +556,7 @@
       "issues": "Issues",
       "discussions": "Discussions",
       "contribute": "Contribute",
+      "telegram": "Telegram",
       "docs": "Documentation",
       "demo": "Online demo",
       "changelog": "Changelog",
@@ -1215,7 +1216,10 @@
       "submit": "Send"
     },
     "success": "Got it. We'll reply within one business day.",
-    "error": "We couldn't send your message. Email us directly at hola@dentalpin.com."
+    "error": "We couldn't send your message. Email us directly at hola@dentalpin.com.",
+    "telegramPre": "Prefer something more direct? Join our ",
+    "telegramLink": "Telegram channel",
+    "telegramPost": " for support and updates."
   },
   "lang": {
     "label": "Language",

@@ -556,6 +556,7 @@
       "issues": "Issues",
       "discussions": "Discussions",
       "contribute": "Contribuir",
+      "telegram": "Telegram",
       "docs": "Documentación",
       "demo": "Demo online",
       "changelog": "Changelog",
@@ -1215,7 +1216,10 @@
       "submit": "Enviar"
     },
     "success": "Recibido. Te respondemos en menos de un día laborable.",
-    "error": "No pudimos enviar tu mensaje. Escríbenos directamente a hola@dentalpin.com."
+    "error": "No pudimos enviar tu mensaje. Escríbenos directamente a hola@dentalpin.com.",
+    "telegramPre": "¿Prefieres algo más directo? Únete a nuestro ",
+    "telegramLink": "canal de Telegram",
+    "telegramPost": " para soporte y novedades."
   },
   "lang": {
     "label": "Idioma",

@@ -19,6 +19,10 @@ export default defineConfig({
         '@dentalpin/tokens/typography.css',
         './src/styles/starlight-theme.css',
       ],
+      social: {
+        github: 'https://github.com/martinezsalmeron/dentalpin',
+        telegram: 'https://t.me/dentalpin',
+      },
       defaultLocale: 'es',
       locales: {
         es: { label: 'Español', lang: 'es' },

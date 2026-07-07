@@ -8,6 +8,8 @@ export const GITHUB_ISSUES = `${GITHUB_REPO}/issues`;
 export const GITHUB_DISCUSSIONS = `${GITHUB_REPO}/discussions`;
 export const GITHUB_CONTRIBUTING = `${GITHUB_REPO}/blob/main/CONTRIBUTING.md`;
 
+export const TELEGRAM_URL = 'https://t.me/dentalpin';
+
 export const GITHUB_SPONSORS = 'https://github.com/sponsors/martinezsalmeron';
 export const OPEN_COLLECTIVE = 'https://opencollective.com/dentalpin';
 
