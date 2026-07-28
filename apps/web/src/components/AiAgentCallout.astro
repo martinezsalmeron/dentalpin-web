@@ -12,53 +12,109 @@ const mod = moduleBySlug('agente-ia')!;
 const href = pagePath(locale, 'features', moduleSlug(mod, locale));
 ---
 
-<Section padY="md">
-  <a
-    href={href}
-    class="group relative block overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-sm)] transition-all hover:-translate-y-0.5 hover:border-[var(--color-primary)]/40 hover:shadow-[var(--shadow-md)]"
-  >
-    <span aria-hidden="true" class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[var(--color-primary)] via-[var(--color-primary)]/40 to-transparent"></span>
+{/*
+  This used to be a 505px card describing the agent in a paragraph — the
+  second smallest block on a 10,703px page, for the one thing no
+  competitor has. Describing it was the problem: "it runs real
+  operations" reads like every other AI marketing line.
 
-    <div class="grid gap-6 p-6 sm:p-8 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] lg:items-center lg:gap-10 lg:p-10">
-      <div>
-        <span class="inline-flex items-center gap-1.5 rounded-[var(--radius-pill)] border border-[var(--color-border)] bg-[var(--color-surface)] px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--color-primary)]">
-          <Icon name="sparkles" size={12} />
-          {a.eyebrow}
-        </span>
+  So it shows the run instead. The tool names are the actual ones the
+  agent calls, and the confirmation gate is real behaviour, not a
+  flourish. Anyone who has used a chatbot bolted onto a product can see
+  the difference in the middle column without reading a word of the copy.
+*/}
+<Section padY="lg">
+  <div class="grid gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1fr)] lg:items-start lg:gap-14">
+    <div>
+      <span class="inline-flex items-center gap-1.5 rounded-[var(--radius-pill)] border border-[var(--color-border)] bg-[var(--color-surface)] px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--color-primary)]">
+        <Icon name="sparkles" size={12} />
+        {a.eyebrow}
+      </span>
 
-        <h2 class="text-marketing-h2 mt-5 max-w-2xl text-[var(--color-text)]">
-          {a.title}
-        </h2>
-        <p class="mt-4 max-w-2xl text-[15px] leading-[1.6] text-[var(--color-text-muted)]">
-          {a.body}
-        </p>
+      <h2 class="text-marketing-h1 mt-5 text-[var(--color-text)]">{a.title}</h2>
 
-        <span class="mt-6 inline-flex items-center gap-1.5 text-[14px] font-semibold text-[var(--color-primary)] transition-transform group-hover:translate-x-0.5">
-          {a.cta}
-          <Icon name="arrow-right" size={14} />
-        </span>
+      <p class="mt-4 text-[16px] leading-[1.65] text-[var(--color-text-muted)]">
+        {a.body}
+      </p>
+
+      <ul class="mt-8 space-y-5">
+        {a.guarantees.map((g: { title: string; body: string }) => (
+          <li class="flex items-start gap-3">
+            <span class="mt-0.5 inline-flex h-6 w-6 flex-none items-center justify-center rounded-full bg-[var(--color-primary-soft)] text-[var(--color-primary-soft-text)]">
+              <Icon name="check" size={12} />
+            </span>
+            <div>
+              <p class="text-[15px] font-semibold text-[var(--color-text)]">{g.title}</p>
+              <p class="mt-1 text-[14px] leading-[1.55] text-[var(--color-text-muted)]">
+                {g.body}
+              </p>
+            </div>
+          </li>
+        ))}
+      </ul>
+
+      <a
+        href={href}
+        class="mt-8 inline-flex items-center gap-1.5 text-[15px] font-semibold text-[var(--color-primary)] hover:underline"
+      >
+        {a.cta}
+        <Icon name="arrow-right" size={14} />
+      </a>
+    </div>
+
+    {/* The run itself. */}
+    <div class="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-md)]">
+      <div class="flex items-center gap-1.5 border-b border-[var(--color-border-subtle)] bg-[var(--color-surface-muted)] px-4 py-2.5">
+        <span class="h-2.5 w-2.5 rounded-full bg-[var(--color-border-strong)]"></span>
+        <span class="h-2.5 w-2.5 rounded-full bg-[var(--color-border-strong)]"></span>
+        <span class="h-2.5 w-2.5 rounded-full bg-[var(--color-border-strong)]"></span>
       </div>
 
-      <div class="rounded-[var(--radius-xl)] border border-[var(--color-border-subtle)] bg-gradient-to-br from-[var(--color-primary-soft)] via-[var(--color-surface)] to-[var(--color-surface)] p-5">
-        <p class="text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--color-primary)]">
-          {a.panelLabel}
+      <div class="space-y-4 p-5 sm:p-6">
+        <p class="ml-auto w-fit max-w-[85%] rounded-[var(--radius-lg)] rounded-br-sm bg-[var(--color-primary)] px-4 py-2.5 text-[14px] leading-snug text-white" style="color:#fff">
+          {a.userPrompt}
         </p>
-        <p class="mt-2 font-mono text-[clamp(1.3rem,1.6vw+0.8rem,1.8rem)] font-bold leading-none tracking-tight text-[var(--color-text)]">
-          {a.panelKey}
-        </p>
-        <p class="mt-2 text-[12.5px] text-[var(--color-text-muted)]">{a.panelSub}</p>
 
-        <ul class="mt-5 grid gap-2 border-t border-[var(--color-border-subtle)] pt-4 text-[12.5px] text-[var(--color-text)]">
-          {a.checks.map((c: string) => (
-            <li class="flex items-start gap-2">
-              <span class="mt-0.5 inline-flex h-4 w-4 flex-none items-center justify-center rounded-full bg-[var(--color-primary-soft)] text-[var(--color-primary-soft-text)]">
-                <Icon name="check" size={10} />
-              </span>
-              <span>{c}</span>
-            </li>
-          ))}
-        </ul>
+        <div class="rounded-[var(--radius-lg)] border border-[var(--color-border-subtle)] bg-[var(--color-surface-muted)] p-3.5">
+          <p class="text-[10px] font-semibold uppercase tracking-[0.16em] text-[var(--color-text-subtle)]">
+            {a.stepsLabel}
+          </p>
+          <ul class="mt-2.5 space-y-2">
+            {a.steps.map((s: { tool: string; result: string }) => (
+              <li class="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
+                <code class="rounded-[var(--radius-xs)] bg-[var(--color-surface)] px-1.5 py-0.5 font-mono text-[12px] text-[var(--color-primary-soft-text)]">
+                  {s.tool}
+                </code>
+                <span class="text-[13px] text-[var(--color-text-muted)]">{s.result}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <p class="w-fit max-w-[92%] rounded-[var(--radius-lg)] rounded-bl-sm border border-[var(--color-border-subtle)] bg-[var(--color-surface)] px-4 py-2.5 text-[14px] leading-snug text-[var(--color-text)]">
+          {a.reply}
+        </p>
+
+        {/* The gate. This is the part a bolted-on chatbot does not have. */}
+        <div class="rounded-[var(--radius-lg)] border-[1.5px] border-[var(--color-warning-accent)] bg-[var(--color-warning-soft)] p-3.5">
+          <p class="flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-[var(--color-warning-text)]">
+            <Icon name="lock" size={11} />
+            {a.confirmLabel}
+          </p>
+          <code class="mt-2 block font-mono text-[12px] text-[var(--color-warning-text)]">
+            {a.confirmTool}
+          </code>
+          <p class="mt-1.5 text-[13px] text-[var(--color-text)]">{a.confirmDetail}</p>
+          <div class="mt-3 flex gap-2">
+            <span class="rounded-[var(--radius-sm)] bg-[var(--color-primary)] px-3 py-1.5 text-[13px] font-semibold text-white" style="color:#fff">
+              {a.confirmYes}
+            </span>
+            <span class="rounded-[var(--radius-sm)] border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-1.5 text-[13px] font-medium text-[var(--color-text-muted)]">
+              {a.confirmNo}
+            </span>
+          </div>
+        </div>
       </div>
     </div>
-  </a>
+  </div>
 </Section>
