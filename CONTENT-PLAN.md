@@ -8,16 +8,22 @@ for anything a human writes here.
 There is no status column to keep in sync. The routine reads this file,
 looks at which slugs already exist under
 `apps/web/src/content/blog/{es,en}/`, and takes the next unwritten
-targets. What is published *is* the state.
+target. What is published *is* the state.
 
-Every run:
+Five posts a week, weekday mornings: two comparisons and three topic
+posts. The two kinds are written differently — see *Two queues* and
+*Topic posts are guides*.
 
-1. Pick the next N targets from the table below that have no post yet.
-2. Research each one **from the vendor's own site**, this run. Not from
-   memory, not from an aggregator blog.
-3. Write the post in Spanish and English.
-4. Verify every competitor claim (see below).
-5. Publish what passes. Open a PR for what does not.
+Every run, one post:
+
+1. Read the day of the week and pick the queue from it — Monday and
+   Wednesday take a comparison, the rest take a topic. See *Two queues*
+   below.
+2. Take the next target in that queue with no post yet.
+3. Research it **this run**, from primary sources. Not from memory.
+4. Write it in Spanish and English.
+5. Verify every factual claim.
+6. Publish what passes. Open a PR for what does not.
 
 ## The rule that matters
 
@@ -153,32 +159,152 @@ automatically. Do not hand-write HTML or CSS classes in a post.
 - Link to `/es/precios/` and the install post from every comparison.
 - Tag with `comparativa` / `comparison` plus the vendor slug.
 
-## Targets
+## Two queues, five posts a week
 
-Vendors confirmed to exist in the Spanish market. Research each before
-writing — this list is a queue, not a source of facts.
+Monday and Wednesday are **comparison** posts. Tuesday, Thursday and
+Friday are **topic** posts. The routine reads the day (`date -u +%u`,
+1 = Monday) and picks the queue from it.
 
-| Target | Slug (es / en) | Why |
+When the comparison queue runs dry, Monday and Wednesday take topic
+targets too and the site simply publishes five topic posts a week. Do
+**not** invent a competitor to keep the comparison cadence — a made-up
+or misremembered vendor is the one mistake here that cannot be walked
+back. Adding a new one means verifying it trades, this run, from its own
+site.
+
+Two entries in the first draft of this list were wrong, in the two ways
+this fails:
+
+- `charly.de` does not resolve. The German vendor trades as
+  `solutio.de` — the name was right, the domain was invented.
+- **Dentazon** was taken from `recepcionista.com`, an aggregator this
+  same document bars as a source, and no such vendor could be found at
+  any domain. The entry looked plausible and was sourced from exactly
+  the place the rule forbids.
+
+A vendor that cannot be reached at its own site does not go in this
+queue.
+
+Same state rule for both queues: what is published *is* the state.
+Look at which slugs already exist, take the next unwritten target.
+
+## Topic posts are guides, not comparisons
+
+A comparison post argues. A topic post **helps**, and earns the right to
+mention the product at the end. They are not the same shape and writing
+one like the other wastes the slot.
+
+- **Answer the question in the first hundred words.** Someone arriving
+  from a search has a question. Answer it immediately, then explain. A
+  post that warms up for three paragraphs loses the reader and the
+  featured snippet.
+- **It has to be useful to someone who never installs Dentalpin.** That
+  is the bar. If the guide only works as a pitch, it will not rank and
+  it will not get linked.
+- **Mention the product once, at the end, and only where it genuinely
+  answers what the post is about.** A guide that pushes the product in
+  every section reads as an advert and converts worse than one that does
+  not.
+- **No competitor claims.** The sourcing rule above exists for
+  comparisons; topic posts should simply not need it. If one does, it is
+  a comparison wearing a guide's title.
+- **Regulation is a special case.** Verifactu, RGPD, LOPD: state what
+  the rule requires, cite the official source (BOE, AEPD, AEAT), give
+  the date consulted, and never give legal advice. "Esto no es
+  asesoramiento legal" belongs in those posts.
+
+The visual conventions above apply unchanged — opening paragraph,
+callouts, numbered lists for anything sequential. Tables in a topic post
+compare options or requirements, not vendors, so the chip markers stay
+useful but the last column is not automatically ours.
+
+## Queue A — comparisons (Mon, Wed)
+
+Every vendor here was verified to exist and to be trading when it was
+added — name, site and market evidence. Research each again before
+writing: this list is a queue, not a source of facts.
+
+**Ordered by whether a post in Spanish or English can actually rank in
+that vendor's market.** A Brazilian dentist searches in Portuguese and a
+German one in German, so a Spanish post about Dampsoft reaches nobody who
+is choosing between Dampsoft and us. Those groups sit at the bottom and
+are worth writing only when the site has content in their language.
+
+### A1 · Spain — the home market
+
+| Target | Slug | Why |
 |---|---|---|
 | Gesden (Infomed) | `dentalpin-vs-gesden` | Market leader, claims 14.000 clinics |
 | Gesden ONE | `dentalpin-vs-gesden-one` | Their cloud product, closest comparison |
+| Odontonet | `dentalpin-vs-odontonet` | Dental-only, already ships Verifactu and WhatsApp — the closest competitor we have, so the hardest post to write honestly. **Check their pricing page: they may publish rates, which would make the usual "no publica precios" line wrong here.** |
+| Klinikare | `dentalpin-vs-klinikare` | Cloud, claims 2.500+ clinics and 20.000+ professionals over 16 years, ISO 27001, own AI features. Multi-vertical (dental, aesthetics, physio), which is a real difference worth stating rather than a weakness |
 | Clinic Cloud | `dentalpin-vs-clinic-cloud` | Cloud-native, SMB |
-| Dentalink | `dentalpin-vs-dentalink` | Cloud, strong in LatAm + Spain |
-| Dentazon | `dentalpin-vs-dentazon` | Spanish, per-cabinet pricing |
-| Dentrix (Henry Schein) | `dentalpin-vs-dentrix` | International incumbent |
-| Open Dental | `dentalpin-vs-open-dental` | The other "open" one — clarify the difference |
-| Apexo | `dentalpin-vs-apexo` | Open source, offline-first |
 | — | `alternativa-open-source-gesden` / `open-source-alternative-to-gesden` | Highest-intent query in the whole space |
 | — | `software-clinica-dental-gratis` / `free-dental-practice-software` | Broad head term |
 
-### Non-comparison, roughly one in five
+### A2 · Spanish-speaking Latin America — Spanish posts rank here
 
-| Topic | Why |
-|---|---|
-| Verifactu para clínicas dentales | Legal deadline, real urgency, own module |
-| RGPD y datos clínicos en la clínica dental | Evergreen, high intent |
-| Migrar de un software dental a otro sin perder historia | Buying-moment content |
-| Qué preguntar a tu proveedor antes de firmar | Ranks for the doubt, not the product |
+| Target | Slug | Why |
+|---|---|---|
+| Dentalink | `dentalpin-vs-dentalink` | Leader in Chile, strong across LatAm and Spain |
+| Doctocliq | `dentalpin-vs-doctocliq` | Dental + medical, positions itself LatAm-wide |
+| DentalCore | `dentalpin-vs-dentalcore` | Argentina-first, clinical records + AI claims |
+
+### A3 · United States and English-speaking markets — English posts rank here
+
+| Target | Slug | Why |
+|---|---|---|
+| Open Dental | `dentalpin-vs-open-dental` | The other "open" one — the difference needs stating |
+| Dentrix (Henry Schein One) | `dentalpin-vs-dentrix` | Largest installed base in the US, 38.000+ practices |
+| Curve Dental | `dentalpin-vs-curve-dental` | Cloud-only, no server option |
+| Eaglesoft (Patterson Dental) | `dentalpin-vs-eaglesoft` | Long-standing US base |
+| Dentally (Henry Schein One) | `dentalpin-vs-dentally` | Cloud; UK, Ireland, Australia, NZ, Canada |
+| Software of Excellence (Henry Schein One) | `dentalpin-vs-software-of-excellence` | UK and Asia-Pacific incumbent |
+| NexHealth | `dentalpin-vs-nexhealth` | Patient-experience layer, not a full PMS — say so |
+| Apexo | `dentalpin-vs-apexo` | Open source, offline-first |
+
+### A4 · Blocked on language — do not write these yet
+
+Real vendors, real markets, and a post in Spanish or English reaches
+almost none of the people choosing between them and us. Move a row up
+into A2 or A3 when the site publishes in that language.
+
+| Target | Market | Blocked on |
+|---|---|---|
+| Simples Dental | Brazil — 60.000+ dentists in BR, 80.000+ across LatAm | Portuguese |
+| Clinicorp | Brazil — claims 100.000+ active users | Portuguese |
+| Dental Office | Brazil — 25 years, ~40.000 dentists | Portuguese |
+| Dampsoft (DS-Win / DS4) | Germany — market leader, near a third of practices per KZBV | German |
+| CompuGroup Medical | Germany — around 28% share | German |
+| charly (solutio) | Germany — around 10% share | German |
+| Julie (Henry Schein One) | France | French — the UI is already translated, the site is not |
+
+## Queue B — topics (Tue, Thu, Fri, then everything)
+
+Ordered by intent. Work down it; the top of this list is where a clinic
+is closest to needing what we sell.
+
+| Topic | Slug (es / en) | Target search |
+|---|---|---|
+| Verifactu para clínicas dentales: qué cambia y cuándo | `verifactu-clinicas-dentales` / `verifactu-dental-clinics-spain` | verifactu clínica dental |
+| RGPD en la clínica dental: qué exige con los datos de pacientes | `rgpd-clinica-dental` / `gdpr-dental-clinic` | rgpd clínica dental |
+| Cómo migrar de software dental sin perder la historia clínica | `migrar-software-dental` / `migrate-dental-software` | migrar software dental |
+| Qué preguntar a tu proveedor antes de firmar | `preguntas-antes-de-firmar-software-dental` / `questions-before-signing-dental-software` | contratar software dental |
+| Cuánto cuesta de verdad un software de clínica dental | `cuanto-cuesta-software-clinica-dental` / `dental-software-cost` | precio software clínica dental |
+| Nube o servidor propio para una clínica dental | `nube-o-servidor-clinica-dental` / `cloud-or-self-hosted-dental` | software dental en la nube |
+| Copias de seguridad en una clínica dental: qué guardar y cada cuánto | `copias-seguridad-clinica-dental` / `dental-clinic-backups` | copia seguridad clínica dental |
+| Cómo reducir las ausencias a citas en la clínica | `reducir-ausencias-citas-dental` / `reduce-dental-no-shows` | ausencias citas dental |
+| Recordatorios de cita por WhatsApp: qué permite la normativa | `recordatorios-cita-whatsapp-dental` / `whatsapp-appointment-reminders-dental` | recordatorios cita whatsapp |
+| Odontograma digital: qué debe registrar y por qué | `odontograma-digital` / `digital-odontogram` | odontograma digital |
+| Presupuestos dentales con firma digital: validez y flujo | `presupuestos-dentales-firma-digital` / `dental-quotes-digital-signature` | presupuesto dental firma |
+| Historia clínica electrónica: qué exige la ley en España | `historia-clinica-electronica-dental` / `electronic-dental-records-spain` | historia clínica electrónica |
+| Abrir una clínica dental: el software que necesitas desde el día uno | `abrir-clinica-dental-software` / `opening-dental-clinic-software` | abrir clínica dental |
+| Cómo dimos a un LLM acceso de escritura a datos clínicos sin que sea una locura | `llm-escritura-datos-clinicos` / `llm-write-access-medical-data` | *(technical, EN-first — HN/Reddit material)* |
+| Autoalojar software sanitario: lo que nadie te cuenta | `autoalojar-software-sanitario` / `self-hosting-healthcare-software` | *(self-hosted / r/selfhosted)* |
+
+When this queue empties too, add new targets the same way: real searches
+a Spanish dental clinic makes, verified to have intent behind them this
+run, not invented from memory.
 
 ## Where the routine must stop and ask
 
