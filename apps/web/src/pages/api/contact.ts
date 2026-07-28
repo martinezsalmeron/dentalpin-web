@@ -107,6 +107,25 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
     return json(502, { error: 'resend_failed' });
   }
 
+  // The lead is already delivered at this point. Adding them to the
+  // audience is best-effort: a Resend hiccup here must not turn a
+  // captured lead into an error the visitor sees.
+  const audienceId = process.env.RESEND_AUDIENCE_ID;
+  if (audienceId) {
+    const [firstName, ...rest] = data.name.split(/\s+/);
+    try {
+      await resend.contacts.create({
+        audienceId,
+        email: data.email,
+        firstName,
+        lastName: rest.join(' '),
+        unsubscribed: false,
+      });
+    } catch {
+      // Ignored on purpose — see above.
+    }
+  }
+
   return json(200, { ok: true });
 };
 

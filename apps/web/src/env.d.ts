@@ -8,6 +8,7 @@ interface ImportMetaEnv {
   readonly TURNSTILE_SECRET?: string;
   readonly CONTACT_TO_EMAIL: string;
   readonly CONTACT_FROM_EMAIL?: string;
+  readonly RESEND_AUDIENCE_ID?: string;
 }
 
 interface ImportMeta {
