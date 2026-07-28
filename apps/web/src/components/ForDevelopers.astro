@@ -1,7 +1,6 @@
 ---
 import { useDict, pagePath, type Locale } from '~/i18n';
 import Section from '@dentalpin/ui/Section.astro';
-import GradientBackdrop from '@dentalpin/ui/GradientBackdrop.astro';
 import Icon from '@dentalpin/ui/Icon.astro';
 import { GITHUB_REPO, DOCS_URL } from '~/config/links';
 
@@ -10,72 +9,55 @@ const { locale } = Astro.props;
 const dict = useDict(locale);
 const f = dict.forDevelopers;
 const techPath = pagePath(locale, 'technology');
-
-const targets: Record<string, string> = {
-  repo: GITHUB_REPO,
-  api: DOCS_URL,
-  modules: techPath,
-};
 ---
 
-<section id="for-developers" class="relative overflow-hidden border-y border-[var(--color-border-subtle)] bg-[var(--color-surface-muted)]/40">
-  <GradientBackdrop variant="subtle" />
+{/*
+  This was a 759px section with three cards, on a homepage whose reader is
+  the clinic owner. The developer it addressed already has a whole page
+  built for them — /tecnologia, in the main nav — covering architecture,
+  module anatomy and the stack in far more depth than three cards could.
 
-  <Section padY="md">
-    <div class="max-w-3xl">
-      <p class="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--color-primary)]">
-        <span class="font-mono text-[10px] text-[var(--color-text-subtle)]">&lt;/&gt;</span>
+  So it collapses to a band: enough signal for a technical reader to know
+  the depth exists, and a door to the page where it actually lives.
+  Nothing is lost, and the homepage gets ~600px back.
+*/}
+<Section padY="sm">
+  <div
+    class="flex flex-col gap-5 rounded-[var(--radius-lg)] border border-[var(--color-border-subtle)] bg-[var(--color-surface-muted)]/50 px-6 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-8"
+  >
+    <div class="max-w-2xl">
+      <p class="text-[10px] font-semibold uppercase tracking-[0.16em] text-[var(--color-primary)]">
         {f.eyebrow}
       </p>
-      <h2 class="text-marketing-h1 mt-3 text-[var(--color-text)]">
+      <p class="mt-2 text-[17px] font-semibold leading-snug text-[var(--color-text)]">
         {f.title}
-      </h2>
-      <p class="mt-4 text-[15px] leading-[1.65] text-[var(--color-text-muted)]">
-        {f.lead}
+      </p>
+      <p class="mt-1.5 text-[14px] leading-[1.55] text-[var(--color-text-muted)]">
+        {f.bandLead}
       </p>
     </div>
 
-    <ul class="mt-12 grid gap-5 md:grid-cols-3">
-      {f.cards.map((card) => (
-        <li class="group relative flex flex-col rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 transition-all hover:-translate-y-0.5 hover:border-[var(--color-border-strong)] hover:shadow-[var(--shadow-md)]">
-          <span class="font-mono text-[10.5px] uppercase tracking-[0.18em] text-[var(--color-text-subtle)]">
-            {card.label}
-          </span>
-          <h3 class="mt-2 text-[18px] font-semibold leading-tight tracking-[-0.01em] text-[var(--color-text)]">
-            {card.title}
-          </h3>
-          <p class="mt-3 flex-1 text-[14px] leading-[1.6] text-[var(--color-text-muted)]">
-            {card.body}
-          </p>
-          <a
-            href={targets[card.key]}
-            target={card.key === 'repo' ? '_blank' : undefined}
-            rel={card.key === 'repo' ? 'noopener' : undefined}
-            class="mt-5 inline-flex items-center gap-1.5 text-[13px] font-semibold text-[var(--color-primary)] transition-colors hover:text-[var(--color-primary-hover)]"
-          >
-            {card.cta}
-            <span class="transition-transform group-hover:translate-x-0.5">
-              <Icon name="arrow-right" size={13} />
-            </span>
-          </a>
-        </li>
-      ))}
-    </ul>
-
-    <div class="mt-10 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[#0b0a09]">
-      <div class="flex items-center gap-2 border-b border-white/5 px-4 py-2.5">
-        <span class="h-2.5 w-2.5 rounded-full bg-[#ff5f57]"></span>
-        <span class="h-2.5 w-2.5 rounded-full bg-[#febc2e]"></span>
-        <span class="h-2.5 w-2.5 rounded-full bg-[#28c840]"></span>
-        <span class="ml-3 font-mono text-[11px] uppercase tracking-wider text-white/40">
-          {f.snippetLabel}
-        </span>
-      </div>
-      <pre class="overflow-x-auto px-5 py-4 font-mono text-[14px] leading-relaxed text-white/90"><code><span class="text-white/40">$</span> {f.snippet}</code></pre>
+    <div class="flex flex-none flex-wrap items-center gap-x-5 gap-y-2 text-[14px] font-semibold">
+      <a href={techPath} class="inline-flex items-center gap-1.5 text-[var(--color-primary)] hover:underline">
+        {f.bandCta}
+        <Icon name="arrow-right" size={13} />
+      </a>
+      <a
+        href={GITHUB_REPO}
+        target="_blank"
+        rel="noopener"
+        class="text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
+      >
+        GitHub
+      </a>
+      <a
+        href={DOCS_URL}
+        target="_blank"
+        rel="noopener"
+        class="text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
+      >
+        API
+      </a>
     </div>
-
-    <p class="mt-3 text-[12.5px] text-[var(--color-text-subtle)]">
-      {f.snippetFootnote}
-    </p>
-  </Section>
-</section>
+  </div>
+</Section>

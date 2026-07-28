@@ -7,7 +7,18 @@ import ClinicDataDiagram from './infographics/ClinicDataDiagram.astro';
 interface Props { locale: Locale; }
 const { locale } = Astro.props;
 const dict = useDict(locale);
-const items = dict.promises.items;
+/*
+  Three promises on the homepage, not four.
+
+  "Tu pantalla" — dark mode, calm spacing, fewer clicks — is the one any
+  competitor could also claim, and DayInClinic demonstrates exactly that
+  two sections later instead of asserting it. The three that stay (your
+  data, your bill, open source) are the positioning; that one was a
+  feature wearing a promise's clothes.
+
+  It stays in the i18n file. This is one number.
+*/
+const items = dict.promises.items.slice(0, 3);
 ---
 
 <Section id="promises" padY="md">
@@ -23,7 +34,7 @@ const items = dict.promises.items;
     </p>
   </div>
 
-  <ul class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+  <ul class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
     {items.map((item) => (
       <li class="group relative flex flex-col rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 shadow-[var(--shadow-xs)] transition-all hover:-translate-y-0.5 hover:border-[var(--color-border-strong)] hover:shadow-[var(--shadow-md)] sm:p-7">
         <span class="inline-flex w-fit items-center gap-2 rounded-[var(--radius-pill)] border border-[var(--color-primary)] bg-[var(--color-primary-soft)] px-2.5 py-0.5 text-[10.5px] font-semibold uppercase tracking-[0.16em] text-[var(--color-primary-soft-text)]">
