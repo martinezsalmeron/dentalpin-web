@@ -1,13 +1,21 @@
 ---
-title: Install Dentalpin on your own server in three minutes
-description: Until this week, installing Dentalpin meant cloning the repository and building two images. Not any more. Three files, three values, one command.
+title: "Install Dentalpin on your own server in three minutes"
+description: "Until this week, installing Dentalpin meant cloning the repository and building two images. Not any more. Three files, three values, one command."
 pubDate: 2026-07-28
 tags: [self-hosted, docker, install]
 ---
 
-Until this week, installing Dentalpin meant cloning the repository and building both images on your own server. Our own docs put that at thirty minutes, and that was the optimistic reading: the Nuxt build asks for 4 GB of memory and punishes any modest VPS.
+Until this week, installing Dentalpin meant cloning the repository and building both images on your own server. Our own docs put that at thirty minutes, and that was optimistic: the Nuxt build asks for 4 GB of memory and punishes any modest VPS.
 
-That is over. Images are published on every release now, and your server only has to pull them.
+That is over. Images are published on every release and your server only has to pull them.
+
+| | Before | Now |
+|---|---|---|
+| Steps | Clone repo, build 2 images | ✓ Download 3 files |
+| Time | ~ 30 minutes | ✓ 3 minutes |
+| Memory needed | ✗ 4 GB to build Nuxt | ✓ Whatever running takes |
+| TLS certificate | ✗ You set it up | ✓ Automatic on first boot |
+| CORS | ✗ Configured by hand | ✓ Gone — single origin |
 
 ## The three minutes
 
@@ -22,13 +30,13 @@ docker compose -f docker-compose.prod.yml up -d
 
 Point a domain at the machine, set `PUBLIC_URL=https://your-domain`, and the certificate is issued on first boot. Nothing to renew, no nginx to write.
 
-If you would rather look around before committing, set `SEED_ON_STARTUP=1` and you start with a demo clinic: patients, schedule, budgets and invoices to poke at.
+> **Just want to look around first?** Set `SEED_ON_STARTUP=1` and you start with a demo clinic: patients, schedule, budgets and invoices to poke at. For a real clinic, leave it at `0`.
 
 ## Why Caddy sits in front
 
 The two previous setups exposed the backend and the frontend on separate ports, leaving whoever installed it to work out the reverse proxy, the TLS certificate and the CORS origin list on their own. Three chances to get it wrong before seeing a single screen.
 
-Now one Caddy container serves everything from a single origin: `/api/*` goes to the backend, everything else to the interface. The browser never talks to two places, so CORS stops being a thing you can misconfigure. And Caddy asks Let's Encrypt for the certificate without being reminded.
+Now one Caddy container serves everything from a single origin: `/api/*` goes to the backend, everything else to the interface. The browser never talks to two places, so **CORS stops being a thing you can misconfigure**. And Caddy asks Let's Encrypt for the certificate without being reminded.
 
 ## One image for every installation
 
@@ -48,18 +56,15 @@ docker compose -f docker-compose.prod.yml pull
 docker compose -f docker-compose.prod.yml up -d
 ```
 
-Migrations apply themselves before the API accepts traffic. Pin the version rather than leaving `latest`, so an upgrade never arrives as a surprise when you restart for an unrelated reason.
+Migrations apply themselves before the API accepts traffic.
 
-And take a backup first. [Here is how](https://github.com/martinezsalmeron/dentalpin/discussions/112) — two Docker volumes, one with the database and one with uploaded files. Both, not just the first.
+> **Pin the version rather than leaving `latest`.** That way an upgrade never arrives as a surprise on a day you restart for an unrelated reason. And **take a backup first**: [here is how](https://github.com/martinezsalmeron/dentalpin/discussions/112) — two Docker volumes, one with the database and one with uploaded files. Both, not just the first.
 
 ## A lesson from the first hour
 
-The first version of these images shipped `amd64` only. The reasoning
-looked sound: any VPS you can rent today is x86, and building for ARM as
-well costs CI minutes.
+The first version of these images shipped `amd64` only. The reasoning looked sound: any VPS you can rent today is x86, and building for ARM as well costs CI minutes.
 
-It lasted twenty minutes — the time it took us to follow our own
-instructions on an Apple Silicon Mac:
+It lasted twenty minutes — the time it took us to follow our own instructions on an Apple Silicon Mac:
 
 ```
 no matching manifest for linux/arm64/v8 in the manifest list entries
@@ -67,12 +72,8 @@ no matching manifest for linux/arm64/v8 in the manifest list entries
 
 The first command of the install. Precisely what this work existed to fix.
 
-The mistake was not technical but a failure of imagination: we pictured
-the production server and forgot that almost everyone tries things on
-their laptop first. And Hetzner's ARM instances are the cheapest in
-Europe, aimed squarely at this audience.
+> The mistake was not technical but a failure of imagination: we pictured the production server and **forgot that almost everyone tries things on their laptop first**. And Hetzner's ARM instances are the cheapest in Europe, aimed squarely at this audience.
 
-Each architecture now builds on its own machine and one manifest is
-published per image. If either is missing, the release does not ship.
+Each architecture now builds on its own machine and one manifest is published per image. If either is missing, the release does not ship.
 
 Installed Dentalpin and something did not go the way this post describes? Say so in [Discussions](https://github.com/martinezsalmeron/dentalpin/discussions). Right now, the install working first time is the thing we care about most.

@@ -1466,6 +1466,11 @@
     "updatedOn": "Actualizado el",
     "empty": "Todavía no hay entradas. Vuelve pronto.",
     "rss": "Suscríbete por RSS",
-    "minRead": "min de lectura"
+    "minRead": "min de lectura",
+    "onThisPage": "En esta página",
+    "ctaTitle": "Pruébalo tú mismo",
+    "ctaBody": "Entra en la demo con datos reales, sin instalar nada ni dejar tu email. O móntalo en tu servidor en tres minutos.",
+    "ctaDemo": "Probar la demo",
+    "ctaPricing": "Ver precios"
   }
 }

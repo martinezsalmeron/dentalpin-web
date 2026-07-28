@@ -1466,6 +1466,11 @@
     "updatedOn": "Updated on",
     "empty": "No posts yet. Check back soon.",
     "rss": "Subscribe via RSS",
-    "minRead": "min read"
+    "minRead": "min read",
+    "onThisPage": "On this page",
+    "ctaTitle": "See it for yourself",
+    "ctaBody": "Open the demo with real data — nothing to install, no email required. Or stand it up on your own server in three minutes.",
+    "ctaDemo": "Try the demo",
+    "ctaPricing": "See pricing"
   }
 }
