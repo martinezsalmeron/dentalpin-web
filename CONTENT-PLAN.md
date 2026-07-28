@@ -50,21 +50,95 @@ In practice:
 
 ## Every comparison post has this shape
 
-1. **Who it is for** — one paragraph, honest, no preamble.
-2. **What <competitor> is** — sourced, neutral, generous. A comparison
+1. **Who it is for** — one paragraph, honest, no preamble. Then a callout
+   explaining how the comparison is sourced.
+2. **"En treinta segundos"** — the verdict up front, in three short
+   paragraphs: what the competitor is strongest at, what we are strongest
+   at, and the one question that actually decides between them. A reader
+   who stops here should already have their answer.
+3. **What <competitor> is** — sourced, neutral, generous. A comparison
    that cannot describe the other product fairly convinces nobody.
-3. **What DentalPin is.**
-4. **Side-by-side table** — only verifiable rows. Deployment, licence,
-   published price, data ownership, API, modules, compliance.
-5. **Choose <competitor> if…** — a real list, not a straw man. If they
+4. **What DentalPin is.**
+5. **Side-by-side table** — only verifiable rows, chips where there is a
+   verdict. Deployment, licence, published price, data ownership, API,
+   modules, compliance, and at least two rows the competitor wins.
+6. **Choose <competitor> if…** — a real list, not a straw man. If they
    have 30 years of Spanish support and 400 migrations a year, say so.
    This section is why the post gets trusted and linked.
-6. **Choose DentalPin if…**
-7. **How migration actually works** — concrete, with the module.
-8. **Sources** — every URL with the date consulted.
+7. **Choose DentalPin if…**
+8. **How migration actually works** — a numbered list, with the module.
+9. **Sources** — every URL with the date consulted.
 
-Section 5 is not a concession. It is the section that makes the other
+Section 6 is not a concession. It is the section that makes the other
 seven credible, and it is the one the routine must never quietly drop.
+
+## Making a post look designed
+
+The posts are plain Markdown. There are no components to import and no
+classes to write — `apps/web/src/styles/post.css` and the
+`rehype-table-chips` plugin turn ordinary Markdown into the finished
+article. Your side of that bargain is using the constructs below, because
+a post that ignores them renders as an undifferentiated wall of text.
+
+**The opening paragraph is set larger than the rest.** Make it a real
+opening — one or two sentences that could stand alone as the answer to
+the headline. Never waste it on throat-clearing.
+
+**Blockquotes become callouts** — a bordered card with an accent rule.
+Use them two or three times per post, for the thing a skimmer must not
+miss: the caveat, the number that decides it, the mistake to avoid. Open
+with a bolded phrase so the card has a headline:
+
+```markdown
+> **Infomed no publica tarifas en su web.** Remite a consultar con su
+> coordinador de zona, y ninguno de los blogs que citan cifras es Infomed.
+```
+
+Four or five callouts in one post is noise. If everything is highlighted,
+nothing is.
+
+**Comparison tables are the centrepiece.** They break out wider than the
+text, the header row is styled, and below 640px each row restacks into its
+own card so both products stay visible on a phone. Two rules make that
+work:
+
+- **Dentalpin is always the last column.** It gets the tinted treatment.
+- **Open a cell with `✓`, `✗` or `~`** and the whole cell becomes a
+  coloured pill — green, red or amber. Use them only where the cell is a
+  verdict, and only where the verdict is defensible. A row like
+  `| Modelo | Licencia comercial | Open source |` is a fact, not a
+  verdict: leave it plain.
+
+```markdown
+| | Gesden | Dentalpin |
+|---|---|---|
+| Modelo | Licencia comercial | Open source (BSL 1.1) |
+| Precio publicado | ✗ No publica tarifas | ✓ 0 €, todo incluido |
+| Módulos | ~ Varios se contratan aparte | ✓ Todos incluidos |
+| Años en el mercado | ✓ Más de 30 | ✗ Desde 2026 |
+```
+
+**Give the competitor green chips where they earn them.** A table where
+every green pill is ours and every red one theirs reads as marketing and
+gets believed by nobody. Years on the market, support headcount, install
+base — those are theirs, and saying so is what makes the rest credible.
+
+**Sections are scannable.** Every `##` gets a rule above it and feeds the
+page index, which appears once a post has more than two. Write headings
+that say what the section concludes ("Elige Gesden si") rather than what
+it is about ("Consideraciones").
+
+**Bulleted points open with a bolded lead-in**, then the explanation.
+The reader who only reads the bold parts should still get the argument.
+
+**Numbered lists for anything sequential** — a migration, an install.
+Prose describing four steps is four steps nobody can follow.
+
+**Keep paragraphs to two or three sentences.** This is the single biggest
+difference between a post that gets read and one that gets closed.
+
+Everything else — links, code, images, the sources list — is styled
+automatically. Do not hand-write HTML or CSS classes in a post.
 
 ## SEO conventions
 

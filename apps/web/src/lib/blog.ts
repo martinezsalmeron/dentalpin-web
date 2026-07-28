@@ -21,3 +21,12 @@ export function postPath(locale: Locale, slug: string): string {
 export function isPublished(post: CollectionEntry<'blog'>): boolean {
   return import.meta.env.DEV || !post.data.draft;
 }
+
+// Rounded up so nothing ever reads "0 min". 200 wpm is the usual figure for
+// prose; these posts carry tables and code, which people scan rather than
+// read, so a word count slightly overstates the real time — that error is
+// in the right direction for an estimate shown before someone commits.
+export function readingMinutes(markdown: string): number {
+  const words = markdown.trim().split(/\s+/).filter(Boolean).length;
+  return Math.max(1, Math.ceil(words / 200));
+}

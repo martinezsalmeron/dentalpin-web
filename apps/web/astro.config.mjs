@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import node from '@astrojs/node';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
+import { rehypeTableChips } from './src/lib/rehype-table-chips.mjs';
 
 const site = process.env.PUBLIC_SITE_URL ?? 'https://www.dentalpin.com';
 
@@ -14,6 +15,9 @@ export default defineConfig({
     '/': '/es/',
   },
   prefetch: { prefetchAll: true, defaultStrategy: 'viewport' },
+  markdown: {
+    rehypePlugins: [rehypeTableChips],
+  },
   // i18n handled via [lang] dynamic routes + getStaticPaths.
   // Keeping `locales` here gives us Astro.currentLocale for free.
   i18n: {

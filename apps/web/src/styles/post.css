@@ -1,0 +1,363 @@
+/*
+ * Article typography for blog posts.
+ *
+ * The posts are plain Markdown — the routine that writes them must never
+ * have to emit JSX or remember a component API. Everything visual here is
+ * driven by ordinary Markdown constructs plus a few authoring conventions
+ * documented in CONTENT-PLAN.md, so a new post gets the full treatment
+ * without knowing this file exists.
+ */
+
+.post {
+  --post-measure: 44rem;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--color-text-muted);
+}
+
+@media (min-width: 768px) {
+  .post {
+    font-size: 1.125rem;
+  }
+}
+
+.post > *:not(.table-scroll) {
+  max-width: var(--post-measure);
+  margin-inline: auto;
+}
+
+/* ─── Rhythm ─── */
+
+.post p,
+.post ul,
+.post ol,
+.post blockquote {
+  margin-block: 1.25em;
+}
+
+/* The opening paragraph carries the piece — give it presence. */
+.post > p:first-child {
+  font-size: 1.25em;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+.post strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+/* ─── Headings ─── */
+
+.post h2 {
+  margin-block: 2.5em 0.75em;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--color-border-subtle);
+  font-size: 1.5em;
+  line-height: 1.25;
+  font-weight: 640;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  scroll-margin-top: 5rem;
+}
+
+.post h2:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.post h3 {
+  margin-block: 2em 0.5em;
+  font-size: 1.15em;
+  font-weight: 620;
+  color: var(--color-text);
+  scroll-margin-top: 5rem;
+}
+
+/* ─── Lists ─── */
+
+.post ul,
+.post ol {
+  padding-left: 1.5rem;
+}
+
+.post li {
+  margin-block: 0.5em;
+}
+
+.post li::marker {
+  color: var(--color-text-subtle);
+}
+
+.post ul li::marker {
+  color: var(--color-primary);
+}
+
+/* A list whose items open with bold text reads as a set of points, not
+   prose — give each one room to breathe. */
+.post li > strong:first-child {
+  display: inline-block;
+  margin-bottom: 0.15em;
+}
+
+/* ─── Links ─── */
+
+.post a {
+  color: var(--color-text);
+  text-decoration: underline;
+  text-decoration-color: var(--color-primary);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  transition: color var(--motion-duration) var(--motion-easing);
+}
+
+.post a:hover {
+  color: var(--color-primary);
+}
+
+/* ─── Callouts (blockquotes) ─── */
+
+.post blockquote {
+  position: relative;
+  margin-block: 2em;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--color-border-subtle);
+  border-left: 3px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 0.975em;
+}
+
+.post blockquote > :first-child {
+  margin-top: 0;
+}
+.post blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+/* ─── Tables ─── */
+
+/* The wrapper comes from rehype-table-chips. Comparison tables are the
+   point of these posts, so they break out past the reading measure. */
+.post .table-scroll {
+  max-width: min(100%, 58rem);
+  margin-block: 2em;
+  margin-inline: auto;
+  overflow-x: auto;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  -webkit-overflow-scrolling: touch;
+}
+
+.post table {
+  width: 100%;
+  min-width: 34rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.post thead {
+  background: var(--color-surface-muted);
+}
+
+.post th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.8125rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+  white-space: nowrap;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.post td {
+  padding: 0.875rem 1rem;
+  vertical-align: top;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.post tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.post tbody tr:hover {
+  background: color-mix(in oklab, var(--color-surface-muted) 55%, transparent);
+}
+
+/* First column is the row label in every comparison table. */
+.post tbody td:first-child {
+  font-weight: 560;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+/* The last column is always DentalPin — tint it so the eye lands there
+   without the table shouting. Convention, documented in CONTENT-PLAN.md. */
+.post table th:last-child,
+.post table td:last-child {
+  background: color-mix(in oklab, var(--color-primary-soft) 45%, transparent);
+}
+
+.post table th:last-child {
+  color: var(--color-primary-soft-text);
+}
+
+/* Below 640px the table restacks: one card per row, each value carrying
+   its column name from data-label. Scrolling sideways would leave the
+   Dentalpin column off-screen — a comparison nobody can compare. */
+@media (max-width: 639px) {
+  .post .table-scroll {
+    border: 0;
+    border-radius: 0;
+    background: none;
+    overflow: visible;
+  }
+
+  .post table,
+  .post tbody,
+  .post tr,
+  .post td {
+    display: block;
+    width: auto;
+    min-width: 0;
+  }
+
+  .post thead {
+    display: none;
+  }
+
+  .post tbody tr {
+    margin-bottom: 0.875rem;
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    overflow: hidden;
+  }
+
+  .post tbody tr:hover {
+    background: var(--color-surface);
+  }
+
+  /* Row label becomes the card heading. */
+  .post tbody td:first-child {
+    padding: 0.625rem 1rem;
+    background: var(--color-surface-muted);
+    border-bottom: 1px solid var(--color-border-subtle);
+    font-size: 0.9375rem;
+    white-space: normal;
+  }
+
+  .post tbody td:not(:first-child) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.625rem 1rem;
+  }
+
+  .post tbody td:not(:first-child)::before {
+    content: attr(data-label);
+    flex: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--color-text-subtle);
+  }
+
+  .post tbody tr td:last-child {
+    border-bottom: 0;
+  }
+}
+
+/* ─── Verdict chips ─── */
+
+/* Cells opening with ✓ / ✗ / ~ become chips. Authors type the character;
+   CSS does the rest. */
+.post td .chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.125rem 0.5rem 0.125rem 0.375rem;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 560;
+  white-space: nowrap;
+}
+
+.post .chip-yes {
+  background: var(--color-success-soft);
+  color: var(--color-success-text);
+}
+
+.post .chip-no {
+  background: var(--color-danger-soft);
+  color: var(--color-danger-text);
+}
+
+.post .chip-partial {
+  background: var(--color-warning-soft);
+  color: var(--color-warning-text);
+}
+
+/* ─── Code ─── */
+
+.post code {
+  padding: 0.125em 0.375em;
+  border-radius: var(--radius-xs);
+  background: var(--color-surface-sunken);
+  font-size: 0.875em;
+  color: var(--color-text);
+}
+
+.post pre {
+  max-width: var(--post-measure);
+  margin: 2em auto;
+  padding: 1.125rem 1.25rem;
+  overflow-x: auto;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.post pre code {
+  padding: 0;
+  background: none;
+  font-size: inherit;
+}
+
+/* ─── Separators ─── */
+
+.post hr {
+  margin-block: 3em;
+  border: 0;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+/* ─── Images ─── */
+
+.post img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-block: 2em;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+}
+
+/* ─── Sources ─── */
+
+/* The final section of every comparison post. Smaller, receding — present
+   for anyone checking the work, quiet for everyone else. */
+.post h2#fuentes ~ ul,
+.post h2#sources ~ ul {
+  font-size: 0.9375rem;
+}

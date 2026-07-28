@@ -1,9 +1,12 @@
 ---
 import { getCollection, render } from 'astro:content';
-import { isLocale, useTranslations, type Locale } from '~/i18n';
+import { isLocale, useTranslations, pagePath, type Locale } from '~/i18n';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Section from '@dentalpin/ui/Section.astro';
-import { localeOf, slugOf, isPublished } from '~/lib/blog';
+import Button from '@dentalpin/ui/Button.astro';
+import { DEMO_URL } from '~/config/links';
+import { localeOf, slugOf, isPublished, readingMinutes } from '~/lib/blog';
+import '~/styles/post.css';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -19,7 +22,11 @@ const locale = lang as Locale;
 const t = useTranslations(locale);
 
 const { post } = Astro.props;
-const { Content } = await render(post);
+const { Content, headings } = await render(post);
+
+// Only h2s — an index that mirrors every h3 stops being an index.
+const toc = headings.filter((h) => h.depth === 2);
+const minutes = readingMinutes(post.body ?? '');
 
 const dateFmt = new Intl.DateTimeFormat(locale === 'es' ? 'es-ES' : 'en-GB', {
   day: 'numeric',
@@ -27,9 +34,6 @@ const dateFmt = new Intl.DateTimeFormat(locale === 'es' ? 'es-ES' : 'en-GB', {
   year: 'numeric',
 });
 
-// BaseLayout emits SoftwareApplication for the site as a whole; a post
-// is an Article. Both on one page is valid, and the dates here are what
-// earn the timestamp Google shows beside the result.
 const site = Astro.site?.toString().replace(/\/$/, '') ?? 'https://www.dentalpin.com';
 const articleLd = {
   '@context': 'https://schema.org',
@@ -51,36 +55,118 @@ const articleLd = {
   description={post.data.description}
   ogImage={post.data.ogImage}
 >
-  <Section maxWidth="narrow" padY="lg">
-    <a
-      href={`/${locale}/blog/`}
-      class="text-sm text-[var(--color-text-muted)] underline underline-offset-4 hover:text-[var(--color-text)]"
-    >
-      ← {t('blog.backToBlog')}
-    </a>
+  <article>
+    <!-- Hero -->
+    <Section maxWidth="default" padY="md">
+      <div class="mx-auto max-w-3xl">
+        <a
+          href={`/${locale}/blog/`}
+          class="inline-flex items-center gap-1.5 text-sm text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text)]"
+        >
+          <span aria-hidden="true">←</span>
+          {t('blog.backToBlog')}
+        </a>
 
-    <article class="mt-8">
-      <h1 class="text-marketing-h1 text-[var(--color-text)]">{post.data.title}</h1>
+        <h1
+          class="mt-6 text-[length:var(--text-marketing-h1)] font-semibold leading-[1.1] tracking-[-0.025em] text-[var(--color-text)]"
+        >
+          {post.data.title}
+        </h1>
 
-      <p class="mt-4 text-sm text-[var(--color-text-muted)]">
-        <time datetime={post.data.pubDate.toISOString()}>
-          {t('blog.publishedOn')} {dateFmt.format(post.data.pubDate)}
-        </time>
-        {post.data.updatedDate && (
-          <>
-            {' · '}
-            <time datetime={post.data.updatedDate.toISOString()}>
-              {t('blog.updatedOn')} {dateFmt.format(post.data.updatedDate)}
-            </time>
-          </>
-        )}
-      </p>
+        <p class="mt-5 text-lg leading-relaxed text-[var(--color-text-muted)]">
+          {post.data.description}
+        </p>
 
-      <div class="prose prose-sm mt-10 max-w-none text-[var(--color-text-muted)]">
-        <Content />
+        <div
+          class="mt-7 flex flex-wrap items-center gap-x-3 gap-y-2 border-t border-[var(--color-border-subtle)] pt-5 text-sm text-[var(--color-text-subtle)]"
+        >
+          <time datetime={post.data.pubDate.toISOString()}>
+            {dateFmt.format(post.data.pubDate)}
+          </time>
+          <span aria-hidden="true">·</span>
+          <span>{minutes} {t('blog.minRead')}</span>
+          {post.data.updatedDate && (
+            <>
+              <span aria-hidden="true">·</span>
+              <span>
+                {t('blog.updatedOn')}{' '}
+                <time datetime={post.data.updatedDate.toISOString()}>
+                  {dateFmt.format(post.data.updatedDate)}
+                </time>
+              </span>
+            </>
+          )}
+          {post.data.tags.length > 0 && (
+            <ul class="flex flex-wrap gap-1.5">
+              {post.data.tags.map((tag) => (
+                <li
+                  class="rounded-[var(--radius-xs)] bg-[var(--color-surface-muted)] px-2 py-0.5 text-[12px] font-medium text-[var(--color-text-muted)]"
+                >
+                  {tag}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
       </div>
-    </article>
+    </Section>
 
-    <script type="application/ld+json" set:html={JSON.stringify(articleLd)} />
-  </Section>
+    <!-- Body + table of contents -->
+    <Section maxWidth="wide" padY="sm">
+      <div class="lg:grid lg:grid-cols-[1fr_15rem] lg:items-start lg:gap-12">
+        <div class="post min-w-0">
+          <Content />
+        </div>
+
+        {toc.length > 2 && (
+          <nav
+            aria-label={t('blog.onThisPage')}
+            class="order-first mb-10 lg:sticky lg:top-24 lg:order-none lg:mb-0"
+          >
+            <p
+              class="mb-3 text-[11px] font-semibold uppercase tracking-wider text-[var(--color-text-subtle)]"
+            >
+              {t('blog.onThisPage')}
+            </p>
+            <ul class="flex flex-col gap-2 border-l border-[var(--color-border-subtle)]">
+              {toc.map((heading) => (
+                <li>
+                  <a
+                    href={`#${heading.slug}`}
+                    class="-ml-px block border-l border-transparent pl-3 text-[13px] leading-snug text-[var(--color-text-muted)] transition-colors hover:border-[var(--color-primary)] hover:text-[var(--color-text)]"
+                  >
+                    {heading.text}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
+      </div>
+    </Section>
+
+    <!-- Closing CTA -->
+    <Section maxWidth="default" padY="lg">
+      <div
+        class="mx-auto flex max-w-3xl flex-col gap-5 rounded-[var(--radius-lg)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-7 sm:flex-row sm:items-center sm:justify-between sm:p-8"
+      >
+        <div>
+          <p class="text-lg font-semibold text-[var(--color-text)]">
+            {t('blog.ctaTitle')}
+          </p>
+          <p class="mt-1.5 text-sm leading-relaxed text-[var(--color-text-muted)]">
+            {t('blog.ctaBody')}
+          </p>
+        </div>
+        <div class="flex flex-none flex-wrap gap-2.5">
+          <Button href={DEMO_URL} size="sm">{t('blog.ctaDemo')}</Button>
+          <Button href={pagePath(locale, 'pricing')} size="sm" variant="outline">
+            {t('blog.ctaPricing')}
+          </Button>
+        </div>
+      </div>
+    </Section>
+  </article>
+
+  <script type="application/ld+json" set:html={JSON.stringify(articleLd)} />
 </BaseLayout>

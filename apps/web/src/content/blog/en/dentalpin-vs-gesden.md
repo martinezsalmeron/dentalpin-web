@@ -7,7 +7,17 @@ tags: [comparison, gesden, dental-software]
 
 If you run a clinic in Spain and go looking for practice management software, Gesden comes up first. Reasonably so: it has been on the market for over thirty years, and its maker, Infomed, states that **14,000 clinics** use it.
 
-We make Dentalpin, so we are not neutral. What we can be is accurate: everything claimed here about Gesden comes from pages Infomed publishes, linked and dated at the end. And there is a whole section on when Gesden is the better choice, because there is one.
+We make Dentalpin, so we are not neutral. What we can be is accurate.
+
+> **How to read this comparison.** Everything claimed here about Gesden comes from pages Infomed publishes, linked and dated at the end. No aggregator blogs: they contradict each other and some are written by competitors. And there is a whole section on when Gesden is the better choice, because there is one.
+
+## In thirty seconds
+
+**Gesden** is the mature product: thirty years, 14,000 clinics, more than 50 support technicians and 400 migrations a year. If what you need is a phone number to call when the software stops on a Tuesday morning, they have that infrastructure and we do not.
+
+**Dentalpin** is open source and free: no licence per chair, per dentist or per patient, with the code published and the data wherever you decide. In exchange, it is from 2026 and it is self-hosted — someone has to own the server.
+
+The question is not which is better. It is whether your clinic has technical people or not.
 
 ## What Gesden is
 
@@ -21,8 +31,6 @@ G5 comes in three editions by licence count: *Easy* (up to 3), *Profesional* (up
 Functionally it is a deep, mature product: clinical records with an odontogram, a periodontogram with evolution comparison, multi-cabinet and multi-site scheduling, budgets, a full billing cycle, insurance claim assistance, 150+ configurable report types, recalls, expense and supplier control, and an orthodontics module.
 
 Around that core sit **optional modules** contracted separately: `dentIA` (AI radiograph analysis), `CLINIPAD` (digital signatures), SMS and emailing, `ONE PAY` (payments), a Dashboard, `DIDACTIC` (3D case presentation), mobile scheduling and online booking. Verifactu is a separate product too.
-
-Infomed also states more than 50 support technicians, more than 40 in R&D, and over 400 migrations a year.
 
 ## What Dentalpin is
 
@@ -39,17 +47,20 @@ Verifiable rows only. Where there is no public figure, we say so.
 | | Gesden | Dentalpin |
 |---|---|---|
 | Model | Commercial licence | Open source (BSL 1.1 → Apache 2.0 after 4 years) |
-| Deployment | G5 desktop (Windows 10+) · ONE in the cloud | Your server, your provider, or local |
-| Published price | Does not publish prices on its site | €0, every module included |
-| Modules | Several optional, contracted separately | All included |
-| Verifactu | Separate product | Included module |
-| Where data lives | Depends on product and deployment | Wherever you decide |
-| Auditable code | No | Yes, on GitHub |
-| API | Not publicly documented | Full REST, OpenAPI generated |
-| Years on the market | 30+ | Since 2026 |
-| Clinics using it | 14,000 stated | Very few so far |
+| Deployment | Windows 10+ desktop · ONE in the cloud | Your server, your provider, or local |
+| Published price | ✗ Does not publish rates | ✓ €0, everything included |
+| Modules | ~ Several contracted separately | ✓ All included |
+| Verifactu | ~ Separate product | ✓ Included module |
+| Where data lives | Depends on product and deployment | ✓ Wherever you decide |
+| Auditable code | ✗ No | ✓ Published on GitHub |
+| Documented API | ✗ Not publicly | ✓ Full REST, OpenAPI |
+| Years on the market | ✓ 30+ | ✗ Since 2026 |
+| Clinics using it | ✓ 14,000 stated | ✗ Very few so far |
+| Phone support | ✓ 50+ technicians | ✗ Telegram and GitHub |
 
-On price it is worth being precise, because a lot of noise circulates. **Infomed does not publish rates on its site** — it directs you to your area coordinator. Blogs quote wildly different figures, from €99/month to perpetual licences of €2,000–3,000, and none of them is Infomed. If the number matters to you, ask them.
+On price it is worth being precise, because a lot of noise circulates.
+
+> **Infomed does not publish rates on its site** — it directs you to your area coordinator. Blogs quote wildly different figures, from €99/month to perpetual licences of €2,000–3,000, and **none of them is Infomed**. If the number matters to you, ask them.
 
 ## Choose Gesden if
 
@@ -74,9 +85,14 @@ A product with 14,000 clinics behind it solves problems we do not yet know exist
 
 ## What migrating looks like
 
-The `migration_import` module imports through [dental-bridge](https://github.com/dentaltix/dental-bridge), and it is deliberately not one button: you upload the file, see a preview with entity counts and sample rows before anything is written, then reach a proposals step where the system maps the source treatment catalogue onto yours and you decide row by row — accept, relink, create new, ignore. Anything scoring above 0.9 can be accepted in bulk.
+The `migration_import` module imports through [dental-bridge](https://github.com/dentaltix/dental-bridge), and it is deliberately not one button:
 
-That step is where most migrations go wrong. Two clinics never code treatments the same way, and a silently guessed equivalence produces invoices that are wrong in ways nobody notices for months.
+1. **Upload the file** and the system validates it before touching anything.
+2. **See a preview** with entity counts and sample rows. Nothing has been written yet.
+3. **Review the proposals**: the system maps the source treatment catalogue onto yours and you decide row by row — accept, relink, create new, or ignore. Anything scoring above 0.9 can be accepted in bulk.
+4. **Execute**, and the import runs honouring your decisions.
+
+> Step 3 is where most migrations go wrong. Two clinics never code treatments the same way, and **a silently guessed equivalence produces invoices that are wrong in ways nobody notices for months**.
 
 ## The honest part
 
