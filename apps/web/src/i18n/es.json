@@ -14,7 +14,8 @@
     "github": "GitHub",
     "skip": "Saltar al contenido",
     "openMenu": "Abrir menú",
-    "closeMenu": "Cerrar menú"
+    "closeMenu": "Cerrar menú",
+    "blog": "Blog"
   },
   "megamenu": {
     "trigger": "Funcionalidades",
@@ -87,23 +88,75 @@
     "coreLabel": "INCLUIDO SIEMPRE",
     "coreSubtitle": "El núcleo que cualquier clínica necesita. Gratis para siempre, sin extras escondidos.",
     "core": [
-      { "name": "Agenda", "icon": "calendar" },
-      { "name": "Pacientes", "icon": "users" },
-      { "name": "Odontograma", "icon": "tooth" },
-      { "name": "Historial clínico", "icon": "clipboard" },
-      { "name": "Presupuestos", "icon": "file-text" },
-      { "name": "Facturación", "icon": "card" },
-      { "name": "RX e imágenes", "icon": "image" }
+      {
+        "name": "Agenda",
+        "icon": "calendar"
+      },
+      {
+        "name": "Pacientes",
+        "icon": "users"
+      },
+      {
+        "name": "Odontograma",
+        "icon": "tooth"
+      },
+      {
+        "name": "Historial clínico",
+        "icon": "clipboard"
+      },
+      {
+        "name": "Presupuestos",
+        "icon": "file-text"
+      },
+      {
+        "name": "Facturación",
+        "icon": "card"
+      },
+      {
+        "name": "RX e imágenes",
+        "icon": "image"
+      }
     ],
     "optionalLabel": "ACTIVA LO QUE NECESITES",
     "optionalSubtitle": "Extras que algunas clínicas quieren y otras no. Activas o desactivas con un clic.",
     "optional": [
-      { "name": "Recordatorios automáticos", "icon": "bell", "soon": false, "defaultOn": true },
-      { "name": "Portal del paciente", "icon": "globe", "soon": false, "defaultOn": false },
-      { "name": "Multi-clínica", "icon": "building", "soon": false, "defaultOn": false },
-      { "name": "Verifactu", "icon": "shield", "soon": false, "defaultOn": false, "country": "ES" },
-      { "name": "WhatsApp Business", "icon": "message", "soon": true, "defaultOn": false },
-      { "name": "Agente de IA", "icon": "sparkles", "soon": false, "defaultOn": false }
+      {
+        "name": "Recordatorios automáticos",
+        "icon": "bell",
+        "soon": false,
+        "defaultOn": true
+      },
+      {
+        "name": "Portal del paciente",
+        "icon": "globe",
+        "soon": false,
+        "defaultOn": false
+      },
+      {
+        "name": "Multi-clínica",
+        "icon": "building",
+        "soon": false,
+        "defaultOn": false
+      },
+      {
+        "name": "Verifactu",
+        "icon": "shield",
+        "soon": false,
+        "defaultOn": false,
+        "country": "ES"
+      },
+      {
+        "name": "WhatsApp Business",
+        "icon": "message",
+        "soon": true,
+        "defaultOn": false
+      },
+      {
+        "name": "Agente de IA",
+        "icon": "sparkles",
+        "soon": false,
+        "defaultOn": false
+      }
     ],
     "soonBadge": "Próximamente",
     "summaryPrefix": "Tu Dentalpin:",
@@ -332,37 +385,85 @@
       {
         "label": "Frontend",
         "items": [
-          { "name": "Nuxt 3", "role": "Framework" },
-          { "name": "Vue 3", "role": "UI" },
-          { "name": "Nuxt UI", "role": "Componentes" },
-          { "name": "TypeScript", "role": "Tipado" },
-          { "name": "Tailwind", "role": "Estilos" }
+          {
+            "name": "Nuxt 3",
+            "role": "Framework"
+          },
+          {
+            "name": "Vue 3",
+            "role": "UI"
+          },
+          {
+            "name": "Nuxt UI",
+            "role": "Componentes"
+          },
+          {
+            "name": "TypeScript",
+            "role": "Tipado"
+          },
+          {
+            "name": "Tailwind",
+            "role": "Estilos"
+          }
         ]
       },
       {
         "label": "Backend",
         "items": [
-          { "name": "FastAPI", "role": "API HTTP" },
-          { "name": "Pydantic v2", "role": "Esquemas" },
-          { "name": "SQLAlchemy 2.0", "role": "ORM" },
-          { "name": "Alembic", "role": "Migraciones" }
+          {
+            "name": "FastAPI",
+            "role": "API HTTP"
+          },
+          {
+            "name": "Pydantic v2",
+            "role": "Esquemas"
+          },
+          {
+            "name": "SQLAlchemy 2.0",
+            "role": "ORM"
+          },
+          {
+            "name": "Alembic",
+            "role": "Migraciones"
+          }
         ]
       },
       {
         "label": "Datos",
         "items": [
-          { "name": "PostgreSQL 15", "role": "Base de datos" },
-          { "name": "Redis", "role": "Cache y cola" },
-          { "name": "S3 compatible", "role": "Archivos" }
+          {
+            "name": "PostgreSQL 15",
+            "role": "Base de datos"
+          },
+          {
+            "name": "Redis",
+            "role": "Cache y cola"
+          },
+          {
+            "name": "S3 compatible",
+            "role": "Archivos"
+          }
         ]
       },
       {
         "label": "Runtime y QA",
         "items": [
-          { "name": "Docker", "role": "Runtime" },
-          { "name": "docker-compose", "role": "Orquestación" },
-          { "name": "Playwright", "role": "Tests E2E" },
-          { "name": "Pytest", "role": "Tests backend" }
+          {
+            "name": "Docker",
+            "role": "Runtime"
+          },
+          {
+            "name": "docker-compose",
+            "role": "Orquestación"
+          },
+          {
+            "name": "Playwright",
+            "role": "Tests E2E"
+          },
+          {
+            "name": "Pytest",
+            "role": "Tests backend"
+          }
         ]
       }
     ],
@@ -378,18 +479,42 @@
     "title": "Un núcleo pequeño. Módulos que enchufan.",
     "body": "El sistema de módulos no es una metáfora: cada uno trae su manifest, sus migraciones Alembic, sus seeds YAML, su navegación auto-registrada y se suscribe al event bus interno. Activas los que tu clínica necesita, ignoras el resto y, si te falta algo, lo construyes tú y lo enchufas.",
     "core": "Core",
-    "coreItems": ["Auth", "RBAC", "Clínicas", "Usuarios"],
+    "coreItems": [
+      "Auth",
+      "RBAC",
+      "Clínicas",
+      "Usuarios"
+    ],
     "pluggable": "Módulos oficiales",
     "community": "Módulos de la comunidad",
     "communityNote": "En camino. Constrúyelos tú o únete a quien ya los está montando.",
     "addYours": "Crea el tuyo",
-    "legend": { "official": "Oficial", "community": "Comunidad", "yours": "Tuyo" },
+    "legend": {
+      "official": "Oficial",
+      "community": "Comunidad",
+      "yours": "Tuyo"
+    },
     "communityItems": [
-      { "label": "WhatsApp", "icon": "message" },
-      { "label": "Stripe", "icon": "card" },
-      { "label": "Laboratorio", "icon": "flask" },
-      { "label": "Marketing", "icon": "sparkles" },
-      { "label": "Aseguradoras", "icon": "shield" }
+      {
+        "label": "WhatsApp",
+        "icon": "message"
+      },
+      {
+        "label": "Stripe",
+        "icon": "card"
+      },
+      {
+        "label": "Laboratorio",
+        "icon": "flask"
+      },
+      {
+        "label": "Marketing",
+        "icon": "sparkles"
+      },
+      {
+        "label": "Aseguradoras",
+        "icon": "shield"
+      }
     ],
     "cta": "Ver la arquitectura en GitHub →"
   },
@@ -700,11 +825,26 @@
     "ctaContact": "Hablar con nosotros",
     "factsTitle": "En resumen",
     "facts": [
-      { "label": "País", "value": "España" },
-      { "label": "Estado", "value": "Disponible" },
-      { "label": "Modo", "value": "Opcional · activable" },
-      { "label": "Cumplimiento", "value": "RD 1007/2023" },
-      { "label": "Licencia", "value": "BSL 1.1" }
+      {
+        "label": "País",
+        "value": "España"
+      },
+      {
+        "label": "Estado",
+        "value": "Disponible"
+      },
+      {
+        "label": "Modo",
+        "value": "Opcional · activable"
+      },
+      {
+        "label": "Cumplimiento",
+        "value": "RD 1007/2023"
+      },
+      {
+        "label": "Licencia",
+        "value": "BSL 1.1"
+      }
     ],
     "deadlineHero": {
       "label": "OBLIGATORIO",
@@ -827,11 +967,31 @@
       "title": "Pruebas y producción real, intercambiables.",
       "body": "El mismo módulo, dos endpoints. Cambias con un clic. Sin migrar datos, sin reinstalar nada.",
       "rows": [
-        { "attr": "Endpoint AEAT", "test": "prewww1.aeat.es", "prod": "www1.agenciatributaria.gob.es" },
-        { "attr": "Efecto fiscal", "test": "Ninguno", "prod": "Real" },
-        { "attr": "Certificados aceptados", "test": "FNMT real o cert. test AEAT", "prod": "Solo FNMT real" },
-        { "attr": "QR del PDF", "test": "Apunta a preproducción", "prod": "Apunta a sede AEAT" },
-        { "attr": "Cadena de huellas", "test": "Misma lógica que producción", "prod": "Misma lógica que pruebas" }
+        {
+          "attr": "Endpoint AEAT",
+          "test": "prewww1.aeat.es",
+          "prod": "www1.agenciatributaria.gob.es"
+        },
+        {
+          "attr": "Efecto fiscal",
+          "test": "Ninguno",
+          "prod": "Real"
+        },
+        {
+          "attr": "Certificados aceptados",
+          "test": "FNMT real o cert. test AEAT",
+          "prod": "Solo FNMT real"
+        },
+        {
+          "attr": "QR del PDF",
+          "test": "Apunta a preproducción",
+          "prod": "Apunta a sede AEAT"
+        },
+        {
+          "attr": "Cadena de huellas",
+          "test": "Misma lógica que producción",
+          "prod": "Misma lógica que pruebas"
+        }
       ],
       "footnote": "Switching `prod → test` no rompe la cadena local (es global por NIF), pero la AEAT verá un hueco en el entorno que dejes."
     },
@@ -854,7 +1014,7 @@
         },
         {
           "name": "verifactu_vat_classifications",
-          "what": "Mapeo S1/E1\u2013E6/N1/N2 por tipo de IVA y clínica. Mantiene el catálogo de Dentalpin agnóstico de país."
+          "what": "Mapeo S1/E1–E6/N1/N2 por tipo de IVA y clínica. Mantiene el catálogo de Dentalpin agnóstico de país."
         }
       ]
     },
@@ -902,7 +1062,7 @@
     "penalties": {
       "eyebrow": "POR QUÉ IMPORTA",
       "title": "El precio de no estar listo en enero de 2027.",
-      "body": "La Ley General Tributaria (LGT 201 bis) regula la responsabilidad por usar SIF que no cumplan. Los importes pueden ir hasta 50 000 \u20ac por ejercicio. Para una clínica que factura todos los días, no usar Verifactu (o equivalente) deja de ser una opción.",
+      "body": "La Ley General Tributaria (LGT 201 bis) regula la responsabilidad por usar SIF que no cumplan. Los importes pueden ir hasta 50 000 € por ejercicio. Para una clínica que factura todos los días, no usar Verifactu (o equivalente) deja de ser una opción.",
       "items": [
         {
           "title": "Para tu clínica",
@@ -947,7 +1107,7 @@
         },
         {
           "q": "¿Los pagos parciales y rectificativas funcionan?",
-          "a": "Sí. Soporta F1, F2, F3 y todas las rectificativas R1\u2013R5 además de anulaciones (RegistroAnulacion). Los simplificados con tope de 400 \u20ac sin destinatario están validados."
+          "a": "Sí. Soporta F1, F2, F3 y todas las rectificativas R1–R5 además de anulaciones (RegistroAnulacion). Los simplificados con tope de 400 € sin destinatario están validados."
         },
         {
           "q": "¿Puedo verificar una factura emitida desde fuera?",
@@ -957,11 +1117,26 @@
     },
     "linksTitle": "Para profundizar",
     "links": [
-      { "label": "RD 1007/2023 (BOE)", "href": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-24840" },
-      { "label": "Orden HAC/1177/2024 (BOE)", "href": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2024-22138" },
-      { "label": "VERI*FACTU \u00b7 sede AEAT", "href": "https://sede.agenciatributaria.gob.es/Sede/iva/sistemas-informaticos-facturacion-verifactu.html" },
-      { "label": "Validaciones y errores Veri*Factu", "href": "https://www.agenciatributaria.es/static_files/AEAT_Desarrolladores/EEDD/IVA/VERI-FACTU/Validaciones_Errores_Veri-Factu.pdf" },
-      { "label": "Certificados FNMT v\u00e1lidos", "href": "https://www.sede.fnmt.gob.es/preguntas-frecuentes/certificado-de-persona-fisica/-/asset_publisher/eIal9z2VE0Kb/content/certificados-electr%C3%B3nicos-v%C3%A1lidos-para-el-sistema-veri*factu" }
+      {
+        "label": "RD 1007/2023 (BOE)",
+        "href": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-24840"
+      },
+      {
+        "label": "Orden HAC/1177/2024 (BOE)",
+        "href": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2024-22138"
+      },
+      {
+        "label": "VERI*FACTU · sede AEAT",
+        "href": "https://sede.agenciatributaria.gob.es/Sede/iva/sistemas-informaticos-facturacion-verifactu.html"
+      },
+      {
+        "label": "Validaciones y errores Veri*Factu",
+        "href": "https://www.agenciatributaria.es/static_files/AEAT_Desarrolladores/EEDD/IVA/VERI-FACTU/Validaciones_Errores_Veri-Factu.pdf"
+      },
+      {
+        "label": "Certificados FNMT válidos",
+        "href": "https://www.sede.fnmt.gob.es/preguntas-frecuentes/certificado-de-persona-fisica/-/asset_publisher/eIal9z2VE0Kb/content/certificados-electr%C3%B3nicos-v%C3%A1lidos-para-el-sistema-veri*factu"
+      }
     ],
     "callout": {
       "eyebrow": "ESPAÑA · VERI*FACTU",
@@ -988,21 +1163,53 @@
       "contactStatus": "en línea",
       "templateTag": "Plantilla",
       "messages": [
-        { "from": "clinic", "kind": "template", "text": "Hola Marta 👋 Te recordamos tu cita de revisión el jueves 3 de julio a las 10:00 con la Dra. Ruiz. ¿Nos confirmas que vendrás?", "time": "09:01" },
-        { "from": "patient", "text": "¡Sí, allí estaré! Gracias 🙏", "time": "09:04" },
-        { "from": "clinic", "text": "Genial, te esperamos. Si necesitas cambiarla, responde a este mensaje y lo vemos.", "time": "09:05" },
-        { "from": "patient", "text": "Perfecto. ¿Tengo que ir en ayunas?", "time": "09:06" }
+        {
+          "from": "clinic",
+          "kind": "template",
+          "text": "Hola Marta 👋 Te recordamos tu cita de revisión el jueves 3 de julio a las 10:00 con la Dra. Ruiz. ¿Nos confirmas que vendrás?",
+          "time": "09:01"
+        },
+        {
+          "from": "patient",
+          "text": "¡Sí, allí estaré! Gracias 🙏",
+          "time": "09:04"
+        },
+        {
+          "from": "clinic",
+          "text": "Genial, te esperamos. Si necesitas cambiarla, responde a este mensaje y lo vemos.",
+          "time": "09:05"
+        },
+        {
+          "from": "patient",
+          "text": "Perfecto. ¿Tengo que ir en ayunas?",
+          "time": "09:06"
+        }
       ],
       "windowNote": "Ventana de 24 h abierta · puedes responder en texto libre",
       "replyPlaceholder": "Escribe una respuesta…"
     },
     "factsTitle": "En resumen",
     "facts": [
-      { "label": "Categoría", "value": "Comunidad" },
-      { "label": "Estado", "value": "Disponible" },
-      { "label": "Modo", "value": "Opcional · desinstalable" },
-      { "label": "Proveedor", "value": "Kapso (WhatsApp)" },
-      { "label": "Canal base", "value": "Gateway de notificaciones" }
+      {
+        "label": "Categoría",
+        "value": "Comunidad"
+      },
+      {
+        "label": "Estado",
+        "value": "Disponible"
+      },
+      {
+        "label": "Modo",
+        "value": "Opcional · desinstalable"
+      },
+      {
+        "label": "Proveedor",
+        "value": "Kapso (WhatsApp)"
+      },
+      {
+        "label": "Canal base",
+        "value": "Gateway de notificaciones"
+      }
     ],
     "what": {
       "eyebrow": "QUÉ AÑADE",
@@ -1099,9 +1306,24 @@
       "coreLabel": "Gateway de notificaciones",
       "coreSub": "Agnóstico de canal · outbox + dispatch",
       "adapters": [
-        { "name": "Email", "sub": "De serie", "icon": "message", "tone": "muted" },
-        { "name": "WhatsApp · Kapso", "sub": "Módulo comunidad", "icon": "whatsapp", "tone": "primary" },
-        { "name": "Próximos canales", "sub": "Mismo contrato", "icon": "plug", "tone": "subtle" }
+        {
+          "name": "Email",
+          "sub": "De serie",
+          "icon": "message",
+          "tone": "muted"
+        },
+        {
+          "name": "WhatsApp · Kapso",
+          "sub": "Módulo comunidad",
+          "icon": "whatsapp",
+          "tone": "primary"
+        },
+        {
+          "name": "Próximos canales",
+          "sub": "Mismo contrato",
+          "icon": "plug",
+          "tone": "subtle"
+        }
       ],
       "note": "Instalar añade el adaptador y sus plantillas; desinstalar lo quita por completo, con test de roundtrip que verifica que no deja residuos."
     },
@@ -1181,9 +1403,18 @@
     },
     "linksTitle": "Para profundizar",
     "links": [
-      { "label": "Guía del módulo WhatsApp", "href": "https://github.com/martinezsalmeron/dentalpin/blob/main/docs/modules/whatsapp_kapso.md" },
-      { "label": "ADR · Conversaciones entrantes", "href": "https://github.com/martinezsalmeron/dentalpin/blob/main/docs/adr/0017-inbound-conversation.md" },
-      { "label": "Permisos del módulo", "href": "https://github.com/martinezsalmeron/dentalpin/tree/main/docs/technical/whatsapp_kapso" }
+      {
+        "label": "Guía del módulo WhatsApp",
+        "href": "https://github.com/martinezsalmeron/dentalpin/blob/main/docs/modules/whatsapp_kapso.md"
+      },
+      {
+        "label": "ADR · Conversaciones entrantes",
+        "href": "https://github.com/martinezsalmeron/dentalpin/blob/main/docs/adr/0017-inbound-conversation.md"
+      },
+      {
+        "label": "Permisos del módulo",
+        "href": "https://github.com/martinezsalmeron/dentalpin/tree/main/docs/technical/whatsapp_kapso"
+      }
     ]
   },
   "featurePage": {
@@ -1225,5 +1456,16 @@
     "label": "Idioma",
     "es": "Español",
     "en": "English"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Notas de producto, guías de cumplimiento y cómo está construido Dentalpin.",
+    "readMore": "Leer",
+    "backToBlog": "Volver al blog",
+    "publishedOn": "Publicado el",
+    "updatedOn": "Actualizado el",
+    "empty": "Todavía no hay entradas. Vuelve pronto.",
+    "rss": "Suscríbete por RSS",
+    "minRead": "min de lectura"
   }
 }

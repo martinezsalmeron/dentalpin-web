@@ -48,6 +48,7 @@ export const LOCALE_PATHS = {
   technology: { es: 'tecnologia', en: 'technology' },
   pricing: { es: 'precios', en: 'pricing' },
   contact: { es: 'contacto', en: 'contact' },
+  blog: { es: 'blog', en: 'blog' },
   legalPrivacy: { es: 'legal/privacidad', en: 'legal/privacy' },
   legalTerms: { es: 'legal/terminos', en: 'legal/terms' },
   legalCookies: { es: 'legal/cookies', en: 'legal/cookies' },

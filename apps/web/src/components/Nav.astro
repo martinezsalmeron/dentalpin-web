@@ -54,6 +54,11 @@ const mobileDomains: { key: ModuleDomain; label: string }[] = [
           {dict.nav.manifesto}
         </a>
       </li>
+      <li>
+        <a class="rounded-[var(--radius-sm)] px-3 py-2 text-[14px] text-[var(--color-text-muted)] hover:bg-[var(--color-surface-muted)] hover:text-[var(--color-text)]" href={pagePath(locale, 'blog')}>
+          {dict.nav.blog}
+        </a>
+      </li>
     </ul>
 
     <div class="ml-auto flex items-center gap-2">
@@ -162,6 +167,11 @@ const mobileDomains: { key: ModuleDomain; label: string }[] = [
             <li>
               <a class="block rounded-[var(--radius-sm)] px-3 py-2.5 text-[15px] font-medium text-[var(--color-text)] hover:bg-[var(--color-surface-muted)]" href={pagePath(locale, 'manifesto')}>
                 {dict.nav.manifesto}
+              </a>
+            </li>
+            <li>
+              <a class="block rounded-[var(--radius-sm)] px-3 py-2.5 text-[15px] font-medium text-[var(--color-text)] hover:bg-[var(--color-surface-muted)]" href={pagePath(locale, 'blog')}>
+                {dict.nav.blog}
               </a>
             </li>
             <li class="mt-2 border-t border-[var(--color-border-subtle)] pt-3">
