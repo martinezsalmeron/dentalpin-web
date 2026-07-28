@@ -26,6 +26,23 @@ const dateFmt = new Intl.DateTimeFormat(locale === 'es' ? 'es-ES' : 'en-GB', {
   month: 'long',
   year: 'numeric',
 });
+
+// BaseLayout emits SoftwareApplication for the site as a whole; a post
+// is an Article. Both on one page is valid, and the dates here are what
+// earn the timestamp Google shows beside the result.
+const site = Astro.site?.toString().replace(/\/$/, '') ?? 'https://www.dentalpin.com';
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: post.data.title,
+  description: post.data.description,
+  datePublished: post.data.pubDate.toISOString(),
+  dateModified: (post.data.updatedDate ?? post.data.pubDate).toISOString(),
+  inLanguage: locale === 'es' ? 'es-ES' : 'en-US',
+  mainEntityOfPage: `${site}/${locale}/blog/${Astro.params.slug}/`,
+  author: { '@type': 'Organization', name: 'Dentalpin', url: site },
+  publisher: { '@type': 'Organization', name: 'Dentalpin', url: site },
+};
 ---
 
 <BaseLayout
@@ -63,5 +80,7 @@ const dateFmt = new Intl.DateTimeFormat(locale === 'es' ? 'es-ES' : 'en-GB', {
         <Content />
       </div>
     </article>
+
+    <script type="application/ld+json" set:html={JSON.stringify(articleLd)} />
   </Section>
 </BaseLayout>
