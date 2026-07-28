@@ -8,16 +8,22 @@ for anything a human writes here.
 There is no status column to keep in sync. The routine reads this file,
 looks at which slugs already exist under
 `apps/web/src/content/blog/{es,en}/`, and takes the next unwritten
-targets. What is published *is* the state.
+target. What is published *is* the state.
 
-Every run:
+Five posts a week, weekday mornings: two comparisons and three topic
+posts. The two kinds are written differently — see *Two queues* and
+*Topic posts are guides*.
 
-1. Pick the next N targets from the table below that have no post yet.
-2. Research each one **from the vendor's own site**, this run. Not from
-   memory, not from an aggregator blog.
-3. Write the post in Spanish and English.
-4. Verify every competitor claim (see below).
-5. Publish what passes. Open a PR for what does not.
+Every run, one post:
+
+1. Read the day of the week and pick the queue from it — Monday and
+   Wednesday take a comparison, the rest take a topic. See *Two queues*
+   below.
+2. Take the next target in that queue with no post yet.
+3. Research it **this run**, from primary sources. Not from memory.
+4. Write it in Spanish and English.
+5. Verify every factual claim.
+6. Publish what passes. Open a PR for what does not.
 
 ## The rule that matters
 
@@ -153,7 +159,52 @@ automatically. Do not hand-write HTML or CSS classes in a post.
 - Link to `/es/precios/` and the install post from every comparison.
 - Tag with `comparativa` / `comparison` plus the vendor slug.
 
-## Targets
+## Two queues, five posts a week
+
+Monday and Wednesday are **comparison** posts. Tuesday, Thursday and
+Friday are **topic** posts. The routine reads the day (`date -u +%u`,
+1 = Monday) and picks the queue from it.
+
+When the comparison queue runs dry, Monday and Wednesday take topic
+targets too and the site simply publishes five topic posts a week. Do
+**not** invent a competitor to keep the comparison cadence — a made-up
+or misremembered vendor is the one mistake here that cannot be walked
+back.
+
+Same state rule for both queues: what is published *is* the state.
+Look at which slugs already exist, take the next unwritten target.
+
+## Topic posts are guides, not comparisons
+
+A comparison post argues. A topic post **helps**, and earns the right to
+mention the product at the end. They are not the same shape and writing
+one like the other wastes the slot.
+
+- **Answer the question in the first hundred words.** Someone arriving
+  from a search has a question. Answer it immediately, then explain. A
+  post that warms up for three paragraphs loses the reader and the
+  featured snippet.
+- **It has to be useful to someone who never installs Dentalpin.** That
+  is the bar. If the guide only works as a pitch, it will not rank and
+  it will not get linked.
+- **Mention the product once, at the end, and only where it genuinely
+  answers what the post is about.** A guide that pushes the product in
+  every section reads as an advert and converts worse than one that does
+  not.
+- **No competitor claims.** The sourcing rule above exists for
+  comparisons; topic posts should simply not need it. If one does, it is
+  a comparison wearing a guide's title.
+- **Regulation is a special case.** Verifactu, RGPD, LOPD: state what
+  the rule requires, cite the official source (BOE, AEPD, AEAT), give
+  the date consulted, and never give legal advice. "Esto no es
+  asesoramiento legal" belongs in those posts.
+
+The visual conventions above apply unchanged — opening paragraph,
+callouts, numbered lists for anything sequential. Tables in a topic post
+compare options or requirements, not vendors, so the chip markers stay
+useful but the last column is not automatically ours.
+
+## Queue A — comparisons (Mon, Wed)
 
 Vendors confirmed to exist in the Spanish market. Research each before
 writing — this list is a queue, not a source of facts.
@@ -171,14 +222,32 @@ writing — this list is a queue, not a source of facts.
 | — | `alternativa-open-source-gesden` / `open-source-alternative-to-gesden` | Highest-intent query in the whole space |
 | — | `software-clinica-dental-gratis` / `free-dental-practice-software` | Broad head term |
 
-### Non-comparison, roughly one in five
+## Queue B — topics (Tue, Thu, Fri, then everything)
 
-| Topic | Why |
-|---|---|
-| Verifactu para clínicas dentales | Legal deadline, real urgency, own module |
-| RGPD y datos clínicos en la clínica dental | Evergreen, high intent |
-| Migrar de un software dental a otro sin perder historia | Buying-moment content |
-| Qué preguntar a tu proveedor antes de firmar | Ranks for the doubt, not the product |
+Ordered by intent. Work down it; the top of this list is where a clinic
+is closest to needing what we sell.
+
+| Topic | Slug (es / en) | Target search |
+|---|---|---|
+| Verifactu para clínicas dentales: qué cambia y cuándo | `verifactu-clinicas-dentales` / `verifactu-dental-clinics-spain` | verifactu clínica dental |
+| RGPD en la clínica dental: qué exige con los datos de pacientes | `rgpd-clinica-dental` / `gdpr-dental-clinic` | rgpd clínica dental |
+| Cómo migrar de software dental sin perder la historia clínica | `migrar-software-dental` / `migrate-dental-software` | migrar software dental |
+| Qué preguntar a tu proveedor antes de firmar | `preguntas-antes-de-firmar-software-dental` / `questions-before-signing-dental-software` | contratar software dental |
+| Cuánto cuesta de verdad un software de clínica dental | `cuanto-cuesta-software-clinica-dental` / `dental-software-cost` | precio software clínica dental |
+| Nube o servidor propio para una clínica dental | `nube-o-servidor-clinica-dental` / `cloud-or-self-hosted-dental` | software dental en la nube |
+| Copias de seguridad en una clínica dental: qué guardar y cada cuánto | `copias-seguridad-clinica-dental` / `dental-clinic-backups` | copia seguridad clínica dental |
+| Cómo reducir las ausencias a citas en la clínica | `reducir-ausencias-citas-dental` / `reduce-dental-no-shows` | ausencias citas dental |
+| Recordatorios de cita por WhatsApp: qué permite la normativa | `recordatorios-cita-whatsapp-dental` / `whatsapp-appointment-reminders-dental` | recordatorios cita whatsapp |
+| Odontograma digital: qué debe registrar y por qué | `odontograma-digital` / `digital-odontogram` | odontograma digital |
+| Presupuestos dentales con firma digital: validez y flujo | `presupuestos-dentales-firma-digital` / `dental-quotes-digital-signature` | presupuesto dental firma |
+| Historia clínica electrónica: qué exige la ley en España | `historia-clinica-electronica-dental` / `electronic-dental-records-spain` | historia clínica electrónica |
+| Abrir una clínica dental: el software que necesitas desde el día uno | `abrir-clinica-dental-software` / `opening-dental-clinic-software` | abrir clínica dental |
+| Cómo dimos a un LLM acceso de escritura a datos clínicos sin que sea una locura | `llm-escritura-datos-clinicos` / `llm-write-access-medical-data` | *(technical, EN-first — HN/Reddit material)* |
+| Autoalojar software sanitario: lo que nadie te cuenta | `autoalojar-software-sanitario` / `self-hosting-healthcare-software` | *(self-hosted / r/selfhosted)* |
+
+When this queue empties too, add new targets the same way: real searches
+a Spanish dental clinic makes, verified to have intent behind them this
+run, not invented from memory.
 
 ## Where the routine must stop and ask
 
