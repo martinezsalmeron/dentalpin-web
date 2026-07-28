@@ -52,8 +52,20 @@ Las migraciones se aplican solas antes de que la API acepte peticiones. Fija la 
 
 Y haz copia de seguridad antes. [Explicamos cómo aquí](https://github.com/martinezsalmeron/dentalpin/discussions/112) — son dos volúmenes de Docker, uno con la base de datos y otro con los archivos subidos. Los dos, no solo el primero.
 
-## Qué falta
+## Una lección de la primera hora
 
-Las imágenes son de `amd64`, que es lo que lleva cualquier VPS que se alquile hoy. Si necesitas `arm64`, [pídelo en una issue](https://github.com/martinezsalmeron/dentalpin/issues) y lo añadimos; preferimos construirlo cuando alguien lo necesite de verdad antes que quemar tiempo de CI por si acaso.
+La primera versión de estas imágenes salió solo para `amd64`. El razonamiento parecía sensato: cualquier VPS que alquiles hoy es x86, y construir también para ARM cuesta tiempo de integración continua.
+
+Duró veinte minutos. Lo que tardamos en seguir nuestras propias instrucciones desde un Mac con Apple Silicon:
+
+```
+no matching manifest for linux/arm64/v8 in the manifest list entries
+```
+
+El primer comando de la instalación. Exactamente lo que este trabajo existía para arreglar.
+
+El error no fue técnico sino de criterio: pensamos en el servidor de producción y olvidamos que casi todo el mundo prueba las cosas primero en su portátil. Y las instancias ARM de Hetzner son las más baratas de Europa, dirigidas justo a este público.
+
+Ahora cada arquitectura se construye en su propia máquina y se publica un único manifiesto por imagen. Si falta una de las dos, la release no sale.
 
 ¿Te has instalado Dentalpin y algo no ha ido como aquí se cuenta? Cuéntalo en [Discussions](https://github.com/martinezsalmeron/dentalpin/discussions). Que la instalación funcione a la primera es, ahora mismo, lo que más nos importa.

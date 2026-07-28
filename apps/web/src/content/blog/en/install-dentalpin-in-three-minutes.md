@@ -52,8 +52,27 @@ Migrations apply themselves before the API accepts traffic. Pin the version rath
 
 And take a backup first. [Here is how](https://github.com/martinezsalmeron/dentalpin/discussions/112) — two Docker volumes, one with the database and one with uploaded files. Both, not just the first.
 
-## What is missing
+## A lesson from the first hour
 
-Images are `amd64`, which is what any VPS you can rent today runs. If you need `arm64`, [open an issue](https://github.com/martinezsalmeron/dentalpin/issues) and we will add it — we would rather build it when someone actually needs it than burn CI minutes on a guess.
+The first version of these images shipped `amd64` only. The reasoning
+looked sound: any VPS you can rent today is x86, and building for ARM as
+well costs CI minutes.
+
+It lasted twenty minutes — the time it took us to follow our own
+instructions on an Apple Silicon Mac:
+
+```
+no matching manifest for linux/arm64/v8 in the manifest list entries
+```
+
+The first command of the install. Precisely what this work existed to fix.
+
+The mistake was not technical but a failure of imagination: we pictured
+the production server and forgot that almost everyone tries things on
+their laptop first. And Hetzner's ARM instances are the cheapest in
+Europe, aimed squarely at this audience.
+
+Each architecture now builds on its own machine and one manifest is
+published per image. If either is missing, the release does not ship.
 
 Installed Dentalpin and something did not go the way this post describes? Say so in [Discussions](https://github.com/martinezsalmeron/dentalpin/discussions). Right now, the install working first time is the thing we care about most.
