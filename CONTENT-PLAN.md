@@ -169,7 +169,9 @@ When the comparison queue runs dry, Monday and Wednesday take topic
 targets too and the site simply publishes five topic posts a week. Do
 **not** invent a competitor to keep the comparison cadence — a made-up
 or misremembered vendor is the one mistake here that cannot be walked
-back.
+back. Adding a new one means verifying it trades, this run, from its own
+site; `charly.de` was in the first draft of this list and does not exist
+(the vendor is at `solutio.de`), which is exactly how that goes wrong.
 
 Same state rule for both queues: what is published *is* the state.
 Look at which slugs already exist, take the next unwritten target.
@@ -206,21 +208,63 @@ useful but the last column is not automatically ours.
 
 ## Queue A — comparisons (Mon, Wed)
 
-Vendors confirmed to exist in the Spanish market. Research each before
-writing — this list is a queue, not a source of facts.
+Every vendor here was verified to exist and to be trading when it was
+added — name, site and market evidence. Research each again before
+writing: this list is a queue, not a source of facts.
 
-| Target | Slug (es / en) | Why |
+**Ordered by whether a post in Spanish or English can actually rank in
+that vendor's market.** A Brazilian dentist searches in Portuguese and a
+German one in German, so a Spanish post about Dampsoft reaches nobody who
+is choosing between Dampsoft and us. Those groups sit at the bottom and
+are worth writing only when the site has content in their language.
+
+### A1 · Spain — the home market
+
+| Target | Slug | Why |
 |---|---|---|
 | Gesden (Infomed) | `dentalpin-vs-gesden` | Market leader, claims 14.000 clinics |
 | Gesden ONE | `dentalpin-vs-gesden-one` | Their cloud product, closest comparison |
 | Clinic Cloud | `dentalpin-vs-clinic-cloud` | Cloud-native, SMB |
-| Dentalink | `dentalpin-vs-dentalink` | Cloud, strong in LatAm + Spain |
 | Dentazon | `dentalpin-vs-dentazon` | Spanish, per-cabinet pricing |
-| Dentrix (Henry Schein) | `dentalpin-vs-dentrix` | International incumbent |
-| Open Dental | `dentalpin-vs-open-dental` | The other "open" one — clarify the difference |
-| Apexo | `dentalpin-vs-apexo` | Open source, offline-first |
 | — | `alternativa-open-source-gesden` / `open-source-alternative-to-gesden` | Highest-intent query in the whole space |
 | — | `software-clinica-dental-gratis` / `free-dental-practice-software` | Broad head term |
+
+### A2 · Spanish-speaking Latin America — Spanish posts rank here
+
+| Target | Slug | Why |
+|---|---|---|
+| Dentalink | `dentalpin-vs-dentalink` | Leader in Chile, strong across LatAm and Spain |
+| Doctocliq | `dentalpin-vs-doctocliq` | Dental + medical, positions itself LatAm-wide |
+| DentalCore | `dentalpin-vs-dentalcore` | Argentina-first, clinical records + AI claims |
+
+### A3 · United States and English-speaking markets — English posts rank here
+
+| Target | Slug | Why |
+|---|---|---|
+| Open Dental | `dentalpin-vs-open-dental` | The other "open" one — the difference needs stating |
+| Dentrix (Henry Schein One) | `dentalpin-vs-dentrix` | Largest installed base in the US, 38.000+ practices |
+| Curve Dental | `dentalpin-vs-curve-dental` | Cloud-only, no server option |
+| Eaglesoft (Patterson Dental) | `dentalpin-vs-eaglesoft` | Long-standing US base |
+| Dentally (Henry Schein One) | `dentalpin-vs-dentally` | Cloud; UK, Ireland, Australia, NZ, Canada |
+| Software of Excellence (Henry Schein One) | `dentalpin-vs-software-of-excellence` | UK and Asia-Pacific incumbent |
+| NexHealth | `dentalpin-vs-nexhealth` | Patient-experience layer, not a full PMS — say so |
+| Apexo | `dentalpin-vs-apexo` | Open source, offline-first |
+
+### A4 · Blocked on language — do not write these yet
+
+Real vendors, real markets, and a post in Spanish or English reaches
+almost none of the people choosing between them and us. Move a row up
+into A2 or A3 when the site publishes in that language.
+
+| Target | Market | Blocked on |
+|---|---|---|
+| Simples Dental | Brazil — 60.000+ dentists in BR, 80.000+ across LatAm | Portuguese |
+| Clinicorp | Brazil — claims 100.000+ active users | Portuguese |
+| Dental Office | Brazil — 25 years, ~40.000 dentists | Portuguese |
+| Dampsoft (DS-Win / DS4) | Germany — market leader, near a third of practices per KZBV | German |
+| CompuGroup Medical | Germany — around 28% share | German |
+| charly (solutio) | Germany — around 10% share | German |
+| Julie (Henry Schein One) | France | French — the UI is already translated, the site is not |
 
 ## Queue B — topics (Tue, Thu, Fri, then everything)
 
