@@ -31,23 +31,66 @@ const manifestoPath = pagePath(locale, 'manifesto');
 
     <h1 class="text-marketing-hero mt-6 max-w-5xl text-[var(--color-text)]">
       <span class="font-extrabold">{dict.hero.titleHighlight}</span>{' '}
-      <span class="bg-gradient-to-r from-[var(--color-primary)] via-[#22d3ee] to-[#a78bfa] bg-clip-text text-transparent">
+      {/*
+        Two stops, both from the marketing tokens, and no pale mid-tone.
+        The old hardcoded sky→cyan→violet ramp measured 1.73:1 at the cyan
+        and 2.61:1 at the violet against the cream canvas — under the 3:1
+        floor for large text, so the end of the headline was the least
+        legible part of it. sky-700 → teal-600 stays above 3.5:1 the whole
+        way across, and the dark-mode variants come free with the tokens.
+      */}
+      <span class="bg-gradient-to-r from-[var(--color-marketing-text-from)] to-[var(--color-marketing-text-to)] bg-clip-text text-transparent">
         {dict.hero.titleAccent}
       </span>
     </h1>
 
-    <p class="mt-6 max-w-2xl text-[17px] leading-[1.55] text-[var(--color-text-muted)]">
+    {/*
+      The headline is understood by anyone; this line is where the category
+      gets claimed and where the term people actually type into Google
+      lives. "Agéntico" cannot carry an H1 — a dentist would have to look it
+      up — but directly under a headline that already showed what it means,
+      it reads as a definition rather than jargon.
+    */}
+    <p class="mt-5 max-w-2xl text-[19px] font-semibold leading-snug text-[var(--color-text)]">
+      {dict.hero.positioning}
+    </p>
+
+    {/*
+      Three things you would actually say to it. Showing the product beats
+      describing it, and every one of these maps to tools the agent already
+      exposes — nothing here is aspirational.
+    */}
+    <ul class="mt-7 flex max-w-2xl flex-col items-stretch gap-2">
+      {dict.hero.prompts.map((prompt: string) => (
+        <li
+          class="flex items-center gap-2.5 rounded-[var(--radius-md)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)]/80 px-4 py-2.5 text-left text-[15px] text-[var(--color-text)] backdrop-blur"
+        >
+          <Icon name="arrow-right" size={13} />
+          <span class="italic">&ldquo;{prompt}&rdquo;</span>
+        </li>
+      ))}
+    </ul>
+
+    <p class="mt-6 max-w-2xl text-[16px] leading-[1.55] text-[var(--color-text-muted)]">
       {dict.hero.subtitle}
     </p>
 
-    <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+    {/*
+      One primary way out of the hero. "Download and install" serves a
+      later, smaller, far higher-friction visitor and was competing head-on
+      with the demo; it drops to a text link below.
+    */}
+    <div class="mt-8 flex flex-col items-center gap-3">
       <Button href={demoUrl} size="lg" variant="solid">
         {dict.hero.ctaPrimary}
         <Icon name="arrow-right" size={16} />
       </Button>
-      <Button href={installPath} size="lg" variant="outline">
+      <a
+        href={installPath}
+        class="text-[14px] text-[var(--color-text-muted)] underline decoration-dotted underline-offset-4 transition-colors hover:text-[var(--color-text)]"
+      >
         {dict.hero.ctaSecondary}
-      </Button>
+      </a>
     </div>
 
     <p class="mt-5 inline-flex max-w-2xl flex-wrap items-center justify-center gap-x-2 gap-y-1 text-[13px] font-medium text-[var(--color-text-muted)]">
