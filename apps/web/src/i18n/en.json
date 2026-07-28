@@ -247,7 +247,9 @@
     ],
     "snippetLabel": "Self-host in one command",
     "snippet": "docker compose up -d",
-    "snippetFootnote": "Ready in under half an hour on a reasonable VPS."
+    "snippetFootnote": "Ready in under half an hour on a reasonable VPS.",
+    "bandLead": "Public repository, REST API documented with OpenAPI, and modules you can build in an afternoon.",
+    "bandCta": "How it is built"
   },
   "demoDual": {
     "pullquote": "We're not here to sell you another dental software.",
