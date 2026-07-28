@@ -170,8 +170,20 @@ targets too and the site simply publishes five topic posts a week. Do
 **not** invent a competitor to keep the comparison cadence — a made-up
 or misremembered vendor is the one mistake here that cannot be walked
 back. Adding a new one means verifying it trades, this run, from its own
-site; `charly.de` was in the first draft of this list and does not exist
-(the vendor is at `solutio.de`), which is exactly how that goes wrong.
+site.
+
+Two entries in the first draft of this list were wrong, in the two ways
+this fails:
+
+- `charly.de` does not resolve. The German vendor trades as
+  `solutio.de` — the name was right, the domain was invented.
+- **Dentazon** was taken from `recepcionista.com`, an aggregator this
+  same document bars as a source, and no such vendor could be found at
+  any domain. The entry looked plausible and was sourced from exactly
+  the place the rule forbids.
+
+A vendor that cannot be reached at its own site does not go in this
+queue.
 
 Same state rule for both queues: what is published *is* the state.
 Look at which slugs already exist, take the next unwritten target.
@@ -224,8 +236,9 @@ are worth writing only when the site has content in their language.
 |---|---|---|
 | Gesden (Infomed) | `dentalpin-vs-gesden` | Market leader, claims 14.000 clinics |
 | Gesden ONE | `dentalpin-vs-gesden-one` | Their cloud product, closest comparison |
+| Odontonet | `dentalpin-vs-odontonet` | Dental-only, already ships Verifactu and WhatsApp — the closest competitor we have, so the hardest post to write honestly. **Check their pricing page: they may publish rates, which would make the usual "no publica precios" line wrong here.** |
+| Klinikare | `dentalpin-vs-klinikare` | Cloud, claims 2.500+ clinics and 20.000+ professionals over 16 years, ISO 27001, own AI features. Multi-vertical (dental, aesthetics, physio), which is a real difference worth stating rather than a weakness |
 | Clinic Cloud | `dentalpin-vs-clinic-cloud` | Cloud-native, SMB |
-| Dentazon | `dentalpin-vs-dentazon` | Spanish, per-cabinet pricing |
 | — | `alternativa-open-source-gesden` / `open-source-alternative-to-gesden` | Highest-intent query in the whole space |
 | — | `software-clinica-dental-gratis` / `free-dental-practice-software` | Broad head term |
 
