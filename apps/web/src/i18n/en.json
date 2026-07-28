@@ -182,16 +182,40 @@
   },
   "aiAgentCallout": {
     "eyebrow": "AI agent",
-    "title": "Talk to your clinic and let the agent run it",
-    "body": "Ask it to find a patient, free up a slot, chase an unanswered budget or brief you on the day. It runs the same operations you would through the UI, in Spanish or English and on your real data. Writes pause for your confirmation, and patient data is tokenized before it leaves for the AI provider.",
+    "title": "You ask in one sentence. It runs the steps.",
+    "body": "Not a chat that answers you: it runs the same operations you would through the interface, chaining steps until the task is done. On your real data, bounded by the permissions of whoever asked.",
     "cta": "See the AI agent",
-    "panelLabel": "On any screen",
-    "panelKey": "⌘ / Ctrl + K",
-    "panelSub": "Opens the agent with the patient or appointment in front of you.",
-    "checks": [
-      "It does, not just answers: books, reschedules and bills, chaining steps.",
-      "RBAC parity: never sees or does more than you could through the UI.",
-      "Tokenized PHI and a human confirmation before any write."
+    "userPrompt": "Find a slot on Tuesday for Ana Gómez",
+    "stepsLabel": "What it does",
+    "steps": [
+      {
+        "tool": "patients.search",
+        "result": "Ana Gómez · 1 match"
+      },
+      {
+        "tool": "schedules.find_free_slots",
+        "result": "Tuesday 5th · 3 slots free"
+      }
+    ],
+    "reply": "Tuesday the 5th has 10:00, 12:30 and 17:00 free in cabinet 2. Shall I book one?",
+    "confirmLabel": "It stops before writing",
+    "confirmTool": "agenda.book_appointment",
+    "confirmDetail": "Tue 5th · 10:00 · Cabinet 2 · Dr. García",
+    "confirmYes": "Confirm",
+    "confirmNo": "Cancel",
+    "guarantees": [
+      {
+        "title": "Never sees more than you",
+        "body": "Every operation is re-checked against the permissions of whoever asked. A receptionist's agent sees what a receptionist sees."
+      },
+      {
+        "title": "Patient data is tokenised",
+        "body": "Names, phones and document numbers are swapped for tokens before anything reaches the AI provider. Clinical notes never leave."
+      },
+      {
+        "title": "No write without your say-so",
+        "body": "Booking, charging or editing stops and asks. You confirm, and only then does it run."
+      }
     ]
   },
   "forDevelopers": {
@@ -532,14 +556,6 @@
     "dentalpinLabel": "With Dentalpin",
     "scenes": [
       {
-        "time": "07:45",
-        "moment": "Before opening the clinic",
-        "legacy": "You boot the back-office PC just to see how many patients you have today.",
-        "dentalpin": "You open tomorrow's calendar from the sofa, on your phone, over morning coffee.",
-        "image": "scene-morning-agenda.png",
-        "imageAlt": "Dentist checking the calendar on a phone from home"
-      },
-      {
         "time": "09:10",
         "moment": "Patient walks in",
         "legacy": "You search the table until they show up. A minute, two. The patient is standing there.",
@@ -556,20 +572,28 @@
         "imageAlt": "Dentist using the odontogram on a tablet during treatment"
       },
       {
-        "time": "13:20",
-        "moment": "Today's treatment quote",
-        "legacy": "Open another program, copy prices, print it and sign it by hand.",
-        "dentalpin": "One click, the quote is ready and you send it over WhatsApp on the spot.",
-        "image": "scene-treatment-quote.png",
-        "imageAlt": "Dentist sending a treatment quote via WhatsApp"
-      },
-      {
         "time": "22:00",
         "moment": "A late emergency",
         "legacy": "No way to see the record until the clinic opens tomorrow.",
         "dentalpin": "Open the app from home, check their last x-ray, call them with the info in front of you.",
         "image": "scene-urgency-home.png",
         "imageAlt": "Dentist looking up a patient record from home at night"
+      },
+      {
+        "time": "07:45",
+        "moment": "Before opening the clinic",
+        "legacy": "You boot the back-office PC just to see how many patients you have today.",
+        "dentalpin": "You open tomorrow's calendar from the sofa, on your phone, over morning coffee.",
+        "image": "scene-morning-agenda.png",
+        "imageAlt": "Dentist checking the calendar on a phone from home"
+      },
+      {
+        "time": "13:20",
+        "moment": "Today's treatment quote",
+        "legacy": "Open another program, copy prices, print it and sign it by hand.",
+        "dentalpin": "One click, the quote is ready and you send it over WhatsApp on the spot.",
+        "image": "scene-treatment-quote.png",
+        "imageAlt": "Dentist sending a treatment quote via WhatsApp"
       },
       {
         "time": "Month-end",

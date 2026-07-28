@@ -182,16 +182,40 @@
   },
   "aiAgentCallout": {
     "eyebrow": "Agente de IA",
-    "title": "Habla con tu clínica y deja que el agente la maneje",
-    "body": "Pídele encontrar un paciente, liberar un hueco, perseguir un presupuesto sin respuesta o resumirte el día. Ejecuta las mismas operaciones que harías tú en la interfaz, en español o inglés y sobre tus datos reales. Las escrituras se detienen a pedirte confirmación y los datos del paciente se tokenizan antes de salir hacia el proveedor de IA.",
+    "title": "Se lo pides en una frase. Él ejecuta los pasos.",
+    "body": "No es un chat que te contesta: ejecuta las mismas operaciones que harías tú en la interfaz, encadenando pasos hasta terminar la tarea. Sobre tus datos reales y con los permisos del usuario que pregunta.",
     "cta": "Ver el Agente de IA",
-    "panelLabel": "En cualquier pantalla",
-    "panelKey": "⌘ / Ctrl + K",
-    "panelSub": "Abre el agente con el paciente o la cita que tienes delante.",
-    "checks": [
-      "Hace, no solo responde: agenda, reprograma y cobra encadenando pasos.",
-      "Paridad RBAC: nunca ve ni hace más de lo que tú puedes en la interfaz.",
-      "PHI tokenizada y confirmación humana antes de cualquier escritura."
+    "userPrompt": "Búscame un hueco el martes para Ana Gómez",
+    "stepsLabel": "Lo que hace",
+    "steps": [
+      {
+        "tool": "patients.search",
+        "result": "Ana Gómez · 1 resultado"
+      },
+      {
+        "tool": "schedules.find_free_slots",
+        "result": "Martes 5 · 3 huecos libres"
+      }
+    ],
+    "reply": "Hay hueco el martes 5 a las 10:00, 12:30 y 17:00 en el gabinete 2. ¿Reservo alguno?",
+    "confirmLabel": "Se detiene antes de escribir",
+    "confirmTool": "agenda.book_appointment",
+    "confirmDetail": "Martes 5 · 10:00 · Gabinete 2 · Dra. García",
+    "confirmYes": "Confirmar",
+    "confirmNo": "Cancelar",
+    "guarantees": [
+      {
+        "title": "Nunca ve más que tú",
+        "body": "Cada operación se vuelve a comprobar contra los permisos del usuario que pregunta. Un recepcionista ve lo que ve un recepcionista."
+      },
+      {
+        "title": "Los datos del paciente se tokenizan",
+        "body": "Nombres, teléfonos y documentos se sustituyen por tokens antes de salir hacia el proveedor de IA. Las notas clínicas no salen."
+      },
+      {
+        "title": "Ninguna escritura sin tu visto bueno",
+        "body": "Reservar, cobrar o editar se para y te pregunta. Tú confirmas, y solo entonces se ejecuta."
+      }
     ]
   },
   "forDevelopers": {
@@ -532,14 +556,6 @@
     "dentalpinLabel": "Con Dentalpin",
     "scenes": [
       {
-        "time": "07:45",
-        "moment": "Antes de abrir la clínica",
-        "legacy": "Enciendes el PC del despacho para saber cuántos pacientes tienes hoy.",
-        "dentalpin": "Abres la agenda del día desde el sofá, en tu móvil, mientras te tomas un café.",
-        "image": "scene-morning-agenda.png",
-        "imageAlt": "Dentista revisando la agenda en el móvil desde casa"
-      },
-      {
         "time": "09:10",
         "moment": "Entra el paciente",
         "legacy": "Buscas en la tabla hasta que aparece. Un minuto, dos. El paciente espera de pie.",
@@ -556,20 +572,28 @@
         "imageAlt": "Odontóloga usando el odontograma en una tablet durante la consulta"
       },
       {
-        "time": "13:20",
-        "moment": "El presupuesto del día",
-        "legacy": "Abres otro programa, copias precios, imprimes en papel y lo firmas a mano.",
-        "dentalpin": "Un clic, se genera firmado y lo envías por WhatsApp al momento.",
-        "image": "scene-treatment-quote.png",
-        "imageAlt": "Dentista enviando un presupuesto por WhatsApp desde la consulta"
-      },
-      {
         "time": "22:00",
         "moment": "Una urgencia",
         "legacy": "No hay forma de ver la ficha hasta que abras la clínica mañana.",
         "dentalpin": "Abres la app desde casa, miras su última radiografía y llamas con la info delante.",
         "image": "scene-urgency-home.png",
         "imageAlt": "Odontóloga consultando la ficha de un paciente desde casa"
+      },
+      {
+        "time": "07:45",
+        "moment": "Antes de abrir la clínica",
+        "legacy": "Enciendes el PC del despacho para saber cuántos pacientes tienes hoy.",
+        "dentalpin": "Abres la agenda del día desde el sofá, en tu móvil, mientras te tomas un café.",
+        "image": "scene-morning-agenda.png",
+        "imageAlt": "Dentista revisando la agenda en el móvil desde casa"
+      },
+      {
+        "time": "13:20",
+        "moment": "El presupuesto del día",
+        "legacy": "Abres otro programa, copias precios, imprimes en papel y lo firmas a mano.",
+        "dentalpin": "Un clic, se genera firmado y lo envías por WhatsApp al momento.",
+        "image": "scene-treatment-quote.png",
+        "imageAlt": "Dentista enviando un presupuesto por WhatsApp desde la consulta"
       },
       {
         "time": "Fin de mes",

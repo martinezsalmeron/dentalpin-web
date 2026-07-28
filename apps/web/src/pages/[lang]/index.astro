@@ -3,7 +3,6 @@ import { isLocale, type Locale } from '~/i18n';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Hero from '~/components/Hero.astro';
 import PillarsStrip from '~/components/PillarsStrip.astro';
-import WhereYouWork from '~/components/WhereYouWork.astro';
 import DayInClinic from '~/components/DayInClinic.astro';
 import LiveModulesGrid from '~/components/LiveModulesGrid.astro';
 import VerifactuCallout from '~/components/VerifactuCallout.astro';
@@ -23,17 +22,35 @@ const locale = lang as Locale;
 <BaseLayout locale={locale}>
   <Hero locale={locale} />
 
-  <PillarsStrip locale={locale} />
+  {/*
+    Verifactu moves from position seven to two, on the Spanish page only.
+    A clinic that has to comply by a legal deadline is the highest-intent
+    visitor this site gets, and the only thing addressing them used to sit
+    eight screens down. It is a thin strip, so it costs everyone else
+    almost nothing.
+  */}
+  {locale === 'es' && <VerifactuCallout locale={locale} />}
 
+  {/*
+    The agent moves up to three. It was 502px of a 10,703px page — five
+    percent, the second smallest block — while a walkthrough arguing
+    feature parity took thirty. It is the one thing here no competitor can
+    copy, so it goes before every argument that any of them could also make.
+  */}
   <AiAgentCallout locale={locale} />
 
-  <WhereYouWork locale={locale} />
+  <PillarsStrip locale={locale} />
 
+  {/*
+    `WhereYouWork` used to sit here and is gone. Its three scenes —
+    chair-side, reception, away from the clinic — are the same three
+    situations DayInClinic tells immediately after, with images and a
+    comparison against legacy software. 855px arguing what the next
+    section argues better.
+  */}
   <DayInClinic locale={locale} />
 
   <LiveModulesGrid locale={locale} />
-
-  {locale === 'es' && <VerifactuCallout locale={locale} />}
 
   <ForDevelopers locale={locale} />
 

@@ -7,6 +7,18 @@ interface Props { locale: Locale; }
 const { locale } = Astro.props;
 const dict = useDict(locale);
 const section = dict.dayInClinic;
+
+/*
+  Three scenes on the homepage, not six.
+
+  All six stay in the i18n file — nothing is lost and this is one number
+  to change. But six scenes rendered at 3156px made this 30% of the whole
+  page, more than twice what the AI agent got, to argue something every
+  competitor can also claim. These three cover reception, chairside and
+  out-of-hours, which is the full range the deleted `WhereYouWork`
+  section used to argue in the abstract.
+*/
+const scenes = section.scenes.slice(0, 3);
 ---
 
 <Section id="day-in-clinic" padY="md">
@@ -23,7 +35,7 @@ const section = dict.dayInClinic;
   </div>
 
   <ol class="mt-14 space-y-16 lg:space-y-24">
-    {section.scenes.map((scene, idx) => {
+    {scenes.map((scene, idx) => {
       const imageFirst = idx % 2 === 0;
       return (
         <li class="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-14">
