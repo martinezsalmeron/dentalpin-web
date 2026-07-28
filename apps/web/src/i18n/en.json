@@ -14,7 +14,8 @@
     "github": "GitHub",
     "skip": "Skip to content",
     "openMenu": "Open menu",
-    "closeMenu": "Close menu"
+    "closeMenu": "Close menu",
+    "blog": "Blog"
   },
   "megamenu": {
     "trigger": "Features",
@@ -87,23 +88,75 @@
     "coreLabel": "ALWAYS INCLUDED",
     "coreSubtitle": "The core every clinic needs. Free forever, no hidden tiers.",
     "core": [
-      { "name": "Calendar", "icon": "calendar" },
-      { "name": "Patients", "icon": "users" },
-      { "name": "Odontogram", "icon": "tooth" },
-      { "name": "Clinical history", "icon": "clipboard" },
-      { "name": "Quotes", "icon": "file-text" },
-      { "name": "Billing", "icon": "card" },
-      { "name": "X-rays and imaging", "icon": "image" }
+      {
+        "name": "Calendar",
+        "icon": "calendar"
+      },
+      {
+        "name": "Patients",
+        "icon": "users"
+      },
+      {
+        "name": "Odontogram",
+        "icon": "tooth"
+      },
+      {
+        "name": "Clinical history",
+        "icon": "clipboard"
+      },
+      {
+        "name": "Quotes",
+        "icon": "file-text"
+      },
+      {
+        "name": "Billing",
+        "icon": "card"
+      },
+      {
+        "name": "X-rays and imaging",
+        "icon": "image"
+      }
     ],
     "optionalLabel": "TURN ON WHAT YOU NEED",
     "optionalSubtitle": "Extras some clinics want and others don't. Switch them on or off with a click.",
     "optional": [
-      { "name": "Automatic reminders", "icon": "bell", "soon": false, "defaultOn": true },
-      { "name": "Patient portal", "icon": "globe", "soon": false, "defaultOn": false },
-      { "name": "Multi-clinic", "icon": "building", "soon": false, "defaultOn": false },
-      { "name": "Verifactu", "icon": "shield", "soon": false, "defaultOn": false, "country": "ES" },
-      { "name": "WhatsApp Business", "icon": "message", "soon": true, "defaultOn": false },
-      { "name": "AI agent", "icon": "sparkles", "soon": false, "defaultOn": false }
+      {
+        "name": "Automatic reminders",
+        "icon": "bell",
+        "soon": false,
+        "defaultOn": true
+      },
+      {
+        "name": "Patient portal",
+        "icon": "globe",
+        "soon": false,
+        "defaultOn": false
+      },
+      {
+        "name": "Multi-clinic",
+        "icon": "building",
+        "soon": false,
+        "defaultOn": false
+      },
+      {
+        "name": "Verifactu",
+        "icon": "shield",
+        "soon": false,
+        "defaultOn": false,
+        "country": "ES"
+      },
+      {
+        "name": "WhatsApp Business",
+        "icon": "message",
+        "soon": true,
+        "defaultOn": false
+      },
+      {
+        "name": "AI agent",
+        "icon": "sparkles",
+        "soon": false,
+        "defaultOn": false
+      }
     ],
     "soonBadge": "Coming soon",
     "summaryPrefix": "Your Dentalpin:",
@@ -332,37 +385,85 @@
       {
         "label": "Frontend",
         "items": [
-          { "name": "Nuxt 3", "role": "Framework" },
-          { "name": "Vue 3", "role": "UI" },
-          { "name": "Nuxt UI", "role": "Components" },
-          { "name": "TypeScript", "role": "Type safety" },
-          { "name": "Tailwind", "role": "Styling" }
+          {
+            "name": "Nuxt 3",
+            "role": "Framework"
+          },
+          {
+            "name": "Vue 3",
+            "role": "UI"
+          },
+          {
+            "name": "Nuxt UI",
+            "role": "Components"
+          },
+          {
+            "name": "TypeScript",
+            "role": "Type safety"
+          },
+          {
+            "name": "Tailwind",
+            "role": "Styling"
+          }
         ]
       },
       {
         "label": "Backend",
         "items": [
-          { "name": "FastAPI", "role": "HTTP API" },
-          { "name": "Pydantic v2", "role": "Schemas" },
-          { "name": "SQLAlchemy 2.0", "role": "ORM" },
-          { "name": "Alembic", "role": "Migrations" }
+          {
+            "name": "FastAPI",
+            "role": "HTTP API"
+          },
+          {
+            "name": "Pydantic v2",
+            "role": "Schemas"
+          },
+          {
+            "name": "SQLAlchemy 2.0",
+            "role": "ORM"
+          },
+          {
+            "name": "Alembic",
+            "role": "Migrations"
+          }
         ]
       },
       {
         "label": "Data",
         "items": [
-          { "name": "PostgreSQL 15", "role": "Database" },
-          { "name": "Redis", "role": "Cache and queue" },
-          { "name": "S3 compatible", "role": "File storage" }
+          {
+            "name": "PostgreSQL 15",
+            "role": "Database"
+          },
+          {
+            "name": "Redis",
+            "role": "Cache and queue"
+          },
+          {
+            "name": "S3 compatible",
+            "role": "File storage"
+          }
         ]
       },
       {
         "label": "Runtime and QA",
         "items": [
-          { "name": "Docker", "role": "Runtime" },
-          { "name": "docker-compose", "role": "Orchestration" },
-          { "name": "Playwright", "role": "E2E tests" },
-          { "name": "Pytest", "role": "Backend tests" }
+          {
+            "name": "Docker",
+            "role": "Runtime"
+          },
+          {
+            "name": "docker-compose",
+            "role": "Orchestration"
+          },
+          {
+            "name": "Playwright",
+            "role": "E2E tests"
+          },
+          {
+            "name": "Pytest",
+            "role": "Backend tests"
+          }
         ]
       }
     ],
@@ -378,18 +479,42 @@
     "title": "A small core. Modules that plug in.",
     "body": "The module system isn't a metaphor: each one ships a manifest, its own Alembic migration branch, YAML seeds, auto-registered navigation and an event bus subscription. Turn on what your clinic needs, ignore the rest, and if something is missing, build it and plug it in.",
     "core": "Core",
-    "coreItems": ["Auth", "RBAC", "Clinics", "Users"],
+    "coreItems": [
+      "Auth",
+      "RBAC",
+      "Clinics",
+      "Users"
+    ],
     "pluggable": "Official modules",
     "community": "Community modules",
     "communityNote": "On the way. Build them yourself or join who is already shipping them.",
     "addYours": "Build your own",
-    "legend": { "official": "Official", "community": "Community", "yours": "Yours" },
+    "legend": {
+      "official": "Official",
+      "community": "Community",
+      "yours": "Yours"
+    },
     "communityItems": [
-      { "label": "WhatsApp", "icon": "message" },
-      { "label": "Stripe", "icon": "card" },
-      { "label": "Lab", "icon": "flask" },
-      { "label": "Marketing", "icon": "sparkles" },
-      { "label": "Insurers", "icon": "shield" }
+      {
+        "label": "WhatsApp",
+        "icon": "message"
+      },
+      {
+        "label": "Stripe",
+        "icon": "card"
+      },
+      {
+        "label": "Lab",
+        "icon": "flask"
+      },
+      {
+        "label": "Marketing",
+        "icon": "sparkles"
+      },
+      {
+        "label": "Insurers",
+        "icon": "shield"
+      }
     ],
     "cta": "See the architecture on GitHub →"
   },
@@ -700,11 +825,26 @@
     "ctaContact": "Talk to us",
     "factsTitle": "Quick facts",
     "facts": [
-      { "label": "Country", "value": "Spain" },
-      { "label": "Status", "value": "Available" },
-      { "label": "Mode", "value": "Optional · install on demand" },
-      { "label": "Compliance", "value": "RD 1007/2023" },
-      { "label": "Licence", "value": "BSL 1.1" }
+      {
+        "label": "Country",
+        "value": "Spain"
+      },
+      {
+        "label": "Status",
+        "value": "Available"
+      },
+      {
+        "label": "Mode",
+        "value": "Optional · install on demand"
+      },
+      {
+        "label": "Compliance",
+        "value": "RD 1007/2023"
+      },
+      {
+        "label": "Licence",
+        "value": "BSL 1.1"
+      }
     ],
     "deadlineHero": {
       "label": "MANDATORY",
@@ -728,14 +868,14 @@
         },
         {
           "title": "Verifiable PDF QR",
-          "body": "Every invoice ships with a QR that any patient can scan and validate on AEAT\u2019s public portal."
+          "body": "Every invoice ships with a QR that any patient can scan and validate on AEAT’s public portal."
         }
       ]
     },
     "timeline": {
       "eyebrow": "KEY DATES",
       "title": "What your clinic must have ready, and when.",
-      "body": "The Veri*Factu transition is not an event, it\u2019s a calendar. These are the dates that matter.",
+      "body": "The Veri*Factu transition is not an event, it’s a calendar. These are the dates that matter.",
       "items": [
         {
           "date": "Jul 29, 2025",
@@ -791,7 +931,7 @@
         {
           "n": "05",
           "title": "AEAT replies",
-          "body": "The module parses the response, updates the state (Correct, AcceptedWithErrors, Incorrect) and stores AEAT\u2019s CSV receipt in the record."
+          "body": "The module parses the response, updates the state (Correct, AcceptedWithErrors, Incorrect) and stores AEAT’s CSV receipt in the record."
         }
       ]
     },
@@ -806,7 +946,7 @@
         },
         {
           "title": "FNMT digital certificate",
-          "body": "You upload your .pfx with the password. It\u2019s stored encrypted with Fernet. The UI shows expiry and warns near renewal."
+          "body": "You upload your .pfx with the password. It’s stored encrypted with Fernet. The UI shows expiry and warns near renewal."
         },
         {
           "title": "SIF producer",
@@ -814,11 +954,11 @@
         },
         {
           "title": "VAT to AEAT mapping",
-          "body": "Each catalog VAT type maps to its AEAT classification (S1 standard, E1 health-services exemption, N1 non-taxable\u2026). The module seeds E1 by default for 0% types (clinical services)."
+          "body": "Each catalog VAT type maps to its AEAT classification (S1 standard, E1 health-services exemption, N1 non-taxable…). The module seeds E1 by default for 0% types (clinical services)."
         },
         {
           "title": "Activate the module",
-          "body": "When all four steps are green, the \"Activate Verifactu\" button lights up. You start in test (AEAT pre-production) and switch to production whenever you\u2019re ready."
+          "body": "When all four steps are green, the \"Activate Verifactu\" button lights up. You start in test (AEAT pre-production) and switch to production whenever you’re ready."
         }
       ]
     },
@@ -827,18 +967,38 @@
       "title": "Test and live, hot-swappable.",
       "body": "Same module, two endpoints. Switch with a click. No data migration, no reinstall.",
       "rows": [
-        { "attr": "AEAT endpoint", "test": "prewww1.aeat.es", "prod": "www1.agenciatributaria.gob.es" },
-        { "attr": "Fiscal effect", "test": "None", "prod": "Real" },
-        { "attr": "Accepted certs", "test": "Real FNMT or AEAT test cert", "prod": "Real FNMT only" },
-        { "attr": "PDF QR", "test": "Points to pre-production", "prod": "Points to AEAT portal" },
-        { "attr": "Hash chain", "test": "Same logic as production", "prod": "Same logic as test" }
+        {
+          "attr": "AEAT endpoint",
+          "test": "prewww1.aeat.es",
+          "prod": "www1.agenciatributaria.gob.es"
+        },
+        {
+          "attr": "Fiscal effect",
+          "test": "None",
+          "prod": "Real"
+        },
+        {
+          "attr": "Accepted certs",
+          "test": "Real FNMT or AEAT test cert",
+          "prod": "Real FNMT only"
+        },
+        {
+          "attr": "PDF QR",
+          "test": "Points to pre-production",
+          "prod": "Points to AEAT portal"
+        },
+        {
+          "attr": "Hash chain",
+          "test": "Same logic as production",
+          "prod": "Same logic as test"
+        }
       ],
-      "footnote": "Switching `prod → test` doesn\u2019t break the local chain (it\u2019s global per NIF), but AEAT will see a gap in whichever environment you skip."
+      "footnote": "Switching `prod → test` doesn’t break the local chain (it’s global per NIF), but AEAT will see a gap in whichever environment you skip."
     },
     "datamodel": {
       "eyebrow": "DATA",
       "title": "Four tables. Zero columns added to anything else.",
-      "body": "Verifactu lives in its own space. It reads from clinics and catalog, but never adds columns. Uninstall it (with no accepted records) and you\u2019re back to before, with no trace.",
+      "body": "Verifactu lives in its own space. It reads from clinics and catalog, but never adds columns. Uninstall it (with no accepted records) and you’re back to before, with no trace.",
       "tables": [
         {
           "name": "verifactu_settings",
@@ -854,7 +1014,7 @@
         },
         {
           "name": "verifactu_vat_classifications",
-          "what": "Per-clinic mapping S1/E1\u2013E6/N1/N2 by VAT type. Keeps the Dentalpin catalog country-agnostic."
+          "what": "Per-clinic mapping S1/E1–E6/N1/N2 by VAT type. Keeps the Dentalpin catalog country-agnostic."
         }
       ]
     },
@@ -902,7 +1062,7 @@
     "penalties": {
       "eyebrow": "WHY IT MATTERS",
       "title": "The price of not being ready by January 2027.",
-      "body": "Spain\u2019s LGT 201 bis governs liability for using non-compliant SIFs. Fines can reach \u20ac50,000 per fiscal year. For a clinic that invoices every day, skipping Verifactu (or an equivalent) stops being an option.",
+      "body": "Spain’s LGT 201 bis governs liability for using non-compliant SIFs. Fines can reach €50,000 per fiscal year. For a clinic that invoices every day, skipping Verifactu (or an equivalent) stops being an option.",
       "items": [
         {
           "title": "For your clinic",
@@ -923,19 +1083,19 @@
       "items": [
         {
           "q": "Do I need to enable it now?",
-          "a": "No. If your clinic is taxed under Sociedades, the deadline is January 1st, 2027. If you\u2019re self-employed (IRPF) it\u2019s July 1st, 2027. Until then you\u2019re in voluntary mode with no penalties for technical errors. The best time to enable it is now and let it run against pre-production."
+          "a": "No. If your clinic is taxed under Sociedades, the deadline is January 1st, 2027. If you’re self-employed (IRPF) it’s July 1st, 2027. Until then you’re in voluntary mode with no penalties for technical errors. The best time to enable it is now and let it run against pre-production."
         },
         {
           "q": "Does it work outside Spain?",
-          "a": "The module is Spain only. If your clinic doesn\u2019t invoice in Spain, you\u2019ll never see it: it\u2019s not installed by default. For France and other countries we plan sibling modules (factur-x, SDI\u2026) that plug in the same way."
+          "a": "The module is Spain only. If your clinic doesn’t invoice in Spain, you’ll never see it: it’s not installed by default. For France and other countries we plan sibling modules (factur-x, SDI…) that plug in the same way."
         },
         {
           "q": "What do I need to start?",
-          "a": "Three things: (1) your CIF/NIF in the clinic record, (2) a valid FNMT certificate (Representante de Persona Jurídica, Persona Física or Sello de Empresa) and (3) decide who signs the producer\u2019s declaración responsable (the SaaS, your integrator or your clinic if you self-host)."
+          "a": "Three things: (1) your CIF/NIF in the clinic record, (2) a valid FNMT certificate (Representante de Persona Jurídica, Persona Física or Sello de Empresa) and (3) decide who signs the producer’s declaración responsable (the SaaS, your integrator or your clinic if you self-host)."
         },
         {
           "q": "What about invoices issued before activation?",
-          "a": "They don\u2019t flow into Verifactu retroactively: the chain starts the day you enable the module. The law only requires new invoices to be signed and submitted. Older ones remain legally valid."
+          "a": "They don’t flow into Verifactu retroactively: the chain starts the day you enable the module. The law only requires new invoices to be signed and submitted. Older ones remain legally valid."
         },
         {
           "q": "What happens if AEAT goes down?",
@@ -947,25 +1107,40 @@
         },
         {
           "q": "Do partial payments and credit notes work?",
-          "a": "Yes. F1, F2, F3 and every credit note R1\u2013R5 are supported, plus anulaciones (RegistroAnulacion). Simplified invoices capped at \u20ac400 with no recipient are validated."
+          "a": "Yes. F1, F2, F3 and every credit note R1–R5 are supported, plus anulaciones (RegistroAnulacion). Simplified invoices capped at €400 with no recipient are validated."
         },
         {
           "q": "Can I verify an issued invoice from outside?",
-          "a": "Yes. The PDF QR points to AEAT\u2019s `ValidarQR` URL. Anyone can scan it and confirm the invoice is registered."
+          "a": "Yes. The PDF QR points to AEAT’s `ValidarQR` URL. Anyone can scan it and confirm the invoice is registered."
         }
       ]
     },
     "linksTitle": "Go deeper",
     "links": [
-      { "label": "RD 1007/2023 (BOE)", "href": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-24840" },
-      { "label": "Orden HAC/1177/2024 (BOE)", "href": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2024-22138" },
-      { "label": "VERI*FACTU \u00b7 AEAT portal", "href": "https://sede.agenciatributaria.gob.es/Sede/iva/sistemas-informaticos-facturacion-verifactu.html" },
-      { "label": "Veri*Factu validations and errors", "href": "https://www.agenciatributaria.es/static_files/AEAT_Desarrolladores/EEDD/IVA/VERI-FACTU/Validaciones_Errores_Veri-Factu.pdf" },
-      { "label": "Valid FNMT certificates", "href": "https://www.sede.fnmt.gob.es/preguntas-frecuentes/certificado-de-persona-fisica/-/asset_publisher/eIal9z2VE0Kb/content/certificados-electr%C3%B3nicos-v%C3%A1lidos-para-el-sistema-veri*factu" }
+      {
+        "label": "RD 1007/2023 (BOE)",
+        "href": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-24840"
+      },
+      {
+        "label": "Orden HAC/1177/2024 (BOE)",
+        "href": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2024-22138"
+      },
+      {
+        "label": "VERI*FACTU · AEAT portal",
+        "href": "https://sede.agenciatributaria.gob.es/Sede/iva/sistemas-informaticos-facturacion-verifactu.html"
+      },
+      {
+        "label": "Veri*Factu validations and errors",
+        "href": "https://www.agenciatributaria.es/static_files/AEAT_Desarrolladores/EEDD/IVA/VERI-FACTU/Validaciones_Errores_Veri-Factu.pdf"
+      },
+      {
+        "label": "Valid FNMT certificates",
+        "href": "https://www.sede.fnmt.gob.es/preguntas-frecuentes/certificado-de-persona-fisica/-/asset_publisher/eIal9z2VE0Kb/content/certificados-electr%C3%B3nicos-v%C3%A1lidos-para-el-sistema-veri*factu"
+      }
     ],
     "callout": {
       "eyebrow": "SPAIN · VERI*FACTU",
-      "title": "Does your clinic invoice in Spain? You\u2019re a click away from being 2027-ready.",
+      "title": "Does your clinic invoice in Spain? You’re a click away from being 2027-ready.",
       "body": "Verifactu is an optional module bundled with Dentalpin. It complies with RD 1007/2023, signs every invoice and submits it to AEAT in real time. Turn it on whenever you want and have it ready before the deadline.",
       "cta": "Open the Verifactu module"
     }
@@ -988,21 +1163,53 @@
       "contactStatus": "online",
       "templateTag": "Template",
       "messages": [
-        { "from": "clinic", "kind": "template", "text": "Hi Marta 👋 A reminder for your check-up on Thursday 3 July at 10:00 with Dr. Ruiz. Can you confirm you’ll come?", "time": "09:01" },
-        { "from": "patient", "text": "Yes, I’ll be there! Thanks 🙏", "time": "09:04" },
-        { "from": "clinic", "text": "Great, see you then. If you need to move it, just reply here and we’ll sort it out.", "time": "09:05" },
-        { "from": "patient", "text": "Perfect. Should I come on an empty stomach?", "time": "09:06" }
+        {
+          "from": "clinic",
+          "kind": "template",
+          "text": "Hi Marta 👋 A reminder for your check-up on Thursday 3 July at 10:00 with Dr. Ruiz. Can you confirm you’ll come?",
+          "time": "09:01"
+        },
+        {
+          "from": "patient",
+          "text": "Yes, I’ll be there! Thanks 🙏",
+          "time": "09:04"
+        },
+        {
+          "from": "clinic",
+          "text": "Great, see you then. If you need to move it, just reply here and we’ll sort it out.",
+          "time": "09:05"
+        },
+        {
+          "from": "patient",
+          "text": "Perfect. Should I come on an empty stomach?",
+          "time": "09:06"
+        }
       ],
       "windowNote": "24h window open · you can reply free-form",
       "replyPlaceholder": "Type a reply…"
     },
     "factsTitle": "At a glance",
     "facts": [
-      { "label": "Category", "value": "Community" },
-      { "label": "Status", "value": "Available" },
-      { "label": "Mode", "value": "Optional · removable" },
-      { "label": "Provider", "value": "Kapso (WhatsApp)" },
-      { "label": "Base channel", "value": "Notifications gateway" }
+      {
+        "label": "Category",
+        "value": "Community"
+      },
+      {
+        "label": "Status",
+        "value": "Available"
+      },
+      {
+        "label": "Mode",
+        "value": "Optional · removable"
+      },
+      {
+        "label": "Provider",
+        "value": "Kapso (WhatsApp)"
+      },
+      {
+        "label": "Base channel",
+        "value": "Notifications gateway"
+      }
     ],
     "what": {
       "eyebrow": "WHAT IT ADDS",
@@ -1099,9 +1306,24 @@
       "coreLabel": "Notifications gateway",
       "coreSub": "Channel-agnostic · outbox + dispatch",
       "adapters": [
-        { "name": "Email", "sub": "Built-in", "icon": "message", "tone": "muted" },
-        { "name": "WhatsApp · Kapso", "sub": "Community module", "icon": "whatsapp", "tone": "primary" },
-        { "name": "Future channels", "sub": "Same contract", "icon": "plug", "tone": "subtle" }
+        {
+          "name": "Email",
+          "sub": "Built-in",
+          "icon": "message",
+          "tone": "muted"
+        },
+        {
+          "name": "WhatsApp · Kapso",
+          "sub": "Community module",
+          "icon": "whatsapp",
+          "tone": "primary"
+        },
+        {
+          "name": "Future channels",
+          "sub": "Same contract",
+          "icon": "plug",
+          "tone": "subtle"
+        }
       ],
       "note": "Installing adds the adapter and its templates; uninstalling removes it entirely, with a roundtrip test verifying it leaves no residue."
     },
@@ -1181,9 +1403,18 @@
     },
     "linksTitle": "Go deeper",
     "links": [
-      { "label": "WhatsApp module guide", "href": "https://github.com/martinezsalmeron/dentalpin/blob/main/docs/modules/whatsapp_kapso.md" },
-      { "label": "ADR · Inbound conversations", "href": "https://github.com/martinezsalmeron/dentalpin/blob/main/docs/adr/0017-inbound-conversation.md" },
-      { "label": "Module permissions", "href": "https://github.com/martinezsalmeron/dentalpin/tree/main/docs/technical/whatsapp_kapso" }
+      {
+        "label": "WhatsApp module guide",
+        "href": "https://github.com/martinezsalmeron/dentalpin/blob/main/docs/modules/whatsapp_kapso.md"
+      },
+      {
+        "label": "ADR · Inbound conversations",
+        "href": "https://github.com/martinezsalmeron/dentalpin/blob/main/docs/adr/0017-inbound-conversation.md"
+      },
+      {
+        "label": "Module permissions",
+        "href": "https://github.com/martinezsalmeron/dentalpin/tree/main/docs/technical/whatsapp_kapso"
+      }
     ]
   },
   "featurePage": {
@@ -1225,5 +1456,16 @@
     "label": "Language",
     "es": "Español",
     "en": "English"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Product notes, compliance guides, and how Dentalpin is built.",
+    "readMore": "Read",
+    "backToBlog": "Back to the blog",
+    "publishedOn": "Published on",
+    "updatedOn": "Updated on",
+    "empty": "No posts yet. Check back soon.",
+    "rss": "Subscribe via RSS",
+    "minRead": "min read"
   }
 }
