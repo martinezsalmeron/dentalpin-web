@@ -1,9 +1,10 @@
 import es from './es.json';
 import en from './en.json';
 import fr from './fr.json';
+import pt from './pt.json';
 import { MODULES, moduleSlug } from '~/data/modules';
 
-export const LOCALES = ['es', 'en', 'fr'] as const;
+export const LOCALES = ['es', 'en', 'fr', 'pt'] as const;
 export type Locale = (typeof LOCALES)[number];
 export const DEFAULT_LOCALE: Locale = 'es';
 
@@ -13,12 +14,33 @@ const DICTS: Record<Locale, Dict> = {
   es,
   en: en as unknown as Dict,
   fr: fr as unknown as Dict,
+  pt: pt as unknown as Dict,
 };
 
-/** BCP-47 tags: `<html lang>`, og:locale and Intl date formatting. */
-export const HTML_LANG: Record<Locale, string> = { es: 'es-ES', en: 'en-US', fr: 'fr-FR' };
-export const OG_LOCALE: Record<Locale, string> = { es: 'es_ES', en: 'en_US', fr: 'fr_FR' };
-export const DATE_LOCALE: Record<Locale, string> = { es: 'es-ES', en: 'en-GB', fr: 'fr-FR' };
+/**
+ * BCP-47 tags: `<html lang>`, og:locale and Intl date formatting.
+ * Portuguese carries no region on purpose — one Portuguese for every
+ * market, so `hreflang="pt"` targets the language rather than a country.
+ * og:locale is the exception: the format requires a territory.
+ */
+export const HTML_LANG: Record<Locale, string> = {
+  es: 'es-ES',
+  en: 'en-US',
+  fr: 'fr-FR',
+  pt: 'pt',
+};
+export const OG_LOCALE: Record<Locale, string> = {
+  es: 'es_ES',
+  en: 'en_US',
+  fr: 'fr_FR',
+  pt: 'pt_PT',
+};
+export const DATE_LOCALE: Record<Locale, string> = {
+  es: 'es-ES',
+  en: 'en-GB',
+  fr: 'fr-FR',
+  pt: 'pt',
+};
 
 export function isLocale(value: string | undefined): value is Locale {
   return value !== undefined && (LOCALES as readonly string[]).includes(value);
@@ -54,15 +76,20 @@ export function localisedPath(locale: Locale, path: string = ''): string {
 }
 
 export const LOCALE_PATHS = {
-  manifesto: { es: 'manifiesto', en: 'manifesto', fr: 'manifeste' },
-  features: { es: 'funcionalidades', en: 'features', fr: 'fonctionnalites' },
-  technology: { es: 'tecnologia', en: 'technology', fr: 'technologie' },
-  pricing: { es: 'precios', en: 'pricing', fr: 'tarifs' },
-  contact: { es: 'contacto', en: 'contact', fr: 'contact' },
-  blog: { es: 'blog', en: 'blog', fr: 'blog' },
-  legalPrivacy: { es: 'legal/privacidad', en: 'legal/privacy', fr: 'legal/confidentialite' },
-  legalTerms: { es: 'legal/terminos', en: 'legal/terms', fr: 'legal/conditions' },
-  legalCookies: { es: 'legal/cookies', en: 'legal/cookies', fr: 'legal/cookies' },
+  manifesto: { es: 'manifiesto', en: 'manifesto', fr: 'manifeste', pt: 'manifesto' },
+  features: { es: 'funcionalidades', en: 'features', fr: 'fonctionnalites', pt: 'funcionalidades' },
+  technology: { es: 'tecnologia', en: 'technology', fr: 'technologie', pt: 'tecnologia' },
+  pricing: { es: 'precios', en: 'pricing', fr: 'tarifs', pt: 'precos' },
+  contact: { es: 'contacto', en: 'contact', fr: 'contact', pt: 'contacto' },
+  blog: { es: 'blog', en: 'blog', fr: 'blog', pt: 'blog' },
+  legalPrivacy: {
+    es: 'legal/privacidad',
+    en: 'legal/privacy',
+    fr: 'legal/confidentialite',
+    pt: 'legal/privacidade',
+  },
+  legalTerms: { es: 'legal/terminos', en: 'legal/terms', fr: 'legal/conditions', pt: 'legal/termos' },
+  legalCookies: { es: 'legal/cookies', en: 'legal/cookies', fr: 'legal/cookies', pt: 'legal/cookies' },
 } as const;
 
 export type PagePathKey = keyof typeof LOCALE_PATHS;
@@ -101,7 +128,7 @@ export function translatePath(pathname: string, target: Locale): string {
   if (!tail || key === 'blog') return pagePath(target, key);
 
   if (key === 'features') {
-    const mod = MODULES.find((m) => [m.slug, m.slugEn, m.slugFr].includes(tail));
+    const mod = MODULES.find((m) => [m.slug, m.slugEn, m.slugFr, m.slugPt].includes(tail));
     if (mod) return pagePath(target, key, moduleSlug(mod, target));
   }
   return pagePath(target, key, tail);

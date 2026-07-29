@@ -8,6 +8,7 @@ const SLUG_MAP: Record<Locale, Record<Kind, string>> = {
   es: { privacy: 'privacidad', terms: 'terminos', cookies: 'cookies' },
   en: { privacy: 'privacy', terms: 'terms', cookies: 'cookies' },
   fr: { privacy: 'confidentialite', terms: 'conditions', cookies: 'cookies' },
+  pt: { privacy: 'privacidade', terms: 'termos', cookies: 'cookies' },
 };
 const TITLES: Record<Locale, Record<Kind, string>> = {
   es: { privacy: 'Política de privacidad', terms: 'Términos de uso', cookies: 'Política de cookies' },
@@ -16,6 +17,11 @@ const TITLES: Record<Locale, Record<Kind, string>> = {
     privacy: 'Politique de confidentialité',
     terms: "Conditions d'utilisation",
     cookies: 'Politique de cookies',
+  },
+  pt: {
+    privacy: 'Política de privacidade',
+    terms: 'Termos de utilização',
+    cookies: 'Política de cookies',
   },
 };
 
@@ -26,8 +32,9 @@ export function getStaticPaths() {
     es: { privacy: 'privacidad', terms: 'terminos', cookies: 'cookies' },
     en: { privacy: 'privacy', terms: 'terms', cookies: 'cookies' },
     fr: { privacy: 'confidentialite', terms: 'conditions', cookies: 'cookies' },
+    pt: { privacy: 'privacidade', terms: 'termos', cookies: 'cookies' },
   } as const;
-  return (['es', 'en', 'fr'] as const).flatMap((l) =>
+  return (['es', 'en', 'fr', 'pt'] as const).flatMap((l) =>
     (['privacy', 'terms', 'cookies'] as const).map((k) => ({
       params: { lang: l, slug: SLUGS[l][k] },
     }))
@@ -191,13 +198,62 @@ const cookiesPath = `/${locale}/legal/${SLUG_MAP[locale].cookies}/`;
         </>
       )}
 
+      {kind === 'privacy' && locale === 'pt' && (
+        <>
+          <p><em>Última atualização: 23 de abril de 2026.</em></p>
+
+          <h2>1. Responsável pelo tratamento</h2>
+          <p>
+            Dentared Odontology Services S.L.<br />
+            Número fiscal (CIF): B86142809<br />
+            Calle Torres Quevedo 13, 28108 Alcobendas, Madrid (Espanha)<br />
+            Contacto: <a href="mailto:hola@dentalpin.com">hola@dentalpin.com</a>
+          </p>
+
+          <h2>2. Dados que tratamos</h2>
+          <ul>
+            <li>Dados de identificação e de contacto que nos dá quando nos escreve, se inscreve na lista de espera da Cloud ou pede serviços (nome, email, nome da clínica).</li>
+            <li>Dados técnicos mínimos ligados à navegação (endereço IP, tipo de navegador, páginas vistas, datas), recolhidos sem cookies de seguimento de terceiros.</li>
+            <li>Dados da conversa que tivermos por email ou por outro canal que você abra.</li>
+          </ul>
+
+          <h2>3. Finalidades e base legal</h2>
+          <ul>
+            <li>Responder às suas questões e prestar-lhe o serviço pedido. Base legal: execução de um contrato ou diligências pré-contratuais (art. 6.º, n.º 1, al. b) do RGPD).</li>
+            <li>Gerir a lista de espera da Cloud e avisá-lo quando abrirmos vagas. Base legal: o seu consentimento (art. 6.º, n.º 1, al. a) do RGPD).</li>
+            <li>Cumprir obrigações legais, contabilísticas e fiscais. Base legal: cumprimento de uma obrigação legal (art. 6.º, n.º 1, al. c) do RGPD).</li>
+            <li>Melhorar o site e o produto a partir de métricas agregadas. Base legal: interesse legítimo (art. 6.º, n.º 1, al. f) do RGPD).</li>
+          </ul>
+
+          <h2>4. Conservação</h2>
+          <p>Guardamos os seus dados o tempo necessário para a finalidade que levou à recolha e, depois, durante os prazos legais aplicáveis (tipicamente seis anos para documentação contabilística). Se retirar o consentimento, apagamo-los, salvo se a lei nos obrigar a conservá-los.</p>
+
+          <h2>5. Destinatários</h2>
+          <p>Não cedemos os seus dados a terceiros, salvo obrigação legal. Trabalhamos com subcontratantes que nos prestam serviços de alojamento, email e análise de tráfego, todos com contrato de subcontratação nos termos do art. 28.º do RGPD. A lista atualizada está disponível a pedido, para <a href="mailto:hola@dentalpin.com">hola@dentalpin.com</a>.</p>
+
+          <h2>6. Transferências internacionais</h2>
+          <p>Damos prioridade a fornecedores com infraestrutura na União Europeia. Quando algum fornecedor opera fora do EEE, a transferência é feita ao abrigo das Cláusulas Contratuais-Tipo aprovadas pela Comissão Europeia ou de outro mecanismo válido do Capítulo V do RGPD.</p>
+
+          <h2>7. Os seus direitos</h2>
+          <p>Pode a qualquer momento exercer os direitos de acesso, retificação, apagamento, oposição, limitação do tratamento, portabilidade e de não ficar sujeito a decisões automatizadas. Para isso, escreva para <a href="mailto:hola@dentalpin.com">hola@dentalpin.com</a> indicando o direito que quer exercer e juntando um documento que comprove a sua identidade. Se entender que não tratámos bem o seu pedido, pode apresentar reclamação junto da autoridade de controlo competente: a Agência Espanhola de Proteção de Dados (<a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>) ou, se residir em Portugal, a CNPD (<a href="https://www.cnpd.pt" target="_blank" rel="noopener">www.cnpd.pt</a>).</p>
+
+          <h2>8. Cookies</h2>
+          <p>Este site usa apenas cookies estritamente necessários ao seu funcionamento. Pode ver o detalhe na nossa <a href={cookiesPath}>Política de cookies</a>.</p>
+
+          <h2>9. Alterações a esta política</h2>
+          <p>Podemos atualizar esta política para refletir alterações legais ou do produto. Publicaremos sempre a versão em vigor neste mesmo endereço, com a data da última revisão.</p>
+        </>
+      )}
+
       {kind !== 'privacy' && (
         <p>
           {locale === 'es'
             ? 'Documento pendiente de redacción legal. Actualízalo antes del lanzamiento.'
             : locale === 'fr'
               ? 'Document en attente de rédaction juridique. À mettre à jour avant le lancement.'
-              : 'Legal document pending drafting. Update before launch.'}
+              : locale === 'pt'
+                ? 'Documento a aguardar redação jurídica. Atualizar antes do lançamento.'
+                : 'Legal document pending drafting. Update before launch.'}
         </p>
       )}
     </div>
