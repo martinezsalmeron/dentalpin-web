@@ -30,6 +30,18 @@ test('language switcher translates the slug, not just the prefix', async ({ page
   await expect(page.getByRole('heading', { name: 'Odontogramme' }).first()).toBeVisible();
 });
 
+// PT reuses the Spanish /funcionalidades/ directory but has its own module
+// slugs, so both locales are generated from one [slug].astro. If that fan-out
+// regresses, /pt/funcionalidades/orcamentos/ stops existing.
+test('Portuguese reuses the Spanish path but keeps its own module slug', async ({ page }) => {
+  await page.goto('/es/funcionalidades/presupuestos/');
+  await openLanguagePicker(page);
+  await page.getByRole('menuitem', { name: /português/i }).click();
+  await expect(page).toHaveURL(/\/pt\/funcionalidades\/orcamentos\/?$/);
+  await expect(page.locator('html')).toHaveAttribute('lang', 'pt');
+  await expect(page.getByRole('heading', { name: 'Orçamentos' }).first()).toBeVisible();
+});
+
 test('features page renders Bento grid', async ({ page }) => {
   await page.goto('/es/funcionalidades');
   await expect(page.getByRole('heading', { name: /menos pestañas|odontograma/i }).first()).toBeVisible();

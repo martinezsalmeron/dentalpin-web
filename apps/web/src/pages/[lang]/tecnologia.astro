@@ -3,7 +3,8 @@ import { isLocale, type Locale } from '~/i18n';
 import TechnologyBody from '~/components/pages/TechnologyBody.astro';
 
 export function getStaticPaths() {
-  return [{ params: { lang: 'es' } }];
+  // PT shares the Spanish slug, so it hangs off this file rather than its own.
+  return [{ params: { lang: 'es' } }, { params: { lang: 'pt' } }];
 }
 
 const { lang } = Astro.params;

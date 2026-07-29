@@ -11,7 +11,12 @@ import LiveDemoCard from '~/components/LiveDemoCard.astro';
 import AiAgentCallout from '~/components/AiAgentCallout.astro';
 
 export function getStaticPaths() {
-  return [{ params: { lang: 'es' } }, { params: { lang: 'en' } }, { params: { lang: 'fr' } }];
+  return [
+    { params: { lang: 'es' } },
+    { params: { lang: 'en' } },
+    { params: { lang: 'fr' } },
+    { params: { lang: 'pt' } },
+  ];
 }
 
 const { lang } = Astro.params;
