@@ -10,11 +10,13 @@ looks at which slugs already exist under
 `apps/web/src/content/blog/{es,en,fr,pt}/`, and takes the next unwritten
 target. What is published *is* the state.
 
-Five posts a week, weekday mornings: two comparisons and three topic
-posts. The two kinds are written differently — see *Two queues* and
+Five targets a week, weekday mornings: two comparisons and three topic
+posts. **That is about fourteen files, not five.** A comparison is one
+language, a topic is every language the site publishes, so a normal week
+is 2 + 3×4. The two kinds are written differently — see *Two queues* and
 *Topic posts are guides*.
 
-Every run, one post:
+Every run, one target:
 
 1. Read the day of the week and pick the queue from it — Monday and
    Wednesday take a comparison, the rest take a topic. See *Two queues*
@@ -224,14 +226,44 @@ automatically. Do not hand-write HTML or CSS classes in a post.
 - Tag with `comparativa` / `comparison` / `comparatif` plus the vendor
   slug.
 
-## Two queues, five posts a week
+## Two queues, five targets a week
 
 Monday and Wednesday are **comparison** posts. Tuesday, Thursday and
 Friday are **topic** posts. The routine reads the day (`date -u +%u`,
 1 = Monday) and picks the queue from it.
 
+### The comparison queue rotates by language
+
+**Do not work down Queue A in file order.** Each comparison run picks the
+language with the **fewest published comparisons**, and only then takes
+the next unwritten target inside that language's section. Ties break in
+this order:
+
+    PT → FR → EN → ES
+
+Skip a language whose section has no unwritten target left, and carry on
+with the next.
+
+This is still derivable from the filesystem, so the state rule holds:
+count the comparison slugs already published per locale, take the
+smallest. Nothing new to keep in sync.
+
+The reason is arithmetic. Queue A holds 32 targets grouped by market:
+10 Spanish, 8 English, 7 French, 7 Portuguese. Two a week taken in file
+order means Spanish fills the first five weeks, English starts in week
+six, French in week ten and **Portuguese in week thirteen**. The two
+locales that launched most recently, with the emptiest blogs, would wait
+the longest. Rotating gives every language a comparison every fortnight
+starting from week one, and PT leads the tie-break because it is both the
+newest locale and the largest audience.
+
+The old ordering was written when French and Portuguese did not exist and
+a post in those markets could not rank. All four sections rank now, so
+grouping by market is only a way to organise the catalogue, not an
+instruction about what to write next.
+
 When the comparison queue runs dry, Monday and Wednesday take topic
-targets too and the site simply publishes five topic posts a week. Do
+targets too and the site simply publishes five topic targets a week. Do
 **not** invent a competitor to keep the comparison cadence — a made-up
 or misremembered vendor is the one mistake here that cannot be walked
 back. Adding a new one means verifying it trades, this run, from its own
@@ -250,14 +282,24 @@ this fails:
 A vendor that cannot be reached at its own site does not go in this
 queue.
 
-Same state rule for both queues: what is published *is* the state.
-Look at which slugs already exist, take the next unwritten target.
+Same state rule for both queues: what is published *is* the state. Look
+at which slugs already exist and take the next unwritten target. For
+Queue B that means the next row down; for Queue A it means the next row
+in the language whose turn it is, per the rotation above.
 
-A target counts as done when **every language its row lists** exists. A
-topic post that shipped in ES and EN but not FR is still the next target,
-and that run writes the missing French one only. A comparison in A4 is
-done the moment the French post exists, because French is the only
-language that row lists.
+A target counts as done when **every language its row lists** exists.
+A comparison in A4 is done the moment the French post exists, because
+French is the only language that row lists.
+
+**A run writes all of a target's languages, in that run.** A topic target
+produces four files on the day it comes up, not one file on four separate
+days. Splitting it four ways would drop each language to one guide a
+month.
+
+The one exception is catch-up. A target published before a locale existed
+is still "next" until the missing language exists, and that run writes
+only what is missing. That is the only case where a run produces a
+subset.
 
 ## Topic posts are guides, not comparisons
 
@@ -295,15 +337,24 @@ Every vendor here was verified to exist and to be trading when it was
 added — name, site and market evidence. Research each again before
 writing: this list is a queue, not a source of facts.
 
-**Ordered by whether a post in a language we publish can actually rank in
-that vendor's market.** A German dentist searches in German, so a Spanish
-post about Dampsoft reaches nobody who is choosing between Dampsoft and
-us. Those groups sit at the bottom and are worth writing only once the
-site has content in their language.
+**These sections are a catalogue, not a running order.** What gets
+written next is decided by the language rotation in *Two queues*, not by
+reading this list top to bottom. Grouping is by market so the vendors sit
+next to their competitors, which is what you want when researching one.
 
-Within a section, order by opportunity: the biggest audience first. The
-sections are per language, not per country, so Spain and Latin America
-share A2 and Portugal and Brazil share A5.
+Two things the grouping still decides:
+
+- **Order within a language.** Take the earlier section first, then work
+  down its rows: Spanish means A1 before A2, and inside each section the
+  biggest audience is already at the top.
+- **What is out of play.** A German dentist searches in German, so a post
+  in any language we publish reaches nobody who is choosing between
+  Dampsoft and us. Those vendors sit in the blocked section at the bottom
+  and are worth writing only once the site publishes in their language.
+
+A5 covers Portugal and Brazil together because they share a language.
+Spanish is split across A1 and A2 because Spain is the home market and
+deserves to be drained first, not because the two need different posts.
 
 ### A1 · Spain — the home market
 
@@ -450,10 +501,18 @@ translations of each other.
 | Cómo dimos a un LLM acceso de escritura a datos clínicos sin que sea una locura | `llm-escritura-datos-clinicos` / `llm-write-access-medical-data` / `llm-acces-ecriture-donnees-cliniques` / `llm-escrita-dados-clinicos` | *(technical, EN-first — HN/Reddit material)* |
 | Autoalojar software sanitario: lo que nadie te cuenta | `autoalojar-software-sanitario` / `self-hosting-healthcare-software` / `auto-heberger-logiciel-sante` / `alojar-software-de-saude-no-seu-servidor` | *(self-hosted / r/selfhosted)* |
 
-When this queue empties too, add new targets the same way: real searches
-a dental clinic makes, verified to have intent behind them this run, not
-invented from memory. A target that only makes sense in one country goes
-in country-locked, with the country named.
+**Queue B empties first, and sooner than it looks.** Sixteen targets at
+three a week is about five weeks, while Queue A holds sixteen weeks of
+work. When Tuesday comes up and there is no unwritten topic left, take a
+comparison instead, which is the mirror of the rule in *Two queues*. That
+keeps the loop producing, but it is a stopgap: five comparisons a week
+drains Queue A in six weeks and the site stops publishing anything that
+helps a clinic which never installs Dentalpin.
+
+So extend this queue before it runs out. Add new targets the same way:
+real searches a dental clinic makes, verified to have intent behind them
+this run, not invented from memory. A target that only makes sense in one
+country goes in country-locked, with the country named.
 
 ## Where the routine must stop and ask
 
