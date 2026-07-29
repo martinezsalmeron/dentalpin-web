@@ -25,11 +25,17 @@ export default defineConfig({
     locales: ['es', 'en', 'fr', 'pt'],
   },
   integrations: [
+    // No `i18n` block on purpose. The integration pairs locales by matching
+    // the path after the locale prefix, and our slugs are translated, so
+    // /es/funcionalidades/ paired with /pt/funcionalidades/ while
+    // /en/features/ and /fr/fonctionnalites/ were left with no alternates at
+    // all — 62 of 105 URLs had none. BaseLayout emits the full set from
+    // `translatePath`, which knows the slug table, so the sitemap listing the
+    // URLs is all we need from it here.
     sitemap({
-      i18n: {
-        defaultLocale: 'es',
-        locales: { es: 'es-ES', en: 'en-US', fr: 'fr-FR', pt: 'pt' },
-      },
+      // Legal pages are noindex. Listing them says "index this" from one
+      // place while the page says the opposite from another.
+      filter: (page) => !page.includes('/legal/'),
     }),
   ],
   vite: {
