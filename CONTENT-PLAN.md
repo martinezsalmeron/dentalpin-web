@@ -7,7 +7,7 @@ for anything a human writes here.
 
 There is no status column to keep in sync. The routine reads this file,
 looks at which slugs already exist under
-`apps/web/src/content/blog/{es,en}/`, and takes the next unwritten
+`apps/web/src/content/blog/{es,en,fr}/`, and takes the next unwritten
 target. What is published *is* the state.
 
 Five posts a week, weekday mornings: two comparisons and three topic
@@ -21,7 +21,8 @@ Every run, one post:
    below.
 2. Take the next target in that queue with no post yet.
 3. Research it **this run**, from primary sources. Not from memory.
-4. Write it in Spanish and English.
+4. Write it in the languages that target's row lists. See *Which
+   languages a post gets written in* — it is not always all of them.
 5. Verify every factual claim.
 6. Publish what passes. Open a PR for what does not.
 
@@ -53,6 +54,53 @@ In practice:
   read aloud to their sales team, cut it.
 - **Anything unverifiable is dropped**, not softened. If dropping it
   guts the post, the post goes to a PR instead of being published.
+
+## Which languages a post gets written in
+
+**The two queues localise differently, and getting this backwards is the
+most expensive mistake available here.**
+
+**A comparison goes out in the language of the market where that vendor
+sells, and nowhere else.** Someone choosing between Julie and us searches
+`alternative logiciel Julie` in French. A Spanish translation of that post
+reaches no one who is deciding, ranks for nothing, and still has to be
+re-verified every time Julie changes a page. Three vendors × four
+languages is nine pages that exist only to dilute the three that work.
+
+The market decides the language, not the vendor's nationality:
+
+- Gesden, Odontonet, Klinikare, Clinic Cloud → **ES**. Spain only.
+- Dentalink, Doctocliq, DentalCore → **ES**. One post covers Spain and
+  Latin America; there is no second language to write.
+- Julie, LOGOSw, Veasy, Desmos → **FR**. France only.
+- Dentrix, Eaglesoft, Curve, Open Dental, Dentally, Software of
+  Excellence → **EN**.
+- Simples Dental, Clinicorp, Dental Office → **PT** when we have it.
+- NewSoft, Doctusware → **PT** when we have it.
+
+A second language is only worth it when the vendor genuinely sells into
+that second language's market, and then it is a **rewritten** post, not a
+translation: different search phrasing, different regulation, different
+"choose them if" list. If you cannot name the query it would rank for,
+do not write it.
+
+**A topic post goes out in every language the site publishes.** Backups,
+no-shows, migrating without losing the clinical record, cloud versus your
+own server: none of that is market-specific, all of it is searched in
+every language, and there is no competitor claim to re-verify per copy.
+This is where breadth pays.
+
+Two things that look like translations and are not:
+
+- **Head terms.** `software-clinica-dental-gratis`,
+  `logiciel-dentaire-gratuit`, `free-dental-practice-software` are one
+  target each, written natively, naming the vendors that market actually
+  knows. Translating the Spanish one into French produces a page about
+  Gesden for a reader who has never heard of it.
+- **Regulation.** Verifactu is Spain. The French equivalent is the
+  e-invoicing reform and its PDP obligations, which is a different post
+  with different dates and a different official source. Never translate a
+  compliance post across a border.
 
 ## Every comparison post has this shape
 
@@ -143,6 +191,17 @@ Prose describing four steps is four steps nobody can follow.
 **Keep paragraphs to two or three sentences.** This is the single biggest
 difference between a post that gets read and one that gets closed.
 
+**No em dashes in the prose.** Use a comma, a colon, parentheses or a
+full stop. The character reads as machine-written to the people most
+likely to be evaluating us, and every alternative is clearer anyway. This
+applies to every language. (It does not apply to this file, which is an
+internal spec, or to a quoted source.)
+
+**No marketing filler.** Nothing opens with "Descubre", "Desbloquea" or
+"Potencia", and adjectives do not come in threes. Say the concrete thing:
+"docker compose up" beats "una experiencia de instalación sencilla,
+rápida y potente".
+
 Everything else — links, code, images, the sources list — is styled
 automatically. Do not hand-write HTML or CSS classes in a post.
 
@@ -153,11 +212,18 @@ automatically. Do not hand-write HTML or CSS classes in a post.
   parse error that fails the build.
 - Slug in the language of the post: `dentalpin-vs-gesden` /
   `dentalpin-vs-gesden`, but `alternativa-open-source-a-X` /
-  `open-source-alternative-to-X`.
+  `open-source-alternative-to-X` / `alternative-open-source-a-X`.
+  Translations do not share a filename on purpose — the directory carries
+  the language and the filename is the URL, in that language.
 - `description` reads as a search result, not a teaser. 140-160 chars.
 - One `<h1>` (the title), `##` for the sections above.
-- Link to `/es/precios/` and the install post from every comparison.
-- Tag with `comparativa` / `comparison` plus the vendor slug.
+- Link to the pricing page and the install post **in the post's own
+  language** from every comparison: `/es/precios/`, `/en/pricing/`,
+  `/fr/tarifs/`. A French post linking to `/es/precios/` sends the reader
+  to a page they cannot read, and the build's link check will not catch
+  it because the page exists.
+- Tag with `comparativa` / `comparison` / `comparatif` plus the vendor
+  slug.
 
 ## Two queues, five posts a week
 
@@ -187,6 +253,12 @@ queue.
 
 Same state rule for both queues: what is published *is* the state.
 Look at which slugs already exist, take the next unwritten target.
+
+A target counts as done when **every language its row lists** exists. A
+topic post that shipped in ES and EN but not FR is still the next target,
+and that run writes the missing French one only. A comparison in A4 is
+done the moment the French post exists, because French is the only
+language that row lists.
 
 ## Topic posts are guides, not comparisons
 
@@ -263,48 +335,95 @@ are worth writing only when the site has content in their language.
 | NexHealth | `dentalpin-vs-nexhealth` | Patient-experience layer, not a full PMS — say so |
 | Apexo | `dentalpin-vs-apexo` | Open source, offline-first |
 
-### A4 · Blocked on language — do not write these yet
+### A4 · France — French posts rank here
 
-Real vendors, real markets, and a post in Spanish or English reaches
+Unblocked: the site publishes in French since July 2026. **These are
+written in French only** — see *Which languages a post gets written in*.
+
+Every row below was reached at the vendor's own domain on 29 July 2026.
+The claims in the "Why" column are what the vendor says about itself and
+are a reason to write the post, not a fact to reuse: re-source them the
+run you write.
+
+| Target | Slug | Why |
+|---|---|---|
+| Julie (Julie Solutions) | `dentalpin-vs-julie` | The incumbent. `julie.fr`, RCS 838 336 246, trading since 1983, self-describes as "un des leaders sur le marché des logiciels de gestion". **Its own site names no parent group — do not repeat the Henry Schein attribution that circulates in aggregators unless Julie or the parent publishes it.** |
+| LOGOSw | `dentalpin-vs-logosw` | `logosw.net`. Claims "Premier logiciel agréé 100% Santé, EBDi", which is a real French-specific compliance angle we should meet head-on |
+| Veasy (Groupe Visiodent) | `dentalpin-vs-veasy` | `veasy-solution.com` / `visiodent.com`. Cloud-only, sold since 2018, claims "plus de 7 000 utilisateurs"; the group claims 10.000 chirurgiens-dentistes and 500 centres. Acquired by Cegedim in Feb 2024 per Visiodent's own site — the closest French analogue to the cloud-versus-your-server argument |
+| Desmos (Orisha Healthcare) | `dentalpin-vs-desmos` | `healthcare.orisha.com`. Web-only, claims "plus de 8000 utilisateurs au quotidien" and "le logiciel le plus utilisé en centre dentaire". Strong in centres de santé, which is a different buyer from a two-chair cabinet |
+| Doctolib Pro | `dentalpin-vs-doctolib` | Enormous brand recognition with French dentists. **Scope it first: establish from doctolib.fr whether Doctolib Pro is a full practice management system for dentists or booking plus agenda, and say exactly which.** Same treatment as NexHealth in A3 — if it is a layer, not a PMS, that is the post |
+| — | `logiciel-dentaire-gratuit` | Head term. Native post, French vendors, not a translation of the Spanish one |
+| — | `alternative-open-source-a-julie` | Highest-intent French query in the space |
+
+The French e-invoicing reform is the local counterpart to Verifactu and
+belongs in Queue B as its own French post, not as a translation of the
+Verifactu one.
+
+### A5 · Blocked on language — do not write these yet
+
+Real vendors, real markets, and a post in a language we publish reaches
 almost none of the people choosing between them and us. Move a row up
-into A2 or A3 when the site publishes in that language.
+into its own section when the site publishes in that language.
+
+Portugal and Brazil unblock together on Portuguese, but they are **two
+markets and two sets of vendors**, not one. A Brazilian dentist does not
+evaluate NewSoft and a Portuguese one does not evaluate Simples Dental.
+pt-PT and pt-BR also differ enough in product vocabulary that one post
+cannot serve both convincingly — decide which variant the site ships
+before writing either group.
 
 | Target | Market | Blocked on |
 |---|---|---|
 | Simples Dental | Brazil — 60.000+ dentists in BR, 80.000+ across LatAm | Portuguese |
 | Clinicorp | Brazil — claims 100.000+ active users | Portuguese |
 | Dental Office | Brazil — 25 years, ~40.000 dentists | Portuguese |
+| NewSoft DS (Imaginasoft) | Portugal — `imaginasoft.pt`, claims 30 years, "+2000 clínicas", "+6800 licenças" | Portuguese |
+| Doctusware (Imaginasoft) | Portugal — `doctusware.pt`, cloud-only, "desde 1997"; same publisher as NewSoft, so one post has to explain how they differ | Portuguese |
 | Dampsoft (DS-Win / DS4) | Germany — market leader, near a third of practices per KZBV | German |
 | CompuGroup Medical | Germany — around 28% share | German |
 | charly (solutio) | Germany — around 10% share | German |
-| Julie (Henry Schein One) | France | French — the UI is already translated, the site is not |
+
+Checked and **not** added: Globalsoft (Oralcloud, Portugal). Its site
+returned HTTP 403 on 29 July 2026 and could not be verified from a page
+it publishes. It goes in the queue the day it can be.
 
 ## Queue B — topics (Tue, Thu, Fri, then everything)
 
 Ordered by intent. Work down it; the top of this list is where a clinic
 is closest to needing what we sell.
 
-| Topic | Slug (es / en) | Target search |
+**These go out in every language the site publishes**, except where the
+row says otherwise. The problems are the same in Madrid, Lyon and
+Manchester, and there is no competitor claim to re-verify per copy.
+
+The exception is the two rows marked **country-locked**. Compliance is
+national: the Spanish and French rows below are different posts with
+different law, different deadlines and different official sources, not
+translations of each other.
+
+| Topic | Slug (es / en / fr) | Target search |
 |---|---|---|
-| Verifactu para clínicas dentales: qué cambia y cuándo | `verifactu-clinicas-dentales` / `verifactu-dental-clinics-spain` | verifactu clínica dental |
-| RGPD en la clínica dental: qué exige con los datos de pacientes | `rgpd-clinica-dental` / `gdpr-dental-clinic` | rgpd clínica dental |
-| Cómo migrar de software dental sin perder la historia clínica | `migrar-software-dental` / `migrate-dental-software` | migrar software dental |
-| Qué preguntar a tu proveedor antes de firmar | `preguntas-antes-de-firmar-software-dental` / `questions-before-signing-dental-software` | contratar software dental |
-| Cuánto cuesta de verdad un software de clínica dental | `cuanto-cuesta-software-clinica-dental` / `dental-software-cost` | precio software clínica dental |
-| Nube o servidor propio para una clínica dental | `nube-o-servidor-clinica-dental` / `cloud-or-self-hosted-dental` | software dental en la nube |
-| Copias de seguridad en una clínica dental: qué guardar y cada cuánto | `copias-seguridad-clinica-dental` / `dental-clinic-backups` | copia seguridad clínica dental |
-| Cómo reducir las ausencias a citas en la clínica | `reducir-ausencias-citas-dental` / `reduce-dental-no-shows` | ausencias citas dental |
-| Recordatorios de cita por WhatsApp: qué permite la normativa | `recordatorios-cita-whatsapp-dental` / `whatsapp-appointment-reminders-dental` | recordatorios cita whatsapp |
-| Odontograma digital: qué debe registrar y por qué | `odontograma-digital` / `digital-odontogram` | odontograma digital |
-| Presupuestos dentales con firma digital: validez y flujo | `presupuestos-dentales-firma-digital` / `dental-quotes-digital-signature` | presupuesto dental firma |
-| Historia clínica electrónica: qué exige la ley en España | `historia-clinica-electronica-dental` / `electronic-dental-records-spain` | historia clínica electrónica |
-| Abrir una clínica dental: el software que necesitas desde el día uno | `abrir-clinica-dental-software` / `opening-dental-clinic-software` | abrir clínica dental |
-| Cómo dimos a un LLM acceso de escritura a datos clínicos sin que sea una locura | `llm-escritura-datos-clinicos` / `llm-write-access-medical-data` | *(technical, EN-first — HN/Reddit material)* |
-| Autoalojar software sanitario: lo que nadie te cuenta | `autoalojar-software-sanitario` / `self-hosting-healthcare-software` | *(self-hosted / r/selfhosted)* |
+| Verifactu para clínicas dentales: qué cambia y cuándo | `verifactu-clinicas-dentales` / `verifactu-dental-clinics-spain` / — | verifactu clínica dental · **country-locked: ES** |
+| Facturation électronique 2026 : ce que le cabinet dentaire doit préparer | — / — / `facturation-electronique-cabinet-dentaire` | facturation électronique dentiste · **country-locked: FR**, the local counterpart to the Verifactu row. Source the PDP obligations and dates from the official French sources, never from the Spanish post |
+| RGPD en la clínica dental: qué exige con los datos de pacientes | `rgpd-clinica-dental` / `gdpr-dental-clinic` / `rgpd-cabinet-dentaire` | rgpd clínica dental |
+| Cómo migrar de software dental sin perder la historia clínica | `migrar-software-dental` / `migrate-dental-software` / `migrer-logiciel-dentaire` | migrar software dental |
+| Qué preguntar a tu proveedor antes de firmar | `preguntas-antes-de-firmar-software-dental` / `questions-before-signing-dental-software` / `questions-avant-de-signer-logiciel-dentaire` | contratar software dental |
+| Cuánto cuesta de verdad un software de clínica dental | `cuanto-cuesta-software-clinica-dental` / `dental-software-cost` / `prix-logiciel-dentaire` | precio software clínica dental |
+| Nube o servidor propio para una clínica dental | `nube-o-servidor-clinica-dental` / `cloud-or-self-hosted-dental` / `cloud-ou-serveur-cabinet-dentaire` | software dental en la nube |
+| Copias de seguridad en una clínica dental: qué guardar y cada cuánto | `copias-seguridad-clinica-dental` / `dental-clinic-backups` / `sauvegardes-cabinet-dentaire` | copia seguridad clínica dental |
+| Cómo reducir las ausencias a citas en la clínica | `reducir-ausencias-citas-dental` / `reduce-dental-no-shows` / `reduire-rendez-vous-non-honores` | ausencias citas dental |
+| Recordatorios de cita por WhatsApp: qué permite la normativa | `recordatorios-cita-whatsapp-dental` / `whatsapp-appointment-reminders-dental` / `rappels-rendez-vous-whatsapp-dentaire` | recordatorios cita whatsapp |
+| Odontograma digital: qué debe registrar y por qué | `odontograma-digital` / `digital-odontogram` / `odontogramme-numerique` | odontograma digital |
+| Presupuestos dentales con firma digital: validez y flujo | `presupuestos-dentales-firma-digital` / `dental-quotes-digital-signature` / `devis-dentaire-signature-electronique` | presupuesto dental firma |
+| Historia clínica electrónica: qué exige la ley en España | `historia-clinica-electronica-dental` / `electronic-dental-records-spain` / — | historia clínica electrónica · **country-locked: ES** |
+| Abrir una clínica dental: el software que necesitas desde el día uno | `abrir-clinica-dental-software` / `opening-dental-clinic-software` / `ouvrir-cabinet-dentaire-logiciel` | abrir clínica dental |
+| Cómo dimos a un LLM acceso de escritura a datos clínicos sin que sea una locura | `llm-escritura-datos-clinicos` / `llm-write-access-medical-data` / `llm-acces-ecriture-donnees-cliniques` | *(technical, EN-first — HN/Reddit material)* |
+| Autoalojar software sanitario: lo que nadie te cuenta | `autoalojar-software-sanitario` / `self-hosting-healthcare-software` / `auto-heberger-logiciel-sante` | *(self-hosted / r/selfhosted)* |
 
 When this queue empties too, add new targets the same way: real searches
-a Spanish dental clinic makes, verified to have intent behind them this
-run, not invented from memory.
+a dental clinic makes, verified to have intent behind them this run, not
+invented from memory. A target that only makes sense in one country goes
+in country-locked, with the country named.
 
 ## Where the routine must stop and ask
 
