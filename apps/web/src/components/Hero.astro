@@ -133,7 +133,7 @@ const manifestoPath = pagePath(locale, 'manifesto');
         <div class="relative min-h-0 flex-1">
           <img
             src="/screenshots/home.png"
-            alt={locale === 'es' ? 'Panel principal de Dentalpin' : 'Dentalpin dashboard'}
+            alt={{ es: 'Panel principal de Dentalpin', en: 'Dentalpin dashboard', fr: 'Tableau de bord de Dentalpin' }[locale]}
             loading="eager"
             fetchpriority="high"
             decoding="async"
@@ -149,7 +149,7 @@ const manifestoPath = pagePath(locale, 'manifesto');
       >
         <img
           src="/screenshots/dental-chart.png"
-          alt={locale === 'es' ? 'Odontograma en tablet' : 'Odontogram on tablet'}
+          alt={{ es: 'Odontograma en tablet', en: 'Odontogram on tablet', fr: 'Odontogramme sur tablette' }[locale]}
           loading="lazy"
           decoding="async"
           class="block h-full w-full object-cover"
@@ -164,7 +164,7 @@ const manifestoPath = pagePath(locale, 'manifesto');
       >
         <img
           src="/screenshots/schedule-day.png"
-          alt={locale === 'es' ? 'Agenda en móvil' : 'Calendar on mobile'}
+          alt={{ es: 'Agenda en móvil', en: 'Calendar on mobile', fr: 'Agenda sur mobile' }[locale]}
           loading="lazy"
           decoding="async"
           class="block h-full w-full object-cover object-top"

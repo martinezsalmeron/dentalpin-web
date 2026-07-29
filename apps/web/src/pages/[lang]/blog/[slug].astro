@@ -1,6 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
-import { isLocale, useTranslations, pagePath, type Locale } from '~/i18n';
+import { DATE_LOCALE, HTML_LANG, isLocale, useTranslations, pagePath, type Locale } from '~/i18n';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Section from '@dentalpin/ui/Section.astro';
 import Button from '@dentalpin/ui/Button.astro';
@@ -28,7 +28,7 @@ const { Content, headings } = await render(post);
 const toc = headings.filter((h) => h.depth === 2);
 const minutes = readingMinutes(post.body ?? '');
 
-const dateFmt = new Intl.DateTimeFormat(locale === 'es' ? 'es-ES' : 'en-GB', {
+const dateFmt = new Intl.DateTimeFormat(DATE_LOCALE[locale], {
   day: 'numeric',
   month: 'long',
   year: 'numeric',
@@ -42,7 +42,7 @@ const articleLd = {
   description: post.data.description,
   datePublished: post.data.pubDate.toISOString(),
   dateModified: (post.data.updatedDate ?? post.data.pubDate).toISOString(),
-  inLanguage: locale === 'es' ? 'es-ES' : 'en-US',
+  inLanguage: HTML_LANG[locale],
   mainEntityOfPage: `${site}/${locale}/blog/${Astro.params.slug}/`,
   author: { '@type': 'Organization', name: 'Dentalpin', url: site },
   publisher: { '@type': 'Organization', name: 'Dentalpin', url: site },

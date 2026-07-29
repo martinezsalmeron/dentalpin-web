@@ -1,0 +1,27 @@
+---
+import { isLocale, pagePath, type Locale } from '~/i18n';
+import FeatureDetailBody from '~/components/pages/FeatureDetailBody.astro';
+import VerifactuFeatureBody from '~/components/pages/VerifactuFeatureBody.astro';
+import WhatsappFeatureBody from '~/components/pages/WhatsappFeatureBody.astro';
+import { MODULES, moduleBySlug } from '~/data/modules';
+
+export function getStaticPaths() {
+  return MODULES.map((m) => ({
+    params: { lang: 'fr', slug: m.slugFr ?? m.slug },
+  }));
+}
+
+const { lang, slug } = Astro.params;
+if (!isLocale(lang)) return Astro.redirect('/es/', 308);
+const locale = lang as Locale;
+const mod = moduleBySlug(slug!);
+if (!mod) return Astro.redirect(pagePath(locale, 'features'), 308);
+---
+
+{mod.slug === 'verifactu' ? (
+  <VerifactuFeatureBody locale={locale} />
+) : mod.slug === 'whatsapp' ? (
+  <WhatsappFeatureBody locale={locale} />
+) : (
+  <FeatureDetailBody locale={locale} mod={mod} />
+)}

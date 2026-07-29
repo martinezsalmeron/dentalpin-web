@@ -1,13 +1,24 @@
 import es from './es.json';
 import en from './en.json';
+import fr from './fr.json';
+import { MODULES, moduleSlug } from '~/data/modules';
 
-export const LOCALES = ['es', 'en'] as const;
+export const LOCALES = ['es', 'en', 'fr'] as const;
 export type Locale = (typeof LOCALES)[number];
 export const DEFAULT_LOCALE: Locale = 'es';
 
 type Dict = typeof es;
 
-const DICTS: Record<Locale, Dict> = { es, en: en as unknown as Dict };
+const DICTS: Record<Locale, Dict> = {
+  es,
+  en: en as unknown as Dict,
+  fr: fr as unknown as Dict,
+};
+
+/** BCP-47 tags: `<html lang>`, og:locale and Intl date formatting. */
+export const HTML_LANG: Record<Locale, string> = { es: 'es-ES', en: 'en-US', fr: 'fr-FR' };
+export const OG_LOCALE: Record<Locale, string> = { es: 'es_ES', en: 'en_US', fr: 'fr_FR' };
+export const DATE_LOCALE: Record<Locale, string> = { es: 'es-ES', en: 'en-GB', fr: 'fr-FR' };
 
 export function isLocale(value: string | undefined): value is Locale {
   return value !== undefined && (LOCALES as readonly string[]).includes(value);
@@ -33,8 +44,8 @@ export function useTranslations(locale: Locale) {
   };
 }
 
-export function altLocale(locale: Locale): Locale {
-  return locale === 'es' ? 'en' : 'es';
+export function otherLocales(locale: Locale): Locale[] {
+  return LOCALES.filter((l) => l !== locale);
 }
 
 export function localisedPath(locale: Locale, path: string = ''): string {
@@ -43,15 +54,15 @@ export function localisedPath(locale: Locale, path: string = ''): string {
 }
 
 export const LOCALE_PATHS = {
-  manifesto: { es: 'manifiesto', en: 'manifesto' },
-  features: { es: 'funcionalidades', en: 'features' },
-  technology: { es: 'tecnologia', en: 'technology' },
-  pricing: { es: 'precios', en: 'pricing' },
-  contact: { es: 'contacto', en: 'contact' },
-  blog: { es: 'blog', en: 'blog' },
-  legalPrivacy: { es: 'legal/privacidad', en: 'legal/privacy' },
-  legalTerms: { es: 'legal/terminos', en: 'legal/terms' },
-  legalCookies: { es: 'legal/cookies', en: 'legal/cookies' },
+  manifesto: { es: 'manifiesto', en: 'manifesto', fr: 'manifeste' },
+  features: { es: 'funcionalidades', en: 'features', fr: 'fonctionnalites' },
+  technology: { es: 'tecnologia', en: 'technology', fr: 'technologie' },
+  pricing: { es: 'precios', en: 'pricing', fr: 'tarifs' },
+  contact: { es: 'contacto', en: 'contact', fr: 'contact' },
+  blog: { es: 'blog', en: 'blog', fr: 'blog' },
+  legalPrivacy: { es: 'legal/privacidad', en: 'legal/privacy', fr: 'legal/confidentialite' },
+  legalTerms: { es: 'legal/terminos', en: 'legal/terms', fr: 'legal/conditions' },
+  legalCookies: { es: 'legal/cookies', en: 'legal/cookies', fr: 'legal/cookies' },
 } as const;
 
 export type PagePathKey = keyof typeof LOCALE_PATHS;
@@ -62,6 +73,40 @@ export function pagePath(locale: Locale, key: PagePathKey, extra?: string): stri
   return `/${locale}/${slug}${tail}/`;
 }
 
-export function moduleTitle(locale: Locale, title: { es: string; en: string }): string {
+const LOCALE_PREFIX = new RegExp(`^/(${LOCALES.join('|')})(?=/|$)`);
+// Longest first so `legal/privacidad` wins over a shorter slug that shares its head.
+const PATH_KEYS = (Object.keys(LOCALE_PATHS) as PagePathKey[]).sort(
+  (a, b) => LOCALE_PATHS[b].es.length - LOCALE_PATHS[a].es.length
+);
+
+/**
+ * Rewrite a URL into another locale, translating the localised slugs on the way:
+ * `/es/funcionalidades/odontograma/` → `/fr/fonctionnalites/odontogramme/`.
+ * A blog post has no counterpart under another slug, so it falls back to that
+ * locale's blog index rather than pointing at a page that does not exist.
+ */
+export function translatePath(pathname: string, target: Locale): string {
+  const rest = pathname.replace(LOCALE_PREFIX, '').replace(/^\/+|\/+$/g, '');
+  if (!rest) return `/${target}/`;
+
+  const key = PATH_KEYS.find((k) =>
+    LOCALES.some((l) => rest === LOCALE_PATHS[k][l] || rest.startsWith(`${LOCALE_PATHS[k][l]}/`))
+  );
+  if (!key) return `/${target}/${rest}/`;
+
+  const matched = LOCALES.map((l) => LOCALE_PATHS[key][l]).find(
+    (slug) => rest === slug || rest.startsWith(`${slug}/`)
+  )!;
+  const tail = rest.slice(matched.length).replace(/^\/+/, '');
+  if (!tail || key === 'blog') return pagePath(target, key);
+
+  if (key === 'features') {
+    const mod = MODULES.find((m) => [m.slug, m.slugEn, m.slugFr].includes(tail));
+    if (mod) return pagePath(target, key, moduleSlug(mod, target));
+  }
+  return pagePath(target, key, tail);
+}
+
+export function moduleTitle(locale: Locale, title: Record<Locale, string>): string {
   return title[locale];
 }

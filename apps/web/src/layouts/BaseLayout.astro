@@ -1,6 +1,15 @@
 ---
 import '~/styles/global.css';
-import { DEFAULT_LOCALE, altLocale, isLocale, localisedPath, useTranslations } from '~/i18n';
+import {
+  DEFAULT_LOCALE,
+  HTML_LANG,
+  OG_LOCALE,
+  isLocale,
+  localisedPath,
+  otherLocales,
+  translatePath,
+  useTranslations,
+} from '~/i18n';
 import type { Locale } from '~/i18n';
 import Nav from '~/components/Nav.astro';
 import Footer from '~/components/Footer.astro';
@@ -29,7 +38,10 @@ const {
 const site = Astro.site?.toString().replace(/\/$/, '') ?? 'https://www.dentalpin.com';
 const pathname = canonicalPath ?? new URL(Astro.request.url).pathname;
 const canonical = `${site}${pathname}`;
-const alternate = `${site}${pathname.replace(/^\/(es|en)/, `/${altLocale(locale)}`)}`;
+const alternates = otherLocales(locale).map((l) => ({
+  hreflang: l,
+  href: `${site}${translatePath(pathname, l)}`,
+}));
 const ogFull = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
 
 const jsonLd = {
@@ -50,7 +62,7 @@ const jsonLd = {
 ---
 
 <!doctype html>
-<html lang={locale === 'es' ? 'es-ES' : 'en-US'}>
+<html lang={HTML_LANG[locale]}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -62,7 +74,7 @@ const jsonLd = {
     {noindex && <meta name="robots" content="noindex,nofollow" />}
     <link rel="canonical" href={canonical} />
     <link rel="alternate" hreflang={locale} href={canonical} />
-    <link rel="alternate" hreflang={altLocale(locale)} href={alternate} />
+    {alternates.map((a) => <link rel="alternate" hreflang={a.hreflang} href={a.href} />)}
     <link rel="alternate" hreflang="x-default" href={`${site}${localisedPath(DEFAULT_LOCALE)}`} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="sitemap" href="/sitemap-index.xml" />
@@ -73,7 +85,7 @@ const jsonLd = {
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogFull} />
     <meta property="og:site_name" content="Dentalpin" />
-    <meta property="og:locale" content={locale === 'es' ? 'es_ES' : 'en_US'} />
+    <meta property="og:locale" content={OG_LOCALE[locale]} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
