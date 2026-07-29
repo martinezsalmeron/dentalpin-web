@@ -295,11 +295,15 @@ Every vendor here was verified to exist and to be trading when it was
 added — name, site and market evidence. Research each again before
 writing: this list is a queue, not a source of facts.
 
-**Ordered by whether a post in Spanish or English can actually rank in
-that vendor's market.** A Brazilian dentist searches in Portuguese and a
-German one in German, so a Spanish post about Dampsoft reaches nobody who
-is choosing between Dampsoft and us. Those groups sit at the bottom and
-are worth writing only when the site has content in their language.
+**Ordered by whether a post in a language we publish can actually rank in
+that vendor's market.** A German dentist searches in German, so a Spanish
+post about Dampsoft reaches nobody who is choosing between Dampsoft and
+us. Those groups sit at the bottom and are worth writing only once the
+site has content in their language.
+
+Within a section, order by opportunity: the biggest audience first. The
+sections are per language, not per country, so Spain and Latin America
+share A2 and Portugal and Brazil share A5.
 
 ### A1 · Spain — the home market
 
@@ -358,7 +362,7 @@ The French e-invoicing reform is the local counterpart to Verifactu and
 belongs in Queue B as its own French post, not as a translation of the
 Verifactu one.
 
-### A5 · Portuguese — Portugal and Brazil
+### A5 · Portuguese — Portuguese posts rank here
 
 Unblocked: the site publishes in Portuguese since July 2026. **These are
 written in Portuguese only.**
@@ -372,23 +376,30 @@ posts to that same register — a post that drifts into one variant makes
 the whole site read as translated-for-someone-else to the other half of
 the audience.
 
-That is a decision about *language*, not about *market*. Portugal and
-Brazil are still **two markets with two sets of vendors**: a Brazilian
-dentist does not evaluate NewSoft and a Portuguese one does not evaluate
-Simples Dental. Each post targets its own market's vendor and uses that
-market's search vocabulary in the title and description ("software de
-gestão para clínicas dentárias" reads Portuguese, "software
-odontológico" reads Brazilian). One language, two audiences, one post
-each.
+**One queue, ordered by opportunity, and that puts Brazil first.** There
+is no separate Portuguese and Brazilian section, the same way A2 does not
+split Spain from Latin America. Brazil is the larger dental market by a
+wide margin and the vendors' own numbers say so: Clinicorp claims
+100.000+ active users where NewSoft claims 2.000 clinics. Working down
+this list in order means the biggest audience gets served first, which
+was not true while Portugal sat at the top for no reason other than
+having been added second.
 
-| Target | Market | Why |
-|---|---|---|
-| NewSoft DS (Imaginasoft) | Portugal | `imaginasoft.pt`, claims 30 years, "+2000 clínicas", "+6800 licenças" |
-| Doctusware (Imaginasoft) | Portugal | `doctusware.pt`, cloud-only, "desde 1997". Same publisher as NewSoft, so the post has to explain how the two differ |
-| Simples Dental | Brazil | 60.000+ dentists in BR, 80.000+ across LatAm |
-| Clinicorp | Brazil | Claims 100.000+ active users |
-| Dental Office | Brazil | 25 years, ~40.000 dentists |
-| — | `software-gestao-clinica-dentaria-gratis` | Head term. Native post, not a translation of the Spanish or French one |
+What the country still decides is one line per post: the **search
+vocabulary in the title and description**. "Software de gestão para
+clínicas dentárias" reads Portuguese, "software odontológico" reads
+Brazilian, and each post should use whichever its vendor's customers
+type. That is a per-post choice, not a reason to split the queue.
+
+| Target | Why |
+|---|---|
+| Simples Dental | Brazil. 60.000+ dentists in BR, 80.000+ across LatAm |
+| Clinicorp | Brazil. Claims 100.000+ active users |
+| Dental Office | Brazil. 25 years, ~40.000 dentists |
+| NewSoft DS (Imaginasoft) | Portugal. `imaginasoft.pt`, claims 30 years, "+2000 clínicas", "+6800 licenças" |
+| Doctusware (Imaginasoft) | Portugal. `doctusware.pt`, cloud-only, "desde 1997". Same publisher as NewSoft, so the post has to explain how the two differ |
+| `software-odontologico-gratis` | Head term, Brazilian phrasing. Native post, not a translation |
+| `software-gestao-clinica-dentaria-gratis` | Head term, Portuguese phrasing. A different query in the same language, not a variant of the row above |
 
 Checked and **not** added: Globalsoft (Oralcloud, Portugal). Its site
 returned HTTP 403 on 29 July 2026 and could not be verified from a page
