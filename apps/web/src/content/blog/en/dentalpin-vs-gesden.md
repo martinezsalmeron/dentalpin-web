@@ -15,7 +15,7 @@ We make Dentalpin, so we are not neutral. What we can be is accurate.
 
 **Gesden** is the mature product: thirty years, 14,000 clinics, more than 50 support technicians and 400 migrations a year. If what you need is a phone number to call when the software stops on a Tuesday morning, they have that infrastructure and we do not.
 
-**Dentalpin** is open source and free: no licence per chair, per dentist or per patient, with the code published and the data wherever you decide. In exchange, it is from 2026 and it is self-hosted — someone has to own the server.
+**Dentalpin** is open source and free: no licence per chair, per dentist or per patient, with the code published and the data wherever you decide. In exchange, it is from 2026 and it is self-hosted: someone has to own the server.
 
 The question is not which is better. It is whether your clinic has technical people or not.
 
@@ -23,8 +23,8 @@ The question is not which is better. It is whether your clinic has technical peo
 
 Dental practice management software from Infomed, in two product lines:
 
-- **Gesden G5** — a desktop application, requires Windows 10 or later.
-- **Gesden ONE** — a cloud version, reached through a browser.
+- **Gesden G5**: a desktop application, requires Windows 10 or later.
+- **Gesden ONE**: a cloud version, reached through a browser.
 
 G5 comes in three editions by licence count: *Easy* (up to 3), *Profesional* (up to 6) and *Grandes Clínicas/Multicentro* (unlimited).
 
@@ -34,7 +34,7 @@ Around that core sit **optional modules** contracted separately: `dentIA` (AI ra
 
 ## What Dentalpin is
 
-Open source dental practice management software. You download the code, install it wherever you want — your server, whichever cloud you pick — and pay no licence per chair, per dentist or per patient.
+Open source dental practice management software. You download the code, install it wherever you want (your server, whichever cloud you pick) and pay no licence per chair, per dentist or per patient.
 
 Odontogram, SEPA periodontogram, scheduling, clinical records, treatment plans, budgets with signature capture, invoicing, payments, recalls and reports. Verifactu included as a module rather than a separate product. Plus an AI assistant that carries out tasks against your real data, bounded by each user's permissions.
 
@@ -60,7 +60,7 @@ Verifiable rows only. Where there is no public figure, we say so.
 
 On price it is worth being precise, because a lot of noise circulates.
 
-> **Infomed does not publish rates on its site** — it directs you to your area coordinator. Blogs quote wildly different figures, from €99/month to perpetual licences of €2,000–3,000, and **none of them is Infomed**. If the number matters to you, ask them.
+> **Infomed does not publish rates on its site.** It directs you to your area coordinator. Blogs quote wildly different figures, from €99/month to perpetual licences of €2,000–3,000, and **none of them is Infomed**. If the number matters to you, ask them.
 
 ## Choose Gesden if
 
@@ -89,7 +89,7 @@ The `migration_import` module imports through [dental-bridge](https://github.com
 
 1. **Upload the file** and the system validates it before touching anything.
 2. **See a preview** with entity counts and sample rows. Nothing has been written yet.
-3. **Review the proposals**: the system maps the source treatment catalogue onto yours and you decide row by row — accept, relink, create new, or ignore. Anything scoring above 0.9 can be accepted in bulk.
+3. **Review the proposals**: the system maps the source treatment catalogue onto yours and you decide row by row (accept, relink, create new, or ignore). Anything scoring above 0.9 can be accepted in bulk.
 4. **Execute**, and the import runs honouring your decisions.
 
 > Step 3 is where most migrations go wrong. Two clinics never code treatments the same way, and **a silently guessed equivalence produces invoices that are wrong in ways nobody notices for months**.
@@ -104,7 +104,7 @@ Dentalpin is the opposite bet: that your clinic's software should not be a rente
 
 All consulted on 28 July 2026:
 
-- [Gesden G5 — Infomed](https://www.infomedsoftware.com/software/gesden/gesden-g5/): editions, features, optional modules, Windows requirement, clinic counts, support and migration figures.
+- [Gesden G5 · Infomed](https://www.infomedsoftware.com/software/gesden/gesden-g5/): editions, features, optional modules, Windows requirement, clinic counts, support and migration figures.
 - [Gesden ONE](https://www.gesdenone.com/): the cloud product.
 - [Dentalpin's licence](https://github.com/martinezsalmeron/dentalpin/blob/main/LICENSE) and [source](https://github.com/martinezsalmeron/dentalpin).
 

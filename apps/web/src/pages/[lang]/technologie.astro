@@ -1,0 +1,14 @@
+---
+import { isLocale, type Locale } from '~/i18n';
+import TechnologyBody from '~/components/pages/TechnologyBody.astro';
+
+export function getStaticPaths() {
+  return [{ params: { lang: 'fr' } }];
+}
+
+const { lang } = Astro.params;
+if (!isLocale(lang)) return Astro.redirect('/es/', 308);
+const locale = lang as Locale;
+---
+
+<TechnologyBody locale={locale} />

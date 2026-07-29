@@ -259,7 +259,7 @@ function badgeClass(label: string) {
           <Icon name="card" size={22} />
         </span>
         <p class="text-[13px] font-semibold tracking-tight text-[var(--color-text)]">Dentalpin</p>
-        <p class="font-mono text-[11px] uppercase tracking-wider text-[var(--color-text-muted)]">{locale === 'es' ? 'Emisión + huella' : 'Issue + hash'}</p>
+        <p class="font-mono text-[11px] uppercase tracking-wider text-[var(--color-text-muted)]">{{ es: 'Emisión + huella', en: 'Issue + hash', fr: 'Émission + empreinte' }[locale]}</p>
       </div>
       <span aria-hidden="true" class="hidden md:flex justify-center text-[var(--color-text-subtle)]">
         <Icon name="arrow-right" size={18} />
@@ -268,7 +268,7 @@ function badgeClass(label: string) {
         <span class="inline-flex h-12 w-12 items-center justify-center rounded-[var(--radius-md)] bg-[var(--color-surface-muted)] text-[var(--color-text)]">
           <Icon name="plug" size={22} />
         </span>
-        <p class="text-[13px] font-semibold tracking-tight text-[var(--color-text)]">{locale === 'es' ? 'Worker · 60 s · mTLS' : 'Worker · 60 s · mTLS'}</p>
+        <p class="text-[13px] font-semibold tracking-tight text-[var(--color-text)]">Worker · 60 s · mTLS</p>
         <p class="font-mono text-[11px] uppercase tracking-wider text-[var(--color-text-muted)]">SOAP · FNMT</p>
       </div>
       <span aria-hidden="true" class="hidden md:flex justify-center text-[var(--color-text-subtle)]">
@@ -279,7 +279,7 @@ function badgeClass(label: string) {
           <Icon name="check" size={22} />
         </span>
         <p class="text-[13px] font-semibold tracking-tight text-[var(--color-text)]">AEAT</p>
-        <p class="font-mono text-[11px] uppercase tracking-wider text-[var(--color-text-muted)]">{locale === 'es' ? 'CSV + estado' : 'CSV + state'}</p>
+        <p class="font-mono text-[11px] uppercase tracking-wider text-[var(--color-text-muted)]">{{ es: 'CSV + estado', en: 'CSV + state', fr: 'Code AEAT + état' }[locale]}</p>
       </div>
     </div>
   </Section>
@@ -375,8 +375,8 @@ function badgeClass(label: string) {
         <thead>
           <tr class="border-b border-[var(--color-border-subtle)] bg-[var(--color-surface-muted)] text-left">
             <th class="px-5 py-3 text-[12px] font-semibold uppercase tracking-wider text-[var(--color-text-muted)]"></th>
-            <th class="px-5 py-3 text-[12px] font-semibold uppercase tracking-wider text-[var(--color-text-muted)]">{locale === 'es' ? 'Pruebas' : 'Test'}</th>
-            <th class="px-5 py-3 text-[12px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">{locale === 'es' ? 'Producción' : 'Production'}</th>
+            <th class="px-5 py-3 text-[12px] font-semibold uppercase tracking-wider text-[var(--color-text-muted)]">{{ es: 'Pruebas', en: 'Test', fr: 'Test' }[locale]}</th>
+            <th class="px-5 py-3 text-[12px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">{{ es: 'Producción', en: 'Production', fr: 'Production' }[locale]}</th>
           </tr>
         </thead>
         <tbody>

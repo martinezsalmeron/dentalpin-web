@@ -23,8 +23,8 @@ La pregunta no es cuál es mejor. Es si tu clínica tiene perfil técnico o no.
 
 Software de gestión para clínica dental de Infomed, en dos líneas de producto:
 
-- **Gesden G5** — aplicación de escritorio, requiere Windows 10 o superior.
-- **Gesden ONE** — versión en la nube, accesible desde navegador.
+- **Gesden G5**: aplicación de escritorio, requiere Windows 10 o superior.
+- **Gesden ONE**: versión en la nube, accesible desde navegador.
 
 G5 se ofrece en tres versiones según número de licencias: *Easy* (hasta 3), *Profesional* (hasta 6) y *Grandes Clínicas/Multicentro* (ilimitadas).
 
@@ -34,7 +34,7 @@ Alrededor del núcleo hay **módulos opcionales** que se contratan aparte: `dent
 
 ## Qué es Dentalpin
 
-Software de gestión dental open source. Te descargas el código, lo instalas donde quieras —tu servidor, el proveedor cloud que elijas— y no pagas licencia por sillón, por dentista ni por paciente.
+Software de gestión dental open source. Te descargas el código, lo instalas donde quieras (tu servidor, el proveedor cloud que elijas) y no pagas licencia por sillón, por dentista ni por paciente.
 
 Odontograma, periodontograma SEPA, agenda, historia clínica, planes de tratamiento, presupuestos con firma, facturación, pagos, recalls e informes. Verifactu incluido como módulo, no como producto aparte. Y un asistente de IA que ejecuta tareas sobre tus datos reales respetando los permisos de cada usuario.
 
@@ -60,7 +60,7 @@ Solo filas verificables. Donde no hay dato público, lo decimos.
 
 Sobre el precio conviene ser preciso, porque circula mucho ruido.
 
-> **Infomed no publica tarifas en su web**: remite a consultar con su coordinador de zona. Hay blogs que citan cifras muy distintas entre sí —desde 99 €/mes hasta licencias perpetuas de 2.000-3.000 €— y **ninguno de ellos es Infomed**. Si te importa el número, pídeselo a ellos.
+> **Infomed no publica tarifas en su web**: remite a consultar con su coordinador de zona. Hay blogs que citan cifras muy distintas entre sí (desde 99 €/mes hasta licencias perpetuas de 2.000-3.000 €) y **ninguno de ellos es Infomed**. Si te importa el número, pídeselo a ellos.
 
 ## Elige Gesden si
 
@@ -89,7 +89,7 @@ El módulo `migration_import` importa a través de [dental-bridge](https://githu
 
 1. **Subes el fichero** y el sistema lo valida antes de tocar nada.
 2. **Ves un preview** con recuentos y filas de muestra. Todavía no se ha escrito nada.
-3. **Revisas las propuestas**: el sistema mapea el catálogo de tratamientos del origen contra el tuyo y tú decides fila a fila — aceptar, revincular, crear nuevo o ignorar. Lo que puntúa por encima de 0,9 se acepta en bloque.
+3. **Revisas las propuestas**: el sistema mapea el catálogo de tratamientos del origen contra el tuyo y tú decides fila a fila (aceptar, revincular, crear nuevo o ignorar). Lo que puntúa por encima de 0,9 se acepta en bloque.
 4. **Ejecutas**, y la importación corre respetando tus decisiones.
 
 > El paso 3 es donde fallan casi todas las migraciones. Dos clínicas nunca codifican los tratamientos igual, y **una equivalencia adivinada en silencio produce facturas mal emitidas que nadie detecta hasta meses después**.
@@ -104,7 +104,7 @@ Dentalpin es la apuesta contraria: que el software de tu clínica no debería se
 
 Todas consultadas el 28 de julio de 2026:
 
-- [Gesden G5 — Infomed](https://www.infomedsoftware.com/software/gesden/gesden-g5/): versiones, funcionalidades, módulos opcionales, requisitos Windows, cifras de clínicas, soporte y migraciones.
+- [Gesden G5 · Infomed](https://www.infomedsoftware.com/software/gesden/gesden-g5/): versiones, funcionalidades, módulos opcionales, requisitos Windows, cifras de clínicas, soporte y migraciones.
 - [Gesden ONE](https://www.gesdenone.com/): producto cloud.
 - [Licencia de Dentalpin](https://github.com/martinezsalmeron/dentalpin/blob/main/LICENSE) y [código fuente](https://github.com/martinezsalmeron/dentalpin).
 

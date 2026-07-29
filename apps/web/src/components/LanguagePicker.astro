@@ -1,5 +1,5 @@
 ---
-import { LOCALES, localisedPath, useTranslations, type Locale } from '~/i18n';
+import { LOCALES, translatePath, useTranslations, type Locale } from '~/i18n';
 import Icon from '@dentalpin/ui/Icon.astro';
 
 interface Props {
@@ -8,9 +8,9 @@ interface Props {
 const { locale } = Astro.props;
 const t = useTranslations(locale);
 
-// Strip current locale prefix, keep rest of the path.
+// Slugs are localised, so switching language rewrites them too:
+// /es/funcionalidades/odontograma/ → /fr/fonctionnalites/odontogramme/.
 const pathname = Astro.url.pathname;
-const stripped = pathname.replace(/^\/(es|en)/, '') || '/';
 ---
 
 <div class="relative">
@@ -30,7 +30,7 @@ const stripped = pathname.replace(/^\/(es|en)/, '') || '/';
         <li role="none">
           <a
             role="menuitem"
-            href={`/${loc}${stripped === '/' ? '/' : stripped}`}
+            href={translatePath(pathname, loc)}
             class:list={[
               'flex items-center justify-between rounded-[var(--radius-sm)] px-2.5 py-1.5 text-[13px]',
               loc === locale

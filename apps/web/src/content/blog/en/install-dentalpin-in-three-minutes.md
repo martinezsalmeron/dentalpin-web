@@ -15,7 +15,7 @@ That is over. Images are published on every release and your server only has to 
 | Time | ~ 30 minutes | ✓ 3 minutes |
 | Memory needed | ✗ 4 GB to build Nuxt | ✓ Whatever running takes |
 | TLS certificate | ✗ You set it up | ✓ Automatic on first boot |
-| CORS | ✗ Configured by hand | ✓ Gone — single origin |
+| CORS | ✗ Configured by hand | ✓ Gone, single origin |
 
 ## The three minutes
 
@@ -42,7 +42,7 @@ Now one Caddy container serves everything from a single origin: `/api/*` goes to
 
 This is the part we are happiest about, because it cost no new code at all.
 
-The frontend image is built with a default API URL. Normally that would mean building one image per deployment — exactly what we were trying to avoid. It does not: Nuxt reads that URL through `runtimeConfig`, so `NUXT_PUBLIC_API_BASE_URL` overrides it when the container starts. What got compiled in is only the fallback.
+The frontend image is built with a default API URL. Normally that would mean building one image per deployment, exactly what we were trying to avoid. It does not: Nuxt reads that URL through `runtimeConfig`, so `NUXT_PUBLIC_API_BASE_URL` overrides it when the container starts. What got compiled in is only the fallback.
 
 One image, any domain. We checked before publishing: the payload the app serves carries your installation's URL, not the one baked in at build time.
 
@@ -58,13 +58,13 @@ docker compose -f docker-compose.prod.yml up -d
 
 Migrations apply themselves before the API accepts traffic.
 
-> **Pin the version rather than leaving `latest`.** That way an upgrade never arrives as a surprise on a day you restart for an unrelated reason. And **take a backup first**: [here is how](https://github.com/martinezsalmeron/dentalpin/discussions/112) — two Docker volumes, one with the database and one with uploaded files. Both, not just the first.
+> **Pin the version rather than leaving `latest`.** That way an upgrade never arrives as a surprise on a day you restart for an unrelated reason. And **take a backup first**: [here is how](https://github.com/martinezsalmeron/dentalpin/discussions/112). Two Docker volumes: one with the database, one with the uploaded files. Both, not just the first.
 
 ## A lesson from the first hour
 
 The first version of these images shipped `amd64` only. The reasoning looked sound: any VPS you can rent today is x86, and building for ARM as well costs CI minutes.
 
-It lasted twenty minutes — the time it took us to follow our own instructions on an Apple Silicon Mac:
+It lasted twenty minutes. That is how long it took us to follow our own instructions on an Apple Silicon Mac:
 
 ```
 no matching manifest for linux/arm64/v8 in the manifest list entries

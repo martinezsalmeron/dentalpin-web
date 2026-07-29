@@ -8,7 +8,8 @@ interface Props {
 }
 
 const { slug, locale } = Astro.props;
-const isEs = locale === 'es';
+const sameApi = { es: 'Misma API que la app web', en: 'Same API the web app uses', fr: 'La même API que l’app web' }[locale];
+const moreEndpoints = { es: '120 endpoints más', en: '120 more endpoints', fr: '120 endpoints de plus' }[locale];
 
 const apiEndpoints = [
   { method: 'GET', path: '/api/v1/patients', tone: 'get' },
@@ -59,8 +60,8 @@ const methodClasses: Record<string, string> = {
     </ul>
 
     <footer class="flex items-center justify-between gap-3 border-t border-[var(--color-border-subtle)] bg-[var(--color-surface-muted)] px-5 py-3 text-[11px] uppercase tracking-[0.16em] text-[var(--color-text-muted)]">
-      <span>JWT · RBAC · {isEs ? 'Misma API que la app web' : 'Same API the web app uses'}</span>
-      <span class="font-mono normal-case tracking-normal text-[var(--color-text-subtle)]">+ {isEs ? '120 endpoints más' : '120 more endpoints'}</span>
+      <span>JWT · RBAC · {sameApi}</span>
+      <span class="font-mono normal-case tracking-normal text-[var(--color-text-subtle)]">+ {moreEndpoints}</span>
     </footer>
   </figure>
 )}

@@ -22,13 +22,13 @@ export default defineConfig({
   // Keeping `locales` here gives us Astro.currentLocale for free.
   i18n: {
     defaultLocale: 'es',
-    locales: ['es', 'en'],
+    locales: ['es', 'en', 'fr'],
   },
   integrations: [
     sitemap({
       i18n: {
         defaultLocale: 'es',
-        locales: { es: 'es-ES', en: 'en-US' },
+        locales: { es: 'es-ES', en: 'en-US', fr: 'fr-FR' },
       },
     }),
   ],

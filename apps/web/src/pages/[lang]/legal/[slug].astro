@@ -3,29 +3,36 @@ import { isLocale, type Locale } from '~/i18n';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Section from '@dentalpin/ui/Section.astro';
 
-export function getStaticPaths() {
-  const SLUGS = {
-    es: { privacy: 'privacidad', terms: 'terminos', cookies: 'cookies' },
-    en: { privacy: 'privacy', terms: 'terms', cookies: 'cookies' },
-  } as const;
-  const out: { params: { lang: 'es' | 'en'; slug: string } }[] = [];
-  (['es', 'en'] as const).forEach((l) => {
-    (['privacy', 'terms', 'cookies'] as const).forEach((k) => {
-      out.push({ params: { lang: l, slug: SLUGS[l][k] } });
-    });
-  });
-  return out;
-}
-
 type Kind = 'privacy' | 'terms' | 'cookies';
 const SLUG_MAP: Record<Locale, Record<Kind, string>> = {
   es: { privacy: 'privacidad', terms: 'terminos', cookies: 'cookies' },
   en: { privacy: 'privacy', terms: 'terms', cookies: 'cookies' },
+  fr: { privacy: 'confidentialite', terms: 'conditions', cookies: 'cookies' },
 };
 const TITLES: Record<Locale, Record<Kind, string>> = {
   es: { privacy: 'Política de privacidad', terms: 'Términos de uso', cookies: 'Política de cookies' },
   en: { privacy: 'Privacy policy', terms: 'Terms of use', cookies: 'Cookie policy' },
+  fr: {
+    privacy: 'Politique de confidentialité',
+    terms: "Conditions d'utilisation",
+    cookies: 'Politique de cookies',
+  },
 };
+
+// Astro hoists getStaticPaths out of the component scope, so the slug table
+// is repeated here rather than read from SLUG_MAP above.
+export function getStaticPaths() {
+  const SLUGS = {
+    es: { privacy: 'privacidad', terms: 'terminos', cookies: 'cookies' },
+    en: { privacy: 'privacy', terms: 'terms', cookies: 'cookies' },
+    fr: { privacy: 'confidentialite', terms: 'conditions', cookies: 'cookies' },
+  } as const;
+  return (['es', 'en', 'fr'] as const).flatMap((l) =>
+    (['privacy', 'terms', 'cookies'] as const).map((k) => ({
+      params: { lang: l, slug: SLUGS[l][k] },
+    }))
+  );
+}
 
 const { lang, slug } = Astro.params;
 if (!isLocale(lang)) return Astro.redirect('/es/', 308);
@@ -137,11 +144,60 @@ const cookiesPath = `/${locale}/legal/${SLUG_MAP[locale].cookies}/`;
         </>
       )}
 
+      {kind === 'privacy' && locale === 'fr' && (
+        <>
+          <p><em>Dernière mise à jour : 23 avril 2026.</em></p>
+
+          <h2>1. Responsable du traitement</h2>
+          <p>
+            Dentared Odontology Services S.L.<br />
+            Numéro fiscal (CIF) : B86142809<br />
+            Calle Torres Quevedo 13, 28108 Alcobendas, Madrid (Espagne)<br />
+            Contact : <a href="mailto:hola@dentalpin.com">hola@dentalpin.com</a>
+          </p>
+
+          <h2>2. Données traitées</h2>
+          <ul>
+            <li>Données d'identification et de contact que vous nous transmettez lorsque vous nous écrivez, rejoignez la liste d'attente du Cloud ou demandez un service (nom, email, nom du cabinet).</li>
+            <li>Données techniques minimales liées à la navigation (adresse IP, type de navigateur, pages vues, dates), collectées sans cookies de suivi tiers.</li>
+            <li>Données de la conversation que nous avons par email ou par tout autre canal que vous ouvrez.</li>
+          </ul>
+
+          <h2>3. Finalités et base légale</h2>
+          <ul>
+            <li>Répondre à vos questions et vous fournir le service demandé. Base légale : exécution d'un contrat ou mesures précontractuelles (art. 6.1.b RGPD).</li>
+            <li>Gérer la liste d'attente du Cloud et vous prévenir à l'ouverture des places. Base légale : votre consentement (art. 6.1.a RGPD).</li>
+            <li>Respecter nos obligations légales, comptables et fiscales. Base légale : respect d'une obligation légale (art. 6.1.c RGPD).</li>
+            <li>Améliorer le site et le produit à partir de mesures agrégées. Base légale : intérêt légitime (art. 6.1.f RGPD).</li>
+          </ul>
+
+          <h2>4. Conservation</h2>
+          <p>Nous conservons vos données le temps nécessaire à la finalité pour laquelle elles ont été collectées puis, ensuite, pendant les délais légaux applicables (typiquement six ans pour les pièces comptables). Si vous retirez votre consentement, nous les supprimons sauf obligation légale de conservation.</p>
+
+          <h2>5. Destinataires</h2>
+          <p>Nous ne cédons pas vos données à des tiers, sauf obligation légale. Nous travaillons avec des sous-traitants qui nous fournissent des services d'hébergement, d'email et de mesure d'audience, tous liés par un contrat de sous-traitance conforme à l'art. 28 RGPD. La liste à jour est disponible sur demande à <a href="mailto:hola@dentalpin.com">hola@dentalpin.com</a>.</p>
+
+          <h2>6. Transferts internationaux</h2>
+          <p>Nous privilégions les prestataires dont l'infrastructure est dans l'Union européenne. Lorsqu'un prestataire opère hors de l'EEE, le transfert est encadré par les Clauses Contractuelles Types approuvées par la Commission européenne ou par un autre mécanisme valable du Chapitre V du RGPD.</p>
+
+          <h2>7. Vos droits</h2>
+          <p>Vous pouvez à tout moment exercer vos droits d'accès, de rectification, d'effacement, d'opposition, de limitation du traitement, de portabilité et de ne pas faire l'objet d'une décision automatisée. Écrivez à <a href="mailto:hola@dentalpin.com">hola@dentalpin.com</a> en précisant le droit que vous souhaitez exercer et en joignant un justificatif d'identité. Si vous estimez que nous n'avons pas traité correctement votre demande, vous pouvez saisir l'autorité de contrôle compétente : l'Agence espagnole de protection des données (<a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>) ou, si vous résidez en France, la CNIL (<a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>).</p>
+
+          <h2>8. Cookies</h2>
+          <p>Ce site n'utilise que des cookies strictement nécessaires à son fonctionnement. Le détail figure dans notre <a href={cookiesPath}>Politique de cookies</a>.</p>
+
+          <h2>9. Modifications de cette politique</h2>
+          <p>Nous pouvons mettre à jour cette politique pour refléter des évolutions légales ou produit. La version en vigueur sera toujours publiée à cette même adresse, avec la date de la dernière révision.</p>
+        </>
+      )}
+
       {kind !== 'privacy' && (
         <p>
           {locale === 'es'
             ? 'Documento pendiente de redacción legal. Actualízalo antes del lanzamiento.'
-            : 'Legal document pending drafting. Update before launch.'}
+            : locale === 'fr'
+              ? 'Document en attente de rédaction juridique. À mettre à jour avant le lancement.'
+              : 'Legal document pending drafting. Update before launch.'}
         </p>
       )}
     </div>

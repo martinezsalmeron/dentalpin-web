@@ -13,7 +13,7 @@ const dict = useDict(locale);
 
 const demoUrl = DEMO_URL;
 const ghUrl = GITHUB_REPO;
-const privacyHref = `/${locale}/legal/${locale === 'es' ? 'privacidad' : 'privacy'}/`;
+const privacyHref = pagePath(locale, 'legalPrivacy');
 ---
 
 <BaseLayout locale={locale} title={`${dict.nav.pricing} · Dentalpin`}>

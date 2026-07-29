@@ -58,7 +58,7 @@ docker compose -f docker-compose.prod.yml up -d
 
 Las migraciones se aplican solas antes de que la API acepte peticiones.
 
-> **Fija la versión en lugar de dejar `latest`.** Así una actualización nunca te llega por sorpresa el día que reinicias por otro motivo. Y **haz copia de seguridad antes**: [aquí explicamos cómo](https://github.com/martinezsalmeron/dentalpin/discussions/112) — son dos volúmenes de Docker, uno con la base de datos y otro con los archivos subidos. Los dos, no solo el primero.
+> **Fija la versión en lugar de dejar `latest`.** Así una actualización nunca te llega por sorpresa el día que reinicias por otro motivo. Y **haz copia de seguridad antes**: [aquí explicamos cómo](https://github.com/martinezsalmeron/dentalpin/discussions/112). Son dos volúmenes de Docker: uno con la base de datos y otro con los archivos subidos. Los dos, no solo el primero.
 
 ## Una lección de la primera hora
 
