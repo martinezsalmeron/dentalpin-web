@@ -20,6 +20,10 @@ Peça ao fornecedor que está a deixar o export completo, não uma seleção do 
 - **Catálogo de tratamentos** tal como está codificado no sistema antigo, não apenas os nomes apresentados no sistema.
 - **Histórico de marcações**, se um dia precisar de justificar presenças ou faltas.
 
+![Atividade de um paciente no Dentalpin: consulta marcada, plano de tratamento criado, consulta concluída e tratamento realizado, cada linha com a sua data](/screenshots/patient-timeline.png)
+
+*É isto que um export tem de conservar: cada registo com a sua data, não só o estado de hoje.*
+
 > **O export é a sua rede de segurança, não uma formalidade de saída.** Peça-o semanas antes de assinar com o novo fornecedor, abra-o e verifique-o você mesmo. Se o fornecedor que está a deixar dificulta um export completo, isso já lhe diz algo sobre como trata os seus dados, e sabe-o antes de sair.
 
 ## O passo onde falham quase todas as migrações
@@ -58,6 +62,10 @@ Confirme também com a sua ordem profissional ou contabilista os prazos de conse
 | Se a correspondência de tratamentos é revista linha a linha ou só em bloco | O bloco é rápido, e é aí que o erro se infiltra |
 | Se as imagens migram junto com a ficha ou à parte | À parte significa que alguém tem de as ligar à mão depois |
 | Se consegue manter o sistema antigo em modo só de leitura | Sem isso, não tem com que comparar se algo falhar mais tarde |
+
+![Lista de faturas com numeração seguida de FAC-2026-0001 a FAC-2026-0008 e o estado de cobrança de cada uma](/screenshots/invoices.png)
+
+*A numeração tem de chegar inteira ao sistema novo. Uma falha na sequência é a primeira coisa que se vê de fora.*
 
 No Dentalpin resolvemos isto com um módulo de importação (`migration_import`) que segue as mesmas quatro fases deste guia: carrega o ficheiro, mostra uma pré-visualização com contagens antes de escrever seja o que for, deixa rever a correspondência de tratamentos linha a linha (o que pontua acima de 0,9 é aceite em bloco, o resto decide você) e só depois executa. O fluxo completo está documentado no [dental-bridge](https://github.com/dentaltix/dental-bridge), e [instalar o Dentalpin no seu próprio servidor](/pt/blog/instalar-dentalpin-em-tres-minutos/) demora três minutos se depois quiser testá-lo com o seu próprio export.
 

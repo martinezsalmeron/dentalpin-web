@@ -212,9 +212,18 @@ A post with no image is not finished. It reads as a wall of text however
 good the prose is, and it is the single most common thing wrong with what
 this loop publishes.
 
-**Three visuals minimum**, spread through the piece and never two in a
-row: one in the first third, one where the post describes what the
-product actually does, one in the second half. Markdown only:
+**A comparison gets three visuals**, spread through the piece and never
+two in a row: one in the first third, one where the post describes what
+the product does, one in the second half.
+
+**A topic post gets two, and they illustrate the reader's problem**, not
+the product. The same screenshot works either way, it is the caption
+that decides: an invoice list under a paragraph about numbering
+continuity is a guide, the same image captioned "our invoicing module"
+is an advert in a post that promised to help. The rule about mentioning
+the product once, at the end, covers images too.
+
+Markdown only:
 
 ```markdown
 ![Alt text saying what is on screen, in the post's language](/screenshots/dental-chart.png)

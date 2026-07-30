@@ -20,6 +20,10 @@ Ask the vendor you're leaving for the full export, not a curated subset of what 
 - **The treatment catalog** exactly as it's coded in the old system, not just the names shown on screen.
 - **Appointment history**, if you'll ever need to justify attendance or no-shows.
 
+![Patient activity feed in Dentalpin: appointment booked, treatment plan created, appointment completed and treatment carried out, each line dated](/screenshots/patient-timeline.png)
+
+*This is what an export has to preserve: every entry with its date, not just today's state.*
+
 > **The export is your safety net, not an exit formality.** Ask for it weeks before signing with the new vendor, open it and check it yourself. If the vendor you're leaving makes it hard to get a full export, that tells you something about how they treat your data, and you learn it before you're gone.
 
 ## The step where most migrations fail
@@ -58,6 +62,10 @@ Also check with your professional board or accountant how long you're required t
 | Whether treatment mapping is reviewed row by row or only in bulk | Bulk is fast, and it's where the error slips in |
 | Whether images migrate with the patient record or separately | Separately means someone has to link them back by hand afterward |
 | Whether you can keep the old system in read-only mode | Without it, you have nothing to compare against if something breaks later |
+
+![Invoice list with consecutive numbering from FAC-2026-0001 to FAC-2026-0008 and each one's payment state](/screenshots/invoices.png)
+
+*The numbering has to arrive intact in the new system. A gap is the first thing anyone from outside spots.*
 
 At Dentalpin we built this as an import module (`migration_import`) that follows the same four phases as this guide: upload the file, show a preview with counts before writing anything, let you review the treatment mapping row by row (anything scoring above 0.9 gets accepted in bulk, the rest is your call) and only then execute. The full flow is documented in [dental-bridge](https://github.com/dentaltix/dental-bridge), and [installing Dentalpin on your own server](/en/blog/install-dentalpin-in-three-minutes/) takes three minutes if you want to try it against your own export afterward.
 

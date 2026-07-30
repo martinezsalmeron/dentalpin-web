@@ -20,6 +20,10 @@ Demandez à l'éditeur que vous quittez l'export complet, pas une sélection de 
 - **Le catalogue d'actes** tel qu'il est codé dans l'ancien système, pas seulement les libellés affichés à l'écran.
 - **L'historique des rendez-vous**, si vous devrez un jour justifier une présence ou une absence.
 
+![Fil d'activité d'un patient dans Dentalpin : rendez-vous programmé, plan de traitement créé, rendez-vous honoré et acte réalisé, chaque ligne datée](/screenshots/patient-timeline.png)
+
+*Voilà ce qu'un export doit conserver : chaque entrée avec sa date, pas seulement l'état du jour.*
+
 > **L'export est votre filet de sécurité, pas une formalité de départ.** Demandez-le des semaines avant de signer avec le nouveau prestataire, ouvrez-le et vérifiez-le vous-même. Si l'éditeur que vous quittez complique l'accès à un export complet, c'est déjà une information sur la façon dont il traite vos données, et vous l'avez avant de partir.
 
 ## L'étape où presque toutes les migrations échouent
@@ -58,6 +62,10 @@ Vérifiez aussi auprès de votre ordre professionnel ou de votre expert-comptabl
 | Si la correspondance des actes est vérifiée ligne par ligne ou seulement en bloc | Le bloc est rapide, et c'est là que l'erreur se glisse |
 | Si les images migrent avec la fiche patient ou à part | À part signifie que quelqu'un doit les relier à la main ensuite |
 | Si vous pouvez garder l'ancien système en lecture seule | Sans ça, vous n'avez rien pour comparer si un problème apparaît plus tard |
+
+![Liste des factures avec une numérotation continue de FAC-2026-0001 à FAC-2026-0008 et l'état de règlement de chacune](/screenshots/invoices.png)
+
+*La numérotation doit arriver entière dans le nouveau système. Un trou, c'est la première chose qui se voit de l'extérieur.*
 
 Chez Dentalpin, nous avons résolu ceci avec un module d'import (`migration_import`) qui suit les quatre mêmes phases que ce guide : déposer le fichier, afficher un aperçu avec des comptages avant d'écrire quoi que ce soit, laisser vérifier la correspondance des actes ligne par ligne (ce qui dépasse un score de 0,9 est accepté en bloc, le reste reste votre décision) et exécuter seulement ensuite. Le flux complet est documenté dans [dental-bridge](https://github.com/dentaltix/dental-bridge), et [installer Dentalpin sur votre propre serveur](/fr/blog/installer-dentalpin-en-trois-minutes/) prend trois minutes si vous voulez ensuite le tester avec votre propre export.
 
