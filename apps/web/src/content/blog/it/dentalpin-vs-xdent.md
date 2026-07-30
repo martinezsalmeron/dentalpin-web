@@ -42,7 +42,7 @@ Dentalpin è un gestionale pubblicato sotto Business Source License 1.1: gratuit
 
 Il nucleo comprende agenda, pazienti, odontogramma, cartella clinica, preventivi e fatturazione. In opzione si aggiungono parodontogramma, report, un agente IA che esegue le stesse operazioni dell'interfaccia e si ferma a chiedere conferma prima di ogni scrittura, e WhatsApp come canale di notifica. Non ci sono canoni per riunito, per odontoiatra o per paziente, e non ci sono piani: i moduli ci sono tutti.
 
-Quello che in Italia oggi **non** c'è: nessuna emissione di fattura elettronica verso lo SDI, nessun invio delle spese al Sistema Tessera Sanitaria, e l'interfaccia dell'applicazione è per ora in spagnolo e inglese. L'italiano è in roadmap, ma oggi non è rilasciato.
+Quello che in Italia oggi **non** c'è: nessuna emissione di fattura elettronica verso lo SDI, nessun invio delle spese al Sistema Tessera Sanitaria, e l'interfaccia dell'applicazione esiste in inglese, spagnolo, francese e portoghese, ma non in italiano. La traduzione è aperta come contributo della community ([issue sul repository](https://github.com/martinezsalmeron/dentalpin/labels/i18n)), ma oggi non è rilasciata.
 
 ## Fianco a fianco
 
@@ -56,7 +56,7 @@ Quello che in Italia oggi **non** c'è: nessuna emissione di fattura elettronica
 | Sistema Tessera Sanitaria | ~ Non citato nelle pagine consultate | ✗ Non presente |
 | Base installata | ✓ "più di 8.000 dentisti" in Italia | ✗ Dal 2026 |
 | Nativo Mac e Windows | ✓ Rivendicato sul loro sito | ~ Applicazione web, va su qualsiasi browser |
-| Interfaccia in italiano | ✓ Sì | ✗ Oggi spagnolo e inglese |
+| Interfaccia in italiano | ✓ Sì | ✗ No, oggi inglese, spagnolo, francese e portoghese |
 | Codice sorgente | ✗ No | ✓ Su GitHub, per intero |
 | API pubblica | ~ Non documentata sulle pagine pubbliche | ✓ REST, documentata con OpenAPI |
 | Dove stanno i dati | ~ Locale o cloud, secondo il loro sito | ✓ Sul tuo server, sempre |

@@ -41,7 +41,7 @@ Dentalpin ist eine Praxisverwaltung, die unter der Business Source License 1.1 v
 
 Der Kern umfasst Terminkalender, Patienten, Zahnschema, Patientenakte, Kostenvoranschläge und Abrechnung. Optional kommen Parodontalstatus, Auswertungen, ein KI-Agent, der dieselben Operationen ausführt wie die Oberfläche und vor jedem Schreibvorgang nachfragt, und WhatsApp als Benachrichtigungskanal dazu. Es gibt keine Gebühr pro Behandlungsstuhl, pro Behandler oder pro Patient.
 
-Was es in Deutschland heute **nicht** gibt: keine KZV-Abrechnung nach BEMA oder GOZ, keine Anbindung an die Telematikinfrastruktur, kein Einlesen der elektronischen Gesundheitskarte, und die Oberfläche der Anwendung liegt bislang auf Spanisch und Englisch vor. Deutsch steht auf der Roadmap, ist aber heute nicht ausgeliefert.
+Was es in Deutschland heute **nicht** gibt: keine KZV-Abrechnung nach BEMA oder GOZ, keine Anbindung an die Telematikinfrastruktur, kein Einlesen der elektronischen Gesundheitskarte, und die Oberfläche der Anwendung gibt es auf Englisch, Spanisch, Französisch und Portugiesisch, aber nicht auf Deutsch. Die Übersetzung ist als Aufgabe für die Community offen ([Issue im Repository](https://github.com/martinezsalmeron/dentalpin/labels/i18n)), ausgeliefert ist sie heute nicht.
 
 ## Nebeneinander
 
@@ -53,7 +53,7 @@ Was es in Deutschland heute **nicht** gibt: keine KZV-Abrechnung nach BEMA oder 
 | Jahre am Markt | ✓ 40. Jubiläum, also seit Mitte der Achtziger | ✗ Seit 2026 |
 | KZV-Abrechnung (BEMA/GOZ) | ✓ Kernfunktion der Praxisverwaltung | ✗ Nicht vorhanden |
 | Telematikinfrastruktur | ✓ Eigenes Produkt, e-connect | ✗ Nicht vorhanden |
-| Oberfläche auf Deutsch | ✓ Ja | ✗ Heute Spanisch und Englisch |
+| Oberfläche auf Deutsch | ✓ Ja | ✗ Nein, heute Englisch, Spanisch, Französisch und Portugiesisch |
 | Deutschsprachiger Support | ✓ Vom Hersteller | ~ Community in GitHub Discussions |
 | Quellcode einsehbar | ✗ Nein | ✓ Vollständig auf GitHub |
 | Öffentliche API | ~ Auf dampsoft.de nicht beschrieben | ✓ REST, mit OpenAPI dokumentiert |
