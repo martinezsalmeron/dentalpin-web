@@ -36,7 +36,7 @@ jobs:
         env:
           PUBLIC_SITE_URL: https://www.dentalpin.com
           RESEND_API_KEY: dummy_for_build
-          CONTACT_TO_EMAIL: ventas@dentalpin.com
+          CONTACT_TO_EMAIL: build@example.com
 
       - name: Build docs
         run: pnpm --filter @dentalpin/docs build
