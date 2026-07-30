@@ -15,7 +15,8 @@
     "skip": "Aller au contenu",
     "openMenu": "Ouvrir le menu",
     "closeMenu": "Fermer le menu",
-    "blog": "Blog"
+    "blog": "Blog",
+    "contact": "Contact"
   },
   "megamenu": {
     "trigger": "Fonctionnalités",
@@ -42,7 +43,7 @@
     ],
     "subPill": "Open source · Gratuit pour toujours · Auto-hébergé sur votre serveur",
     "ctaPrimary": "Essayer la démo",
-    "ctaSecondary": "Télécharger et installer",
+    "ctaSecondary": "Nous contacter",
     "ghPill": "Voir le code sur GitHub",
     "trust": "Soutenu par Dentaltix",
     "trustPre": "Soutenu par ",
@@ -274,11 +275,15 @@
       "title": "Téléchargez-le et installez-le gratuitement.",
       "body": "Un docker compose et c'est fait. En place en moins d'une demi-heure sur un VPS correct. Tutoriels pas à pas pour votre informaticien.",
       "code": "docker compose up",
-      "cta": "Voir les instructions",
-      "ctaSecondary": "Voir le code"
+      "cta": "Voir les instructions"
     },
     "help": "Besoin d'un coup de main pour l'installation ? On est là.",
-    "helpCta": "Nous écrire"
+    "helpCta": "Nous écrire",
+    "tray": {
+      "lead": "Vous préférez regarder d'abord ?",
+      "repo": "Voir le code sur GitHub",
+      "telegram": "Rejoindre le Telegram"
+    }
   },
   "manifesto": {
     "eyebrow": "MANIFESTE",
@@ -693,7 +698,7 @@
     "title": "Prêt en quelques minutes. À vous pour toujours.",
     "subtitle": "Un docker compose up et vous êtes dedans.",
     "ctaPrimary": "Essayer la démo",
-    "ctaSecondary": "Cloner le dépôt"
+    "ctaSecondary": "Nous contacter"
   },
   "footer": {
     "product": "Produit",
@@ -1469,20 +1474,45 @@
     "ctaGithub": "Voir le code"
   },
   "contact": {
-    "title": "Parlez-nous de votre situation.",
-    "subtitle": "Un cabinet qui pense à migrer ? Un développeur qui construit un module ? Un intégrateur ? Écrivez sans filtre : nous lisons tous les messages.",
+    "title": "Parlons de votre cabinet.",
+    "subtitle": "Dites-nous où vous en êtes et nous vous dirons si Dentalpin vous convient. Une vraie personne vous lit, pas un formulaire.",
     "fields": {
       "name": "Nom",
       "email": "Email",
-      "clinic": "Organisation",
-      "message": "Comment pouvons-nous vous aider ?",
+      "clinic": "Cabinet ou organisation",
+      "reason": "De quoi avez-vous besoin ?",
+      "message": "Racontez-nous un peu plus",
+      "subscribe": "Je veux recevoir les nouveautés produit par email. Rien d’autre.",
       "submit": "Envoyer"
     },
+    "reasons": {
+      "demo": "Une démo avec mes données",
+      "migration": "Migrer depuis un autre logiciel",
+      "install": "De l'aide pour l'installation",
+      "dev": "Intégrations ou développement",
+      "other": "Autre chose"
+    },
+    "reply": "Réponse en moins d'un jour ouvré. Sans appel à froid ni séquence automatique.",
     "success": "Bien reçu. Nous répondons en moins d'un jour ouvré.",
     "error": "Nous n'avons pas pu envoyer votre message. Écrivez-nous directement à hola@dentalpin.com.",
-    "telegramPre": "Vous préférez plus direct ? Rejoignez notre ",
-    "telegramLink": "canal Telegram",
-    "telegramPost": " pour le support et les nouveautés."
+    "rail": {
+      "title": "En attendant",
+      "demo": {
+        "title": "Essayez la démo tout de suite",
+        "body": "Un cabinet d'exemple avec patients et rendez-vous. Sans inscription, sans carte.",
+        "cta": "Ouvrir la démo"
+      },
+      "telegram": {
+        "title": "Rejoignez le Telegram",
+        "body": "Support, nouveautés et les autres cabinets qui l'utilisent déjà.",
+        "cta": "Rejoindre le canal"
+      },
+      "github": {
+        "title": "Lisez le code",
+        "body": "Tout le produit est public. Lisez-le, forkez-le, ouvrez une issue.",
+        "cta": "Voir le dépôt"
+      }
+    }
   },
   "lang": {
     "label": "Langue",

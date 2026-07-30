@@ -4,7 +4,7 @@ import Button from '@dentalpin/ui/Button.astro';
 import Icon from '@dentalpin/ui/Icon.astro';
 import LanguagePicker from './LanguagePicker.astro';
 import MegaMenuFeatures from './MegaMenuFeatures.astro';
-import { DEMO_URL, GITHUB_REPO } from '~/config/links';
+import { DEMO_URL, GITHUB_REPO, TELEGRAM_URL } from '~/config/links';
 import { getGithubStars, formatStars } from '~/lib/github-stars';
 import { modulesByDomain, moduleSlug, type ModuleDomain } from '~/data/modules';
 
@@ -57,6 +57,11 @@ const mobileDomains: { key: ModuleDomain; label: string }[] = [
       <li>
         <a class="rounded-[var(--radius-sm)] px-3 py-2 text-[14px] text-[var(--color-text-muted)] hover:bg-[var(--color-surface-muted)] hover:text-[var(--color-text)]" href={pagePath(locale, 'blog')}>
           {dict.nav.blog}
+        </a>
+      </li>
+      <li>
+        <a class="rounded-[var(--radius-sm)] px-3 py-2 text-[14px] text-[var(--color-text-muted)] hover:bg-[var(--color-surface-muted)] hover:text-[var(--color-text)]" href={pagePath(locale, 'contact')}>
+          {dict.nav.contact}
         </a>
       </li>
     </ul>
@@ -174,7 +179,17 @@ const mobileDomains: { key: ModuleDomain; label: string }[] = [
                 {dict.nav.blog}
               </a>
             </li>
-            <li class="mt-2 border-t border-[var(--color-border-subtle)] pt-3">
+            <li>
+              <a class="block rounded-[var(--radius-sm)] px-3 py-2.5 text-[15px] font-medium text-[var(--color-text)] hover:bg-[var(--color-surface-muted)]" href={pagePath(locale, 'contact')}>
+                {dict.nav.contact}
+              </a>
+            </li>
+            {/* The two off-site doors, which the mobile menu had no room for before. */}
+            <li class="mt-2 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-[var(--color-border-subtle)] px-3 pt-3 text-[14px] font-medium">
+              <a class="text-[var(--color-text-muted)] hover:text-[var(--color-text)]" href={githubUrl} target="_blank" rel="noopener">GitHub</a>
+              <a class="text-[var(--color-text-muted)] hover:text-[var(--color-text)]" href={TELEGRAM_URL} target="_blank" rel="noopener">Telegram</a>
+            </li>
+            <li class="mt-3">
               <a class="inline-flex items-center gap-2 rounded-[var(--radius-sm)] bg-[var(--color-primary)] px-4 py-2.5 text-[14px] font-semibold text-white shadow-[var(--shadow-xs)] hover:bg-[var(--color-primary-hover)]" style="color:#fff" href={demoUrl}>
                 <Icon name="arrow-right" size={14} />
                 {dict.nav.liveDemo}

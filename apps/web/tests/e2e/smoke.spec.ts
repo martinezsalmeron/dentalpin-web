@@ -54,3 +54,31 @@ test('contact form shows validation on empty submit', async ({ page }) => {
   const nameInput = page.locator('input[name="name"]');
   await expect(nameInput).toBeFocused();
 });
+
+// The contact page is the lead funnel, so its four doors have to survive any
+// nav or CTA reshuffle: the form, the demo, Telegram and the repo.
+test('contact page offers every way in', async ({ page }) => {
+  await page.goto('/es/contacto');
+  await expect(page.locator('#contact-form')).toBeVisible();
+  // Scoped to the rail: the footer links to some of these too, and the point
+  // is that they sit next to the form rather than only down there.
+  const rail = page.locator('aside');
+  await expect(rail.locator('a[href^="https://demo.dentalpin.com"]')).toBeVisible();
+  await expect(rail.locator('a[href^="https://t.me/"]')).toBeVisible();
+  await expect(rail.locator('a[href*="github.com"]')).toBeVisible();
+});
+
+// Both assertions hold with or without Resend configured, so they check the
+// schema rather than the environment.
+test('contact API drops honeypot hits silently and rejects bad payloads', async ({ request }) => {
+  // A filled trap must look like success to the bot, and must not send mail.
+  const trapped = await request.post('/api/contact', {
+    data: { name: 'Bot Bot', email: 'bot@example.com', website: 'http://spam' },
+  });
+  expect(trapped.status()).toBe(200);
+
+  const bad = await request.post('/api/contact', {
+    data: { name: 'X', email: 'not-an-email', reason: 'not-a-reason' },
+  });
+  expect(bad.status()).toBe(400);
+});

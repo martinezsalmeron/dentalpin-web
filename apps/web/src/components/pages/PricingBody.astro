@@ -5,7 +5,7 @@ import Section from '@dentalpin/ui/Section.astro';
 import Button from '@dentalpin/ui/Button.astro';
 import Badge from '@dentalpin/ui/Badge.astro';
 import Icon from '@dentalpin/ui/Icon.astro';
-import { DEMO_URL, GITHUB_REPO } from '~/config/links';
+import { DEMO_URL, GITHUB_REPO, BREVO_FORM_ACTION } from '~/config/links';
 
 interface Props { locale: Locale; }
 const { locale } = Astro.props;
@@ -111,7 +111,7 @@ const privacyHref = pagePath(locale, 'legalPrivacy');
             <form
               id="sib-form"
               method="POST"
-              action="https://3a34dae1.sibforms.com/serve/MUIFALk1qeX5NclOreDHssTr-2MrMSZDLcB_DXQh0eIc7iz1yDm-N-CrbeFQfxdzXbik2SykZriKIfOU4ULDQWMWnyNCBWw-1FpP6hQTeJJiOIsAG9ejUolZcug_EEuY0u5ELXeAOjeNm5dtwXToSA4DIhkyZk35tmNy3dS93f77ovrpFKvdtGlIad4qVoODgxh7_iYOfjvw43HZuA=="
+              action={BREVO_FORM_ACTION}
               data-type="subscription"
               class="mt-4 flex flex-col gap-3"
             >

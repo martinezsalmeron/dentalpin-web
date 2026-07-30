@@ -11,7 +11,7 @@ const dict = useDict(locale);
 
 const demoUrl = DEMO_URL;
 const ghUrl = GITHUB_REPO;
-const installPath = `${pagePath(locale, 'pricing')}#self-hosted`;
+const contactPath = pagePath(locale, 'contact');
 const manifestoPath = pagePath(locale, 'manifesto');
 ---
 
@@ -76,21 +76,20 @@ const manifestoPath = pagePath(locale, 'manifesto');
     </p>
 
     {/*
-      One primary way out of the hero. "Download and install" serves a
-      later, smaller, far higher-friction visitor and was competing head-on
-      with the demo; it drops to a text link below.
+      Two doors, and they are the two the visitor actually has: try it
+      alone, or talk to someone. "Download and install" used to sit here
+      pointing at the pricing page, which is neither a download nor an
+      install; it lives on the demo card further down, next to the command
+      you would actually run.
     */}
-    <div class="mt-8 flex flex-col items-center gap-3">
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
       <Button href={demoUrl} size="lg" variant="solid">
         {dict.hero.ctaPrimary}
         <Icon name="arrow-right" size={16} />
       </Button>
-      <a
-        href={installPath}
-        class="text-[14px] text-[var(--color-text-muted)] underline decoration-dotted underline-offset-4 transition-colors hover:text-[var(--color-text)]"
-      >
+      <Button href={contactPath} size="lg" variant="outline">
         {dict.hero.ctaSecondary}
-      </a>
+      </Button>
     </div>
 
     <p class="mt-5 inline-flex max-w-2xl flex-wrap items-center justify-center gap-x-2 gap-y-1 text-[13px] font-medium text-[var(--color-text-muted)]">

@@ -4,7 +4,7 @@ import Section from '@dentalpin/ui/Section.astro';
 import Button from '@dentalpin/ui/Button.astro';
 import Icon from '@dentalpin/ui/Icon.astro';
 import GradientBackdrop from '@dentalpin/ui/GradientBackdrop.astro';
-import { DEMO_URL, GITHUB_REPO, DOCS_URL } from '~/config/links';
+import { DEMO_URL, GITHUB_REPO, DOCS_URL, TELEGRAM_URL } from '~/config/links';
 
 interface Props { locale: Locale; }
 const { locale } = Astro.props;
@@ -94,19 +94,47 @@ const contactHref = pagePath(locale, 'contact');
 
           <pre class="mt-5 overflow-x-auto rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-canvas)] px-4 py-3 font-mono text-[13px] text-[var(--color-text)]"><code>$ {d.selfHost.code}</code></pre>
 
-          <div class="mt-6 flex flex-wrap items-center gap-3">
+          <div class="mt-6">
             <Button href={DOCS_URL} size="lg" variant="solid">
               {d.selfHost.cta}
               <Icon name="arrow-right" size={16} />
-            </Button>
-            <Button href={GITHUB_REPO} size="lg" variant="outline">
-              {d.selfHost.ctaSecondary}
             </Button>
           </div>
         </article>
       </div>
 
-      <p class="mt-8 text-center text-[13px] text-[var(--color-text-muted)]">
+      {/*
+        The other two doors. "Browse the code" used to be a button on the
+        self-host card, which read as a step of installing rather than the
+        separate thing it is: reading the repo commits you to nothing.
+        Here it sits next to Telegram, where a visitor who is not ready to
+        do either of the two options above will look.
+      */}
+      <div class="mt-8 flex flex-col items-center gap-3 border-t border-[var(--color-border-subtle)] pt-6 text-[13.5px] sm:flex-row sm:justify-center">
+        <span class="text-[var(--color-text-muted)]">{d.tray.lead}</span>
+        <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 font-semibold">
+          <a
+            href={GITHUB_REPO}
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-1.5 text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
+          >
+            {d.tray.repo}
+            <Icon name="arrow-right" size={13} />
+          </a>
+          <a
+            href={TELEGRAM_URL}
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-1.5 text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
+          >
+            {d.tray.telegram}
+            <Icon name="arrow-right" size={13} />
+          </a>
+        </div>
+      </div>
+
+      <p class="mt-5 text-center text-[13px] text-[var(--color-text-muted)]">
         {d.help}{' '}
         <a
           href={contactHref}

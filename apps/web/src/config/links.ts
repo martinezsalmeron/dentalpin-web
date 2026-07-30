@@ -16,3 +16,17 @@ export const OPEN_COLLECTIVE = 'https://opencollective.com/dentalpin';
 export const DEMO_URL = 'https://demo.dentalpin.com';
 export const DOCS_URL = 'https://docs.dentalpin.com';
 export const APP_URL = 'https://app.dentalpin.com';
+
+/*
+ * Brevo's hosted form endpoint. The target list is encoded in the token, so
+ * this needs no API key and no list id — which is why both the pricing-page
+ * waitlist and the contact-form opt-in can post to it with nothing in the
+ * environment. It is public by design; it sits in the page HTML already.
+ *
+ * Fields it accepts: EMAIL (required), NOMBRE (the clinic name),
+ * ACEPTA_PRIVACIDAD ('1', required), locale, and email_address_check (its
+ * own honeypot, must be empty). Append `?isAjax=1` for a JSON reply instead
+ * of an HTML page.
+ */
+export const BREVO_FORM_ACTION =
+  'https://3a34dae1.sibforms.com/serve/MUIFALk1qeX5NclOreDHssTr-2MrMSZDLcB_DXQh0eIc7iz1yDm-N-CrbeFQfxdzXbik2SykZriKIfOU4ULDQWMWnyNCBWw-1FpP6hQTeJJiOIsAG9ejUolZcug_EEuY0u5ELXeAOjeNm5dtwXToSA4DIhkyZk35tmNy3dS93f77ovrpFKvdtGlIad4qVoODgxh7_iYOfjvw43HZuA==';

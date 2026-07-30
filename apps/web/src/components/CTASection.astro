@@ -1,16 +1,19 @@
 ---
-import { useDict, type Locale } from '~/i18n';
+import { useDict, pagePath, type Locale } from '~/i18n';
 import Section from '@dentalpin/ui/Section.astro';
 import Button from '@dentalpin/ui/Button.astro';
 import GradientBackdrop from '@dentalpin/ui/GradientBackdrop.astro';
-import { DEMO_URL, GITHUB_REPO } from '~/config/links';
+import { DEMO_URL } from '~/config/links';
 
 interface Props { locale: Locale; }
 const { locale } = Astro.props;
 const dict = useDict(locale);
 
 const demoUrl = DEMO_URL;
-const ghUrl = GITHUB_REPO;
+// The second door is a conversation, not the repo. This block closes
+// feature pages, whose reader is a clinic owner; the repo has its own
+// permanent doors in the nav, the hero pill and the footer.
+const contactPath = pagePath(locale, 'contact');
 ---
 
 <Section padY="md">
@@ -20,7 +23,7 @@ const ghUrl = GITHUB_REPO;
     <p class="mx-auto mt-4 max-w-2xl text-[15px] text-[var(--color-text-muted)]">{dict.cta.subtitle}</p>
     <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
       <Button href={demoUrl} size="lg">{dict.cta.ctaPrimary}</Button>
-      <Button href={ghUrl} variant="outline" size="lg">{dict.cta.ctaSecondary}</Button>
+      <Button href={contactPath} variant="outline" size="lg">{dict.cta.ctaSecondary}</Button>
     </div>
   </div>
 </Section>

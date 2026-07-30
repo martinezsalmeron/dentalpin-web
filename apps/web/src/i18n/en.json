@@ -15,7 +15,8 @@
     "skip": "Skip to content",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "blog": "Blog"
+    "blog": "Blog",
+    "contact": "Contact"
   },
   "megamenu": {
     "trigger": "Features",
@@ -42,7 +43,7 @@
     ],
     "subPill": "Open source · Free forever · Self-host on your server",
     "ctaPrimary": "Try the demo",
-    "ctaSecondary": "Download and install",
+    "ctaSecondary": "Talk to us",
     "ghPill": "See the code on GitHub",
     "trust": "Backed by Dentaltix",
     "trustPre": "Backed by ",
@@ -274,11 +275,15 @@
       "title": "Download and install it free.",
       "body": "One docker compose and you're in. Under thirty minutes on a reasonable VPS. Step-by-step guides for your IT person.",
       "code": "docker compose up",
-      "cta": "See instructions",
-      "ctaSecondary": "Browse the code"
+      "cta": "See instructions"
     },
     "help": "Need help with the install? We can lend a hand.",
-    "helpCta": "Talk to us"
+    "helpCta": "Talk to us",
+    "tray": {
+      "lead": "Rather look first?",
+      "repo": "Browse the code on GitHub",
+      "telegram": "Join the Telegram"
+    }
   },
   "manifesto": {
     "eyebrow": "MANIFESTO",
@@ -693,7 +698,7 @@
     "title": "Up and running in minutes. Yours forever.",
     "subtitle": "One docker compose up and you're in.",
     "ctaPrimary": "Try the demo",
-    "ctaSecondary": "Clone the repo"
+    "ctaSecondary": "Talk to us"
   },
   "footer": {
     "product": "Product",
@@ -1469,20 +1474,45 @@
     "ctaGithub": "Browse the code"
   },
   "contact": {
-    "title": "Tell us about your case.",
-    "subtitle": "A clinic thinking about migrating? A dev building a module? An integrator? Drop us a line. We read every single message.",
+    "title": "Let's talk about your clinic.",
+    "subtitle": "Tell us where you are and we'll tell you whether Dentalpin fits. A person reads this, not a form.",
     "fields": {
       "name": "Name",
       "email": "Email",
-      "clinic": "Organisation",
-      "message": "How can we help?",
+      "clinic": "Clinic or organisation",
+      "reason": "What do you need?",
+      "message": "Tell us a bit more",
+      "subscribe": "Send me product updates by email. Nothing else.",
       "submit": "Send"
     },
+    "reasons": {
+      "demo": "A demo with my own data",
+      "migration": "Migrating from another system",
+      "install": "Help with the install",
+      "dev": "Integrations or development",
+      "other": "Something else"
+    },
+    "reply": "We reply within one business day. No cold calls, no automated sequences.",
     "success": "Got it. We'll reply within one business day.",
     "error": "We couldn't send your message. Email us directly at hola@dentalpin.com.",
-    "telegramPre": "Prefer something more direct? Join our ",
-    "telegramLink": "Telegram channel",
-    "telegramPost": " for support and updates."
+    "rail": {
+      "title": "In the meantime",
+      "demo": {
+        "title": "Try the demo now",
+        "body": "A sample clinic with patients and appointments. No signup, no card.",
+        "cta": "Open the demo"
+      },
+      "telegram": {
+        "title": "Join the Telegram",
+        "body": "Support, updates and the other clinics already running it.",
+        "cta": "Join the channel"
+      },
+      "github": {
+        "title": "Read the code",
+        "body": "The whole product is public. Read it, fork it, open an issue.",
+        "cta": "See the repository"
+      }
+    }
   },
   "lang": {
     "label": "Language",
