@@ -36,7 +36,8 @@ test('language switcher translates the slug, not just the prefix', async ({ page
 test('Portuguese reuses the Spanish path but keeps its own module slug', async ({ page }) => {
   await page.goto('/es/funcionalidades/presupuestos/');
   await openLanguagePicker(page);
-  await page.getByRole('menuitem', { name: /português/i }).click();
+  // Two Portuguese entries since pt-BR exists, so the match has to be exact.
+  await page.getByRole('menuitem', { name: /português \(pt\)/i }).click();
   await expect(page).toHaveURL(/\/pt\/funcionalidades\/orcamentos\/?$/);
   await expect(page.locator('html')).toHaveAttribute('lang', 'pt');
   await expect(page.getByRole('heading', { name: 'Orçamentos' }).first()).toBeVisible();
@@ -44,7 +45,36 @@ test('Portuguese reuses the Spanish path but keeps its own module slug', async (
 
 test('features page renders Bento grid', async ({ page }) => {
   await page.goto('/es/funcionalidades');
-  await expect(page.getByRole('heading', { name: /menos pestañas|odontograma/i }).first()).toBeVisible();
+  await expect(
+    page.getByRole('heading', { name: /menos pestañas|odontograma/i }).first(),
+  ).toBeVisible();
+});
+
+// The pricing page is driven by src/data/pricing.ts: a market with a published
+// tariff shows figures and a total, one without shows "let's talk" instead.
+// Spain is also the only market with the invoicing integration, so it must be
+// the only one that does not carry the tax warning.
+test('Spanish pricing shows the fee, the total and no tax warning', async ({ page }) => {
+  await page.goto('/es/precios');
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('Tus datos son tuyos');
+  await expect(page.getByText('105 € al mes')).toBeVisible();
+  await expect(page.getByRole('row', { name: /Total aproximado/ })).toContainText('105 €');
+  await expect(page.getByText(/no está integrada con/)).toHaveCount(0);
+});
+
+test('an unpriced market quotes instead of publishing a figure', async ({ page }) => {
+  await page.goto('/fr/tarifs');
+  await expect(page.getByText('Parlons-en').first()).toBeVisible();
+  await expect(page.getByText(/89/)).toHaveCount(0);
+  // The invoicing warning is a legal must in markets without the integration.
+  await expect(page.getByRole('heading', { name: /n'est pas raccordée/ })).toBeVisible();
+});
+
+test('pricing CTAs preselect the managed reason on the contact form', async ({ page }) => {
+  await page.goto('/es/precios');
+  await page.getByRole('link', { name: 'Cuéntanos tu caso' }).first().click();
+  await expect(page).toHaveURL(/\/es\/contacto\/\?reason=managed$/);
+  await expect(page.locator('select[name="reason"]')).toHaveValue('managed');
 });
 
 test('contact form shows validation on empty submit', async ({ page }) => {

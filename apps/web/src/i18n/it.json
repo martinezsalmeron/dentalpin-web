@@ -516,7 +516,12 @@
     "title": "Un nucleo piccolo. Moduli che si innestano.",
     "body": "Il sistema di moduli non è una metafora: ognuno porta il suo manifest, le sue migrazioni Alembic, i suoi seed YAML, la sua navigazione autoregistrata e si iscrive all’event bus interno. Attivi quelli che servono al tuo studio, ignori il resto e, se ti manca qualcosa, lo costruisci tu e lo innesti.",
     "core": "Core",
-    "coreItems": ["Auth", "RBAC", "Studi", "Utenti"],
+    "coreItems": [
+      "Auth",
+      "RBAC",
+      "Studi",
+      "Utenti"
+    ],
     "pluggable": "Moduli ufficiali",
     "community": "Moduli della community",
     "communityNote": "In arrivo. Costruiscili tu o unisciti a chi li sta già montando.",
@@ -722,107 +727,281 @@
     }
   },
   "pricing": {
-    "eyebrow": "PREZZI",
-    "title": "Gratis. Per sempre. Il core, tutti i moduli.",
-    "subtitle": "Dentalpin è open source. Lo installi tu o aspetti che apriamo la versione gestita.",
-    "selfhost": {
-      "badge": "Consigliato",
-      "title": "Self-hosted",
-      "price": "0 €",
-      "priceSuffix": "per sempre",
-      "description": "Cloni il repo, lanci docker compose ed è fatta. Tutti i moduli inclusi.",
-      "features": [
-        "Tutti i moduli, senza livelli",
-        "Codice verificabile su GitHub",
-        "I tuoi dati, sul tuo server",
-        "BSL 1.1 oggi → Apache 2.0 tra quattro anni",
-        "Aggiornamenti della community",
-        "Aiuto su GitHub Discussions"
-      ],
-      "ctaPrimary": "Clona il repo",
-      "ctaSecondary": "Prova la demo"
+    "meta": {
+      "title": "Prezzi e hosting · Dentalpin",
+      "description": "I tuoi dati sono tuoi e il codice è tuo. Il server è del tuo studio in entrambi i casi: lo installi tu gratis, oppure lo installiamo e ce ne occupiamo noi. Il dettaglio completo dei costi, senza righe in piccolo."
     },
-    "cloud": {
-      "badge": "In arrivo",
-      "title": "Cloud gestito",
-      "price": "Da definire",
-      "priceSuffix": "lo gestiamo noi",
-      "description": "Lo stesso Dentalpin, ma lo gestiamo noi. Backup, aggiornamenti, TLS e una persona dall’altra parte dell’email.",
-      "features": [
-        "Hosting nell’UE",
-        "Backup e ripristino",
-        "Aggiornamenti automatici",
-        "TLS e dominio tuo",
-        "Supporto umano via email",
-        "SLA per gruppi multi-sede"
-      ],
-      "formLabel": "Entra nella lista d’attesa",
-      "emailField": "Email",
-      "clinicField": "Nome dello studio (facoltativo)",
-      "submit": "Avvisami quando è disponibile",
-      "consentBefore": "Accetto le condizioni e l'",
-      "consentLink": "informativa sulla privacy",
-      "consentAfter": ".",
-      "consentNote": "Puoi cancellare l’iscrizione quando vuoi dal link in fondo a ogni email.",
-      "consentRequired": "Per iscriverti dobbiamo avere la tua accettazione dell’informativa.",
-      "success": "Segnato. Ti avvisiamo appena apriamo i posti.",
-      "error": "Qualcosa è andato storto dalla nostra parte. Scrivici a hola@dentalpin.com."
+    "eyebrow": "PREZZI E HOSTING",
+    "title": "I tuoi dati sono tuoi. Il codice è tuo.",
+    "subtitle": "Ci paghi perché ci prendiamo cura della tua installazione, non per avere il permesso di usare il tuo software. In entrambi i casi il server è del tuo studio.",
+    "proof": [
+      "Il tuo database, sul tuo server",
+      "Server in Germania, dentro l'Unione Europea",
+      "Nessun costo per utente, per professionista o per riunito"
+    ],
+    "ctaPrimary": "Raccontaci del tuo studio",
+    "ctaSecondary": "Vedere il codice",
+    "anchor": {
+      "plan": "Gestito",
+      "per": "al mese",
+      "note": "Il server è tuo, lo attivi direttamente su Hetzner per circa 16 € al mese. Raccontaci del tuo studio e ti diciamo il canone del servizio per il tuo mercato.",
+      "quoted": "Parliamone",
+      "breakdown": "Vedere il dettaglio completo"
     },
-    "services": {
-      "eyebrow": "TI SERVE UNA MANO?",
-      "title": "Servizi opzionali, se vuoi andare più veloce.",
-      "items": [
-        {
-          "title": "Installazione assistita",
-          "body": "Montiamo Dentalpin sul tuo server, migriamo i tuoi pazienti e formiamo il tuo team."
+    "options": {
+      "eyebrow": "LE DUE OPZIONI",
+      "title": "Lo stesso programma. Cambia solo chi se ne prende cura.",
+      "intro": "Non c'è una versione ridotta gratis e una buona a pagamento. In entrambe hai il prodotto intero, e in entrambe il server è tuo.",
+      "managed": {
+        "name": "Gestito",
+        "badge": "Consigliato",
+        "tagline": "Lo installiamo, lo aggiorniamo e lo sorvegliamo noi. Sul tuo server e nel tuo account.",
+        "features": [
+          "Installazione e avvio",
+          "Aggiornamenti applicati e verificati",
+          "Backup configurati e ripristino testato",
+          "Sorveglianza: lo sappiamo prima di te se qualcosa si rompe",
+          "Assistenza con tempi di risposta impegnati per contratto"
+        ],
+        "cta": "Raccontaci del tuo studio"
+      },
+      "selfhost": {
+        "name": "Self-hosted",
+        "badge": "Gratis",
+        "price": "Gratis",
+        "tagline": "Lo installi tu, sul tuo server o su quello del tuo informatico. Senza canone e senza chiedere il permesso a nessuno.",
+        "features": [
+          "Il prodotto intero, senza moduli limitati",
+          "Immagini Docker pubbliche, senza account né credenziali",
+          "Documentazione di installazione passo passo",
+          "Aiuto su GitHub Discussions",
+          "BSL 1.1 oggi, Apache 2.0 dopo quattro anni"
+        ],
+        "cta": "Vedere il repository",
+        "ctaAlt": "Provare la demo"
+      },
+      "table": {
+        "priceRow": "Prezzo",
+        "rows": [
+          {
+            "label": "Dove vive",
+            "managed": "Un server a tuo nome, nel tuo account Hetzner",
+            "selfhost": "Il tuo server o quello del tuo informatico"
+          },
+          {
+            "label": "Chi lo installa",
+            "managed": "Noi",
+            "selfhost": "Tu"
+          },
+          {
+            "label": "Chi lo aggiorna e lo sorveglia",
+            "managed": "Noi",
+            "selfhost": "Tu"
+          },
+          {
+            "label": "Backup",
+            "managed": "Nel tuo account, configurati da noi e con ripristino testato",
+            "selfhost": "Tuoi"
+          },
+          {
+            "label": "Chi attiva l'hosting",
+            "managed": "Tu, direttamente con Hetzner",
+            "selfhost": "Tu"
+          },
+          {
+            "label": "Per chi è",
+            "managed": "Vuoi il controllo totale senza occuparti del quotidiano",
+            "selfhost": "Hai un informatico o te la cavi"
+          }
+        ]
+      }
+    },
+    "hetzner": {
+      "title": "Il server lo attivi tu, a tuo nome.",
+      "body": "È la parte che sorprende, quindi la diciamo subito: per il piano Gestito apri un tuo account Hetzner con la tua carta. Non è burocrazia nostra, è proprio ciò che rende il server davvero tuo.",
+      "points": [
+        "Il contratto di hosting è tuo. Non facciamo da intermediari di niente.",
+        "I tuoi dati non passano da nessuna infrastruttura nostra.",
+        "Puoi revocarci l'accesso quando vuoi, dal tuo pannello.",
+        "Se un giorno fai a meno di noi, non c'è nulla da migrare: è già a casa tua."
+      ],
+      "note": "Sono circa quindici minuti e li facciamo insieme nella chiamata di avvio."
+    },
+    "isolation": {
+      "eyebrow": "IL TUO STUDIO, IL TUO SERVER",
+      "title": "Il tuo studio non vive dentro un sistema condiviso con altri mille.",
+      "body": "La tua installazione è sola: il suo server, il suo database, i suoi file. Nessun altro tocca il tuo database.",
+      "diagram": {
+        "usual": {
+          "title": "Il modello abituale del settore",
+          "db": "Un solo database",
+          "caption": "Tutti gli studi nello stesso posto. Esportare i tuoi dati è un file che qualcuno ti genera se vuole e come vuole."
         },
-        {
-          "title": "Supporto annuale",
-          "body": "Canale diretto, risposta in orario di lavoro e i tuoi bug in cima alla coda."
-        },
-        {
-          "title": "Moduli su misura",
-          "body": "Costruiamo i moduli che servono al tuo studio o alla tua catena e li rilasciamo come open source."
+        "ours": {
+          "title": "Dentalpin",
+          "you": "Il tuo studio",
+          "other": "Un altro studio",
+          "db": "Il suo database",
+          "caption": "Due installazioni che non si toccano. Niente condiviso tra loro."
         }
-      ],
-      "cta": "Parla con noi"
+      },
+      "cards": [
+        {
+          "title": "Un database solo per te",
+          "body": "Non sei una riga con il tuo nome dentro la tabella di un altro. Il tuo studio ha il suo server e il suo database."
+        },
+        {
+          "title": "Per questo un backup è davvero tuo",
+          "body": "È una copia completa e standard di PostgreSQL, la esegui tu e la ripristini dove vuoi."
+        },
+        {
+          "title": "Il programma è lo stesso nelle due opzioni",
+          "body": "Cambia chi se ne prende cura, non cosa fa. Puoi iniziare da solo e chiederci aiuto dopo, senza migrare nulla."
+        }
+      ]
     },
-    "sponsors": {
-      "eyebrow": "SOSTIENI IL PROGETTO",
-      "title": "Dentalpin sta in piedi grazie alla sua community.",
-      "body": "Se Dentalpin ti fa risparmiare ore ogni settimana, ci sono modi per ricambiare:",
-      "github": "GitHub Sponsors",
-      "opencollective": "OpenCollective",
-      "backed": "Sostenuto da Dentaltix"
+    "data": {
+      "eyebrow": "DOVE SONO I TUOI DATI",
+      "title": "Su un server tuo, a {datacenter}.",
+      "datacenter": {
+        "nuremberg": "Norimberga, Germania",
+        "ashburn": "Ashburn, Stati Uniti"
+      },
+      "bodyEu": "Territorio dell'Unione Europea, senza trasferimenti internazionali di dati. Il fornitore è Hetzner e il contratto lo firmi tu, che sei chi attiva il server.",
+      "bodyOutsideEu": "Il fornitore è Hetzner e il contratto lo firmi tu, che sei chi attiva il server. Questo data center è negli Stati Uniti, non nell'Unione Europea, e preferiamo dirtelo prima che lo chieda tu.",
+      "points": [
+        "Server dedicati al tuo studio, cifrati in transito e a riposo",
+        "Contratto di responsabile del trattamento firmato nel piano Gestito",
+        "Accesso minimo, tracciato e revocabile da te in qualsiasi momento"
+      ],
+      "ai": {
+        "title": "Il copilota IA arriva disattivato.",
+        "body": "Va acceso di proposito. Se non lo accendi, non esce nulla dal tuo studio verso nessun fornitore di IA.",
+        "points": [
+          "Funziona con la tua chiave, nel tuo account presso il fornitore di IA. Quel contratto è tuo.",
+          "Prima di uscire, i dati personali vengono sostituiti da codici: il fornitore non vede nomi, telefoni né identificativi.",
+          "Le note cliniche non escono."
+        ]
+      }
+    },
+    "cost": {
+      "eyebrow": "QUANTO COSTA, ESATTAMENTE",
+      "title": "La fattura intera, compresa la parte che incassa un altro.",
+      "subtitle": "Il settore vende licenze per postazione e rimanda a «contattaci». Noi preferiamo mostrarti la somma prima che la faccia tu.",
+      "head": {
+        "concept": "Voce",
+        "who": "Chi la incassa",
+        "amount": "Importo"
+      },
+      "rows": {
+        "server": "Il server del tuo studio",
+        "backups": "Backup esterni",
+        "service": "Manutenzione, aggiornamenti, sorveglianza e assistenza",
+        "ai": "Copilota IA (opzionale)"
+      },
+      "who": {
+        "hetzner": "Hetzner, direttamente a te",
+        "us": "Dentalpin",
+        "ai": "Il tuo fornitore di IA, a consumo"
+      },
+      "aiAmount": "Solo se lo attivi",
+      "total": "Totale approssimativo",
+      "perMonth": "al mese",
+      "quoted": "Parliamone",
+      "note": "L'infrastruttura costa quello che costa e la paghi direttamente al fornitore. A noi paghi perché ce ne occupiamo: perché qualcuno risponda alle otto del mattino, perché i backup siano stati davvero ripristinati e perché un aggiornamento non ti butti giù l'agenda.",
+      "annual": "Pagando a anno, paghi dieci mesi invece di dodici: {annual} invece di {instead}."
+    },
+    "setup": {
+      "title": "Avvio",
+      "oneOff": "Pagamento una tantum",
+      "body": "Apertura dell'account server accompagnata, installazione, dominio, configurazione, catalogo delle prestazioni e due ore di formazione con il tuo team.",
+      "migrationTitle": "Migrazione dei tuoi dati",
+      "migrationFlat": "Da Gesden, {price} a prezzo chiuso, o gratis con dodici mesi di permanenza. Da altri sistemi, preventivo dopo una prova a vuoto.",
+      "migrationQuote": "Preventivo dopo una prova a vuoto su una copia dei tuoi dati. Ti diciamo cosa si può portare e cosa no prima che paghi qualsiasi cosa."
+    },
+    "flat": {
+      "eyebrow": "TARIFFA UNICA",
+      "title": "Lo stesso prezzo con un riunito o con dieci.",
+      "body": "Nessun costo per utente e nessun costo per professionista. Assumi chi ti serve e apri i riuniti che vuoi: il tuo canone non si muove.",
+      "why": "E vale la pena dire perché è onesto: nemmeno il nostro costo cresce con i tuoi riuniti.",
+      "multisite": "Una stessa installazione può ospitare più studi.",
+      "multisiteCta": "Più sedi? Parliamone."
+    },
+    "included": {
+      "eyebrow": "COSA COMPRENDE IL CANONE",
+      "title": "Quello che facciamo ogni mese per la tua installazione.",
+      "items": [
+        "Installazione e avvio.",
+        "Aggiornamenti applicati e verificati, non soltanto pubblicati.",
+        "Backup configurati e ripristino testato.",
+        "Sorveglianza: lo sappiamo noi prima di te se qualcosa si rompe.",
+        "Assistenza con tempi di risposta impegnati per contratto."
+      ],
+      "verifactu": "Aggiornamento su Verifactu man mano che l'agenzia fiscale spagnola cambia le specifiche."
+    },
+    "leave": {
+      "eyebrow": "E SE VOLESSI ANDARMENE",
+      "title": "Te ne vai quando vuoi e ti porti via tutto.",
+      "items": [
+        "Ti porti una copia completa e standard del tuo database.",
+        "Il software è open source: puoi continuare a usarlo da solo o con un altro fornitore.",
+        "Nel piano Gestito non c'è nemmeno da migrare: il server è già tuo.",
+        "Ritiriamo il nostro accesso e te lo confermiamo per iscritto.",
+        "Se smetti di pagarci, la tua installazione continua a funzionare."
+      ]
+    },
+    "fiscal": {
+      "country": "Italia",
+      "authority": "il Sistema di Interscambio",
+      "title": "La fatturazione non è integrata con {authority}.",
+      "body": "In {country}, Dentalpin non trasmette le tue fatture attraverso {authority} e non emette fattura elettronica. Vedrai documenti di fatturazione a schermo e non sono validi come fattura fiscale: continua a emettere le tue fatture con il sistema che usi oggi. Tutto il resto (agenda, pazienti, odontogramma, piani di trattamento, preventivi, incassi, promemoria, WhatsApp, report e copilota IA) funziona come in Spagna."
     },
     "faq": {
       "title": "Domande frequenti",
       "items": [
         {
+          "q": "Perché devo aprire un account Hetzner? Non potete ospitarlo voi?",
+          "a": "È proprio ciò che rende il server e i dati tuoi. Se il contratto di hosting fosse nostro, i tuoi dati vivrebbero sulla nostra infrastruttura e dipenderesti da noi per tirarli fuori. Così no: l'account è tuo, il server è tuo e puoi fare a meno di noi senza migrare nulla. L'attivazione sono circa quindici minuti e la facciamo con te nella chiamata di avvio."
+        },
+        {
+          "q": "E se Dentalpin chiude?",
+          "a": "Il codice è open source e le immagini Docker sono pubbliche: si scaricano senza account e senza credenziali. Non c'è licenza da attivare, né chiamata a casa, né interruttore remoto, quindi la tua installazione continua a funzionare indefinitamente e qualsiasi informatico può mantenerla."
+        },
+        {
+          "q": "Avete accesso alle cartelle cliniche dei miei pazienti?",
+          "a": "In Self-hosted non abbiamo nessun accesso. Nel piano Gestito abbiamo accesso tecnico al server per poterlo mantenere, con contratto di responsabile del trattamento firmato, con registro di ciò che viene fatto e revocabile da te dal tuo pannello Hetzner quando vuoi. Mantenere il sistema non richiede di leggere cartelle cliniche."
+        },
+        {
+          "q": "Chi è responsabile se c'è una violazione?",
+          "a": "Il tuo studio è titolare del trattamento dei dati dei suoi pazienti e noi siamo responsabili del trattamento nel piano Gestito. Il contratto lo dettaglia. La nostra parte sono misure concrete: server nell'Unione Europea, cifratura, backup verificati, accesso minimo e tracciato, e avvisarti senza indugio se succede qualcosa."
+        },
+        {
+          "q": "Mi serve un informatico?",
+          "a": "Con il piano Gestito no: è per questo che c'è il canone. In Self-hosted ti serve qualcuno capace di avviare un docker compose e tenere un server aggiornato, che sia il tuo informatico o tu."
+        },
+        {
+          "q": "Posso iniziare da solo e chiedere aiuto più avanti?",
+          "a": "Sì. È lo stesso software, quindi passare da Self-hosted a Gestito significa darci accesso, non migrare nulla."
+        },
+        {
+          "q": "Cosa succede se un mese non pago?",
+          "a": "Ti scriviamo, come farebbe chiunque. Se la cosa non si risolve, ritiriamo il nostro accesso e smettiamo di mantenere il sistema. La tua installazione continua a funzionare e i tuoi dati restano dov'erano: sul tuo server."
+        },
+        {
+          "q": "L'IA vede i dati dei miei pazienti?",
+          "a": "Solo se attivi il copilota, che arriva disattivato. Una volta attivo funziona con la tua chiave e con i dati personali sostituiti da codici prima di uscire: il fornitore non vede nomi, telefoni né identificativi. Le note cliniche non escono."
+        },
+        {
           "q": "Cosa significa BSL 1.1?",
-          "a": "Business Source License. Gratis per qualsiasi studio, gratis per qualsiasi sviluppatore. L’unica restrizione: non puoi lanciare Dentalpin come SaaS odontoiatrico concorrente. Dopo quattro anni, ogni release passa automaticamente ad Apache 2.0."
-        },
-        {
-          "q": "Posso usarlo gratis nel mio studio?",
-          "a": "Sì. La licenza BSL 1.1 permette a qualsiasi studio, di qualunque dimensione, di usare Dentalpin gratis e senza limiti di pazienti, utenti o sedi. Non esiste una versione ridotta: hai il prodotto intero."
-        },
-        {
-          "q": "Come si installa?",
-          "a": "Cloni il repo, copi il .env e lanci docker compose up. La documentazione copre il resto. Su un VPS ragionevole, meno di mezz’ora."
-        },
-        {
-          "q": "Come faccio la migrazione dei dati?",
-          "a": "Vogliamo offrire script che rendano semplice la migrazione dal software che usi oggi. Nel frattempo puoi appoggiarti a chi mantiene il tuo programma attuale oppure <a href=\"/it/contatti/\" class=\"underline underline-offset-2 hover:text-[var(--color-primary)]\">scrivere a noi</a> e ti diamo una mano."
-        },
-        {
-          "q": "E se il mio studio è piccolo?",
-          "a": "Meglio per te. Dentalpin gira comodamente su un VPS da 4 € al mese. Nessun minimo di utenti, nessuna fattura mensile da tenere d’occhio."
-        },
-        {
-          "q": "E se mi serve assistenza vera?",
-          "a": "Per questo ci sono i servizi opzionali qui sopra: installazione assistita, supporto annuale o moduli su misura."
+          "a": "Business Source License. Gratis per qualsiasi studio e per qualsiasi sviluppatore. L'unica restrizione: non puoi lanciare Dentalpin come SaaS dentale concorrente. Dopo quattro anni, ogni release passa automaticamente ad Apache 2.0."
         }
       ]
+    },
+    "cta": {
+      "title": "Raccontaci com'è il tuo studio.",
+      "body": "Ti diciamo se Dentalpin fa per te e, se fa per te, lo montiamo insieme. Ti legge una persona, non un modulo.",
+      "primary": "Parlare con noi",
+      "secondary": "Provare la demo"
     }
   },
   "featuresIndex": {
@@ -1481,6 +1660,7 @@
       "submit": "Invia"
     },
     "reasons": {
+      "managed": "Hosting gestito",
       "demo": "Vedere una demo con i miei dati",
       "migration": "Migrare da un altro software",
       "install": "Aiuto con l’installazione",

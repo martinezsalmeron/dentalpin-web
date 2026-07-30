@@ -5,7 +5,7 @@ import { BREVO_FORM_ACTION } from '~/config/links';
 
 export const prerender = false;
 
-const REASONS = ['demo', 'migration', 'install', 'dev', 'other'] as const;
+const REASONS = ['managed', 'demo', 'migration', 'install', 'dev', 'other'] as const;
 
 const ContactSchema = z.object({
   name: z.string().trim().min(2).max(120),

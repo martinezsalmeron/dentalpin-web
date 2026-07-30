@@ -516,7 +516,12 @@
     "title": "Ein kleiner Kern. Module zum Einstecken.",
     "body": "Das Modulsystem ist keine Metapher: Jedes Modul bringt sein Manifest, seine Alembic-Migrationen, seine YAML-Seeds und seine selbstregistrierte Navigation mit und hängt sich an den internen Event-Bus. Sie aktivieren, was Ihre Praxis braucht, ignorieren den Rest und bauen sich fehlende Teile selbst dazu.",
     "core": "Kern",
-    "coreItems": ["Auth", "RBAC", "Praxen", "Nutzer"],
+    "coreItems": [
+      "Auth",
+      "RBAC",
+      "Praxen",
+      "Nutzer"
+    ],
     "pluggable": "Offizielle Module",
     "community": "Community-Module",
     "communityNote": "In Arbeit. Bauen Sie sie selbst oder machen Sie mit bei denen, die schon dran sind.",
@@ -722,107 +727,281 @@
     }
   },
   "pricing": {
-    "eyebrow": "PREISE",
-    "title": "Kostenlos. Für immer. Der Kern, alle Module.",
-    "subtitle": "Dentalpin ist Open Source. Sie hosten es selbst oder warten, bis wir die gehostete Version öffnen.",
-    "selfhost": {
-      "badge": "Empfohlen",
-      "title": "Self-Hosting",
-      "price": "0 €",
-      "priceSuffix": "für immer",
-      "description": "Repo klonen, docker compose starten, fertig. Alle Module inklusive.",
-      "features": [
-        "Alle Module, keine Tarifstufen",
-        "Prüfbarer Code auf GitHub",
-        "Ihre Daten, auf Ihrem Server",
-        "BSL 1.1 heute → Apache 2.0 in vier Jahren",
-        "Updates aus der Community",
-        "Hilfe in GitHub Discussions"
-      ],
-      "ctaPrimary": "Repo klonen",
-      "ctaSecondary": "Demo testen"
+    "meta": {
+      "title": "Preise und Hosting · Dentalpin",
+      "description": "Ihre Daten gehören Ihnen, der Code gehört Ihnen. Der Server gehört in beiden Fällen Ihrer Praxis: Sie betreiben ihn kostenlos selbst, oder wir installieren ihn und kümmern uns darum. Die vollständige Kostenaufstellung, ohne Kleingedrucktes."
     },
-    "cloud": {
-      "badge": "Demnächst",
-      "title": "Managed Cloud",
-      "price": "Noch offen",
-      "priceSuffix": "wir betreiben es",
-      "description": "Dasselbe Dentalpin, nur betreiben wir es. Backups, Updates, TLS und ein Mensch am anderen Ende der E-Mail.",
-      "features": [
-        "Hosting in der EU",
-        "Backups und Wiederherstellung",
-        "Automatische Updates",
-        "TLS und eigene Domain",
-        "Menschlicher Support per E-Mail",
-        "SLA für Praxisketten"
-      ],
-      "formLabel": "Auf die Warteliste",
-      "emailField": "E-Mail",
-      "clinicField": "Name der Praxis (optional)",
-      "submit": "Benachrichtigt mich, sobald es verfügbar ist",
-      "consentBefore": "Ich akzeptiere die Bedingungen und die ",
-      "consentLink": "Datenschutzerklärung",
-      "consentAfter": ".",
-      "consentNote": "Sie können sich jederzeit über den Link am Ende jeder E-Mail abmelden.",
-      "consentRequired": "Für die Anmeldung müssen Sie die Datenschutzerklärung akzeptieren.",
-      "success": "Notiert. Wir melden uns, sobald wir Plätze öffnen.",
-      "error": "Bei uns ist etwas schiefgelaufen. Schreiben Sie an hola@dentalpin.com."
+    "eyebrow": "PREISE UND HOSTING",
+    "title": "Ihre Daten gehören Ihnen. Der Code gehört Ihnen.",
+    "subtitle": "Sie zahlen uns dafür, dass wir uns um Ihre Installation kümmern, nicht für die Erlaubnis, Ihre eigene Software zu benutzen. In beiden Fällen gehört der Server Ihrer Praxis.",
+    "proof": [
+      "Ihre eigene Datenbank, auf Ihrem eigenen Server",
+      "Server in Deutschland, innerhalb der Europäischen Union",
+      "Keine Kosten pro Nutzer, pro Behandler oder pro Stuhl"
+    ],
+    "ctaPrimary": "Erzählen Sie uns von Ihrer Praxis",
+    "ctaSecondary": "Den Code ansehen",
+    "anchor": {
+      "plan": "Betreut",
+      "per": "im Monat",
+      "note": "Der Server gehört Ihnen und wird direkt bei Hetzner gebucht, für rund 16 € im Monat. Erzählen Sie uns von Ihrer Praxis, dann nennen wir Ihnen die Servicegebühr für Ihren Markt.",
+      "quoted": "Sprechen wir",
+      "breakdown": "Vollständige Aufstellung ansehen"
     },
-    "services": {
-      "eyebrow": "BRAUCHEN SIE HILFE?",
-      "title": "Optionale Leistungen, falls es schneller gehen soll.",
-      "items": [
-        {
-          "title": "Begleitete Einrichtung",
-          "body": "Wir richten Dentalpin auf Ihrem Server ein, migrieren Ihre Patienten und schulen Ihr Team."
+    "options": {
+      "eyebrow": "DIE ZWEI OPTIONEN",
+      "title": "Dieselbe Software. Es ändert sich nur, wer sich darum kümmert.",
+      "intro": "Es gibt keine beschnittene Gratisversion und eine gute Bezahlversion. Beide geben Ihnen das ganze Produkt, und in beiden gehört der Server Ihnen.",
+      "managed": {
+        "name": "Betreut",
+        "badge": "Empfohlen",
+        "tagline": "Wir installieren, aktualisieren und überwachen. Auf Ihrem Server und in Ihrem Konto.",
+        "features": [
+          "Installation und Inbetriebnahme",
+          "Updates eingespielt und geprüft",
+          "Backups eingerichtet, Wiederherstellung getestet",
+          "Überwachung: Wir merken es vor Ihnen, wenn etwas ausfällt",
+          "Support mit vertraglich zugesagten Reaktionszeiten"
+        ],
+        "cta": "Erzählen Sie uns von Ihrer Praxis"
+      },
+      "selfhost": {
+        "name": "Selbst gehostet",
+        "badge": "Kostenlos",
+        "price": "Kostenlos",
+        "tagline": "Sie betreiben es selbst, auf Ihrem Server oder dem Ihres IT-Dienstleisters. Ohne Gebühr und ohne jemanden um Erlaubnis zu fragen.",
+        "features": [
+          "Das ganze Produkt, keine beschnittenen Module",
+          "Öffentliche Docker-Images, ohne Konto und ohne Zugangsdaten",
+          "Installationsdokumentation Schritt für Schritt",
+          "Hilfe in GitHub Discussions",
+          "Heute BSL 1.1, nach vier Jahren Apache 2.0"
+        ],
+        "cta": "Repository ansehen",
+        "ctaAlt": "Demo ausprobieren"
+      },
+      "table": {
+        "priceRow": "Preis",
+        "rows": [
+          {
+            "label": "Wo es läuft",
+            "managed": "Ein Server auf Ihren Namen, in Ihrem Hetzner-Konto",
+            "selfhost": "Ihr Server oder der Ihres IT-Dienstleisters"
+          },
+          {
+            "label": "Wer installiert",
+            "managed": "Wir",
+            "selfhost": "Sie"
+          },
+          {
+            "label": "Wer aktualisiert und überwacht",
+            "managed": "Wir",
+            "selfhost": "Sie"
+          },
+          {
+            "label": "Backups",
+            "managed": "In Ihrem Konto, von uns eingerichtet, Wiederherstellung getestet",
+            "selfhost": "Ihre"
+          },
+          {
+            "label": "Wer das Hosting bucht",
+            "managed": "Sie, direkt bei Hetzner",
+            "selfhost": "Sie"
+          },
+          {
+            "label": "Für wen",
+            "managed": "Sie wollen volle Kontrolle ohne das Tagesgeschäft",
+            "selfhost": "Sie haben einen IT-Dienstleister oder kommen selbst zurecht"
+          }
+        ]
+      }
+    },
+    "hetzner": {
+      "title": "Den Server buchen Sie selbst, auf Ihren Namen.",
+      "body": "Das ist der Teil, der überrascht, deshalb sagen wir ihn früh: Für den Tarif Betreut eröffnen Sie ein eigenes Hetzner-Konto mit Ihrer Karte. Das ist keine Bürokratie von uns, sondern genau das, was den Server wirklich zu Ihrem macht.",
+      "points": [
+        "Der Hostingvertrag ist Ihrer. Wir sind für nichts Zwischenhändler.",
+        "Ihre Daten laufen über keine Infrastruktur von uns.",
+        "Sie können uns den Zugang jederzeit entziehen, aus Ihrer eigenen Konsole.",
+        "Wenn Sie eines Tages ohne uns weitermachen, gibt es nichts zu migrieren: Es liegt bereits bei Ihnen."
+      ],
+      "note": "Das dauert etwa fünfzehn Minuten, und wir machen es gemeinsam im Termin zur Inbetriebnahme."
+    },
+    "isolation": {
+      "eyebrow": "IHRE PRAXIS, IHR SERVER",
+      "title": "Ihre Praxis lebt nicht in einem System, das Sie mit tausend anderen teilen.",
+      "body": "Ihre Installation steht für sich: ihr Server, ihre Datenbank, ihre Dateien. Niemand sonst fasst Ihre Datenbank an.",
+      "diagram": {
+        "usual": {
+          "title": "Das übliche Modell der Branche",
+          "db": "Eine einzige Datenbank",
+          "caption": "Alle Praxen am selben Ort. Ihre Daten zu exportieren heißt: eine Datei, die Ihnen jemand erzeugt, wenn und wie er will."
         },
-        {
-          "title": "Jahressupport",
-          "body": "Direkter Kanal, Antwort zu Geschäftszeiten und Ihre Bugs ganz oben in der Warteschlange."
-        },
-        {
-          "title": "Module nach Maß",
-          "body": "Wir bauen die Module, die Ihre Praxis oder Kette braucht, und veröffentlichen sie als Open Source."
+        "ours": {
+          "title": "Dentalpin",
+          "you": "Ihre Praxis",
+          "other": "Eine andere Praxis",
+          "db": "Deren Datenbank",
+          "caption": "Zwei Installationen, die sich nie berühren. Nichts wird geteilt."
         }
-      ],
-      "cta": "Mit uns sprechen"
+      },
+      "cards": [
+        {
+          "title": "Eine Datenbank nur für Sie",
+          "body": "Sie sind keine Zeile mit Ihrem Namen in der Tabelle eines anderen. Ihre Praxis hat ihren eigenen Server und ihre eigene Datenbank."
+        },
+        {
+          "title": "Deshalb ist ein Backup wirklich Ihres",
+          "body": "Es ist eine vollständige, standardisierte PostgreSQL-Kopie. Sie führen sie selbst aus und spielen sie ein, wo Sie wollen."
+        },
+        {
+          "title": "Die Software ist in beiden Optionen dieselbe",
+          "body": "Es ändert sich, wer sich kümmert, nicht was sie kann. Sie können allein anfangen und später um Hilfe bitten, ohne etwas zu migrieren."
+        }
+      ]
     },
-    "sponsors": {
-      "eyebrow": "DAS PROJEKT UNTERSTÜTZEN",
-      "title": "Dentalpin lebt von seiner Community.",
-      "body": "Wenn Ihnen Dentalpin jede Woche Stunden spart, gibt es Wege, etwas zurückzugeben:",
-      "github": "GitHub Sponsors",
-      "opencollective": "OpenCollective",
-      "backed": "Unterstützt von Dentaltix"
+    "data": {
+      "eyebrow": "WO IHRE DATEN LIEGEN",
+      "title": "Auf einem Server von Ihnen, in {datacenter}.",
+      "datacenter": {
+        "nuremberg": "Nürnberg, Deutschland",
+        "ashburn": "Ashburn, USA"
+      },
+      "bodyEu": "Gebiet der Europäischen Union, ohne internationale Datentransfers. Anbieter ist Hetzner, und den Vertrag unterschreiben Sie, weil Sie den Server buchen.",
+      "bodyOutsideEu": "Anbieter ist Hetzner, und den Vertrag unterschreiben Sie, weil Sie den Server buchen. Dieses Rechenzentrum steht in den USA, nicht in der Europäischen Union, und das sagen wir lieber, bevor Sie fragen.",
+      "points": [
+        "Server, die Ihrer Praxis allein gehören, verschlüsselt bei Übertragung und Speicherung",
+        "Auftragsverarbeitungsvertrag im Tarif Betreut",
+        "Minimaler Zugang, protokolliert und jederzeit von Ihnen widerrufbar"
+      ],
+      "ai": {
+        "title": "Der KI-Copilot ist ab Werk ausgeschaltet.",
+        "body": "Sie müssen ihn bewusst einschalten. Tun Sie es nicht, verlässt nichts Ihre Praxis in Richtung eines KI-Anbieters.",
+        "points": [
+          "Er läuft mit Ihrem Schlüssel, in Ihrem eigenen Konto beim KI-Anbieter. Dieser Vertrag ist Ihrer.",
+          "Personenbezogene Daten werden vor dem Versand durch Codes ersetzt: Der Anbieter sieht weder Namen noch Telefonnummern noch Ausweisnummern.",
+          "Klinische Notizen verlassen das System nicht."
+        ]
+      }
+    },
+    "cost": {
+      "eyebrow": "WAS ES GENAU KOSTET",
+      "title": "Die ganze Rechnung, auch der Teil, den ein anderer kassiert.",
+      "subtitle": "Die Branche verkauft Lizenzen pro Arbeitsplatz und verweist auf „Kontaktieren Sie den Vertrieb“. Wir zeigen Ihnen lieber die Summe, bevor Sie sie selbst bilden.",
+      "head": {
+        "concept": "Posten",
+        "who": "Wer kassiert",
+        "amount": "Betrag"
+      },
+      "rows": {
+        "server": "Der Server Ihrer Praxis",
+        "backups": "Externe Backups",
+        "service": "Wartung, Updates, Überwachung und Support",
+        "ai": "KI-Copilot (optional)"
+      },
+      "who": {
+        "hetzner": "Hetzner, direkt an Sie",
+        "us": "Dentalpin",
+        "ai": "Ihr KI-Anbieter, nach Verbrauch"
+      },
+      "aiAmount": "Nur wenn Sie ihn einschalten",
+      "total": "Ungefähre Summe",
+      "perMonth": "im Monat",
+      "quoted": "Sprechen wir",
+      "note": "Infrastruktur kostet, was sie kostet, und Sie zahlen sie direkt an den Anbieter. Uns zahlen Sie dafür, dass wir uns darum kümmern: dass um acht Uhr morgens jemand antwortet, dass Backups tatsächlich schon einmal zurückgespielt wurden und dass ein Update Ihnen nicht den Terminkalender lahmlegt.",
+      "annual": "Bei jährlicher Zahlung zahlen Sie zehn Monate statt zwölf: {annual} statt {instead}."
+    },
+    "setup": {
+      "title": "Inbetriebnahme",
+      "oneOff": "Einmalzahlung",
+      "body": "Begleitete Server-Anmeldung, Installation, Domain, Konfiguration, Leistungskatalog und zwei Stunden Schulung mit Ihrem Team.",
+      "migrationTitle": "Migration Ihrer Daten",
+      "migrationFlat": "Von Gesden: {price} zum Festpreis, oder kostenlos bei zwölf Monaten Laufzeit. Von anderen Systemen: Angebot nach einem Testlauf.",
+      "migrationQuote": "Angebot nach einem Testlauf mit einer Kopie Ihrer Daten. Wir sagen Ihnen, was übernommen werden kann und was nicht, bevor Sie irgendetwas zahlen."
+    },
+    "flat": {
+      "eyebrow": "PAUSCHALPREIS",
+      "title": "Derselbe Preis mit einem Stuhl wie mit zehn.",
+      "body": "Keine Kosten pro Nutzer und keine pro Behandler. Stellen Sie ein, wen Sie brauchen, und eröffnen Sie so viele Behandlungszimmer, wie Sie wollen: Ihre Gebühr bleibt gleich.",
+      "why": "Und es lohnt sich zu sagen, warum das ehrlich ist: Unsere Kosten wachsen mit Ihren Stühlen ebenfalls nicht.",
+      "multisite": "Eine einzige Installation kann mehrere Praxen beherbergen.",
+      "multisiteCta": "Mehrere Standorte? Sprechen wir."
+    },
+    "included": {
+      "eyebrow": "WAS DIE GEBÜHR ABDECKT",
+      "title": "Was wir jeden Monat für Ihre Installation tun.",
+      "items": [
+        "Installation und Inbetriebnahme.",
+        "Updates eingespielt und geprüft, nicht nur veröffentlicht.",
+        "Backups eingerichtet und Wiederherstellung getestet.",
+        "Überwachung: Wir merken es vor Ihnen, wenn etwas ausfällt.",
+        "Support mit vertraglich zugesagten Reaktionszeiten."
+      ],
+      "verifactu": "Nachführung von Verifactu, wenn die spanische Steuerbehörde die Spezifikation ändert."
+    },
+    "leave": {
+      "eyebrow": "UND WENN ICH GEHEN WILL",
+      "title": "Sie gehen, wann Sie wollen, und nehmen alles mit.",
+      "items": [
+        "Sie nehmen eine vollständige, standardisierte Kopie Ihrer Datenbank mit.",
+        "Die Software ist Open Source: Nutzen Sie sie weiter, allein oder mit einem anderen Dienstleister.",
+        "Im Tarif Betreut gibt es nicht einmal etwas zu migrieren: Der Server gehört bereits Ihnen.",
+        "Wir ziehen unseren Zugang zurück und bestätigen das schriftlich.",
+        "Wenn Sie aufhören zu zahlen, läuft Ihre Installation weiter."
+      ]
+    },
+    "fiscal": {
+      "country": "Ihrem Land",
+      "authority": "der Steuerbehörde Ihres Landes",
+      "title": "Die Rechnungsstellung ist nicht an {authority} angebunden.",
+      "body": "In {country} übermittelt Dentalpin Ihre Rechnungen nicht an {authority}. Sie sehen Rechnungsdokumente auf dem Bildschirm, und sie gelten steuerlich nicht als Rechnung: Stellen Sie Ihre Rechnungen weiter mit dem System aus, das Sie heute nutzen. Alles andere (Terminplanung, Patienten, Zahnschema, Behandlungspläne, Kostenvoranschläge, Zahlungen, Erinnerungen, WhatsApp, Auswertungen und KI-Copilot) funktioniert genauso wie in Spanien."
     },
     "faq": {
       "title": "Häufige Fragen",
       "items": [
         {
+          "q": "Warum muss ich ein Hetzner-Konto eröffnen? Können Sie es nicht selbst hosten?",
+          "a": "Genau das macht den Server und die Daten zu Ihren. Wäre der Hostingvertrag unserer, lägen Ihre Daten auf unserer Infrastruktur und Sie wären auf uns angewiesen, um sie herauszubekommen. So nicht: Das Konto ist Ihres, der Server ist Ihrer, und Sie können ohne jede Migration auf uns verzichten. Die Anmeldung dauert etwa fünfzehn Minuten, und wir machen sie gemeinsam im Termin zur Inbetriebnahme."
+        },
+        {
+          "q": "Und wenn Dentalpin schließt?",
+          "a": "Der Code ist Open Source und die Docker-Images sind öffentlich: Sie laden ohne Konto und ohne Zugangsdaten. Es gibt keine Lizenz zu aktivieren, keinen Anruf nach Hause und keinen Fernschalter. Ihre Installation läuft unbegrenzt weiter, und jeder IT-Dienstleister kann sie warten."
+        },
+        {
+          "q": "Haben Sie Zugriff auf die Patientenakten?",
+          "a": "Bei Selbst gehostet haben wir überhaupt keinen Zugriff. Im Tarif Betreut haben wir technischen Zugriff auf den Server, um ihn warten zu können, mit unterschriebenem Auftragsverarbeitungsvertrag, mit Protokoll über das, was getan wird, und von Ihnen jederzeit über Ihre Hetzner-Konsole widerrufbar. Das System am Laufen zu halten erfordert kein Lesen von Patientenakten."
+        },
+        {
+          "q": "Wer haftet bei einer Datenpanne?",
+          "a": "Ihre Praxis ist Verantwortliche für die Daten ihrer Patienten, wir sind im Tarif Betreut Auftragsverarbeiter. Der Vertrag regelt das im Einzelnen. Unser Teil sind konkrete Maßnahmen: Server in der Europäischen Union, Verschlüsselung, geprüfte Backups, minimaler und protokollierter Zugang und unverzügliche Benachrichtigung, wenn etwas passiert."
+        },
+        {
+          "q": "Brauche ich einen IT-Dienstleister?",
+          "a": "Im Tarif Betreut nicht, dafür ist die Gebühr da. Bei Selbst gehostet brauchen Sie jemanden, der ein docker compose hochfahren und einen Server aktuell halten kann, ob das Ihr Dienstleister ist oder Sie selbst."
+        },
+        {
+          "q": "Kann ich allein anfangen und später um Hilfe bitten?",
+          "a": "Ja. Es ist dieselbe Software, der Wechsel von Selbst gehostet zu Betreut besteht darin, uns Zugang zu geben, nicht darin, etwas zu migrieren."
+        },
+        {
+          "q": "Was passiert, wenn ich einen Monat nicht zahle?",
+          "a": "Wir schreiben Ihnen, wie jeder andere auch. Klärt sich das nicht, ziehen wir unseren Zugang zurück und warten das System nicht mehr. Ihre Installation läuft weiter und Ihre Daten bleiben, wo sie waren: auf Ihrem Server."
+        },
+        {
+          "q": "Sieht die KI die Daten meiner Patienten?",
+          "a": "Nur wenn Sie den Copiloten einschalten, und der ist ab Werk aus. Eingeschaltet läuft er mit Ihrem Schlüssel, und personenbezogene Daten werden vor dem Versand durch Codes ersetzt: Der Anbieter sieht weder Namen noch Telefonnummern noch Ausweisnummern. Klinische Notizen verlassen das System nicht."
+        },
+        {
           "q": "Was bedeutet BSL 1.1?",
-          "a": "Business Source License. Kostenlos für jede Praxis, kostenlos für jede Entwicklerin. Die einzige Einschränkung: Sie dürfen Dentalpin nicht als konkurrierendes Dental-SaaS anbieten. Nach vier Jahren geht jedes Release automatisch in Apache 2.0 über."
-        },
-        {
-          "q": "Darf ich es in meiner Praxis kostenlos nutzen?",
-          "a": "Ja. Die BSL 1.1 erlaubt jeder Praxis, egal welcher Größe, Dentalpin kostenlos zu nutzen, ohne Grenze bei Patienten, Nutzern oder Standorten. Es gibt keine abgespeckte Version: Sie haben das ganze Produkt."
-        },
-        {
-          "q": "Wie wird es installiert?",
-          "a": "Repo klonen, .env kopieren und docker compose up starten. Den Rest deckt die Dokumentation ab. Auf einem vernünftigen VPS unter einer halben Stunde."
-        },
-        {
-          "q": "Wie migriere ich meine Daten?",
-          "a": "Wir arbeiten daran, Skripte anzubieten, damit der Umzug von Ihrer heutigen Software einfach wird. Bis dahin können Sie sich an den Betreuer Ihres aktuellen Programms wenden oder <a href=\"/de/kontakt/\" class=\"underline underline-offset-2 hover:text-[var(--color-primary)]\">uns schreiben</a>, damit wir mit anpacken."
-        },
-        {
-          "q": "Und wenn meine Praxis klein ist?",
-          "a": "Umso besser. Dentalpin läuft bequem auf einem VPS für 4 € im Monat. Keine Mindestnutzerzahl, keine Monatsrechnungen, die man im Blick behalten muss."
-        },
-        {
-          "q": "Und wenn ich echte Unterstützung brauche?",
-          "a": "Dafür sind die optionalen Leistungen oben da: begleitete Einrichtung, Jahressupport oder Module nach Maß."
+          "a": "Business Source License. Kostenlos für jede Praxis und jeden Entwickler. Die einzige Einschränkung: Sie dürfen Dentalpin nicht als konkurrierendes Dental-SaaS anbieten. Nach vier Jahren wird jedes Release automatisch Apache 2.0."
         }
       ]
+    },
+    "cta": {
+      "title": "Erzählen Sie uns, wie Ihre Praxis aussieht.",
+      "body": "Wir sagen Ihnen, ob Dentalpin passt, und wenn es passt, richten wir es mit Ihnen ein. Es liest ein Mensch, kein Formular.",
+      "primary": "Mit uns sprechen",
+      "secondary": "Demo ausprobieren"
     }
   },
   "featuresIndex": {
@@ -1481,6 +1660,7 @@
       "submit": "Senden"
     },
     "reasons": {
+      "managed": "Betreutes Hosting",
       "demo": "Eine Demo mit meinen Daten sehen",
       "migration": "Von einer anderen Software wechseln",
       "install": "Hilfe bei der Installation",

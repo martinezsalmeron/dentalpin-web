@@ -1,0 +1,116 @@
+---
+/*
+ * The differentiating section of the page: the whole invoice, including the
+ * part somebody else charges. Competitors bundle hosting into their fee, so
+ * publishing our fee alone would read cheaper than it is and the buyer would
+ * do the sum himself, wrong and against us. We do it first.
+ */
+import type { Market } from '~/data/pricing';
+
+interface Props {
+  market: Market;
+  t: {
+    head: { concept: string; who: string; amount: string };
+    rows: { server: string; backups: string; service: string; ai: string };
+    who: { hetzner: string; us: string; ai: string };
+    aiAmount: string;
+    total: string;
+    perMonth: string;
+    quoted: string;
+    note: string;
+    annual: string;
+  };
+}
+const { market, t } = Astro.props;
+const price = market.price;
+
+const rows = [
+  { label: t.rows.server, who: t.who.hetzner, amount: `${market.server} ${t.perMonth}` },
+  { label: t.rows.backups, who: t.who.hetzner, amount: `${market.backups} ${t.perMonth}` },
+  {
+    label: t.rows.service,
+    who: t.who.us,
+    amount: price ? `${price.monthly} ${t.perMonth}` : t.quoted,
+    strong: true,
+  },
+  { label: t.rows.ai, who: t.who.ai, amount: t.aiAmount },
+];
+
+const cell = 'py-3.5 align-top text-[14px]';
+---
+
+<div
+  class="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
+>
+  <table class="w-full border-collapse text-left">
+    <thead>
+      <tr class="border-b border-[var(--color-border)] text-[var(--color-text-muted)]">
+        <th scope="col" class="text-micro px-5 py-3 font-medium uppercase tracking-wider"
+          >{t.head.concept}</th
+        >
+        <th
+          scope="col"
+          class="text-micro hidden px-5 py-3 font-medium uppercase tracking-wider md:table-cell"
+        >
+          {t.head.who}
+        </th>
+        <th
+          scope="col"
+          class="text-micro px-5 py-3 text-right font-medium uppercase tracking-wider"
+        >
+          {t.head.amount}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        rows.map((row) => (
+          <tr class="border-b border-[var(--color-border-subtle)]">
+            <th scope="row" class={`${cell} px-5 font-normal text-[var(--color-text)]`}>
+              {row.label}
+              {/* Who charges it is the trust device of this table, so on a phone
+                it rides along with the concept instead of disappearing. */}
+              <span class="mt-0.5 block text-[12.5px] text-[var(--color-text-subtle)] md:hidden">
+                {row.who}
+              </span>
+            </th>
+            <td class={`${cell} hidden px-5 text-[var(--color-text-muted)] md:table-cell`}>
+              {row.who}
+            </td>
+            <td
+              class={`${cell} tnum px-5 text-right whitespace-nowrap ${row.strong ? 'font-semibold text-[var(--color-text)]' : 'text-[var(--color-text-muted)]'}`}
+            >
+              {row.amount}
+            </td>
+          </tr>
+        ))
+      }
+      {
+        price && (
+          <tr class="bg-[var(--color-surface-sunken)]">
+            <th
+              scope="row"
+              class="px-5 py-4 text-left text-[15px] font-semibold text-[var(--color-text)]"
+            >
+              {t.total}
+            </th>
+            <td class="hidden md:table-cell" />
+            <td class="tnum px-5 py-4 text-right text-[20px] font-bold whitespace-nowrap text-[var(--color-text)]">
+              {price.total} {t.perMonth}
+            </td>
+          </tr>
+        )
+      }
+    </tbody>
+  </table>
+</div>
+
+<p class="mt-5 max-w-2xl text-[15px] leading-[1.6] text-[var(--color-text-muted)]">{t.note}</p>
+
+{
+  price && (
+    <p class="mt-3 text-[14px] text-[var(--color-text)]">
+      {t.annual.replace('{annual}', price.annual).replace('{instead}', price.annualInstead)}
+    </p>
+  )
+}

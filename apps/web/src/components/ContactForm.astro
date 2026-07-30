@@ -13,7 +13,7 @@ const field =
 
 // Order matters: the two highest-intent reasons come first, so the default
 // selection is already the one most visitors want.
-const reasons = ['demo', 'migration', 'install', 'dev', 'other'] as const;
+const reasons = ['managed', 'demo', 'migration', 'install', 'dev', 'other'] as const;
 ---
 
 <form
@@ -97,6 +97,10 @@ const reasons = ['demo', 'migration', 'install', 'dev', 'other'] as const;
   const form = document.getElementById('contact-form');
   const status = document.getElementById('contact-status');
   if (form && status) {
+    // Links can preselect the reason (/contacto/?reason=managed). An unknown
+    // value simply does not match an <option>, so the default stands.
+    const preset = new URLSearchParams(location.search).get('reason');
+    if (preset) form.reason.value = preset;
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       status.textContent = '…';

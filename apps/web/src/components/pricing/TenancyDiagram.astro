@@ -1,0 +1,63 @@
+---
+/*
+ * The one concept the whole page rests on: your clinic is not a row inside
+ * somebody else's table. Built with borders and dots rather than an SVG so
+ * the labels stay translatable and the thing reflows on a phone by itself.
+ */
+interface Props {
+  usual: { title: string; caption: string; db: string };
+  ours: { title: string; caption: string; you: string; other: string; db: string };
+}
+const { usual, ours } = Astro.props;
+
+const dot = 'h-2 w-2 rounded-full';
+const panel =
+  'flex flex-col rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6';
+---
+
+<div class="grid gap-4 md:grid-cols-2">
+  <!-- The usual model: one database, everybody inside it. -->
+  <figure class={panel}>
+    <figcaption class="text-caption text-[var(--color-text-muted)]">{usual.title}</figcaption>
+    <div
+      class="mt-5 flex-1 rounded-[var(--radius-lg)] border border-dashed border-[var(--color-border-strong)] bg-[var(--color-surface-sunken)] p-4"
+    >
+      <p class="text-micro uppercase tracking-wider text-[var(--color-text-subtle)]">{usual.db}</p>
+      <div class="mt-3 flex flex-wrap gap-1.5" aria-hidden="true">
+        {
+          Array.from({ length: 24 }).map((_, i) => (
+            <span
+              class={`${dot} ${i % 4 === 0 ? 'bg-[var(--color-text-muted)]' : 'bg-[var(--color-border-strong)]'}`}
+            />
+          ))
+        }
+      </div>
+    </div>
+    <p class="mt-4 text-[13px] leading-snug text-[var(--color-text-muted)]">{usual.caption}</p>
+  </figure>
+
+  <!-- Ours: one installation per clinic, nothing in common. -->
+  <figure class={`${panel} ring-1 ring-[var(--color-primary)]`}>
+    <figcaption class="text-caption text-[var(--color-primary)]">{ours.title}</figcaption>
+    <div class="mt-5 flex flex-1 items-stretch gap-3">
+      {
+        [ours.you, ours.other].map((label, idx) => (
+          <div class="flex-1 rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-surface-sunken)] p-4">
+            <p class="text-micro uppercase tracking-wider text-[var(--color-text-subtle)]">
+              {label}
+            </p>
+            <p class="mt-1 text-[12px] text-[var(--color-text-muted)]">{ours.db}</p>
+            <div class="mt-3 flex flex-wrap gap-1.5" aria-hidden="true">
+              {Array.from({ length: 6 }).map(() => (
+                <span
+                  class={`${dot} ${idx === 0 ? 'bg-[var(--color-primary)]' : 'bg-[var(--color-border-strong)]'}`}
+                />
+              ))}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+    <p class="mt-4 text-[13px] leading-snug text-[var(--color-text-muted)]">{ours.caption}</p>
+  </figure>
+</div>
