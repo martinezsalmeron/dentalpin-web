@@ -10,20 +10,27 @@ looks at which slugs already exist under
 `apps/web/src/content/blog/{es,en,fr,pt,de,it,pl,pt-br,es-mx}/`, and takes the next
 unwritten target. What is published *is* the state.
 
-Five targets a week, weekday mornings: two comparisons and three topic
-posts. **That is about twenty files, not five.** A comparison is one
-market, a topic is every language the site publishes, so a normal week is
-2 + 3×7. The two regional variants do not multiply that: they inherit the
-parent's topic posts and only get a file of their own when the market
-changes the answer. The two kinds are written differently — see *Two queues* and
-*Topic posts are guides*.
+Ten targets a week, two runs every weekday: 04:00 UTC takes a comparison,
+16:00 UTC takes a topic post. **That is about forty files, not ten.** A
+comparison is one market, a topic is every language the site publishes, so a
+normal week is 5 + 5×7. The two regional variants do not multiply that: they
+inherit the parent's topic posts and only get a file of their own when the
+market changes the answer. The two kinds are written differently — see *Two
+queues* and *Topic posts are guides*.
+
+**A target is done when it exists in every directory it was due in.** A
+comparison is due in one, a topic post in seven, and a country-locked row in the
+one its own row names. Partial coverage is not done: a topic that reached `es`
+and `en` but not `de` is still the next target, and the run fills the gaps
+instead of starting something new. Without that rule, doubling the cadence just
+means the newest markets get skipped faster and nobody notices, because the
+target looks written.
 
 Every run, one target:
 
-1. Read the day of the week and pick the queue from it — Monday and
-   Wednesday take a comparison, the rest take a topic. See *Two queues*
-   below.
-2. Take the next target in that queue with no post yet.
+1. Read the hour (`date -u +%H`) and pick the queue from it: before 12 a
+   comparison, from 12 on a topic post. The weekday decides nothing.
+2. Take the next target in that queue that is not done.
 3. Research it **this run**, from primary sources. Not from memory.
 4. Write it in the languages that target's row lists. See *Which
    languages a post gets written in* — it is not always all of them.
@@ -402,11 +409,16 @@ never renders dark.
 - Tag with `comparativa` / `comparison` / `comparatif` / `vergleich` /
   `confronto` / `porownanie` plus the vendor slug.
 
-## Two queues, five targets a week
+## Two queues, ten targets a week
 
-Monday and Wednesday are **comparison** posts. Tuesday, Thursday and
-Friday are **topic** posts. The routine reads the day (`date -u +%u`,
-1 = Monday) and picks the queue from it.
+The morning run (04:00 UTC) is a **comparison**. The afternoon run (16:00 UTC)
+is a **topic** post. The routine reads the hour (`date -u +%H`) and picks the
+queue from it, so every weekday produces one of each.
+
+The cadence doubled on 30 July 2026. Nine markets at five targets a week is
+years of waiting for the newest ones, and the arithmetic below is what it fixed.
+What doubled is the number of runs, not the work inside a run: one target per
+run, still derived from the filesystem, still one queue per run.
 
 ### The comparison queue rotates by language
 
@@ -425,11 +437,10 @@ count the comparison slugs already published per locale, take the
 smallest. Nothing new to keep in sync.
 
 The reason is arithmetic. Queue A holds 47 targets grouped by market:
-10 Spanish, 8 English, 7 French, 7 Portuguese, 8 German, 7 Italian. Two a
-week taken in file order means Spanish fills the first five weeks,
-English starts in week six and **Italian would not start until week
-twenty**. The locales that launched most recently, with the emptiest
-blogs, would wait the longest. Rotating gives every language a comparison
+10 Spanish, 8 English, 7 French, 7 Portuguese, 8 German, 7 Italian. Taken in
+file order at five comparisons a week, Spanish fills the first two weeks and
+the locales that launched most recently, with the emptiest blogs, wait the
+longest. Rotating gives every language a comparison
 roughly once a month starting from week one, and Polish, German and
 Italian lead the tie-break because they are the newest locales and their
 blogs are still empty. Polish leads it in principle and gets skipped in
@@ -447,8 +458,8 @@ post in the other markets could not rank. All those sections rank now, so
 grouping by market is only a way to organise the catalogue, not an
 instruction about what to write next.
 
-When the comparison queue runs dry, Monday and Wednesday take topic
-targets too and the site simply publishes five topic targets a week. Do
+When the comparison queue runs dry, the morning run takes a topic target too
+and the site simply publishes ten topic targets a week. Do
 **not** invent a competitor to keep the comparison cadence — a made-up
 or misremembered vendor is the one mistake here that cannot be walked
 back. Adding a new one means verifying it trades, this run, from its own
@@ -477,20 +488,26 @@ A comparison in A4 is done the moment the French post exists, because
 French is the only language that row lists.
 
 **A run writes all of a target's languages, in that run.** A topic target
-produces six files on the day it comes up, not one file on six separate
-days. Splitting it six ways would drop each language to one guide every
-six weeks.
+produces seven files on the day it comes up, not one file on seven separate
+days. Splitting it seven ways would drop each language to one guide every seven
+runs.
 
-The one exception is catch-up. A target published before a locale existed
-is still "next" until the missing language exists, and that run writes
-only what is missing. That is the only case where a run produces a
-subset.
+Two cases produce a subset, and only two:
 
-**German and Italian went live in July 2026 with empty blogs.** Every
-topic target already published is therefore "next" until its German and
-Italian copies exist, and the first topic runs after that date are
-catch-up runs writing two files instead of six. Work down Queue B from
-the top, exactly as if the targets were new.
+- **Catch-up.** A target published before a locale existed is still "next" until
+  the missing language exists, and that run writes only what is missing.
+- **A run that ran out of room.** Seven languages is a lot for one session. A
+  run that cannot finish commits what is complete and names the missing
+  directories in its summary; because a target is only done when every due
+  directory has it, the next run picks the same target and fills the gaps. What
+  is never acceptable is claiming a language that was not written, or
+  machine-translating one to make the count.
+
+**Polish went live in July 2026 with an empty blog, and German and Italian
+started theirs the same month.** Every topic target already published is
+therefore "next" until its Polish copy exists, and the first topic runs after
+that date are catch-up runs writing one or two files instead of seven. Work down
+Queue B from the top, exactly as if the targets were new.
 
 ## Topic posts are guides, not comparisons
 
@@ -764,17 +781,18 @@ official sources, not translations of each other.
 | Cómo dimos a un LLM acceso de escritura a datos clínicos sin que sea una locura | `llm-escritura-datos-clinicos` / `llm-write-access-medical-data` / `llm-acces-ecriture-donnees-cliniques` / `llm-escrita-dados-clinicos` / `llm-schreibzugriff-klinische-daten` / `llm-accesso-in-scrittura-dati-clinici` | *(technical, EN-first — HN/Reddit material)* |
 | Autoalojar software sanitario: lo que nadie te cuenta | `autoalojar-software-sanitario` / `self-hosting-healthcare-software` / `auto-heberger-logiciel-sante` / `alojar-software-de-saude-no-seu-servidor` / `gesundheitssoftware-selbst-hosten` / `self-hosting-software-sanitario` | *(self-hosted / r/selfhosted)* |
 
-**Queue B empties first, and sooner than it looks.** Eighteen targets at
-three a week is about six weeks, while Queue A holds twenty-four weeks of
-work. When Tuesday comes up and there is no unwritten topic left, take a
-comparison instead, which is the mirror of the rule in *Two queues*. That
-keeps the loop producing, but it is a stopgap: five comparisons a week
-drains Queue A in ten weeks and the site stops publishing anything that
-helps a clinic which never installs Dentalpin.
+**Queue B empties first, and at ten targets a week it is close.** Twenty-two
+targets at five a week is under five weeks, and Queue A's 47 at five a week is
+under ten. When an afternoon run comes up and there is no unwritten topic left,
+take a comparison instead, which is the mirror of the rule in *Two queues*. That
+keeps the loop producing, but it is a stopgap: ten comparisons a week drains
+Queue A in five more weeks and the site stops publishing anything that helps a
+clinic which never installs Dentalpin.
 
-So extend this queue before it runs out. Add new targets the same way:
-real searches a dental clinic makes, verified to have intent behind them
-this run, not invented from memory. A target that only makes sense in one
+Doubling the cadence halved both of those runways, so extending this queue is no
+longer a task for later: it is due inside the next month. Add new targets the
+same way: real searches a dental clinic makes, verified to have intent behind
+them this run, not invented from memory. A target that only makes sense in one
 country goes in country-locked, with the country named.
 
 ## Where the routine must stop and ask
