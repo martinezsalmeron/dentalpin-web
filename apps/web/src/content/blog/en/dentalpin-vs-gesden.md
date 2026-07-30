@@ -19,6 +19,10 @@ We make Dentalpin, so we are not neutral. What we can be is accurate.
 
 The question is not which is better. It is whether your clinic has technical people or not.
 
+![Dentalpin home screen: today's appointments, who is in the clinic, overdue payments and recent patients](/screenshots/home.png)
+
+*Dentalpin's home screen, with the demo data the installation ships with.*
+
 ## What Gesden is
 
 Dental practice management software from Infomed, in two product lines:
@@ -39,6 +43,10 @@ Open source dental practice management software. You download the code, install 
 Odontogram, SEPA periodontogram, scheduling, clinical records, treatment plans, budgets with signature capture, invoicing, payments, recalls and reports. Verifactu included as a module rather than a separate product. Plus an AI assistant that carries out tasks against your real data, bounded by each user's permissions.
 
 It is far younger. That matters, and we come back to it.
+
+![Patient record in Dentalpin showing the odontogram, clinical alerts, the active treatment plan and the next appointment](/screenshots/dental-chart.png)
+
+*Patient record: odontogram, clinical alerts, active plan and next appointment on one screen.*
 
 ## Side by side
 
@@ -82,6 +90,10 @@ A product with 14,000 clinics behind it solves problems we do not yet know exist
 - **You want to integrate and automate.** Everything is a documented API, not a closed form.
 - **You want to audit the code** that holds clinical records. It is published.
 - **Verifactu without an extra product.** It is inside.
+
+![Dentalpin invoice list with issued, paid, part paid, overdue and draft states](/screenshots/invoices.png)
+
+*The invoice list, with each one's payment state and what is still outstanding.*
 
 ## What migrating looks like
 

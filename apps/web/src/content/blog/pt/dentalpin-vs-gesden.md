@@ -19,6 +19,10 @@ Nós fazemos o Dentalpin, por isso não somos neutros. O que podemos ser é exat
 
 A pergunta não é qual é melhor. É se a sua clínica tem perfil técnico ou não.
 
+![Página inicial do Dentalpin: consultas de hoje, quem está na clínica, pagamentos vencidos e pacientes recentes](/screenshots/home.png)
+
+*A página inicial do Dentalpin, com os dados de demonstração que vêm na instalação.*
+
 ## O que é o Gesden
 
 Software de gestão para clínica dentária da Infomed, em duas linhas de produto:
@@ -39,6 +43,10 @@ Software de gestão dentária open source. Descarrega o código, instala-o onde 
 Odontograma, periodontograma completo, agenda, histórico clínico, planos de tratamento, orçamentos com assinatura, faturação, pagamentos, reforços de consulta e relatórios. Verifactu incluído como módulo, não como produto à parte. E um assistente de IA que executa tarefas sobre os seus dados reais respeitando as permissões de cada pessoa.
 
 É muito mais novo. Isso conta, e voltamos ao assunto.
+
+![Ficha do paciente no Dentalpin com o odontograma, os alertas clínicos, o plano ativo e a próxima consulta](/screenshots/dental-chart.png)
+
+*Ficha do paciente: odontograma, alertas clínicos, plano ativo e próxima consulta no mesmo sítio.*
 
 ## Cara a cara
 
@@ -82,6 +90,10 @@ Um produto com 14 000 clínicas por trás resolve problemas que nós ainda não 
 - **Quer integrar e automatizar.** É tudo uma API documentada, não um formulário fechado.
 - **Quer poder auditar o código** que guarda históricos clínicos. Está publicado.
 - **Verifactu sem produto adicional.** Vem dentro.
+
+![Lista de faturas do Dentalpin com os estados emitida, paga, pagamento parcial, vencida e rascunho](/screenshots/invoices.png)
+
+*A lista de faturas, com o estado de cobrança de cada uma e o que continua por receber.*
 
 ## Como seria migrar
 

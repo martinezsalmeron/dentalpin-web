@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 268" width="760" height="268" role="img">
+  <!-- Labels are technical tokens only (Caddy, /api/*, Nuxt, PostgreSQL), so
+       the same file serves the post in every language. Colours are the light
+       tokens from packages/tokens: the marketing site never renders dark. -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L8 4 L0 8 z" fill="#94908a" />
+    </marker>
+    <style>
+      .box { fill: #ffffff; stroke: rgba(15,17,22,0.12); stroke-width: 1; rx: 8; }
+      .accent { fill: #e0f2fe; stroke: #0ea5e9; }
+      .t { font-family: Inter, ui-sans-serif, system-ui, sans-serif; font-size: 14px; font-weight: 600; fill: rgba(15,17,22,0.92); }
+      .s { font-family: Inter, ui-sans-serif, system-ui, sans-serif; font-size: 11.5px; font-weight: 500; fill: #94908a; }
+      .link { stroke: #94908a; stroke-width: 1.25; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <!-- docker compose boundary -->
+  <rect x="180" y="16" width="564" height="236" rx="12" fill="none"
+        stroke="rgba(15,17,22,0.16)" stroke-width="1" stroke-dasharray="5 5" />
+  <text class="s" x="198" y="40">docker compose</text>
+
+  <!-- browser -->
+  <rect class="box" x="8" y="112" width="124" height="56" rx="8" />
+  <text class="t" x="70" y="136" text-anchor="middle">https://</text>
+  <text class="s" x="70" y="153" text-anchor="middle">clinica.example</text>
+
+  <path class="link" d="M132 140 H196" />
+  <text class="s" x="164" y="132" text-anchor="middle">:443</text>
+
+  <!-- caddy -->
+  <rect class="box accent" x="204" y="112" width="120" height="56" rx="8" />
+  <text class="t" x="264" y="136" text-anchor="middle">Caddy</text>
+  <text class="s" x="264" y="153" text-anchor="middle">TLS · Let's Encrypt</text>
+
+  <!-- caddy → api -->
+  <path class="link" d="M324 128 H376 V84 H432" />
+  <text class="s" x="392" y="76">/api/*</text>
+
+  <!-- caddy → frontend -->
+  <path class="link" d="M324 152 H376 V200 H432" />
+  <text class="s" x="392" y="192">/*</text>
+
+  <!-- api -->
+  <rect class="box" x="440" y="56" width="120" height="56" rx="8" />
+  <text class="t" x="500" y="80" text-anchor="middle">API</text>
+  <text class="s" x="500" y="97" text-anchor="middle">backend</text>
+  <text class="s" x="500" y="132" text-anchor="middle">volume: uploads</text>
+
+  <!-- frontend -->
+  <rect class="box" x="440" y="172" width="120" height="56" rx="8" />
+  <text class="t" x="500" y="196" text-anchor="middle">Nuxt</text>
+  <text class="s" x="500" y="213" text-anchor="middle">frontend</text>
+
+  <!-- api → postgres -->
+  <path class="link" d="M560 84 H596" />
+
+  <!-- postgres -->
+  <rect class="box" x="604" y="56" width="124" height="56" rx="8" />
+  <text class="t" x="666" y="80" text-anchor="middle">PostgreSQL</text>
+  <text class="s" x="666" y="97" text-anchor="middle">volume: db</text>
+</svg>

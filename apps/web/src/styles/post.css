@@ -77,9 +77,10 @@
 
 /* ─── Lists ─── */
 
-.post ul,
-.post ol {
+/* Tailwind's preflight strips the marker; the posts want it back. */
+.post ul {
   padding-left: 1.5rem;
+  list-style: disc;
 }
 
 .post li {
@@ -92,6 +93,47 @@
 
 .post ul li::marker {
   color: var(--color-primary);
+}
+
+/* ─── Step flows ─── */
+
+/* A numbered list in these posts is always a sequence (an install, a
+   migration), never a ranking. It renders as numbered cards, which is
+   the one diagram every language gets for free: the author writes an
+   ordinary Markdown list. */
+.post ol {
+  counter-reset: step;
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  gap: 0.625rem;
+}
+
+.post ol > li {
+  counter-increment: step;
+  position: relative;
+  margin: 0;
+  padding: 0.875rem 1.125rem 0.875rem 3.25rem;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.post ol > li::before {
+  content: counter(step);
+  position: absolute;
+  top: 0.875rem;
+  left: 1rem;
+  display: grid;
+  place-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-primary-soft);
+  color: var(--color-primary-soft-text);
+  font-size: 0.8125rem;
+  font-weight: 620;
+  font-variant-numeric: tabular-nums;
 }
 
 /* A list whose items open with bold text reads as a set of points, not
@@ -344,6 +386,22 @@
 
 /* ─── Images ─── */
 
+/* Screenshots and diagrams break out past the reading measure, like
+   tables. A screenshot squeezed into 44rem is unreadable. */
+.post p:has(> img) {
+  max-width: min(100%, 58rem);
+}
+
+/* A diagram squeezed onto a phone is unreadable at any zoom. Scroll it
+   sideways instead, the same deal the comparison tables get. */
+.post p:has(> img[src$='.svg']) {
+  overflow-x: auto;
+}
+
+.post img[src$='.svg'] {
+  min-width: 30rem;
+}
+
 .post img {
   display: block;
   width: 100%;
@@ -351,6 +409,22 @@
   margin-block: 2em;
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+/* An all-italic paragraph straight after an image is its caption.
+   Convention, documented in CONTENT-PLAN.md — no HTML in the post. */
+.post p:has(> img) + p:has(> em:only-child) {
+  max-width: min(100%, 58rem);
+  margin-top: -1.5em;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--color-text-subtle);
+}
+
+.post p:has(> img) + p > em:only-child {
+  font-style: normal;
 }
 
 /* ─── Sources ─── */

@@ -19,6 +19,10 @@ Nós fazemos o Dentalpin, por isso não somos neutros. O que podemos ser é exat
 
 A pergunta não é qual é melhor. É se a sua clínica precisa do circuito fiscal e de cobrança brasileiro resolvido dentro do software, ou se isso já vive noutro sítio.
 
+![Página inicial do Dentalpin: consultas de hoje, quem está na clínica, pagamentos vencidos e pacientes recentes](/screenshots/home.png)
+
+*A página inicial do Dentalpin, com os dados de demonstração que vêm na instalação.*
+
 ## O que é o Simples Dental
 
 Software de gestão odontológica na cloud, acessível pelo navegador, por aplicação iOS e Android e por tablet. O site descreve-se como "O melhor Software Odontológico do Brasil" e declara "+11 Anos atendendo o mercado odontológico".
@@ -34,6 +38,10 @@ Software de gestão dentária open source. Descarrega o código, instala-o onde 
 Odontograma, periodontograma completo, agenda, histórico clínico, planos de tratamento, orçamentos com assinatura, faturação, pagamentos, reforços de consulta e relatórios. Uma API REST documentada com OpenAPI, e um agente de IA que executa tarefas sobre os seus dados reais respeitando as permissões de quem pergunta.
 
 É muito mais novo, e no Brasil isso custa mais caro do que noutros mercados. Voltamos a esse ponto.
+
+![Ficha do paciente no Dentalpin com o odontograma, os alertas clínicos, o plano ativo e a próxima consulta](/screenshots/dental-chart.png)
+
+*Ficha do paciente: odontograma, alertas clínicos, plano ativo e próxima consulta no mesmo sítio.*
 
 ## O preço, que aqui dá para comparar a sério
 
@@ -83,6 +91,10 @@ E isto vai a sério, não é formalidade:
 - **A conta cresce com a clínica e não lhe faz sentido.** Não há mensalidade por cadeira nem por dentista, nem recursos que mudam de plano.
 - **Quer poder auditar o código** que guarda históricos clínicos. Está publicado no GitHub.
 - **O circuito fiscal e de cobrança já vive noutro sistema.** Se a contabilidade emite as notas por fora, o argumento mais forte do outro lado deixa de o ser.
+
+![Relatórios de agenda no Dentalpin: total de consultas, taxa de conclusão, faltas, primeiras consultas e horas trabalhadas](/screenshots/reports.png)
+
+*Os relatórios de agenda: total de consultas, taxa de conclusão, faltas e primeiras consultas do período.*
 
 ## Como seria migrar
 

@@ -19,6 +19,10 @@ Nosotros hacemos Dentalpin, así que no somos neutrales. Lo que sí podemos ser 
 
 La pregunta no es cuál es mejor. Es si tu clínica tiene perfil técnico o no.
 
+![Pantalla de inicio de Dentalpin: citas de hoy, quién está en clínica, pagos vencidos y pacientes recientes](/screenshots/home.png)
+
+*La pantalla de inicio de Dentalpin, con los datos de demostración que trae la instalación.*
+
 ## Qué es Gesden
 
 Software de gestión para clínica dental de Infomed, en dos líneas de producto:
@@ -39,6 +43,10 @@ Software de gestión dental open source. Te descargas el código, lo instalas do
 Odontograma, periodontograma SEPA, agenda, historia clínica, planes de tratamiento, presupuestos con firma, facturación, pagos, recalls e informes. Verifactu incluido como módulo, no como producto aparte. Y un asistente de IA que ejecuta tareas sobre tus datos reales respetando los permisos de cada usuario.
 
 Es mucho más joven. Eso importa y volvemos a ello.
+
+![Ficha de paciente en Dentalpin con el odontograma, las alertas clínicas, el plan activo y la próxima cita](/screenshots/dental-chart.png)
+
+*Ficha de paciente: odontograma, alertas clínicas, plan activo y próxima cita en la misma pantalla.*
 
 ## Cara a cara
 
@@ -82,6 +90,10 @@ Un producto con 14.000 clínicas detrás resuelve problemas que nosotros todaví
 - **Quieres integrar y automatizar.** Todo es una API documentada, no un formulario cerrado.
 - **Quieres poder auditar el código** que guarda historias clínicas. Está publicado.
 - **Verifactu sin producto adicional.** Va dentro.
+
+![Listado de facturas de Dentalpin con los estados emitida, pagada, pago parcial, vencida y borrador](/screenshots/invoices.png)
+
+*El listado de facturas, con el estado de cobro de cada una y lo que queda pendiente.*
 
 ## Cómo sería migrar
 

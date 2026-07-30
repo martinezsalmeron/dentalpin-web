@@ -19,6 +19,10 @@ Nous faisons Dentalpin, donc nous ne sommes pas neutres. Ce que nous pouvons êt
 
 La question n'est pas lequel est le meilleur. C'est de savoir si votre cabinet a un profil technique ou non.
 
+![Écran d'accueil de Dentalpin : rendez-vous du jour, qui est au cabinet, paiements en retard et patients récents](/screenshots/home.png)
+
+*L'écran d'accueil de Dentalpin, avec les données de démonstration fournies à l'installation.*
+
 ## Ce qu'est Gesden
 
 Un logiciel de gestion pour cabinet dentaire édité par Infomed, en deux lignes de produits :
@@ -39,6 +43,10 @@ Un logiciel de gestion dentaire open source. Vous téléchargez le code, vous l'
 Odontogramme, parodontogramme complet, agenda, dossier clinique, plans de traitement, devis avec signature, facturation, paiements, relances et rapports. Verifactu inclus comme module, pas comme produit à part. Et un assistant IA qui exécute des tâches sur vos vraies données en respectant les droits de chaque utilisateur.
 
 Il est beaucoup plus jeune. Ça compte, et nous y revenons.
+
+![Fiche patient dans Dentalpin avec le schéma dentaire, les alertes cliniques, le plan de traitement actif et le prochain rendez-vous](/screenshots/dental-chart.png)
+
+*Fiche patient : schéma dentaire, alertes cliniques, plan actif et prochain rendez-vous sur le même écran.*
 
 ## Face à face
 
@@ -82,6 +90,10 @@ Un produit avec 14 000 cabinets derrière lui résout des problèmes dont nous i
 - **Vous voulez intégrer et automatiser.** Tout passe par une API documentée, pas par un formulaire fermé.
 - **Vous voulez pouvoir auditer le code** qui conserve des dossiers cliniques. Il est publié.
 - **Verifactu sans produit supplémentaire.** C'est dedans.
+
+![Liste des factures dans Dentalpin avec les états émise, payée, paiement partiel, en retard et brouillon](/screenshots/invoices.png)
+
+*La liste des factures, avec l'état de règlement de chacune et ce qui reste dû.*
 
 ## À quoi ressemblerait une migration
 

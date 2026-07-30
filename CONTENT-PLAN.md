@@ -203,8 +203,89 @@ internal spec, or to a quoted source.)
 "docker compose up" beats "una experiencia de instalación sencilla,
 rápida y potente".
 
-Everything else — links, code, images, the sources list — is styled
+Everything else — links, code, the sources list — is styled
 automatically. Do not hand-write HTML or CSS classes in a post.
+
+## Every post carries images
+
+A post with no image is not finished. It reads as a wall of text however
+good the prose is, and it is the single most common thing wrong with what
+this loop publishes.
+
+**Three visuals minimum**, spread through the piece and never two in a
+row: one in the first third, one where the post describes what the
+product actually does, one in the second half. Markdown only:
+
+```markdown
+![Alt text saying what is on screen, in the post's language](/screenshots/dental-chart.png)
+
+*One line telling the reader what they are looking at.*
+```
+
+- **The all-italic paragraph straight after an image becomes the
+  caption.** That is the only place a paragraph should be entirely
+  italic.
+- **Alt text describes the screen**, in the post's language. Not
+  "captura de Dentalpin".
+- **A caption describes only what is visible.** Any claim about the
+  product goes in the prose, where the sourcing rule applies to it.
+- **Numbered lists already render as numbered cards**, so every
+  sequential section is a diagram for free. That is one more reason to
+  write the migration and the install as lists.
+
+### The screenshots that exist
+
+In `apps/web/public/screenshots/`, referenced as `/screenshots/<file>`.
+They are the demo clinic, so no real patient data. The interface is in
+Spanish except where noted, and they are used in every language, the
+same way the home page does.
+
+| File | What it shows |
+|---|---|
+| `home.png` | Home: appointments today, who is in the clinic, overdue payments, recent patients |
+| `dental-chart.png` | Patient record: odontogram, clinical alerts, active plan, next appointment |
+| `periodontogram.png` | Full periodontal chart: probing, bleeding, plaque, furcation, mobility, with bleeding and plaque percentages |
+| `treatment-plan.png` | Treatment plan: plan/confirm/quote steps, odontogram, treatments in the plan |
+| `budgets.png` | One quote: treatments, totals, validity, linked plan |
+| `invoices.png` | Invoice list with issued, paid, part paid, overdue and draft states |
+| `patient-timeline.png` | Patient activity feed, filterable by visits, treatments, financial, communications |
+| `patients.png` | Patient info tab: demographics, emergency contact, medical history, allergies |
+| `schedule-day.png` | Schedule, day view, by practitioner and chair |
+| `schedule-week.png` | Schedule, week view |
+| `schedule-canban.png` | Schedule, kanban: upcoming, waiting room, in chair, finished, no-show |
+| `reports.png` | Schedule reports: appointments, completion rate, no-shows, first visits, hours worked |
+| `ai-copilot.png` | The AI assistant with its workflows. **Interface in English**, so it fits an English post best |
+
+Need something not on that list? Take it from the demo, log in as the
+demo admin, and drop the PNG in that directory rather than describing
+the screen in prose.
+
+### Diagrams
+
+In `apps/web/public/diagrams/`, referenced as `/diagrams/<file>.svg`.
+`install-stack.svg` is the self-hosted stack: browser, Caddy, API,
+frontend, PostgreSQL.
+
+One SVG serves all four languages, and it only does that if **every
+label is a technical token that does not translate**: `Caddy`, `/api/*`,
+`Nuxt`, `PostgreSQL`, `:443`. The moment a diagram needs a sentence in
+it, it needs four files, and it is not worth it. Say it in prose instead
+or use a table.
+
+Add a diagram only where a structure is genuinely hard to describe:
+what talks to what, what runs where, what happens in which order. Light
+theme colours, taken from `packages/tokens`, because the marketing site
+never renders dark.
+
+### What does not go in a post
+
+- **No stock photography.** A generic smiling patient or a close-up of
+  teeth adds nothing, and it is exactly the filler that signals a page
+  written to fill a slot.
+- **No AI-generated images.**
+- **No screenshots of a competitor's product.** They are theirs, they
+  go stale, and the comparison does not need them: quote the page and
+  link it, which the sourcing rule already requires.
 
 ## SEO conventions
 

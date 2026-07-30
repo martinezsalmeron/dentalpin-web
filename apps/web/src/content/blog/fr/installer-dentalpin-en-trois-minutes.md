@@ -32,11 +32,19 @@ Pointez un domaine vers la machine, mettez `PUBLIC_URL=https://votre-domaine` et
 
 > **Vous voulez juste regarder avant de décider ?** Mettez `SEED_ON_STARTUP=1` et vous démarrerez avec un cabinet de démonstration : patients, agenda, devis et factures pour essayer. Pour un vrai cabinet, laissez `0`.
 
+![Écran d'accueil de Dentalpin avec le cabinet de démonstration : rendez-vous du jour, qui est au cabinet, paiements en retard et patients récents](/screenshots/home.png)
+
+*Voilà ce que vous voyez en entrant avec `SEED_ON_STARTUP=1`, sans avoir créé un seul patient.*
+
 ## Pourquoi Caddy devant
 
 Les deux versions précédentes exposaient le backend et le frontend sur des ports différents, et celui qui installait devait résoudre seul le proxy inverse, le TLS et la liste des origines autorisées pour CORS. Trois occasions de se tromper avant de voir le premier écran.
 
 Maintenant, un conteneur Caddy sert tout depuis une seule origine : `/api/*` va au backend, le reste à l'interface. Le navigateur ne parle jamais à deux endroits, donc **CORS cesse d'être un problème**. Et Caddy demande le certificat à Let's Encrypt sans que personne ait à y penser.
+
+![Schéma de l'installation : le navigateur atteint Caddy en HTTPS, Caddy route /api/* vers le backend et le reste vers le frontend Nuxt, et le backend parle à PostgreSQL](/diagrams/install-stack.svg)
+
+*Quatre conteneurs et un seul port ouvert. La seule chose exposée sur internet, c'est Caddy.*
 
 ## Une image pour toutes les installations
 
