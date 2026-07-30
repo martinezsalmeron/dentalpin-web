@@ -4,9 +4,10 @@ import fr from './fr.json';
 import pt from './pt.json';
 import de from './de.json';
 import it from './it.json';
+import pl from './pl.json';
 import { MODULES, moduleSlug } from '~/data/modules';
 
-export const LOCALES = ['es', 'en', 'fr', 'pt', 'de', 'it'] as const;
+export const LOCALES = ['es', 'en', 'fr', 'pt', 'de', 'it', 'pl'] as const;
 export type Locale = (typeof LOCALES)[number];
 export const DEFAULT_LOCALE: Locale = 'es';
 
@@ -19,6 +20,7 @@ const DICTS: Record<Locale, Dict> = {
   pt: pt as unknown as Dict,
   de: de as unknown as Dict,
   it: it as unknown as Dict,
+  pl: pl as unknown as Dict,
 };
 
 /**
@@ -34,6 +36,7 @@ export const HTML_LANG: Record<Locale, string> = {
   pt: 'pt',
   de: 'de-DE',
   it: 'it-IT',
+  pl: 'pl-PL',
 };
 export const OG_LOCALE: Record<Locale, string> = {
   es: 'es_ES',
@@ -42,6 +45,7 @@ export const OG_LOCALE: Record<Locale, string> = {
   pt: 'pt_PT',
   de: 'de_DE',
   it: 'it_IT',
+  pl: 'pl_PL',
 };
 export const DATE_LOCALE: Record<Locale, string> = {
   es: 'es-ES',
@@ -50,6 +54,7 @@ export const DATE_LOCALE: Record<Locale, string> = {
   pt: 'pt',
   de: 'de-DE',
   it: 'it-IT',
+  pl: 'pl-PL',
 };
 
 export function isLocale(value: string | undefined): value is Locale {
@@ -93,6 +98,7 @@ export const LOCALE_PATHS = {
     pt: 'manifesto',
     de: 'manifest',
     it: 'manifesto',
+    pl: 'manifest',
   },
   features: {
     es: 'funcionalidades',
@@ -101,6 +107,7 @@ export const LOCALE_PATHS = {
     pt: 'funcionalidades',
     de: 'funktionen',
     it: 'funzionalita',
+    pl: 'funkcje',
   },
   technology: {
     es: 'tecnologia',
@@ -109,8 +116,17 @@ export const LOCALE_PATHS = {
     pt: 'tecnologia',
     de: 'technologie',
     it: 'tecnologia',
+    pl: 'technologia',
   },
-  pricing: { es: 'precios', en: 'pricing', fr: 'tarifs', pt: 'precos', de: 'preise', it: 'prezzi' },
+  pricing: {
+    es: 'precios',
+    en: 'pricing',
+    fr: 'tarifs',
+    pt: 'precos',
+    de: 'preise',
+    it: 'prezzi',
+    pl: 'cennik',
+  },
   contact: {
     es: 'contacto',
     en: 'contact',
@@ -118,8 +134,9 @@ export const LOCALE_PATHS = {
     pt: 'contacto',
     de: 'kontakt',
     it: 'contatti',
+    pl: 'kontakt',
   },
-  blog: { es: 'blog', en: 'blog', fr: 'blog', pt: 'blog', de: 'blog', it: 'blog' },
+  blog: { es: 'blog', en: 'blog', fr: 'blog', pt: 'blog', de: 'blog', it: 'blog', pl: 'blog' },
   legalPrivacy: {
     es: 'legal/privacidad',
     en: 'legal/privacy',
@@ -127,6 +144,7 @@ export const LOCALE_PATHS = {
     pt: 'legal/privacidade',
     de: 'legal/datenschutz',
     it: 'legal/privacy',
+    pl: 'legal/prywatnosc',
   },
   legalTerms: {
     es: 'legal/terminos',
@@ -135,6 +153,7 @@ export const LOCALE_PATHS = {
     pt: 'legal/termos',
     de: 'legal/nutzungsbedingungen',
     it: 'legal/termini',
+    pl: 'legal/regulamin',
   },
   legalCookies: {
     es: 'legal/cookies',
@@ -143,6 +162,7 @@ export const LOCALE_PATHS = {
     pt: 'legal/cookies',
     de: 'legal/cookies',
     it: 'legal/cookies',
+    pl: 'legal/cookies',
   },
 } as const;
 
@@ -182,7 +202,7 @@ export function translatePath(pathname: string, target: Locale): string {
   if (!tail || key === 'blog') return pagePath(target, key);
 
   if (key === 'features') {
-    const mod = MODULES.find((m) => [m.slug, m.slugEn, m.slugFr, m.slugPt, m.slugDe, m.slugIt].includes(tail));
+    const mod = MODULES.find((m) => [m.slug, m.slugEn, m.slugFr, m.slugPt, m.slugDe, m.slugIt, m.slugPl].includes(tail));
     if (mod) return pagePath(target, key, moduleSlug(mod, target));
   }
   return pagePath(target, key, tail);

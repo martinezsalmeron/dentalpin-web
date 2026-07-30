@@ -27,6 +27,7 @@ export interface ModuleEntry {
   slugPt?: string;
   slugDe?: string;
   slugIt?: string;
+  slugPl?: string;
   domain: ModuleDomain;
   icon: ModuleIcon;
   title: Localised;
@@ -50,9 +51,10 @@ export const MODULES: ModuleEntry[] = [
     slugPt: 'odontograma',
     slugDe: 'zahnschema',
     slugIt: 'odontogramma',
+    slugPl: 'diagram-zebowy',
     domain: 'clinical',
     icon: 'tooth',
-    title: { es: 'Odontograma', en: 'Odontogram', fr: 'Odontogramme', pt: 'Odontograma', de: 'Zahnschema', it: 'Odontogramma' },
+    title: { es: 'Odontograma', en: 'Odontogram', fr: 'Odontogramme', pt: 'Odontograma', de: 'Zahnschema', it: 'Odontogramma', pl: 'Diagram zębowy' },
     tagline: {
       es: 'Un dental chart interactivo con dentición real, superficies y grupos.',
       en: 'An interactive dental chart with real dentition, surfaces and groups.',
@@ -60,6 +62,7 @@ export const MODULES: ModuleEntry[] = [
       pt: 'Um esquema dentário interativo com dentição real, faces e grupos.',
       de: 'Ein interaktives Zahnschema mit echter Dentition, Flächen und Gruppen.',
       it: 'Un odontogramma interattivo con dentizione reale, superfici e gruppi.',
+      pl: 'Interaktywny diagram zębowy z prawdziwym uzębieniem, powierzchniami i grupami.',
     },
     description: {
       es: 'El corazón clínico de Dentalpin. SVG interactivo con notación FDI, seguimiento por superficie, grupos multi-diente, puentes, ortodoncia y dentición decidua. Pensado para usarse en consulta, no para impresionar en una demo.',
@@ -68,6 +71,7 @@ export const MODULES: ModuleEntry[] = [
       pt: 'O coração clínico do Dentalpin. SVG interativo com notação FDI, seguimento face a face, grupos de vários dentes, pontes, ortodontia e dentição decídua. Feito para se usar na cadeira, não para impressionar numa demonstração.',
       de: 'Das klinische Herz von Dentalpin. Interaktives SVG mit FDI-Schema, Erfassung je Fläche, Gruppen über mehrere Zähne, Brücken, Kieferorthopädie und Milchgebiss. Gebaut für den Einsatz am Stuhl, nicht für den Eindruck in einer Demo.',
       it: 'Il cuore clinico di Dentalpin. SVG interattivo con numerazione FDI, rilevazione per superficie, gruppi multi-dente, ponti, ortodonzia e dentizione decidua. Pensato per essere usato alla poltrona, non per fare scena in una demo.',
+      pl: 'Kliniczne serce Dentalpina. Interaktywny SVG z notacją FDI, śledzeniem po powierzchniach, grupami wielu zębów, mostami, ortodoncją i zębami mlecznymi. Pomyślany do pracy przy pacjencie, nie na efekt w demo.',
     },
     features: [
       {
@@ -77,6 +81,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Notação FDI permanente (11–48) e decídua (51–85).',
         de: 'FDI-Schema für bleibende Zähne (11–48) und Milchzähne (51–85).',
         it: 'Numerazione FDI permanente (11–48) e decidua (51–85).',
+        pl: 'Notacja FDI dla zębów stałych (11–48) i mlecznych (51–85).',
       },
       {
         es: 'Estado por superficie: mesial, distal, oclusal/incisal, vestibular, lingual/palatina.',
@@ -85,6 +90,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Estado por face: mesial, distal, oclusal/incisal, vestibular, lingual/palatina.',
         de: 'Zustand je Fläche: mesial, distal, okklusal/inzisal, vestibulär, lingual/palatinal.',
         it: 'Stato per superficie: mesiale, distale, occlusale/incisale, vestibolare, linguale/palatale.',
+        pl: 'Stan po powierzchniach: mezjalna, dystalna, okluzyjna/sieczna, przedsionkowa, językowa/podniebienna.',
       },
       {
         es: 'Tratamientos existentes vs. planificados.',
@@ -93,6 +99,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Tratamentos existentes e tratamentos planeados, lado a lado.',
         de: 'Bestehende und geplante Behandlungen im Vergleich.',
         it: 'Trattamenti esistenti e trattamenti pianificati.',
+        pl: 'Leczenie wykonane a planowane.',
       },
       {
         es: 'Grupos multi-diente: puentes, férulas, múltiples carillas o coronas.',
@@ -101,6 +108,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Grupos de vários dentes: pontes, contenções, séries de facetas ou de coroas.',
         de: 'Gruppen über mehrere Zähne: Brücken, Schienen, mehrere Veneers oder Kronen.',
         it: 'Gruppi multi-dente: ponti, splintaggi, più faccette o corone.',
+        pl: 'Grupy wielu zębów: mosty, szyny, kilka licówek albo koron.',
       },
       {
         es: 'Edición de puentes: roles, voladizos, conectores, iconos variantes.',
@@ -109,6 +117,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Edição de pontes: papéis, cantiléveres, conectores, variantes de ícones.',
         de: 'Brücken bearbeiten: Rollen, Freiendglieder, Verbinder, Icon-Varianten.',
         it: 'Modifica dei ponti: ruoli, estensioni a sbalzo, connettori, varianti di icona.',
+        pl: 'Edycja mostów: role, przęsła wiszące, łączniki, warianty ikon.',
       },
       {
         es: 'Iconos SVG realistas (tornillo implante, cámara pulpar lateral).',
@@ -117,6 +126,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Ícones SVG realistas (parafuso de implante, câmara pulpar em corte).',
         de: 'Realistische SVG-Icons (Implantatschraube, Pulpakammer im Schnitt).',
         it: 'Icone SVG realistiche (vite implantare, camera pulpare in sezione).',
+        pl: 'Realistyczne ikony SVG (śruba implantu, boczna komora miazgi).',
       },
       {
         es: 'Vistas lateral y oclusal armonizadas.',
@@ -125,6 +135,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Vistas lateral e oclusal com a mesma linguagem gráfica.',
         de: 'Seiten- und Okklusalansicht in derselben Bildsprache.',
         it: 'Viste laterale e occlusale con lo stesso linguaggio grafico.',
+        pl: 'Zgrane ze sobą widoki boczny i okluzyjny.',
       },
       {
         es: 'Historial de cambios por diente: quién, qué y cuándo.',
@@ -133,6 +144,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Histórico de alterações dente a dente: quem, o quê e quando.',
         de: 'Änderungsverlauf je Zahn: wer, was und wann.',
         it: 'Storico delle modifiche dente per dente: chi, cosa e quando.',
+        pl: 'Historia zmian dla każdego zęba: kto, co i kiedy.',
       },
       {
         es: 'Integrado con catálogo de tratamientos y planes.',
@@ -141,6 +153,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Ligado ao catálogo de tratamentos e aos planos.',
         de: 'Verbunden mit Behandlungskatalog und Behandlungsplänen.',
         it: 'Collegato al catalogo dei trattamenti e ai piani di cura.',
+        pl: 'Zintegrowany z katalogiem zabiegów i planami leczenia.',
       },
     ],
     screenshot: 'dental-chart.png',
@@ -152,9 +165,10 @@ export const MODULES: ModuleEntry[] = [
     slugPt: 'periodontograma',
     slugDe: 'parodontalstatus',
     slugIt: 'parodontogramma',
+    slugPl: 'periodontogram',
     domain: 'clinical',
     icon: 'chart',
-    title: { es: 'Periodontograma', en: 'Periodontogram', fr: 'Parodontogramme', pt: 'Periodontograma', de: 'Parodontalstatus', it: 'Parodontogramma' },
+    title: { es: 'Periodontograma', en: 'Periodontogram', fr: 'Parodontogramme', pt: 'Periodontograma', de: 'Parodontalstatus', it: 'Parodontogramma', pl: 'Periodontogram' },
     tagline: {
       es: 'Exploración periodontal SEPA, con histórico inmutable e índices al cerrar.',
       en: 'SEPA periodontal exam, with an immutable history and indices on close.',
@@ -162,6 +176,7 @@ export const MODULES: ModuleEntry[] = [
       pt: 'Exame periodontal completo, histórico inalterável e índices calculados ao fechar.',
       de: 'Vollständiger Parodontalstatus, mit unveränderbarem Verlauf und Indizes beim Abschluss.',
       it: 'Esame parodontale completo, con storico immutabile e indici alla chiusura.',
+      pl: 'Badanie periodontologiczne SEPA, z niezmienną historią i wskaźnikami liczonymi przy zamknięciu.',
     },
     description: {
       es: 'Una exploración periodontal completa que vive como sub-pestaña dentro del modo Diagnóstico, junto al odontograma. Cada sesión es un snapshot fechado e inmutable: capturas profundidad de sondaje, margen, sangrado, placa y supuración por sitio, y comparas la evolución del paciente con un slider de histórico. Los índices SEPA (BoP, PI, CAL medio, bolsas ≥5 mm) se computan al cerrar y quedan congelados en el snapshot. Módulo opcional, se instala desde Admin → Módulos.',
@@ -170,6 +185,7 @@ export const MODULES: ModuleEntry[] = [
       pt: 'Um exame periodontal completo, em subseparador do modo Diagnóstico, mesmo ao lado do odontograma. Cada sessão é um instantâneo datado e inalterável: regista profundidade de sondagem, nível gengival, hemorragia, placa e supuração sítio a sítio, e depois compara a evolução do paciente com um cursor de histórico. Os índices (hemorragia à sondagem, índice de placa, NIC médio, bolsas ≥ 5 mm) são calculados ao fechar e ficam congelados no instantâneo. Módulo opcional, instala-se em Admin → Módulos.',
       de: 'Ein vollständiger Parodontalstatus, als Unterreiter im Modus Diagnostik, direkt neben dem Zahnschema. Jede Sitzung ist eine datierte, unveränderbare Momentaufnahme: Sie erfassen Sondierungstiefe, Gingivarand, Blutung, Plaque und Pusaustritt je Messstelle und vergleichen den Verlauf des Patienten mit einem Verlaufsregler. Die Indizes (Blutung auf Sondieren, Plaqueindex, mittlerer Attachmentverlust, Taschen ≥ 5 mm) werden beim Abschluss berechnet und in der Momentaufnahme eingefroren. Optionales Modul, Installation über Admin → Module.',
       it: 'Un esame parodontale completo, in una sotto-scheda della modalità Diagnosi, accanto all’odontogramma. Ogni seduta è un’istantanea datata e immutabile: rilevi profondità di sondaggio, margine gengivale, sanguinamento, placca e suppurazione sito per sito, poi confronti l’evoluzione del paziente con un cursore dello storico. Gli indici (sanguinamento al sondaggio, indice di placca, CAL medio, tasche ≥ 5 mm) vengono calcolati alla chiusura e congelati nell’istantanea. Modulo opzionale, si installa da Admin → Moduli.',
+      pl: 'Pełne badanie periodontologiczne, które żyje jako podzakładka w trybie Diagnostyka, obok diagramu zębowego. Każda sesja to datowany, niezmienny snapshot: zapisujesz głębokość sondowania, margines dziąsła, krwawienie, płytkę i wysięk ropny dla każdego punktu, a postęp pacjenta porównujesz suwakiem historii. Wskaźniki SEPA (BoP, PI, średni CAL, kieszonki ≥5 mm) liczą się przy zamknięciu i zostają zamrożone w snapshocie. Moduł opcjonalny, instaluje się z Admin → Moduły.',
     },
     features: [
       {
@@ -179,6 +195,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Registo em 6 sítios por dente (MV, V, DV, ML, L, DL): sondagem, nível gengival, hemorragia, placa e supuração.',
         de: 'Erfassung je Zahn an 6 Messstellen (mv, v, dv, ml, l, dl): Sondierung, Gingivarand, Blutung, Plaque und Pusaustritt.',
         it: 'Rilevazione per dente su 6 siti (MV, V, DV, ML, L, DL): sondaggio, margine, sanguinamento, placca e suppurazione.',
+        pl: 'Zapis SEPA dla każdego zęba i 6 punktów (MV, V, DV, ML, L, DL): sondowanie, margines, krwawienie, płytka i wysięk ropny.',
       },
       {
         es: 'Movilidad Miller (0–3), furca vestibular y lingual/palatina, y anchura de encía queratinizada.',
@@ -187,6 +204,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Mobilidade segundo Miller (0–3), envolvimento de furca vestibular e lingual/palatina, e altura de gengiva queratinizada.',
         de: 'Lockerungsgrad nach Miller (0–3), Furkationsbefall vestibulär und lingual/palatinal sowie Breite der keratinisierten Gingiva.',
         it: 'Mobilità secondo Miller (0–3), forcazione vestibolare e linguale/palatale e ampiezza della gengiva cheratinizzata.',
+        pl: 'Ruchomość w skali Millera (0–3), furkacja przedsionkowa i językowa/podniebienna oraz szerokość dziąsła keratynizowanego.',
       },
       {
         es: 'Pronóstico individual por diente: bueno, medio, dudoso o sin esperanza.',
@@ -195,6 +213,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Prognóstico dente a dente: bom, razoável, duvidoso ou sem prognóstico.',
         de: 'Einzelprognose je Zahn: gut, mittel, fraglich oder hoffnungslos.',
         it: 'Prognosi individuale per dente: buona, media, dubbia o senza speranza.',
+        pl: 'Rokowanie dla każdego zęba: dobre, średnie, wątpliwe albo bez rokowania.',
       },
       {
         es: 'Chart SEPA en 4 filas con heatmap y marcadores pastel.',
@@ -203,6 +222,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Registo em 4 linhas, mapa térmico e marcadores pastel.',
         de: 'Befundgrafik in 4 Zeilen mit Heatmap und pastellfarbenen Markern.',
         it: 'Grafico su 4 righe con heatmap e marcatori pastello.',
+        pl: 'Karta SEPA w 4 wierszach z heatmapą i pastelowymi znacznikami.',
       },
       {
         es: 'Edición tipo hoja de cálculo: navegas y editas cada celda inline.',
@@ -211,6 +231,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Preenchimento tipo folha de cálculo: navega e preenche cada célula pelo teclado.',
         de: 'Bearbeiten wie in einer Tabelle: Sie springen von Zelle zu Zelle und tragen direkt ein.',
         it: 'Modifica come in un foglio di calcolo: navighi e compili ogni cella al volo.',
+        pl: 'Edycja jak w arkuszu: przechodzisz i edytujesz każdą komórkę na miejscu.',
       },
       {
         es: 'Autoguardado a 600 ms, con guard de cambios pendientes al cerrar la pestaña.',
@@ -219,6 +240,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Gravação automática a 600 ms, com aviso se fechar o separador sem ter guardado tudo.',
         de: 'Automatisches Speichern nach 600 ms, mit Warnung bei offenen Änderungen beim Schließen des Reiters.',
         it: 'Salvataggio automatico a 600 ms, con avviso sulle modifiche non salvate quando chiudi la scheda.',
+        pl: 'Autozapis po 600 ms, z ostrzeżeniem o niezapisanych zmianach przy zamykaniu zakładki.',
       },
       {
         es: 'Prerellenado de implantes y ausentes leyendo el odontograma del paciente.',
@@ -227,6 +249,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Pré-preenchimento de implantes e ausências a partir do odontograma do paciente.',
         de: 'Implantate und fehlende Zähne werden aus dem Zahnschema des Patienten vorbelegt.',
         it: 'Precompilazione di impianti e denti assenti leggendo l’odontogramma del paziente.',
+        pl: 'Wstępne wypełnienie implantów i braków na podstawie diagramu zębowego pacjenta.',
       },
       {
         es: 'Slider de histórico: cada nodo es un snapshot cerrado e inmutable.',
@@ -235,6 +258,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Cursor de histórico: cada ponto é um instantâneo fechado e inalterável.',
         de: 'Verlaufsregler: jeder Knoten ist eine abgeschlossene, unveränderbare Momentaufnahme.',
         it: 'Cursore dello storico: ogni nodo è un’istantanea chiusa e immutabile.',
+        pl: 'Suwak historii: każdy węzeł to zamknięty, niezmienny snapshot.',
       },
       {
         es: 'Índices SEPA (BoP %, PI %, CAL medio, bolsas ≥5 mm) computados y congelados al cerrar.',
@@ -243,6 +267,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Índices (hemorragia à sondagem %, índice de placa %, NIC médio, bolsas ≥ 5 mm) calculados e congelados ao fechar.',
         de: 'Indizes (BOP %, PI %, mittlerer CAL, Taschen ≥5 mm) werden beim Abschluss berechnet und eingefroren.',
         it: 'Indici (BoP %, PI %, CAL medio, tasche ≥5 mm) calcolati e congelati alla chiusura.',
+        pl: 'Wskaźniki SEPA (BoP %, PI %, średni CAL, kieszonki ≥5 mm) liczone i zamrażane przy zamknięciu.',
       },
       {
         es: 'Render de fixture de implante en lugar de la raíz natural cuando el diente está implantado.',
@@ -251,6 +276,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'O corpo do implante substitui a raiz natural no desenho quando o dente está implantado.',
         de: 'Darstellung des Implantatkörpers statt der natürlichen Wurzel, wenn der Zahn implantatgetragen ist.',
         it: 'Rendering della fixture implantare al posto della radice naturale quando il dente è implantato.',
+        pl: 'Render wszczepu implantu w miejsce naturalnego korzenia, kiedy ząb jest implantowany.',
       },
       {
         es: 'Dark mode y layout pensado para tablet horizontal en sillón.',
@@ -259,6 +285,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Modo escuro e disposição pensada para um tablet na horizontal, junto à cadeira.',
         de: 'Dunkler Modus und ein Layout, das für das quer gehaltene Tablet am Stuhl gedacht ist.',
         it: 'Modalità scura e layout pensato per il tablet in orizzontale alla poltrona.',
+        pl: 'Tryb ciemny i układ pomyślany na tablet w poziomie przy fotelu.',
       },
     ],
     screenshot: 'periodontogram.png',
@@ -270,9 +297,10 @@ export const MODULES: ModuleEntry[] = [
     slugPt: 'pacientes',
     slugDe: 'patienten',
     slugIt: 'pazienti',
+    slugPl: 'pacjenci',
     domain: 'clinical',
     icon: 'shield',
-    title: { es: 'Pacientes', en: 'Patients', fr: 'Patients', pt: 'Pacientes', de: 'Patienten', it: 'Pazienti' },
+    title: { es: 'Pacientes', en: 'Patients', fr: 'Patients', pt: 'Pacientes', de: 'Patienten', it: 'Pazienti', pl: 'Pacjenci' },
     tagline: {
       es: 'Una ficha completa, con perfil médico, alergias y alertas clínicas.',
       en: 'One complete record — medical profile, allergies and clinical alerts.',
@@ -280,6 +308,7 @@ export const MODULES: ModuleEntry[] = [
       pt: 'Uma ficha completa: perfil médico, alergias e alertas clínicos.',
       de: 'Eine vollständige Akte, mit Anamnese, Allergien und klinischen Warnhinweisen.',
       it: 'Una scheda completa, con anamnesi, allergie e alert clinici.',
+      pl: 'Pełna karta, z profilem medycznym, alergiami i alertami klinicznymi.',
     },
     description: {
       es: 'Ficha demográfica y clínica unificada. Las alertas aparecen donde hacen falta, no escondidas en una pestaña. Tutor legal para menores, datos de aseguradora y consentimiento RGPD, todo donde lo esperas.',
@@ -288,6 +317,7 @@ export const MODULES: ModuleEntry[] = [
       pt: 'Uma ficha única, administrativa e clínica. Os alertas aparecem onde fazem falta, não escondidos no fundo de um separador. Representante legal para menores, dados de seguradora e consentimento RGPD, exatamente onde os procura.',
       de: 'Stammdaten und klinische Daten in einer Akte. Warnhinweise erscheinen dort, wo sie gebraucht werden, nicht versteckt in einem Reiter. Gesetzliche Vertretung bei Minderjährigen, Versicherungsdaten und DSGVO-Einwilligung, alles da, wo Sie es erwarten.',
       it: 'Scheda anagrafica e clinica unificata. Gli alert compaiono dove servono, non nascosti in una scheda. Tutore legale per i minori, dati dell’assicurazione e consenso GDPR, tutto dove te lo aspetti.',
+      pl: 'Zunifikowana karta demograficzna i kliniczna. Alerty pojawiają się tam, gdzie są potrzebne, a nie schowane w zakładce. Opiekun prawny dla niepełnoletnich, dane ubezpieczyciela i zgoda RODO, wszystko tam, gdzie tego szukasz.',
     },
     features: [
       {
@@ -297,6 +327,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Perfil administrativo completo: nome, documento de identificação, data de nascimento, contactos, endereço.',
         de: 'Vollständige Stammdaten: Name, Ausweisnummer, Geburtsdatum, Kontakt, Adresse.',
         it: 'Anagrafica completa: nome, documento, data di nascita, contatti, indirizzo.',
+        pl: 'Pełny profil demograficzny: imię i nazwisko, PESEL, data urodzenia, kontakt, adres.',
       },
       {
         es: 'Perfil médico con alergias, medicaciones, condiciones crónicas y alertas clínicas.',
@@ -305,6 +336,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Perfil médico: alergias, medicação atual, doenças crónicas e alertas clínicos.',
         de: 'Medizinisches Profil mit Allergien, Medikation, chronischen Erkrankungen und klinischen Warnhinweisen.',
         it: 'Profilo medico con allergie, farmaci, patologie croniche e alert clinici.',
+        pl: 'Profil medyczny z alergiami, lekami, chorobami przewlekłymi i alertami klinicznymi.',
       },
       {
         es: 'Tutor legal para pacientes menores.',
@@ -313,6 +345,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Representante legal para pacientes menores.',
         de: 'Gesetzliche Vertretung bei minderjährigen Patienten.',
         it: 'Tutore legale per i pazienti minorenni.',
+        pl: 'Opiekun prawny dla pacjentów niepełnoletnich.',
       },
       {
         es: 'Información de aseguradora (proveedor, póliza, cobertura).',
@@ -321,9 +354,10 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Informação de seguradora (entidade, número de apólice, cobertura).',
         de: 'Versicherungsdaten (Anbieter, Police, Leistungsumfang).',
         it: 'Informazioni sull’assicurazione (compagnia, polizza, copertura).',
+        pl: 'Dane ubezpieczyciela (firma, polisa, zakres).',
       },
-      { es: 'Registro de consentimiento RGPD.', en: 'GDPR consent tracking.', fr: 'Suivi du consentement RGPD.', pt: 'Registo do consentimento RGPD.', de: 'Dokumentation der DSGVO-Einwilligung.', it: 'Registrazione del consenso GDPR.' },
-      { es: 'Notas internas libres.', en: 'Free-form internal notes.', fr: 'Notes internes en texte libre.', pt: 'Notas internas em texto livre.', de: 'Freie interne Notizen.', it: 'Note interne in testo libero.' },
+      { es: 'Registro de consentimiento RGPD.', en: 'GDPR consent tracking.', fr: 'Suivi du consentement RGPD.', pt: 'Registo do consentimento RGPD.', de: 'Dokumentation der DSGVO-Einwilligung.', it: 'Registrazione del consenso GDPR.', pl: 'Rejestr zgód RODO.' },
+      { es: 'Notas internas libres.', en: 'Free-form internal notes.', fr: 'Notes internes en texte libre.', pt: 'Notas internas em texto livre.', de: 'Freie interne Notizen.', it: 'Note interne in testo libero.', pl: 'Wewnętrzne notatki w dowolnej formie.' },
       {
         es: 'Búsqueda con autocompletado por nombre o teléfono.',
         en: 'Search with autocomplete by name or phone.',
@@ -331,6 +365,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Pesquisa com sugestões por nome ou por telefone.',
         de: 'Suche mit Autovervollständigung nach Name oder Telefonnummer.',
         it: 'Ricerca con completamento automatico per nome o telefono.',
+        pl: 'Wyszukiwanie z podpowiedziami po nazwisku albo telefonie.',
       },
       {
         es: 'Ciclo de vida: activo, inactivo, archivado (soft-delete).',
@@ -339,6 +374,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Ciclo de vida: ativo, inativo, arquivado (eliminação reversível).',
         de: 'Lebenszyklus: aktiv, inaktiv, archiviert (Soft Delete).',
         it: 'Ciclo di vita: attivo, inattivo, archiviato (soft-delete).',
+        pl: 'Cykl życia: aktywny, nieaktywny, zarchiwizowany (soft-delete).',
       },
     ],
     screenshot: 'patients.png',
@@ -350,9 +386,10 @@ export const MODULES: ModuleEntry[] = [
     slugPt: 'historico-clinico',
     slugDe: 'patientenakte',
     slugIt: 'cartella-clinica',
+    slugPl: 'dokumentacja-medyczna',
     domain: 'clinical',
     icon: 'shield',
-    title: { es: 'Historial clínico', en: 'Clinical history', fr: 'Dossier clinique', pt: 'Histórico clínico', de: 'Patientenakte', it: 'Cartella clinica' },
+    title: { es: 'Historial clínico', en: 'Clinical history', fr: 'Dossier clinique', pt: 'Histórico clínico', de: 'Patientenakte', it: 'Cartella clinica', pl: 'Dokumentacja medyczna' },
     tagline: {
       es: 'Datos clínicos normalizados y un timeline que se escribe solo.',
       en: 'Structured clinical data and a timeline that writes itself.',
@@ -360,6 +397,7 @@ export const MODULES: ModuleEntry[] = [
       pt: 'Dados clínicos estruturados e uma cronologia que se escreve sozinha.',
       de: 'Normierte klinische Daten und ein Verlauf, der sich von selbst schreibt.',
       it: 'Dati clinici normalizzati e una timeline che si scrive da sola.',
+      pl: 'Znormalizowane dane kliniczne i timeline, który zapisuje się sam.',
     },
     description: {
       es: 'Datos clínicos separados del registro administrativo. El timeline se alimenta de eventos: cada cita, tratamiento, presupuesto o documento aparece automáticamente, en orden, sin que nadie tenga que acordarse de añadirlo.',
@@ -368,6 +406,7 @@ export const MODULES: ModuleEntry[] = [
       pt: 'Os dados clínicos vivem à parte do registo administrativo. A cronologia alimenta-se de eventos: cada consulta, tratamento, orçamento ou documento entra sozinho, por ordem, sem ninguém ter de se lembrar.',
       de: 'Klinische Daten getrennt von der Verwaltung. Der Verlauf speist sich aus Events: jeder Termin, jede Behandlung, jeder Kostenvoranschlag und jedes Dokument erscheint automatisch, in der richtigen Reihenfolge, ohne dass jemand daran denken muss.',
       it: 'Dati clinici separati dal registro amministrativo. La timeline si alimenta di eventi: ogni appuntamento, trattamento, preventivo o documento compare in automatico, in ordine, senza che nessuno debba ricordarsi di aggiungerlo.',
+      pl: 'Dane kliniczne oddzielone od rejestru administracyjnego. Timeline karmi się zdarzeniami: każda wizyta, zabieg, kosztorys albo dokument pojawia się automatycznie, po kolei, bez tego, żeby ktokolwiek musiał pamiętać o dopisaniu.',
     },
     features: [
       {
@@ -377,6 +416,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Alergias, medicação e diagnósticos estruturados.',
         de: 'Allergien, Medikation und Diagnosen, strukturiert erfasst.',
         it: 'Allergie, farmaci e diagnosi in forma strutturata.',
+        pl: 'Alergie, leki i rozpoznania w formie ustrukturyzowanej.',
       },
       {
         es: 'Flags y alertas clínicas visibles durante la cita.',
@@ -385,6 +425,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Alertas clínicos visíveis durante a consulta.',
         de: 'Klinische Flags und Warnhinweise, während der Behandlung sichtbar.',
         it: 'Flag e alert clinici visibili durante l’appuntamento.',
+        pl: 'Flagi i alerty kliniczne widoczne w trakcie wizyty.',
       },
       {
         es: 'Timeline cronológico event-driven, sin tocar código existente.',
@@ -393,6 +434,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Cronologia guiada por eventos, sem mexer no código existente.',
         de: 'Chronologischer, eventgesteuerter Verlauf, ohne bestehenden Code anzufassen.',
         it: 'Timeline cronologica guidata dagli eventi, senza toccare il codice esistente.',
+        pl: 'Chronologiczny timeline oparty na zdarzeniach, bez ruszania istniejącego kodu.',
       },
       {
         es: 'Documentos del paciente: radiografías, consentimientos, fotos.',
@@ -401,6 +443,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Documentos do paciente: radiografias, consentimentos, fotografias.',
         de: 'Patientendokumente: Röntgenbilder, Einwilligungen, Fotos.',
         it: 'Documenti del paziente: radiografie, consensi, foto.',
+        pl: 'Dokumenty pacjenta: zdjęcia RTG, zgody, fotografie.',
       },
       {
         es: 'Thumbnails de imágenes en la lista de documentos.',
@@ -409,6 +452,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Miniaturas das imagens na lista de documentos.',
         de: 'Vorschaubilder in der Dokumentenliste.',
         it: 'Anteprime delle immagini nell’elenco dei documenti.',
+        pl: 'Miniatury zdjęć na liście dokumentów.',
       },
     ],
     screenshot: 'patient-timeline.png',
@@ -420,9 +464,10 @@ export const MODULES: ModuleEntry[] = [
     slugPt: 'plano-de-tratamento',
     slugDe: 'behandlungsplan',
     slugIt: 'piano-di-cura',
+    slugPl: 'plan-leczenia',
     domain: 'clinical',
     icon: 'sparkles',
-    title: { es: 'Plan de tratamiento', en: 'Treatment plan', fr: 'Plan de traitement', pt: 'Plano de tratamento', de: 'Behandlungsplan', it: 'Piano di cura' },
+    title: { es: 'Plan de tratamiento', en: 'Treatment plan', fr: 'Plan de traitement', pt: 'Plano de tratamento', de: 'Behandlungsplan', it: 'Piano di cura', pl: 'Plan leczenia' },
     tagline: {
       es: 'Una sola vista que une diagnóstico, presupuesto y agenda.',
       en: 'One view that ties diagnosis, budget and schedule together.',
@@ -430,6 +475,7 @@ export const MODULES: ModuleEntry[] = [
       pt: 'Uma só vista que liga diagnóstico, orçamento e agenda.',
       de: 'Eine einzige Ansicht, die Diagnose, Kostenvoranschlag und Terminplanung verbindet.',
       it: 'Un’unica vista che unisce diagnosi, preventivo e agenda.',
+      pl: 'Jeden widok, który łączy diagnozę, kosztorys i kalendarz.',
     },
     description: {
       es: 'Fuente única de verdad para "qué necesita este paciente, qué ya hicimos y qué queda". Conectado con presupuestos y agenda. Cuando envías el presupuesto, los precios se congelan automáticamente. Sin sorpresas.',
@@ -438,6 +484,7 @@ export const MODULES: ModuleEntry[] = [
       pt: 'Uma fonte única para saber de que precisa este paciente, o que já foi feito e o que falta. Ligada aos orçamentos e à agenda. Assim que envia o orçamento, os preços ficam congelados automaticamente. Sem surpresas seis semanas depois.',
       de: 'Die eine Quelle der Wahrheit für „was dieser Patient braucht, was wir schon gemacht haben und was noch offen ist“. Verbunden mit Kostenvoranschlägen und Terminkalender. Beim Versand des Kostenvoranschlags werden die Preise automatisch eingefroren. Keine Überraschungen.',
       it: 'Fonte unica di verità per “cosa serve a questo paziente, cosa abbiamo già fatto e cosa manca”. Collegata a preventivi e agenda. Quando invii il preventivo, i prezzi si congelano in automatico. Nessuna sorpresa.',
+      pl: 'Jedno źródło prawdy o tym, czego ten pacjent potrzebuje, co już zrobiliśmy i co zostało. Połączony z kosztorysami i kalendarzem. Kiedy wysyłasz kosztorys, ceny zamrażają się automatycznie. Bez zaskoczeń.',
     },
     features: [
       {
@@ -447,6 +494,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Vista única: diagnósticos, tratamentos propostos e tratamentos feitos.',
         de: 'Eine Ansicht mit Diagnosen, vorgeschlagenen und durchgeführten Behandlungen.',
         it: 'Vista unica con diagnosi, trattamenti proposti ed eseguiti.',
+        pl: 'Jeden widok: rozpoznania, zabiegi proponowane i wykonane.',
       },
       {
         es: 'Enlace bidireccional con presupuestos y citas.',
@@ -455,6 +503,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Ligação nos dois sentidos com orçamentos e consultas.',
         de: 'Beidseitige Verknüpfung mit Kostenvoranschlägen und Terminen.',
         it: 'Collegamento bidirezionale con preventivi e appuntamenti.',
+        pl: 'Dwukierunkowe powiązanie z kosztorysami i wizytami.',
       },
       {
         es: 'Lock-on-budget: congela precios al enviar.',
@@ -463,6 +512,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Bloqueio ao enviar o orçamento: os preços ficam congelados.',
         de: 'Lock-on-budget: friert die Preise beim Versand ein.',
         it: 'Lock-on-budget: congela i prezzi all’invio.',
+        pl: 'Lock-on-budget: zamraża ceny przy wysłaniu.',
       },
       {
         es: 'Unlock + cancelación con traza completa.',
@@ -471,6 +521,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Desbloqueio e anulação com rasto completo.',
         de: 'Entsperren und Stornieren mit vollständiger Nachvollziehbarkeit.',
         it: 'Sblocco e annullamento con tracciabilità completa.',
+        pl: 'Odblokowanie i anulowanie z pełnym śladem.',
       },
       {
         es: 'Archivo de planes finalizados.',
@@ -479,6 +530,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Arquivo dos planos terminados.',
         de: 'Archiv abgeschlossener Behandlungspläne.',
         it: 'Archivio dei piani conclusi.',
+        pl: 'Archiwum zakończonych planów.',
       },
     ],
     screenshot: 'treatment-plan.png',
@@ -490,9 +542,10 @@ export const MODULES: ModuleEntry[] = [
     slugPt: 'agenda',
     slugDe: 'terminkalender',
     slugIt: 'agenda',
+    slugPl: 'kalendarz',
     domain: 'operations',
     icon: 'calendar',
-    title: { es: 'Agenda', en: 'Calendar', fr: 'Agenda', pt: 'Agenda', de: 'Terminkalender', it: 'Agenda' },
+    title: { es: 'Agenda', en: 'Calendar', fr: 'Agenda', pt: 'Agenda', de: 'Terminkalender', it: 'Agenda', pl: 'Kalendarz' },
     tagline: {
       es: 'Una agenda drag-and-drop que entiende gabinetes, profesionales y solapes.',
       en: 'A drag-and-drop calendar that understands cabinets, professionals and overlaps.',
@@ -500,6 +553,7 @@ export const MODULES: ModuleEntry[] = [
       pt: 'Uma agenda de arrastar e largar que percebe salas, profissionais e sobreposições.',
       de: 'Ein Terminkalender mit Drag-and-drop, der Behandlungszimmer, Behandler und Überschneidungen versteht.',
       it: 'Un’agenda drag-and-drop che capisce sale, professionisti e sovrapposizioni.',
+      pl: 'Kalendarz drag-and-drop, który rozumie gabinety, lekarzy i nakładające się wizyty.',
     },
     description: {
       es: 'Vista semanal y diaria. Mueves, redimensionas y creas citas arrastrando. Detecta solapes antes de que aparezcan. Kanban por estado para los días caóticos. Conectada al catálogo: la duración y el color salen solos.',
@@ -508,6 +562,7 @@ export const MODULES: ModuleEntry[] = [
       pt: 'Vista de semana e de dia. Move, redimensiona e cria uma consulta arrastando. As sobreposições veem-se antes de darem problema. Vista kanban por estado para os dias agitados. Ligada ao catálogo: a duração e a cor saem sozinhas.',
       de: 'Wochen- und Tagesansicht. Termine verschieben, in der Länge ändern und durch Ziehen anlegen. Überschneidungen werden erkannt, bevor sie entstehen. Kanban nach Status für die chaotischen Tage. Mit dem Katalog verbunden: Dauer und Farbe kommen von selbst.',
       it: 'Vista settimanale e giornaliera. Sposti, ridimensioni e crei appuntamenti trascinando. Rileva le sovrapposizioni prima che si creino. Kanban per stato nei giorni caotici. Collegata al catalogo: durata e colore arrivano da soli.',
+      pl: 'Widok tygodnia i dnia. Przesuwasz, zmieniasz długość i tworzysz wizyty przeciągnięciem. Wykrywa nakładki, zanim się pojawią. Kanban po statusie na dni chaotyczne. Połączony z katalogiem: czas trwania i kolor podpowiadają się same.',
     },
     features: [
       {
@@ -517,6 +572,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Vista de semana por sala ou por profissional.',
         de: 'Wochenansicht nach Behandlungszimmer oder Behandler.',
         it: 'Vista settimanale per sala o per professionista.',
+        pl: 'Widok tygodnia po gabinecie albo po lekarzu.',
       },
       {
         es: 'Vista diaria por profesional para detalle fino.',
@@ -525,6 +581,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Vista de dia por profissional, para o detalhe fino.',
         de: 'Tagesansicht je Behandler für den Feinschliff.',
         it: 'Vista giornaliera per professionista, per il dettaglio.',
+        pl: 'Widok dnia po lekarzu dla drobnych szczegółów.',
       },
       {
         es: 'Drag & drop para mover y redimensionar.',
@@ -533,6 +590,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Arrastar e largar para mover e redimensionar.',
         de: 'Drag & Drop zum Verschieben und Verlängern.',
         it: 'Drag & drop per spostare e ridimensionare.',
+        pl: 'Drag & drop do przesuwania i zmiany długości.',
       },
       {
         es: 'Drag-to-create en huecos vacíos con duración precisa.',
@@ -541,6 +599,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Criar arrastando sobre um horário livre, ao minuto.',
         de: 'Drag-to-create in freien Lücken, mit exakter Dauer.',
         it: 'Drag-to-create negli spazi liberi, con durata precisa.',
+        pl: 'Drag-to-create w wolnych miejscach z dokładnym czasem trwania.',
       },
       {
         es: 'Detección de conflictos y solapes.',
@@ -549,6 +608,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Deteção de conflitos e sobreposições.',
         de: 'Erkennung von Konflikten und Überschneidungen.',
         it: 'Rilevamento di conflitti e sovrapposizioni.',
+        pl: 'Wykrywanie konfliktów i nakładek.',
       },
       {
         es: 'Ciclo de estados: programada → confirmada → en curso → completada.',
@@ -557,6 +617,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Ciclo de estados: marcada → confirmada → a decorrer → concluída.',
         de: 'Statuskette: geplant → bestätigt → läuft → abgeschlossen.',
         it: 'Ciclo di stati: programmato → confermato → in corso → completato.',
+        pl: 'Cykl statusów: zaplanowana → potwierdzona → w toku → zakończona.',
       },
       {
         es: 'Vista kanban para gestionar citas por estado.',
@@ -565,6 +626,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Vista kanban para gerir as consultas por estado.',
         de: 'Kanban-Ansicht zur Steuerung der Termine nach Status.',
         it: 'Vista kanban per gestire gli appuntamenti per stato.',
+        pl: 'Widok kanban do prowadzenia wizyt po statusie.',
       },
       {
         es: 'Asignación de gabinete diferida (reservas flexibles).',
@@ -573,6 +635,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Atribuição de sala adiada (marcações flexíveis).',
         de: 'Behandlungszimmer erst später zuweisen (flexible Reservierungen).',
         it: 'Assegnazione della sala posticipata (prenotazioni flessibili).',
+        pl: 'Odroczone przypisanie gabinetu (rezerwacje elastyczne).',
       },
       {
         es: 'Strip de profesionales en vivo.',
@@ -581,6 +644,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Faixa de profissionais em direto.',
         de: 'Live-Leiste mit den Behandlern.',
         it: 'Striscia dei professionisti in tempo reale.',
+        pl: 'Pasek lekarzy na żywo.',
       },
       {
         es: 'Integración con catálogo: duración y color auto.',
@@ -589,8 +653,9 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Integração com o catálogo de tratamentos: duração e cor automáticas.',
         de: 'Anbindung an den Katalog: Dauer und Farbe automatisch.',
         it: 'Integrazione con il catalogo: durata e colore automatici.',
+        pl: 'Integracja z katalogiem: czas trwania i kolor automatycznie.',
       },
-      { es: 'Zona horaria consciente.', en: 'Timezone-aware.', fr: 'Gestion des fuseaux horaires.', pt: 'Gestão de fusos horários.', de: 'Zeitzonen werden berücksichtigt.', it: 'Gestione dei fusi orari.' },
+      { es: 'Zona horaria consciente.', en: 'Timezone-aware.', fr: 'Gestion des fuseaux horaires.', pt: 'Gestão de fusos horários.', de: 'Zeitzonen werden berücksichtigt.', it: 'Gestione dei fusi orari.', pl: 'Świadomy strefy czasowej.' },
     ],
     screenshot: 'schedule-week.png',
     extraScreenshots: [
@@ -603,6 +668,7 @@ export const MODULES: ModuleEntry[] = [
           pt: 'Vista de dia por profissional',
           de: 'Tagesansicht je Behandler',
           it: 'Vista giornaliera per professionista',
+          pl: 'Widok dnia po lekarzu',
         },
       },
       {
@@ -614,6 +680,7 @@ export const MODULES: ModuleEntry[] = [
           pt: 'Vista kanban por estado',
           de: 'Kanban-Ansicht nach Status',
           it: 'Vista kanban per stato',
+          pl: 'Widok kanban po statusie',
         },
       },
     ],
@@ -625,9 +692,10 @@ export const MODULES: ModuleEntry[] = [
     slugPt: 'orcamentos',
     slugDe: 'kostenvoranschlaege',
     slugIt: 'preventivi',
+    slugPl: 'kosztorysy',
     domain: 'operations',
     icon: 'card',
-    title: { es: 'Presupuestos', en: 'Budgets', fr: 'Devis', pt: 'Orçamentos', de: 'Kostenvoranschläge', it: 'Preventivi' },
+    title: { es: 'Presupuestos', en: 'Budgets', fr: 'Devis', pt: 'Orçamentos', de: 'Kostenvoranschläge', it: 'Preventivi', pl: 'Kosztorysy' },
     tagline: {
       es: 'Construye línea a línea, recoge firma y exporta un PDF con tu marca.',
       en: 'Build line by line, capture the signature, export a PDF with your branding.',
@@ -635,6 +703,7 @@ export const MODULES: ModuleEntry[] = [
       pt: 'Linha a linha, assinatura do paciente e PDF com a sua marca.',
       de: 'Position für Position aufbauen, Unterschrift einholen und ein PDF mit Ihrem Logo ausgeben.',
       it: 'Costruisci voce per voce, raccogli la firma ed esporti un PDF con il tuo marchio.',
+      pl: 'Budujesz pozycja po pozycji, zbierasz podpis i eksportujesz PDF z twoim logo.',
     },
     description: {
       es: 'Planes de tratamiento que el paciente entiende, aprueba y paga. Workflow claro: borrador → pendiente → aprobado o rechazado. Firma digital, PDF con tu marca y bloqueo de precios al enviar. Sin discusiones tres meses después.',
@@ -643,6 +712,7 @@ export const MODULES: ModuleEntry[] = [
       pt: 'Planos de tratamento que o paciente percebe, aprova e paga. Um circuito claro: rascunho → pendente → aprovado ou recusado. Assinatura digital, PDF com a sua marca e preços bloqueados ao enviar. Sem discussões três meses depois.',
       de: 'Behandlungspläne, die der Patient versteht, freigibt und bezahlt. Klarer Ablauf: Entwurf → offen → angenommen oder abgelehnt. Digitale Unterschrift, PDF im Praxisdesign und eingefrorene Preise beim Versand. Keine Diskussionen drei Monate später.',
       it: 'Piani di cura che il paziente capisce, approva e paga. Flusso chiaro: bozza → in attesa → approvato o rifiutato. Firma digitale, PDF con il tuo marchio e blocco dei prezzi all’invio. Nessuna discussione tre mesi dopo.',
+      pl: 'Plany leczenia, które pacjent rozumie, zatwierdza i płaci. Jasny przebieg: szkic → oczekujący → zatwierdzony albo odrzucony. Podpis cyfrowy, PDF z twoim logo i zamrożenie cen przy wysłaniu. Bez dyskusji trzy miesiące później.',
     },
     features: [
       {
@@ -652,6 +722,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Construção linha a linha a partir do catálogo de tratamentos.',
         de: 'Aufbau Position für Position aus dem Behandlungskatalog.',
         it: 'Composizione voce per voce dal catalogo dei trattamenti.',
+        pl: 'Kreator pozycja po pozycji z katalogu zabiegów.',
       },
       {
         es: 'Descuento, cantidad e IVA por línea.',
@@ -660,8 +731,9 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Desconto, quantidade e IVA por linha.',
         de: 'Rabatt, Menge und Steuersatz je Position.',
         it: 'Sconto, quantità e IVA per riga.',
+        pl: 'Rabat, ilość i VAT dla każdej pozycji.',
       },
-      { es: 'Totales auto-calculados.', en: 'Auto-calculated totals.', fr: 'Totaux calculés automatiquement.', pt: 'Totais calculados automaticamente.', de: 'Automatisch berechnete Summen.', it: 'Totali calcolati in automatico.' },
+      { es: 'Totales auto-calculados.', en: 'Auto-calculated totals.', fr: 'Totaux calculés automatiquement.', pt: 'Totais calculados automaticamente.', de: 'Automatisch berechnete Summen.', it: 'Totali calcolati in automatico.', pl: 'Sumy liczone automatycznie.' },
       {
         es: 'Workflow: draft → pending → approved / rejected.',
         en: 'Workflow: draft → pending → approved / rejected.',
@@ -669,6 +741,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Circuito: rascunho → pendente → aprovado / recusado.',
         de: 'Ablauf: draft → pending → approved / rejected.',
         it: 'Flusso: draft → pending → approved / rejected.',
+        pl: 'Przebieg: draft → pending → approved / rejected.',
       },
       {
         es: 'Captura de firma del paciente.',
@@ -677,6 +750,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Assinatura do paciente recolhida no ecrã.',
         de: 'Erfassung der Unterschrift des Patienten.',
         it: 'Acquisizione della firma del paziente.',
+        pl: 'Zbieranie podpisu pacjenta.',
       },
       {
         es: 'PDF con la marca de la clínica.',
@@ -685,6 +759,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'PDF com a marca da clínica.',
         de: 'PDF im Design der Praxis.',
         it: 'PDF con il marchio dello studio.',
+        pl: 'PDF z logo kliniki.',
       },
       {
         es: 'Lock-on-budget: congela el precio al enviar.',
@@ -693,6 +768,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Bloqueio dos preços no momento do envio.',
         de: 'Lock-on-budget: friert den Preis beim Versand ein.',
         it: 'Lock-on-budget: congela il prezzo all’invio.',
+        pl: 'Lock-on-budget: zamraża cenę przy wysłaniu.',
       },
       {
         es: 'Unlock + cancel con traza de auditoría.',
@@ -701,8 +777,9 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Desbloqueio e anulação com registo de auditoria.',
         de: 'Entsperren und Stornieren mit Audit-Trail.',
         it: 'Sblocco e annullamento con traccia di audit.',
+        pl: 'Odblokowanie i anulowanie ze śladem audytowym.',
       },
-      { es: 'Archivo de presupuestos antiguos.', en: 'Archive of old budgets.', fr: 'Archivage des anciens devis.', pt: 'Arquivo de orçamentos antigos.', de: 'Archiv alter Kostenvoranschläge.', it: 'Archivio dei preventivi vecchi.' },
+      { es: 'Archivo de presupuestos antiguos.', en: 'Archive of old budgets.', fr: 'Archivage des anciens devis.', pt: 'Arquivo de orçamentos antigos.', de: 'Archiv alter Kostenvoranschläge.', it: 'Archivio dei preventivi vecchi.', pl: 'Archiwum starych kosztorysów.' },
     ],
     screenshot: 'budgets.png',
   },
@@ -713,9 +790,10 @@ export const MODULES: ModuleEntry[] = [
     slugPt: 'faturas',
     slugDe: 'rechnungen',
     slugIt: 'fatturazione',
+    slugPl: 'fakturowanie',
     domain: 'operations',
     icon: 'card',
-    title: { es: 'Facturación', en: 'Invoicing', fr: 'Facturation', pt: 'Faturas', de: 'Abrechnung', it: 'Fatturazione' },
+    title: { es: 'Facturación', en: 'Invoicing', fr: 'Facturation', pt: 'Faturas', de: 'Abrechnung', it: 'Fatturazione', pl: 'Fakturowanie' },
     tagline: {
       es: 'Series auditadas, pagos parciales y PDF con tu marca.',
       en: 'Audited number series, partial payments and branded PDFs.',
@@ -723,6 +801,7 @@ export const MODULES: ModuleEntry[] = [
       pt: 'Séries de numeração auditadas, pagamentos parciais e PDF com a sua marca.',
       de: 'Geprüfte Nummernkreise, Teilzahlungen und PDF im Praxisdesign.',
       it: 'Numerazioni tracciate, pagamenti parziali e PDF con il tuo marchio.',
+      pl: 'Audytowane serie, płatności częściowe i PDF z twoim logo.',
     },
     description: {
       es: 'Facturación con numeración automática configurable, varios métodos de pago, parciales y edición auditada. Generas desde un presupuesto o desde cero. La traza queda; tú no tienes que acordarte de nada.',
@@ -731,6 +810,7 @@ export const MODULES: ModuleEntry[] = [
       pt: 'Faturação com numeração automática configurável, vários meios de pagamento, pagamentos parciais e alterações auditadas. Emite a partir de um orçamento ou de raiz. O rasto fica registado, você não tem de se lembrar de nada.',
       de: 'Abrechnung mit konfigurierbarer automatischer Nummerierung, mehreren Zahlungsarten, Teilzahlungen und protokollierten Änderungen. Sie erzeugen die Rechnung aus einem Kostenvoranschlag oder von Grund auf. Die Spur bleibt, Sie müssen sich nichts merken.',
       it: 'Fatturazione con numerazione automatica configurabile, più metodi di pagamento, acconti e modifiche tracciate. La generi da un preventivo o da zero. La traccia resta, tu non devi ricordarti niente.',
+      pl: 'Fakturowanie z automatyczną, konfigurowalną numeracją, kilkoma metodami płatności, płatnościami częściowymi i audytowaną edycją. Generujesz z kosztorysu albo od zera. Ślad zostaje; ty nie musisz o niczym pamiętać.',
     },
     features: [
       {
@@ -740,6 +820,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Fatura gerada a partir de um orçamento ou criada de raiz.',
         de: 'Rechnungen aus einem Kostenvoranschlag oder direkt erzeugen.',
         it: 'Genera fatture da preventivo o direttamente.',
+        pl: 'Generuje faktury z kosztorysu albo bezpośrednio.',
       },
       {
         es: 'Numeración automática con series configurables.',
@@ -748,6 +829,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Numeração automática com séries configuráveis.',
         de: 'Automatische Nummerierung mit konfigurierbaren Nummernkreisen.',
         it: 'Numerazione automatica con serie configurabili.',
+        pl: 'Automatyczna numeracja z konfigurowalnymi seriami.',
       },
       {
         es: 'Gestión de series con historial completo.',
@@ -756,6 +838,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Gestão de séries com histórico completo.',
         de: 'Verwaltung der Nummernkreise mit vollständiger Historie.',
         it: 'Gestione delle serie con storico completo.',
+        pl: 'Prowadzenie serii z pełną historią.',
       },
       {
         es: 'Items elegidos del catálogo — sin texto libre.',
@@ -764,6 +847,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Linhas vindas do catálogo de tratamentos, sem texto livre que se desvie.',
         de: 'Positionen aus dem Katalog, kein Freitext.',
         it: 'Voci scelte dal catalogo, senza testo libero.',
+        pl: 'Pozycje wybierane z katalogu, bez dowolnego tekstu.',
       },
       {
         es: 'Pagos parciales y saldo pendiente.',
@@ -772,6 +856,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Pagamentos parciais e acompanhamento do saldo em dívida.',
         de: 'Teilzahlungen und offener Restbetrag.',
         it: 'Pagamenti parziali e saldo residuo.',
+        pl: 'Płatności częściowe i saldo do zapłaty.',
       },
       {
         es: 'Métodos: efectivo, tarjeta, transferencia, seguro.',
@@ -780,9 +865,10 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Meios de pagamento: numerário, cartão, transferência, seguradora.',
         de: 'Zahlungsarten: bar, Karte, Überweisung, Versicherung.',
         it: 'Metodi: contanti, carta, bonifico, assicurazione.',
+        pl: 'Metody: gotówka, karta, przelew, ubezpieczenie.',
       },
-      { es: 'Edición con auditoría.', en: 'Invoice editing with audit.', fr: 'Modification des factures tracée.', pt: 'Alteração de faturas com rasto.', de: 'Rechnungen ändern, protokolliert.', it: 'Modifica delle fatture tracciata.' },
-      { es: 'PDF con la marca de la clínica.', en: 'PDF with clinic branding.', fr: 'PDF aux couleurs du cabinet.', pt: 'PDF com a marca da clínica.', de: 'PDF im Design der Praxis.', it: 'PDF con il marchio dello studio.' },
+      { es: 'Edición con auditoría.', en: 'Invoice editing with audit.', fr: 'Modification des factures tracée.', pt: 'Alteração de faturas com rasto.', de: 'Rechnungen ändern, protokolliert.', it: 'Modifica delle fatture tracciata.', pl: 'Edycja z audytem.' },
+      { es: 'PDF con la marca de la clínica.', en: 'PDF with clinic branding.', fr: 'PDF aux couleurs du cabinet.', pt: 'PDF com a marca da clínica.', de: 'PDF im Design der Praxis.', it: 'PDF con il marchio dello studio.', pl: 'PDF z logo kliniki.' },
       {
         es: 'Resumen de facturación por paciente.',
         en: 'Per-patient billing summary.',
@@ -790,6 +876,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Resumo de faturação por paciente.',
         de: 'Abrechnungsübersicht je Patient.',
         it: 'Riepilogo della fatturazione per paziente.',
+        pl: 'Podsumowanie fakturowania dla pacjenta.',
       },
     ],
     screenshot: 'invoices.png',
@@ -801,11 +888,12 @@ export const MODULES: ModuleEntry[] = [
     slugPt: 'verifactu',
     slugDe: 'verifactu',
     slugIt: 'verifactu',
+    slugPl: 'verifactu',
     domain: 'operations',
     icon: 'shield',
     country: 'ES',
     customPage: true,
-    title: { es: 'Verifactu', en: 'Verifactu', fr: 'Verifactu', pt: 'Verifactu', de: 'Verifactu', it: 'Verifactu' },
+    title: { es: 'Verifactu', en: 'Verifactu', fr: 'Verifactu', pt: 'Verifactu', de: 'Verifactu', it: 'Verifactu', pl: 'Verifactu' },
     tagline: {
       es: 'Cumple Veri*Factu sin tocar tu flujo de facturación. Solo para clínicas en España.',
       en: 'Comply with Spain’s Veri*Factu without touching your invoicing flow. Spain only.',
@@ -813,6 +901,7 @@ export const MODULES: ModuleEntry[] = [
       pt: 'Cumpre o Veri*Factu sem mexer na sua faturação. Só para clínicas em Espanha.',
       de: 'Erfüllt Veri*Factu, ohne Ihren Abrechnungsablauf anzufassen. Nur für Praxen in Spanien.',
       it: 'Rispetta Veri*Factu senza toccare il tuo flusso di fatturazione. Solo per studi in Spagna.',
+      pl: 'Spełnia wymogi Veri*Factu bez ruszania twojego procesu fakturowania. Tylko dla klinik w Hiszpanii.',
     },
     description: {
       es: 'Módulo opcional pensado exclusivamente para clínicas en España. Firma cada factura, encadena registros con SHA-256, los envía a la AEAT por SOAP con tu certificado FNMT y embebe el QR tributario en el PDF. Cumple RD 1007/2023 y la Orden HAC/1177/2024 desde el primer día.',
@@ -821,6 +910,7 @@ export const MODULES: ModuleEntry[] = [
       pt: 'Módulo opcional pensado exclusivamente para clínicas em Espanha. Assina cada fatura, encadeia os registos com SHA-256, envia-os à autoridade fiscal espanhola (AEAT) por SOAP com o seu certificado FNMT e integra o QR fiscal no PDF. Cumpre o RD 1007/2023 e a Orden HAC/1177/2024 desde o primeiro dia.',
       de: 'Optionales Modul ausschließlich für Praxen in Spanien. Es signiert jede Rechnung, verkettet die Datensätze mit SHA-256, sendet sie per SOAP mit Ihrem FNMT-Zertifikat an die AEAT und bettet den Steuer-QR in das PDF ein. Erfüllt RD 1007/2023 und die Orden HAC/1177/2024 ab dem ersten Tag.',
       it: 'Modulo opzionale pensato solo per studi in Spagna. Firma ogni fattura, concatena i record con SHA-256, li invia all’AEAT via SOAP con il tuo certificato FNMT e incorpora il QR fiscale nel PDF. Rispetta il RD 1007/2023 e la Orden HAC/1177/2024 dal primo giorno.',
+      pl: 'Moduł opcjonalny pomyślany wyłącznie dla klinik w Hiszpanii. Podpisuje każdą fakturę, wiąże wpisy w łańcuch SHA-256, przesyła je do AEAT przez SOAP z twoim certyfikatem FNMT i zaszywa podatkowy kod QR w PDF-ie. Spełnia RD 1007/2023 i Orden HAC/1177/2024 od pierwszego dnia.',
     },
     features: [
       {
@@ -830,6 +920,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Cadeia SHA-256 assinada: cada fatura liga-se à anterior, livro fiscal só de adição.',
         de: 'Signierte SHA-256-Kette: jede Rechnung hängt an der vorherigen, ein Steuerbuch, an das nur angehängt wird.',
         it: 'Catena SHA-256 firmata: ogni fattura si lega alla precedente, registro fiscale in sola aggiunta.',
+        pl: 'Podpisany łańcuch SHA-256: każda faktura wiąże się z poprzednią, księga podatkowa tylko do dopisywania.',
       },
       {
         es: 'Envío SOAP a AEAT con tu certificado FNMT vía mTLS.',
@@ -838,6 +929,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Envio SOAP à AEAT com o seu certificado FNMT por mTLS.',
         de: 'SOAP-Übermittlung an die AEAT mit Ihrem FNMT-Zertifikat über mTLS.',
         it: 'Invio SOAP all’AEAT con il tuo certificato FNMT via mTLS.',
+        pl: 'Przesyłanie SOAP do AEAT z twoim certyfikatem FNMT przez mTLS.',
       },
       {
         es: 'QR tributario embebido en el PDF (verificación pública en sede electrónica).',
@@ -846,6 +938,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'QR fiscal integrado no PDF da fatura (verificação pública no portal da AEAT).',
         de: 'Steuer-QR im PDF eingebettet (öffentliche Prüfung im AEAT-Portal).',
         it: 'QR fiscale incorporato nel PDF (verifica pubblica sul portale telematico).',
+        pl: 'Podatkowy kod QR zaszyty w PDF-ie (publiczna weryfikacja na portalu urzędu).',
       },
       {
         es: 'Worker periódico cada 60 s con reintentos y back-pressure según `TiempoEsperaEnvio`.',
@@ -854,6 +947,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Worker a cada 60 s, com repetições e controlo de ritmo segundo `TiempoEsperaEnvio`.',
         de: 'Worker alle 60 s mit Wiederholungen und Backpressure gemäß `TiempoEsperaEnvio`.',
         it: 'Worker periodico ogni 60 s con ritentativi e back-pressure secondo `TiempoEsperaEnvio`.',
+        pl: 'Worker co 60 s z ponawianiem i back-pressure zgodnie z `TiempoEsperaEnvio`.',
       },
       {
         es: 'Cola de subsanación con motivo de rechazo y reenvío `Subsanacion=S`.',
@@ -862,6 +956,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Fila de correção com o motivo da rejeição e reenvio com `Subsanacion=S`.',
         de: 'Berichtigungs-Warteschlange mit Ablehnungsgrund und erneutem Versand `Subsanacion=S`.',
         it: 'Coda di rettifica con motivo del rifiuto e rinvio `Subsanacion=S`.',
+        pl: 'Kolejka korekt z powodem odrzucenia i ponownym wysłaniem `Subsanacion=S`.',
       },
       {
         es: 'Mapeo de IVA a clasificaciones AEAT (S1, E1–E6, N1, N2) por clínica.',
@@ -870,6 +965,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Correspondência de IVA para as classificações da AEAT (S1, E1–E6, N1, N2), clínica a clínica.',
         de: 'Zuordnung der Steuersätze zu den AEAT-Klassifizierungen (S1, E1–E6, N1, N2) je Praxis.',
         it: 'Mappatura dell’IVA alle classificazioni AEAT (S1, E1–E6, N1, N2) per studio.',
+        pl: 'Mapowanie VAT na klasyfikacje AEAT (S1, E1–E6, N1, N2) per klinika.',
       },
       {
         es: 'Asistente de productor SIF con declaración responsable firmada electrónicamente.',
@@ -878,6 +974,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Assistente de «produtor SIF» com declaração de responsabilidade assinada eletronicamente.',
         de: 'Assistent für den SIF-Hersteller mit elektronisch signierter Eigenerklärung.',
         it: 'Procedura guidata per il produttore SIF con dichiarazione di responsabilità firmata elettronicamente.',
+        pl: 'Asystent producenta SIF z oświadczeniem podpisanym elektronicznie.',
       },
       {
         es: 'Almacén cifrado del PFX y la contraseña con Fernet.',
@@ -886,6 +983,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Cofre cifrado com Fernet para o PFX e a sua palavra-passe.',
         de: 'Verschlüsselter Speicher für PFX und Passwort mit Fernet.',
         it: 'Archivio cifrato del PFX e della password con Fernet.',
+        pl: 'Zaszyfrowany magazyn pliku PFX i hasła (Fernet).',
       },
       {
         es: 'Banner de caducidad del certificado: verde >60 d, ámbar 15–60 d, rojo <15 d.',
@@ -894,6 +992,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Aviso de validade do certificado: verde > 60 d, âmbar 15–60 d, vermelho < 15 d.',
         de: 'Banner zur Zertifikatslaufzeit: grün >60 T, gelb 15–60 T, rot <15 T.',
         it: 'Banner di scadenza del certificato: verde >60 gg, ambra 15–60 gg, rosso <15 gg.',
+        pl: 'Baner ważności certyfikatu: zielony >60 d, żółty 15–60 d, czerwony <15 d.',
       },
       {
         es: 'Entornos prueba (preproducción AEAT) y real intercambiables sin redeploy.',
@@ -902,6 +1001,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Ambientes de teste (pré-produção da AEAT) e real, trocáveis sem novo deploy.',
         de: 'Test- (AEAT-Vorproduktion) und Echtumgebung, tauschbar ohne Redeploy.',
         it: 'Ambienti di prova (preproduzione AEAT) e reale, intercambiabili senza redeploy.',
+        pl: 'Środowiska testowe (preprodukcja AEAT) i prawdziwe, wymienne bez redeployu.',
       },
       {
         es: 'Soporte F1, F2, F3, R1–R5 y anulaciones.',
@@ -910,6 +1010,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Suporte dos tipos F1, F2, F3, R1–R5 e das anulações.',
         de: 'Unterstützung für F1, F2, F3, R1–R5 und Stornierungen.',
         it: 'Supporto per F1, F2, F3, R1–R5 e annullamenti.',
+        pl: 'Obsługa F1, F2, F3, R1–R5 i anulowań.',
       },
       {
         es: 'Retención legal a 4 años garantizada en el modelo de datos.',
@@ -918,6 +1019,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Conservação legal de 4 anos garantida pelo modelo de dados.',
         de: 'Gesetzliche Aufbewahrung von 4 Jahren im Datenmodell garantiert.',
         it: 'Conservazione legale a 4 anni garantita nel modello dati.',
+        pl: 'Czteroletnia retencja prawna zagwarantowana w modelu danych.',
       },
     ],
     screenshot: 'verifactu-dashboard.png',
@@ -930,9 +1032,10 @@ export const MODULES: ModuleEntry[] = [
     slugPt: 'relatorios',
     slugDe: 'auswertungen',
     slugIt: 'report',
+    slugPl: 'raporty',
     domain: 'operations',
     icon: 'chart',
-    title: { es: 'Reportes', en: 'Reports', fr: 'Rapports', pt: 'Relatórios', de: 'Auswertungen', it: 'Report' },
+    title: { es: 'Reportes', en: 'Reports', fr: 'Rapports', pt: 'Relatórios', de: 'Auswertungen', it: 'Report', pl: 'Raporty' },
     tagline: {
       es: 'KPIs de facturación, presupuestos y ocupación. Sin paneles que mareen.',
       en: 'Billing, budget and occupancy KPIs. No dashboards that scream at you.',
@@ -940,6 +1043,7 @@ export const MODULES: ModuleEntry[] = [
       pt: 'Indicadores de faturação, de orçamentos e de ocupação. Sem painéis indigestos.',
       de: 'Kennzahlen zu Abrechnung, Kostenvoranschlägen und Auslastung. Ohne Dashboards, von denen einem schwindelig wird.',
       it: 'KPI su fatturazione, preventivi e occupazione. Senza cruscotti che fanno girare la testa.',
+      pl: 'KPI fakturowania, kosztorysów i obłożenia. Bez paneli, od których kręci się w głowie.',
     },
     description: {
       es: 'Reportes claros sobre tu práctica, filtrables por rango, profesional y gabinete. Sin tableros imposibles, sin gráficos que parecen una atracción de feria. Lo que necesitas para tomar decisiones, en un vistazo.',
@@ -948,6 +1052,7 @@ export const MODULES: ModuleEntry[] = [
       pt: 'Relatórios legíveis sobre a atividade da clínica, filtráveis por período, por profissional e por sala. Sem painéis esmagadores, sem gráficos de feira popular. Os números que servem para decidir, num relance.',
       de: 'Klare Auswertungen zu Ihrer Praxis, filterbar nach Zeitraum, Behandler und Behandlungszimmer. Keine unmöglichen Dashboards, keine Diagramme wie ein Jahrmarkt. Das, was Sie zum Entscheiden brauchen, auf einen Blick.',
       it: 'Report chiari sulla tua attività, filtrabili per periodo, professionista e sala. Senza cruscotti impossibili, senza grafici da luna park. Quello che ti serve per decidere, in un colpo d’occhio.',
+      pl: 'Jasne raporty o twojej praktyce, filtrowane po zakresie, lekarzu i gabinecie. Bez niemożliwych dashboardów, bez wykresów wyglądających jak wesołe miasteczko. To, czego potrzebujesz do decyzji, na jedno spojrzenie.',
     },
     features: [
       {
@@ -957,6 +1062,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Faturação: receita, por cobrar, cobrado.',
         de: 'Abrechnung: Umsatz, offen, eingegangen.',
         it: 'Fatturazione: incassi, da incassare, incassato.',
+        pl: 'Fakturowanie: przychody, do zapłaty, zapłacone.',
       },
       {
         es: 'Presupuestos: pipeline, conversión, valor por estado.',
@@ -965,6 +1071,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Orçamentos: em curso, taxa de aceitação, valor por estado.',
         de: 'Kostenvoranschläge: Pipeline, Annahmequote, Wert je Status.',
         it: 'Preventivi: pipeline, conversione, valore per stato.',
+        pl: 'Kosztorysy: pipeline, konwersja, wartość po statusie.',
       },
       {
         es: 'Agenda: ocupación, cancelaciones, no-shows, métricas por profesional.',
@@ -973,6 +1080,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Agenda: ocupação, cancelamentos, faltas, indicadores por profissional.',
         de: 'Terminkalender: Auslastung, Absagen, Nichterscheinen, Kennzahlen je Behandler.',
         it: 'Agenda: occupazione, cancellazioni, mancate presentazioni, metriche per professionista.',
+        pl: 'Kalendarz: obłożenie, odwołania, nieobecności, wskaźniki po lekarzu.',
       },
       {
         es: 'Filtros por rango, profesional y gabinete.',
@@ -981,6 +1089,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Filtros por período, por profissional e por sala.',
         de: 'Filter nach Zeitraum, Behandler und Behandlungszimmer.',
         it: 'Filtri per periodo, professionista e sala.',
+        pl: 'Filtry po zakresie, lekarzu i gabinecie.',
       },
     ],
     screenshot: 'reports.png',
@@ -992,9 +1101,10 @@ export const MODULES: ModuleEntry[] = [
     slugPt: 'modulos',
     slugDe: 'module',
     slugIt: 'moduli',
+    slugPl: 'moduly',
     domain: 'platform',
     icon: 'plug',
-    title: { es: 'Sistema de módulos', en: 'Module system', fr: 'Système de modules', pt: 'Sistema de módulos', de: 'Modulsystem', it: 'Sistema di moduli' },
+    title: { es: 'Sistema de módulos', en: 'Module system', fr: 'Système de modules', pt: 'Sistema de módulos', de: 'Modulsystem', it: 'Sistema di moduli', pl: 'System modułów' },
     tagline: {
       es: 'Una arquitectura de plugins real: instalas lo que usas, quitas lo que no.',
       en: 'A real plugin architecture: install what you use, drop what you don’t.',
@@ -1002,6 +1112,7 @@ export const MODULES: ModuleEntry[] = [
       pt: 'Uma arquitetura de plugins a sério: instala o que usa, tira o que não usa.',
       de: 'Eine echte Plugin-Architektur: Sie installieren, was Sie nutzen, und entfernen, was Sie nicht brauchen.',
       it: 'Un’architettura a plugin vera: installi quello che usi, togli quello che non usi.',
+      pl: 'Prawdziwa architektura wtyczek: instalujesz to, czego używasz, usuwasz to, czego nie.',
     },
     description: {
       es: 'Plugin architecture en backend y en frontend, no de boquilla. Cada módulo trae su manifest, sus migraciones Alembic, sus seeds YAML, su navegación y se suscribe al event bus interno. Activas, desactivas y actualizas sin tocar el resto del sistema.',
@@ -1010,6 +1121,7 @@ export const MODULES: ModuleEntry[] = [
       pt: 'Arquitetura de plugins no backend e no frontend, não só num slide. Cada módulo traz o seu manifest, as suas migrações Alembic, os seus seeds YAML, a sua navegação e subscreve o bus de eventos interno. Liga, desliga e atualiza sem tocar no resto do sistema.',
       de: 'Plugin-Architektur im Backend und im Frontend, nicht nur auf dem Papier. Jedes Modul bringt sein Manifest, seine Alembic-Migrationen, seine YAML-Seeds und seine Navigation mit und hängt sich an den internen Event-Bus. Aktivieren, deaktivieren und aktualisieren, ohne den Rest des Systems anzufassen.',
       it: 'Architettura a plugin nel backend e nel frontend, non a parole. Ogni modulo porta il suo manifest, le sue migrazioni Alembic, i suoi seed YAML, la sua navigazione e si iscrive all’event bus interno. Attivi, disattivi e aggiorni senza toccare il resto del sistema.',
+      pl: 'Architektura wtyczek na backendzie i na frontendzie, nie na słowach. Każdy moduł przynosi swój manifest, swoje migracje Alembic, swoje seedy YAML, swoją nawigację i subskrybuje wewnętrzną szynę zdarzeń. Włączasz, wyłączasz i aktualizujesz bez ruszania reszty systemu.',
     },
     features: [
       {
@@ -1019,6 +1131,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Módulos declarativos com manifest validado.',
         de: 'Deklarative Module mit validiertem Manifest.',
         it: 'Moduli dichiarativi con manifest validato.',
+        pl: 'Deklaratywne moduły z walidowanym manifestem.',
       },
       {
         es: 'Ciclo install / uninstall / upgrade con restart.',
@@ -1027,8 +1140,9 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Ciclo de instalação / desinstalação / atualização com reinício.',
         de: 'Zyklus install / uninstall / upgrade mit Neustart.',
         it: 'Ciclo install / uninstall / upgrade con riavvio.',
+        pl: 'Cykl install / uninstall / upgrade z restartem.',
       },
-      { es: 'Seeds YAML por módulo.', en: 'YAML seeds per module.', fr: 'Seeds YAML par module.', pt: 'Seeds YAML por módulo.', de: 'YAML-Seeds je Modul.', it: 'Seed YAML per modulo.' },
+      { es: 'Seeds YAML por módulo.', en: 'YAML seeds per module.', fr: 'Seeds YAML par module.', pt: 'Seeds YAML por módulo.', de: 'YAML-Seeds je Modul.', it: 'Seed YAML per modulo.', pl: 'Seedy YAML dla każdego modułu.' },
       {
         es: 'Migraciones Alembic con rama propia.',
         en: 'Alembic migrations with their own branch.',
@@ -1036,6 +1150,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Migrações Alembic no seu próprio ramo.',
         de: 'Alembic-Migrationen mit eigenem Zweig.',
         it: 'Migrazioni Alembic con ramo dedicato.',
+        pl: 'Migracje Alembic z własną gałęzią.',
       },
       {
         es: 'Nuxt layers auto-descubiertos en frontend.',
@@ -1044,6 +1159,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Layers Nuxt descobertos automaticamente no frontend.',
         de: 'Automatisch erkannte Nuxt-Layers im Frontend.',
         it: 'Nuxt layer rilevati in automatico nel frontend.',
+        pl: 'Warstwy Nuxt odkrywane automatycznie na frontendzie.',
       },
       {
         es: 'Sidebar backend-driven, se reconstruye al activar módulos.',
@@ -1052,6 +1168,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Menu lateral comandado pelo backend, reconstruído ao ligar um módulo.',
         de: 'Backend-gesteuerte Seitenleiste, die sich beim Aktivieren von Modulen neu aufbaut.',
         it: 'Sidebar guidata dal backend, si ricostruisce quando attivi i moduli.',
+        pl: 'Sidebar sterowany z backendu, przebudowuje się przy włączaniu modułów.',
       },
       {
         es: 'Slot system frontend: módulos inyectan pestañas y vistas.',
@@ -1060,6 +1177,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Sistema de slots no frontend: os módulos injetam separadores e vistas.',
         de: 'Slot-System im Frontend: Module fügen Reiter und Ansichten ein.',
         it: 'Sistema di slot nel frontend: i moduli iniettano schede e viste.',
+        pl: 'System slotów na frontendzie: moduły wstrzykują zakładki i widoki.',
       },
       {
         es: 'Event bus: patient.created, appointment.completed…',
@@ -1068,6 +1186,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Bus de eventos: patient.created, appointment.completed…',
         de: 'Event-Bus: patient.created, appointment.completed…',
         it: 'Event bus: patient.created, appointment.completed…',
+        pl: 'Szyna zdarzeń: patient.created, appointment.completed…',
       },
       {
         es: 'Tests E2E de instalación para cada módulo.',
@@ -1076,6 +1195,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Testes E2E de instalação para cada módulo.',
         de: 'E2E-Tests der Installation für jedes Modul.',
         it: 'Test E2E di installazione per ogni modulo.',
+        pl: 'Testy E2E instalacji dla każdego modułu.',
       },
     ],
     screenshot: 'modules-manager.png',
@@ -1084,7 +1204,7 @@ export const MODULES: ModuleEntry[] = [
     slug: 'api',
     domain: 'platform',
     icon: 'plug',
-    title: { es: 'API REST completa', en: 'Full REST API', fr: 'API REST complète', pt: 'API REST completa', de: 'Vollständige REST-API', it: 'API REST completa' },
+    title: { es: 'API REST completa', en: 'Full REST API', fr: 'API REST complète', pt: 'API REST completa', de: 'Vollständige REST-API', it: 'API REST completa', pl: 'Pełne REST API' },
     tagline: {
       es: 'Cada funcionalidad expone un endpoint. OpenAPI generado automáticamente.',
       en: 'Every feature exposes an endpoint. OpenAPI generated automatically.',
@@ -1092,6 +1212,7 @@ export const MODULES: ModuleEntry[] = [
       pt: 'Cada funcionalidade expõe um endpoint. OpenAPI gerado automaticamente.',
       de: 'Jede Funktion stellt einen Endpunkt bereit. OpenAPI wird automatisch erzeugt.',
       it: 'Ogni funzionalità espone un endpoint. OpenAPI generato in automatico.',
+      pl: 'Każda funkcja wystawia endpoint. OpenAPI generowane automatycznie.',
     },
     description: {
       es: 'Automatiza lo que duela: importar pacientes, sincronizar con laboratorios, integrar con WhatsApp. Todo Dentalpin se pilota desde la API pública. Es la misma API que usa la app web — sin atajos privados, sin endpoints secretos.',
@@ -1100,6 +1221,7 @@ export const MODULES: ModuleEntry[] = [
       pt: 'Automatize o que dói: importar pacientes, sincronizar com laboratórios de prótese, integrar o WhatsApp. Todo o Dentalpin se comanda a partir da API pública. É a mesma API que a aplicação web usa: sem atalhos privados, sem endpoints escondidos.',
       de: 'Automatisieren Sie, was weh tut: Patienten importieren, mit Laboren synchronisieren, WhatsApp anbinden. Ganz Dentalpin lässt sich über die öffentliche API steuern. Es ist dieselbe API, die die Web-App nutzt, ohne private Abkürzungen und ohne geheime Endpunkte.',
       it: 'Automatizza quello che fa male: importare pazienti, sincronizzare con i laboratori, integrare WhatsApp. Tutto Dentalpin si pilota dall’API pubblica. È la stessa API che usa l’app web, senza scorciatoie private e senza endpoint segreti.',
+      pl: 'Automatyzuj to, co boli: import pacjentów, synchronizację z laboratoriami, integrację z WhatsAppem. Całym Dentalpinem steruje się z publicznego API. To to samo API, którego używa aplikacja webowa, bez prywatnych skrótów i bez tajnych endpointów.',
     },
     features: [
       {
@@ -1109,6 +1231,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'FastAPI + Pydantic v2, documentação OpenAPI gerada automaticamente.',
         de: 'FastAPI und Pydantic v2 mit automatisch erzeugter OpenAPI-Doku.',
         it: 'FastAPI + Pydantic v2 con documentazione OpenAPI generata in automatico.',
+        pl: 'FastAPI + Pydantic v2 z automatycznie generowaną dokumentacją OpenAPI.',
       },
       {
         es: 'JWT con access + refresh tokens y RBAC.',
@@ -1117,6 +1240,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'JWT com tokens de acesso e de renovação, mais RBAC.',
         de: 'JWT mit Access- und Refresh-Token sowie RBAC.',
         it: 'JWT con access e refresh token e RBAC.',
+        pl: 'JWT z tokenami access i refresh oraz RBAC.',
       },
       {
         es: 'Permisos wildcard (`*`, `module.*`) para roles limpios.',
@@ -1125,6 +1249,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Permissões com carácter universal (`*`, `module.*`) para perfis limpos.',
         de: 'Wildcard-Berechtigungen (`*`, `module.*`) für saubere Rollen.',
         it: 'Permessi wildcard (`*`, `module.*`) per ruoli puliti.',
+        pl: 'Uprawnienia z wildcardami (`*`, `module.*`) dla czystych ról.',
       },
       {
         es: 'Event bus expuesto para automatizaciones externas.',
@@ -1133,6 +1258,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Bus de eventos exposto para as suas automatizações externas.',
         de: 'Event-Bus nach außen offen für eigene Automatisierungen.',
         it: 'Event bus esposto per automazioni esterne.',
+        pl: 'Szyna zdarzeń wystawiona dla automatyzacji zewnętrznych.',
       },
       {
         es: 'Misma API que usa la app web — sin shortcuts privados.',
@@ -1141,6 +1267,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'A mesma API que a aplicação web usa, sem atalhos privados.',
         de: 'Dieselbe API, die die Web-App nutzt, ohne private Abkürzungen.',
         it: 'La stessa API che usa l’app web, senza scorciatoie private.',
+        pl: 'To samo API, którego używa aplikacja webowa, bez prywatnych skrótów.',
       },
     ],
     screenshot: 'api-docs.png',
@@ -1152,9 +1279,10 @@ export const MODULES: ModuleEntry[] = [
     slugPt: 'agente-ia',
     slugDe: 'ki-agent',
     slugIt: 'agente-ia',
+    slugPl: 'agent-ai',
     domain: 'platform',
     icon: 'sparkles',
-    title: { es: 'Agente de IA', en: 'AI agent', fr: 'Agent IA', pt: 'Agente de IA', de: 'KI-Agent', it: 'Agente IA' },
+    title: { es: 'Agente de IA', en: 'AI agent', fr: 'Agent IA', pt: 'Agente de IA', de: 'KI-Agent', it: 'Agente IA', pl: 'Agent AI' },
     tagline: {
       es: 'Habla con tu clínica. El agente busca, agenda y cobra ejecutando las mismas acciones que la interfaz.',
       en: 'Talk to your clinic. The agent searches, books and bills by running the same operations the UI does.',
@@ -1162,6 +1290,7 @@ export const MODULES: ModuleEntry[] = [
       pt: 'Fale com a sua clínica. O agente procura, marca e cobra executando as mesmas operações que a interface.',
       de: 'Sprechen Sie mit Ihrer Praxis. Der Agent sucht, plant Termine und kassiert, indem er dieselben Aktionen ausführt wie die Oberfläche.',
       it: 'Parla con il tuo studio. L’agente cerca, fissa appuntamenti e incassa eseguendo le stesse azioni dell’interfaccia.',
+      pl: 'Rozmawiaj ze swoją kliniką. Agent szuka, planuje wizyty i przyjmuje płatności, wykonując te same akcje co interfejs.',
     },
     description: {
       es: 'No es un chatbot pegado encima. Es un agente que planifica y ejecuta tareas de varios pasos llamando a las operaciones reales de Dentalpin: pacientes, agenda, recordatorios, presupuestos, pagos y reportes. Cada acción se vuelve a comprobar contra los permisos del usuario, así que el agente solo ve y hace lo que esa persona haría desde la interfaz, dentro de su clínica. Los datos del paciente se tokenizan antes de salir hacia el proveedor de IA, y cualquier acción que modifique datos se detiene a pedirte confirmación.',
@@ -1170,6 +1299,7 @@ export const MODULES: ModuleEntry[] = [
       pt: 'Não é um chatbot colado por cima. É um agente que planeia e executa tarefas de vários passos chamando as operações reais do Dentalpin: pacientes, agenda, reforços, orçamentos, pagamentos e relatórios. Cada ação volta a ser verificada contra as permissões de quem pergunta, por isso o agente só vê e só faz o que essa pessoa faria pela interface, dentro da sua clínica. Os dados do paciente passam a códigos antes de saírem para o fornecedor de IA, e qualquer ação que altere dados pára para lhe pedir confirmação.',
       de: 'Kein Chatbot, der obendrauf geklebt ist. Ein Agent, der mehrstufige Aufgaben plant und ausführt, indem er die echten Operationen von Dentalpin aufruft: Patienten, Terminkalender, Erinnerungen, Kostenvoranschläge, Zahlungen und Auswertungen. Jede Aktion wird erneut gegen die Berechtigungen der Nutzerin geprüft, der Agent sieht und tut also nur, was diese Person auch über die Oberfläche täte, innerhalb ihrer Praxis. Patientendaten werden tokenisiert, bevor sie zum KI-Anbieter gehen, und jede Aktion, die Daten verändert, hält an und fragt nach Ihrer Bestätigung.',
       it: 'Non è un chatbot incollato sopra. È un agente che pianifica ed esegue compiti in più passaggi chiamando le operazioni reali di Dentalpin: pazienti, agenda, promemoria, preventivi, pagamenti e report. Ogni azione viene ricontrollata contro i permessi dell’utente, quindi l’agente vede e fa solo quello che quella persona farebbe dall’interfaccia, dentro il suo studio. I dati del paziente vengono tokenizzati prima di uscire verso il fornitore di IA, e qualsiasi azione che modifica dati si ferma a chiederti conferma.',
+      pl: 'To nie chatbot przyklejony z góry. To agent, który planuje i wykonuje zadania z wielu kroków, wywołując prawdziwe operacje Dentalpina: pacjenci, kalendarz, przypomnienia, kosztorysy, płatności i raporty. Każda akcja jest ponownie sprawdzana wobec uprawnień użytkownika, więc agent widzi i robi tylko to, co ta osoba zrobiłaby z interfejsu, w obrębie swojej kliniki. Dane pacjenta są tokenizowane, zanim wyjdą do dostawcy AI, a każda akcja zmieniająca dane zatrzymuje się, żeby zapytać cię o potwierdzenie.',
     },
     features: [
       {
@@ -1179,6 +1309,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Faz, não se limita a responder: procura pacientes, marca ou remarca consultas, regista pagamentos e tira a faturação do mês, encadeando passos até fechar a tarefa.',
         de: 'Er handelt, statt nur zu antworten: Er sucht Patienten, plant oder verschiebt Termine, erfasst Zahlungen und zieht die Monatsabrechnung, Schritt für Schritt, bis die Aufgabe erledigt ist.',
         it: 'Fa, non solo risponde: cerca pazienti, fissa o sposta appuntamenti, registra pagamenti e tira fuori la fatturazione del mese, concatenando i passaggi fino a chiudere il lavoro.',
+        pl: 'Robi, nie tylko odpowiada: szuka pacjentów, planuje albo przenosi wizyty, zapisuje płatności i wyciąga fakturowanie miesiąca, łącząc kroki aż domknie zadanie.',
       },
       {
         es: 'Paridad RBAC: cada llamada se revalida contra los permisos del usuario en el punto de control de ejecución. Nunca hace más de lo que esa persona puede en la interfaz.',
@@ -1187,6 +1318,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Paridade de permissões: cada chamada é revalidada contra as permissões de quem pergunta, no ponto de controlo da execução. Nunca faz mais do que essa pessoa pode fazer na interface.',
         de: 'RBAC-Gleichstand: Jeder Aufruf wird am Ausführungspunkt erneut gegen die Berechtigungen der Nutzerin geprüft. Er tut nie mehr, als diese Person in der Oberfläche darf.',
         it: 'Parità con l’RBAC: ogni chiamata viene rivalidata contro i permessi dell’utente nel punto di controllo dell’esecuzione. Non fa mai più di quello che quella persona può fare dall’interfaccia.',
+        pl: 'Parzystość z RBAC: każde wywołanie jest ponownie sprawdzane wobec uprawnień użytkownika w punkcie kontroli wykonania. Nigdy nie robi więcej, niż ta osoba może w interfejsie.',
       },
       {
         es: 'Redacción de PHI por defecto: nombres, teléfonos, emails e IDs de paciente se cambian por tokens deterministas antes de salir; el texto clínico libre se queda fuera de la nube.',
@@ -1195,6 +1327,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Ocultação de dados de saúde por omissão: nomes, telefones, emails e identificadores de paciente passam a códigos determinísticos antes de sair; o texto clínico livre nunca sai do seu servidor.',
         de: 'Schwärzung von Gesundheitsdaten als Standard: Namen, Telefonnummern, E-Mail-Adressen und Patienten-IDs werden vor dem Versand durch deterministische Token ersetzt; klinischer Freitext verlässt die Praxis nicht.',
         it: 'Oscuramento dei dati sanitari di default: nomi, telefoni, email e ID paziente vengono sostituiti da token deterministici prima di uscire; il testo clinico libero resta fuori dal cloud.',
+        pl: 'Domyślne maskowanie PHI: nazwiska, telefony, e-maile i identyfikatory pacjenta zamieniają się na deterministyczne tokeny, zanim wyjdą; dowolny tekst kliniczny zostaje poza chmurą.',
       },
       {
         es: 'Las escrituras piden confirmación: agendar, cobrar o editar se pausa a mitad de conversación hasta tu visto bueno explícito.',
@@ -1203,6 +1336,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'As escritas pedem confirmação: marcar, cobrar ou editar pára a meio da conversa até ter o seu aval explícito.',
         de: 'Schreibvorgänge verlangen eine Bestätigung: Termine buchen, kassieren oder ändern hält mitten im Gespräch an, bis Sie ausdrücklich zustimmen.',
         it: 'Le scritture chiedono conferma: fissare, incassare o modificare si mette in pausa a metà conversazione fino al tuo via libera esplicito.',
+        pl: 'Zapisy proszą o potwierdzenie: planowanie, przyjęcie płatności albo edycja zatrzymują się w połowie rozmowy do twojej wyraźnej zgody.',
       },
       {
         es: 'Playbooks guiados: resumen del día, preparar una visita, llenar un hueco, recalls pendientes o presupuestos sin respuesta, en un toque.',
@@ -1211,6 +1345,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Guiões prontos: resumo do dia, preparar uma visita, encher um buraco na agenda, reforços por fazer ou orçamentos sem resposta, num toque.',
         de: 'Geführte Playbooks: Tagesübersicht, einen Termin vorbereiten, eine Lücke füllen, offene Recalls oder unbeantwortete Kostenvoranschläge, mit einem Tipp.',
         it: 'Playbook guidati: riepilogo della giornata, preparare una visita, riempire un buco, richiami in sospeso o preventivi senza risposta, con un tocco.',
+        pl: 'Prowadzone playbooki: podsumowanie dnia, przygotowanie wizyty, wypełnienie luki, zaległe kontrole albo kosztorysy bez odpowiedzi, jednym dotknięciem.',
       },
       {
         es: 'Briefings proactivos: resumen matinal determinista por email, sin LLM y sin PHI fuera, con la agenda del día, recalls y presupuestos abiertos.',
@@ -1219,6 +1354,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Resumos proativos: um resumo determinístico da manhã por email, sem LLM e sem dados de saúde a sair, com a agenda do dia, os reforços e os orçamentos em aberto.',
         de: 'Proaktive Briefings: deterministische Morgenübersicht per E-Mail, ohne LLM und ohne Gesundheitsdaten nach außen, mit dem Tagesplan, den Recalls und den offenen Kostenvoranschlägen.',
         it: 'Briefing proattivi: riepilogo mattutino deterministico via email, senza LLM e senza dati sanitari fuori, con l’agenda del giorno, i richiami e i preventivi aperti.',
+        pl: 'Proaktywne briefingi: deterministyczne podsumowanie poranne mailem, bez LLM-a i bez PHI na zewnątrz, z kalendarzem dnia, kontrolami i otwartymi kosztorysami.',
       },
       {
         es: 'Cmd/Ctrl+K en cualquier pantalla: abre el agente con el contexto del paciente o la cita que tienes delante, sin repetir nada.',
@@ -1227,6 +1363,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Cmd/Ctrl+K em qualquer ecrã: o agente abre com o paciente ou a consulta que tem à frente como contexto, sem repetir nada.',
         de: 'Cmd/Strg+K auf jedem Bildschirm: öffnet den Agenten mit dem Kontext des Patienten oder Termins, den Sie gerade vor sich haben, ohne etwas zu wiederholen.',
         it: 'Cmd/Ctrl+K in qualsiasi schermata: apre l’agente con il contesto del paziente o dell’appuntamento che hai davanti, senza ripetere niente.',
+        pl: 'Cmd/Ctrl+K na każdym ekranie: otwiera agenta z kontekstem pacjenta albo wizyty, którą masz przed sobą, bez powtarzania czegokolwiek.',
       },
       {
         es: 'Modular por diseño: consume las herramientas que publica cada módulo en un registry compartido, así que crece solo según instalas módulos.',
@@ -1235,6 +1372,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Modular por desenho: consome as ferramentas que cada módulo publica num registo comum, por isso cresce sozinho à medida que instala módulos.',
         de: 'Modular by design: Er nutzt die Werkzeuge, die jedes Modul in einem gemeinsamen Registry veröffentlicht, und wächst damit von selbst, wenn Sie Module installieren.',
         it: 'Modulare per progetto: usa gli strumenti che ogni modulo pubblica in un registry condiviso, quindi cresce da solo man mano che installi moduli.',
+        pl: 'Modułowy z założenia: korzysta z narzędzi, które każdy moduł publikuje we wspólnym registry, więc rośnie sam w miarę, jak instalujesz moduły.',
       },
       {
         es: 'Agnóstico de proveedor: abstracción de proveedor LLM, con modelo y presupuesto de tokens por clínica configurables en cada despliegue.',
@@ -1243,6 +1381,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Independente do fornecedor: uma abstração de fornecedor de LLM, com o modelo e o limite de tokens por clínica configuráveis em cada instalação.',
         de: 'Anbieterunabhängig: eine Abstraktion über den LLM-Anbieter, mit Modell und Token-Budget je Praxis, konfigurierbar in jedem Deployment.',
         it: 'Indipendente dal fornitore: astrazione del fornitore LLM, con modello e budget di token per studio configurabili in ogni installazione.',
+        pl: 'Niezależny od dostawcy: abstrakcja dostawcy LLM, z modelem i budżetem tokenów per klinika, konfigurowalnymi w każdym wdrożeniu.',
       },
       {
         es: 'Todo queda auditado: cada herramienta que invoca el agente se registra en el log de auditoría.',
@@ -1251,6 +1390,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Fica tudo registado: cada ferramenta que o agente invoca entra no registo de auditoria.',
         de: 'Alles wird protokolliert: Jedes Werkzeug, das der Agent aufruft, landet im Audit-Log.',
         it: 'Tutto resta tracciato: ogni strumento invocato dall’agente viene registrato nel log di audit.',
+        pl: 'Wszystko jest audytowane: każde narzędzie wywołane przez agenta trafia do logu audytowego.',
       },
     ],
     screenshot: 'ai-copilot.png',
@@ -1263,10 +1403,11 @@ export const MODULES: ModuleEntry[] = [
     slugPt: 'whatsapp',
     slugDe: 'whatsapp',
     slugIt: 'whatsapp',
+    slugPl: 'whatsapp',
     domain: 'operations',
     icon: 'whatsapp',
     customPage: true,
-    title: { es: 'WhatsApp', en: 'WhatsApp', fr: 'WhatsApp', pt: 'WhatsApp', de: 'WhatsApp', it: 'WhatsApp' },
+    title: { es: 'WhatsApp', en: 'WhatsApp', fr: 'WhatsApp', pt: 'WhatsApp', de: 'WhatsApp', it: 'WhatsApp', pl: 'WhatsApp' },
     tagline: {
       es: 'Recordatorios y recalls por WhatsApp, y el paciente te responde en el mismo hilo.',
       en: 'Reminders and recalls over WhatsApp, with the patient replying in the same thread.',
@@ -1274,6 +1415,7 @@ export const MODULES: ModuleEntry[] = [
       pt: 'Lembretes e reforços por WhatsApp, e o paciente responde no mesmo fio.',
       de: 'Erinnerungen und Recalls per WhatsApp, und der Patient antwortet Ihnen im selben Verlauf.',
       it: 'Promemoria e richiami via WhatsApp, e il paziente ti risponde nella stessa conversazione.',
+      pl: 'Przypomnienia i zaproszenia na kontrolę przez WhatsApp, a pacjent odpowiada ci w tym samym wątku.',
     },
     description: {
       es: 'Módulo de comunidad, opcional y desinstalable, que añade WhatsApp como canal de notificaciones encima del gateway de Dentalpin. Envías recordatorios de cita, confirmaciones y recalls con plantillas aprobadas, y cuando el paciente contesta, su respuesta entra en un hilo por paciente dentro de la app. El núcleo de notificaciones es agnóstico de canal: WhatsApp llega como un adaptador conectado a Kapso que puedes quitar sin tocar el resto del sistema.',
@@ -1282,6 +1424,7 @@ export const MODULES: ModuleEntry[] = [
       pt: 'Módulo da comunidade, opcional e removível, que acrescenta o WhatsApp como canal de notificações por cima da gateway do Dentalpin. Envia lembretes de consulta, confirmações e reforços com modelos aprovados e, quando o paciente responde, a resposta entra num fio por paciente dentro da aplicação. O núcleo de notificações é independente do canal: o WhatsApp chega como um adaptador ligado ao Kapso que pode tirar sem mexer no resto do sistema.',
       de: 'Optionales, deinstallierbares Community-Modul, das WhatsApp als Benachrichtigungskanal auf das Gateway von Dentalpin setzt. Sie senden Terminerinnerungen, Bestätigungen und Recalls mit freigegebenen Vorlagen, und wenn der Patient antwortet, landet die Antwort in einem Verlauf pro Patient in der App. Der Benachrichtigungskern ist kanalunabhängig: WhatsApp kommt als Adapter zu Kapso dazu, den Sie entfernen können, ohne den Rest des Systems anzufassen.',
       it: 'Modulo della community, opzionale e disinstallabile, che aggiunge WhatsApp come canale di notifica sopra il gateway di Dentalpin. Invii promemoria degli appuntamenti, conferme e richiami con modelli approvati, e quando il paziente risponde la sua risposta entra in una conversazione per paziente dentro l’app. Il nucleo delle notifiche è indipendente dal canale: WhatsApp arriva come adattatore collegato a Kapso che puoi togliere senza toccare il resto del sistema.',
+      pl: 'Moduł społecznościowy, opcjonalny i do odinstalowania, który dodaje WhatsAppa jako kanał powiadomień na bramce Dentalpina. Wysyłasz przypomnienia o wizycie, potwierdzenia i zaproszenia na kontrolę z zatwierdzonych szablonów, a kiedy pacjent odpisze, jego odpowiedź wchodzi do wątku przy jego karcie w aplikacji. Rdzeń powiadomień jest niezależny od kanału: WhatsApp dochodzi jako adapter podłączony do Kapso, który możesz usunąć bez ruszania reszty systemu.',
     },
     features: [
       {
@@ -1291,6 +1434,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Conversas nos dois sentidos: cada paciente tem o seu fio, com mensagens enviadas e recebidas por ordem.',
         de: 'Gespräche in beide Richtungen: Jeder Patient hat einen Verlauf mit aus- und eingehenden Nachrichten in der richtigen Reihenfolge.',
         it: 'Conversazioni a due vie: ogni paziente ha un filo con i messaggi in uscita e in entrata in ordine.',
+        pl: 'Rozmowy w dwie strony: każdy pacjent ma wątek z wiadomościami wychodzącymi i przychodzącymi po kolei.',
       },
       {
         es: 'Plantillas HSM aprobadas, sincronizadas automáticamente desde Kapso y mapeadas por tipo de aviso.',
@@ -1299,6 +1443,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Modelos HSM aprovados, sincronizados automaticamente a partir do Kapso e ligados a cada tipo de aviso.',
         de: 'Freigegebene HSM-Vorlagen, automatisch aus Kapso synchronisiert und je Hinweistyp zugeordnet.',
         it: 'Modelli HSM approvati, sincronizzati in automatico da Kapso e mappati per tipo di avviso.',
+        pl: 'Zatwierdzone szablony HSM, synchronizowane automatycznie z Kapso i mapowane po typie powiadomienia.',
       },
       {
         es: 'Ventana de sesión de 24 h: dentro de ella respondes en texto libre; fuera, solo plantillas, como exige WhatsApp.',
@@ -1307,6 +1452,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Janela de sessão de 24 h: dentro dela responde em texto livre; fora, só modelos, como o WhatsApp exige.',
         de: '24-Stunden-Sitzungsfenster: darin antworten Sie in freiem Text, danach nur mit Vorlagen, wie WhatsApp es verlangt.',
         it: 'Finestra di sessione di 24 h: dentro rispondi in testo libero, fuori solo modelli, come richiede WhatsApp.',
+        pl: 'Okno sesji 24 h: w jego ramach odpowiadasz dowolnym tekstem; poza nim tylko szablony, tak jak wymaga WhatsApp.',
       },
       {
         es: 'Webhook público firmado con HMAC-SHA256 por clínica, con manejo idempotente de entrantes y estados de entrega.',
@@ -1315,6 +1461,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Webhook público assinado com HMAC-SHA256 por clínica, com tratamento idempotente das mensagens recebidas e dos estados de entrega.',
         de: 'Öffentlicher Webhook, je Praxis mit HMAC-SHA256 signiert, mit idempotenter Verarbeitung von Eingängen und Zustellstatus.',
         it: 'Webhook pubblico firmato con HMAC-SHA256 per studio, con gestione idempotente dei messaggi in entrata e degli stati di consegna.',
+        pl: 'Publiczny webhook podpisany HMAC-SHA256 per klinika, z idempotentną obsługą wiadomości przychodzących i statusów dostarczenia.',
       },
       {
         es: 'Hilo de conversación en la ficha del paciente, sin saltar a otra herramienta.',
@@ -1323,6 +1470,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'O fio de conversa na ficha do paciente, sem saltar para outra ferramenta.',
         de: 'Gesprächsverlauf in der Patientenakte, ohne in ein anderes Werkzeug zu wechseln.',
         it: 'Filo della conversazione nella scheda del paziente, senza saltare a un altro strumento.',
+        pl: 'Wątek rozmowy przy karcie pacjenta, bez przeskakiwania do innego narzędzia.',
       },
       {
         es: 'Resolución de paciente por número de teléfono al recibir un mensaje entrante.',
@@ -1331,6 +1479,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Identificação do paciente pelo número de telefone quando chega uma mensagem.',
         de: 'Zuordnung des Patienten über die Telefonnummer beim Eingang einer Nachricht.',
         it: 'Riconoscimento del paziente dal numero di telefono quando arriva un messaggio.',
+        pl: 'Rozpoznanie pacjenta po numerze telefonu przy wiadomości przychodzącej.',
       },
       {
         es: 'Gating por consentimiento: solo escribe a quien aceptó recibir mensajes.',
@@ -1339,6 +1488,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Controlo do consentimento: só escreve a quem aceitou receber mensagens.',
         de: 'Einwilligung als Voraussetzung: Geschrieben wird nur an Patienten, die zugestimmt haben.',
         it: 'Gating sul consenso: si scrive solo a chi ha accettato di ricevere messaggi.',
+        pl: 'Kontrola zgód: pisze tylko do tych, którzy zgodzili się na wiadomości.',
       },
       {
         es: 'Secretos cifrados con Fernet y ajustes por clínica (token, plantillas, firma de webhook).',
@@ -1347,6 +1497,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Segredos cifrados com Fernet e definições por clínica (token, modelos, assinatura do webhook).',
         de: 'Mit Fernet verschlüsselte Geheimnisse und Einstellungen je Praxis (Token, Vorlagen, Webhook-Signatur).',
         it: 'Segreti cifrati con Fernet e impostazioni per studio (token, modelli, firma del webhook).',
+        pl: 'Sekrety zaszyfrowane Fernetem i ustawienia per klinika (token, szablony, podpis webhooka).',
       },
       {
         es: 'Arquitectura de canal-adaptador: el adaptador se registra al instalar y se elimina al desinstalar, sin residuos.',
@@ -1355,6 +1506,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Arquitetura de canal-adaptador: o adaptador regista-se ao instalar e é removido ao desinstalar, sem restos.',
         de: 'Kanal-Adapter-Architektur: Der Adapter registriert sich beim Installieren und verschwindet beim Deinstallieren, ohne Rückstände.',
         it: 'Architettura canale-adattatore: l’adattatore si registra all’installazione e si elimina alla disinstallazione, senza residui.',
+        pl: 'Architektura kanał-adapter: adapter rejestruje się przy instalacji i usuwa przy odinstalowaniu, bez resztek.',
       },
       {
         es: 'Permisos dedicados (`whatsapp_kapso.settings.*`) y UI bilingüe ES/EN.',
@@ -1363,6 +1515,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Permissões dedicadas (`whatsapp_kapso.settings.*`) e interface multilingue.',
         de: 'Eigene Berechtigungen (`whatsapp_kapso.settings.*`) und zweisprachige Oberfläche ES/EN.',
         it: 'Permessi dedicati (`whatsapp_kapso.settings.*`) e interfaccia bilingue ES/EN.',
+        pl: 'Dedykowane uprawnienia (`whatsapp_kapso.settings.*`) i dwujęzyczny interfejs ES/EN.',
       },
       {
         es: 'Envío de prueba desde ajustes para validar la conexión antes de usarlo en real.',
@@ -1371,6 +1524,7 @@ export const MODULES: ModuleEntry[] = [
         pt: 'Envio de teste a partir das definições, para validar a ligação antes de a usar a sério.',
         de: 'Testnachricht aus den Einstellungen, um die Verbindung vor dem Echteinsatz zu prüfen.',
         it: 'Invio di prova dalle impostazioni per validare la connessione prima di usarlo sul serio.',
+        pl: 'Wysyłka testowa z ustawień, żeby sprawdzić połączenie przed użyciem na produkcji.',
       },
     ],
     screenshot: 'whatsapp-conversation.png',
@@ -1390,7 +1544,8 @@ export function moduleBySlug(slug: string): ModuleEntry | undefined {
       m.slugFr === slug ||
       m.slugPt === slug ||
       m.slugDe === slug ||
-      m.slugIt === slug
+      m.slugIt === slug ||
+      m.slugPl === slug
   );
 }
 
@@ -1400,5 +1555,6 @@ export function moduleSlug(mod: ModuleEntry, locale: Locale): string {
   if (locale === 'pt') return mod.slugPt ?? mod.slug;
   if (locale === 'de') return mod.slugDe ?? mod.slug;
   if (locale === 'it') return mod.slugIt ?? mod.slug;
+  if (locale === 'pl') return mod.slugPl ?? mod.slug;
   return mod.slug;
 }

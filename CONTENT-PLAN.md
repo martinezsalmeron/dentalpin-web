@@ -7,7 +7,7 @@ for anything a human writes here.
 
 There is no status column to keep in sync. The routine reads this file,
 looks at which slugs already exist under
-`apps/web/src/content/blog/{es,en,fr,pt,de,it}/`, and takes the next unwritten
+`apps/web/src/content/blog/{es,en,fr,pt,de,it,pl}/`, and takes the next unwritten
 target. What is published *is* the state.
 
 Five targets a week, weekday mornings: two comparisons and three topic
@@ -82,6 +82,10 @@ The market decides the language, not the vendor's nationality:
   Germany, and it carries into Austria and German-speaking Switzerland
   without a second post.
 - OrisDent, XDENT, GipoDental, AlfaDocs, Appuntoo → **IT**. Italy only.
+- **PL has no section in Queue A yet.** The site publishes in Polish, but
+  no Polish vendor has been verified from its own site, and this document
+  bars adding one from memory. Until that verification happens, Polish
+  takes topic posts only.
 
 A second language is only worth it when the vendor genuinely sells into
 that second language's market, and then it is a **rewritten** post, not a
@@ -116,17 +120,17 @@ A post written in the vocabulary of a translator, not of a practice,
 reads as imported however correct the grammar is. These are the terms
 that give it away, and they are not optional:
 
-| | ES | EN | FR | PT | DE | IT |
-|---|---|---|---|---|---|---|
-| Odontograma | odontograma | odontogram / dental chart | odontogramme | odontograma | Zahnschema | odontogramma |
-| Periodontograma | periodontograma | periodontal chart | parodontogramme | periodontograma | Parodontalstatus | parodontogramma |
-| Presupuesto | presupuesto | quote / treatment plan | devis | orçamento | Kostenvoranschlag | preventivo |
-| Agenda | agenda | schedule | agenda | agenda | Terminkalender | agenda |
-| Historia clínica | historia clínica | clinical record | dossier clinique | histórico clínico | Patientenakte | cartella clinica |
-| Gabinete | gabinete | operatory / chair | fauteuil | gabinete | Behandlungsstuhl | riunito |
-| Higienista | higienista | hygienist | assistante dentaire | higienista | Dentalhygienikerin / ZFA | igienista |
-| Recall | recall | recall | relance | recall | Recall | richiamo |
-| El software | software de gestión dental | practice management software | logiciel dentaire | software de gestão | Praxisverwaltungssoftware | gestionale odontoiatrico |
+| | ES | EN | FR | PT | DE | IT | PL |
+|---|---|---|---|---|---|---|---|
+| Odontograma | odontograma | odontogram / dental chart | odontogramme | odontograma | Zahnschema | odontogramma | diagram zębowy |
+| Periodontograma | periodontograma | periodontal chart | parodontogramme | periodontograma | Parodontalstatus | parodontogramma | periodontogram |
+| Presupuesto | presupuesto | quote / treatment plan | devis | orçamento | Kostenvoranschlag | preventivo | kosztorys |
+| Agenda | agenda | schedule | agenda | agenda | Terminkalender | agenda | kalendarz wizyt |
+| Historia clínica | historia clínica | clinical record | dossier clinique | histórico clínico | Patientenakte | cartella clinica | dokumentacja medyczna |
+| Gabinete | gabinete | operatory / chair | fauteuil | gabinete | Behandlungsstuhl | riunito | gabinet / fotel |
+| Higienista | higienista | hygienist | assistante dentaire | higienista | Dentalhygienikerin / ZFA | igienista | higienistka |
+| Recall | recall | recall | relance | recall | Recall | richiamo | zaproszenie na kontrolę |
+| El software | software de gestión dental | practice management software | logiciel dentaire | software de gestão | Praxisverwaltungssoftware | gestionale odontoiatrico | program dla gabinetu stomatologicznego |
 
 Two traps specific to the new languages:
 
@@ -136,6 +140,11 @@ Two traps specific to the new languages:
 - **Italian "studio" is the practice, "riunito" is the chair.** A price
   per chair is `un canone per riunito`, which is the phrasing a dentist
   in Italy recognises from their current contract.
+- **Polish `gabinet` is both the practice and the room.** A single-dentist
+  practice is a `gabinet stomatologiczny`, which is also the head term
+  people search; `klinika` reads as a large multi-chair centre. The chair
+  itself is a `fotel`, so a per-chair fee is `opłata za fotel`. Prices go
+  in złoty, not euros, or the page reads as translated.
 
 ## Every comparison post has this shape
 
@@ -344,12 +353,13 @@ never renders dark.
 - One `<h1>` (the title), `##` for the sections above.
 - Link to the pricing page and the install post **in the post's own
   language** from every comparison: `/es/precios/`, `/en/pricing/`,
-  `/fr/tarifs/`, `/pt/precos/`, `/de/preise/`, `/it/prezzi/`. A
+  `/fr/tarifs/`, `/pt/precos/`, `/de/preise/`, `/it/prezzi/`,
+  `/pl/cennik/`. A
   Portuguese post linking to `/es/precios/`
   sends the reader to a page they cannot read, and the build's link check
   will not catch it because the page exists.
 - Tag with `comparativa` / `comparison` / `comparatif` / `vergleich` /
-  `confronto` plus the vendor slug.
+  `confronto` / `porownanie` plus the vendor slug.
 
 ## Two queues, five targets a week
 
@@ -364,7 +374,7 @@ language with the **fewest published comparisons**, and only then takes
 the next unwritten target inside that language's section. Ties break in
 this order:
 
-    DE → IT → PT → FR → EN → ES
+    PL → DE → IT → PT → FR → EN → ES
 
 Skip a language whose section has no unwritten target left, and carry on
 with the next.
@@ -379,12 +389,13 @@ week taken in file order means Spanish fills the first five weeks,
 English starts in week six and **Italian would not start until week
 twenty**. The locales that launched most recently, with the emptiest
 blogs, would wait the longest. Rotating gives every language a comparison
-roughly once a month starting from week one, and German and Italian lead
-the tie-break because they are the newest locales and their blogs are
-still empty.
+roughly once a month starting from week one, and Polish, German and
+Italian lead the tie-break because they are the newest locales and their
+blogs are still empty. Polish leads it in principle and gets skipped in
+practice until Queue A has a verified Polish section.
 
 The old ordering was written when only Spanish and English existed and a
-post in the other markets could not rank. All six sections rank now, so
+post in the other markets could not rank. All those sections rank now, so
 grouping by market is only a way to organise the catalogue, not an
 instruction about what to write next.
 

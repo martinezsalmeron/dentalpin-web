@@ -11,6 +11,7 @@ const SLUG_MAP: Record<Locale, Record<Kind, string>> = {
   pt: { privacy: 'privacidade', terms: 'termos', cookies: 'cookies' },
   de: { privacy: 'datenschutz', terms: 'nutzungsbedingungen', cookies: 'cookies' },
   it: { privacy: 'privacy', terms: 'termini', cookies: 'cookies' },
+  pl: { privacy: 'prywatnosc', terms: 'regulamin', cookies: 'cookies' },
 };
 const TITLES: Record<Locale, Record<Kind, string>> = {
   es: { privacy: 'Política de privacidad', terms: 'Términos de uso', cookies: 'Política de cookies' },
@@ -35,6 +36,11 @@ const TITLES: Record<Locale, Record<Kind, string>> = {
     terms: 'Termini di utilizzo',
     cookies: 'Informativa sui cookie',
   },
+  pl: {
+    privacy: 'Polityka prywatności',
+    terms: 'Regulamin',
+    cookies: 'Polityka cookies',
+  },
 };
 
 // Astro hoists getStaticPaths out of the component scope, so the slug table
@@ -47,8 +53,9 @@ export function getStaticPaths() {
     pt: { privacy: 'privacidade', terms: 'termos', cookies: 'cookies' },
     de: { privacy: 'datenschutz', terms: 'nutzungsbedingungen', cookies: 'cookies' },
     it: { privacy: 'privacy', terms: 'termini', cookies: 'cookies' },
+    pl: { privacy: 'prywatnosc', terms: 'regulamin', cookies: 'cookies' },
   } as const;
-  return (['es', 'en', 'fr', 'pt', 'de', 'it'] as const).flatMap((l) =>
+  return (['es', 'en', 'fr', 'pt', 'de', 'it', 'pl'] as const).flatMap((l) =>
     (['privacy', 'terms', 'cookies'] as const).map((k) => ({
       params: { lang: l, slug: SLUGS[l][k] },
     }))
@@ -353,6 +360,53 @@ const cookiesPath = `/${locale}/legal/${SLUG_MAP[locale].cookies}/`;
         </>
       )}
 
+      {kind === 'privacy' && locale === 'pl' && (
+        <>
+          <p><em>Ostatnia aktualizacja: 23 kwietnia 2026.</em></p>
+
+          <h2>1. Administrator danych</h2>
+          <p>
+            Dentared Odontology Services S.L.<br />
+            Numer podatkowy (CIF): B86142809<br />
+            Calle Torres Quevedo 13, 28108 Alcobendas, Madryt (Hiszpania)<br />
+            Kontakt: <a href="mailto:hola@dentalpin.com">hola@dentalpin.com</a>
+          </p>
+
+          <h2>2. Jakie dane przetwarzamy</h2>
+          <ul>
+            <li>Dane identyfikacyjne i kontaktowe, które nam przekazujesz, kiedy do nas piszesz, zapisujesz się na listę oczekujących na Cloud albo zamawiasz usługi (imię i nazwisko, e-mail, nazwa kliniki).</li>
+            <li>Minimalne dane techniczne związane z przeglądaniem strony (adres IP, typ przeglądarki, odwiedzone strony, daty), zbierane bez plików cookie służących do śledzenia przez podmioty trzecie.</li>
+            <li>Treść korespondencji, którą prowadzimy mailem albo innym kanałem, który sam otwierasz.</li>
+          </ul>
+
+          <h2>3. Cele i podstawy prawne</h2>
+          <ul>
+            <li>Odpowiadanie na twoje pytania i świadczenie zamówionej usługi. Podstawa prawna: wykonanie umowy albo działania przed jej zawarciem (art. 6 ust. 1 lit. b RODO).</li>
+            <li>Prowadzenie listy oczekujących na Cloud i powiadomienie cię, kiedy otworzymy miejsca. Podstawa prawna: twoja zgoda (art. 6 ust. 1 lit. a RODO).</li>
+            <li>Wypełnianie obowiązków prawnych, rachunkowych i podatkowych. Podstawa prawna: obowiązek prawny (art. 6 ust. 1 lit. c RODO).</li>
+            <li>Ulepszanie strony i produktu na podstawie zagregowanych wskaźników. Podstawa prawna: prawnie uzasadniony interes (art. 6 ust. 1 lit. f RODO).</li>
+          </ul>
+
+          <h2>4. Okres przechowywania</h2>
+          <p>Przechowujemy twoje dane tak długo, jak jest to potrzebne do celu, w którym je zebraliśmy, a następnie przez obowiązujące okresy ustawowe (zwykle sześć lat dla dokumentacji rachunkowej). Jeśli wycofasz zgodę, usuniemy je, o ile przepisy nie wymagają dalszego przechowywania.</p>
+
+          <h2>5. Odbiorcy danych</h2>
+          <p>Nie przekazujemy twoich danych podmiotom trzecim, poza przypadkami wymaganymi przez prawo. Współpracujemy z podmiotami przetwarzającymi, które świadczą nam usługi hostingu, poczty i analityki, każdorazowo na podstawie umowy powierzenia zgodnej z art. 28 RODO. Aktualną listę udostępniamy na życzenie pod adresem <a href="mailto:hola@dentalpin.com">hola@dentalpin.com</a>.</p>
+
+          <h2>6. Przekazywanie danych poza EOG</h2>
+          <p>Priorytetowo wybieramy dostawców z infrastrukturą w Unii Europejskiej. Kiedy dostawca działa poza EOG, przekazanie odbywa się na podstawie standardowych klauzul umownych zatwierdzonych przez Komisję Europejską albo innego ważnego mechanizmu z rozdziału V RODO.</p>
+
+          <h2>7. Twoje prawa</h2>
+          <p>W każdej chwili możesz skorzystać z prawa dostępu, sprostowania, usunięcia, sprzeciwu, ograniczenia przetwarzania, przenoszenia danych oraz prawa do tego, by nie podlegać decyzjom automatycznym. Napisz na <a href="mailto:hola@dentalpin.com">hola@dentalpin.com</a>, wskazując prawo, z którego chcesz skorzystać, i dołączając dokument potwierdzający twoją tożsamość. Jeśli uznasz, że nie zajęliśmy się twoim wnioskiem właściwie, możesz złożyć skargę do właściwego organu nadzorczego: hiszpańskiej Agencji Ochrony Danych (<a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>) albo, jeśli mieszkasz w Polsce, do Prezesa Urzędu Ochrony Danych Osobowych (<a href="https://uodo.gov.pl" target="_blank" rel="noopener">uodo.gov.pl</a>).</p>
+
+          <h2>8. Pliki cookie</h2>
+          <p>Ta strona używa wyłącznie plików cookie niezbędnych do jej działania. Szczegóły znajdziesz w naszej <a href={cookiesPath}>Polityce cookies</a>.</p>
+
+          <h2>9. Zmiany tej polityki</h2>
+          <p>Możemy aktualizować tę politykę, żeby odzwierciedlić zmiany prawne albo produktowe. Obowiązującą wersję zawsze publikujemy pod tym samym adresem, z datą ostatniej zmiany.</p>
+        </>
+      )}
+
       {kind !== 'privacy' && (
         <p>
           {locale === 'es'
@@ -365,7 +419,9 @@ const cookiesPath = `/${locale}/legal/${SLUG_MAP[locale].cookies}/`;
                   ? 'Dokument, das noch juristisch verfasst werden muss. Vor dem Start aktualisieren.'
                   : locale === 'it'
                     ? 'Documento in attesa di stesura legale. Aggiornare prima del lancio.'
-                    : 'Legal document pending drafting. Update before launch.'}
+                    : locale === 'pl'
+                      ? 'Dokument czeka na redakcję prawną. Zaktualizuj przed startem.'
+                      : 'Legal document pending drafting. Update before launch.'}
         </p>
       )}
     </div>

@@ -3,7 +3,7 @@ import { isLocale, type Locale } from '~/i18n';
 import ManifestoBody from '~/components/pages/ManifestoBody.astro';
 
 export function getStaticPaths() {
-  return [{ params: { lang: 'de' } }];
+  return [{ params: { lang: 'de' } }, { params: { lang: 'pl' } }];
 }
 
 const { lang } = Astro.params;

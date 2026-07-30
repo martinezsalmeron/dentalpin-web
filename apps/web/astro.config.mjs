@@ -22,7 +22,7 @@ export default defineConfig({
   // Keeping `locales` here gives us Astro.currentLocale for free.
   i18n: {
     defaultLocale: 'es',
-    locales: ['es', 'en', 'fr', 'pt', 'de', 'it'],
+    locales: ['es', 'en', 'fr', 'pt', 'de', 'it', 'pl'],
   },
   integrations: [
     // No `i18n` block on purpose. The integration pairs locales by matching

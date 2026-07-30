@@ -8,8 +8,8 @@ interface Props {
 }
 
 const { slug, locale } = Astro.props;
-const sameApi = { es: 'Misma API que la app web', en: 'Same API the web app uses', fr: 'La même API que l’app web', pt: 'A mesma API da app web', de: 'Dieselbe API wie die Web-App', it: 'La stessa API dell’app web' }[locale];
-const moreEndpoints = { es: '120 endpoints más', en: '120 more endpoints', fr: '120 endpoints de plus', pt: 'mais 120 endpoints', de: '120 weitere Endpunkte', it: 'altri 120 endpoint' }[locale];
+const sameApi = { es: 'Misma API que la app web', en: 'Same API the web app uses', fr: 'La même API que l’app web', pt: 'A mesma API da app web', de: 'Dieselbe API wie die Web-App', it: 'La stessa API dell’app web', pl: 'To samo API, którego używa aplikacja webowa' }[locale];
+const moreEndpoints = { es: '120 endpoints más', en: '120 more endpoints', fr: '120 endpoints de plus', pt: 'mais 120 endpoints', de: '120 weitere Endpunkte', it: 'altri 120 endpoint', pl: '120 kolejnych endpointów' }[locale];
 
 const apiEndpoints = [
   { method: 'GET', path: '/api/v1/patients', tone: 'get' },
