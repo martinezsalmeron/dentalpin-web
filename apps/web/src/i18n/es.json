@@ -1516,13 +1516,15 @@
   },
   "lang": {
     "label": "Idioma",
-    "es": "Español",
+    "es": "Español (ES)",
     "en": "English",
     "fr": "Français",
-    "pt": "Português",
+    "pt": "Português (PT)",
     "de": "Deutsch",
     "it": "Italiano",
-    "pl": "Polski"
+    "pl": "Polski",
+    "pt-br": "Português (BR)",
+    "es-mx": "Español (MX)"
   },
   "blog": {
     "title": "Blog",

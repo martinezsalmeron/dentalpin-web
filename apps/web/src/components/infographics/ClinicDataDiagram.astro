@@ -3,7 +3,7 @@
  * Building (clinic) with server inside, data dots confined.
  * External cloud on the right, struck through. Self-host metaphor.
  */
-import type { Locale } from '~/i18n';
+import { localised, type Locale } from '~/i18n';
 interface Props {
   size?: 'sm' | 'md';
   class?: string;
@@ -11,8 +11,8 @@ interface Props {
 }
 const { size = 'md', class: extra = '', locale = 'es' } = Astro.props;
 const dim = size === 'sm' ? 120 : 220;
-const labelClinic = { es: 'DONDE TÚ ELIJAS', en: 'WHERE YOU PICK', fr: 'OÙ VOUS VOULEZ', pt: 'ONDE VOCÊ QUISER', de: 'WO SIE WOLLEN', it: 'DOVE VUOI TU', pl: 'GDZIE ZECHCESZ' }[locale];
-const labelCloud = { es: 'NUBE AJENA', en: 'OUTSIDE CLOUD', fr: 'CLOUD D’UN AUTRE', pt: 'CLOUD DE OUTREM', de: 'FREMDE CLOUD', it: 'CLOUD DI ALTRI', pl: 'CZYJAŚ CHMURA' }[locale];
+const labelClinic = localised({ es: 'DONDE TÚ ELIJAS', en: 'WHERE YOU PICK', fr: 'OÙ VOUS VOULEZ', pt: 'ONDE VOCÊ QUISER', de: 'WO SIE WOLLEN', it: 'DOVE VUOI TU', pl: 'GDZIE ZECHCESZ' }, locale);
+const labelCloud = localised({ es: 'NUBE AJENA', en: 'OUTSIDE CLOUD', fr: 'CLOUD D’UN AUTRE', pt: 'CLOUD DE OUTREM', de: 'FREMDE CLOUD', it: 'CLOUD DI ALTRI', pl: 'CZYJAŚ CHMURA' }, locale);
 ---
 
 <svg

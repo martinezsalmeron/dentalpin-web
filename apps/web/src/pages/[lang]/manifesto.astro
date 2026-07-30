@@ -4,7 +4,12 @@ import ManifestoBody from '~/components/pages/ManifestoBody.astro';
 
 export function getStaticPaths() {
   // PT and IT share the English slug, so it hangs off this file rather than its own.
-  return [{ params: { lang: 'en' } }, { params: { lang: 'pt' } }, { params: { lang: 'it' } }];
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'pt' } },
+    { params: { lang: 'it' } },
+    { params: { lang: 'pt-br' } },
+  ];
 }
 
 const { lang } = Astro.params;

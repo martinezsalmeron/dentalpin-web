@@ -1,5 +1,5 @@
 import type { CollectionEntry } from 'astro:content';
-import type { Locale } from '~/i18n';
+import { REGIONAL_PARENT, isRegional, type Locale } from '~/i18n';
 
 // Collection ids are "<locale>/<slug>" — the loader's glob is `*/*.md`
 // rooted at src/content/blog, so the directory carries the language and
@@ -14,6 +14,24 @@ export function slugOf(id: string): string {
 
 export function postPath(locale: Locale, slug: string): string {
   return `/${locale}/blog/${slug}/`;
+}
+
+/**
+ * Posts a locale publishes. A regional variant serves its parent's posts under
+ * its own URLs, which is what hreflang is for: same content, another country.
+ * Its own directory overrides the parent post that shares a filename, so
+ * writing `blog/pt-br/migrar-software-dentario.md` replaces that one post and
+ * leaves the rest inherited.
+ */
+export function postsForLocale<T extends { id: string }>(posts: T[], locale: Locale): T[] {
+  const own = posts.filter((p) => localeOf(p.id) === locale);
+  if (!isRegional(locale)) return own;
+  const overridden = new Set(own.map((p) => slugOf(p.id)));
+  const parent = REGIONAL_PARENT[locale];
+  return [
+    ...own,
+    ...posts.filter((p) => localeOf(p.id) === parent && !overridden.has(slugOf(p.id))),
+  ];
 }
 
 // Drafts are visible while developing and dropped from real builds, so

@@ -114,6 +114,38 @@ Two things that look like translations and are not:
   Four different posts, four sets of dates, four official sources. Never
   translate a compliance post across a border.
 
+## The two regional variants
+
+`pt-BR` and `es-MX` are not languages, they are the same language priced and
+named for another market. They inherit their parent's dictionary and only
+override what differs, in
+`apps/web/src/i18n/{pt-br,es-mx}.overrides.json`. An override equal to its
+parent fails the build, so the files stay down to what actually changed.
+
+What changes, and it is always these four things:
+
+- **Currency.** `R$` and `$0 MXN`, never euros. A euro price on a Brazilian
+  page reads as a translated page whatever the grammar does.
+- **Tax vocabulary.** Brazil issues `notas fiscais` and the module is
+  `Faturamento`; Mexico keeps `IVA` and `facturación`, which it already uses.
+- **Head terms.** The clinical record is `prontuário eletrônico` in Brazil and
+  `expediente clínico` in Mexico, and both have their own URL
+  (`/pt-br/funcionalidades/prontuario-eletronico/`). These are the two terms
+  worth a slug of their own; the rest of the catalogue inherits.
+- **Everyday words.** `celular` not `telemóvel`/`móvil`, `computadora` not
+  `ordenador`, `contador` not `contabilista`/`gestoría`, `tela` not `ecrã`,
+  `por padrão` not `por omissão`, and no enclitic pronouns in Brazilian copy
+  (`nos escrever`, not `escrever-nos`).
+
+Blog posts are inherited too: `/pt-br/blog/` serves the Portuguese posts under
+Brazilian URLs, which is what hreflang is for. Writing
+`blog/pt-br/<same-filename>.md` overrides that one post and leaves the rest
+inherited, so a Brazilian rewrite of the migration guide does not hide the
+other four.
+
+Two things that stay Spanish and Portuguese from Spain and Portugal: the
+`/es/` and `/pt/` copy. The variants are additions, not replacements.
+
 ## The words the profession actually uses
 
 A post written in the vocabulary of a translator, not of a practice,
@@ -354,7 +386,7 @@ never renders dark.
 - Link to the pricing page and the install post **in the post's own
   language** from every comparison: `/es/precios/`, `/en/pricing/`,
   `/fr/tarifs/`, `/pt/precos/`, `/de/preise/`, `/it/prezzi/`,
-  `/pl/cennik/`. A
+  `/pl/cennik/`, `/pt-br/precos/`, `/es-mx/precios/`. A
   Portuguese post linking to `/es/precios/`
   sends the reader to a page they cannot read, and the build's link check
   will not catch it because the page exists.

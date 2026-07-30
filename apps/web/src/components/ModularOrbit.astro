@@ -1,5 +1,5 @@
 ---
-import { useDict, type Locale } from '~/i18n';
+import { localised, useDict, type Locale } from '~/i18n';
 import { MODULES } from '~/data/modules';
 import Icon from '@dentalpin/ui/Icon.astro';
 
@@ -15,7 +15,7 @@ const innerSlugs = ['odontograma','pacientes','agenda','presupuestos','facturaci
 const inner = innerSlugs
   .map((s) => MODULES.find((m) => m.slug === s))
   .filter((m): m is NonNullable<typeof m> => Boolean(m))
-  .map((mod) => ({ kind: 'official' as const, label: mod.title[locale], icon: mod.icon as IconName }));
+  .map((mod) => ({ kind: 'official' as const, label: localised(mod.title, locale), icon: mod.icon as IconName }));
 
 const community = (dict.modular.communityItems as { label: string; icon: string }[]).map((c) => ({
   kind: 'community' as const,

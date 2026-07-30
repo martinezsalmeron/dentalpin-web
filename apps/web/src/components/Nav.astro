@@ -1,5 +1,5 @@
 ---
-import { useDict, localisedPath, pagePath, type Locale } from '~/i18n';
+import { localised, useDict, localisedPath, pagePath, type Locale } from '~/i18n';
 import Button from '@dentalpin/ui/Button.astro';
 import Icon from '@dentalpin/ui/Icon.astro';
 import LanguagePicker from './LanguagePicker.astro';
@@ -143,7 +143,7 @@ const mobileDomains: { key: ModuleDomain; label: string }[] = [
                               <span class="mt-0.5 inline-flex h-6 w-6 flex-none items-center justify-center rounded-[var(--radius-sm)] bg-[var(--color-primary-soft)] text-[var(--color-primary-soft-text)]">
                                 <Icon name={mod.icon} size={14} />
                               </span>
-                              <span class="font-medium">{mod.title[locale]}</span>
+                              <span class="font-medium">{localised(mod.title, locale)}</span>
                             </a>
                           </li>
                         ))}

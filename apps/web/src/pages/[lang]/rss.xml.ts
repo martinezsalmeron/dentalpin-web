@@ -2,7 +2,7 @@ import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
 import type { APIRoute } from 'astro';
 import { LOCALES, useTranslations, type Locale } from '~/i18n';
-import { localeOf, slugOf, postPath, isPublished } from '~/lib/blog';
+import { slugOf, postPath, isPublished, postsForLocale } from '~/lib/blog';
 
 export function getStaticPaths() {
   return LOCALES.map((lang) => ({ params: { lang } }));
@@ -12,8 +12,8 @@ export const GET: APIRoute = async ({ params, site }) => {
   const locale = params.lang as Locale;
   const t = useTranslations(locale);
 
-  const posts = (await getCollection('blog'))
-    .filter((p) => localeOf(p.id) === locale && isPublished(p))
+  const posts = postsForLocale(await getCollection('blog'), locale)
+    .filter(isPublished)
     .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 
   return rss({

@@ -5,7 +5,13 @@ import TechnologyBody from '~/components/pages/TechnologyBody.astro';
 export function getStaticPaths() {
   // PT shares the Spanish slug, so it hangs off this file rather than its own.
   // PT and IT share the Spanish slug, so they hang off this file.
-  return [{ params: { lang: 'es' } }, { params: { lang: 'pt' } }, { params: { lang: 'it' } }];
+  return [
+    { params: { lang: 'es' } },
+    { params: { lang: 'pt' } },
+    { params: { lang: 'it' } },
+    { params: { lang: 'pt-br' } },
+    { params: { lang: 'es-mx' } },
+  ];
 }
 
 const { lang } = Astro.params;

@@ -1,19 +1,31 @@
 ---
 import { getCollection, render } from 'astro:content';
-import { DATE_LOCALE, HTML_LANG, isLocale, useTranslations, pagePath, type Locale } from '~/i18n';
+import {
+  DATE_LOCALE,
+  HTML_LANG,
+  LOCALES,
+  isLocale,
+  useTranslations,
+  pagePath,
+  type Locale,
+} from '~/i18n';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Section from '@dentalpin/ui/Section.astro';
 import Button from '@dentalpin/ui/Button.astro';
 import { DEMO_URL } from '~/config/links';
-import { localeOf, slugOf, isPublished, readingMinutes } from '~/lib/blog';
+import { slugOf, isPublished, readingMinutes, postsForLocale } from '~/lib/blog';
 import '~/styles/post.css';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog');
-  return posts.filter(isPublished).map((post) => ({
-    params: { lang: localeOf(post.id), slug: slugOf(post.id) },
-    props: { post },
-  }));
+  const posts = (await getCollection('blog')).filter(isPublished);
+  // A regional variant serves its parent's posts under its own prefix, so the
+  // path list is built per locale rather than per post.
+  return LOCALES.flatMap((lang) =>
+    postsForLocale(posts, lang).map((post) => ({
+      params: { lang, slug: slugOf(post.id) },
+      props: { post },
+    }))
+  );
 }
 
 const { lang } = Astro.params;

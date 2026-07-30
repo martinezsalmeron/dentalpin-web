@@ -3,15 +3,14 @@ import { isLocale, pagePath, type Locale } from '~/i18n';
 import FeatureDetailBody from '~/components/pages/FeatureDetailBody.astro';
 import VerifactuFeatureBody from '~/components/pages/VerifactuFeatureBody.astro';
 import WhatsappFeatureBody from '~/components/pages/WhatsappFeatureBody.astro';
-import { MODULES, moduleBySlug } from '~/data/modules';
+import { MODULES, moduleBySlug, moduleSlug } from '~/data/modules';
 
 export function getStaticPaths() {
   // Same directory, two locales: PT reuses the Spanish index slug but its
   // own module slugs (orcamentos, not presupuestos).
-  return [
-    ...MODULES.map((m) => ({ params: { lang: 'es', slug: m.slug } })),
-    ...MODULES.map((m) => ({ params: { lang: 'pt', slug: m.slugPt ?? m.slug } })),
-  ];
+  return (['es', 'pt', 'pt-br', 'es-mx'] as const).flatMap((lang) =>
+    MODULES.map((m) => ({ params: { lang, slug: moduleSlug(m, lang) } }))
+  );
 }
 
 const { lang, slug } = Astro.params;

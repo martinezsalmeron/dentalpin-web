@@ -2,6 +2,8 @@
 import '~/styles/global.css';
 import {
   DEFAULT_LOCALE,
+  HREFLANG,
+  HREFLANG_ALIASES,
   HTML_LANG,
   OG_LOCALE,
   isLocale,
@@ -38,10 +40,13 @@ const {
 const site = Astro.site?.toString().replace(/\/$/, '') ?? 'https://www.dentalpin.com';
 const pathname = canonicalPath ?? new URL(Astro.request.url).pathname;
 const canonical = `${site}${pathname}`;
-const alternates = otherLocales(locale).map((l) => ({
-  hreflang: l,
-  href: `${site}${translatePath(pathname, l)}`,
-}));
+// One <link> per hreflang tag, not per locale: the Mexican page also answers
+// for Argentina, Chile, Colombia and Peru, which have no page of their own.
+const alternates = otherLocales(locale).flatMap((l) => {
+  const href = `${site}${translatePath(pathname, l)}`;
+  return [HREFLANG[l], ...(HREFLANG_ALIASES[l] ?? [])].map((hreflang) => ({ hreflang, href }));
+});
+const selfHreflangs = [HREFLANG[locale], ...(HREFLANG_ALIASES[locale] ?? [])];
 const ogFull = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
 
 const jsonLd = {
@@ -73,7 +78,7 @@ const jsonLd = {
     <meta name="description" content={description} />
     {noindex && <meta name="robots" content="noindex,nofollow" />}
     <link rel="canonical" href={canonical} />
-    <link rel="alternate" hreflang={locale} href={canonical} />
+    {selfHreflangs.map((h) => <link rel="alternate" hreflang={h} href={canonical} />)}
     {alternates.map((a) => <link rel="alternate" hreflang={a.hreflang} href={a.href} />)}
     <link rel="alternate" hreflang="x-default" href={`${site}${localisedPath(DEFAULT_LOCALE)}`} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />

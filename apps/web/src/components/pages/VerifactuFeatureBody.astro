@@ -1,5 +1,5 @@
 ---
-import { pagePath, useDict, type Locale } from '~/i18n';
+import { localised, pagePath, useDict, type Locale } from '~/i18n';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Section from '@dentalpin/ui/Section.astro';
 import GradientBackdrop from '@dentalpin/ui/GradientBackdrop.astro';
@@ -65,7 +65,7 @@ function badgeClass(label: string) {
         <span class="text-[var(--color-text-subtle)]">/</span>
         <span class="text-[var(--color-text-muted)]">{dict.megamenu.columns.operations}</span>
         <span class="text-[var(--color-text-subtle)]">/</span>
-        <span class="font-medium text-[var(--color-text)]">{mod.title[locale]}</span>
+        <span class="font-medium text-[var(--color-text)]">{localised(mod.title, locale)}</span>
       </nav>
 
       <div class="mt-10 grid gap-10 lg:grid-cols-[minmax(0,1.55fr)_minmax(0,1fr)] lg:items-start">
@@ -259,7 +259,7 @@ function badgeClass(label: string) {
           <Icon name="card" size={22} />
         </span>
         <p class="text-[13px] font-semibold tracking-tight text-[var(--color-text)]">Dentalpin</p>
-        <p class="font-mono text-[11px] uppercase tracking-wider text-[var(--color-text-muted)]">{{ es: 'Emisión + huella', en: 'Issue + hash', fr: 'Émission + empreinte', pt: 'Emissão + impressão', de: 'Ausstellen + Prüfsumme', it: 'Emissione + impronta', pl: 'Wystawienie + odcisk' }[locale]}</p>
+        <p class="font-mono text-[11px] uppercase tracking-wider text-[var(--color-text-muted)]">{localised({ es: 'Emisión + huella', en: 'Issue + hash', fr: 'Émission + empreinte', pt: 'Emissão + impressão', de: 'Ausstellen + Prüfsumme', it: 'Emissione + impronta', pl: 'Wystawienie + odcisk' }, locale)}</p>
       </div>
       <span aria-hidden="true" class="hidden md:flex justify-center text-[var(--color-text-subtle)]">
         <Icon name="arrow-right" size={18} />
@@ -279,7 +279,7 @@ function badgeClass(label: string) {
           <Icon name="check" size={22} />
         </span>
         <p class="text-[13px] font-semibold tracking-tight text-[var(--color-text)]">AEAT</p>
-        <p class="font-mono text-[11px] uppercase tracking-wider text-[var(--color-text-muted)]">{{ es: 'CSV + estado', en: 'CSV + state', fr: 'Code AEAT + état', pt: 'Código AEAT + estado', de: 'AEAT-Code + Status', it: 'Codice AEAT + stato', pl: 'Kod AEAT + status' }[locale]}</p>
+        <p class="font-mono text-[11px] uppercase tracking-wider text-[var(--color-text-muted)]">{localised({ es: 'CSV + estado', en: 'CSV + state', fr: 'Code AEAT + état', pt: 'Código AEAT + estado', de: 'AEAT-Code + Status', it: 'Codice AEAT + stato', pl: 'Kod AEAT + status' }, locale)}</p>
       </div>
     </div>
   </Section>
@@ -345,7 +345,7 @@ function badgeClass(label: string) {
             </span>
           </div>
           <p class="mt-4 text-[14.5px] leading-[1.55] text-[var(--color-text)]">
-            {f[locale]}
+            {localised(f, locale)}
           </p>
           <span
             aria-hidden="true"
@@ -375,8 +375,8 @@ function badgeClass(label: string) {
         <thead>
           <tr class="border-b border-[var(--color-border-subtle)] bg-[var(--color-surface-muted)] text-left">
             <th class="px-5 py-3 text-[12px] font-semibold uppercase tracking-wider text-[var(--color-text-muted)]"></th>
-            <th class="px-5 py-3 text-[12px] font-semibold uppercase tracking-wider text-[var(--color-text-muted)]">{{ es: 'Pruebas', en: 'Test', fr: 'Test', pt: 'Testes', de: 'Test', it: 'Prova', pl: 'Testy' }[locale]}</th>
-            <th class="px-5 py-3 text-[12px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">{{ es: 'Producción', en: 'Production', fr: 'Production', pt: 'Produção', de: 'Produktivbetrieb', it: 'Produzione', pl: 'Produkcja' }[locale]}</th>
+            <th class="px-5 py-3 text-[12px] font-semibold uppercase tracking-wider text-[var(--color-text-muted)]">{localised({ es: 'Pruebas', en: 'Test', fr: 'Test', pt: 'Testes', de: 'Test', it: 'Prova', pl: 'Testy' }, locale)}</th>
+            <th class="px-5 py-3 text-[12px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">{localised({ es: 'Producción', en: 'Production', fr: 'Production', pt: 'Produção', de: 'Produktivbetrieb', it: 'Produzione', pl: 'Produkcja' }, locale)}</th>
           </tr>
         </thead>
         <tbody>
@@ -539,10 +539,10 @@ function badgeClass(label: string) {
                 <Icon name={r.icon} size={18} />
               </span>
               <h3 class="text-[17px] font-semibold tracking-tight text-[var(--color-text)]">
-                {r.title[locale]}
+                {localised(r.title, locale)}
               </h3>
               <p class="text-[14px] leading-[1.55] text-[var(--color-text-muted)]">
-                {r.tagline[locale]}
+                {localised(r.tagline, locale)}
               </p>
               <span class="mt-auto inline-flex items-center gap-1 text-[13px] font-semibold text-[var(--color-primary)] transition-transform duration-200 group-hover:translate-x-0.5">
                 {dict.featurePage.ctaOpenModule}

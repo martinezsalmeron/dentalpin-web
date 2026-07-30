@@ -11,6 +11,10 @@ const t = useTranslations(locale);
 // Slugs are localised, so switching language rewrites them too:
 // /es/funcionalidades/odontograma/ → /fr/fonctionnalites/odontogramme/.
 const pathname = Astro.url.pathname;
+
+// The badge shows the market, not the tag: "BR" reads faster than "PT-BR".
+const BADGE: Partial<Record<Locale, string>> = { 'pt-br': 'BR', 'es-mx': 'MX' };
+const badge = (loc: Locale) => BADGE[loc] ?? loc.toUpperCase();
 ---
 
 <div class="relative">
@@ -20,7 +24,7 @@ const pathname = Astro.url.pathname;
       aria-label={t('lang.label')}
     >
       <Icon name="globe" size={16} />
-      <span class="uppercase">{locale}</span>
+      <span class="uppercase">{badge(locale)}</span>
     </summary>
     <ul
       class="absolute right-0 top-full mt-1 min-w-[160px] rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-surface)] p-1 shadow-[var(--shadow-md)]"
@@ -39,7 +43,7 @@ const pathname = Astro.url.pathname;
             ]}
           >
             <span>{t(`lang.${loc}`)}</span>
-            <span class="text-[var(--color-text-subtle)]">{loc.toUpperCase()}</span>
+            <span class="text-[var(--color-text-subtle)]">{badge(loc)}</span>
           </a>
         </li>
       ))}

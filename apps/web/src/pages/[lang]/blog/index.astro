@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import { LOCALES, DATE_LOCALE, isLocale, useTranslations, type Locale } from '~/i18n';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Section from '@dentalpin/ui/Section.astro';
-import { localeOf, slugOf, postPath, isPublished } from '~/lib/blog';
+import { slugOf, postPath, isPublished, postsForLocale } from '~/lib/blog';
 
 export function getStaticPaths() {
   return LOCALES.map((lang) => ({ params: { lang } }));
@@ -14,8 +14,8 @@ if (!isLocale(lang)) return Astro.redirect('/es/', 308);
 const locale = lang as Locale;
 const t = useTranslations(locale);
 
-const posts = (await getCollection('blog'))
-  .filter((p) => localeOf(p.id) === locale && isPublished(p))
+const posts = postsForLocale(await getCollection('blog'), locale)
+  .filter(isPublished)
   .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 
 const dateFmt = new Intl.DateTimeFormat(DATE_LOCALE[locale], {

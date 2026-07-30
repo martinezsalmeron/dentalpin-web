@@ -1,5 +1,5 @@
 ---
-import { pagePath, useDict, type Locale } from '~/i18n';
+import { localised, pagePath, useDict, type Locale } from '~/i18n';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Section from '@dentalpin/ui/Section.astro';
 import GradientBackdrop from '@dentalpin/ui/GradientBackdrop.astro';
@@ -32,8 +32,8 @@ const isRoadmap = mod.status === 'roadmap';
 
 <BaseLayout
   locale={locale}
-  title={`${mod.title[locale]} · Dentalpin`}
-  description={mod.description[locale]}
+  title={`${localised(mod.title, locale)} · Dentalpin`}
+  description={localised(mod.description, locale)}
 >
   <section class="relative overflow-hidden">
     <GradientBackdrop variant="subtle" />
@@ -46,7 +46,7 @@ const isRoadmap = mod.status === 'roadmap';
         <span class="text-[var(--color-text-subtle)]">/</span>
         <span class="text-[var(--color-text-muted)]">{domainLabel}</span>
         <span class="text-[var(--color-text-subtle)]">/</span>
-        <span class="font-medium text-[var(--color-text)]">{mod.title[locale]}</span>
+        <span class="font-medium text-[var(--color-text)]">{localised(mod.title, locale)}</span>
       </nav>
 
       <div class="mt-10 grid gap-10 lg:grid-cols-[minmax(0,1.55fr)_minmax(0,1fr)] lg:items-start">
@@ -73,16 +73,16 @@ const isRoadmap = mod.status === 'roadmap';
             </span>
             <div class="min-w-0">
               <h1 class="text-[clamp(2rem,2.4vw+1rem,3.5rem)] font-semibold leading-[1.05] tracking-[-0.025em] text-[var(--color-text)]">
-                {mod.title[locale]}
+                {localised(mod.title, locale)}
               </h1>
               <p class="mt-3 text-[18px] leading-[1.5] text-[var(--color-primary)]">
-                {mod.tagline[locale]}
+                {localised(mod.tagline, locale)}
               </p>
             </div>
           </div>
 
           <p class="mt-6 text-[16px] leading-[1.65] text-[var(--color-text-muted)]">
-            {mod.description[locale]}
+            {localised(mod.description, locale)}
           </p>
 
           <div class="mt-8 flex flex-wrap items-center gap-3">
@@ -127,7 +127,7 @@ const isRoadmap = mod.status === 'roadmap';
     {useDiagram ? (
       <FeatureDiagram slug={mod.slug as 'modulos' | 'api'} locale={locale} />
     ) : (
-      <ScreenshotPlaceholder file={mod.screenshot} alt={mod.title[locale]} />
+      <ScreenshotPlaceholder file={mod.screenshot} alt={localised(mod.title, locale)} />
     )}
   </Section>
 
@@ -136,9 +136,9 @@ const isRoadmap = mod.status === 'roadmap';
       <ul class="grid gap-6 md:grid-cols-2">
         {mod.extraScreenshots.map((extra) => (
           <li>
-            <ScreenshotPlaceholder file={extra.file} alt={extra.caption[locale]} />
+            <ScreenshotPlaceholder file={extra.file} alt={localised(extra.caption, locale)} />
             <p class="mt-3 text-[13px] text-[var(--color-text-muted)]">
-              {extra.caption[locale]}
+              {localised(extra.caption, locale)}
             </p>
           </li>
         ))}
@@ -173,7 +173,7 @@ const isRoadmap = mod.status === 'roadmap';
             </span>
           </div>
           <p class="mt-4 text-[14.5px] leading-[1.55] text-[var(--color-text)]">
-            {f[locale]}
+            {localised(f, locale)}
           </p>
           <span
             aria-hidden="true"
@@ -209,10 +209,10 @@ const isRoadmap = mod.status === 'roadmap';
                 <Icon name={r.icon} size={18} />
               </span>
               <h3 class="text-[17px] font-semibold tracking-tight text-[var(--color-text)]">
-                {r.title[locale]}
+                {localised(r.title, locale)}
               </h3>
               <p class="text-[14px] leading-[1.55] text-[var(--color-text-muted)]">
-                {r.tagline[locale]}
+                {localised(r.tagline, locale)}
               </p>
               <span class="mt-auto inline-flex items-center gap-1 text-[13px] font-semibold text-[var(--color-primary)] transition-transform duration-200 group-hover:translate-x-0.5">
                 {dict.featurePage.ctaOpenModule}

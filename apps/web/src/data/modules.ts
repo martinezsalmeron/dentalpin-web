@@ -16,9 +16,7 @@ export type ModuleIcon =
   | 'globe'
   | 'whatsapp';
 
-import type { Locale } from '~/i18n';
-
-type Localised = Record<Locale, string>;
+import { localised, type Locale, type Localised } from '~/i18n';
 
 export interface ModuleEntry {
   slug: string;
@@ -28,6 +26,9 @@ export interface ModuleEntry {
   slugDe?: string;
   slugIt?: string;
   slugPl?: string;
+  /** Only when the variant's market searches a different word. */
+  slugPtBr?: string;
+  slugEsMx?: string;
   domain: ModuleDomain;
   icon: ModuleIcon;
   title: Localised;
@@ -384,12 +385,14 @@ export const MODULES: ModuleEntry[] = [
     slugEn: 'clinical-history',
     slugFr: 'dossier-clinique',
     slugPt: 'historico-clinico',
+    slugPtBr: 'prontuario-eletronico',
+    slugEsMx: 'expediente-clinico',
     slugDe: 'patientenakte',
     slugIt: 'cartella-clinica',
     slugPl: 'dokumentacja-medyczna',
     domain: 'clinical',
     icon: 'shield',
-    title: { es: 'Historial clínico', en: 'Clinical history', fr: 'Dossier clinique', pt: 'Histórico clínico', de: 'Patientenakte', it: 'Cartella clinica', pl: 'Dokumentacja medyczna' },
+    title: { es: 'Historial clínico', en: 'Clinical history', fr: 'Dossier clinique', pt: 'Histórico clínico', de: 'Patientenakte', it: 'Cartella clinica', pl: 'Dokumentacja medyczna', 'pt-br': 'Prontuário eletrônico', 'es-mx': 'Expediente clínico' },
     tagline: {
       es: 'Datos clínicos normalizados y un timeline que se escribe solo.',
       en: 'Structured clinical data and a timeline that writes itself.',
@@ -788,12 +791,13 @@ export const MODULES: ModuleEntry[] = [
     slugEn: 'invoicing',
     slugFr: 'facturation',
     slugPt: 'faturas',
+    slugPtBr: 'faturamento',
     slugDe: 'rechnungen',
     slugIt: 'fatturazione',
     slugPl: 'fakturowanie',
     domain: 'operations',
     icon: 'card',
-    title: { es: 'Facturación', en: 'Invoicing', fr: 'Facturation', pt: 'Faturas', de: 'Abrechnung', it: 'Fatturazione', pl: 'Fakturowanie' },
+    title: { es: 'Facturación', en: 'Invoicing', fr: 'Facturation', pt: 'Faturas', de: 'Abrechnung', it: 'Fatturazione', pl: 'Fakturowanie', 'pt-br': 'Faturamento' },
     tagline: {
       es: 'Series auditadas, pagos parciales y PDF con tu marca.',
       en: 'Audited number series, partial payments and branded PDFs.',
@@ -1545,11 +1549,15 @@ export function moduleBySlug(slug: string): ModuleEntry | undefined {
       m.slugPt === slug ||
       m.slugDe === slug ||
       m.slugIt === slug ||
-      m.slugPl === slug
+      m.slugPl === slug ||
+      m.slugPtBr === slug ||
+      m.slugEsMx === slug
   );
 }
 
 export function moduleSlug(mod: ModuleEntry, locale: Locale): string {
+  if (locale === 'pt-br') return mod.slugPtBr ?? mod.slugPt ?? mod.slug;
+  if (locale === 'es-mx') return mod.slugEsMx ?? mod.slug;
   if (locale === 'en') return mod.slugEn ?? mod.slug;
   if (locale === 'fr') return mod.slugFr ?? mod.slug;
   if (locale === 'pt') return mod.slugPt ?? mod.slug;

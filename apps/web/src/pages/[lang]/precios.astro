@@ -3,7 +3,7 @@ import { isLocale, type Locale } from '~/i18n';
 import PricingBody from '~/components/pages/PricingBody.astro';
 
 export function getStaticPaths() {
-  return [{ params: { lang: 'es' } }];
+  return [{ params: { lang: 'es' } }, { params: { lang: 'es-mx' } }];
 }
 
 const { lang } = Astro.params;

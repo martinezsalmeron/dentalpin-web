@@ -1,5 +1,5 @@
 ---
-import { useDict, pagePath, type Locale } from '~/i18n';
+import { localised, useDict, pagePath, type Locale } from '~/i18n';
 import GradientBackdrop from '@dentalpin/ui/GradientBackdrop.astro';
 import Button from '@dentalpin/ui/Button.astro';
 import Icon from '@dentalpin/ui/Icon.astro';
@@ -132,7 +132,7 @@ const manifestoPath = pagePath(locale, 'manifesto');
         <div class="relative min-h-0 flex-1">
           <img
             src="/screenshots/home.png"
-            alt={{ es: 'Panel principal de Dentalpin', en: 'Dentalpin dashboard', fr: 'Tableau de bord de Dentalpin', pt: 'Painel principal do Dentalpin', de: 'Übersichtsseite von Dentalpin', it: 'Pannello principale di Dentalpin', pl: 'Panel główny Dentalpina' }[locale]}
+            alt={localised({ es: 'Panel principal de Dentalpin', en: 'Dentalpin dashboard', fr: 'Tableau de bord de Dentalpin', pt: 'Painel principal do Dentalpin', de: 'Übersichtsseite von Dentalpin', it: 'Pannello principale di Dentalpin', pl: 'Panel główny Dentalpina' }, locale)}
             loading="eager"
             fetchpriority="high"
             decoding="async"
@@ -148,7 +148,7 @@ const manifestoPath = pagePath(locale, 'manifesto');
       >
         <img
           src="/screenshots/dental-chart.png"
-          alt={{ es: 'Odontograma en tablet', en: 'Odontogram on tablet', fr: 'Odontogramme sur tablette', pt: 'Odontograma num tablet', de: 'Zahnschema auf dem Tablet', it: 'Odontogramma su tablet', pl: 'Diagram zębowy na tablecie' }[locale]}
+          alt={localised({ es: 'Odontograma en tablet', en: 'Odontogram on tablet', fr: 'Odontogramme sur tablette', pt: 'Odontograma num tablet', de: 'Zahnschema auf dem Tablet', it: 'Odontogramma su tablet', pl: 'Diagram zębowy na tablecie' }, locale)}
           loading="lazy"
           decoding="async"
           class="block h-full w-full object-cover"
@@ -163,7 +163,7 @@ const manifestoPath = pagePath(locale, 'manifesto');
       >
         <img
           src="/screenshots/schedule-day.png"
-          alt={{ es: 'Agenda en móvil', en: 'Calendar on mobile', fr: 'Agenda sur mobile', pt: 'Agenda no telefone', de: 'Terminkalender auf dem Handy', it: 'Agenda sul telefono', pl: 'Kalendarz na telefonie' }[locale]}
+          alt={localised({ es: 'Agenda en móvil', en: 'Calendar on mobile', fr: 'Agenda sur mobile', pt: 'Agenda no telefone', de: 'Terminkalender auf dem Handy', it: 'Agenda sul telefono', pl: 'Kalendarz na telefonie' }, locale)}
           loading="lazy"
           decoding="async"
           class="block h-full w-full object-cover object-top"

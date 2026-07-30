@@ -1,10 +1,11 @@
 ---
-import { isLocale, type Locale } from '~/i18n';
+import { contentLocale, isLocale, LOCALES, type ContentLocale, type Locale } from '~/i18n';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Section from '@dentalpin/ui/Section.astro';
 
 type Kind = 'privacy' | 'terms' | 'cookies';
-const SLUG_MAP: Record<Locale, Record<Kind, string>> = {
+// Keyed by content locale: pt-BR reuses "privacidade", es-MX "privacidad".
+const SLUG_MAP: Record<ContentLocale, Record<Kind, string>> = {
   es: { privacy: 'privacidad', terms: 'terminos', cookies: 'cookies' },
   en: { privacy: 'privacy', terms: 'terms', cookies: 'cookies' },
   fr: { privacy: 'confidentialite', terms: 'conditions', cookies: 'cookies' },
@@ -13,7 +14,7 @@ const SLUG_MAP: Record<Locale, Record<Kind, string>> = {
   it: { privacy: 'privacy', terms: 'termini', cookies: 'cookies' },
   pl: { privacy: 'prywatnosc', terms: 'regulamin', cookies: 'cookies' },
 };
-const TITLES: Record<Locale, Record<Kind, string>> = {
+const TITLES: Record<ContentLocale, Record<Kind, string>> = {
   es: { privacy: 'Política de privacidad', terms: 'Términos de uso', cookies: 'Política de cookies' },
   en: { privacy: 'Privacy policy', terms: 'Terms of use', cookies: 'Cookie policy' },
   fr: {
@@ -55,9 +56,10 @@ export function getStaticPaths() {
     it: { privacy: 'privacy', terms: 'termini', cookies: 'cookies' },
     pl: { privacy: 'prywatnosc', terms: 'regulamin', cookies: 'cookies' },
   } as const;
-  return (['es', 'en', 'fr', 'pt', 'de', 'it', 'pl'] as const).flatMap((l) =>
+  const PARENT = { 'pt-br': 'pt', 'es-mx': 'es' } as const;
+  return LOCALES.flatMap((l) =>
     (['privacy', 'terms', 'cookies'] as const).map((k) => ({
-      params: { lang: l, slug: SLUGS[l][k] },
+      params: { lang: l, slug: SLUGS[l in PARENT ? PARENT[l as keyof typeof PARENT] : (l as keyof typeof SLUGS)][k] },
     }))
   );
 }
@@ -66,11 +68,12 @@ const { lang, slug } = Astro.params;
 if (!isLocale(lang)) return Astro.redirect('/es/', 308);
 const locale = lang as Locale;
 
-const kind = (Object.keys(SLUG_MAP[locale]) as Kind[]).find((k) => SLUG_MAP[locale][k] === slug);
+const base = contentLocale(locale);
+const kind = (Object.keys(SLUG_MAP[base]) as Kind[]).find((k) => SLUG_MAP[base][k] === slug);
 if (!kind) return Astro.redirect(`/${locale}/`, 308);
-const title = TITLES[locale][kind];
+const title = TITLES[base][kind];
 
-const cookiesPath = `/${locale}/legal/${SLUG_MAP[locale].cookies}/`;
+const cookiesPath = `/${locale}/legal/${SLUG_MAP[base].cookies}/`;
 ---
 
 <BaseLayout locale={locale} title={`${title} · Dentalpin`} noindex>
@@ -78,7 +81,7 @@ const cookiesPath = `/${locale}/legal/${SLUG_MAP[locale].cookies}/`;
     <h1 class="text-marketing-h1 text-[var(--color-text)]">{title}</h1>
 
     <div class="prose prose-sm mt-8 max-w-none text-[var(--color-text-muted)]">
-      {kind === 'privacy' && locale === 'es' && (
+      {kind === 'privacy' && base === 'es' && (
         <>
           <p><em>Última actualización: 23 de abril de 2026.</em></p>
 
@@ -125,7 +128,7 @@ const cookiesPath = `/${locale}/legal/${SLUG_MAP[locale].cookies}/`;
         </>
       )}
 
-      {kind === 'privacy' && locale === 'en' && (
+      {kind === 'privacy' && base === 'en' && (
         <>
           <p><em>Last updated: April 23, 2026.</em></p>
 
@@ -172,7 +175,7 @@ const cookiesPath = `/${locale}/legal/${SLUG_MAP[locale].cookies}/`;
         </>
       )}
 
-      {kind === 'privacy' && locale === 'fr' && (
+      {kind === 'privacy' && base === 'fr' && (
         <>
           <p><em>Dernière mise à jour : 23 avril 2026.</em></p>
 
@@ -219,7 +222,7 @@ const cookiesPath = `/${locale}/legal/${SLUG_MAP[locale].cookies}/`;
         </>
       )}
 
-      {kind === 'privacy' && locale === 'pt' && (
+      {kind === 'privacy' && base === 'pt' && (
         <>
           <p><em>Última atualização: 23 de abril de 2026.</em></p>
 
@@ -266,7 +269,7 @@ const cookiesPath = `/${locale}/legal/${SLUG_MAP[locale].cookies}/`;
         </>
       )}
 
-      {kind === 'privacy' && locale === 'de' && (
+      {kind === 'privacy' && base === 'de' && (
         <>
           <p><em>Letzte Aktualisierung: 23. April 2026.</em></p>
 
@@ -313,7 +316,7 @@ const cookiesPath = `/${locale}/legal/${SLUG_MAP[locale].cookies}/`;
         </>
       )}
 
-      {kind === 'privacy' && locale === 'it' && (
+      {kind === 'privacy' && base === 'it' && (
         <>
           <p><em>Ultimo aggiornamento: 23 aprile 2026.</em></p>
 
@@ -360,7 +363,7 @@ const cookiesPath = `/${locale}/legal/${SLUG_MAP[locale].cookies}/`;
         </>
       )}
 
-      {kind === 'privacy' && locale === 'pl' && (
+      {kind === 'privacy' && base === 'pl' && (
         <>
           <p><em>Ostatnia aktualizacja: 23 kwietnia 2026.</em></p>
 
@@ -407,6 +410,22 @@ const cookiesPath = `/${locale}/legal/${SLUG_MAP[locale].cookies}/`;
         </>
       )}
 
+      {kind === 'privacy' && locale === 'pt-br' && (
+        <p>
+          Se você mora no Brasil, além dos direitos acima a LGPD (Lei 13.709/2018) se
+          aplica ao tratamento dos seus dados, e você pode apresentar reclamação à ANPD
+          (<a href="https://www.gov.br/anpd" target="_blank" rel="noopener">gov.br/anpd</a>).
+        </p>
+      )}
+
+      {kind === 'privacy' && locale === 'es-mx' && (
+        <p>
+          Si resides en México, además de los derechos anteriores puedes ejercer tus
+          derechos ARCO conforme a la LFPDPPP y presentar una reclamación ante el INAI
+          (<a href="https://home.inai.org.mx" target="_blank" rel="noopener">inai.org.mx</a>).
+        </p>
+      )}
+
       {kind !== 'privacy' && (
         <p>
           {locale === 'es'
@@ -419,9 +438,13 @@ const cookiesPath = `/${locale}/legal/${SLUG_MAP[locale].cookies}/`;
                   ? 'Dokument, das noch juristisch verfasst werden muss. Vor dem Start aktualisieren.'
                   : locale === 'it'
                     ? 'Documento in attesa di stesura legale. Aggiornare prima del lancio.'
-                    : locale === 'pl'
-                      ? 'Dokument czeka na redakcję prawną. Zaktualizuj przed startem.'
-                      : 'Legal document pending drafting. Update before launch.'}
+                    : locale === 'pt-br'
+                      ? 'Documento aguardando redação jurídica. Atualizar antes do lançamento.'
+                      : locale === 'es-mx'
+                        ? 'Documento pendiente de redacción legal. Actualízalo antes del lanzamiento.'
+                        : locale === 'pl'
+                          ? 'Dokument czeka na redakcję prawną. Zaktualizuj przed startem.'
+                          : 'Legal document pending drafting. Update before launch.'}
         </p>
       )}
     </div>

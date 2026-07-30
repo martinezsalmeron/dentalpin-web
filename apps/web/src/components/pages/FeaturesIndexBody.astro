@@ -1,5 +1,5 @@
 ---
-import { pagePath, useDict, type Locale } from '~/i18n';
+import { localised, pagePath, useDict, type Locale } from '~/i18n';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Section from '@dentalpin/ui/Section.astro';
 import Icon from '@dentalpin/ui/Icon.astro';
@@ -119,10 +119,10 @@ const totalModules = MODULES.length;
                 </span>
               </div>
               <h3 class="text-[28px] font-semibold leading-tight tracking-tight text-[var(--color-text)]">
-                {featured.title[locale]}
+                {localised(featured.title, locale)}
               </h3>
               <p class="text-[15px] leading-[1.6] text-[var(--color-text-muted)]">
-                {featured.tagline[locale]}
+                {localised(featured.tagline, locale)}
               </p>
               <ul class="grid gap-2.5">
                 {featured.features.slice(0, 3).map((f) => (
@@ -130,7 +130,7 @@ const totalModules = MODULES.length;
                     <span class="mt-0.5 inline-flex h-4 w-4 flex-none items-center justify-center rounded-full bg-[var(--color-primary-soft)] text-[var(--color-primary-soft-text)]">
                       <Icon name="check" size={10} />
                     </span>
-                    {f[locale]}
+                    {localised(f, locale)}
                   </li>
                 ))}
               </ul>
@@ -147,7 +147,7 @@ const totalModules = MODULES.length;
               ) : (
                 <ScreenshotPlaceholder
                   file={featured.screenshot}
-                  alt={featured.title[locale]}
+                  alt={localised(featured.title, locale)}
                   class="shadow-[var(--shadow-lg)]"
                 />
               )}
@@ -182,10 +182,10 @@ const totalModules = MODULES.length;
                 </div>
                 <div class="flex-1">
                   <h3 class="text-[17px] font-semibold tracking-tight text-[var(--color-text)]">
-                    {mod.title[locale]}
+                    {localised(mod.title, locale)}
                   </h3>
                   <p class="mt-2 text-[14px] leading-[1.55] text-[var(--color-text-muted)]">
-                    {mod.tagline[locale]}
+                    {localised(mod.tagline, locale)}
                   </p>
                 </div>
                 <span class="inline-flex items-center gap-1 text-[13px] font-semibold text-[var(--color-primary)] opacity-0 transition-opacity group-hover:opacity-100">
