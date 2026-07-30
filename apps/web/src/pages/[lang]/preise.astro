@@ -1,0 +1,14 @@
+---
+import { isLocale, type Locale } from '~/i18n';
+import PricingBody from '~/components/pages/PricingBody.astro';
+
+export function getStaticPaths() {
+  return [{ params: { lang: 'de' } }];
+}
+
+const { lang } = Astro.params;
+if (!isLocale(lang)) return Astro.redirect('/es/', 308);
+const locale = lang as Locale;
+---
+
+<PricingBody locale={locale} />

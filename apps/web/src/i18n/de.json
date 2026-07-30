@@ -1,0 +1,1537 @@
+{
+  "meta": {
+    "title": "Dentalpin · Open-Source-Praxissoftware für Zahnarztpraxen, kostenlos",
+    "description": "Kostenlose Open-Source-Praxisverwaltung für Zahnarztpraxen: Terminkalender, Patienten, Zahnschema, Kostenvoranschläge und Abrechnung. Der Code gehört Ihnen, Sie installieren ihn, wo Sie wollen, ohne Gebühr pro Behandlungsstuhl oder pro Behandler."
+  },
+  "nav": {
+    "features": "Funktionen",
+    "technology": "Technologie",
+    "pricing": "Preise",
+    "manifesto": "Manifest",
+    "docs": "Dokumentation",
+    "community": "Community",
+    "liveDemo": "Demo testen",
+    "github": "GitHub",
+    "skip": "Zum Inhalt springen",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "blog": "Blog",
+    "contact": "Kontakt"
+  },
+  "megamenu": {
+    "trigger": "Funktionen",
+    "columns": {
+      "clinical": "Behandlung",
+      "operations": "Praxisbetrieb",
+      "platform": "Plattform"
+    },
+    "footer": "Alle Funktionen ansehen →"
+  },
+  "hero": {
+    "eyebrow": "Keine Praxis sollte Geisel ihrer Software sein.",
+    "eyebrowCta": "Das Manifest lesen",
+    "titleBefore": "",
+    "titleHighlight": "Sagen Sie es Ihrer Praxis.",
+    "titleAfter": "",
+    "titleAccent": "Dentalpin erledigt es.",
+    "positioning": "Die erste agentische Praxissoftware für Zahnarztpraxen.",
+    "subtitle": "Open Source, kostenlos und Ihres. Der Agent führt dieselben Schritte aus, die Sie in der Oberfläche machen würden, auf Ihren echten Daten und mit Ihren Berechtigungen. Bevor er etwas schreibt, hält er an und fragt nach.",
+    "prompts": [
+      "Such mir am Dienstag einen Termin für Anna Gruber",
+      "Welche Kostenvoranschläge sind seit zwei Wochen unbeantwortet?",
+      "Gib mir die Tagesübersicht"
+    ],
+    "subPill": "Open Source · Für immer kostenlos · Self-Hosting auf Ihrem Server",
+    "ctaPrimary": "Demo testen",
+    "ctaSecondary": "Mit uns sprechen",
+    "ghPill": "Code auf GitHub ansehen",
+    "trust": "Unterstützt von Dentaltix",
+    "trustPre": "Unterstützt von ",
+    "trustPost": ""
+  },
+  "promises": {
+    "eyebrow": "WAS IHRE PRAXIS AM ERSTEN TAG MERKT",
+    "title": "Vier Versprechen, nicht vier Funktionen.",
+    "lead": "Das ändert sich an dem Tag, an dem Sie wechseln. Keine Adjektive, sondern Konsequenzen.",
+    "items": [
+      {
+        "key": "yours",
+        "label": "Ihre Daten",
+        "title": "Ihre Daten sind keine Geiseln.",
+        "body": "Sie liegen auf Ihrem Server, in der Cloud Ihrer Wahl oder auf einem Laptop, der mit Ihnen geht. Wenn es Dentalpin morgen nicht mehr gibt, arbeitet Ihre Praxis weiter.",
+        "linkLabel": "So funktioniert es",
+        "anchor": "#where-you-work"
+      },
+      {
+        "key": "price",
+        "label": "Ihre Rechnung",
+        "title": "Ihre Rechnung wächst nicht mit Ihrer Praxis.",
+        "body": "Keine Gebühren pro Behandlungsstuhl, pro Behandler oder pro Patient. Der Kern kostet null Euro und bleibt bei null Euro.",
+        "linkLabel": "Module und Preis ansehen",
+        "anchor": "#modules"
+      },
+      {
+        "key": "open",
+        "label": "Open Source",
+        "title": "Echtes Open Source. Nicht zur Dekoration.",
+        "body": "Der Code steht auf GitHub. Jede IT-Fachkraft kann ihn prüfen, verbessern oder Module darauf bauen. Wenn es Dentalpin morgen nicht mehr gibt, läuft Ihre Praxis weiter. Was andere Praxen verbessern, nutzen Sie mit.",
+        "linkLabel": "Für Ihre IT",
+        "anchor": "#for-developers"
+      },
+      {
+        "key": "ux",
+        "label": "Ihr Bildschirm",
+        "title": "Ihr Bildschirm, gemacht für 8 Stunden am Tag.",
+        "body": "Dunkler Modus als Standard, ruhige Flächen, keine überflüssigen Klicks. Gebaut für eine echte Praxis, nicht für eine Demo.",
+        "linkLabel": "Einen ganzen Tag ansehen",
+        "anchor": "#day-in-clinic"
+      }
+    ]
+  },
+  "liveModules": {
+    "eyebrow": "MODULE",
+    "title": "Ein solider Kern, Optionen, die Sie selbst einschalten.",
+    "lead": "Jede Praxis braucht dieselbe Basis: Terminkalender, Patienten, Zahnschema. Der Rest ist verschieden. Sie entscheiden, was an ist.",
+    "coreLabel": "IMMER ENTHALTEN",
+    "coreSubtitle": "Der Kern, den jede Praxis braucht. Für immer kostenlos, ohne versteckte Extras.",
+    "core": [
+      {
+        "name": "Terminkalender",
+        "icon": "calendar"
+      },
+      {
+        "name": "Patienten",
+        "icon": "users"
+      },
+      {
+        "name": "Zahnschema",
+        "icon": "tooth"
+      },
+      {
+        "name": "Patientenakte",
+        "icon": "clipboard"
+      },
+      {
+        "name": "Kostenvoranschläge",
+        "icon": "file-text"
+      },
+      {
+        "name": "Abrechnung",
+        "icon": "card"
+      },
+      {
+        "name": "Röntgen und Bilder",
+        "icon": "image"
+      }
+    ],
+    "optionalLabel": "SCHALTEN SIE EIN, WAS SIE BRAUCHEN",
+    "optionalSubtitle": "Extras, die manche Praxen wollen und andere nicht. Ein Klick an, ein Klick aus.",
+    "optional": [
+      {
+        "name": "Automatische Erinnerungen",
+        "icon": "bell",
+        "soon": false,
+        "defaultOn": true
+      },
+      {
+        "name": "Patientenportal",
+        "icon": "globe",
+        "soon": false,
+        "defaultOn": false
+      },
+      {
+        "name": "Mehrere Standorte",
+        "icon": "building",
+        "soon": false,
+        "defaultOn": false
+      },
+      {
+        "name": "Verifactu",
+        "icon": "shield",
+        "soon": false,
+        "defaultOn": false,
+        "country": "ES"
+      },
+      {
+        "name": "WhatsApp Business",
+        "icon": "message",
+        "soon": true,
+        "defaultOn": false
+      },
+      {
+        "name": "KI-Agent",
+        "icon": "sparkles",
+        "soon": false,
+        "defaultOn": false
+      }
+    ],
+    "soonBadge": "Demnächst",
+    "summaryPrefix": "Ihr Dentalpin:",
+    "summaryCoreLabel": "aus dem Kern",
+    "summaryOptionalLabel": "Optionen",
+    "summaryPrice": "Kern für immer 0 €",
+    "caption": "Der Kern ist für immer kostenlos. Einzelne Optionen können später kostenpflichtig werden: immer optional, immer transparent. Was Sie nicht nutzen, steht Ihnen nicht im Weg.",
+    "priceStrip": "Der Kern, für immer kostenlos. Keine Gebühren pro Behandlungsstuhl, Behandler oder Patient.",
+    "comparison": {
+      "legacyLabel": "Klassische Praxissoftware",
+      "legacyValue": "Mehrere hundert Euro im Monat",
+      "dentalpinLabel": "Dentalpin",
+      "dentalpinValue": "0 €",
+      "footnote": "Keine Gebühren pro Behandlungsstuhl oder pro Behandler. Richtwerte für klassische Praxissoftware."
+    },
+    "allFeaturesCta": "Alle Funktionen ansehen"
+  },
+  "aiAgentCallout": {
+    "eyebrow": "KI-Agent",
+    "title": "Ein Satz von Ihnen. Er führt die Schritte aus.",
+    "body": "Kein Chat, der antwortet: Er führt dieselben Schritte aus, die Sie in der Oberfläche machen würden, einen nach dem anderen, bis die Aufgabe erledigt ist. Auf Ihren echten Daten und mit den Rechten der Person, die fragt.",
+    "cta": "KI-Agent ansehen",
+    "userPrompt": "Such mir am Dienstag einen Termin für Anna Gruber",
+    "stepsLabel": "Was er tut",
+    "steps": [
+      {
+        "tool": "patients.search",
+        "result": "Anna Gruber · 1 Treffer"
+      },
+      {
+        "tool": "schedules.find_free_slots",
+        "result": "Dienstag, 5. · 3 freie Zeiten"
+      }
+    ],
+    "reply": "Am Dienstag, den 5., ist um 10:00, 12:30 und 17:00 in Behandlungszimmer 2 frei. Soll ich einen davon buchen?",
+    "confirmLabel": "Hält an, bevor er schreibt",
+    "confirmTool": "agenda.book_appointment",
+    "confirmDetail": "Dienstag, 5. · 10:00 · Zimmer 2 · Dr. Gärtner",
+    "confirmYes": "Bestätigen",
+    "confirmNo": "Abbrechen",
+    "guarantees": [
+      {
+        "title": "Er sieht nie mehr als Sie",
+        "body": "Jede Aktion wird erneut gegen die Rechte der fragenden Person geprüft. Die Rezeption sieht, was die Rezeption sieht."
+      },
+      {
+        "title": "Patientendaten werden tokenisiert",
+        "body": "Namen, Telefonnummern und Ausweisnummern werden durch Token ersetzt, bevor etwas zum KI-Anbieter geht. Behandlungsnotizen verlassen das System nicht."
+      },
+      {
+        "title": "Kein Schreibvorgang ohne Ihr Ja",
+        "body": "Buchen, kassieren oder ändern hält an und fragt nach. Sie bestätigen, erst dann wird es ausgeführt."
+      }
+    ]
+  },
+  "forDevelopers": {
+    "eyebrow": "FÜR IHRE IT ODER IHR TECHNIKTEAM",
+    "title": "Offen, dokumentiert und leicht anzufassen.",
+    "lead": "Öffentliches Repository, REST-API mit OpenAPI, Module, die man an einem Nachmittag baut. So, wie man es 2026 von einem ernsthaften Projekt erwartet.",
+    "cards": [
+      {
+        "key": "repo",
+        "label": "Öffentliches Repository",
+        "title": "Der Code liegt auf GitHub.",
+        "body": "Klonen, prüfen und darauf aufbauen. Heute unter BSL 1.1, morgen Apache 2.0.",
+        "cta": "Repository ansehen"
+      },
+      {
+        "key": "api",
+        "label": "REST-API",
+        "title": "Mit OpenAPI dokumentiert.",
+        "body": "FastAPI, Pydantic, klare Verträge. Jede Integration, die Sie wollen, bauen Sie selbst, ohne uns zu fragen.",
+        "cta": "Dokumentation ansehen"
+      },
+      {
+        "key": "modules",
+        "label": "Module",
+        "title": "Ein Modul an einem Nachmittag.",
+        "body": "manifest.yaml, Alembic-Migrationen, UI-Hooks und ein Event-Bus. Drei Schritte: deklarieren, migrieren, registrieren.",
+        "cta": "So wird gebaut"
+      }
+    ],
+    "snippetLabel": "Self-Hosting mit einem Befehl",
+    "snippet": "docker compose up -d",
+    "snippetFootnote": "Auf einem vernünftigen VPS in unter einer halben Stunde fertig.",
+    "bandLead": "Öffentliches Repository, mit OpenAPI dokumentierte REST-API und Module, die an einem Nachmittag stehen.",
+    "bandCta": "Wie es gebaut ist"
+  },
+  "demoDual": {
+    "pullquote": "Wir sind nicht hier, um noch eine Dentalsoftware zu verkaufen.",
+    "pullquoteCta": "Das ganze Manifest lesen",
+    "eyebrow": "HEUTE ANFANGEN",
+    "title": "Zwei Wege anzufangen. Beide kostenlos.",
+    "lead": "Testen Sie es im Browser oder laden Sie es herunter und installieren Sie es auf Ihrem eigenen Server. Ohne Konto, ohne Karte, ohne Limits.",
+    "tryIt": {
+      "label": "OPTION 1",
+      "title": "Testen, ohne etwas zu installieren.",
+      "body": "Wir öffnen Ihnen eine Beispielpraxis im Browser, mit Patienten und Terminen. Ohne Registrierung, ohne E-Mail, ohne Download.",
+      "credentialsLabel": "Damit kommen Sie rein",
+      "userLabel": "Benutzer",
+      "passwordLabel": "Passwort",
+      "user": "admin@demo.clinic",
+      "password": "demo1234",
+      "rolesNote": "Es gibt auch Zugänge als Zahnärztin, Dentalhygienikerin, Assistenz und Rezeption. Gleiches Passwort.",
+      "cta": "Demo öffnen"
+    },
+    "selfHost": {
+      "label": "OPTION 2",
+      "title": "Herunterladen und kostenlos installieren.",
+      "body": "Ein docker compose, fertig. Auf einem vernünftigen VPS in unter einer halben Stunde. Anleitungen Schritt für Schritt für Ihre IT.",
+      "code": "docker compose up",
+      "cta": "Anleitung ansehen"
+    },
+    "help": "Brauchen Sie Hilfe bei der Installation? Wir packen mit an.",
+    "helpCta": "Mit uns sprechen",
+    "tray": {
+      "lead": "Lieber erst mal schauen?",
+      "repo": "Code auf GitHub ansehen",
+      "telegram": "Ins Telegram kommen"
+    }
+  },
+  "manifesto": {
+    "eyebrow": "MANIFEST",
+    "title": "Wir sind nicht hier, um noch eine Dentalsoftware zu verkaufen.",
+    "lead": "Wir sind hier, weil die Dentalbranche Software auf ihrem Niveau verdient. Diese Aufgabe steht weit über einem Geschäft. Sechs Versprechen über die Software, die Ihre Praxis 2026 verdient.",
+    "items": {
+      "oss": {
+        "title": "Ihre Daten gehören Ihnen",
+        "body": "Die Daten Ihrer Praxis liegen dort, wo Sie es entscheiden: auf Ihrem Server, in der Cloud Ihrer Wahl oder auf einem Laptop, der mit Ihnen geht. Nie Geisel einer anderen Firma."
+      },
+      "modular": {
+        "title": "Ein Programm, das sich mit Ihnen entwickelt",
+        "body": "Sie schalten ein, was Ihre Praxis nutzt, und ignorieren den Rest. Wenn sich Ihre Arbeitsweise ändert, passt sich die Software an, nicht umgekehrt."
+      },
+      "global": {
+        "title": "Ein klarer Preis, für immer",
+        "body": "Keine versteckten Gebühren, kein 'zahl mehr, wenn du wächst', kein 'kontaktieren Sie den Vertrieb'. Kostenlos, wenn Sie selbst hosten. Was Sie sehen, ist alles."
+      },
+      "api": {
+        "title": "Offen für Anbindungen",
+        "body": "Es verbindet sich mit dem, was Sie schon nutzen: Zahlungsanbieter, WhatsApp, E-Rechnung, Labore. Ohne Hürden und ohne Zusatzlizenzen."
+      },
+      "ai": {
+        "title": "Bereit für KI",
+        "body": "So gebaut, dass ein KI-Assistent das Wiederkehrende übernehmen kann, wenn Sie es wollen: Erinnerungen, Nachfassen, Suchen. Immer mit einem Menschen, der freigibt."
+      },
+      "ux": {
+        "title": "Ein Bildschirm, an dem man gern arbeitet",
+        "body": "Acht Stunden am Tag vor dem Rechner verdienen eine ruhige, schnelle Oberfläche mit weniger Klicks. Dunkler Modus als Standard, für echte Praxen entworfen."
+      }
+    },
+    "cta": "Das ganze Manifest lesen"
+  },
+  "manifestoPage": {
+    "meta": {
+      "title": "Manifest · Dentalpin",
+      "description": "Warum es Dentalpin gibt und was wir der Dentalbranche versprechen: offene, modulare und ruhige Software. Für Praxen, die seit Jahren auf etwas Besseres warten."
+    },
+    "eyebrow": "MANIFEST · APRIL 2026",
+    "title": "Keine Praxis sollte Geisel ihrer Software sein.",
+    "lead": "Wir arbeiten seit Jahren mit der Dentalbranche und wissen, was Software ihr gebracht hat: Praxen, die in Sekunden abrechnen, Termine vergeben und auf Behandlungshistorien zugreifen, wo früher Papier und Telefonate standen. Aber diese erste Generation kann nicht mehr: Oberflächen, die seit fünfzehn Jahren nicht neu gedacht wurden, unmögliche Umzüge, wenn eine Praxis wachsen will, Daten, deren Export teuer ist, und Lizenzmodelle, die den einen passen und den anderen die Luft nehmen. Die Branche ist bereit für den nächsten Sprung, einen, der das Richtige von vorher mitnimmt und alles ergänzt, was 2026 möglich ist. Dieses Manifest ist unsere Art, diesen Sprung anzuschieben, mit Respekt für das Geleistete und Ehrgeiz für das Fehlende.",
+    "sections": [
+      {
+        "heading": "Was wir seit Jahren sehen",
+        "body": "Wir sehen Zahnärztinnen, die sich jahrelang auf ihre Praxissoftware verlassen, um an Termine zu erinnern, Behandlungshistorien zu führen und sauber abzurechnen. Was heute selbstverständlich wirkt, haben genau diese Programme erkämpft. Aber wir sehen dieselben Fachkräfte auch den Bildschirm öffnen und merken, dass der Tag langsamer wird, Rezeptionskräfte, die auflegen, um mit einem Suchfeld zu ringen, Inhaberinnen, die feststellen, dass der Export der eigenen Datenbank eine vierstellige Summe und sechs Wochen Wartezeit kostet. Die Branche hat nicht falsch gewählt, die Alternative war nur noch nicht gebaut. Bis jetzt."
+      },
+      {
+        "heading": "Woran wir glauben",
+        "body": "Wir glauben an freie Software und daran, dass es eine offene Alternative geben sollte, in der eine Praxis die Daten ihrer Patienten verwaltet. Wir glauben, dass ein Programm, das eine Dentalhygienikerin fünfzigmal am Tag öffnet, schön, schnell und gut gestaltet sein sollte. Wir glauben, dass eine Praxisinhaberin selbst entscheiden sollte, ob ihre Daten in der Cloud oder auf einem Server in der Praxis liegen. Wir glauben, dass Code, der Gesundheitsdaten verwaltet, gelesen, geprüft und öffentlich diskutiert werden können muss. Wir glauben, dass KI diese Branche zum Guten verändern wird, aber nur, wenn sie mit Menschen am Steuer gebaut wird. Und wir glauben, dass keine Zahnärztin in Santiago, Bogotá, New York, Madrid, Lissabon, Berlin oder Mailand fünf Jahre warten sollte, bis „die Software in ihren Markt kommt“."
+      },
+      {
+        "heading": "Was wir Ihnen versprechen",
+        "body": "Wir verkaufen Ihnen keine Tarife und keine Nutzerlizenzen. Wir erhöhen den Preis nicht, wenn Sie wachsen. Wir verstecken keine Funktion hinter „kontaktieren Sie den Vertrieb“. Wir binden Sie nicht an unsere Server. Wir schließen den Code nicht, wenn es gut läuft. Und wir versprechen, dass das, was Sie heute nutzen, morgen noch da ist. Weil es auf GitHub liegt, weil es jede und jeder pflegen kann, weil es nicht davon abhängt, dass es uns weiter gibt."
+      },
+      {
+        "heading": "Was wir Sie bitten",
+        "body": "Wenn Ihnen Dentalpin gefällt und Ihnen diese Woche ein paar Stunden spart, erzählen Sie es einer anderen Praxis. Wenn Sie einen Fehler finden, öffnen Sie ein Issue auf GitHub. Wenn Ihnen ein Modul fehlt, beschreiben Sie es, und jemand (Sie, wir oder die Community) baut es. Wenn Sie eine andere Sprache sprechen, übersetzen Sie es. Wenn Sie es testen und es Sie nicht überzeugt, schreiben Sie uns in aller Ruhe: Feedback macht uns besser. Das hier ist keine Firma, die Ihnen ein Produkt verkauft. Es ist eine Community, die die Infrastruktur baut, die eine ganze Branche braucht."
+      },
+      {
+        "heading": "Wohin wir wollen",
+        "body": "Wir wollen, dass es in fünf Jahren beim Eröffnen einer Praxis darum geht, was man mit den Patienten macht, und nicht darum, welche Software man meidet. Wir wollen, dass die nächste Generation von Zahnärztinnen und Zahnärzten an einem System lernt, das ihnen hilft und ihre Zeit respektiert. Wir wollen, dass Praxissoftware aufhört, ein Problem zu sein, und endlich unsichtbar wird, wie Licht oder warmes Wasser."
+      }
+    ],
+    "closing": "Das ist Dentalpin. Wenn Sie bis hierher gelesen haben, sehen Sie die Software Ihrer Praxis vielleicht nie wieder mit denselben Augen.",
+    "signature": "Das Dentalpin-Team · April 2026",
+    "ctaPrimary": "Demo testen",
+    "ctaSecondary": "Code ansehen"
+  },
+  "techPage": {
+    "meta": {
+      "title": "Technologie · Dentalpin",
+      "description": "Wie Dentalpin innen gebaut ist: Plugin-Architektur, Anatomie eines Moduls und der Stack, der alles zusammenhält."
+    },
+    "eyebrow": "TECHNOLOGIE",
+    "title": "Der Stack, den Sie wählen würden, wenn Sie bei null anfangen könnten.",
+    "lead": "Dentalpin ist keine Blackbox. Alles, was es zum Laufen bringt, liegt auf GitHub und ist dokumentiert: ein kleiner Kern, Module zum Einstecken, ein Stack, den ernsthafte Teams wählen, und keine versteckte Magie.",
+    "principles": {
+      "eyebrow": "PRINZIPIEN",
+      "title": "Vier Entscheidungen, die den Code bestimmen.",
+      "items": [
+        {
+          "title": "Kleiner Kern, Module zum Einstecken",
+          "body": "Der Kern verwaltet Auth, RBAC, Praxen und Nutzer. Alles andere lebt als Modul, installierbar und entfernbar, ohne den Rest anzufassen."
+        },
+        {
+          "title": "Verträge statt Klassen",
+          "body": "Jedes Modul stellt Events und typisierte Endpunkte mit Pydantic bereit. Andere Module reagieren auf Events, nicht auf interne Imports."
+        },
+        {
+          "title": "API zuerst, Oberfläche danach",
+          "body": "Alles, was Sie in der UI sehen, läuft über dieselbe öffentliche API, die auch Integratoren und KI-Agenten nutzen."
+        },
+        {
+          "title": "Bewusst langweiliger Stack",
+          "body": "Wir wählen erprobte Werkzeuge mit Jahren im Produktivbetrieb. Das Exotische bleibt den Nebenprojekten."
+        }
+      ]
+    },
+    "anatomy": {
+      "eyebrow": "ANATOMIE EINES MODULS",
+      "title": "Was in jedem Modul steckt.",
+      "body": "Ein Modul ist kein improvisiertes Plugin. Es folgt einem klaren Vertrag, damit Dentalpin es erkennt und der Rest des Systems darauf aufbauen kann.",
+      "items": [
+        {
+          "name": "manifest.yaml",
+          "what": "Name, Version, Abhängigkeiten, Berechtigungen und Events, die es sendet oder hört."
+        },
+        {
+          "name": "Alembic-Migrationen",
+          "what": "Ein eigener Migrationszweig. Aktivieren legt die Tabellen an, Deaktivieren lässt sie stehen, bis Sie entscheiden."
+        },
+        {
+          "name": "YAML-Seeds",
+          "what": "Beispieldaten und Basiskataloge, um ohne handgeschriebenes SQL zu starten."
+        },
+        {
+          "name": "Selbstregistrierte Navigation",
+          "what": "Das Modul meldet seine Menüeinträge und Routen an. Die UI zeigt sie nur, wenn die Rolle die Rechte hat."
+        },
+        {
+          "name": "Event-Bus",
+          "what": "Es abonniert Events des Kerns oder anderer Module und sendet eigene. Das ist der Kleber zwischen den Teilen."
+        },
+        {
+          "name": "FastAPI-Endpunkte",
+          "what": "Die ganze Domäne des Moduls als öffentliche API, mit Pydantic typisiert und mit OpenAPI dokumentiert."
+        }
+      ]
+    },
+    "stackHeader": {
+      "eyebrow": "TECH-STACK",
+      "title": "Ein moderner und bewusst langweiliger Stack.",
+      "body": "Wir wählen, was ernsthafte Teams wählen. Nichts Exotisches, nichts Geerbtes."
+    },
+    "stackGroups": [
+      {
+        "label": "Frontend",
+        "items": [
+          {
+            "name": "Nuxt 3",
+            "role": "Framework"
+          },
+          {
+            "name": "Vue 3",
+            "role": "UI"
+          },
+          {
+            "name": "Nuxt UI",
+            "role": "Komponenten"
+          },
+          {
+            "name": "TypeScript",
+            "role": "Typisierung"
+          },
+          {
+            "name": "Tailwind",
+            "role": "Styling"
+          }
+        ]
+      },
+      {
+        "label": "Backend",
+        "items": [
+          {
+            "name": "FastAPI",
+            "role": "HTTP-API"
+          },
+          {
+            "name": "Pydantic v2",
+            "role": "Schemas"
+          },
+          {
+            "name": "SQLAlchemy 2.0",
+            "role": "ORM"
+          },
+          {
+            "name": "Alembic",
+            "role": "Migrationen"
+          }
+        ]
+      },
+      {
+        "label": "Daten",
+        "items": [
+          {
+            "name": "PostgreSQL 15",
+            "role": "Datenbank"
+          },
+          {
+            "name": "Redis",
+            "role": "Cache und Queue"
+          },
+          {
+            "name": "S3-kompatibel",
+            "role": "Dateien"
+          }
+        ]
+      },
+      {
+        "label": "Runtime und QA",
+        "items": [
+          {
+            "name": "Docker",
+            "role": "Runtime"
+          },
+          {
+            "name": "docker-compose",
+            "role": "Orchestrierung"
+          },
+          {
+            "name": "Playwright",
+            "role": "E2E-Tests"
+          },
+          {
+            "name": "Pytest",
+            "role": "Backend-Tests"
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Machen Sie die Haube auf, wann Sie wollen.",
+      "body": "Alles liegt auf GitHub: der Code, die Issues, die Module, die Dokumentation. Sie können lesen, forken oder einfach die Demo testen.",
+      "ctaPrimary": "Repo ansehen",
+      "ctaSecondary": "Demo testen"
+    }
+  },
+  "modular": {
+    "eyebrow": "PLUGIN-ARCHITEKTUR",
+    "title": "Ein kleiner Kern. Module zum Einstecken.",
+    "body": "Das Modulsystem ist keine Metapher: Jedes Modul bringt sein Manifest, seine Alembic-Migrationen, seine YAML-Seeds und seine selbstregistrierte Navigation mit und hängt sich an den internen Event-Bus. Sie aktivieren, was Ihre Praxis braucht, ignorieren den Rest und bauen sich fehlende Teile selbst dazu.",
+    "core": "Kern",
+    "coreItems": ["Auth", "RBAC", "Praxen", "Nutzer"],
+    "pluggable": "Offizielle Module",
+    "community": "Community-Module",
+    "communityNote": "In Arbeit. Bauen Sie sie selbst oder machen Sie mit bei denen, die schon dran sind.",
+    "addYours": "Bauen Sie Ihr eigenes",
+    "legend": {
+      "official": "Offiziell",
+      "community": "Community",
+      "yours": "Ihres"
+    },
+    "communityItems": [
+      {
+        "label": "WhatsApp",
+        "icon": "message"
+      },
+      {
+        "label": "Stripe",
+        "icon": "card"
+      },
+      {
+        "label": "Labor",
+        "icon": "flask"
+      },
+      {
+        "label": "Marketing",
+        "icon": "sparkles"
+      },
+      {
+        "label": "Versicherungen",
+        "icon": "shield"
+      }
+    ],
+    "cta": "Die Architektur auf GitHub ansehen →"
+  },
+  "dayInClinic": {
+    "eyebrow": "SO ÄNDERT SICH IHR TAG",
+    "title": "Wie sich Ihr Vormittag ändert, wenn Sie die Software wechseln.",
+    "lead": "Sie merken es ab dem ersten Termin. Es ist keine einzelne Funktion, es ist, wie sich der ganze Tag anfühlt.",
+    "legacyLabel": "Mit klassischer Software",
+    "dentalpinLabel": "Mit Dentalpin",
+    "scenes": [
+      {
+        "time": "09:10",
+        "moment": "Der Patient kommt herein",
+        "legacy": "Sie suchen in der Tabelle, bis er auftaucht. Eine Minute, zwei. Der Patient steht und wartet.",
+        "dentalpin": "Sie tippen drei Buchstaben und die Akte ist offen. Mit Historie, Fotos und Kostenvoranschlägen, einen Klick entfernt.",
+        "image": "scene-reception-search.png",
+        "imageAlt": "Assistenz sucht an der Rezeption einen Patienten"
+      },
+      {
+        "time": "10:30",
+        "moment": "Am Behandlungsstuhl",
+        "legacy": "Sie notieren die Behandlung auf Papier und tippen sie später ein. Wenn Sie daran denken.",
+        "dentalpin": "Das Zahnschema öffnet sich auf dem Tablet neben dem Stuhl. Antippen, gespeichert, fertig.",
+        "image": "scene-chairside-tablet.png",
+        "imageAlt": "Zahnärztin nutzt das Zahnschema während der Behandlung auf einem Tablet"
+      },
+      {
+        "time": "22:00",
+        "moment": "Ein Notfall",
+        "legacy": "An die Akte kommen Sie erst, wenn die Praxis morgen wieder aufmacht.",
+        "dentalpin": "Sie öffnen die App von zu Hause, sehen das letzte Röntgenbild und rufen mit allen Infos vor sich an.",
+        "image": "scene-urgency-home.png",
+        "imageAlt": "Zahnärztin sieht sich von zu Hause die Akte eines Patienten an"
+      },
+      {
+        "time": "07:45",
+        "moment": "Bevor die Praxis öffnet",
+        "legacy": "Sie fahren den Rechner im Büro hoch, um zu wissen, wie viele Patienten heute kommen.",
+        "dentalpin": "Sie öffnen den Tagesplan vom Sofa aus auf dem Handy, beim Kaffee.",
+        "image": "scene-morning-agenda.png",
+        "imageAlt": "Zahnarzt sieht den Terminkalender von zu Hause auf dem Handy an"
+      },
+      {
+        "time": "13:20",
+        "moment": "Der Kostenvoranschlag des Tages",
+        "legacy": "Sie öffnen ein anderes Programm, kopieren Preise, drucken auf Papier und unterschreiben von Hand.",
+        "dentalpin": "Ein Klick, er wird signiert erzeugt, und Sie schicken ihn sofort per WhatsApp.",
+        "image": "scene-treatment-quote.png",
+        "imageAlt": "Zahnarzt schickt aus dem Behandlungszimmer einen Kostenvoranschlag per WhatsApp"
+      },
+      {
+        "time": "Monatsende",
+        "moment": "Der Monatsabschluss steht an",
+        "legacy": "Sie bitten die Steuerkanzlei um die Zahlen. Sie sagen, in zwei Wochen kommen sie.",
+        "dentalpin": "Sie öffnen die Auswertungen und sehen den Umsatz, pro Behandlung und pro Behandler.",
+        "image": "scene-owner-reports.png",
+        "imageAlt": "Praxisinhaberin sieht sich in ihrem Büro Auswertungen an"
+      }
+    ]
+  },
+  "whereYouWork": {
+    "eyebrow": "WO SIE ARBEITEN, DA IST DENTALPIN",
+    "title": "Die Praxis lebt nicht nur auf dem Rechner im Büro.",
+    "lead": "Sie gehen rein und raus, springen vom Stuhl zur Rezeption, beantworten eine Nachricht von zu Hause. Ihre Software sollte mitgehen.",
+    "syncPill": "In Echtzeit synchronisiert",
+    "scenes": [
+      {
+        "device": "Tablet",
+        "title": "Am Behandlungsstuhl",
+        "body": "Tablet neben dem Patienten: Zahnschema, Historie und Fotos, ein Fingertipp entfernt. Ohne aufzustehen, um zu tippen."
+      },
+      {
+        "device": "Rezeption",
+        "title": "An der Rezeption",
+        "body": "Tagesplan, offene Rückrufe, Zahlungen und unterschriebene Kostenvoranschläge. Ein einziger Bildschirm."
+      },
+      {
+        "device": "Handy",
+        "title": "Außerhalb der Praxis",
+        "body": "Termine sehen, einen Kostenvoranschlag freigeben oder auf einen Notfall antworten, vom Handy aus. Von überall."
+      }
+    ]
+  },
+  "demo": {
+    "eyebrow": "ONLINE-DEMO",
+    "title": "Testen Sie es selbst, ohne etwas zu installieren.",
+    "body": "Wir öffnen Ihnen eine Beispielpraxis im Browser, mit Patienten und Terminen. Sehen Sie, wie es sich anfühlt, tragen Sie einen Termin ein, machen Sie einen Kostenvoranschlag. Ohne Registrierung, ohne E-Mail, ohne Download.",
+    "url": "demo.dentalpin.com",
+    "stepsLabel": "So kommen Sie rein",
+    "steps": [
+      "Klicken Sie auf „Demo öffnen“. Sie öffnet sich in einem neuen Tab.",
+      "Melden Sie sich mit dem Benutzer und dem Passwort unten an.",
+      "Probieren Sie alles aus: Patienten, Termine, Kostenvoranschläge, Rechnungen…"
+    ],
+    "credentials": {
+      "label": "Damit kommen Sie rein",
+      "userLabel": "Benutzer",
+      "passwordLabel": "Passwort",
+      "admin": "admin@demo.clinic",
+      "password": "demo1234",
+      "rolesNote": "Es gibt auch Zugänge als Zahnärztin, Dentalhygienikerin, Assistenz und Rezeption. Alle mit demselben Passwort."
+    },
+    "disclaimer": "Jede Nacht löschen wir die Daten. Nutzen Sie keine echten Patientendaten.",
+    "noInstall": "Läuft auf jedem Rechner, Tablet oder Handy. Sie brauchen nur einen Browser.",
+    "cta": "Demo öffnen"
+  },
+  "stack": {
+    "eyebrow": "TECH-STACK",
+    "title": "Ein moderner und bewusst langweiliger Stack.",
+    "body": "Wir wählen, was ernsthafte Teams wählen. Nichts Exotisches, nichts Geerbtes."
+  },
+  "oss": {
+    "eyebrow": "LIZENZ",
+    "title": "BSL 1.1 heute. Apache 2.0 morgen.",
+    "body": "Dentalpin erscheint unter der Business Source License 1.1: kostenlos für jede Praxis, kostenlos zum Lesen, Forken, Beitragen und für eigene Module. Die einzige rote Linie: Sie dürfen Dentalpin nicht als konkurrierendes Dental-SaaS anbieten. Nach vier Jahren geht jedes Release automatisch in Apache 2.0 über.",
+    "ctaLicense": "Die ganze Lizenz lesen →",
+    "ctaRepo": "Repository ansehen",
+    "sponsors": {
+      "title": "Das Projekt unterstützen",
+      "github": "GitHub Sponsors",
+      "opencollective": "OpenCollective",
+      "backed": "Unterstützt von Dentaltix"
+    }
+  },
+  "roadmap": {
+    "eyebrow": "ROADMAP",
+    "title": "Was kommt (ohne Datumsversprechen).",
+    "items": [
+      {
+        "title": "Eigenes Payments-Modul",
+        "body": "Der ganze Zyklus: kassieren, erstatten, stornieren, abgleichen. Mit Events, damit die anderen Module von selbst reagieren."
+      },
+      {
+        "title": "Mehr Sprachen",
+        "body": "PT, FR, DE, IT und was die Community beisteuert. Die Architektur trägt es schon."
+      },
+      {
+        "title": "Echte KI-Agenten",
+        "body": "Intelligente Terminplanung, automatisches Nachfassen und Unterstützung bei klinischen Entscheidungen. Immer mit einem Menschen, der vor der Ausführung freigibt."
+      }
+    ]
+  },
+  "cta": {
+    "title": "In Minuten bereit. Für immer Ihres.",
+    "subtitle": "Ein docker compose up und Sie sind drin.",
+    "ctaPrimary": "Demo testen",
+    "ctaSecondary": "Mit uns sprechen"
+  },
+  "footer": {
+    "product": "Produkt",
+    "community": "Community",
+    "resources": "Ressourcen",
+    "legal": "Rechtliches",
+    "rights": "Alle Rechte vorbehalten.",
+    "backed": "Unterstützt von Dentaltix",
+    "backedPre": "Unterstützt von ",
+    "links": {
+      "features": "Funktionen",
+      "pricing": "Preise",
+      "manifesto": "Manifest",
+      "modules": "Modulsystem",
+      "api": "API",
+      "github": "GitHub",
+      "issues": "Issues",
+      "discussions": "Discussions",
+      "contribute": "Mitmachen",
+      "telegram": "Telegram",
+      "docs": "Dokumentation",
+      "demo": "Online-Demo",
+      "changelog": "Changelog",
+      "license": "Lizenz",
+      "privacy": "Datenschutz der Demo"
+    }
+  },
+  "pricing": {
+    "eyebrow": "PREISE",
+    "title": "Kostenlos. Für immer. Der Kern, alle Module.",
+    "subtitle": "Dentalpin ist Open Source. Sie hosten es selbst oder warten, bis wir die gehostete Version öffnen.",
+    "selfhost": {
+      "badge": "Empfohlen",
+      "title": "Self-Hosting",
+      "price": "0 €",
+      "priceSuffix": "für immer",
+      "description": "Repo klonen, docker compose starten, fertig. Alle Module inklusive.",
+      "features": [
+        "Alle Module, keine Tarifstufen",
+        "Prüfbarer Code auf GitHub",
+        "Ihre Daten, auf Ihrem Server",
+        "BSL 1.1 heute → Apache 2.0 in vier Jahren",
+        "Updates aus der Community",
+        "Hilfe in GitHub Discussions"
+      ],
+      "ctaPrimary": "Repo klonen",
+      "ctaSecondary": "Demo testen"
+    },
+    "cloud": {
+      "badge": "Demnächst",
+      "title": "Managed Cloud",
+      "price": "Noch offen",
+      "priceSuffix": "wir betreiben es",
+      "description": "Dasselbe Dentalpin, nur betreiben wir es. Backups, Updates, TLS und ein Mensch am anderen Ende der E-Mail.",
+      "features": [
+        "Hosting in der EU",
+        "Backups und Wiederherstellung",
+        "Automatische Updates",
+        "TLS und eigene Domain",
+        "Menschlicher Support per E-Mail",
+        "SLA für Praxisketten"
+      ],
+      "formLabel": "Auf die Warteliste",
+      "emailField": "E-Mail",
+      "clinicField": "Name der Praxis (optional)",
+      "submit": "Benachrichtigt mich, sobald es verfügbar ist",
+      "consentBefore": "Ich akzeptiere die Bedingungen und die ",
+      "consentLink": "Datenschutzerklärung",
+      "consentAfter": ".",
+      "consentNote": "Sie können sich jederzeit über den Link am Ende jeder E-Mail abmelden.",
+      "consentRequired": "Für die Anmeldung müssen Sie die Datenschutzerklärung akzeptieren.",
+      "success": "Notiert. Wir melden uns, sobald wir Plätze öffnen.",
+      "error": "Bei uns ist etwas schiefgelaufen. Schreiben Sie an hola@dentalpin.com."
+    },
+    "services": {
+      "eyebrow": "BRAUCHEN SIE HILFE?",
+      "title": "Optionale Leistungen, falls es schneller gehen soll.",
+      "items": [
+        {
+          "title": "Begleitete Einrichtung",
+          "body": "Wir richten Dentalpin auf Ihrem Server ein, migrieren Ihre Patienten und schulen Ihr Team."
+        },
+        {
+          "title": "Jahressupport",
+          "body": "Direkter Kanal, Antwort zu Geschäftszeiten und Ihre Bugs ganz oben in der Warteschlange."
+        },
+        {
+          "title": "Module nach Maß",
+          "body": "Wir bauen die Module, die Ihre Praxis oder Kette braucht, und veröffentlichen sie als Open Source."
+        }
+      ],
+      "cta": "Mit uns sprechen"
+    },
+    "sponsors": {
+      "eyebrow": "DAS PROJEKT UNTERSTÜTZEN",
+      "title": "Dentalpin lebt von seiner Community.",
+      "body": "Wenn Ihnen Dentalpin jede Woche Stunden spart, gibt es Wege, etwas zurückzugeben:",
+      "github": "GitHub Sponsors",
+      "opencollective": "OpenCollective",
+      "backed": "Unterstützt von Dentaltix"
+    },
+    "faq": {
+      "title": "Häufige Fragen",
+      "items": [
+        {
+          "q": "Was bedeutet BSL 1.1?",
+          "a": "Business Source License. Kostenlos für jede Praxis, kostenlos für jede Entwicklerin. Die einzige Einschränkung: Sie dürfen Dentalpin nicht als konkurrierendes Dental-SaaS anbieten. Nach vier Jahren geht jedes Release automatisch in Apache 2.0 über."
+        },
+        {
+          "q": "Darf ich es in meiner Praxis kostenlos nutzen?",
+          "a": "Ja. Die BSL 1.1 erlaubt jeder Praxis, egal welcher Größe, Dentalpin kostenlos zu nutzen, ohne Grenze bei Patienten, Nutzern oder Standorten. Es gibt keine abgespeckte Version: Sie haben das ganze Produkt."
+        },
+        {
+          "q": "Wie wird es installiert?",
+          "a": "Repo klonen, .env kopieren und docker compose up starten. Den Rest deckt die Dokumentation ab. Auf einem vernünftigen VPS unter einer halben Stunde."
+        },
+        {
+          "q": "Wie migriere ich meine Daten?",
+          "a": "Wir arbeiten daran, Skripte anzubieten, damit der Umzug von Ihrer heutigen Software einfach wird. Bis dahin können Sie sich an den Betreuer Ihres aktuellen Programms wenden oder <a href=\"/de/kontakt/\" class=\"underline underline-offset-2 hover:text-[var(--color-primary)]\">uns schreiben</a>, damit wir mit anpacken."
+        },
+        {
+          "q": "Und wenn meine Praxis klein ist?",
+          "a": "Umso besser. Dentalpin läuft bequem auf einem VPS für 4 € im Monat. Keine Mindestnutzerzahl, keine Monatsrechnungen, die man im Blick behalten muss."
+        },
+        {
+          "q": "Und wenn ich echte Unterstützung brauche?",
+          "a": "Dafür sind die optionalen Leistungen oben da: begleitete Einrichtung, Jahressupport oder Module nach Maß."
+        }
+      ]
+    }
+  },
+  "featuresIndex": {
+    "eyebrow": "FUNKTIONEN",
+    "title": "Jede Funktion ein Modul. Jedes Modul seine eigene Seite.",
+    "subtitle": "Sie laufen unabhängig. Sie aktivieren, was Ihre Praxis braucht, und schalten den Rest ab, ohne sonst etwas anzufassen.",
+    "viewModule": "Modul ansehen",
+    "modulesLabel": "Module",
+    "stats": {
+      "modules": "Verfügbare Module",
+      "domains": "Funktionsbereiche",
+      "openSource": "Open Source"
+    },
+    "domains": {
+      "clinical": "Was Ihr Behandlungsteam jeden Tag anfasst.",
+      "operations": "Was die Praxis als Betrieb am Laufen hält.",
+      "platform": "Die Basis, auf der alles aufsetzt und erweitert wird."
+    }
+  },
+  "verifactuPage": {
+    "meta": {
+      "title": "Verifactu für Zahnarztpraxen · Dentalpin",
+      "description": "Optionales Modul für Spanien: erfüllt Veri*Factu (RD 1007/2023, Orden HAC/1177/2024), ohne Ihren Abrechnungsablauf zu ändern. Pflicht ab Januar 2027."
+    },
+    "esBadge": "Spanien",
+    "moduleBadge": "OPTIONALES MODUL · ES",
+    "title": "Verifactu, bereit für 2027.",
+    "tagline": "Das Modul, das Veri*Factu erfüllt, ohne dass Ihr Team es merkt.",
+    "lead": "Ab dem 1. Januar 2027 muss jede Praxis in Spanien, die eine Rechnung ausstellt, diese in Echtzeit an die AEAT senden. Verifactu erledigt das für Sie, ohne dass sich Ihre heutige Abrechnung ändert. Modul aktivieren, einmal einrichten, vergessen.",
+    "ctaDemo": "Demo testen",
+    "ctaDocs": "Dokumentation lesen",
+    "ctaContact": "Mit uns sprechen",
+    "factsTitle": "Kurz gefasst",
+    "facts": [
+      {
+        "label": "Land",
+        "value": "Spanien"
+      },
+      {
+        "label": "Status",
+        "value": "Verfügbar"
+      },
+      {
+        "label": "Modus",
+        "value": "Optional · aktivierbar"
+      },
+      {
+        "label": "Konformität",
+        "value": "RD 1007/2023"
+      },
+      {
+        "label": "Lizenz",
+        "value": "BSL 1.1"
+      }
+    ],
+    "deadlineHero": {
+      "label": "PFLICHT",
+      "main": "01. JAN 2027",
+      "sub": "Kapitalgesellschaften (IS)",
+      "secondary": "01. Jul 2027 · Selbstständige / IRPF",
+      "footnote": "Freiwillige Phase seit 2026 offen, ohne Sanktionen bei technischen Fehlern."
+    },
+    "what": {
+      "eyebrow": "WAS VERI*FACTU IST",
+      "title": "Eine neue gesetzliche Pflicht. Ein Stück Software, das sie löst.",
+      "body": "Veri*Factu ist das System der spanischen Steuerbehörde AEAT, das jede Abrechnungssoftware in Spanien (die SIF) verpflichtet, jede ausgestellte Rechnung in einer signierten Kette zu erfassen und nahezu in Echtzeit an das Finanzamt zu senden. Wer abrechnet, muss es erfüllen. Wer die Software baut, muss sie anpassen. Dentalpin bringt es ab Werk als optionales Modul mit, bereit zum Einschalten, wann Ihre Praxis will.",
+      "items": [
+        {
+          "title": "SHA-256-Prüfkette",
+          "body": "Jede Rechnung erzeugt einen Datensatz, der mit dem vorherigen verkettet ist. Die Kette wird zu einem Steuerbuch, an das nur angehängt wird und das niemand ändern kann, ohne den Hash zu brechen."
+        },
+        {
+          "title": "Signierte Übermittlung an die AEAT",
+          "body": "Ihr FNMT-Zertifikat signiert jede SOAP-Übertragung über mTLS. Zwischen Vorproduktion und echtem Produktivbetrieb wird per Klick umgeschaltet, ohne Redeploy."
+        },
+        {
+          "title": "Prüfbarer QR-Code im PDF",
+          "body": "Jede Rechnung trägt einen QR-Code, den jeder Patient scannen und im Steuerportal der AEAT prüfen kann."
+        }
+      ]
+    },
+    "timeline": {
+      "eyebrow": "WICHTIGE TERMINE",
+      "title": "Was Ihre Praxis bereithalten muss, und bis wann.",
+      "body": "Der Übergang zu Veri*Factu ist kein Ereignis, sondern ein Kalender. Das sind die Termine, die zählen.",
+      "items": [
+        {
+          "date": "29. Jul 2025",
+          "label": "Erledigt",
+          "title": "Die Softwarehersteller (SIF) gehen in den freiwilligen Modus.",
+          "body": "Dentalpin sendet seit diesem Datum bereits echt an die AEAT-Vorproduktion."
+        },
+        {
+          "date": "Im Laufe von 2026",
+          "label": "Jetzt",
+          "title": "Freiwillige Phase ohne Sanktionen bei technischen Fehlern.",
+          "body": "Der ideale Moment, um Verifactu zu aktivieren, in der Vorproduktion zu testen und Ihre Kette startklar zu machen."
+        },
+        {
+          "date": "01. Jan 2027",
+          "label": "Pflicht",
+          "title": "Kapitalgesellschaften (Körperschaftsteuer): Pflicht.",
+          "body": "Jede Praxis, die der Körperschaftsteuer unterliegt, muss ihre Rechnungen ab dem ersten Tag des Jahres an die AEAT senden."
+        },
+        {
+          "date": "01. Jul 2027",
+          "label": "Pflicht",
+          "title": "Selbstständige, IRPF und alle übrigen: Pflicht.",
+          "body": "Die übrigen Verpflichteten folgen sechs Monate später. Vor diesem Datum sollte Verifactu in Ihrer Praxis mit einem echten Zertifikat laufen."
+        }
+      ]
+    },
+    "flow": {
+      "eyebrow": "SO FUNKTIONIERT ES",
+      "title": "Es läuft unter der Abrechnung mit. Ohne Ihren Ablauf anzufassen.",
+      "body": "Ihr Team rechnet ab wie immer. Verifactu greift nur im Moment des Ausstellens ein und macht die Rechnung konform, bevor Sie sie fertig gedruckt haben.",
+      "steps": [
+        {
+          "n": "01",
+          "title": "Sie stellen die Rechnung aus",
+          "body": "Sie klicken in Dentalpin auf „Ausstellen“. Das Modul baut den Datensatz RegistroAlta mit den Pflichtfeldern der AEAT."
+        },
+        {
+          "n": "02",
+          "title": "Es berechnet die Prüfsumme",
+          "body": "SHA-256, das diese Rechnung mit der vorherigen verknüpft. Der Datensatz geht als ausstehend in die Kette."
+        },
+        {
+          "n": "03",
+          "title": "Es liefert QR-Code und Prüfsumme",
+          "body": "Vor dem Druck des PDF gibt Verifactu die Prüfsumme, die URL des Steuer-QR und den Rechnungstyp zurück. Ihr PDF ist konform."
+        },
+        {
+          "n": "04",
+          "title": "Ein Worker sendet an die AEAT",
+          "body": "Alle 60 s leert ein Worker die ausstehenden Datensätze, signiert den SOAP-Rahmen mit Ihrem FNMT-Zertifikat über mTLS und sendet in Losen von bis zu 1 000."
+        },
+        {
+          "n": "05",
+          "title": "Die AEAT antwortet",
+          "body": "Das Modul liest die Antwort, aktualisiert den Status (Korrekt, MitFehlernAkzeptiert, Fehlerhaft) und speichert den CSV-Code der AEAT im Datensatz."
+        }
+      ]
+    },
+    "setup": {
+      "eyebrow": "AKTIVIERUNG",
+      "title": "Fünf geführte Schritte. Ein einziges Mal.",
+      "body": "Das Modul bringt eine Checkliste im Backoffice mit. Jeder Schritt zeigt seinen Status in Grün, Gelb oder Rot und blockiert die Aktivierung, bis alles bereit ist.",
+      "steps": [
+        {
+          "title": "Identität der Praxis",
+          "body": "Steuernummer und Firmenname. Verifactu liest beides aus dem Praxisstammblatt, damit Steuerdaten nicht an mehreren Stellen doppelt stehen."
+        },
+        {
+          "title": "Digitales FNMT-Zertifikat",
+          "body": "Sie laden Ihre .pfx mit dem Passwort hoch. Sie wird mit Fernet verschlüsselt gespeichert. Die Oberfläche zeigt die Gültigkeit und warnt, wenn der Ablauf naht."
+        },
+        {
+          "title": "Hersteller des SIF",
+          "body": "Assistent mit elektronisch signierter Eigenerklärung. Danach können Sie das signierte PDF für Ihre Ablage oder für eine Prüfung durch die AEAT herunterladen."
+        },
+        {
+          "title": "Zuordnung der Steuersätze zur AEAT",
+          "body": "Jeder Steuersatz aus dem Katalog wird seiner AEAT-Einstufung zugeordnet (S1 steuerpflichtig, E1 Heilbehandlung steuerfrei, N1 nicht steuerbar…). Für Sätze mit 0 % setzt das Modul standardmäßig E1 (Heilbehandlungen)."
+        },
+        {
+          "title": "Modul aktivieren",
+          "body": "Wenn die vier Schritte grün sind, wird der Button „Verifactu aktivieren“ freigeschaltet. Sie starten im Testbetrieb (AEAT-Vorproduktion) und wechseln in den Produktivbetrieb, wenn Sie bereit sind."
+        }
+      ]
+    },
+    "compare": {
+      "eyebrow": "UMGEBUNGEN",
+      "title": "Test und echter Produktivbetrieb, jederzeit tauschbar.",
+      "body": "Dasselbe Modul, zwei Endpunkte. Umschalten per Klick. Ohne Datenmigration, ohne Neuinstallation.",
+      "rows": [
+        {
+          "attr": "AEAT-Endpunkt",
+          "test": "prewww1.aeat.es",
+          "prod": "www1.agenciatributaria.gob.es"
+        },
+        {
+          "attr": "Steuerliche Wirkung",
+          "test": "Keine",
+          "prod": "Echt"
+        },
+        {
+          "attr": "Akzeptierte Zertifikate",
+          "test": "Echtes FNMT oder AEAT-Testzertifikat",
+          "prod": "Nur echtes FNMT"
+        },
+        {
+          "attr": "QR-Code im PDF",
+          "test": "Zeigt auf die Vorproduktion",
+          "prod": "Zeigt auf das AEAT-Portal"
+        },
+        {
+          "attr": "Prüfkette",
+          "test": "Gleiche Logik wie im Produktivbetrieb",
+          "prod": "Gleiche Logik wie im Test"
+        }
+      ],
+      "footnote": "Ein Wechsel `prod → test` bricht die lokale Kette nicht (sie ist global pro Steuernummer), aber die AEAT sieht eine Lücke in der Umgebung, die Sie verlassen."
+    },
+    "datamodel": {
+      "eyebrow": "DATEN",
+      "title": "Vier Tabellen. Null geänderte Spalten im Rest des Systems.",
+      "body": "Verifactu lebt in seinem eigenen Bereich. Es liest aus Praxen und Katalog, fügt aber nie Spalten hinzu. Wenn Sie es deinstallieren (und keine akzeptierten Datensätze haben), sind Sie ohne Spuren wieder im vorherigen Zustand.",
+      "tables": [
+        {
+          "name": "verifactu_settings",
+          "what": "Eine Zeile pro Praxis. Status, Umgebung, Steuernummer des Herstellers, Kettenkopf, Sendefenster."
+        },
+        {
+          "name": "verifactu_certificates",
+          "what": "Verschlüsselter Speicher für PFX und Passwort mit Fernet. Subject CN, Steuernummer des Inhabers und Gültigkeitsdaten für das Banner."
+        },
+        {
+          "name": "verifactu_records",
+          "what": "Steuerbuch, an das nur angehängt wird. XML wortgetreu, Prüfsumme, vorherige Prüfsumme, AEAT-Status und CSV der Antwort. Nach LGT vier Jahre aufbewahrt."
+        },
+        {
+          "name": "verifactu_vat_classifications",
+          "what": "Zuordnung S1/E1–E6/N1/N2 je Steuersatz und Praxis. Hält den Katalog von Dentalpin länderunabhängig."
+        }
+      ]
+    },
+    "isolation": {
+      "eyebrow": "ARCHITEKTUR",
+      "title": "Ein Ländermodul. Kein Produktzweig.",
+      "body": "Dentalpin ist internationale Software. Veri*Factu ist Spanien. Die Grenze ist scharf: Das Modul hängt sich nur dann in die `BillingHookRegistry`, wenn `clinic.settings.country == \"ES\"`, es fasst weder Billing- noch Katalogtabellen an und verschwindet folgenlos, wenn Sie es deinstallieren.",
+      "items": [
+        {
+          "title": "Modular und optional",
+          "body": "Es wird nicht standardmäßig installiert. Praxen außerhalb Spaniens sehen keinen einzigen zusätzlichen Bildschirm; spanische Praxen aktivieren es unter Admin → Module."
+        },
+        {
+          "title": "Isoliert per Design",
+          "body": "Alle seine Tabellen tragen das Präfix `verifactu_*`. Keine spanische Steuerspalte landet im Kern; kein Kernmodul spricht mit der AEAT."
+        },
+        {
+          "title": "Als Muster wiederverwendbar",
+          "body": "Morgen kommt `factur-x-fr` für Frankreich, `sdi-it` für Italien oder ein Modul für die deutsche E-Rechnung in derselben Form. Jedes Land, seine eigene Komplexität."
+        }
+      ]
+    },
+    "queue": {
+      "eyebrow": "TÄGLICHER BETRIEB",
+      "title": "Wenn etwas schiefgeht, sehen Sie es da, wo es hingehört.",
+      "body": "Wenn die AEAT eine Übermittlung ablehnt oder das Netz ausfällt, taucht das Problem in der Warteschlange auf und wird automatisch erneut versucht. Sie sehen die echten Codes mit ihrer rechtlichen Beschreibung, nicht irgendetwas Allgemeines.",
+      "tabs": [
+        {
+          "key": "pending",
+          "label": "Ausstehend",
+          "body": "Datensätze im Status pending oder sending. Der Worker verarbeitet sie alle 60 Sekunden."
+        },
+        {
+          "key": "rejected",
+          "label": "Abgelehnt",
+          "body": "Fachliche Ablehnung der AEAT (Fehlerhaft). Angezeigt werden der exakte Code, die Beschreibung und ein Button „Erneut senden (Berichtigung)“, der mit `Subsanacion=S` und `RechazoPrevio=X` neu übermittelt."
+        },
+        {
+          "key": "transient",
+          "label": "Temporäre Fehler",
+          "body": "Transportfehler oder Ausfälle der AEAT. Der Worker versucht es automatisch mit exponentiellem Backoff erneut."
+        }
+      ]
+    },
+    "penalties": {
+      "eyebrow": "WARUM ES ZÄHLT",
+      "title": "Der Preis dafür, im Januar 2027 nicht bereit zu sein.",
+      "body": "Das spanische Abgabengesetz (LGT 201 bis) regelt die Haftung für den Einsatz nicht konformer SIF. Die Beträge können bis zu 50 000 € pro Geschäftsjahr reichen. Für eine Praxis, die jeden Tag abrechnet, ist es keine Option mehr, auf Verifactu (oder ein Äquivalent) zu verzichten.",
+      "items": [
+        {
+          "title": "Für Ihre Praxis",
+          "body": "Bußgeld für den Einsatz nicht zugelassener Software. Das Risiko bleibt bestehen, solange weiter nicht konforme Rechnungen ausgestellt werden."
+        },
+        {
+          "title": "Für Ihre Steuerkanzlei",
+          "body": "Strengere Prüfungen und verpflichtende Nachvollziehbarkeit jeder Rechnung. Veri*Factu reduziert die Rolle der Kanzlei auf Prüfung statt Erfassung."
+        },
+        {
+          "title": "Für Ihre Patienten",
+          "body": "Über den QR-Code auf der Rechnung können sie prüfen, dass ihre Ausgabe bei der AEAT registriert ist, was für Erstattungen im Gesundheitsbereich oft verlangt wird."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Häufige Fragen",
+      "items": [
+        {
+          "q": "Muss ich es jetzt schon aktivieren?",
+          "a": "Nein. Unterliegt Ihre Praxis der Körperschaftsteuer, ist der Stichtag der 1. Januar 2027. Zahlen Sie Einkommensteuer (Selbstständige), haben Sie bis zum 1. Juli 2027 Zeit. Bis dahin läuft die freiwillige Phase, ohne Sanktionen bei technischen Fehlern. Es ist der beste Moment, es zu aktivieren und in der Vorproduktion einzufahren."
+        },
+        {
+          "q": "Funktioniert es, wenn meine Praxis nicht in Spanien ist?",
+          "a": "Das Modul gilt ausschließlich für Spanien. Wenn Ihre Praxis nicht in Spanien abrechnet, sehen Sie es gar nicht: Es wird nicht standardmäßig installiert. Für Frankreich, Italien, Deutschland und weitere Länder sind Schwestermodule vorgesehen (Factur-X, SDI, E-Rechnung…), die sich genauso einstecken lassen."
+        },
+        {
+          "q": "Was brauche ich für den Start?",
+          "a": "Drei Dinge: (1) Ihre spanische Steuernummer im Praxisstammblatt, (2) ein gültiges FNMT-Zertifikat (Vertretung einer juristischen Person, natürliche Person oder Unternehmenssiegel) und (3) die Entscheidung, wer die Eigenerklärung als Hersteller unterschreibt (das SaaS, Ihr Integrator oder Ihre Praxis, wenn Sie selbst hosten)."
+        },
+        {
+          "q": "Und was ist mit Rechnungen von vor der Aktivierung?",
+          "a": "Sie kommen nicht rückwirkend in Verifactu: Die Kette beginnt an dem Tag, an dem Sie das Modul aktivieren. Die Vorschrift verlangt nur, dass die neuen signiert und übermittelt werden. Die früheren bleiben rechtlich gültig."
+        },
+        {
+          "q": "Was passiert, wenn die AEAT ausfällt?",
+          "a": "Verifactu markiert die Datensätze als temporäre Fehler und versucht es alle 60 Sekunden mit Backoff erneut. Ihre Praxis rechnet ganz normal weiter: Die Übermittlung wird abgeschlossen, sobald die AEAT zurück ist."
+        },
+        {
+          "q": "Kann ich es deinstallieren?",
+          "a": "Ja, solange Sie keine akzeptierten Datensätze haben. Sobald Ihre Kette einen einzigen als korrekt bestätigten Datensatz enthält, müssen Sie sie vier Jahre aufbewahren (LGT). Das Backoffice weist Sie darauf hin, bevor es die Deinstallation zulässt."
+        },
+        {
+          "q": "Funktionieren Teilzahlungen und Korrekturrechnungen?",
+          "a": "Ja. Unterstützt werden F1, F2, F3 und alle Korrekturrechnungen R1–R5 sowie Stornierungen (RegistroAnulacion). Vereinfachte Rechnungen bis 400 € ohne Empfänger sind validiert."
+        },
+        {
+          "q": "Kann eine ausgestellte Rechnung von außen geprüft werden?",
+          "a": "Ja. Der QR-Code im PDF zeigt auf die URL `ValidarQR` des Steuerportals der AEAT. Jede und jeder kann ihn scannen und prüfen, dass Ihre Rechnung registriert ist."
+        }
+      ]
+    },
+    "linksTitle": "Zum Weiterlesen",
+    "links": [
+      {
+        "label": "RD 1007/2023 (BOE)",
+        "href": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-24840"
+      },
+      {
+        "label": "Orden HAC/1177/2024 (BOE)",
+        "href": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2024-22138"
+      },
+      {
+        "label": "VERI*FACTU · AEAT-Portal",
+        "href": "https://sede.agenciatributaria.gob.es/Sede/iva/sistemas-informaticos-facturacion-verifactu.html"
+      },
+      {
+        "label": "Validierungen und Fehler Veri*Factu",
+        "href": "https://www.agenciatributaria.es/static_files/AEAT_Desarrolladores/EEDD/IVA/VERI-FACTU/Validaciones_Errores_Veri-Factu.pdf"
+      },
+      {
+        "label": "Gültige FNMT-Zertifikate",
+        "href": "https://www.sede.fnmt.gob.es/preguntas-frecuentes/certificado-de-persona-fisica/-/asset_publisher/eIal9z2VE0Kb/content/certificados-electr%C3%B3nicos-v%C3%A1lidos-para-el-sistema-veri*factu"
+      }
+    ],
+    "callout": {
+      "eyebrow": "SPANIEN · VERI*FACTU",
+      "title": "Rechnet Ihre Praxis in Spanien ab? Ein Klick trennt Sie von 2027.",
+      "body": "Verifactu ist ein optionales Modul in Dentalpin. Es erfüllt RD 1007/2023, signiert jede Rechnung und sendet sie in Echtzeit an die AEAT. Sie aktivieren es, wann Sie wollen, und sind vor dem Stichtag bereit.",
+      "cta": "Das Verifactu-Modul ansehen"
+    }
+  },
+  "whatsappPage": {
+    "meta": {
+      "title": "WhatsApp für Zahnarztpraxen · Dentalpin",
+      "description": "Community-Modul für Terminerinnerungen, Bestätigungen und Recalls per WhatsApp, mit den Antworten der Patienten in einem Verlauf in der App. Freigegebene Vorlagen, 24-Stunden-Fenster und signierter Webhook."
+    },
+    "channelBadge": "COMMUNITY-MODUL · KANAL",
+    "removableBadge": "Deinstallierbar",
+    "title": "WhatsApp, wo Ihre Patienten ohnehin schon sind.",
+    "tagline": "Erinnerungen und Recalls per WhatsApp, und der Patient antwortet Ihnen im selben Verlauf.",
+    "lead": "90 % Ihrer Patienten öffnen eine WhatsApp-Nachricht innerhalb von Minuten. Dieses Modul verbindet Ihre Dentalpin-Benachrichtigungen über Kapso mit WhatsApp: Sie senden Terminerinnerungen, Bestätigungen und Recalls mit freigegebenen Vorlagen, und wenn jemand antwortet, landet die Nachricht in einem Verlauf pro Patient in der App. Es ist ein weiterer Kanal auf demselben Gateway, optional und deinstallierbar.",
+    "ctaDemo": "Demo testen",
+    "ctaDocs": "Dokumentation lesen",
+    "ctaContact": "Mit uns sprechen",
+    "chat": {
+      "contactName": "Zahnarztpraxis Sonría",
+      "contactStatus": "online",
+      "templateTag": "Vorlage",
+      "messages": [
+        {
+          "from": "clinic",
+          "kind": "template",
+          "text": "Hallo Marta 👋 Wir erinnern an Ihren Kontrolltermin am Donnerstag, 3. Juli, um 10:00 Uhr bei Dr. Ruiz. Bestätigen Sie uns, dass Sie kommen?",
+          "time": "09:01"
+        },
+        {
+          "from": "patient",
+          "text": "Ja, ich bin da! Danke 🙏",
+          "time": "09:04"
+        },
+        {
+          "from": "clinic",
+          "text": "Super, wir freuen uns. Wenn Sie den Termin ändern müssen, antworten Sie einfach auf diese Nachricht.",
+          "time": "09:05"
+        },
+        {
+          "from": "patient",
+          "text": "Perfekt. Muss ich nüchtern kommen?",
+          "time": "09:06"
+        }
+      ],
+      "windowNote": "24-Stunden-Fenster offen · Sie können frei antworten",
+      "replyPlaceholder": "Antwort schreiben…"
+    },
+    "factsTitle": "Kurz gefasst",
+    "facts": [
+      {
+        "label": "Kategorie",
+        "value": "Community"
+      },
+      {
+        "label": "Status",
+        "value": "Verfügbar"
+      },
+      {
+        "label": "Modus",
+        "value": "Optional · deinstallierbar"
+      },
+      {
+        "label": "Anbieter",
+        "value": "Kapso (WhatsApp)"
+      },
+      {
+        "label": "Basiskanal",
+        "value": "Benachrichtigungs-Gateway"
+      }
+    ],
+    "what": {
+      "eyebrow": "WAS ES HINZUFÜGT",
+      "title": "Ein Nachrichtenkanal in beide Richtungen, auf dem, was Sie schon haben.",
+      "body": "Dentalpin verschickt Hinweise bereits per E-Mail über ein kanalunabhängiges Gateway. Dieses Modul steckt WhatsApp als weiteren Adapter dazu: dieselben Benachrichtigungen, jetzt auch über den Kanal, den Ihre Patienten wirklich öffnen, und mit der Antwort zurück in der Akte.",
+      "items": [
+        {
+          "title": "Gespräche in beide Richtungen",
+          "body": "Jeder Patient hat einen Verlauf: was Sie senden und was zurückkommt, der Reihe nach, in derselben Akte. Kein Senden ins Blaue, sondern ein Gespräch."
+        },
+        {
+          "title": "Freigegebene Vorlagen",
+          "body": "Die HSM-Vorlagen synchronisieren sich selbst aus Kapso und werden je Hinweistyp zugeordnet. Erinnerung, Bestätigung oder Recall gehen mit dem richtigen, von WhatsApp freigegebenen Text raus."
+        },
+        {
+          "title": "24-Stunden-Fenster",
+          "body": "Sobald ein Patient schreibt, öffnet sich ein 24-Stunden-Fenster für freie Antworten. Danach nur noch Vorlagen. Die Regel von WhatsApp, vom Modul angewendet, ohne dass Sie daran denken müssen."
+        }
+      ]
+    },
+    "window": {
+      "eyebrow": "SITZUNGSFENSTER",
+      "title": "Innerhalb von 24 Stunden frei, danach Vorlage.",
+      "body": "WhatsApp erlaubt freie Nachrichten nur 24 Stunden nach der letzten Nachricht des Patienten. Das Modul verwaltet dieses Fenster für Sie: Es erfasst jede eingehende Nachricht, startet den Zähler und entscheidet, was gerade gesendet werden darf.",
+      "insideLabel": "Fenster offen · 0–24 h",
+      "insideBody": "Der Patient hat geschrieben. Sie können frei antworten: eine Frage klären, einen Hinweis geben, den Termin festmachen. Das Gespräch läuft wie in jedem Chat.",
+      "outsideLabel": "Fenster geschlossen · über 24 h",
+      "outsideBody": "Es sind mehr als 24 Stunden ohne Antwort vergangen. Um den Kontakt wieder zu öffnen, können Sie nur eine freigegebene Vorlage senden (eine Erinnerung, einen Recall). Sobald der Patient antwortet, öffnet sich das Fenster erneut.",
+      "note": "Das Modul speichert `last_inbound_at` pro Patient und sendet bei jeder eingehenden Nachricht ein Event `notification.reply_received`, damit der Rest des Systems reagieren kann."
+    },
+    "flow": {
+      "eyebrow": "SO FUNKTIONIERT ES",
+      "title": "Von der automatischen Erinnerung bis zur Antwort des Patienten.",
+      "body": "Der ganze Weg, ohne dass jemand eine Nummer abtippt oder den Tab wechselt.",
+      "steps": [
+        {
+          "n": "01",
+          "title": "Dentalpin löst den Hinweis aus",
+          "body": "Ein anstehender Termin oder ein fälliger Recall erzeugt wie immer eine Benachrichtigung im Gateway."
+        },
+        {
+          "n": "02",
+          "title": "Sie geht per WhatsApp raus",
+          "body": "Der Kapso-Adapter wählt die freigegebene Vorlage passend zum Hinweistyp und sendet sie an die Nummer des Patienten."
+        },
+        {
+          "n": "03",
+          "title": "Der Patient antwortet",
+          "body": "Die Antwort erreicht den signierten Webhook, die HMAC-Signatur wird geprüft und der Patient über seine Telefonnummer aufgelöst."
+        },
+        {
+          "n": "04",
+          "title": "Sie landet im Verlauf",
+          "body": "Die Nachricht wird im Gespräch des Patienten gespeichert und öffnet das 24-Stunden-Fenster. Ihr Team sieht sie in der Akte."
+        },
+        {
+          "n": "05",
+          "title": "Sie antworten aus der App",
+          "body": "Innerhalb des Fensters antworten Sie frei aus der Akte heraus. Kein Firmenhandy, das von Hand zu Hand geht."
+        }
+      ]
+    },
+    "templates": {
+      "eyebrow": "VORLAGEN",
+      "title": "Jeder Hinweis, seine Vorlage.",
+      "body": "Die Vorlagen liegen in Kapso (von WhatsApp freigegeben) und das Modul ordnet sie nach Typ zu. Sie wählen, welche für welche Benachrichtigung gilt; der Text geht regelkonform raus.",
+      "items": [
+        {
+          "type": "Terminerinnerung",
+          "icon": "calendar",
+          "sample": "Hallo {{name}}, wir erinnern an Ihren Termin am {{datum}} um {{uhrzeit}}. Bestätigen Sie uns?"
+        },
+        {
+          "type": "Bestätigung",
+          "icon": "check",
+          "sample": "Termin bestätigt! Wir sehen uns am {{datum}} um {{uhrzeit}}. Danke, {{name}}."
+        },
+        {
+          "type": "Recall / Kontrolle",
+          "icon": "bell",
+          "sample": "Hallo {{name}}, Ihre letzte Kontrolle ist eine Weile her. Sollen wir den nächsten Termin einplanen?"
+        },
+        {
+          "type": "Kostenvoranschlag",
+          "icon": "card",
+          "sample": "Hallo {{name}}, Sie haben einen Kostenvoranschlag zur Ansicht. Sollen wir hier darüber sprechen?"
+        }
+      ]
+    },
+    "arch": {
+      "eyebrow": "ARCHITEKTUR",
+      "title": "Ein weiterer Kanal, kein Flickwerk.",
+      "body": "Der Benachrichtigungskern ist kanalunabhängig: Er definiert ein Adapter-Protokoll und bringt E-Mail ab Werk mit. WhatsApp kommt als Adapter dazu, der sich beim Installieren registriert und beim Deinstallieren wieder verschwindet, ohne den Rest anzufassen.",
+      "coreLabel": "Benachrichtigungs-Gateway",
+      "coreSub": "Kanalunabhängig · Outbox + Dispatch",
+      "adapters": [
+        {
+          "name": "E-Mail",
+          "sub": "Ab Werk",
+          "icon": "message",
+          "tone": "muted"
+        },
+        {
+          "name": "WhatsApp · Kapso",
+          "sub": "Community-Modul",
+          "icon": "whatsapp",
+          "tone": "primary"
+        },
+        {
+          "name": "Weitere Kanäle",
+          "sub": "Gleicher Vertrag",
+          "icon": "plug",
+          "tone": "subtle"
+        }
+      ],
+      "note": "Installieren fügt den Adapter und seine Vorlagen hinzu; Deinstallieren entfernt beides vollständig, mit einem Roundtrip-Test, der prüft, dass nichts zurückbleibt."
+    },
+    "privacy": {
+      "eyebrow": "DATENSCHUTZ UND KONTROLLE",
+      "title": "Ernsthafte Kommunikation, kein loser Bot.",
+      "body": "Mit Patienten über WhatsApp zu sprechen heißt, Gesundheitsdaten zu verarbeiten. Das Modul setzt das von Anfang an voraus.",
+      "items": [
+        {
+          "title": "Signierter Webhook",
+          "icon": "lock",
+          "body": "Jede Praxis hat ihre HMAC-SHA256-Signatur. Eingehende Nachrichten und Zustellstatus werden vor der Annahme geprüft, und die Verarbeitung ist idempotent: Ein erneuter Versand dupliziert nichts."
+        },
+        {
+          "title": "Verschlüsselte Geheimnisse",
+          "icon": "shield",
+          "body": "Das Kapso-Token und die Webhook-Signatur werden pro Praxis mit Fernet verschlüsselt gespeichert. Nichts liegt im Klartext in der Datenbank."
+        },
+        {
+          "title": "Einwilligung und Berechtigungen",
+          "icon": "check",
+          "body": "Geschrieben wird nur an Patienten, die eingewilligt haben, und der Zugriff auf die Einstellungen liegt unter den Rechten `whatsapp_kapso.settings.*`. Wer nicht darf, fasst die Konfiguration nicht an."
+        }
+      ]
+    },
+    "setup": {
+      "eyebrow": "AKTIVIERUNG",
+      "title": "Vier Schritte und Sie senden.",
+      "body": "Die Installation läuft über Admin → Module wie bei jedem Community-Modul. Die Konfiguration liegt auf einer zweisprachigen Einstellungsseite.",
+      "steps": [
+        {
+          "title": "Modul installieren",
+          "body": "Über den Modulmanager. Der WhatsApp-Adapter registriert sich und erscheint als verfügbarer Kanal im Gateway."
+        },
+        {
+          "title": "Kapso verbinden",
+          "body": "Sie fügen Ihr Kapso-Token und die Webhook-Signatur ein. Beides wird verschlüsselt gespeichert. Dann richten Sie die Webhook-URL für eingehende Nachrichten ein."
+        },
+        {
+          "title": "Vorlagen synchronisieren",
+          "body": "Das Modul holt Ihre freigegebenen Vorlagen aus Kapso und ordnet sie den Hinweistypen zu. Die Zuordnung prüfen Sie mit einem Klick."
+        },
+        {
+          "title": "Testnachricht",
+          "body": "Sie schicken eine Testnachricht an Ihre eigene Nummer, um die Verbindung von Ende zu Ende zu prüfen, bevor Sie sie mit Patienten nutzen."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Häufige Fragen",
+      "items": [
+        {
+          "q": "Brauche ich eine WhatsApp-Business-Nummer?",
+          "a": "Ja. Das Modul setzt auf Kapso als WhatsApp-Business-Anbieter. Sie verbinden Ihr Konto, fügen das Token in den Einstellungen ein, den Rest übernimmt der Adapter."
+        },
+        {
+          "q": "Warum kann ich manchmal nur Vorlagen senden?",
+          "a": "Das ist eine Regel von WhatsApp, nicht von Dentalpin. Außerhalb des 24-Stunden-Fensters seit der letzten Nachricht des Patienten sind nur freigegebene Vorlagen (HSM) erlaubt. Sobald der Patient antwortet, öffnet sich das Fenster und Sie können frei schreiben."
+        },
+        {
+          "q": "Wo sehe ich die Antworten der Patienten?",
+          "a": "In der Patientenakte. Jedes Gespräch ist ein Verlauf mit aus- und eingehenden Nachrichten in der richtigen Reihenfolge. Es gibt einen Konversations-Endpunkt und eine Verlaufskarte in der Patientenübersicht."
+        },
+        {
+          "q": "Ist es Pflicht? Kann ich es entfernen?",
+          "a": "Es ist ein Community-Modul, optional und deinstallierbar. Wenn Sie es nicht installieren, benachrichtigt Dentalpin weiter per E-Mail. Wenn Sie es deinstallieren, werden Adapter und Vorlagen rückstandslos entfernt (ein Roundtrip-Test prüft das)."
+        },
+        {
+          "q": "Ist das sicher für Patientendaten?",
+          "a": "Der Webhook ist pro Praxis mit HMAC-SHA256 signiert und die Verarbeitung eingehender Nachrichten ist idempotent. Die Geheimnisse (Token, Signatur) liegen mit Fernet verschlüsselt, und der Zugriff auf die Einstellungen hängt an eigenen Berechtigungen."
+        },
+        {
+          "q": "Taugt das später auch für andere Kanäle?",
+          "a": "Ja. Das Gateway ist kanalunabhängig: WhatsApp ist ein Adapter auf demselben Vertrag, den auch E-Mail nutzt. Jeder neue Kanal (SMS, ein anderer Anbieter) passt genauso, ohne die Benachrichtigungen neu zu schreiben."
+        }
+      ]
+    },
+    "linksTitle": "Zum Weiterlesen",
+    "links": [
+      {
+        "label": "Leitfaden zum WhatsApp-Modul",
+        "href": "https://github.com/martinezsalmeron/dentalpin/blob/main/docs/modules/whatsapp_kapso.md"
+      },
+      {
+        "label": "ADR · Eingehende Gespräche",
+        "href": "https://github.com/martinezsalmeron/dentalpin/blob/main/docs/adr/0017-inbound-conversation.md"
+      },
+      {
+        "label": "Berechtigungen des Moduls",
+        "href": "https://github.com/martinezsalmeron/dentalpin/tree/main/docs/technical/whatsapp_kapso"
+      }
+    ]
+  },
+  "featurePage": {
+    "backToIndex": "← Alle Funktionen",
+    "breadcrumbRoot": "Funktionen",
+    "capabilities": "Fähigkeiten",
+    "capabilitiesTitle": "Was Ihnen dieses Modul gibt",
+    "capabilitiesCountSuffix": "Fähigkeiten",
+    "screenshotPending": "Screenshot folgt",
+    "statusRoadmap": "Roadmap",
+    "statusStable": "Verfügbar",
+    "quickFacts": "Kurz gefasst",
+    "factDomain": "Bereich",
+    "factCapabilities": "Fähigkeiten",
+    "factStatus": "Status",
+    "factLicense": "Lizenz",
+    "relatedTitle": "Weitere Module aus diesem Bereich",
+    "ctaOpenModule": "Modul öffnen",
+    "ctaDemo": "In der Demo ausprobieren",
+    "ctaGithub": "Code ansehen"
+  },
+  "contact": {
+    "title": "Sprechen wir über Ihre Praxis.",
+    "subtitle": "Erzählen Sie uns, wo Sie stehen, und wir sagen Ihnen, ob Dentalpin passt. Es liest ein Mensch, kein Formular.",
+    "fields": {
+      "name": "Name",
+      "email": "E-Mail",
+      "clinic": "Praxis oder Organisation",
+      "reason": "Worum geht es?",
+      "message": "Erzählen Sie uns etwas mehr",
+      "subscribe": "Ich möchte Produktneuigkeiten per E-Mail. Mehr nicht.",
+      "submit": "Senden"
+    },
+    "reasons": {
+      "demo": "Eine Demo mit meinen Daten sehen",
+      "migration": "Von einer anderen Software wechseln",
+      "install": "Hilfe bei der Installation",
+      "dev": "Integrationen oder Entwicklung",
+      "other": "Etwas anderes"
+    },
+    "reply": "Wir antworten in weniger als einem Werktag. Keine Kaltakquise, keine automatischen Sequenzen.",
+    "success": "Angekommen. Wir antworten in weniger als einem Werktag.",
+    "error": "Ihre Nachricht konnte nicht gesendet werden. Schreiben Sie uns direkt an hola@dentalpin.com.",
+    "rail": {
+      "title": "In der Zwischenzeit",
+      "demo": {
+        "title": "Jetzt die Demo testen",
+        "body": "Eine Beispielpraxis mit Patienten und Terminen. Ohne Registrierung und ohne Karte.",
+        "cta": "Demo öffnen"
+      },
+      "telegram": {
+        "title": "Ins Telegram kommen",
+        "body": "Support, Neuigkeiten und die anderen Praxen, die es schon nutzen.",
+        "cta": "Kanal beitreten"
+      },
+      "github": {
+        "title": "Den Code ansehen",
+        "body": "Das ganze Produkt ist öffentlich. Lesen, forken, ein Issue öffnen.",
+        "cta": "Repository ansehen"
+      }
+    }
+  },
+  "lang": {
+    "label": "Sprache",
+    "es": "Español",
+    "en": "English",
+    "fr": "Français",
+    "pt": "Português",
+    "de": "Deutsch",
+    "it": "Italiano"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Produktnotizen, Leitfäden zu gesetzlichen Pflichten und wie Dentalpin gebaut ist.",
+    "readMore": "Lesen",
+    "backToBlog": "Zurück zum Blog",
+    "publishedOn": "Veröffentlicht am",
+    "updatedOn": "Aktualisiert am",
+    "empty": "Noch keine Beiträge. Schauen Sie bald wieder vorbei.",
+    "rss": "Per RSS abonnieren",
+    "minRead": "Min. Lesezeit",
+    "onThisPage": "Auf dieser Seite",
+    "ctaTitle": "Testen Sie es selbst",
+    "ctaBody": "Gehen Sie mit echten Daten in die Demo, ohne etwas zu installieren und ohne Ihre E-Mail-Adresse. Oder stellen Sie es in drei Minuten auf Ihren Server.",
+    "ctaDemo": "Demo testen",
+    "ctaPricing": "Preise ansehen"
+  }
+}

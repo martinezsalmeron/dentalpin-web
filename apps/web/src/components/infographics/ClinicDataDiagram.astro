@@ -11,8 +11,8 @@ interface Props {
 }
 const { size = 'md', class: extra = '', locale = 'es' } = Astro.props;
 const dim = size === 'sm' ? 120 : 220;
-const labelClinic = { es: 'DONDE TÚ ELIJAS', en: 'WHERE YOU PICK', fr: 'OÙ VOUS VOULEZ', pt: 'ONDE VOCÊ QUISER' }[locale];
-const labelCloud = { es: 'NUBE AJENA', en: 'OUTSIDE CLOUD', fr: 'CLOUD D’UN AUTRE', pt: 'CLOUD DE OUTREM' }[locale];
+const labelClinic = { es: 'DONDE TÚ ELIJAS', en: 'WHERE YOU PICK', fr: 'OÙ VOUS VOULEZ', pt: 'ONDE VOCÊ QUISER', de: 'WO SIE WOLLEN', it: 'DOVE VUOI TU' }[locale];
+const labelCloud = { es: 'NUBE AJENA', en: 'OUTSIDE CLOUD', fr: 'CLOUD D’UN AUTRE', pt: 'CLOUD DE OUTREM', de: 'FREMDE CLOUD', it: 'CLOUD DI ALTRI' }[locale];
 ---
 
 <svg

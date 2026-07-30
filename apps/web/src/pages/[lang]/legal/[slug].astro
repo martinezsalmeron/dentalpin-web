@@ -9,6 +9,8 @@ const SLUG_MAP: Record<Locale, Record<Kind, string>> = {
   en: { privacy: 'privacy', terms: 'terms', cookies: 'cookies' },
   fr: { privacy: 'confidentialite', terms: 'conditions', cookies: 'cookies' },
   pt: { privacy: 'privacidade', terms: 'termos', cookies: 'cookies' },
+  de: { privacy: 'datenschutz', terms: 'nutzungsbedingungen', cookies: 'cookies' },
+  it: { privacy: 'privacy', terms: 'termini', cookies: 'cookies' },
 };
 const TITLES: Record<Locale, Record<Kind, string>> = {
   es: { privacy: 'Política de privacidad', terms: 'Términos de uso', cookies: 'Política de cookies' },
@@ -23,6 +25,16 @@ const TITLES: Record<Locale, Record<Kind, string>> = {
     terms: 'Termos de utilização',
     cookies: 'Política de cookies',
   },
+  de: {
+    privacy: 'Datenschutzerklärung',
+    terms: 'Nutzungsbedingungen',
+    cookies: 'Cookie-Richtlinie',
+  },
+  it: {
+    privacy: 'Informativa sulla privacy',
+    terms: 'Termini di utilizzo',
+    cookies: 'Informativa sui cookie',
+  },
 };
 
 // Astro hoists getStaticPaths out of the component scope, so the slug table
@@ -33,8 +45,10 @@ export function getStaticPaths() {
     en: { privacy: 'privacy', terms: 'terms', cookies: 'cookies' },
     fr: { privacy: 'confidentialite', terms: 'conditions', cookies: 'cookies' },
     pt: { privacy: 'privacidade', terms: 'termos', cookies: 'cookies' },
+    de: { privacy: 'datenschutz', terms: 'nutzungsbedingungen', cookies: 'cookies' },
+    it: { privacy: 'privacy', terms: 'termini', cookies: 'cookies' },
   } as const;
-  return (['es', 'en', 'fr', 'pt'] as const).flatMap((l) =>
+  return (['es', 'en', 'fr', 'pt', 'de', 'it'] as const).flatMap((l) =>
     (['privacy', 'terms', 'cookies'] as const).map((k) => ({
       params: { lang: l, slug: SLUGS[l][k] },
     }))
@@ -245,6 +259,100 @@ const cookiesPath = `/${locale}/legal/${SLUG_MAP[locale].cookies}/`;
         </>
       )}
 
+      {kind === 'privacy' && locale === 'de' && (
+        <>
+          <p><em>Letzte Aktualisierung: 23. April 2026.</em></p>
+
+          <h2>1. Verantwortlicher</h2>
+          <p>
+            Dentared Odontology Services S.L.<br />
+            Steuernummer (CIF): B86142809<br />
+            Calle Torres Quevedo 13, 28108 Alcobendas, Madrid (Spanien)<br />
+            Kontakt: <a href="mailto:hola@dentalpin.com">hola@dentalpin.com</a>
+          </p>
+
+          <h2>2. Welche Daten wir verarbeiten</h2>
+          <ul>
+            <li>Identifikations- und Kontaktdaten, die Sie uns geben, wenn Sie uns schreiben, sich für die Warteliste der Cloud eintragen oder Leistungen anfragen (Name, E-Mail-Adresse, Name der Praxis).</li>
+            <li>Minimale technische Daten aus dem Seitenaufruf (IP-Adresse, Browsertyp, aufgerufene Seiten, Zeitpunkte), erhoben ohne Tracking-Cookies Dritter.</li>
+            <li>Die Inhalte unserer Korrespondenz per E-Mail oder über einen anderen Kanal, den Sie eröffnen.</li>
+          </ul>
+
+          <h2>3. Zwecke und Rechtsgrundlagen</h2>
+          <ul>
+            <li>Ihre Anfragen beantworten und die angefragte Leistung erbringen. Rechtsgrundlage: Vertragserfüllung oder vorvertragliche Maßnahmen (Art. 6 Abs. 1 lit. b DSGVO).</li>
+            <li>Die Warteliste der Cloud verwalten und Sie benachrichtigen, sobald wir Plätze öffnen. Rechtsgrundlage: Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).</li>
+            <li>Gesetzliche, buchhalterische und steuerliche Pflichten erfüllen. Rechtsgrundlage: rechtliche Verpflichtung (Art. 6 Abs. 1 lit. c DSGVO).</li>
+            <li>Website und Produkt anhand aggregierter Kennzahlen verbessern. Rechtsgrundlage: berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO).</li>
+          </ul>
+
+          <h2>4. Speicherdauer</h2>
+          <p>Wir speichern Ihre Daten so lange, wie es für den Zweck der Erhebung nötig ist, und danach für die gesetzlichen Aufbewahrungsfristen (in der Regel sechs Jahre für Buchhaltungsunterlagen). Widerrufen Sie Ihre Einwilligung, löschen wir die Daten, sofern keine gesetzliche Aufbewahrungspflicht besteht.</p>
+
+          <h2>5. Empfänger</h2>
+          <p>Wir geben Ihre Daten nicht an Dritte weiter, außer aufgrund gesetzlicher Verpflichtung. Wir arbeiten mit Auftragsverarbeitern für Hosting, E-Mail und Reichweitenmessung zusammen, jeweils mit einem Vertrag nach Art. 28 DSGVO. Die aktuelle Liste erhalten Sie auf Anfrage unter <a href="mailto:hola@dentalpin.com">hola@dentalpin.com</a>.</p>
+
+          <h2>6. Übermittlung in Drittländer</h2>
+          <p>Wir bevorzugen Anbieter mit Infrastruktur in der Europäischen Union. Arbeitet ein Anbieter außerhalb des EWR, erfolgt die Übermittlung auf Grundlage der von der Europäischen Kommission genehmigten Standardvertragsklauseln oder eines anderen gültigen Mechanismus nach Kapitel V DSGVO.</p>
+
+          <h2>7. Ihre Rechte</h2>
+          <p>Sie können jederzeit Ihre Rechte auf Auskunft, Berichtigung, Löschung, Widerspruch, Einschränkung der Verarbeitung, Datenübertragbarkeit und darauf, keiner automatisierten Entscheidung unterworfen zu werden, ausüben. Schreiben Sie dazu an <a href="mailto:hola@dentalpin.com">hola@dentalpin.com</a>, nennen Sie das Recht, das Sie ausüben möchten, und legen Sie einen Identitätsnachweis bei. Wenn Sie meinen, dass wir Ihr Anliegen nicht richtig behandelt haben, können Sie sich bei der zuständigen Aufsichtsbehörde beschweren: der spanischen Datenschutzbehörde (<a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>) oder, wenn Sie in Deutschland wohnen, bei der Datenschutzaufsichtsbehörde Ihres Bundeslandes (die Liste führt <a href="https://www.bfdi.bund.de" target="_blank" rel="noopener">www.bfdi.bund.de</a>).</p>
+
+          <h2>8. Cookies</h2>
+          <p>Diese Website nutzt ausschließlich Cookies, die für ihren Betrieb unbedingt erforderlich sind. Die Einzelheiten stehen in unserer <a href={cookiesPath}>Cookie-Richtlinie</a>.</p>
+
+          <h2>9. Änderungen dieser Erklärung</h2>
+          <p>Wir können diese Erklärung anpassen, um rechtliche oder produktbezogene Änderungen abzubilden. Die geltende Fassung wird immer unter derselben Adresse veröffentlicht, mit dem Datum der letzten Überarbeitung.</p>
+        </>
+      )}
+
+      {kind === 'privacy' && locale === 'it' && (
+        <>
+          <p><em>Ultimo aggiornamento: 23 aprile 2026.</em></p>
+
+          <h2>1. Titolare del trattamento</h2>
+          <p>
+            Dentared Odontology Services S.L.<br />
+            Codice fiscale (CIF): B86142809<br />
+            Calle Torres Quevedo 13, 28108 Alcobendas, Madrid (Spagna)<br />
+            Contatto: <a href="mailto:hola@dentalpin.com">hola@dentalpin.com</a>
+          </p>
+
+          <h2>2. Dati che trattiamo</h2>
+          <ul>
+            <li>Dati identificativi e di contatto che ci fornisci quando ci scrivi, ti iscrivi alla lista d’attesa del Cloud o richiedi servizi (nome, email, nome dello studio).</li>
+            <li>Dati tecnici minimi legati alla navigazione (indirizzo IP, tipo di browser, pagine viste, date), raccolti senza cookie di tracciamento di terze parti.</li>
+            <li>Il contenuto della corrispondenza che avremo via email o su un altro canale che apri tu.</li>
+          </ul>
+
+          <h2>3. Finalità e basi giuridiche</h2>
+          <ul>
+            <li>Rispondere alle tue richieste e fornirti il servizio richiesto. Base giuridica: esecuzione di un contratto o misure precontrattuali (art. 6, par. 1, lett. b del GDPR).</li>
+            <li>Gestire la lista d’attesa del Cloud e avvisarti quando apriamo i posti. Base giuridica: il tuo consenso (art. 6, par. 1, lett. a del GDPR).</li>
+            <li>Adempiere a obblighi di legge, contabili e fiscali. Base giuridica: obbligo legale (art. 6, par. 1, lett. c del GDPR).</li>
+            <li>Migliorare il sito e il prodotto a partire da metriche aggregate. Base giuridica: legittimo interesse (art. 6, par. 1, lett. f del GDPR).</li>
+          </ul>
+
+          <h2>4. Conservazione</h2>
+          <p>Conserviamo i tuoi dati per il tempo necessario alla finalità per cui sono stati raccolti e, in seguito, per i termini di legge applicabili (di norma sei anni per la documentazione contabile). Se revochi il consenso, li cancelliamo, salvo che la legge ci imponga di conservarli.</p>
+
+          <h2>5. Destinatari</h2>
+          <p>Non cediamo i tuoi dati a terzi, salvo obbligo di legge. Lavoriamo con responsabili del trattamento che ci forniscono servizi di hosting, email e analisi del traffico, tutti con un contratto ai sensi dell’art. 28 del GDPR. L’elenco aggiornato è disponibile su richiesta scrivendo a <a href="mailto:hola@dentalpin.com">hola@dentalpin.com</a>.</p>
+
+          <h2>6. Trasferimenti internazionali</h2>
+          <p>Diamo la priorità a fornitori con infrastruttura nell’Unione Europea. Quando un fornitore opera fuori dallo SEE, il trasferimento avviene sulla base delle Clausole Contrattuali Standard approvate dalla Commissione Europea o di un altro meccanismo valido previsto dal Capo V del GDPR.</p>
+
+          <h2>7. I tuoi diritti</h2>
+          <p>Puoi esercitare in qualsiasi momento i diritti di accesso, rettifica, cancellazione, opposizione, limitazione del trattamento, portabilità e di non essere sottoposto a decisioni automatizzate. Scrivi a <a href="mailto:hola@dentalpin.com">hola@dentalpin.com</a> indicando il diritto che vuoi esercitare e allegando un documento d’identità. Se ritieni che non abbiamo gestito bene la tua richiesta, puoi presentare reclamo all’autorità di controllo competente: l’Agenzia spagnola per la protezione dei dati (<a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>) oppure, se risiedi in Italia, il Garante per la protezione dei dati personali (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">www.garanteprivacy.it</a>).</p>
+
+          <h2>8. Cookie</h2>
+          <p>Questo sito usa solo cookie strettamente necessari al suo funzionamento. Il dettaglio è nella nostra <a href={cookiesPath}>Informativa sui cookie</a>.</p>
+
+          <h2>9. Modifiche a questa informativa</h2>
+          <p>Possiamo aggiornare questa informativa per riflettere cambiamenti normativi o di prodotto. La versione in vigore sarà sempre pubblicata a questo stesso indirizzo, con la data dell’ultima revisione.</p>
+        </>
+      )}
+
       {kind !== 'privacy' && (
         <p>
           {locale === 'es'
@@ -253,7 +361,11 @@ const cookiesPath = `/${locale}/legal/${SLUG_MAP[locale].cookies}/`;
               ? 'Document en attente de rédaction juridique. À mettre à jour avant le lancement.'
               : locale === 'pt'
                 ? 'Documento a aguardar redação jurídica. Atualizar antes do lançamento.'
-                : 'Legal document pending drafting. Update before launch.'}
+                : locale === 'de'
+                  ? 'Dokument, das noch juristisch verfasst werden muss. Vor dem Start aktualisieren.'
+                  : locale === 'it'
+                    ? 'Documento in attesa di stesura legale. Aggiornare prima del lancio.'
+                    : 'Legal document pending drafting. Update before launch.'}
         </p>
       )}
     </div>

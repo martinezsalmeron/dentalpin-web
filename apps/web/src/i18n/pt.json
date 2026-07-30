@@ -1519,7 +1519,9 @@
     "es": "Español",
     "en": "English",
     "fr": "Français",
-    "pt": "Português"
+    "pt": "Português",
+    "de": "Deutsch",
+    "it": "Italiano"
   },
   "blog": {
     "title": "Blog",

@@ -1,5 +1,5 @@
 ---
-import { isLocale, type Locale } from '~/i18n';
+import { LOCALES, isLocale, type Locale } from '~/i18n';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Hero from '~/components/Hero.astro';
 import PillarsStrip from '~/components/PillarsStrip.astro';
@@ -11,12 +11,7 @@ import LiveDemoCard from '~/components/LiveDemoCard.astro';
 import AiAgentCallout from '~/components/AiAgentCallout.astro';
 
 export function getStaticPaths() {
-  return [
-    { params: { lang: 'es' } },
-    { params: { lang: 'en' } },
-    { params: { lang: 'fr' } },
-    { params: { lang: 'pt' } },
-  ];
+  return LOCALES.map((lang) => ({ params: { lang } }));
 }
 
 const { lang } = Astro.params;

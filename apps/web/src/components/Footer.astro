@@ -1,5 +1,6 @@
 ---
 import { useDict, pagePath, type Locale } from '~/i18n';
+import { MODULES, moduleSlug } from '~/data/modules';
 import {
   DEMO_URL,
   GITHUB_REPO,
@@ -15,6 +16,7 @@ interface Props {
 const { locale } = Astro.props;
 const dict = useDict(locale);
 const year = new Date().getFullYear();
+const modulesSlug = moduleSlug(MODULES.find((m) => m.slug === 'modulos')!, locale);
 
 const demoUrl = DEMO_URL;
 const ghUrl = GITHUB_REPO;
@@ -46,7 +48,7 @@ const licenseUrl = GITHUB_LICENSE;
         <li><a class="hover:text-[var(--color-primary)]" href={pagePath(locale, 'features')}>{dict.footer.links.features}</a></li>
         <li><a class="hover:text-[var(--color-primary)]" href={pagePath(locale, 'pricing')}>{dict.footer.links.pricing}</a></li>
         <li><a class="hover:text-[var(--color-primary)]" href={pagePath(locale, 'manifesto')}>{dict.footer.links.manifesto}</a></li>
-        <li><a class="hover:text-[var(--color-primary)]" href={pagePath(locale, 'features', locale === 'es' || locale === 'pt' ? 'modulos' : 'modules')}>{dict.footer.links.modules}</a></li>
+        <li><a class="hover:text-[var(--color-primary)]" href={pagePath(locale, 'features', modulesSlug)}>{dict.footer.links.modules}</a></li>
         <li><a class="hover:text-[var(--color-primary)]" href={pagePath(locale, 'features', 'api')}>{dict.footer.links.api}</a></li>
         <li><a class="hover:text-[var(--color-primary)]" href={pagePath(locale, 'contact')}>{dict.nav.contact}</a></li>
       </ul>

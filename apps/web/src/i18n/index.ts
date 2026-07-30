@@ -2,9 +2,11 @@ import es from './es.json';
 import en from './en.json';
 import fr from './fr.json';
 import pt from './pt.json';
+import de from './de.json';
+import it from './it.json';
 import { MODULES, moduleSlug } from '~/data/modules';
 
-export const LOCALES = ['es', 'en', 'fr', 'pt'] as const;
+export const LOCALES = ['es', 'en', 'fr', 'pt', 'de', 'it'] as const;
 export type Locale = (typeof LOCALES)[number];
 export const DEFAULT_LOCALE: Locale = 'es';
 
@@ -15,6 +17,8 @@ const DICTS: Record<Locale, Dict> = {
   en: en as unknown as Dict,
   fr: fr as unknown as Dict,
   pt: pt as unknown as Dict,
+  de: de as unknown as Dict,
+  it: it as unknown as Dict,
 };
 
 /**
@@ -28,18 +32,24 @@ export const HTML_LANG: Record<Locale, string> = {
   en: 'en-US',
   fr: 'fr-FR',
   pt: 'pt',
+  de: 'de-DE',
+  it: 'it-IT',
 };
 export const OG_LOCALE: Record<Locale, string> = {
   es: 'es_ES',
   en: 'en_US',
   fr: 'fr_FR',
   pt: 'pt_PT',
+  de: 'de_DE',
+  it: 'it_IT',
 };
 export const DATE_LOCALE: Record<Locale, string> = {
   es: 'es-ES',
   en: 'en-GB',
   fr: 'fr-FR',
   pt: 'pt',
+  de: 'de-DE',
+  it: 'it-IT',
 };
 
 export function isLocale(value: string | undefined): value is Locale {
@@ -76,20 +86,64 @@ export function localisedPath(locale: Locale, path: string = ''): string {
 }
 
 export const LOCALE_PATHS = {
-  manifesto: { es: 'manifiesto', en: 'manifesto', fr: 'manifeste', pt: 'manifesto' },
-  features: { es: 'funcionalidades', en: 'features', fr: 'fonctionnalites', pt: 'funcionalidades' },
-  technology: { es: 'tecnologia', en: 'technology', fr: 'technologie', pt: 'tecnologia' },
-  pricing: { es: 'precios', en: 'pricing', fr: 'tarifs', pt: 'precos' },
-  contact: { es: 'contacto', en: 'contact', fr: 'contact', pt: 'contacto' },
-  blog: { es: 'blog', en: 'blog', fr: 'blog', pt: 'blog' },
+  manifesto: {
+    es: 'manifiesto',
+    en: 'manifesto',
+    fr: 'manifeste',
+    pt: 'manifesto',
+    de: 'manifest',
+    it: 'manifesto',
+  },
+  features: {
+    es: 'funcionalidades',
+    en: 'features',
+    fr: 'fonctionnalites',
+    pt: 'funcionalidades',
+    de: 'funktionen',
+    it: 'funzionalita',
+  },
+  technology: {
+    es: 'tecnologia',
+    en: 'technology',
+    fr: 'technologie',
+    pt: 'tecnologia',
+    de: 'technologie',
+    it: 'tecnologia',
+  },
+  pricing: { es: 'precios', en: 'pricing', fr: 'tarifs', pt: 'precos', de: 'preise', it: 'prezzi' },
+  contact: {
+    es: 'contacto',
+    en: 'contact',
+    fr: 'contact',
+    pt: 'contacto',
+    de: 'kontakt',
+    it: 'contatti',
+  },
+  blog: { es: 'blog', en: 'blog', fr: 'blog', pt: 'blog', de: 'blog', it: 'blog' },
   legalPrivacy: {
     es: 'legal/privacidad',
     en: 'legal/privacy',
     fr: 'legal/confidentialite',
     pt: 'legal/privacidade',
+    de: 'legal/datenschutz',
+    it: 'legal/privacy',
   },
-  legalTerms: { es: 'legal/terminos', en: 'legal/terms', fr: 'legal/conditions', pt: 'legal/termos' },
-  legalCookies: { es: 'legal/cookies', en: 'legal/cookies', fr: 'legal/cookies', pt: 'legal/cookies' },
+  legalTerms: {
+    es: 'legal/terminos',
+    en: 'legal/terms',
+    fr: 'legal/conditions',
+    pt: 'legal/termos',
+    de: 'legal/nutzungsbedingungen',
+    it: 'legal/termini',
+  },
+  legalCookies: {
+    es: 'legal/cookies',
+    en: 'legal/cookies',
+    fr: 'legal/cookies',
+    pt: 'legal/cookies',
+    de: 'legal/cookies',
+    it: 'legal/cookies',
+  },
 } as const;
 
 export type PagePathKey = keyof typeof LOCALE_PATHS;
@@ -128,7 +182,7 @@ export function translatePath(pathname: string, target: Locale): string {
   if (!tail || key === 'blog') return pagePath(target, key);
 
   if (key === 'features') {
-    const mod = MODULES.find((m) => [m.slug, m.slugEn, m.slugFr, m.slugPt].includes(tail));
+    const mod = MODULES.find((m) => [m.slug, m.slugEn, m.slugFr, m.slugPt, m.slugDe, m.slugIt].includes(tail));
     if (mod) return pagePath(target, key, moduleSlug(mod, target));
   }
   return pagePath(target, key, tail);
