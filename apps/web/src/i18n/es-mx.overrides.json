@@ -37,5 +37,7 @@
   "pricing.fiscal.country": "México",
   "pricing.fiscal.authority": "el SAT",
   "pricing.fiscal.body": "En {country}, Dentalpin no timbra tus facturas ante {authority} ni emite CFDI. Verás documentos de facturación en pantalla y no son válidos como comprobante fiscal: sigue facturando con el sistema que usas hoy. Todo lo demás (agenda, pacientes, odontograma, planes de tratamiento, presupuestos, cobros, recordatorios, WhatsApp, informes y copiloto de IA) funciona igual.",
-  "pricing.faq.items[3].a": "Tu consultorio es el responsable del tratamiento de los datos de sus pacientes, y nosotros somos encargados del tratamiento en el plan Gestionado. El contrato lo detalla. Nuestra parte son medidas concretas: cifrado, respaldos verificados, acceso mínimo y trazado, y avisarte sin demora si pasa algo."
+  "pricing.faq.items[3].a": "Tu consultorio es el responsable del tratamiento de los datos de sus pacientes, y nosotros somos encargados del tratamiento en el plan Gestionado. El contrato lo detalla. Nuestra parte son medidas concretas: cifrado, respaldos verificados, acceso mínimo y trazado, y avisarte sin demora si pasa algo.",
+  "localeHint.text": "¿Estás en México?",
+  "localeHint.cta": "Ver los precios en pesos"
 }

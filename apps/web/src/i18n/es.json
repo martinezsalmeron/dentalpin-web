@@ -1716,5 +1716,10 @@
     "ctaBody": "Entra en la demo con datos reales, sin instalar nada ni dejar tu email. O móntalo en tu servidor en tres minutos.",
     "ctaDemo": "Probar la demo",
     "ctaPricing": "Ver precios"
+  },
+  "localeHint": {
+    "text": "¿Estás en otro país?",
+    "cta": "Ver los precios de tu mercado",
+    "dismiss": "Cerrar aviso"
   }
 }

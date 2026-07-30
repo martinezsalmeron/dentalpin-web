@@ -50,6 +50,35 @@ test('features page renders Bento grid', async ({ page }) => {
   ).toBeVisible();
 });
 
+// The country hint reads Cloudflare's /cdn-cgi/trace, which does not exist off
+// production, so the tests serve it themselves. A Mexican landing on the
+// Spanish page is the real case: he would otherwise read 89 € and Verifactu.
+const fromCountry = (page: import('@playwright/test').Page, loc: string) =>
+  page.route('**/cdn-cgi/trace', (route) =>
+    route.fulfill({ status: 200, body: `fl=xx1\nloc=${loc}\n` }),
+  );
+
+test('a visitor in Mexico is offered the Mexican page, not redirected', async ({ page }) => {
+  await fromCountry(page, 'MX');
+  await page.goto('/es/precios');
+  const strip = page.locator('[data-locale-hint]:not([hidden])');
+  await expect(strip).toHaveCount(1);
+  await expect(strip.getByRole('link')).toHaveAttribute('href', '/es-mx/precios/');
+  // The URL stays put: redirecting by IP hides content from crawlers.
+  await expect(page).toHaveURL(/\/es\/precios/);
+
+  await strip.getByRole('button').click();
+  await expect(strip).toHaveCount(0);
+  await page.reload();
+  await expect(page.locator('[data-locale-hint]:not([hidden])')).toHaveCount(0);
+});
+
+test('no hint when the country already matches the page', async ({ page }) => {
+  await fromCountry(page, 'MX');
+  await page.goto('/es-mx/precios');
+  await expect(page.locator('[data-locale-hint]:not([hidden])')).toHaveCount(0);
+});
+
 // The pricing page is driven by src/data/pricing.ts: a market with a published
 // tariff shows figures and a total, one without shows "let's talk" instead.
 // Spain is also the only market with the invoicing integration, so it must be

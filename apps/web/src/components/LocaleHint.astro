@@ -1,0 +1,112 @@
+---
+/*
+ * A Mexican reading /es/precios/ sees 89 € and Verifactu, neither of which is
+ * his market. This offers him his own page instead of deciding for him:
+ * redirecting by IP hides content from crawlers and infuriates anyone who
+ * picked their locale on purpose.
+ *
+ * The country comes from Cloudflare's /cdn-cgi/trace, which is already in
+ * front of the site and needs no key, no endpoint of ours and no third party.
+ * Pages are static, so this cannot happen at render time.
+ */
+import { HREFLANG, HREFLANG_ALIASES, LOCALES, translatePath, useDict, type Locale } from '~/i18n';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const path = new URL(Astro.request.url).pathname;
+
+/*
+ * Countries are derived from the hreflang map rather than listed again, so the
+ * strip can never point somewhere different from what we tell Google. Only the
+ * regional variants carry a country (es-MX also answers for AR, CL, CO and PE);
+ * a language-only tag like `fr` matches no country and is skipped.
+ */
+const candidates = LOCALES.filter((l) => l !== locale).flatMap((l) => {
+  const countries = [HREFLANG[l], ...(HREFLANG_ALIASES[l] ?? [])]
+    .map((tag) => tag.split('-')[1])
+    .filter((c): c is string => Boolean(c));
+  if (!countries.length) return [];
+  return [{ countries, href: translatePath(path, l), t: useDict(l).localeHint }];
+});
+---
+
+{
+  candidates.map((c) => (
+    <aside
+      data-locale-hint
+      data-countries={c.countries.join(',')}
+      hidden
+      aria-label={c.t.text}
+      class="border-b border-[var(--color-border-subtle)] bg-[var(--color-surface-muted)]"
+    >
+      <div class="mx-auto flex max-w-6xl items-center gap-3 px-6 py-2.5 sm:px-8">
+        <p class="flex-1 text-[13px] text-[var(--color-text-muted)]">
+          {c.t.text}{' '}
+          {/*
+            The colour and underline ride on a span, not on the <a>. The tokens
+            reset lands outside Tailwind's layers and its `a { color: inherit;
+            text-decoration: none }` therefore beats every utility on an anchor,
+            site-wide. Fixing that is a one-line import change with a repo-wide
+            visual blast radius, so it does not belong in this strip.
+          */}
+          <a href={c.href}>
+            <span class="font-medium text-[var(--color-primary)] underline underline-offset-2 hover:text-[var(--color-primary-hover)]">
+              {c.t.cta}
+            </span>
+          </a>
+        </p>
+        <button
+          type="button"
+          data-locale-hint-dismiss
+          aria-label={c.t.dismiss}
+          class="flex-none rounded-[var(--radius-xs)] px-2 py-1 text-[15px] leading-none text-[var(--color-text-subtle)] hover:bg-[var(--color-surface)] hover:text-[var(--color-text)]"
+        >
+          ×
+        </button>
+      </div>
+    </aside>
+  ))
+}
+
+<script is:inline>
+  (() => {
+    const strips = document.querySelectorAll('[data-locale-hint]');
+    if (!strips.length) return;
+    const KEY = 'dp-locale-hint';
+    // Dismissed once means dismissed for good: this is a hint, not a gate.
+    try {
+      if (localStorage.getItem(KEY)) return;
+    } catch {
+      /* private mode: show it, just do not remember */
+    }
+
+    for (const strip of strips) {
+      strip.querySelector('[data-locale-hint-dismiss]')?.addEventListener('click', () => {
+        strip.hidden = true;
+        try {
+          localStorage.setItem(KEY, '1');
+        } catch {
+          /* nothing to do */
+        }
+      });
+    }
+
+    fetch('/cdn-cgi/trace')
+      .then((r) => (r.ok ? r.text() : ''))
+      .then((text) => {
+        const country = /(?:^|\n)loc=([A-Z]{2})/.exec(text)?.[1];
+        if (!country) return;
+        for (const strip of strips) {
+          if (strip.dataset.countries.split(',').includes(country)) {
+            strip.hidden = false;
+            return;
+          }
+        }
+      })
+      .catch(() => {
+        /* no Cloudflare in front, or offline: no hint, no harm */
+      });
+  })();
+</script>
