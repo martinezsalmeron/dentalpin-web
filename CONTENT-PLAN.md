@@ -7,13 +7,15 @@ for anything a human writes here.
 
 There is no status column to keep in sync. The routine reads this file,
 looks at which slugs already exist under
-`apps/web/src/content/blog/{es,en,fr,pt,de,it,pl}/`, and takes the next unwritten
-target. What is published *is* the state.
+`apps/web/src/content/blog/{es,en,fr,pt,de,it,pl,pt-br,es-mx}/`, and takes the next
+unwritten target. What is published *is* the state.
 
 Five targets a week, weekday mornings: two comparisons and three topic
 posts. **That is about twenty files, not five.** A comparison is one
-language, a topic is every language the site publishes, so a normal week
-is 2 + 3×6. The two kinds are written differently — see *Two queues* and
+market, a topic is every language the site publishes, so a normal week is
+2 + 3×7. The two regional variants do not multiply that: they inherit the
+parent's topic posts and only get a file of their own when the market
+changes the answer. The two kinds are written differently — see *Two queues* and
 *Topic posts are guides*.
 
 Every run, one target:
@@ -86,6 +88,13 @@ The market decides the language, not the vendor's nationality:
   no Polish vendor has been verified from its own site, and this document
   bars adding one from memory. Until that verification happens, Polish
   takes topic posts only.
+
+**A comparison for Brazil or Mexico goes in that market's directory**, not
+in the parent's. `blog/pt-br/dentalpin-vs-simples-dental.md` for a Brazilian
+vendor, `blog/es-mx/` for a Mexican one: the vocabulary, the currency and the
+regulation in the post all belong to that market, and the reader who is
+choosing is there. A vendor selling into Portugal or Spain stays in
+`blog/pt/` and `blog/es/`.
 
 A second language is only worth it when the vendor genuinely sells into
 that second language's market, and then it is a **rewritten** post, not a
@@ -406,7 +415,7 @@ language with the **fewest published comparisons**, and only then takes
 the next unwritten target inside that language's section. Ties break in
 this order:
 
-    PL → DE → IT → PT → FR → EN → ES
+    PL → BR → MX → DE → IT → PT → FR → EN → ES
 
 Skip a language whose section has no unwritten target left, and carry on
 with the next.
@@ -424,7 +433,14 @@ blogs, would wait the longest. Rotating gives every language a comparison
 roughly once a month starting from week one, and Polish, German and
 Italian lead the tie-break because they are the newest locales and their
 blogs are still empty. Polish leads it in principle and gets skipped in
-practice until Queue A has a verified Polish section.
+practice until Queue A has a verified Polish section, and Mexico is skipped
+the same way until a Mexican vendor is verified. Brazil is not skipped: A5
+already holds three verified Brazilian vendors, and their posts belong in
+`blog/pt-br/`.
+
+Count comparisons per directory, not per language. `blog/pt/` and
+`blog/pt-br/` are two counters, which is what stops Brazil from looking
+served because Portugal was.
 
 The old ordering was written when only Spanish and English existed and a
 post in the other markets could not rank. All those sections rank now, so
@@ -545,13 +561,20 @@ deserves to be drained first, not because the two need different posts.
 | — | `alternativa-open-source-gesden` / `open-source-alternative-to-gesden` | Highest-intent query in the whole space |
 | — | `software-clinica-dental-gratis` / `free-dental-practice-software` | Broad head term |
 
-### A2 · Spanish-speaking Latin America — Spanish posts rank here
+### A2 · Spanish-speaking Latin America — `blog/es/`, and `blog/es-mx/` for Mexico
+
+Mexico has its own directory since July 2026, and the hreflang for Argentina,
+Chile, Colombia and Peru points at it. A post aimed at a Mexican reader goes
+in `blog/es-mx/` with Mexican vocabulary (expediente clínico, consultorio,
+celular, computadora, contador) and pesos. A vendor that sells across the
+region without a Mexican pitch stays in `blog/es/`.
 
 | Target | Slug | Why |
 |---|---|---|
 | Dentalink | `dentalpin-vs-dentalink` | Leader in Chile, strong across LatAm and Spain |
 | Doctocliq | `dentalpin-vs-doctocliq` | Dental + medical, positions itself LatAm-wide |
 | DentalCore | `dentalpin-vs-dentalcore` | Argentina-first, clinical records + AI claims |
+| — | `software-dental-gratis-mexico` | Head term, Mexican phrasing, in `blog/es-mx/`. **No Mexican vendor has been verified from its own site yet: verify two or three before writing this one, or write it without naming any.** |
 
 ### A3 · United States and English-speaking markets — English posts rank here
 
@@ -590,19 +613,24 @@ The French e-invoicing reform is the local counterpart to Verifactu and
 belongs in Queue B as its own French post, not as a translation of the
 Verifactu one.
 
-### A5 · Portuguese — Portuguese posts rank here
+### A5 · Portuguese — Portugal in `blog/pt/`, Brazil in `blog/pt-br/`
 
 Unblocked: the site publishes in Portuguese since July 2026. **These are
 written in Portuguese only.**
 
-**There is one Portuguese, not a pt-PT and a pt-BR.** The site is written
-in a deliberately neutral register that avoids the words which split the
-two: no ecrã/tela, telemóvel/celular, ficheiro/arquivo,
-utilizador/usuário, equipa/equipe, faturação/faturamento. Where no
-neutral form exists, the European spelling is used (`contacto`). Keep
-posts to that same register — a post that drifts into one variant makes
-the whole site read as translated-for-someone-else to the other half of
-the audience.
+**`/pt/` keeps the neutral register; `/pt-br/` does not.** The shared
+Portuguese copy still avoids the words that split the two (ecrã/tela,
+telemóvel/celular, ficheiro/arquivo, utilizador/usuário, equipa/equipe,
+faturação/faturamento) and uses the European spelling where no neutral form
+exists (`contacto`). That rule applies to anything written in `blog/pt/`,
+because it is read in both countries.
+
+A post written for Brazil goes in `blog/pt-br/` and is written in Brazilian
+Portuguese without hedging: celular, tela, arquivo, usuário, faturamento,
+prontuário, `contato`, prices in reais, no enclitic pronouns. Same filename
+as the parent post means it replaces that one post under `/pt-br/` and leaves
+the rest inherited, which is how a Brazilian rewrite of a guide ships without
+touching Portugal.
 
 **One queue, ordered by opportunity, and that puts Brazil first.** There
 is no separate Portuguese and Brazilian section, the same way A2 does not
@@ -621,12 +649,12 @@ type. That is a per-post choice, not a reason to split the queue.
 
 | Target | Why |
 |---|---|
-| Simples Dental | Brazil. 60.000+ dentists in BR, 80.000+ across LatAm |
-| Clinicorp | Brazil. Claims 100.000+ active users |
-| Dental Office | Brazil. 25 years, ~40.000 dentists |
+| Simples Dental | Brazil, so `blog/pt-br/`. 60.000+ dentists in BR, 80.000+ across LatAm |
+| Clinicorp | Brazil, so `blog/pt-br/`. Claims 100.000+ active users |
+| Dental Office | Brazil, so `blog/pt-br/`. 25 years, ~40.000 dentists |
 | NewSoft DS (Imaginasoft) | Portugal. `imaginasoft.pt`, claims 30 years, "+2000 clínicas", "+6800 licenças" |
 | Doctusware (Imaginasoft) | Portugal. `doctusware.pt`, cloud-only, "desde 1997". Same publisher as NewSoft, so the post has to explain how the two differ |
-| `software-odontologico-gratis` | Head term, Brazilian phrasing. Native post, not a translation |
+| `software-odontologico-gratuito` | Head term, Brazilian phrasing, in `blog/pt-br/`. Native post naming Brazilian vendors, not a translation |
 | `software-gestao-clinica-dentaria-gratis` | Head term, Portuguese phrasing. A different query in the same language, not a variant of the row above |
 
 Checked and **not** added: Globalsoft (Oralcloud, Portugal). Its site
@@ -700,7 +728,9 @@ Ordered by intent. Work down it; the top of this list is where a clinic
 is closest to needing what we sell.
 
 **These go out in every language the site publishes**, except where the
-row says otherwise. The problems are the same in Madrid, Lyon, Munich,
+row says otherwise. The two regional variants are the exception that is not
+worth a column: they inherit the parent's post, and a variant only gets its
+own file when the market changes the answer (currency, tax, regulator). The problems are the same in Madrid, Lyon, Munich,
 Milan and Manchester, and there is no competitor claim to re-verify per
 copy.
 
@@ -709,12 +739,16 @@ national: the Spanish, French, German and Italian rows below are
 different posts with different law, different deadlines and different
 official sources, not translations of each other.
 
-| Topic | Slug (es / en / fr / pt / de / it) | Target search |
+| Topic | Slug (es / en / fr / pt / de / it, or the directory when the row is country-locked) | Target search |
 |---|---|---|
 | Verifactu para clínicas dentales: qué cambia y cuándo | `verifactu-clinicas-dentales` / `verifactu-dental-clinics-spain` / — / — / — / — | verifactu clínica dental · **country-locked: ES** |
 | Facturation électronique 2026 : ce que le cabinet dentaire doit préparer | — / — / `facturation-electronique-cabinet-dentaire` / — / — / — | facturation électronique dentiste · **country-locked: FR**, the local counterpart to the Verifactu row. Source the PDP obligations and dates from the official French sources, never from the Spanish post |
 | E-Rechnung: was die Zahnarztpraxis vorbereiten muss | — / — / — / — / `e-rechnung-zahnarztpraxis` / — | e-rechnung zahnarztpraxis · **country-locked: DE**, the German counterpart to the Verifactu row. Source the obligations and the dates from the BMF, never from the Spanish or French post |
 | Fatturazione elettronica e Sistema Tessera Sanitaria nello studio odontoiatrico | — / — / — / — / — / `fatturazione-elettronica-studio-odontoiatrico` | fatturazione elettronica dentista · **country-locked: IT**. Two obligations in one post: SDI invoicing and the STS filing. Source from Agenzia delle Entrate and sistemats.it, and state plainly what Dentalpin does and does not do for the STS |
+| Prontuário eletrônico odontológico: o que a lei brasileira exige | `prontuario-eletronico-odontologico` in `blog/pt-br/` | prontuário eletrônico odontológico · **country-locked: BR**. Lei 13.787/2018, Resolução CFO-91/2009 (NGS2 and ICP-Brasil) and LGPD arts. 5º II and 11. Source from Planalto, the CFO transparency portal and SBIS, never from the Spanish or Portuguese post. **Written: 30 July 2026** |
+| Expediente clínico dental en México: qué exige la NOM-004 | `expediente-clinico-dental-nom-004` in `blog/es-mx/` | expediente clínico dental · **country-locked: MX**. NOM-004-SSA3-2012 plus the LFPDPPP published 20 March 2025, which abrogated the 2010 law and moved data protection from the extinct INAI to the Secretaría Anticorrupción y Buen Gobierno. **Written: 30 July 2026** |
+| CFDI 4.0 en el consultorio dental: qué tiene que salir del software | `cfdi-consultorio-dental` in `blog/es-mx/` | facturación electrónica dentista · **country-locked: MX**, the Mexican counterpart to the Verifactu row. Source from the SAT, and state plainly that Dentalpin does not stamp CFDI today |
+| Nota fiscal eletrônica na clínica odontológica | `nota-fiscal-clinica-odontologica` in `blog/pt-br/` | nota fiscal clínica odontológica · **country-locked: BR**, the Brazilian counterpart. Municipal ISS rules differ by city, so establish what is federal and what is not before writing |
 | RGPD en la clínica dental: qué exige con los datos de pacientes | `rgpd-clinica-dental` / `gdpr-dental-clinic` / `rgpd-cabinet-dentaire` / `rgpd-clinica-dentaria` / `dsgvo-zahnarztpraxis` / `gdpr-studio-dentistico` | rgpd clínica dental |
 | Cómo migrar de software dental sin perder la historia clínica | `migrar-software-dental` / `migrate-dental-software` / `migrer-logiciel-dentaire` / `migrar-software-dentario` / `zahnarztsoftware-wechseln` / `cambiare-gestionale-dentistico` | migrar software dental |
 | Qué preguntar a tu proveedor antes de firmar | `preguntas-antes-de-firmar-software-dental` / `questions-before-signing-dental-software` / `questions-avant-de-signer-logiciel-dentaire` / `perguntas-antes-de-assinar-software-dentario` / `fragen-vor-dem-kauf-zahnarztsoftware` / `domande-prima-di-firmare-gestionale` | contratar software dental |
