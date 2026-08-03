@@ -10,10 +10,11 @@ looks at which slugs already exist under
 `apps/web/src/content/blog/{es,en,fr,pt,de,it,pl,pt-br,es-mx}/`, and takes the next
 unwritten target. What is published *is* the state.
 
-Ten targets a week, two runs every weekday: 04:00 UTC takes a comparison,
-16:00 UTC takes a topic post. **That is about forty files, not ten.** A
+Twenty-one targets a week, three runs every day, weekends included:
+04:00 UTC takes a comparison, 13:00 and 19:00 UTC take a topic post each.
+**That is about a hundred files, not twenty-one.** A
 comparison is one market, a topic is every language the site publishes, so a
-normal week is 5 + 5×7. The two regional variants do not multiply that: they
+normal week is 7 + 14×7. The two regional variants do not multiply that: they
 inherit the parent's topic posts and only get a file of their own when the
 market changes the answer. The two kinds are written differently — see *Two
 queues* and *Topic posts are guides*.
@@ -409,15 +410,17 @@ never renders dark.
 - Tag with `comparativa` / `comparison` / `comparatif` / `vergleich` /
   `confronto` / `porownanie` plus the vendor slug.
 
-## Two queues, ten targets a week
+## Two queues, twenty-one targets a week
 
-The morning run (04:00 UTC) is a **comparison**. The afternoon run (16:00 UTC)
-is a **topic** post. The routine reads the hour (`date -u +%H`) and picks the
-queue from it, so every weekday produces one of each.
+The morning run (04:00 UTC) is a **comparison**. The two afternoon runs
+(13:00 and 19:00 UTC) are **topic** posts. The routine reads the hour
+(`date -u +%H`) and picks the queue from it, so every day, weekends
+included, produces one comparison and two guides.
 
-The cadence doubled on 30 July 2026. Nine markets at five targets a week is
+The cadence doubled on 30 July 2026 and rose to three daily runs on
+3 August 2026. Nine markets at five targets a week is
 years of waiting for the newest ones, and the arithmetic below is what it fixed.
-What doubled is the number of runs, not the work inside a run: one target per
+What grows is the number of runs, not the work inside a run: one target per
 run, still derived from the filesystem, still one queue per run.
 
 ### The comparison queue rotates by language
@@ -438,7 +441,7 @@ smallest. Nothing new to keep in sync.
 
 The reason is arithmetic. Queue A holds 47 targets grouped by market:
 10 Spanish, 8 English, 7 French, 7 Portuguese, 8 German, 7 Italian. Taken in
-file order at five comparisons a week, Spanish fills the first two weeks and
+file order at seven comparisons a week, Spanish fills the first two weeks and
 the locales that launched most recently, with the emptiest blogs, wait the
 longest. Rotating gives every language a comparison
 roughly once a month starting from week one, and Polish, German and
@@ -539,7 +542,7 @@ callouts, numbered lists for anything sequential. Tables in a topic post
 compare options or requirements, not vendors, so the chip markers stay
 useful but the last column is not automatically ours.
 
-## Queue A — comparisons (Mon, Wed)
+## Queue A — comparisons (the 04:00 UTC run)
 
 Every vendor here was verified to exist and to be trading when it was
 added — name, site and market evidence. Research each again before
@@ -739,7 +742,7 @@ into A6 when the site started publishing in German. The rule stays: a
 vendor whose buyers search in a language we do not publish goes here, not
 into a section it cannot rank in.
 
-## Queue B — topics (Tue, Thu, Fri, then everything)
+## Queue B — topics (the 13:00 and 19:00 UTC runs)
 
 Ordered by intent. Work down it; the top of this list is where a clinic
 is closest to needing what we sell.
@@ -780,18 +783,65 @@ official sources, not translations of each other.
 | Abrir una clínica dental: el software que necesitas desde el día uno | `abrir-clinica-dental-software` / `opening-dental-clinic-software` / `ouvrir-cabinet-dentaire-logiciel` / `abrir-clinica-dentaria-software` / `zahnarztpraxis-eroeffnen-software` / `aprire-uno-studio-dentistico-software` | abrir clínica dental |
 | Cómo dimos a un LLM acceso de escritura a datos clínicos sin que sea una locura | `llm-escritura-datos-clinicos` / `llm-write-access-medical-data` / `llm-acces-ecriture-donnees-cliniques` / `llm-escrita-dados-clinicos` / `llm-schreibzugriff-klinische-daten` / `llm-accesso-in-scrittura-dati-clinici` | *(technical, EN-first — HN/Reddit material)* |
 | Autoalojar software sanitario: lo que nadie te cuenta | `autoalojar-software-sanitario` / `self-hosting-healthcare-software` / `auto-heberger-logiciel-sante` / `alojar-software-de-saude-no-seu-servidor` / `gesundheitssoftware-selbst-hosten` / `self-hosting-software-sanitario` | *(self-hosted / r/selfhosted)* |
+| Cómo organizar la agenda con varios sillones | `organizar-agenda-clinica-dental` / `dental-clinic-scheduling` / `organiser-agenda-cabinet-dentaire` / `organizar-agenda-clinica-dentaria` / `terminplanung-zahnarztpraxis` / `organizzare-agenda-studio-dentistico` | agenda clínica dental |
+| Lista de espera: llenar los huecos de última hora | `lista-espera-clinica-dental` / `dental-cancellation-list` / `liste-attente-cabinet-dentaire` / `lista-de-espera-clinica-dentaria` / `warteliste-zahnarztpraxis` / `lista-attesa-studio-dentistico` | cancelaciones citas dental |
+| Recall: traer de vuelta a los pacientes a revisión | `recall-dental-revisiones` / `dental-recall-system` / `relance-patients-dentaire` / `recall-consultas-de-revisao` / `recall-system-zahnarztpraxis` / `richiami-pazienti-studio-dentistico` | recall dental |
+| Consentimiento informado digital en odontología | `consentimiento-informado-digital-dental` / `digital-informed-consent-dentistry` / `consentement-eclaire-numerique-dentaire` / `consentimento-informado-digital` / `digitale-einwilligung-zahnarztpraxis` / `consenso-informato-digitale-odontoiatria` | consentimiento informado dental |
+| Reactivar pacientes inactivos | `reactivar-pacientes-inactivos` / `reactivate-inactive-dental-patients` / `reactiver-patients-inactifs` / `reativar-pacientes-inativos` / `inaktive-patienten-zurueckgewinnen` / `riattivare-pazienti-inattivi` | pacientes inactivos clínica |
+| Primera visita: protocolo y qué registrar | `protocolo-primera-visita-dental` / `first-dental-visit-protocol` / `protocole-premiere-visite-dentaire` / `protocolo-primeira-consulta` / `neupatienten-aufnahme-zahnarztpraxis` / `protocollo-prima-visita-odontoiatrica` | primera visita clínica dental |
+| Presupuestos que no se aceptan: cómo hacer seguimiento | `seguimiento-presupuestos-dentales` / `follow-up-dental-treatment-quotes` / `relancer-devis-dentaires` / `acompanhar-orcamentos-dentarios` / `kostenvoranschlaege-nachfassen` / `follow-up-preventivi-dentali` | aceptación presupuestos dentales |
+| Deuda de pacientes y pagos fraccionados: llevar el control | `control-deuda-pacientes` / `patient-payment-plans-tracking` / `suivi-impayes-cabinet-dentaire` / `controlo-de-dividas-de-pacientes` / `ratenzahlung-patienten-verwalten` / `gestione-insoluti-pazienti` | pagos pacientes clínica dental |
+| Caja diaria y arqueo en la clínica | `caja-diaria-clinica-dental` / `daily-cash-reconciliation-dental` / `caisse-quotidienne-cabinet-dentaire` / `caixa-diaria-clinica` / `tagesabschluss-zahnarztpraxis` / `chiusura-cassa-studio-dentistico` | arqueo caja clínica |
+| KPIs: los números que mirar cada mes | `kpis-clinica-dental` / `dental-practice-kpis` / `indicateurs-cabinet-dentaire` / `kpis-clinica-dentaria` / `kennzahlen-zahnarztpraxis` / `kpi-studio-dentistico` | kpi clínica dental |
+| Ocupación de sillón: medirla y mejorarla | `ocupacion-sillon-dental` / `chair-utilization-dental` / `taux-occupation-fauteuil` / `ocupacao-da-cadeira` / `stuhlauslastung-zahnarztpraxis` / `utilizzo-del-riunito` | ocupación sillón dental |
+| Control de stock de material | `control-stock-clinica-dental` / `dental-inventory-management` / `gestion-stock-cabinet-dentaire` / `gestao-de-stock-clinica` / `materialverwaltung-zahnarztpraxis` / `gestione-magazzino-studio-dentistico` | inventario clínica dental |
+| Esterilización con trazabilidad: qué registrar | `trazabilidad-esterilizacion-dental` / `sterilization-tracking-dental` / `tracabilite-sterilisation-dentaire` / `rastreabilidade-esterilizacao` / `sterilisation-dokumentation-praxis` / `tracciabilita-sterilizzazione` | trazabilidad esterilización |
+| Registro de implantes: lote y trazabilidad | `registro-implantes-trazabilidad` / `implant-lot-tracking` / `tracabilite-implants-dentaires` / `registo-de-implantes` / `implantatdokumentation` / `tracciabilita-impianti-dentali` | trazabilidad implantes dentales |
+| Ortodoncia: seguimiento de tratamientos largos | `seguimiento-tratamientos-ortodoncia` / `orthodontic-treatment-tracking` / `suivi-traitements-orthodontie` / `acompanhamento-ortodontia` / `kieferorthopaedische-behandlungen-verwalten` / `gestione-trattamenti-ortodonzia` | software ortodoncia |
+| Citas online: pros y contras de abrir la agenda a internet | `reserva-citas-online-dental` / `online-dental-appointment-booking` / `prise-rendez-vous-en-ligne-dentaire` / `marcacao-online-de-consultas` / `online-terminbuchung-zahnarztpraxis` / `prenotazione-online-studio-dentistico` | cita online dentista |
+| Portal del paciente: qué debería poder hacer solo | `portal-del-paciente-dental` / `dental-patient-portal` / `portail-patient-dentaire` / `portal-do-paciente` / `patientenportal-zahnarztpraxis` / `portale-paziente-odontoiatrico` | portal paciente |
+| Encuestas de satisfacción que la gente contesta | `encuestas-satisfaccion-pacientes` / `patient-satisfaction-surveys-dental` / `enquetes-satisfaction-patients` / `inqueritos-satisfacao-pacientes` / `patientenzufriedenheit-messen` / `sondaggi-soddisfazione-pazienti` | satisfacción pacientes |
+| Reseñas de Google sin comprar ninguna | `resenas-google-clinica-dental` / `google-reviews-dental-practice` / `avis-google-cabinet-dentaire` / `avaliacoes-google-clinica` / `google-bewertungen-zahnarztpraxis` / `recensioni-google-studio-dentistico` | reseñas google clínica dental |
+| Marketing local sin agencia | `marketing-local-clinica-dental` / `local-marketing-dental-practice` / `marketing-local-cabinet-dentaire` / `marketing-local-clinica-dentaria` / `lokales-marketing-zahnarztpraxis` / `marketing-locale-studio-dentistico` | marketing clínica dental |
+| Duplicados en la base de pacientes: limpiar sin perder nada | `pacientes-duplicados-limpiar` / `deduplicate-patient-records` / `doublons-dossiers-patients` / `duplicados-de-pacientes` / `dubletten-patientenkartei` / `duplicati-anagrafica-pazienti` | pacientes duplicados |
+| Migrar de papel a digital | `clinica-dental-sin-papel` / `paperless-dental-practice` / `cabinet-dentaire-sans-papier` / `clinica-sem-papel` / `papierlose-zahnarztpraxis` / `studio-dentistico-senza-carta` | clínica dental sin papel |
+| Exportar tus datos: el formato que debes exigir | `exportar-datos-software-dental` / `export-dental-software-data` / `exporter-donnees-logiciel-dentaire` / `exportar-dados-do-software` / `daten-export-zahnarztsoftware` / `esportare-dati-gestionale` | exportar datos software dental |
+| Qué pasa si tu proveedor de software cierra | `proveedor-software-cierra` / `dental-software-vendor-shuts-down` / `editeur-logiciel-ferme` / `fornecedor-de-software-fecha` / `softwareanbieter-stellt-ein` / `fornitore-software-chiude` | proveedor software cierra |
+| Software libre frente a propietario en sanidad | `software-libre-sanidad` / `open-source-vs-proprietary-healthcare` / `logiciel-libre-sante` / `software-livre-na-saude` / `open-source-software-gesundheitswesen` / `software-libero-sanita` | software libre sanidad |
+| Ransomware: el plan de la clínica pequeña | `ransomware-clinica-dental` / `ransomware-dental-practice` / `ransomware-cabinet-dentaire` / `ransomware-clinica` / `ransomware-zahnarztpraxis` / `ransomware-studio-dentistico` | ransomware clínica |
+| Accesos del personal: quién puede ver qué | `permisos-acceso-personal-clinica` / `staff-access-permissions-dental` / `droits-acces-personnel-cabinet` / `permissoes-de-acesso-equipa` / `zugriffsrechte-praxispersonal` / `permessi-accesso-personale` | control accesos historia clínica |
+| Auditoría de accesos a la historia clínica | `auditoria-accesos-historia-clinica` / `audit-trail-dental-records` / `journal-acces-dossier-patient` / `auditoria-de-acessos` / `zugriffsprotokoll-patientenakte` / `log-accessi-cartella-clinica` | registro accesos historia clínica |
+| Radiografías digitales: almacenarlas y compartirlas | `almacenar-radiografias-digitales` / `storing-dental-xrays` / `stockage-radiographies-dentaires` / `armazenar-radiografias` / `roentgenbilder-speichern` / `archiviare-radiografie` | almacenamiento radiografías |
+| Enviar casos al laboratorio: flujo y datos | `enviar-casos-laboratorio-dental` / `dental-lab-case-workflow` / `envoyer-travaux-laboratoire` / `enviar-trabalhos-ao-laboratorio` / `laborauftraege-verwalten` / `gestione-lavori-laboratorio` | laboratorio dental flujo |
+| Varias sedes, una gestión | `gestionar-varias-clinicas` / `multi-location-dental-practice` / `gerer-plusieurs-cabinets` / `gerir-varias-clinicas` / `mehrere-standorte-verwalten` / `gestire-piu-sedi` | software multiclínica |
+| Los números que tu asesor fiscal necesita cada trimestre | `informes-para-la-gestoria` / `reports-for-your-accountant` / `rapports-pour-expert-comptable` / `relatorios-para-o-contabilista` / `berichte-fuer-den-steuerberater` / `report-per-il-commercialista` | informes gestoría clínica |
+| Teleodontología: qué se puede hacer a distancia | `teleodontologia` / `teledentistry` / `teledentisterie` / `teleodontologia` / `videosprechstunde-zahnarztpraxis` / `teleodontoiatria` | teleodontología |
+| IA en la clínica dental: qué es real hoy | `ia-clinica-dental` / `ai-dental-practice` / `ia-cabinet-dentaire` / `ia-na-clinica-dentaria` / `ki-zahnarztpraxis` / `ia-studio-dentistico` | inteligencia artificial odontología |
+| Automatizar la recepción: qué tareas se pueden quitar de encima | `automatizar-recepcion-clinica` / `automate-dental-front-desk` / `automatiser-accueil-cabinet` / `automatizar-a-rececao` / `praxisempfang-automatisieren` / `automatizzare-la-reception` | automatizar recepción clínica |
+| Qué ordenadores necesita una clínica | `hardware-clinica-dental` / `dental-practice-hardware` / `materiel-informatique-cabinet` / `hardware-para-clinica` / `hardware-zahnarztpraxis` / `hardware-studio-dentistico` | ordenadores clínica dental |
+| Tablets en el gabinete | `tablets-en-el-gabinete` / `tablets-dental-operatory` / `tablettes-au-fauteuil` / `tablets-no-gabinete` / `tablets-am-behandlungsstuhl` / `tablet-al-riunito` | tablet clínica dental |
+| Turnos y ausencias del equipo | `turnos-equipo-clinica` / `staff-scheduling-dental` / `planning-equipe-cabinet` / `horarios-da-equipa` / `dienstplan-zahnarztpraxis` / `turni-del-personale` | turnos personal clínica |
+| Historia clínica: qué anotar en cada visita | `que-anotar-historia-clinica` / `dental-clinical-notes` / `notes-cliniques-dentaires` / `registos-clinicos-por-consulta` / `behandlungsdokumentation` / `annotazioni-cartella-clinica` | notas clínicas dental |
+| Alergias y alertas médicas: que se vean siempre | `alergias-alertas-medicas` / `medical-alerts-dental-records` / `alertes-medicales-dossier` / `alergias-e-alertas-medicos` / `medizinische-warnhinweise-akte` / `allerte-mediche-cartella` | alergias historia clínica |
+| Pacientes menores y tutores: consentimiento y acceso | `pacientes-menores-tutores` / `minor-patients-guardians-dental` / `patients-mineurs-representants` / `pacientes-menores-e-tutores` / `minderjaehrige-patienten-praxis` / `pazienti-minorenni-tutori` | consentimiento menores dental |
+| Fotografía clínica: organizar y proteger las imágenes | `fotografia-clinica-dental` / `clinical-photography-dental` / `photographie-clinique-dentaire` / `fotografia-clinica` / `klinische-fotografie-praxis` / `fotografia-clinica-odontoiatrica` | fotografía clínica dental |
+| El día que se va internet: trabajar sin conexión | `clinica-sin-internet` / `dental-software-offline` / `cabinet-sans-internet` / `clinica-sem-internet` / `praxis-ohne-internet` / `studio-senza-internet` | software dental offline |
+| Facturar a mutuas y aseguradoras dentales | `facturar-mutuas-dentales` in `blog/es/` | facturación mutuas dental · **country-locked: ES**. Source what the insurer requires from the insurer or the Consejo General de Dentistas, and say plainly what Dentalpin automates and what it does not |
+| 100% Santé et devis conventionné au cabinet dentaire | `devis-conventionne-100-sante` in `blog/fr/` | devis 100% santé dentaire · **country-locked: FR**. Source from ameli.fr and the official texts, never from a vendor's marketing |
+| GOZ und BEMA: was die Abrechnung von der Software braucht | `goz-bema-abrechnung-software` in `blog/de/` | GOZ BEMA Abrechnung Software · **country-locked: DE**. Source from KZBV and the official fee schedules, and state plainly what Dentalpin does there today |
+| Sistema Tessera Sanitaria: l'invio delle spese dallo studio | `sistema-tessera-sanitaria-studio-dentistico` in `blog/it/` | sistema tessera sanitaria dentista · **country-locked: IT**. The post A7 already calls for: source from sistemats.it and Agenzia delle Entrate, and say what Dentalpin does and does not do for the STS |
+| Faturar convênios odontológicos sem perder o controle | `faturar-convenios-odontologicos` in `blog/pt-br/` | convênios odontológicos · **country-locked: BR**. Source from ANS and the operators' own pages; say what Dentalpin automates today |
+| KSeF w gabinecie stomatologicznym: co się zmienia i kiedy | `ksef-gabinet-stomatologiczny` in `blog/pl/` | KSeF gabinet stomatologiczny · **country-locked: PL**, the Polish counterpart to the Verifactu row. Source the dates from podatki.gov.pl, never from another country's post |
 
-**Queue B empties first, and at ten targets a week it is close.** Twenty-two
-targets at five a week is under five weeks, and Queue A's 47 at five a week is
-under ten. When an afternoon run comes up and there is no unwritten topic left,
-take a comparison instead, which is the mirror of the rule in *Two queues*. That
-keeps the loop producing, but it is a stopgap: ten comparisons a week drains
-Queue A in five more weeks and the site stops publishing anything that helps a
-clinic which never installs Dentalpin.
+**The queues were extended on 3 August 2026 to hold more than a month at the
+new cadence.** Fourteen topic slots a week against the sixty-odd unwritten rows
+above is over four weeks of runway, and seven comparisons a week against Queue
+A's unwritten targets is a similar horizon. When an afternoon run comes up and
+there is no unwritten topic left, take a comparison instead, which is the
+mirror of the rule in *Two queues*.
 
-Doubling the cadence halved both of those runways, so extending this queue is no
-longer a task for later: it is due inside the next month. Add new targets the
-same way: real searches a dental clinic makes, verified to have intent behind
+When either runway drops under three weeks, extend the queue again, the same
+way: real searches a dental clinic makes, verified to have intent behind
 them this run, not invented from memory. A target that only makes sense in one
 country goes in country-locked, with the country named.
 
