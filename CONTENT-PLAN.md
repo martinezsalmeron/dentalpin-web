@@ -10,11 +10,11 @@ looks at which slugs already exist under
 `apps/web/src/content/blog/{es,en,fr,pt,de,it,pl,pt-br,es-mx}/`, and takes the next
 unwritten target. What is published *is* the state.
 
-Twenty-one targets a week, three runs every day, weekends included:
-04:00 UTC takes a comparison, 13:00 and 19:00 UTC take a topic post each.
-**That is about a hundred files, not twenty-one.** A
+Twenty-eight targets a week, four runs every day, weekends included:
+04:00, 08:00 and 11:00 UTC take a comparison each, 16:00 UTC takes a topic
+post. **That is about seventy files, not twenty-eight.** A
 comparison is one market, a topic is every language the site publishes, so a
-normal week is 7 + 14×7. The two regional variants do not multiply that: they
+normal week is 21 + 7×7. The two regional variants do not multiply that: they
 inherit the parent's topic posts and only get a file of their own when the
 market changes the answer. The two kinds are written differently — see *Two
 queues* and *Topic posts are guides*.
@@ -425,14 +425,15 @@ never renders dark.
 - Tag with `comparativa` / `comparison` / `comparatif` / `vergleich` /
   `confronto` / `porownanie` plus the vendor slug.
 
-## Two queues, twenty-one targets a week
+## Two queues, twenty-eight targets a week
 
-The morning run (04:00 UTC) is a **comparison**. The two afternoon runs
-(13:00 and 19:00 UTC) are **topic** posts. The routine reads the hour
-(`date -u +%H`) and picks the queue from it, so every day, weekends
-included, produces one comparison and two guides.
+The three morning runs (04:00, 08:00 and 11:00 UTC) are **comparisons**.
+The afternoon run (16:00 UTC) is a **topic** post. The routine reads the
+hour (`date -u +%H`) and picks the queue from it, so every day, weekends
+included, produces three comparisons and one guide. The split follows the
+work: a comparison is one file, a guide is seven.
 
-The cadence doubled on 30 July 2026 and rose to three daily runs on
+The cadence doubled on 30 July 2026 and settled at four daily runs on
 3 August 2026. Nine markets at five targets a week is
 years of waiting for the newest ones, and the arithmetic below is what it fixed.
 What grows is the number of runs, not the work inside a run: one target per
@@ -456,7 +457,7 @@ smallest. Nothing new to keep in sync.
 
 The reason is arithmetic. Queue A holds 47 targets grouped by market:
 10 Spanish, 8 English, 7 French, 7 Portuguese, 8 German, 7 Italian. Taken in
-file order at seven comparisons a week, Spanish fills the first two weeks and
+file order at twenty-one comparisons a week, Spanish fills the first week and
 the locales that launched most recently, with the emptiest blogs, wait the
 longest. Rotating gives every language a comparison
 roughly once a month starting from week one, and Polish, German and
@@ -557,7 +558,7 @@ callouts, numbered lists for anything sequential. Tables in a topic post
 compare options or requirements, not vendors, so the chip markers stay
 useful but the last column is not automatically ours.
 
-## Queue A — comparisons (the 04:00 UTC run)
+## Queue A — comparisons (the 04:00, 08:00 and 11:00 UTC runs)
 
 Every vendor here was verified to exist and to be trading when it was
 added — name, site and market evidence. Research each again before
@@ -757,7 +758,7 @@ into A6 when the site started publishing in German. The rule stays: a
 vendor whose buyers search in a language we do not publish goes here, not
 into a section it cannot rank in.
 
-## Queue B — topics (the 13:00 and 19:00 UTC runs)
+## Queue B — topics (the 16:00 UTC run)
 
 Ordered by intent. Work down it; the top of this list is where a clinic
 is closest to needing what we sell.
@@ -848,17 +849,24 @@ official sources, not translations of each other.
 | Faturar convênios odontológicos sem perder o controle | `faturar-convenios-odontologicos` in `blog/pt-br/` | convênios odontológicos · **country-locked: BR**. Source from ANS and the operators' own pages; say what Dentalpin automates today |
 | KSeF w gabinecie stomatologicznym: co się zmienia i kiedy | `ksef-gabinet-stomatologiczny` in `blog/pl/` | KSeF gabinet stomatologiczny · **country-locked: PL**, the Polish counterpart to the Verifactu row. Source the dates from podatki.gov.pl, never from another country's post |
 
-**The queues were extended on 3 August 2026 to hold more than a month at the
-new cadence.** Fourteen topic slots a week against the sixty-odd unwritten rows
-above is over four weeks of runway, and seven comparisons a week against Queue
-A's unwritten targets is a similar horizon. When an afternoon run comes up and
-there is no unwritten topic left, take a comparison instead, which is the
-mirror of the rule in *Two queues*.
+**The queues were extended on 3 August 2026.** Seven topic slots a week
+against the sixty-odd unwritten rows above is over two months of runway. Queue
+A is the tight one: twenty-one comparison slots a week against its forty-odd
+unwritten targets is about two weeks, after which the morning runs fall back
+to topics per the rule in *Two queues* — the loop keeps producing, but the
+high-intent pages stop. The mirror rule also holds: an afternoon run with no
+unwritten topic left takes a comparison instead.
 
-When either runway drops under three weeks, extend the queue again, the same
-way: real searches a dental clinic makes, verified to have intent behind
-them this run, not invented from memory. A target that only makes sense in one
-country goes in country-locked, with the country named.
+**Extending Queue A is therefore due now, and it cannot be done from memory.**
+Every new vendor row must be verified from the vendor's own site the day it is
+added — name, domain reached, market evidence — exactly like the existing
+rows were (and two of the first draft's rows still turned out to be wrong; see
+*The comparison queue rotates by language*). Head-term and
+`alternativa-open-source-a-X` rows need no vendor verification and are the
+cheap way to extend. When either runway drops under three weeks, extend the
+queue again the same way: real searches a dental clinic makes, verified to
+have intent behind them this run, not invented from memory. A target that only
+makes sense in one country goes in country-locked, with the country named.
 
 ## Where the routine must stop and ask
 
