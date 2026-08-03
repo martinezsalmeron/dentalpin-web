@@ -2,6 +2,7 @@
 title: "What to ask a dental software vendor before you sign"
 description: "The questions that decide if dental software still works in year three: how you get your data out, what the price includes, what happens when it breaks."
 pubDate: 2026-07-31
+translationKey: preguntas-antes-de-firmar-software-dental
 tags: [practice-management-software, buying, migration]
 ---
 
@@ -59,7 +60,7 @@ Ask for the data processing agreement and the subprocessor list in writing too. 
 - **When they deploy updates** and whether you get told first. An update during surgery hours is a problem.
 - **What happened the last time it went down.** Ask it exactly like that, and watch whether the answer is ready.
 
-![Day view of the schedule, split by practitioner and chair, with appointments across the working day](/screenshots/schedule-day.png)
+![Dentalpin dashboard with the day's appointments laid out on a timeline](/screenshots/home.png)
 
 *This is the screen you cannot afford to lose on a Monday morning. Support is measured against this screen, not against the demo.*
 

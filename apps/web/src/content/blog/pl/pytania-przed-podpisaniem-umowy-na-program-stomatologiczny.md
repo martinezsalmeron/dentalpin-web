@@ -2,6 +2,7 @@
 title: "O co zapytać dostawcę programu stomatologicznego przed podpisaniem umowy"
 description: "Pytania, które decydują, czy program dla gabinetu sprawdzi się w trzecim roku: jak odzyskasz dane, co zawiera cena i co się dzieje przy awarii."
 pubDate: 2026-07-31
+translationKey: preguntas-antes-de-firmar-software-dental
 tags: [program-stomatologiczny, zakup, migracja]
 ---
 
@@ -59,7 +60,7 @@ Poproś też na piśmie o umowę powierzenia przetwarzania danych i listę podmi
 - **Kiedy wgrywają aktualizacje** i czy uprzedzają. Aktualizacja w godzinach przyjęć to problem.
 - **Co się wydarzyło przy ostatniej awarii.** Zapytaj dokładnie tak i zobacz, czy odpowiedź przychodzi od razu.
 
-![Kalendarz wizyt na dany dzień w podziale na lekarzy i fotele, z wizytami rozłożonymi na cały dzień](/screenshots/schedule-day.png)
+![Panel główny Dentalpina z wizytami dnia na osi czasu](/screenshots/home.png)
 
 *To jest widok, którego nie możesz stracić w poniedziałek rano. Wsparcie mierzy się na nim, a nie na prezentacji.*
 

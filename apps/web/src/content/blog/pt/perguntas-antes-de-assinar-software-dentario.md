@@ -2,6 +2,7 @@
 title: "O que perguntar ao fornecedor de software dentário antes de assinar"
 description: "As perguntas que decidem se um software dentário ainda serve no ano três: como sair com os seus dados, o que o preço inclui e o que falha um dia."
 pubDate: 2026-07-31
+translationKey: preguntas-antes-de-firmar-software-dental
 tags: [software-dentario, contratacao, migracao]
 ---
 
@@ -59,7 +60,7 @@ Peça também o contrato de subcontratação e a lista de subcontratantes por es
 - **Quando fazem atualizações** e se avisam antes. Uma atualização em horário de consulta é um problema.
 - **O que aconteceu da última vez que o sistema esteve em baixo.** Pergunte exatamente assim e repare se a resposta vem sem hesitar.
 
-![Agenda do dia por profissional e por gabinete, com as consultas distribuídas ao longo do dia](/screenshots/schedule-day.png)
+![Painel principal do Dentalpin com as consultas do dia numa linha do tempo](/screenshots/home.png)
 
 *É esta a vista da agenda que não se pode dar ao luxo de perder numa segunda feira de manhã. O suporte mede se aqui, não na demonstração.*
 

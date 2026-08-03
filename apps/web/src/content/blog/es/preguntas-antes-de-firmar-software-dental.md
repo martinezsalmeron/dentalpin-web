@@ -59,7 +59,7 @@ Pide también el contrato de encargado del tratamiento y la lista de subencargad
 - **Cuándo actualizan** y si avisan antes. Una actualización en horario de consulta es un problema.
 - **Qué pasó la última vez que se cayó.** Pregúntalo tal cual y fíjate en si tienen la respuesta a mano.
 
-![Agenda del día por profesional y gabinete, con las citas distribuidas en la jornada](/screenshots/schedule-day.png)
+![Panel principal de Dentalpin con las citas del día sobre una línea de tiempo](/screenshots/home.png)
 
 *Esta es la pantalla que no te puedes permitir perder un lunes por la mañana. Sobre esa pantalla se mide el soporte, no sobre la demo.*
 

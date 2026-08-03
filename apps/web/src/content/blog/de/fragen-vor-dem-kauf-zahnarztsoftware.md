@@ -2,6 +2,7 @@
 title: "Welche Fragen Sie einem Anbieter von Zahnarztsoftware vor der Unterschrift stellen"
 description: "Die Fragen, die entscheiden, ob eine Praxissoftware im dritten Jahr noch passt: Datenexport, was der Preis wirklich enthält und was bei Störungen gilt."
 pubDate: 2026-07-31
+translationKey: preguntas-antes-de-firmar-software-dental
 tags: [praxissoftware, anschaffung, migration]
 ---
 
@@ -59,7 +60,7 @@ Lassen Sie sich auch den Auftragsverarbeitungsvertrag und die Liste der Unterauf
 - **Wann aktualisiert wird** und ob Sie vorher Bescheid bekommen. Ein Update während der Sprechstunde ist ein Problem.
 - **Was beim letzten Ausfall passiert ist.** Fragen Sie genau so und achten Sie darauf, ob die Antwort sofort kommt.
 
-![Tagesansicht des Terminkalenders nach Behandler und Behandlungsstuhl, mit den Terminen über den Arbeitstag verteilt](/screenshots/schedule-day.png)
+![Übersichtsseite von Dentalpin mit den Terminen des Tages auf einer Zeitleiste](/screenshots/home.png)
 
 *Das ist der Bildschirm, dessen Ausfall Sie sich an einem Montagmorgen nicht leisten können. Daran misst sich der Support, nicht an der Vorführung.*
 

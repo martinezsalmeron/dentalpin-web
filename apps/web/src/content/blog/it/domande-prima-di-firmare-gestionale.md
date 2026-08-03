@@ -2,6 +2,7 @@
 title: "Le domande da fare al fornitore del gestionale prima di firmare"
 description: "Le domande che decidono se un gestionale va ancora bene al terzo anno: come esci con i dati, cosa comprende il prezzo e cosa succede se si rompe."
 pubDate: 2026-07-31
+translationKey: preguntas-antes-de-firmar-software-dental
 tags: [gestionale-odontoiatrico, acquisto, migrazione]
 ---
 
@@ -59,7 +60,7 @@ Chiedi anche il contratto di responsabile del trattamento e l'elenco dei sub res
 - **Quando aggiornano** e se avvisano prima. Un aggiornamento in orario di visita è un problema.
 - **Cosa è successo l'ultima volta che il sistema è andato giù.** Chiedilo proprio così e guarda se la risposta arriva subito.
 
-![Agenda del giorno per operatore e per riunito, con gli appuntamenti distribuiti sulla giornata](/screenshots/schedule-day.png)
+![Pannello principale di Dentalpin con gli appuntamenti del giorno su una linea temporale](/screenshots/home.png)
 
 *Questa è la schermata che non ti puoi permettere di perdere un lunedì mattina. L'assistenza si misura su questa, non sulla demo.*
 

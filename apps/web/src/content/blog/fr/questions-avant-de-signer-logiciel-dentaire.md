@@ -2,6 +2,7 @@
 title: "Les questions à poser avant de signer avec un éditeur de logiciel dentaire"
 description: "Les questions qui décident si un logiciel dentaire convient encore en année trois : sortir avec vos données, ce que le prix comprend, ce qui casse."
 pubDate: 2026-07-31
+translationKey: preguntas-antes-de-firmar-software-dental
 tags: [logiciel-dentaire, achat, migration]
 ---
 
@@ -59,7 +60,7 @@ Demandez aussi le contrat de sous traitance et la liste des sous traitants par �
 - **Quand les mises à jour sont déployées** et si vous êtes prévenu. Une mise à jour pendant les consultations est un problème.
 - **Ce qui s'est passé lors de la dernière panne.** Posez la question telle quelle et regardez si la réponse vient sans hésiter.
 
-![Agenda de la journée par praticien et par fauteuil, avec les rendez vous répartis sur la journée](/screenshots/schedule-day.png)
+![Tableau de bord de Dentalpin avec les rendez vous du jour sur une ligne de temps](/screenshots/home.png)
 
 *Voilà l'écran que vous ne pouvez pas vous permettre de perdre un lundi matin. Le support se juge sur cet écran là, pas sur la démonstration.*
 
