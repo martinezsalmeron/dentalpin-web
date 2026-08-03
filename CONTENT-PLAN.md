@@ -341,25 +341,32 @@ They are the demo clinic, so no real patient data. The interface is in
 Spanish except where noted, and they are used in every language, the
 same way the home page does.
 
+**Only reference a file that exists in that directory — `ls` it before
+writing the image line.** A missing screenshot is not a placeholder in a
+blog post, it is a broken image on a published page, and this table has
+already drifted from the directory once: in August 2026 eleven posts and
+the home hero referenced screenshots that were never exported, and every
+one shipped broken.
+
 | File | What it shows |
 |---|---|
-| `home.png` | Home: appointments today, who is in the clinic, overdue payments, recent patients |
+| `home.png` | Home: appointments today, who is in the clinic, overdue payments, recent patients, day timeline |
 | `dental-chart.png` | Patient record: odontogram, clinical alerts, active plan, next appointment |
-| `periodontogram.png` | Full periodontal chart: probing, bleeding, plaque, furcation, mobility, with bleeding and plaque percentages |
-| `treatment-plan.png` | Treatment plan: plan/confirm/quote steps, odontogram, treatments in the plan |
 | `budgets.png` | One quote: treatments, totals, validity, linked plan |
 | `invoices.png` | Invoice list with issued, paid, part paid, overdue and draft states |
-| `patient-timeline.png` | Patient activity feed, filterable by visits, treatments, financial, communications |
-| `patients.png` | Patient info tab: demographics, emergency contact, medical history, allergies |
-| `schedule-day.png` | Schedule, day view, by practitioner and chair |
-| `schedule-week.png` | Schedule, week view |
-| `schedule-canban.png` | Schedule, kanban: upcoming, waiting room, in chair, finished, no-show |
-| `reports.png` | Schedule reports: appointments, completion rate, no-shows, first visits, hours worked |
+| `patient-timeline.png` | Patient record, activity tab: clinical alerts, active plan, timeline filterable by visits, treatments, financial, communications |
 | `ai-copilot.png` | The AI assistant with its workflows. **Interface in English**, so it fits an English post best |
 
-Need something not on that list? Take it from the demo, log in as the
+Wanted but **not exported yet** — do not reference these until the PNG is
+in the directory (the feature pages show a "Screenshot pending" card for
+several of them too): `patients.png` (patient info tab),
+`periodontogram.png`, `treatment-plan.png`, `schedule-day.png`,
+`schedule-week.png`, `schedule-canban.png`, `reports.png`.
+
+Need something not on the list? Take it from the demo, log in as the
 demo admin, and drop the PNG in that directory rather than describing
-the screen in prose.
+the screen in prose. Exporting one of the pending files above also
+unblocks the feature page that waits for it.
 
 ### Diagrams
 
@@ -398,6 +405,14 @@ never renders dark.
   `open-source-alternative-to-X` / `alternative-open-source-a-X`.
   Translations do not share a filename on purpose — the directory carries
   the language and the filename is the URL, in that language.
+- **Translated filenames must be linked with `translationKey`.** hreflang
+  is built from it: every translation of a topic post declares
+  `translationKey: <the Spanish filename>` in its frontmatter (the Spanish
+  post itself needs nothing, its filename is the key). Posts that share a
+  filename across directories are linked automatically. Without the key,
+  each translation looks like an unrelated article and emits no hreflang,
+  which is the state the whole blog was in until August 2026. A comparison
+  written in one language only has no translations and needs no key.
 - `description` reads as a search result, not a teaser. 140-160 chars.
 - One `<h1>` (the title), `##` for the sections above.
 - Link to the pricing page and the install post **in the post's own
