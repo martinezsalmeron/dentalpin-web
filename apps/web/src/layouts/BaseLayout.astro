@@ -7,7 +7,6 @@ import {
   HTML_LANG,
   OG_LOCALE,
   isLocale,
-  localisedPath,
   otherLocales,
   translatePath,
   useTranslations,
@@ -24,6 +23,14 @@ interface Props {
   locale?: Locale;
   ogImage?: string;
   noindex?: boolean;
+  /**
+   * Per-locale URLs of this exact content, for pages whose translations
+   * `translatePath` cannot derive (blog posts, whose slugs are translated
+   * per language). When given, it replaces the derived hreflang set; a
+   * locale missing here emits no alternate at all rather than pointing at
+   * a page that is not a translation of this one.
+   */
+  alternates?: { locale: Locale; href: string }[];
 }
 
 const rawLocale = Astro.currentLocale ?? DEFAULT_LOCALE;
@@ -36,6 +43,7 @@ const {
   canonicalPath,
   ogImage = '/og-default.png',
   noindex = false,
+  alternates: givenAlternates,
 } = Astro.props as Props;
 
 const site = Astro.site?.toString().replace(/\/$/, '') ?? 'https://www.dentalpin.com';
@@ -43,11 +51,20 @@ const pathname = canonicalPath ?? new URL(Astro.request.url).pathname;
 const canonical = `${site}${pathname}`;
 // One <link> per hreflang tag, not per locale: the Mexican page also answers
 // for Argentina, Chile, Colombia and Peru, which have no page of their own.
-const alternates = otherLocales(locale).flatMap((l) => {
-  const href = `${site}${translatePath(pathname, l)}`;
-  return [HREFLANG[l], ...(HREFLANG_ALIASES[l] ?? [])].map((hreflang) => ({ hreflang, href }));
-});
+const localeAlternates =
+  givenAlternates?.filter((a) => a.locale !== locale) ??
+  otherLocales(locale).map((l) => ({ locale: l, href: `${site}${translatePath(pathname, l)}` }));
+const alternates = localeAlternates.flatMap((a) =>
+  [HREFLANG[a.locale], ...(HREFLANG_ALIASES[a.locale] ?? [])].map((hreflang) => ({
+    hreflang,
+    href: a.href,
+  }))
+);
 const selfHreflangs = [HREFLANG[locale], ...(HREFLANG_ALIASES[locale] ?? [])];
+// x-default is the same content in the default language, not the home page.
+const xDefault = givenAlternates
+  ? (locale === DEFAULT_LOCALE ? canonical : localeAlternates.find((a) => a.locale === DEFAULT_LOCALE)?.href)
+  : `${site}${translatePath(pathname, DEFAULT_LOCALE)}`;
 const ogFull = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
 
 const jsonLd = {
@@ -58,7 +75,8 @@ const jsonLd = {
   operatingSystem: 'Web',
   description,
   url: site,
-  offers: { '@type': 'Offer', category: 'SaaS' },
+  // The software itself is free and open source; hosting is what's sold.
+  offers: { '@type': 'Offer', category: 'SaaS', price: '0', priceCurrency: 'EUR' },
   provider: {
     '@type': 'Organization',
     name: 'Dentalpin',
@@ -81,15 +99,24 @@ const jsonLd = {
     <link rel="canonical" href={canonical} />
     {selfHreflangs.map((h) => <link rel="alternate" hreflang={h} href={canonical} />)}
     {alternates.map((a) => <link rel="alternate" hreflang={a.hreflang} href={a.href} />)}
-    <link rel="alternate" hreflang="x-default" href={`${site}${localisedPath(DEFAULT_LOCALE)}`} />
+    {xDefault && <link rel="alternate" hreflang="x-default" href={xDefault} />}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Dentalpin"
+      href={`${site}/${locale}/rss.xml`}
+    />
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogFull} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={title} />
     <meta property="og:site_name" content="Dentalpin" />
     <meta property="og:locale" content={OG_LOCALE[locale]} />
     <meta name="twitter:card" content="summary_large_image" />

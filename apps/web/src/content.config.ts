@@ -15,6 +15,10 @@ const blog = defineCollection({
     tags: z.array(z.string()).default([]),
     ogImage: z.string().optional(),
     draft: z.boolean().default(false),
+    // Links translations of the same article across locales for hreflang.
+    // Defaults to the filename, so translations sharing a filename need
+    // nothing; a translated filename declares the key of its original.
+    translationKey: z.string().optional(),
   }),
 });
 

@@ -27,7 +27,7 @@ Os três artigos que decidem isso na prática:
 
 > **Sistema em nuvem não é o mesmo que sistema certificado.** A certificação é do produto, concedida após ensaios, e o fornecedor sabe o número dela. Se a resposta for "somos totalmente adequados à legislação" em vez de um número e uma data, você ainda não tem a resposta.
 
-![Aba de informações do paciente com dados pessoais, contato de emergência, histórico médico e alergias](/screenshots/patients.png)
+![Prontuário do paciente no Dentalpin, com alertas clínicos de alergia, plano ativo e linha do tempo de atividade](/screenshots/patient-timeline.png)
 
 *O prontuário começa aqui, e é isso que precisa continuar legível daqui a vinte anos, independente de quem for o fornecedor.*
 

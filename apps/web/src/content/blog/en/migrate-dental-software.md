@@ -2,6 +2,7 @@
 title: "How to migrate dental software without losing patient records"
 description: "A practical guide to switching dental software without losing patients, clinical history or invoices: what to export, how to test it first, and the step where most migrations fail."
 pubDate: 2026-07-30
+translationKey: migrar-software-dental
 tags: [migration, dental-software, patient-records]
 ---
 

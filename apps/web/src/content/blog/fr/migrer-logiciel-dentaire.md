@@ -2,6 +2,7 @@
 title: "Comment migrer de logiciel dentaire sans perdre le dossier patient"
 description: "Guide pratique pour changer de logiciel dentaire sans perdre patients, dossier clinique ni factures : quoi exporter, comment tester avant, et l'étape où presque toutes les migrations échouent."
 pubDate: 2026-07-30
+translationKey: migrar-software-dental
 tags: [migration, logiciel-dentaire, dossier-patient]
 ---
 

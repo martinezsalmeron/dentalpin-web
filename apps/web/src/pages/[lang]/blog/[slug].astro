@@ -13,7 +13,7 @@ import BaseLayout from '~/layouts/BaseLayout.astro';
 import Section from '@dentalpin/ui/Section.astro';
 import Button from '@dentalpin/ui/Button.astro';
 import { DEMO_URL } from '~/config/links';
-import { slugOf, isPublished, readingMinutes, postsForLocale } from '~/lib/blog';
+import { slugOf, postPath, isPublished, readingMinutes, postsForLocale } from '~/lib/blog';
 import '~/styles/post.css';
 
 export async function getStaticPaths() {
@@ -36,6 +36,17 @@ const t = useTranslations(locale);
 const { post } = Astro.props;
 const { Content, headings } = await render(post);
 
+// hreflang for a post can't be derived from the URL (slugs are translated),
+// so it's built here from the translation key: one alternate per locale that
+// actually serves a translation of this article, none for the rest.
+const site = Astro.site?.toString().replace(/\/$/, '') ?? 'https://www.dentalpin.com';
+const keyOf = (p: typeof post) => p.data.translationKey ?? slugOf(p.id);
+const allPosts = (await getCollection('blog')).filter(isPublished);
+const alternates = LOCALES.flatMap((l) => {
+  const served = postsForLocale(allPosts, l).find((p) => keyOf(p) === keyOf(post));
+  return served ? [{ locale: l, href: `${site}${postPath(l, slugOf(served.id))}` }] : [];
+});
+
 // Only h2s — an index that mirrors every h3 stops being an index.
 const toc = headings.filter((h) => h.depth === 2);
 const minutes = readingMinutes(post.body ?? '');
@@ -46,7 +57,6 @@ const dateFmt = new Intl.DateTimeFormat(DATE_LOCALE[locale], {
   year: 'numeric',
 });
 
-const site = Astro.site?.toString().replace(/\/$/, '') ?? 'https://www.dentalpin.com';
 const articleLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
@@ -58,6 +68,21 @@ const articleLd = {
   mainEntityOfPage: `${site}/${locale}/blog/${Astro.params.slug}/`,
   author: { '@type': 'Organization', name: 'Dentalpin', url: site },
   publisher: { '@type': 'Organization', name: 'Dentalpin', url: site },
+  image: `${site}${post.data.ogImage ?? '/og-default.png'}`,
+};
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Dentalpin', item: `${site}/${locale}/` },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: t('blog.title'),
+      item: `${site}/${locale}/blog/`,
+    },
+    { '@type': 'ListItem', position: 3, name: post.data.title },
+  ],
 };
 ---
 
@@ -66,6 +91,7 @@ const articleLd = {
   title={`${post.data.title} · Dentalpin`}
   description={post.data.description}
   ogImage={post.data.ogImage}
+  alternates={alternates}
 >
   <article>
     <!-- Hero -->
@@ -181,4 +207,5 @@ const articleLd = {
   </article>
 
   <script type="application/ld+json" set:html={JSON.stringify(articleLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
 </BaseLayout>

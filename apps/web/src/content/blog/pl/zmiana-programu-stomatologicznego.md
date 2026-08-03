@@ -2,6 +2,7 @@
 title: "Zmiana programu stomatologicznego bez utraty dokumentacji medycznej"
 description: "Jak zmienić program stomatologiczny bez utraty dokumentacji medycznej i faktur: co wyeksportować, jak przetestować import i gdzie zawodzi większość migracji."
 pubDate: 2026-07-30
+translationKey: migrar-software-dental
 tags: [migracja, program-stomatologiczny, dokumentacja-medyczna]
 ---
 

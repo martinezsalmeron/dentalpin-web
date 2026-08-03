@@ -2,6 +2,7 @@
 title: "Instalar o Dentalpin no seu servidor em três minutos"
 description: "Até esta semana, instalar o Dentalpin significava clonar o repositório e compilar duas imagens. Já não. Agora são três ficheiros, três valores e um comando."
 pubDate: 2026-07-28
+translationKey: instalar-dentalpin-en-tres-minutos
 tags: [servidor-proprio, docker, instalacao]
 ---
 

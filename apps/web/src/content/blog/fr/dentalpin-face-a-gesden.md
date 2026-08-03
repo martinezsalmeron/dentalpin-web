@@ -2,6 +2,7 @@
 title: "Dentalpin face à Gesden : ce qui change vraiment pour votre cabinet"
 description: "Comparatif honnête entre Gesden, le logiciel dentaire le plus utilisé en Espagne, et Dentalpin, open source et gratuit. Avec les sources et sans adjectifs."
 pubDate: 2026-07-28
+translationKey: dentalpin-vs-gesden
 tags: [comparatif, gesden, logiciel-dentaire]
 ---
 

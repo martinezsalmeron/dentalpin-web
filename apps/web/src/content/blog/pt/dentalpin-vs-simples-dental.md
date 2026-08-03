@@ -92,9 +92,9 @@ E isto vai a sério, não é formalidade:
 - **Quer poder auditar o código** que guarda históricos clínicos. Está publicado no GitHub.
 - **O circuito fiscal e de cobrança já vive noutro sistema.** Se a contabilidade emite as notas por fora, o argumento mais forte do outro lado deixa de o ser.
 
-![Relatórios de agenda no Dentalpin: total de consultas, taxa de conclusão, faltas, primeiras consultas e horas trabalhadas](/screenshots/reports.png)
+![Painel do Dentalpin com as métricas do dia: consultas, presença na clínica e pagamentos vencidos](/screenshots/home.png)
 
-*Os relatórios de agenda: total de consultas, taxa de conclusão, faltas e primeiras consultas do período.*
+*O painel do dia: consultas, quem está na clínica e pagamentos vencidos. Os relatórios de agenda detalham conclusões, faltas e primeiras consultas do período.*
 
 ## Como seria migrar
 

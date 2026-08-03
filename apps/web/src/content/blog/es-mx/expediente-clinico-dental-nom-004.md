@@ -20,7 +20,7 @@ Y hay dos reglas de forma que en la práctica son las que se incumplen más:
 - **Toda nota lleva fecha, hora, nombre completo y firma** de quien la elabora (apartado 5.10). La firma puede ser autógrafa, electrónica o digital, según el caso.
 - **Se escribe en lenguaje técnico médico, sin abreviaturas, con letra legible y sin enmendaduras ni tachaduras** (apartado 5.11). Una corrección tachada en el expediente de papel es exactamente el detalle que se mira desde fuera.
 
-![Pestaña de información del paciente con datos personales, contacto de emergencia, antecedentes médicos y alergias](/screenshots/patients.png)
+![Expediente del paciente en Dentalpin, con alertas clínicas de alergias, plan activo y línea de tiempo de actividad](/screenshots/patient-timeline.png)
 
 *El interrogatorio y los antecedentes son parte del contenido obligatorio, no un campo opcional que se llena cuando hay tiempo.*
 

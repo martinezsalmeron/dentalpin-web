@@ -2,6 +2,7 @@
 title: "Como migrar de software dentário sem perder o histórico clínico"
 description: "Guia prático para mudar de software dentário sem perder pacientes, histórico clínico nem faturas: o que exportar, como testar antes e o passo onde falham quase todas as migrações."
 pubDate: 2026-07-30
+translationKey: migrar-software-dental
 tags: [migracao, software-dentario, historico-clinico]
 ---
 

@@ -2,6 +2,7 @@
 title: "Install Dentalpin on your own server in three minutes"
 description: "Until this week, installing Dentalpin meant cloning the repository and building two images. Not any more. Three files, three values, one command."
 pubDate: 2026-07-28
+translationKey: instalar-dentalpin-en-tres-minutos
 tags: [self-hosted, docker, install]
 ---
 

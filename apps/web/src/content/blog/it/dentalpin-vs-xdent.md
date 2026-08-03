@@ -63,9 +63,9 @@ Quello che in Italia oggi **non** c'è: nessuna emissione di fattura elettronica
 
 Le due righe con "non citato" e "non documentata" dicono esattamente questo e niente di più: non l'abbiamo trovato sulle pagine pubbliche che abbiamo letto. Se stai valutando XDENT sul serio, sono due domande da fare a loro, non due conclusioni da trarre da qui.
 
-![Agenda giornaliera per professionista e per sala](/screenshots/schedule-day.png)
+![Pannello principale di Dentalpin con l'agenda della giornata](/screenshots/home.png)
 
-*L'agenda si sposta e si ridimensiona trascinando, rileva le sovrapposizioni e prende durata e colore dal catalogo dei trattamenti.*
+*La giornata si vede dal pannello principale; l'agenda si sposta e si ridimensiona trascinando, rileva le sovrapposizioni e prende durata e colore dal catalogo dei trattamenti.*
 
 ## Scegli XDENT se
 

@@ -2,6 +2,7 @@
 title: "Cambiare gestionale dentistico senza perdere la cartella clinica"
 description: "Guida pratica per cambiare gestionale odontoiatrico senza perdere pazienti, cartelle cliniche o fatture: cosa esportare, come provarlo prima e il passaggio in cui fallisce quasi ogni migrazione."
 pubDate: 2026-07-30
+translationKey: migrar-software-dental
 tags: [migrazione, gestionale-dentistico, cartella-clinica]
 ---
 

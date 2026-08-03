@@ -2,6 +2,7 @@
 title: "Zahnarztsoftware wechseln, ohne die Patientenakte zu verlieren"
 description: "Praktischer Leitfaden für den Wechsel der Praxissoftware ohne Verlust von Patienten, Behandlungshistorie oder Rechnungen: was Sie exportieren, wie Sie es vorher testen und der Schritt, an dem fast jede Migration scheitert."
 pubDate: 2026-07-30
+translationKey: migrar-software-dental
 tags: [migration, praxissoftware, patientenakte]
 ---
 

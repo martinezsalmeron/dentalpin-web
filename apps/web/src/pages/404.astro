@@ -1,0 +1,25 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Section from '@dentalpin/ui/Section.astro';
+import Button from '@dentalpin/ui/Button.astro';
+
+// The node adapter serves this for any unknown URL, so there is no locale in
+// the path to rely on; Spanish is the default market and the nav lets anyone
+// switch. noindex keeps error pages out of the index.
+---
+
+<BaseLayout title="Página no encontrada · Dentalpin" noindex canonicalPath="/404/" alternates={[]}>
+  <Section maxWidth="narrow" padY="lg">
+    <div class="mx-auto max-w-xl py-24 text-center">
+      <p class="font-mono text-sm text-[var(--color-text-subtle)]">404</p>
+      <h1 class="mt-3 text-marketing-h1 text-[var(--color-text)]">Esta página no existe</h1>
+      <p class="mt-4 text-[var(--color-text-muted)]">
+        Puede que el enlace esté mal escrito o que la página se haya movido.
+      </p>
+      <div class="mt-8 flex justify-center gap-3">
+        <Button href="/es/">Ir a la portada</Button>
+        <Button href="/es/blog/" variant="outline">Ver el blog</Button>
+      </div>
+    </div>
+  </Section>
+</BaseLayout>
