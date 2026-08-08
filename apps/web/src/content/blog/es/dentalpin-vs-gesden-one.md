@@ -2,6 +2,7 @@
 title: "Dentalpin frente a Gesden ONE: la nube de otro o un servidor tuyo"
 description: "Comparativa entre Gesden ONE, el software web de Infomed, y Dentalpin, open source y autoalojable. Con fuentes de Infomed y fecha de consulta."
 pubDate: 2026-08-07
+updatedDate: 2026-08-08
 tags: [comparativa, gesden-one, software-dental]
 ---
 
@@ -125,7 +126,7 @@ Dentalpin es la apuesta contraria: que el programa de tu clínica no debería se
 
 ## Fuentes
 
-Todas consultadas el 7 de agosto de 2026:
+Todas consultadas el 7 de agosto de 2026, y revisadas de nuevo sin cambios el 8 de agosto de 2026:
 
 - [Gesden ONE · Infomed](https://www.infomedsoftware.com/software/gesden/gesden-one/): descripción como software web, tecnología, responsive, funcionalidades del núcleo, módulos, versiones por usuarios concurrentes, integración de imagen y laboratorio, y los "más de 25 años en gestión sanitaria".
 - [Gesden · Infomed](https://www.infomedsoftware.com/software/gesden/): requisitos de Gesden G5, las cifras de 14.000 clínicas y más de 400 traspasos al año.
