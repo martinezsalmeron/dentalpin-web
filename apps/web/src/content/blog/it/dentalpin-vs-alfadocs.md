@@ -45,7 +45,7 @@ Dentalpin è un gestionale pubblicato sotto Business Source License 1.1: gratuit
 
 Il nucleo comprende agenda, pazienti, odontogramma, parodontogramma, cartella clinica, piani di cura, preventivi, fatture e report. C'è anche un agente IA che esegue le stesse operazioni dell'interfaccia e si ferma a chiedere conferma prima di ogni scrittura, e WhatsApp come canale di notifica. Non ci sono piani: i moduli ci sono tutti, dal primo giorno.
 
-Quello che in Italia oggi **non** c'è, ed è meglio dirlo qui che alla terza schermata: nessuna emissione di fattura elettronica verso lo SDI, nessun invio delle spese al Sistema Tessera Sanitaria, nessun Fascicolo Sanitario Elettronico, nessuna contabilità. E l'interfaccia esiste in inglese, spagnolo, francese e portoghese, ma non in italiano.
+Quello che in Italia oggi **non** c'è, ed è meglio dirlo qui che alla terza schermata: nessuna emissione di fattura elettronica verso lo SDI, nessun invio delle spese al Sistema Tessera Sanitaria, nessun Fascicolo Sanitario Elettronico, nessuna contabilità. E l'interfaccia esiste in inglese e spagnolo, ma non in italiano.
 
 ![Scheda paziente in Dentalpin, tab attività: allerte cliniche, piano attivo e cronologia filtrabile per visite, trattamenti, movimenti economici e comunicazioni](/screenshots/patient-timeline.png)
 
@@ -67,7 +67,7 @@ Solo righe verificabili. Dove non c'è un dato pubblico, lo scriviamo.
 | Prenotazione online | ✓ Dal piano Smart | ~ Non nel nucleo |
 | API | ~ Integrazioni personalizzate solo su Elite | ✓ REST documentata con OpenAPI, per tutti |
 | Funzioni dietro un piano superiore | ✗ Tre piani più account manager dedicato su Elite | ✓ Nessun piano, moduli tutti inclusi |
-| Interfaccia in italiano | ✓ Sì | ✗ No: inglese, spagnolo, francese e portoghese |
+| Interfaccia in italiano | ✓ Sì | ✗ No: inglese e spagnolo |
 | Base installata | ✓ "oltre 5.000 studi in tutta Italia" | ✗ Ancora pochissima |
 | Assistenza | ✓ Email su Light, account manager su Elite | ✗ GitHub e community |
 | Codice sorgente | ✗ Non pubblicato | ✓ Su GitHub, per intero |

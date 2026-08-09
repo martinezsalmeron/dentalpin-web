@@ -45,7 +45,7 @@ Dentalpin ist eine Praxisverwaltung, die unter der Business Source License 1.1 v
 
 Der Kern umfasst Terminkalender, Patienten, Zahnschema, Patientenakte, Kostenvoranschläge und Abrechnung. Optional kommen Parodontalstatus, Auswertungen, ein KI-Agent, der dieselben Operationen ausführt wie die Oberfläche und vor jedem Schreibvorgang nachfragt, und WhatsApp als Benachrichtigungskanal dazu. Es gibt keine Gebühr pro Behandlungsstuhl, pro Behandler oder pro Patient.
 
-Was es in Deutschland heute **nicht** gibt: keine KZV-Abrechnung nach BEMA oder GOZ, keine Anbindung an die Telematikinfrastruktur, kein EBZ, kein Einlesen der elektronischen Gesundheitskarte, und die Oberfläche gibt es auf Englisch, Spanisch, Französisch und Portugiesisch, aber nicht auf Deutsch. Die Übersetzung ist als Aufgabe für die Community offen ([Issue im Repository](https://github.com/martinezsalmeron/dentalpin/labels/i18n)), ausgeliefert ist sie heute nicht.
+Was es in Deutschland heute **nicht** gibt: keine KZV-Abrechnung nach BEMA oder GOZ, keine Anbindung an die Telematikinfrastruktur, kein EBZ, kein Einlesen der elektronischen Gesundheitskarte, und die Oberfläche gibt es auf Englisch und Spanisch, aber nicht auf Deutsch. Die Übersetzung ist als Aufgabe für die Community offen ([Issue im Repository](https://github.com/martinezsalmeron/dentalpin/labels/i18n)), ausgeliefert ist sie heute nicht.
 
 ![Patientenakte in Dentalpin, Reiter Aktivität: klinische Warnhinweise, laufender Plan und ein Verlauf, der sich nach Besuchen, Behandlungen, Finanzen und Kommunikation filtern lässt](/screenshots/patient-timeline.png)
 
@@ -64,7 +64,7 @@ Was es in Deutschland heute **nicht** gibt: keine KZV-Abrechnung nach BEMA oder 
 | Updates | Manuell, quartalsweise | Wann Sie wollen, Sie entscheiden |
 | TI-Komponenten (eAU, eRezept, EBZ) | ✓ In der Basisversion enthalten | ✗ Nicht vorhanden |
 | KZV-Abrechnung (BEMA/GOZ) | ✓ Kern des Produkts, CGM Z1 als Vorgänger für "Praxisverwaltung, Organisation und Abrechnung" beschrieben | ✗ Nicht vorhanden |
-| Oberfläche auf Deutsch | ✓ Ja | ✗ Nein, heute Englisch, Spanisch, Französisch und Portugiesisch |
+| Oberfläche auf Deutsch | ✓ Ja | ✗ Nein, heute Englisch und Spanisch |
 | Support | ✓ Deutschlandweites Servicenetzwerk aus zertifizierten Softwarespezialisten | ~ Community in GitHub Discussions |
 | Verbreitung | ✓ "Mehr als 7.000 Zahnärzte nutzen CGM Z1 täglich" | ✗ Seit 2026 |
 | Zertifizierungen laut Hersteller | ✓ ISO 9001, DSGVO-konform, gematik-zertifiziert | ~ Keine, der Code ist stattdessen prüfbar |

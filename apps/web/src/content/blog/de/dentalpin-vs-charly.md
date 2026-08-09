@@ -57,7 +57,7 @@ Dentalpin ist eine Praxisverwaltung unter der Business Source License 1.1: koste
 
 Der Kern umfasst Terminkalender, Patienten, Zahnschema, Patientenakte, Kostenvoranschläge und Abrechnung. Dazu kommen Parodontalstatus, Auswertungen, ein KI-Agent, der dieselben Operationen ausführt wie die Oberfläche und vor jedem Schreibvorgang nachfragt, und WhatsApp als Benachrichtigungskanal. Es gibt keine Gebühr pro Behandlungsstuhl, pro Behandler oder pro Patient, und kein Modul wird einzeln hinzugebucht.
 
-Was es in Deutschland heute **nicht** gibt: keine KZV-Abrechnung nach BEMA oder GOZ, keine Anbindung an die Telematikinfrastruktur, kein EBZ, kein Einlesen der elektronischen Gesundheitskarte, und die Oberfläche gibt es auf Englisch, Spanisch, Französisch und Portugiesisch, aber nicht auf Deutsch.
+Was es in Deutschland heute **nicht** gibt: keine KZV-Abrechnung nach BEMA oder GOZ, keine Anbindung an die Telematikinfrastruktur, kein EBZ, kein Einlesen der elektronischen Gesundheitskarte, und die Oberfläche gibt es auf Englisch und Spanisch, aber nicht auf Deutsch.
 
 ![Kostenvoranschlag in Dentalpin: Behandlungen, Summen, Gültigkeit und der verknüpfte Behandlungsplan](/screenshots/budgets.png)
 
@@ -77,7 +77,7 @@ Was es in Deutschland heute **nicht** gibt: keine KZV-Abrechnung nach BEMA oder 
 | Verbreitung | ✓ "3.700 Kunden vertrauen solutio" | ✗ Seit 2026 |
 | KZV-Abrechnung (BEMA/GOZ) | ✓ Kernfunktion | ✗ Nicht vorhanden |
 | EBZ und Telematikinfrastruktur | ✓ Eigene e-Produkte: KIM, NFDM, eMP, ePA, eAU, E-Rezept | ✗ Nicht vorhanden |
-| Oberfläche auf Deutsch | ✓ Ja | ✗ Nein, heute Englisch, Spanisch, Französisch und Portugiesisch |
+| Oberfläche auf Deutsch | ✓ Ja | ✗ Nein, heute Englisch und Spanisch |
 | Deutschsprachiger Support | ✓ Vom Hersteller, mit Schulungen und E-Learning | ~ Community in GitHub Discussions |
 | Röntgen- und Geräteschnittstellen | ✓ Umfangreiche Liste über VDDS | ✗ Nicht vorhanden |
 | Öffentliche API | ✗ Auf solutio.de keine Entwicklerdokumentation beschrieben | ✓ REST, mit OpenAPI dokumentiert |
