@@ -37,7 +37,11 @@ Ci sono poi due cose che vale la pena riconoscere per nome, perché non sono ovv
 
 > **OrisLine non pubblica i prezzi.** Sulle pagine di prodotto e di gamma consultate l'8 agosto 2026 non compare nessuna tariffa: i pulsanti sono "Richiedi info" e "Richiedi demo". Non è una critica, è la norma quasi ovunque in questo settore, ma significa che il costo lo scopri solo dopo aver parlato con loro.
 
-Una cosa da dire per correttezza, perché la trovi nel piè di pagina del loro sito e non nella comunicazione di prodotto: OrisLine è il marchio di **Henry Schein One Italia Srl**, con sede in Via Giovanni Amendola 7, Cernusco sul Naviglio (MI), P. IVA IT11654690152. Non cambia nulla del prodotto, cambia con chi firmi.
+**Dietro il prodotto c'è una struttura che va riconosciuta per quello che è.** La pagina "Chi siamo" di OrisLine scrive "Dal 1995 ideiamo, sviluppiamo e commercializziamo, a livello nazionale ed internazionale" software per studi dentistici e laboratori odontotecnici, dichiara che "OrisLine conta più di 30.000 licenze installate in oltre 90 paesi nel mondo" e che "siamo in oltre 60 professionisti specializzati". Sono trent'anni di mercato e un organico che noi non abbiamo.
+
+La stessa pagina dice anche con chi firmi il contratto: "Siamo parte del Gruppo Henry Schein ONE, con sede in Italia". Il piè di pagina del sito riporta la ragione sociale **Henry Schein One Italia Srl**, Via Giovanni Amendola 7, Cernusco sul Naviglio (MI), P. IVA IT11654690152. Non cambia nulla del prodotto, ma se stai valutando l'indipendenza del fornitore è un dato che vuoi avere prima e non dopo.
+
+Sull'assistenza pubblicano un telefono e un indirizzo email, assistenza remota, backup in remoto, interventi di installazione e trasferimento dati, e la piattaforma di formazione OrisLine Academy con webinar mensili, videocorsi, corsi live e percorsi personalizzati uno a uno.
 
 ![Cartella del paziente con odontogramma, allarmi clinici, piano attivo e prossimo appuntamento](/screenshots/dental-chart.png)
 
@@ -64,6 +68,9 @@ Quello che in Italia oggi **non** c'è, ed è meglio saperlo prima di leggere la
 | | OrisDent Q | Dentalpin |
 |---|---|---|
 | Modello | Licenza commerciale | Open source (BSL 1.1) |
+| Anni sul mercato | ✓ Dal 1995 | ✗ Dal 2026 |
+| Base installata dichiarata | ✓ "più di 30.000 licenze" in oltre 90 paesi | ✗ Dal 2026 |
+| Assistenza e formazione | ✓ Telefono, assistenza remota, OrisLine Academy | ✗ Community su GitHub |
 | Prezzo pubblicato | ✗ Non pubblicato (consultato l'8/8/2026) | ✓ 0 €, tutto incluso |
 | Fatturazione elettronica (SDI) | ✓ Attiva e passiva | ✗ Non presente |
 | Sistema Tessera Sanitaria | ✓ Invio delle spese | ✗ Non presente |
@@ -90,7 +97,7 @@ Le due righe con "non documentata" e "secondo il loro sito" dicono esattamente q
 - **Metti impianti e vuoi il registro UDI dove metti tutto il resto.** Un registro con lettore bar code dentro la cartella è un adempimento in meno gestito a parte.
 - **Lavori molto con il laboratorio.** OrisLab Q, MyLab e My.Doc sono un pezzo di catena che noi non copriamo affatto.
 - **Ti serve un'interfaccia in italiano oggi.** La nostra non lo è ancora, e non c'è modo di girarci intorno.
-- **Vuoi un fornitore unico con un numero da chiamare.** Henry Schein One Italia è una struttura commerciale con assistenza e formazione; da noi risponde la community su GitHub.
+- **Vuoi un fornitore unico con un numero da chiamare.** Trent'anni di attività, oltre 60 persone dichiarate e una piattaforma di formazione sono infrastruttura vera; da noi risponde la community su GitHub.
 
 Se tre di questi cinque punti ti riguardano, la risposta onesta è OrisDent Q. Preferiremmo essere la risposta a tutto, ma in Italia oggi non lo siamo.
 
@@ -120,9 +127,11 @@ Se tre di questi cinque punti ti riguardano, la risposta onesta è OrisDent Q. P
 
 ## Fonti
 
-Tutte consultate l'8 agosto 2026, salvo la data indicata per le due pagine di news.
+Tutte consultate l'8 agosto 2026 e riverificate il 9 agosto 2026, salvo la data indicata per le due pagine di news.
 
 - Gamma di prodotti, ragione sociale e P. IVA nel piè di pagina: [orisline.com](https://orisline.com/it/) e [orisline.com/it/contatti](https://orisline.com/it/contatti/)
+- Anno di fondazione, appartenenza al Gruppo Henry Schein ONE, licenze installate e organico: [orisline.com/it, Chi siamo](https://orisline.com/it/orisline-sviluppo-software-per-dentisti/)
+- Assistenza, formazione e OrisLine Academy: [orisline.com/it/supporto-tecnico-orisline-e-formazione](https://orisline.com/it/supporto-tecnico-orisline-e-formazione/)
 - OrisDent Q, moduli, contabilità, fatture elettroniche attive e passive, invio al Sistema TS, cartelle specialistiche e Firma Elettronica Avanzata: [orisline.com/it/software-per-dentisti-orisdent-q](https://orisline.com/it/software-per-dentisti-orisdent-q/)
 - Versioni desktop e cloud e pagina di gamma per studi: [orisline.com/it/software-studio-dentistico](https://orisline.com/it/software-studio-dentistico/)
 - OrisDent Air, gestionale interamente in cloud: [orisline.com/it/gestionale-studio-dentistico-cloud](https://orisline.com/it/gestionale-studio-dentistico-cloud/)
