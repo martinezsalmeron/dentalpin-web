@@ -30,7 +30,7 @@ Deux points méritent d'être sortis de cette liste, parce qu'ils sont difficile
 
 ![Dossier patient avec odontogramme, alertes cliniques, plan de traitement en cours et prochain rendez-vous](/screenshots/dental-chart.png)
 
-*Le dossier patient dans Dentalpin, avec l'odontogramme. L'interface du cabinet de démonstration est en espagnol, mais l'application existe bien en français.*
+*Le dossier patient dans Dentalpin, avec l'odontogramme. L'interface de la clinique de démonstration est en espagnol, comme le reste de l'application aujourd'hui.*
 
 Sur le volet réglementaire, la page dédiée de Julie parle de "la nomenclature CCAM" et de "les règles d'application et la nomenclature CCAM", annonce "Plus de rejets de vos Feuilles de Soins Electroniques", et décrit le service ADRi qui "permet de connaître la situation à jour des droits d'un patient" directement dans le logiciel, ainsi que l'INS obtenue "par interrogation d'un téléservice de la CNAM". L'ordonnancier est présenté comme associé "à la base médicamenteuse VIDAL Expert".
 
@@ -51,7 +51,7 @@ Ce qui n'existe pas en France aujourd'hui, et il vaut mieux le lire ici qu'en ba
 - **Aucun ordonnancier certifié.**
 - **Aucun module de stérilisation.**
 
-L'interface, elle, existe bien en français, ce qui n'est pas le cas partout dans nos traductions.
+Et l'interface n'existe aujourd'hui qu'en anglais et en espagnol, pas en français. La traduction est ouverte comme contribution de la communauté ([issue sur le dépôt](https://github.com/martinezsalmeron/dentalpin/labels/i18n)), mais elle n'est pas livrée.
 
 ## Face à face
 
@@ -68,7 +68,7 @@ L'interface, elle, existe bien en français, ce qui n'est pas le cas partout dan
 | Sauvegarde | ✓ Externalisée tous les quarts d'heure, datacenter HDS | ~ La vôtre, selon votre hébergement |
 | Ancienneté | ✓ Fondée en 1983 | ✗ Depuis 2026 |
 | Base installée | ✓ "plus de 20 000 utilisateurs" | ✗ Depuis 2026 |
-| Interface en français | ✓ Oui | ✓ Oui |
+| Interface en français | ✓ Oui | ✗ Non, aujourd'hui anglais et espagnol |
 | Code source | ✗ Non | ✓ Sur GitHub, en entier |
 | API publique | ~ Non documentée sur les pages publiques | ✓ REST, documentée en OpenAPI |
 | Où sont les données | ~ Datacenter HDS pour les sauvegardes | ✓ Sur votre serveur, toujours |
