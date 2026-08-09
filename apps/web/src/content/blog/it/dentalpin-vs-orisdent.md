@@ -39,6 +39,8 @@ Ci sono poi due cose che vale la pena riconoscere per nome, perché non sono ovv
 
 **Dietro il prodotto c'è una struttura che va riconosciuta per quello che è.** La pagina "Chi siamo" di OrisLine scrive "Dal 1995 ideiamo, sviluppiamo e commercializziamo, a livello nazionale ed internazionale" software per studi dentistici e laboratori odontotecnici, dichiara che "OrisLine conta più di 30.000 licenze installate in oltre 90 paesi nel mondo" e che "siamo in oltre 60 professionisti specializzati". Sono trent'anni di mercato e un organico che noi non abbiamo.
 
+Quel numero va letto per quello che dice: è riferito a OrisLine come azienda, e la gamma comprende anche i prodotti per il laboratorio odontotecnico. Non è la base installata del solo OrisDent Q, che loro non pubblicano separatamente.
+
 La stessa pagina dice anche con chi firmi il contratto: "Siamo parte del Gruppo Henry Schein ONE, con sede in Italia". Il piè di pagina del sito riporta la ragione sociale **Henry Schein One Italia Srl**, Via Giovanni Amendola 7, Cernusco sul Naviglio (MI), P. IVA IT11654690152. Non cambia nulla del prodotto, ma se stai valutando l'indipendenza del fornitore è un dato che vuoi avere prima e non dopo.
 
 Sull'assistenza pubblicano un telefono e un indirizzo email, assistenza remota, backup in remoto, interventi di installazione e trasferimento dati, e la piattaforma di formazione OrisLine Academy con webinar mensili, videocorsi, corsi live e percorsi personalizzati uno a uno.
@@ -69,7 +71,7 @@ Quello che in Italia oggi **non** c'è, ed è meglio saperlo prima di leggere la
 |---|---|---|
 | Modello | Licenza commerciale | Open source (BSL 1.1) |
 | Anni sul mercato | ✓ Dal 1995 | ✗ Dal 2026 |
-| Base installata dichiarata | ✓ "più di 30.000 licenze" in oltre 90 paesi | ✗ Dal 2026 |
+| Base installata dichiarata | ✓ "più di 30.000 licenze" in oltre 90 paesi, riferite a tutta OrisLine | ✗ Dal 2026 |
 | Assistenza e formazione | ✓ Telefono, assistenza remota, OrisLine Academy | ✗ Community su GitHub |
 | Prezzo pubblicato | ✗ Non pubblicato (consultato l'8/8/2026) | ✓ 0 €, tutto incluso |
 | Fatturazione elettronica (SDI) | ✓ Attiva e passiva | ✗ Non presente |
