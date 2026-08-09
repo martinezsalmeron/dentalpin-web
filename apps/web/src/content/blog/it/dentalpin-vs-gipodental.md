@@ -54,7 +54,7 @@ Dentalpin è un gestionale pubblicato sotto Business Source License 1.1: gratuit
 
 Il nucleo comprende agenda, pazienti, odontogramma, cartella clinica, preventivi e fatturazione. Si aggiungono parodontogramma, report, un agente IA che esegue le stesse operazioni dell'interfaccia e si ferma a chiedere conferma prima di ogni scrittura, e WhatsApp come canale di notifica. Non ci sono canoni per riunito, per odontoiatra o per paziente, e non ci sono piani: i moduli ci sono tutti.
 
-Quello che in Italia oggi **non** c'è, ed è meglio saperlo subito: nessuna emissione di fattura elettronica verso lo SDI, nessun invio delle spese al Sistema Tessera Sanitaria, nessuna conservazione digitale a norma, nessuna lettura della tessera sanitaria, nessun portale di prenotazione con un pubblico suo, e l'interfaccia esiste in inglese, spagnolo, francese e portoghese ma non in italiano.
+Quello che in Italia oggi **non** c'è, ed è meglio saperlo subito: nessuna emissione di fattura elettronica verso lo SDI, nessun invio delle spese al Sistema Tessera Sanitaria, nessuna conservazione digitale a norma, nessuna lettura della tessera sanitaria, nessun portale di prenotazione con un pubblico suo, e l'interfaccia esiste in inglese e spagnolo ma non in italiano.
 
 ## Fianco a fianco
 
@@ -69,7 +69,7 @@ Quello che in Italia oggi **non** c'è, ed è meglio saperlo subito: nessuna emi
 | Conservazione digitale a norma | ✓ Nel piano Plus | ✗ Non presente |
 | Lettura tessera sanitaria | ✓ Sì | ✗ Non presente |
 | Prenotazioni online con portale | ✓ Integrazione MioDottore, stesso gruppo | ✗ Non presente |
-| Interfaccia in italiano | ✓ Sì | ✗ No, oggi inglese, spagnolo, francese e portoghese |
+| Interfaccia in italiano | ✓ Sì | ✗ No, oggi inglese e spagnolo |
 | Assistenza e aggiornamenti | ✓ Dichiarati senza costi aggiuntivi | ~ Community su GitHub |
 | Distribuzione | Cloud, sui loro sistemi | Sul tuo server, o sul cloud che scegli |
 | Codice sorgente | ✗ No | ✓ Su GitHub, per intero |
