@@ -36,7 +36,9 @@ Every run, one target:
 4. Write it in the languages that target's row lists. See *Which
    languages a post gets written in* — it is not always all of them.
 5. Verify every factual claim.
-6. Publish what passes. Open a PR for what does not.
+6. Publish. Every run ends with the post on main, never parked in a PR.
+   If something needs a human (see *Where the routine publishes and
+   flags*), publish anyway and flag it in the notification.
 
 ## The rule that matters
 
@@ -65,7 +67,8 @@ In practice:
   and lands harder than "anticuado" anyway. If a sentence would sting
   read aloud to their sales team, cut it.
 - **Anything unverifiable is dropped**, not softened. If dropping it
-  guts the post, the post goes to a PR instead of being published.
+  guts the post, rebuild the post around what survives verification and
+  publish that; tell the user in the notification what was cut and why.
 
 ## Which languages a post gets written in
 
@@ -385,11 +388,26 @@ what talks to what, what runs where, what happens in which order. Light
 theme colours, taken from `packages/tokens`, because the marketing site
 never renders dark.
 
+### Stock photos, when nothing else fits
+
+When no screenshot or diagram illustrates a passage and the post would
+otherwise miss its image count, use a royalty-free stock photo:
+
+- **License first.** Only images free for commercial use with no
+  attribution required (CC0, or the Unsplash/Pexels/Pixabay licenses).
+- **Download it into the repo**, `apps/web/public/photos/<file>.jpg`,
+  referenced as `/photos/<file>`. Never hotlink: the remote file can
+  change or die under a published page.
+- **Record the source** (page URL and license) in a one-line HTML
+  comment next to the image in the markdown, so a future licensing
+  question has an answer.
+- **Pick a photo about the reader's situation**, a front desk, a
+  treatment room, paperwork, not a generic smiling patient or a
+  close-up of teeth. Screenshots and diagrams still come first; the
+  photo is the fallback, not the default.
+
 ### What does not go in a post
 
-- **No stock photography.** A generic smiling patient or a close-up of
-  teeth adds nothing, and it is exactly the filler that signals a page
-  written to fill a slot.
 - **No AI-generated images.**
 - **No screenshots of a competitor's product.** They are theirs, they
   go stale, and the comparison does not need them: quote the page and
@@ -868,10 +886,16 @@ queue again the same way: real searches a dental clinic makes, verified to
 have intent behind them this run, not invented from memory. A target that only
 makes sense in one country goes in country-locked, with the country named.
 
-## Where the routine must stop and ask
+## Where the routine publishes and flags
+
+Nothing in this list stops a publish. The post goes to main like any
+other; the point is that the user hears about it, because each one is a
+signal beyond the post itself:
 
 - A competitor claims something about DentalPin that needs answering.
-- A target has shut down, been acquired, or changed model.
-- The honest verdict is "their product is a better fit for most readers".
-  Publish it anyway — but say so in the PR, because it is a product
-  signal, not a content problem.
+- A target has shut down, been acquired, or changed model. Write the
+  post against the current reality, and check whether an already
+  published post about that vendor went stale too.
+- The honest verdict is "their product is a better fit for most
+  readers". Publish it anyway, and say so in the notification, because
+  it is a product signal, not a content problem.
