@@ -7,7 +7,7 @@ tags: [comparatif, julie, logiciel-dentaire]
 
 Si votre cabinet télétransmet des feuilles de soins électroniques et que vous attendez du logiciel qu'il gère la CCAM et les droits patient, la réponse tient en une ligne : Julie le fait, Dentalpin non. Tout le reste de cette page sert à ceux dont la partie conventionnelle passe déjà ailleurs.
 
-> **Tout ce qui est dit ici de Julie vient de julie.fr**, consulté le 5 août 2026, avec les URL en bas de page. Ce que Julie Solutions ne publie pas ne figure pas ici. Les sites comparateurs ont été écartés volontairement : ils se contredisent entre eux et aucun d'eux n'est Julie.
+> **Tout ce qui est dit ici de Julie vient de julie.fr**, consulté le 5 août 2026, avec les URL en bas de page. Ce que Julie Solutions ne publie pas ne figure pas ici. Les sites comparateurs ont été écartés volontairement : ils se contredisent entre eux et aucun d'eux n'est Julie. Une seule exception, signalée sur place : le rachat de Julie vient de logosw.net, c'est-à-dire de l'acquéreur lui-même.
 
 ## En trente secondes
 
@@ -19,7 +19,7 @@ Si votre cabinet télétransmet des feuilles de soins électroniques et que vous
 
 ## Ce qu'est Julie
 
-Julie est édité par Julie Solutions, RCS 838 336 246, à Marne la Vallée. Ses mentions légales ne nomment aucun groupe propriétaire, et nous ne lui en attribuons donc aucun : les rattachements qui circulent sur les sites comparateurs ne viennent pas de Julie.
+Julie est édité par Julie Solutions, RCS 838 336 246, à Marne la Vallée. **LOGOSw a racheté Julie** : sa FAQ pose elle-même la question "Pourquoi LOGOSw a racheté Julie ?" et annonce que "le logiciel JULIE reste maintenu et continue d'évoluer". Les mentions légales de julie.fr ne nomment toujours aucun groupe propriétaire, mais l'information vient désormais de l'acquéreur et non des sites comparateurs. Ce que cela change au quotidien est traité dans notre [comparatif avec LOGOSw](/fr/blog/dentalpin-vs-logosw/).
 
 La page de présentation du logiciel énumère ses fonctions dans ces termes : "Agenda personnalisable et accessible à distance", "Rappels de rendez-vous par SMS", "Dossiers patient clairs et ergonomiques", "Saisie des actes performante et simple", "Une conformité permanente avec la réglementation en vigueur", "Rattachez vos radios et scanners directement à vos dossiers patients", "Une gestion sûre de vos stocks", "Une aide comptable intégrée" et un "Module de stérilisation intégré".
 
@@ -117,13 +117,14 @@ Ce que coûte Dentalpin tient sur la [page des tarifs](/fr/tarifs/), et c'est un
 
 ## Sources
 
-Toutes consultées le 5 août 2026.
+Sauf mention contraire, toutes consultées le 5 août 2026.
 
 - Fonctions du logiciel, sauvegarde HDS, systèmes d'imagerie compatibles et "plus de 20 000 utilisateurs" : [julie.fr/logiciel-cabinet-dentaire](https://www.julie.fr/logiciel-cabinet-dentaire/)
 - Fondation en 1983 et présentation de l'éditeur : [julie.fr](https://www.julie.fr/)
 - CCAM, feuilles de soins électroniques, ADRi, INS et ordonnancier : [julie.fr/reglementaire-evolution-profession-dentaire](https://www.julie.fr/reglementaire-evolution-profession-dentaire/)
 - E-ordonnance, module complémentaire, LAP certifié et base HAS v3 : [julie.fr/e-ordonnance](https://www.julie.fr/e-ordonnance/)
 - Éditeur, RCS 838 336 246 et absence de groupe propriétaire mentionné : [julie.fr/mentions-legales](https://www.julie.fr/mentions-legales/)
+- Rachat de Julie par LOGOSw et maintien du logiciel JULIE, consulté le 10 août 2026 : [logosw.net/faq](https://www.logosw.net/faq/)
 - Licence, modules et prix de Dentalpin : [github.com/martinezsalmeron/dentalpin](https://github.com/martinezsalmeron/dentalpin) et [dentalpin.com/fr/tarifs](/fr/tarifs/)
 
 Il manque quelque chose, ou quelque chose a changé chez Julie et nous est passé sous le nez ? [Écrivez-nous](https://github.com/martinezsalmeron/dentalpin/discussions) : nous corrigeons le texte et nous disons ce que nous avons changé.
