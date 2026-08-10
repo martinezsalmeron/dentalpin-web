@@ -4,6 +4,7 @@ interface ImportMetaEnv {
   readonly PUBLIC_SITE_URL: string;
   readonly PUBLIC_TURNSTILE_SITE_KEY?: string;
   readonly PUBLIC_SENTRY_DSN?: string;
+  readonly PUBLIC_CF_BEACON_TOKEN?: string;
   readonly RESEND_API_KEY: string;
   readonly TURNSTILE_SECRET?: string;
   readonly CONTACT_TO_EMAIL: string;
