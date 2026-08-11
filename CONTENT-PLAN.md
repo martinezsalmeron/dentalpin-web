@@ -707,7 +707,7 @@ type. That is a per-post choice, not a reason to split the queue.
 | Clinicorp | Brazil, so `blog/pt-br/`. Claims 100.000+ active users |
 | Dental Office | Brazil, so `blog/pt-br/`. 25 years, ~40.000 dentists |
 | NewSoft DS (Imaginasoft) | Portugal. `imaginasoft.pt`, claims 30 years, "+2000 clínicas", "+6800 licenças" |
-| Doctusware (Imaginasoft) | Portugal. `doctusware.pt`, cloud-only, "desde 1997". Same publisher as NewSoft, so the post has to explain how the two differ |
+| Doctusware (Imaginasoft) | Portugal. `doctusware.pt`, cloud-only. Same publisher as NewSoft, so the post has to explain how the two differ. **Checked 11 August 2026: two corrections to this row. The "desde 1997" in the site footer is Imaginasoft's heritage, not the product's: `sobre_nos.html` dates the Doctusware project to 2017 and states "Em 2025 a Imaginasoft adquire a Certain Cypher e o projeto DOCTUSWARE". And it is one of the very few vendors in any market that publishes a full tariff (35 €/mês with 3 users, +8 €/mês each additional), so the usual "não publica preços" line is wrong here. The published post carries both.** |
 | `software-odontologico-gratuito` | Head term, Brazilian phrasing, in `blog/pt-br/`. Native post naming Brazilian vendors, not a translation |
 | `software-gestao-clinica-dentaria-gratis` | Head term, Portuguese phrasing. A different query in the same language, not a variant of the row above |
 
