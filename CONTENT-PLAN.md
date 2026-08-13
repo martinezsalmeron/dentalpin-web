@@ -359,12 +359,19 @@ one shipped broken.
 | `invoices.png` | Invoice list with issued, paid, part paid, overdue and draft states |
 | `patient-timeline.png` | Patient record, activity tab: clinical alerts, active plan, timeline filterable by visits, treatments, financial, communications |
 | `ai-copilot.png` | The AI assistant with its workflows. **Interface in English**, so it fits an English post best |
+| `patients.png` | Patient record, patient info tab |
+| `periodontogram.png` | Periodontal chart with the six sites per tooth |
+| `treatment-plan.png` | A treatment plan with its stages |
+| `schedule-day.png` | Agenda, day view |
+| `schedule-week.png` | Agenda, week view |
+| `schedule-canban.png` | Agenda as a board |
+| `reports.png` | Reports |
 
-Wanted but **not exported yet** — do not reference these until the PNG is
-in the directory (the feature pages show a "Screenshot pending" card for
-several of them too): `patients.png` (patient info tab),
-`periodontogram.png`, `treatment-plan.png`, `schedule-day.png`,
-`schedule-week.png`, `schedule-canban.png`, `reports.png`.
+**The seven files listed above as pending were exported on 10 August 2026**
+and are in the directory, so the posts that had to describe those screens in
+prose can now show them. Nothing is pending today. That does not retire the
+rule: `ls` the directory before writing an image line, because this table has
+drifted from it in both directions.
 
 Need something not on the list? Take it from the demo, log in as the
 demo admin, and drop the PNG in that directory rather than describing
