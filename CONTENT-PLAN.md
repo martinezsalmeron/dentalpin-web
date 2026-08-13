@@ -721,8 +721,9 @@ Unblocked: the site publishes in German since July 2026. **These are
 written in German only**, and one post covers Germany, Austria and
 German-speaking Switzerland.
 
-Every row below was reached at the vendor's own domain on 30 July 2026,
-and none of them published a price there. The claims in the "Why" column
+Every row below was reached at the vendor's own domain on 30 July 2026.
+None of them published a price there except ivoris, which turned out to
+publish a full tariff PDF; see that row. The claims in the "Why" column
 are what the vendor says about itself, or a market figure that still has
 to be re-sourced the run the post is written.
 
@@ -732,7 +733,7 @@ to be re-sourced the run the post is written.
 | CGM Z1.PRO (CompuGroup Medical) | `dentalpin-vs-cgm-z1` | `cgm.com/deu_de`. Sells Z1.PRO for practices and HIGHDENT PLUS for university clinics and group practices. Its own page says a standard price is "not possible" because every practice is individual, which is the cleanest published quote on pricing opacity we have in any market |
 | charly (solutio) | `dentalpin-vs-charly` | `solutio.de`, solutio GmbH & Co. KG. Sells through `solutioshop.de` and offers a free demo. **The domain `charly.de` does not resolve, always link solutio.de** |
 | EVIDENT | `dentalpin-vs-evident` | `evident.de`, EVIDENT GmbH. Claims over 50 years and a modular build that "grows with your requirements", so the module argument has to be made on substance, not on the word |
-| ivoris (Computer konkret AG) | `dentalpin-vs-ivoris` | `ivoris.de`. Splits into ivoris dent, ortho and clinic. A per-speciality split is a real difference from one product with modules |
+| ivoris (Computer konkret AG) | `dentalpin-vs-ivoris` | `ivoris.de`. Splits into ivoris dent, ortho and clinic. A per-speciality split is a real difference from one product with modules. **Checked 13 August 2026: the "none of them published a price" line above is wrong for this row. `ivoris.de/preise/` redirects to a full price list PDF (`2026-7-preisliste.pdf`, valid 1.7. to 31.8.2026) with a monthly rent for every product, module and service. It is the only German vendor in A6 that does, and the published post is built around it.** |
 | LinuDent (PHARMATECHNIK) | `dentalpin-vs-linudent` | `linudent.de`. Verify what it is before writing: PHARMATECHNIK's roots are pharmacy software, and the size of the dental line is the first thing to establish |
 | — | `zahnarztsoftware-kostenlos` | Head term. Native post naming German vendors, not a translation of the Spanish one |
 | — | `open-source-alternative-zu-dampsoft` | Highest-intent German query in the space |
