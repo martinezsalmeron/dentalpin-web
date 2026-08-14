@@ -618,7 +618,7 @@ deserves to be drained first, not because the two need different posts.
 | Gesden ONE | `dentalpin-vs-gesden-one` | Their cloud product, closest comparison |
 | Odontonet | `dentalpin-vs-odontonet` | Dental-only, already ships Verifactu and WhatsApp — the closest competitor we have, so the hardest post to write honestly. **Check their pricing page: they may publish rates, which would make the usual "no publica precios" line wrong here.** |
 | Klinikare | `dentalpin-vs-klinikare` | Cloud, claims 2.500+ clinics and 20.000+ professionals over 16 years, ISO 27001, own AI features. Multi-vertical (dental, aesthetics, physio), which is a real difference worth stating rather than a weakness |
-| Clinic Cloud | `dentalpin-vs-clinic-cloud` | Cloud-native, SMB |
+| Clinic Cloud | `dentalpin-vs-clinic-cloud` | Cloud-native, SMB. **Checked 14 August 2026: two things this row did not know. It is published by Doctoralia España SL · Doctoralia Internet S.L. and its own *Sobre nosotros* page says "Clinic Cloud forma parte de Doctoralia", so it is a Docplanner-group product, like GipoDental in A7. And it publishes a full four-plan tariff (Mini 29 €, Pro 49 €, Max 79 €, Enterprise "A convenir", all al mes + IVA), so the usual "no publica precios" line is wrong here. The decisive dental detail is in their own plan table: "Odontograma y periodontograma" is absent from Mini, "Consultar" on Pro and included only from Max. The published post is built around that.** |
 | — | `alternativa-open-source-gesden` / `open-source-alternative-to-gesden` | Highest-intent query in the whole space |
 | — | `software-clinica-dental-gratis` / `free-dental-practice-software` | Broad head term |
 
