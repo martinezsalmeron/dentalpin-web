@@ -2,7 +2,7 @@
 title: "Dentalpin frente a Gesden: qué cambia realmente para tu clínica"
 description: "Comparativa honesta entre Gesden, el software dental más usado de España, y Dentalpin, que es open source y gratuito. Con fuentes y sin adjetivos."
 pubDate: 2026-07-28
-updatedDate: 2026-08-08
+updatedDate: 2026-08-15
 tags: [comparativa, gesden, software-dental]
 ---
 
@@ -31,11 +31,11 @@ Software de gestión para clínica dental de Infomed, en dos líneas de producto
 - **Gesden G5**: aplicación de escritorio, requiere Windows 10 o superior.
 - **Gesden ONE**: versión en la nube, accesible desde navegador.
 
-G5 se ofrece en tres versiones según número de licencias: *Easy* (hasta 3), *Profesional* (hasta 6) y *Grandes Clínicas/Multicentro* (ilimitadas).
+G5 se ofrece en varias versiones según número de licencias: *Easy* (hasta 3), *Profesional* (hasta 6), *Grandes Clínicas* y *Multicentro* (las dos últimas, ilimitadas).
 
 Funcionalmente es un producto profundo y maduro: historia clínica con odontograma, periodontograma con comparación de evolución, agenda multigabinete y multicentro, presupuestos, ciclo completo de facturación, ayuda con compañías aseguradoras, más de 150 tipos de informes configurables, recalls, control de gastos y proveedores, y módulo de ortodoncia.
 
-Alrededor del núcleo hay **módulos opcionales** que se contratan aparte: `dentIA` (análisis de radiografías con IA), `CLINIPAD` (firma digital), SMS y emailing, `ONE PAY` (cobros), Dashboard, `DIDACTIC` (casos en 3D), agenda móvil y cita online. Verifactu es también un producto separado.
+Alrededor del núcleo hay **módulos opcionales** que se contratan aparte: `dentIA` (análisis de radiografías con IA), `CLINIPAD` (firma digital), SMS y emailing, `ONE PAY` (cobros), Dashboard, `DIDACTIC` (casos en 3D), agenda móvil y cita online. Verifactu es también un producto separado. Desde agosto de 2026, seis de esos módulos (WhatsApp, `ONE PAY`, Image ONE, `dentIA`, control horario y Dashboard) también se venden juntos como "Pack Premium" por 99 €/mes, sin permanencia mínima.
 
 ## Qué es Dentalpin
 
@@ -57,7 +57,7 @@ Solo filas verificables. Donde no hay dato público, lo decimos.
 |---|---|---|
 | Modelo | Licencia comercial | Open source (BSL 1.1 → Apache 2.0 a los 4 años) |
 | Despliegue | Escritorio Windows 10+ · ONE en la nube | Tu servidor, tu proveedor, o local |
-| Precio publicado | ✗ No publica tarifas | ✓ 0 €, todo incluido |
+| Precio publicado | ~ Solo el Pack Premium de módulos (99 €/mes); la licencia base no se publica | ✓ 0 €, todo incluido |
 | Módulos | ~ Varios se contratan aparte | ✓ Todos incluidos |
 | Verifactu | ~ Producto separado | ✓ Módulo incluido |
 | Dónde viven los datos | Según producto y despliegue | ✓ Donde tú decidas |
@@ -69,7 +69,7 @@ Solo filas verificables. Donde no hay dato público, lo decimos.
 
 Sobre el precio conviene ser preciso, porque circula mucho ruido.
 
-> **Infomed no publica tarifas en su web**: remite a consultar con su coordinador de zona. Hay blogs que citan cifras muy distintas entre sí (desde 99 €/mes hasta licencias perpetuas de 2.000-3.000 €) y **ninguno de ellos es Infomed**. Si te importa el número, pídeselo a ellos.
+> **Infomed no publica la tarifa de la licencia G5 en su web**: remite a consultar con su coordinador de zona. Lo que sí publica, desde agosto de 2026, es el precio de un paquete de módulos aparte, el "Pack Premium" (WhatsApp, `ONE PAY`, Image ONE, `dentIA`, control horario y Dashboard): 99 €/mes, tras una promoción de lanzamiento de 29 €/mes que terminó el 31 de julio. Eso no es el precio de la licencia base. Sobre esa licencia, hay blogs que citan cifras muy distintas entre sí (desde 99 €/mes hasta licencias perpetuas de 2.000-3.000 €) y **ninguno de ellos es Infomed**. Si te importa ese número, pídeselo a ellos.
 
 ## Elige Gesden si
 
@@ -115,10 +115,11 @@ Dentalpin es la apuesta contraria: que el software de tu clínica no debería se
 
 ## Fuentes
 
-Todas consultadas el 28 de julio de 2026, y revisadas de nuevo sin cambios el 8 de agosto de 2026:
+Consultadas el 28 de julio de 2026, revisadas sin cambios el 8 de agosto de 2026, y de nuevo el 15 de agosto de 2026 (Pack Premium ya publica precio; `gesdenone.com` estaba caído y se sustituye por la página equivalente en `infomedsoftware.com`):
 
 - [Gesden G5 · Infomed](https://www.infomedsoftware.com/software/gesden/gesden-g5/): versiones, funcionalidades, módulos opcionales, requisitos Windows, cifras de clínicas, soporte y migraciones.
-- [Gesden ONE](https://www.gesdenone.com/): producto cloud.
+- [Gesden ONE · Infomed](https://www.infomedsoftware.com/software/gesden/gesden-one/): producto cloud. (`gesdenone.com` devuelve error 503 desde al menos el 15 de agosto de 2026).
+- [Pack Premium · Infomed](https://www.infomedsoftware.com/software/pack-premium/): precio del paquete de módulos, condiciones y qué incluye.
 - [Licencia de Dentalpin](https://github.com/martinezsalmeron/dentalpin/blob/main/LICENSE) y [código fuente](https://github.com/martinezsalmeron/dentalpin).
 
 ¿Ves algo mal o desactualizado en esta comparativa? [Dínoslo](https://github.com/martinezsalmeron/dentalpin/discussions) y lo corregimos. Vale también si eres de Infomed.

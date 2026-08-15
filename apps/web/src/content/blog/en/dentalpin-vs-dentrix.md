@@ -2,7 +2,7 @@
 title: "Dentalpin vs Dentrix: what you are actually choosing between"
 description: "Dentrix states 35,000+ practices and publishes no price. Dentalpin is open source and free to run. A sourced comparison of where each one fits."
 pubDate: 2026-08-07
-updatedDate: 2026-08-08
+updatedDate: 2026-08-15
 tags: [comparison, dentrix, dental-software]
 ---
 
@@ -31,7 +31,7 @@ Practice management software from Henry Schein One, sold in two separate product
 - **Dentrix** is the on-premises one. "Installed locally on office computers", with data on "Local servers (practice-managed)", and its site positions it for "Solo and small group practices".
 - **Dentrix Ascend** is the cloud one. "Accessed via web browser from anywhere", positioned for "All practice types, including multi-location and DSOs".
 
-The same page is candid about the trade: "Ascend requires no local servers or IT maintenance. Dentrix needs regular updates and IT support."
+The same page is candid about the trade: "Ascend requires no local servers or IT maintenance. Dentrix needs regular updates and IT support for backups and security."
 
 Around that core sits a wide product surface, described on their solutions pages: insurance, billing and collections; charting, imaging and clinical AI; marketing and patient experience; practice data and analytics; and managed IT support. Dentrix API Exchange is described as "A community of software vendors helping Dentrix customers expand their capabilities."
 
@@ -130,7 +130,7 @@ Dentalpin is the other bet: that the software holding clinical records should be
 
 ## Sources
 
-All Dentrix pages consulted on 7 August 2026, and re-checked with no changes on 8 August 2026:
+All Dentrix pages consulted on 7 August 2026, re-checked with no changes on 8 August 2026, and again on 15 August 2026 (the Ascend/Dentrix maintenance quote below was updated to the vendor's current full wording):
 
 - [Why Dentrix](https://www.dentrix.com/about-us/why-dentrix/): "35,000+ Dental practices use Dentrix everyday", "30+ Years of continuous innovation and leadership", "150+ Connected technology partners", and Henry Schein One as the parent.
 - [Dentrix or Dentrix Ascend](https://www.dentrix.com/about-us/dentrix-or-dentrix-ascend/): the on-premises and cloud split, "Installed locally on office computers", "Local servers (practice-managed)", "Accessed via web browser from anywhere", and the IT maintenance trade-off.

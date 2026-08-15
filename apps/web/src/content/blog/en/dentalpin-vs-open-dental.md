@@ -2,6 +2,7 @@
 title: "Dentalpin vs Open Dental: the other open one, and what changed"
 description: "Open Dental went proprietary at version 24.4 and it publishes its prices. A sourced comparison with Dentalpin, which is open source and free to run."
 pubDate: 2026-08-07
+updatedDate: 2026-08-15
 tags: [comparison, open-dental, dental-software]
 ---
 
@@ -133,7 +134,7 @@ What we would not do is choose it for the name. It is proprietary from 24.4 by i
 
 ## Sources
 
-All consulted on 7 August 2026:
+All consulted on 7 August 2026, and re-checked with no changes on 15 August 2026 (Open Dental's $199/$149 US rate took effect 2 February 2026, replacing a prior $179 rate; the figures cited here already reflect that current rate):
 
 - [Open Dental home page](https://www.opendental.com/): product description, "100s of Bridges to Other Programs", "20+ Clearinghouses".
 - [License](https://www.opendental.com/site/license.html): the change from GPL to proprietary in version 24.4, and the statements about price, support and database access.

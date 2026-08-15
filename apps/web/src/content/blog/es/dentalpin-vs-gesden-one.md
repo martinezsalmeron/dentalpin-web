@@ -2,7 +2,7 @@
 title: "Dentalpin frente a Gesden ONE: la nube de otro o un servidor tuyo"
 description: "Comparativa entre Gesden ONE, el software web de Infomed, y Dentalpin, open source y autoalojable. Con fuentes de Infomed y fecha de consulta."
 pubDate: 2026-08-07
-updatedDate: 2026-08-08
+updatedDate: 2026-08-15
 tags: [comparativa, gesden-one, software-dental]
 ---
 
@@ -65,7 +65,7 @@ Solo filas verificables. Donde Infomed no publica el dato, lo decimos en vez de 
 | Despliegue | Aplicación web en infraestructura de Infomed | Tu servidor, tu proveedor, o local |
 | Dispositivos | ✓ 100% responsive: PC/MAC, tableta, smartphone | ✓ Navegador, sin instalación en el puesto |
 | Licencia por usuarios simultáneos | ✗ Easy 3 · Profesional 6 · Multicentro | ✓ Sin coste por usuario ni por gabinete |
-| Precio publicado | ✗ No publica tarifas | ✓ Autoalojado gratis · gestionado 89 €/mes |
+| Precio publicado | ~ Solo el Pack Premium de módulos (99 €/mes); la licencia base no se publica | ✓ Autoalojado gratis · gestionado 89 €/mes |
 | Módulos | ~ dentIA, CLINIPAD, SMS y Cuadro de Mandos se listan aparte del núcleo | ✓ El producto entero, sin módulos capados |
 | Dónde viven los datos | En la infraestructura del proveedor | ✓ En un servidor a nombre de tu clínica |
 | Código auditable | ✗ No | ✓ Publicado en GitHub |
@@ -78,7 +78,7 @@ Solo filas verificables. Donde Infomed no publica el dato, lo decimos en vez de 
 
 Sobre el precio conviene ser preciso, porque circula mucho ruido.
 
-> **Infomed no publica tarifas de Gesden ONE en su web (consultado el 7 de agosto de 2026).** Su página de contacto es un formulario de "Quisiera información sobre:" y remite a llamar o escribir. Las cifras que verás en blogs comparadores no salen de Infomed, así que pídeselas a Infomed.
+> **Infomed no publica la tarifa de licencia de Gesden ONE en su web (consultado el 15 de agosto de 2026).** Su página de contacto es un formulario de "Quisiera información sobre:" y remite a llamar o escribir. Lo que sí publica, desde agosto de 2026, es el precio de un paquete de módulos aparte, el "Pack Premium" (WhatsApp, `ONE PAY`, Image ONE, `dentIA`, control horario y Dashboard): 99 €/mes, tras una promoción de lanzamiento de 29 €/mes que terminó el 31 de julio. No es el precio de la licencia. Las cifras de licencia que verás en blogs comparadores no salen de Infomed, así que pídeselas a Infomed.
 
 ## Elige Gesden ONE si
 
@@ -126,12 +126,13 @@ Dentalpin es la apuesta contraria: que el programa de tu clínica no debería se
 
 ## Fuentes
 
-Todas consultadas el 7 de agosto de 2026, y revisadas de nuevo sin cambios el 8 de agosto de 2026:
+Consultadas el 7 de agosto de 2026, revisadas sin cambios el 8 de agosto de 2026, y de nuevo el 15 de agosto de 2026 (Pack Premium ya publica precio):
 
 - [Gesden ONE · Infomed](https://www.infomedsoftware.com/software/gesden/gesden-one/): descripción como software web, tecnología, responsive, funcionalidades del núcleo, módulos, versiones por usuarios concurrentes, integración de imagen y laboratorio, y los "más de 25 años en gestión sanitaria".
 - [Gesden · Infomed](https://www.infomedsoftware.com/software/gesden/): requisitos de Gesden G5, las cifras de 14.000 clínicas y más de 400 traspasos al año.
 - [Infomed Software](https://www.infomedsoftware.com/): pertenencia al Grupo Henry Schein, treinta años y cincuenta técnicos de soporte.
-- [Solicitar información · Infomed](https://www.infomedsoftware.com/solicitar-informacion/): la vía para pedir precio, sin tarifas publicadas.
+- [Solicitar información · Infomed](https://www.infomedsoftware.com/solicitar-informacion/): la vía para pedir precio, sin tarifas publicadas para la licencia.
+- [Pack Premium · Infomed](https://www.infomedsoftware.com/software/pack-premium/): precio del paquete de módulos, condiciones y qué incluye.
 - [Precios de Dentalpin](/es/precios/), [licencia](https://github.com/martinezsalmeron/dentalpin/blob/main/LICENSE) y [código fuente](https://github.com/martinezsalmeron/dentalpin).
 
 ¿Ves algo mal o desactualizado aquí? [Dínoslo](https://github.com/martinezsalmeron/dentalpin/discussions) y lo corregimos. Vale también si eres de Infomed.
