@@ -45,7 +45,7 @@ Lo pubblica, e questo va detto prima di qualsiasi confronto. Tre piani, prezzi a
 | Professionista | 34,99 € + IVA | 1 professionista | ✓ Illimitati | ✓ 100 al mese |
 | Studio | 79,99 € + IVA | ✓ Fino a 30 collaboratori | ✓ Illimitati | ✓ 300 al mese |
 
-Il piano Free comprende le prenotazioni online e le notifiche email illimitate. L'invio al Sistema Tessera Sanitaria e la fatturazione compaiono dal piano Professionista. Il piano Studio aggiunge la gestione stanze e il multi-sede.
+Il piano Free comprende le prenotazioni online, le notifiche email illimitate e, secondo la pagina prezzi consultata il 15 agosto 2026, anche "Fatturazione e Sistema Tessera Sanitaria". Il piano Studio aggiunge la gestione stanze e il multi-sede.
 
 > **Trenta pazienti è un limite vero, non un dettaglio.** Uno studio odontoiatrico avviato li supera nel primo mese, quindi per quasi tutti i lettori il confronto reale non è con il piano Free ma con i 34,99 € o i 79,99 € al mese. Vale la pena saperlo prima di provarlo.
 
@@ -76,8 +76,8 @@ Solo righe verificabili. Dove Appuntoo non pubblica un dato, la riga lo dice inv
 | Parodontogramma | ✗ Non pubblicato fra le funzionalità | ✓ Sì |
 | Preventivi e piano di cura | ✗ Non pubblicati fra le funzionalità | ✓ Sì, con firma |
 | Anamnesi | ✓ Moduli personalizzabili, sei tipi di campo | ✓ Cartella clinica strutturata |
-| Invio al Sistema Tessera Sanitaria | ✓ Dal piano Professionista | ✗ Non presente |
-| Fattura elettronica allo SDI | ~ Non citata sulle pagine consultate | ✗ Non presente |
+| Invio al Sistema Tessera Sanitaria | ✓ Sì, già nel piano Free | ✗ Non presente |
+| Fattura elettronica allo SDI | ✓ Elencata sulla pagina prezzi | ✗ Non presente |
 | Imposta di bollo automatica | ✓ Sulle fatture esenti sopra soglia | ✗ Non presente |
 | Promemoria WhatsApp | ✓ 100 o 300 al mese secondo il piano | ~ Come canale di notifica, da configurare |
 | Prenotazioni online per il paziente | ✓ Senza registrazione | ✗ Non presente |
@@ -104,7 +104,7 @@ Due limiti, dichiarati da loro:
 
 ## Scegli Appuntoo se
 
-- **Vuoi che sia il gestionale a mandare le spese al Sistema TS.** Loro lo fanno dal piano Professionista, noi no. È la ragione principale per cui questo confronto esiste.
+- **Vuoi che sia il gestionale a mandare le spese al Sistema TS.** Loro lo fanno già nel piano Free, noi no. È la ragione principale per cui questo confronto esiste.
 - **Ti serve l'interfaccia in italiano oggi.** La nostra non lo è ancora, e non c'è modo di girarci intorno.
 - **Non vuoi un server da gestire.** Appuntoo è un servizio: non c'è niente da installare, aggiornare o salvare. Per uno studio senza nessuno che si occupi di informatica, questo da solo può chiudere la discussione.
 - **Vuoi che i pazienti prenotino da soli**, senza registrarsi, e ricevano un promemoria WhatsApp. Sono funzioni comprese nei loro piani e da noi non ci sono in quella forma.
@@ -144,7 +144,7 @@ Il passaggio da un gestionale all'altro è il momento in cui si perdono i dati, 
 Tutte le pagine sono di Appuntoo e sono state consultate il 9 agosto 2026.
 
 - Appuntoo, [home](https://www.appuntoo.com/): posizionamento, professioni servite, funzionalità principali, ragione sociale HeavylyTrade SRLS e partita IVA IT04635090618 nel piè di pagina.
-- Appuntoo, [prezzi](https://www.appuntoo.com/prezzi/): piano Free a 0 € con 1 account professionista e fino a 30 pazienti, Professionista a 34,99 € al mese più IVA con pazienti illimitati e 100 promemoria WhatsApp al mese, Studio a 79,99 € al mese più IVA con fino a 30 account collaboratori, gestione stanze, multi-sede e 300 promemoria WhatsApp al mese.
+- Appuntoo, [prezzi](https://www.appuntoo.com/prezzi/): piano Free a 0 € con 1 account professionista e fino a 30 pazienti, Professionista a 34,99 € al mese più IVA con pazienti illimitati e 100 promemoria WhatsApp al mese, Studio a 79,99 € al mese più IVA con fino a 30 account collaboratori, gestione stanze, multi-sede e 300 promemoria WhatsApp al mese. Ricontrollata il 15 agosto 2026: il piano Free elenca "Fatturazione e Sistema Tessera Sanitaria", corretto in questa pagina.
 - Appuntoo, [funzionalità](https://www.appuntoo.com/funzionalita/): anagrafica pazienti, anamnesi, calendario, certificati e documenti, collaboratori, fatturazione, notifiche email, prenotazioni online, promemoria WhatsApp e statistiche.
 - Appuntoo, [fatturazione](https://www.appuntoo.com/funzionalita/fatturazione/): invio al Sistema Tessera Sanitaria con tipo spesa e natura IVA precompilati, registrazione del protocollo della ricevuta, numerazione automatica, imposta di bollo sulle fatture esenti sopra soglia, impossibilità di inviare al Sistema TS le fatture di pazienti con identificativo fiscale estero e blocco delle fatture già trasmesse.
 - Appuntoo, [anamnesi](https://www.appuntoo.com/funzionalita/anamnesi/): moduli personalizzabili con sei tipi di campo, campi a etichette per patologie, traumi e farmaci, testo libero per l'anamnesi prossima, esportazione in PDF.
