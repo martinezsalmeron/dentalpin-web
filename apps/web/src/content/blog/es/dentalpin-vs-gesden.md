@@ -2,7 +2,7 @@
 title: "Dentalpin frente a Gesden: qué cambia realmente para tu clínica"
 description: "Comparativa honesta entre Gesden, el software dental más usado de España, y Dentalpin, que es open source y gratuito. Con fuentes y sin adjetivos."
 pubDate: 2026-07-28
-updatedDate: 2026-08-15
+updatedDate: 2026-08-16
 tags: [comparativa, gesden, software-dental]
 ---
 
@@ -35,7 +35,9 @@ G5 se ofrece en varias versiones según número de licencias: *Easy* (hasta 3), 
 
 Funcionalmente es un producto profundo y maduro: historia clínica con odontograma, periodontograma con comparación de evolución, agenda multigabinete y multicentro, presupuestos, ciclo completo de facturación, ayuda con compañías aseguradoras, más de 150 tipos de informes configurables, recalls, control de gastos y proveedores, y módulo de ortodoncia.
 
-Alrededor del núcleo hay **módulos opcionales** que se contratan aparte: `dentIA` (análisis de radiografías con IA), `CLINIPAD` (firma digital), SMS y emailing, `ONE PAY` (cobros), Dashboard, `DIDACTIC` (casos en 3D), agenda móvil y cita online. Verifactu es también un producto separado. Desde agosto de 2026, seis de esos módulos (WhatsApp, `ONE PAY`, Image ONE, `dentIA`, control horario y Dashboard) también se venden juntos como "Pack Premium" por 99 €/mes, sin permanencia mínima.
+Alrededor del núcleo hay **módulos opcionales** que se contratan aparte: `dentIA` (análisis de radiografías con IA), `CLINIPAD` (firma digital), SMS y emailing, `ONE PAY` (cobros), Dashboard, `DIDACTIC` (casos en 3D), agenda móvil y cita online. Desde agosto de 2026, seis de esos módulos (WhatsApp, `ONE PAY`, Image ONE, `dentIA`, control horario y Dashboard) también se venden juntos como "Pack Premium" por 99 €/mes, sin permanencia mínima.
+
+Verifactu, en cambio, no se contrata aparte: su web dice que "El software GESDEN ya es compatible con el sistema Veri\*Factu, tanto en su versión escritorio GESDEN G5 5.54, como en su versión en la nube, GESDEN ONE 1.585.0". Para llegar a esa versión hay que tener activa la cuota de mantenimiento.
 
 ## Qué es Dentalpin
 
@@ -59,7 +61,7 @@ Solo filas verificables. Donde no hay dato público, lo decimos.
 | Despliegue | Escritorio Windows 10+ · ONE en la nube | Tu servidor, tu proveedor, o local |
 | Precio publicado | ~ Solo el Pack Premium de módulos (99 €/mes); la licencia base no se publica | ✓ 0 €, todo incluido |
 | Módulos | ~ Varios se contratan aparte | ✓ Todos incluidos |
-| Verifactu | ~ Producto separado | ✓ Módulo incluido |
+| Verifactu | ✓ Incluido desde G5 5.54 y ONE 1.585.0 | ✓ Módulo incluido |
 | Dónde viven los datos | Según producto y despliegue | ✓ Donde tú decidas |
 | Código auditable | ✗ No | ✓ Publicado en GitHub |
 | API documentada | ✗ No públicamente | ✓ REST completa, OpenAPI |
@@ -115,11 +117,12 @@ Dentalpin es la apuesta contraria: que el software de tu clínica no debería se
 
 ## Fuentes
 
-Consultadas el 28 de julio de 2026, revisadas sin cambios el 8 de agosto de 2026, y de nuevo el 15 de agosto de 2026 (Pack Premium ya publica precio; `gesdenone.com` estaba caído y se sustituye por la página equivalente en `infomedsoftware.com`):
+Consultadas el 28 de julio de 2026, revisadas sin cambios el 8 de agosto de 2026, y de nuevo el 16 de agosto de 2026 (Pack Premium ya publica precio; Verifactu pasó a estar incluido en vez de ser producto aparte; `gesdenone.com` estaba caído y se sustituye por la página equivalente en `infomedsoftware.com`):
 
 - [Gesden G5 · Infomed](https://www.infomedsoftware.com/software/gesden/gesden-g5/): versiones, funcionalidades, módulos opcionales, requisitos Windows, cifras de clínicas, soporte y migraciones.
 - [Gesden ONE · Infomed](https://www.infomedsoftware.com/software/gesden/gesden-one/): producto cloud. (`gesdenone.com` devuelve error 503 desde al menos el 15 de agosto de 2026).
 - [Pack Premium · Infomed](https://www.infomedsoftware.com/software/pack-premium/): precio del paquete de módulos, condiciones y qué incluye.
+- [Veri\*Factu · Infomed](https://www.infomedsoftware.com/software/gesden/verifactu/): versiones compatibles y cuota de mantenimiento.
 - [Licencia de Dentalpin](https://github.com/martinezsalmeron/dentalpin/blob/main/LICENSE) y [código fuente](https://github.com/martinezsalmeron/dentalpin).
 
 ¿Ves algo mal o desactualizado en esta comparativa? [Dínoslo](https://github.com/martinezsalmeron/dentalpin/discussions) y lo corregimos. Vale también si eres de Infomed.
