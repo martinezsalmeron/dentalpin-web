@@ -2,7 +2,7 @@
 title: "Dentalpin vs Gesden: what actually changes for your clinic"
 description: "An honest comparison between Gesden, Spain's most widely used dental software, and Dentalpin, which is open source and free. Sourced, and without adjectives."
 pubDate: 2026-07-28
-updatedDate: 2026-08-16
+updatedDate: 2026-08-21
 tags: [comparison, gesden, dental-software]
 ---
 
@@ -31,13 +31,13 @@ Dental practice management software from Infomed, in two product lines:
 - **Gesden G5**: a desktop application, requires Windows 10 or later.
 - **Gesden ONE**: a cloud version, reached through a browser.
 
-G5 comes in several editions by licence count: *Easy* (up to 3), *Profesional* (up to 6), *Grandes Clínicas* and *Multicentro* (the last two unlimited).
+G5 comes in four editions by seat count: *Easy* for clinics with 1 to 3 computers, *Profesional* for 4 to 6, *Grandes Clínicas* with unlimited licences, and *Multicentro* for running several sites together on a single application and database.
 
 Functionally it is a deep, mature product: clinical records with an odontogram, a periodontogram with evolution comparison, multi-cabinet and multi-site scheduling, budgets, a full billing cycle, insurance claim assistance, 150+ configurable report types, recalls, expense and supplier control, and an orthodontics module.
 
-Around that core sit **optional modules** contracted separately: `dentIA` (AI radiograph analysis), `CLINIPAD` (digital signatures), SMS and emailing, `ONE PAY` (payments), a Dashboard, `DIDACTIC` (3D case presentation), mobile scheduling and online booking. Since August 2026, six of those modules (WhatsApp, `ONE PAY`, Image ONE, `dentIA`, time-clock control and the Dashboard) are also sold together as a "Pack Premium" bundle for €99/month, with no minimum term.
+Around that core sit **optional modules** contracted separately: `dentIA` (AI radiograph analysis), `CLINIPAD` (digital signatures), SMS and emailing, `ONE PAY` (payments), a Dashboard, `DIDACTIC` (3D case presentation), mobile scheduling and online booking.
 
-Verifactu, on the other hand, is not sold separately: its page states "El software GESDEN ya es compatible con el sistema Veri*Factu, tanto en su versión escritorio GESDEN G5 5.54, como en su versión en la nube, GESDEN ONE 1.585.0" (GESDEN is already Veri*Factu-compatible, in both its desktop edition G5 5.54 and its cloud edition ONE 1.585.0). Reaching that version requires an active maintenance subscription.
+Verifactu is not one of them: its page states "El software GESDEN ya es compatible con el sistema Veri*Factu, tanto en su versión escritorio GESDEN G5 5.54, como en su versión en la nube, GESDEN ONE 1.585.0" (GESDEN is already Veri*Factu-compatible, in both its desktop edition G5 5.54 and its cloud edition ONE 1.585.0). Reaching that version requires an active maintenance subscription; clinics without one are told to call their area coordinator to reactivate it.
 
 ## What Dentalpin is
 
@@ -92,7 +92,7 @@ A product with 14,000 clinics behind it solves problems we do not yet know exist
 - **You have technical people, or will hire them.** Then self-hosting is an afternoon, not a problem.
 - **You want to integrate and automate.** Everything is a documented API, not a closed form.
 - **You want to audit the code** that holds clinical records. It is published.
-- **Verifactu without an extra product.** It is inside.
+- **Verifactu without a maintenance fee to keep current.** It is inside, and there is no subscription to keep alive to receive it.
 
 ![Dentalpin invoice list with issued, paid, part paid, overdue and draft states](/screenshots/invoices.png)
 
@@ -117,7 +117,7 @@ Dentalpin is the opposite bet: that your clinic's software should not be a rente
 
 ## Sources
 
-Consulted 28 July 2026, re-checked with no changes on 8 August 2026, and again on 16 August 2026 (Pack Premium now publishes a price; Verifactu moved from a separate product to included; `gesdenone.com` was down, replaced with the equivalent page on `infomedsoftware.com`):
+Consulted 28 July 2026, re-checked with no changes on 8 August 2026, again on 16 August 2026 (Pack Premium began publishing a price; Verifactu was found to be included rather than sold separately; `gesdenone.com` was down and replaced with the equivalent page on `infomedsoftware.com`), and once more on 21 August 2026 (the edition breakdown was tightened to match the vendor's exact per-computer counts; `gesdenone.com` is still returning a 503 error):
 
 - [Gesden G5 · Infomed](https://www.infomedsoftware.com/software/gesden/gesden-g5/): editions, features, optional modules, Windows requirement, clinic counts, support and migration figures.
 - [Gesden ONE · Infomed](https://www.infomedsoftware.com/software/gesden/gesden-one/): the cloud product. (`gesdenone.com` has returned a 503 error since at least 15 August 2026.)

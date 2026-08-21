@@ -28,7 +28,7 @@ Sopra ci sono altri due piani, e lì il prezzo non è esposto:
 - **PLUS** aggiunge Planning Multi-Operatore, Esame Obiettivo, Schede Specialistiche, Comunicazioni e Richiami, Magazzino e Reportistica.
 - **CLINIC**, segnalato come "Più richiesto", aggiunge Contabilità Avanzata (attiva e passiva), Prescrizioni e Ordini, Chat Interna, Magazzino Avanzato e Reportistica Avanzata.
 
-La stessa pagina indica che ci sono funzionalità aggiuntive disponibili come add-on a pagamento.
+La stessa pagina indica che ci sono funzionalità aggiuntive disponibili come add-on a pagamento, e vale la pena leggerne l'elenco: fra gli add-on ci sono "Versione Cloud", "Invio al Sistema TS e SDI", "App Smartphone e Tablet", "Agenda e Prenotazione Online", "Firma Digitale (CGM E-SIGN)", "Integrazione WhatsApp" e "Servizio di Backup Remoto" (rilettura del 16 agosto 2026). Sono le voci da chiedere a preventivo, perché il conto di uno studio si decide lì e non sui 20 euro del piano base.
 
 > **Un prezzo pubblicato, anche solo di partenza, è più di quanto faccia quasi chiunque altro in questo settore.** Vale la pena dirlo prima di qualsiasi confronto: XDENT espone il costo del piano base, mentre PLUS e CLINIC, cioè quelli che servono a uno studio con più di un operatore, restano da chiedere.
 
@@ -53,7 +53,7 @@ Quello che in Italia oggi **non** c'è: nessuna emissione di fattura elettronica
 | Prezzo pubblicato, piani superiori | ✗ Non esposto per PLUS e CLINIC | ✓ Non esistono piani superiori |
 | Funzioni divise per piano | ✗ Tre piani più add-on a pagamento | ✓ Tutti i moduli inclusi |
 | Fatturazione elettronica (SDI) | ✓ Elencata tra le funzionalità | ✗ Non presente |
-| Sistema Tessera Sanitaria | ~ Non citato nelle pagine consultate | ✗ Non presente |
+| Sistema Tessera Sanitaria | ✓ "Invio al Sistema TS e SDI" tra le funzionalità aggiuntive | ✗ Non presente |
 | Base installata | ✓ "più di 8.000 dentisti" in Italia | ✗ Dal 2026 |
 | Nativo Mac e Windows | ✓ Rivendicato sul loro sito | ~ Applicazione web, va su qualsiasi browser |
 | Interfaccia in italiano | ✓ Sì | ✗ No, oggi inglese e spagnolo |
@@ -61,7 +61,9 @@ Quello che in Italia oggi **non** c'è: nessuna emissione di fattura elettronica
 | API pubblica | ~ Non documentata sulle pagine pubbliche | ✓ REST, documentata con OpenAPI |
 | Dove stanno i dati | ~ Locale o cloud, secondo il loro sito | ✓ Sul tuo server, sempre |
 
-Le due righe con "non citato" e "non documentata" dicono esattamente questo e niente di più: non l'abbiamo trovato sulle pagine pubbliche che abbiamo letto. Se stai valutando XDENT sul serio, sono due domande da fare a loro, non due conclusioni da trarre da qui.
+La riga con "non documentata" dice esattamente questo e niente di più: non l'abbiamo trovato sulle pagine pubbliche che abbiamo letto. Se stai valutando XDENT sul serio, è una domanda da fare a loro, non una conclusione da trarre da qui.
+
+Sul Sistema Tessera Sanitaria questo testo diceva la stessa cosa fino al 16 agosto 2026, e sbagliava: l'invio al Sistema TS e allo SDI è elencato fra le funzionalità aggiuntive della pagina dei piani. La riga è stata corretta.
 
 ![Pannello principale di Dentalpin con l'agenda della giornata](/screenshots/home.png)
 
@@ -104,7 +106,7 @@ Quanto costa Dentalpin sta tutto sulla [pagina dei prezzi](/it/prezzi/), ed è u
 
 ## Fonti
 
-Tutte consultate il 30 luglio 2026.
+Tutte consultate il 30 luglio 2026 e rilette il 16 agosto 2026.
 
 - Funzionalità, base installata e supporto Mac e Windows: [xdent.it](https://www.xdent.it/)
 - Piani, contenuto di START, PLUS e CLINIC e prezzo del piano START: [xdent.it/piani](https://www.xdent.it/piani/)

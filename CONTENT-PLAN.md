@@ -633,7 +633,7 @@ region without a Mexican pitch stays in `blog/es/`.
 | Target | Slug | Why |
 |---|---|---|
 | Dentalink | `dentalpin-vs-dentalink` | Leader in Chile, strong across LatAm and Spain |
-| Doctocliq | `dentalpin-vs-doctocliq` | Dental + medical, positions itself LatAm-wide |
+| Doctocliq | `dentalpin-vs-doctocliq` | Dental + medical, positions itself LatAm-wide. **Checked 20 August 2026: it publishes a full four-plan tariff in dollars (Gratis USD 0 with a 30 patients/month limit, Individual USD 19, Básico USD 29, Avanzado USD 49, all al mes), so the usual "no publica precios" line is wrong here. Two more things the row did not know: the legal entity is ZOLUPRO S.A.C. (Peru), and its own terms give a fifteen-day window around cancellation to request your data plus deletion within ninety days. Electronic invoicing is "Disponible para Ecuador y Perú" only. Its tariff and its funcionalidades page disagree on whether consentimientos informados are in the Básico plan or a paid add-on; the published post states both and cites each.** |
 | DentalCore | `dentalpin-vs-dentalcore` | Argentina-first, clinical records + AI claims |
 | — | `software-dental-gratis-mexico` | Head term, Mexican phrasing, in `blog/es-mx/`. **No Mexican vendor has been verified from its own site yet: verify two or three before writing this one, or write it without naming any.** |
 

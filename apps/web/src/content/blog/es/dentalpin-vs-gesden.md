@@ -2,7 +2,7 @@
 title: "Dentalpin frente a Gesden: qué cambia realmente para tu clínica"
 description: "Comparativa honesta entre Gesden, el software dental más usado de España, y Dentalpin, que es open source y gratuito. Con fuentes y sin adjetivos."
 pubDate: 2026-07-28
-updatedDate: 2026-08-16
+updatedDate: 2026-08-21
 tags: [comparativa, gesden, software-dental]
 ---
 
@@ -31,13 +31,13 @@ Software de gestión para clínica dental de Infomed, en dos líneas de producto
 - **Gesden G5**: aplicación de escritorio, requiere Windows 10 o superior.
 - **Gesden ONE**: versión en la nube, accesible desde navegador.
 
-G5 se ofrece en varias versiones según número de licencias: *Easy* (hasta 3), *Profesional* (hasta 6), *Grandes Clínicas* y *Multicentro* (las dos últimas, ilimitadas).
+G5 se ofrece en cuatro versiones según número de puestos: *Easy* para clínicas de 1 a 3 ordenadores, *Profesional* de 4 a 6, *Grandes Clínicas* con licencias ilimitadas, y *Multicentro* para gestionar varias sedes desde una única aplicación y base de datos.
 
 Funcionalmente es un producto profundo y maduro: historia clínica con odontograma, periodontograma con comparación de evolución, agenda multigabinete y multicentro, presupuestos, ciclo completo de facturación, ayuda con compañías aseguradoras, más de 150 tipos de informes configurables, recalls, control de gastos y proveedores, y módulo de ortodoncia.
 
-Alrededor del núcleo hay **módulos opcionales** que se contratan aparte: `dentIA` (análisis de radiografías con IA), `CLINIPAD` (firma digital), SMS y emailing, `ONE PAY` (cobros), Dashboard, `DIDACTIC` (casos en 3D), agenda móvil y cita online. Desde agosto de 2026, seis de esos módulos (WhatsApp, `ONE PAY`, Image ONE, `dentIA`, control horario y Dashboard) también se venden juntos como "Pack Premium" por 99 €/mes, sin permanencia mínima.
+Alrededor del núcleo hay **módulos opcionales** que se contratan aparte: `dentIA` (análisis de radiografías con IA), `CLINIPAD` (firma digital), SMS y emailing, `ONE PAY` (cobros), Dashboard, `DIDACTIC` (casos en 3D), agenda móvil y cita online.
 
-Verifactu, en cambio, no se contrata aparte: su web dice que "El software GESDEN ya es compatible con el sistema Veri\*Factu, tanto en su versión escritorio GESDEN G5 5.54, como en su versión en la nube, GESDEN ONE 1.585.0". Para llegar a esa versión hay que tener activa la cuota de mantenimiento.
+Verifactu no es uno de ellos: su web dice que "El software GESDEN ya es compatible con el sistema Veri\*Factu, tanto en su versión escritorio GESDEN G5 5.54, como en su versión en la nube, GESDEN ONE 1.585.0". Para llegar a esa versión hay que tener activa la cuota de mantenimiento; si la clínica no la tiene, la propia web remite a llamar al coordinador de zona para reactivarla.
 
 ## Qué es Dentalpin
 
@@ -117,7 +117,7 @@ Dentalpin es la apuesta contraria: que el software de tu clínica no debería se
 
 ## Fuentes
 
-Consultadas el 28 de julio de 2026, revisadas sin cambios el 8 de agosto de 2026, y de nuevo el 16 de agosto de 2026 (Pack Premium ya publica precio; Verifactu pasó a estar incluido en vez de ser producto aparte; `gesdenone.com` estaba caído y se sustituye por la página equivalente en `infomedsoftware.com`):
+Consultadas el 28 de julio de 2026, revisadas sin cambios el 8 de agosto de 2026, de nuevo el 16 de agosto de 2026 (Pack Premium empezó a publicar precio; se descubrió que Verifactu está incluido en vez de ser producto aparte; `gesdenone.com` estaba caído y se sustituye por la página equivalente en `infomedsoftware.com`), y una vez más el 21 de agosto de 2026 (se ajustó el desglose de versiones al número exacto de ordenadores que da la propia web; `gesdenone.com` sigue devolviendo un error 503):
 
 - [Gesden G5 · Infomed](https://www.infomedsoftware.com/software/gesden/gesden-g5/): versiones, funcionalidades, módulos opcionales, requisitos Windows, cifras de clínicas, soporte y migraciones.
 - [Gesden ONE · Infomed](https://www.infomedsoftware.com/software/gesden/gesden-one/): producto cloud. (`gesdenone.com` devuelve error 503 desde al menos el 15 de agosto de 2026).
