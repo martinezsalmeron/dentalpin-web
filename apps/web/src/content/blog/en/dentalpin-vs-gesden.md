@@ -2,7 +2,7 @@
 title: "Dentalpin vs Gesden: what actually changes for your clinic"
 description: "An honest comparison between Gesden, Spain's most widely used dental software, and Dentalpin, which is open source and free. Sourced, and without adjectives."
 pubDate: 2026-07-28
-updatedDate: 2026-08-08
+updatedDate: 2026-08-21
 tags: [comparison, gesden, dental-software]
 ---
 
@@ -31,11 +31,13 @@ Dental practice management software from Infomed, in two product lines:
 - **Gesden G5**: a desktop application, requires Windows 10 or later.
 - **Gesden ONE**: a cloud version, reached through a browser.
 
-G5 comes in three editions by licence count: *Easy* (up to 3), *Profesional* (up to 6) and *Grandes Clínicas/Multicentro* (unlimited).
+G5 comes in four editions by seat count: *Easy* for clinics with 1 to 3 computers, *Profesional* for 4 to 6, *Grandes Clínicas* with unlimited licences, and *Multicentro* for running several sites together.
 
 Functionally it is a deep, mature product: clinical records with an odontogram, a periodontogram with evolution comparison, multi-cabinet and multi-site scheduling, budgets, a full billing cycle, insurance claim assistance, 150+ configurable report types, recalls, expense and supplier control, and an orthodontics module.
 
-Around that core sit **optional modules** contracted separately: `dentIA` (AI radiograph analysis), `CLINIPAD` (digital signatures), SMS and emailing, `ONE PAY` (payments), a Dashboard, `DIDACTIC` (3D case presentation), mobile scheduling and online booking. Verifactu is a separate product too.
+Around that core sit **optional modules** contracted separately: `dentIA` (AI radiograph analysis), `CLINIPAD` (digital signatures), SMS and emailing, `ONE PAY` (payments), a Dashboard, `DIDACTIC` (3D case presentation), mobile scheduling and online booking.
+
+**Verifactu is not one of them.** An earlier version of this post said it was, and Infomed's own page says otherwise: GESDEN G5 5.54 and GESDEN ONE 1.585.0 are already compatible with the Veri\*Factu system. What you need to reach those versions is a live maintenance fee, and that same page tells clinics without one to call their area coordinator and activate it.
 
 ## What Dentalpin is
 
@@ -59,7 +61,7 @@ Verifiable rows only. Where there is no public figure, we say so.
 | Deployment | Windows 10+ desktop · ONE in the cloud | Your server, your provider, or local |
 | Published price | ✗ Does not publish rates | ✓ €0, everything included |
 | Modules | ~ Several contracted separately | ✓ All included |
-| Verifactu | ~ Separate product | ✓ Included module |
+| Verifactu | ✓ From G5 5.54 and ONE 1.585.0 | ✓ Included module |
 | Where data lives | Depends on product and deployment | ✓ Wherever you decide |
 | Auditable code | ✗ No | ✓ Published on GitHub |
 | Documented API | ✗ Not publicly | ✓ Full REST, OpenAPI |
@@ -90,7 +92,7 @@ A product with 14,000 clinics behind it solves problems we do not yet know exist
 - **You have technical people, or will hire them.** Then self-hosting is an afternoon, not a problem.
 - **You want to integrate and automate.** Everything is a documented API, not a closed form.
 - **You want to audit the code** that holds clinical records. It is published.
-- **Verifactu without an extra product.** It is inside.
+- **Verifactu without a maintenance fee to keep current.** It is inside, and there is no subscription to keep alive to receive it.
 
 ![Dentalpin invoice list with issued, paid, part paid, overdue and draft states](/screenshots/invoices.png)
 
@@ -115,9 +117,10 @@ Dentalpin is the opposite bet: that your clinic's software should not be a rente
 
 ## Sources
 
-All consulted on 28 July 2026, and re-checked with no changes on 8 August 2026:
+Consulted on 28 July 2026, re-checked with no changes on 8 August 2026, and re-checked again on 21 August 2026, when the editions count and the Verifactu claim above were corrected:
 
 - [Gesden G5 · Infomed](https://www.infomedsoftware.com/software/gesden/gesden-g5/): editions, features, optional modules, Windows requirement, clinic counts, support and migration figures.
+- [Veri\*Factu · Infomed](https://www.infomedsoftware.com/software/gesden/verifactu/): the compatible versions and the maintenance fee.
 - [Gesden ONE](https://www.gesdenone.com/): the cloud product.
 - [Dentalpin's licence](https://github.com/martinezsalmeron/dentalpin/blob/main/LICENSE) and [source](https://github.com/martinezsalmeron/dentalpin).
 
