@@ -2,6 +2,7 @@
 title: "Dentalpin ou Simples Dental: qual software odontológico escolher"
 description: "Comparação honesta entre o Simples Dental, com mais de 19 mil clínicas no Brasil, e o Dentalpin, que é open source e grátis. Com fontes e sem adjetivos."
 pubDate: 2026-07-29
+updatedDate: 2026-08-22
 tags: [comparacao, simples-dental, software-odontologico]
 ---
 
@@ -115,7 +116,7 @@ O Dentalpin é a aposta contrária: o software da sua clínica não devia ser um
 
 ## Fontes
 
-Todas consultadas a 29 de julho de 2026:
+Todas consultadas a 29 de julho de 2026, e revisadas de novo sem alterações a 22 de agosto de 2026:
 
 - [Simples Dental](https://www.simplesdental.com/): descrição do produto, números de clínicas e profissionais, anos de mercado, teste gratuito.
 - [Planos e preços](https://www.simplesdental.com/planos-e-precos): valores dos planos Basic, Plus e Pro, desconto anual e recursos por plano.

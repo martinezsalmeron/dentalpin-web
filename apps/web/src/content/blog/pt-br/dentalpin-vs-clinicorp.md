@@ -2,6 +2,7 @@
 title: "Dentalpin ou Clinicorp: o que muda de verdade para a sua clínica"
 description: "Comparativo com fontes: a Clinicorp publica os preços, cobra implementação e resolve o recebimento. O Dentalpin é open source e roda no seu servidor."
 pubDate: 2026-08-04
+updatedDate: 2026-08-22
 tags: [comparacao, clinicorp, software-odontologico]
 ---
 
@@ -128,7 +129,7 @@ O Dentalpin é a aposta contrária: o software da clínica não deveria ser uma 
 
 ## Fontes
 
-Todas consultadas em 4 de agosto de 2026:
+Todas consultadas em 4 de agosto de 2026, e revisadas de novo sem alterações em 22 de agosto de 2026:
 
 - [Clinicorp](https://www.clinicorp.com/): ano de fundação, número de clínicas, usuários, profissionais e pacientes declarados.
 - [Melhor software odontológico](https://www.clinicorp.com/melhor-software-odontologico): prontuário digital, agenda, alerta de retorno, confirmação por WhatsApp, emissão de boletos, recibos e notas fiscais, relatórios e dashboard, aplicativos do paciente e do doutor.

@@ -2,6 +2,7 @@
 title: "Dentalpin frente ao Gesden: o que muda mesmo para a sua clínica"
 description: "Comparação honesta entre o Gesden, o software dentário mais usado em Espanha, e o Dentalpin, que é open source e grátis. Com fontes e sem adjetivos."
 pubDate: 2026-07-28
+updatedDate: 2026-08-22
 tags: [comparacao, gesden, software-dentario]
 ---
 
@@ -34,7 +35,7 @@ O G5 é vendido em três versões conforme o número de licenças: *Easy* (até 
 
 Em funcionalidades é um produto profundo e maduro: histórico clínico com odontograma, periodontograma com comparação de evolução, agenda com várias salas e vários centros, orçamentos, ciclo completo de faturação, apoio no tratamento com seguradoras, mais de 150 tipos de relatórios configuráveis, reforços de consulta, controlo de despesas e fornecedores, e módulo de ortodontia.
 
-À volta do núcleo há **módulos opcionais** contratados à parte: `dentIA` (análise de radiografias com IA), `CLINIPAD` (assinatura digital), SMS e email, `ONE PAY` (pagamentos), Dashboard, `DIDACTIC` (casos em 3D), agenda móvel e marcação online. O Verifactu é também um produto separado.
+À volta do núcleo há **módulos opcionais** contratados à parte: `dentIA` (análise de radiografias com IA), `CLINIPAD` (assinatura digital), SMS e email, `ONE PAY` (pagamentos), Dashboard, `DIDACTIC` (casos em 3D), agenda móvel, marcação online e `AUTOMATIZACIÓN` (envio automático de comunicações a pacientes). O Verifactu é também um produto separado.
 
 ## O que é o Dentalpin
 
@@ -114,7 +115,7 @@ O Dentalpin é a aposta contrária: o software da sua clínica não devia ser um
 
 ## Fontes
 
-Todas consultadas a 28 de julho de 2026:
+Todas consultadas a 28 de julho de 2026, e revisadas de novo sem alterações a 22 de agosto de 2026, quando se acrescentou o módulo `AUTOMATIZACIÓN`, lançado entretanto pela Infomed:
 
 - [Gesden G5 · Infomed](https://www.infomedsoftware.com/software/gesden/gesden-g5/): versões, funcionalidades, módulos opcionais, requisitos de Windows, números de clínicas, apoio e migrações.
 - [Gesden ONE](https://www.gesdenone.com/): produto na cloud.

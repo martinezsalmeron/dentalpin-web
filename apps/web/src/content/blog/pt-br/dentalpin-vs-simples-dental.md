@@ -2,6 +2,7 @@
 title: "Dentalpin ou Simples Dental: qual software odontológico escolher"
 description: "Comparativo com fontes: o Simples Dental publica os preços e emite NFS-e, o Dentalpin é open source e roda no servidor da sua clínica. Sem adjetivos."
 pubDate: 2026-08-04
+updatedDate: 2026-08-22
 tags: [comparacao, simples-dental, software-odontologico]
 ---
 
@@ -51,11 +52,11 @@ A maior parte deste mercado não publica tarifa nenhuma. O Simples Dental public
 
 > **O Simples Dental publica os preços no site.** Basic "de R$ 149,90 por R$ 137,41/mês", Plus "de R$ 249,90 por R$ 229,08/mês" e Pro "de R$ 349,90 por R$ 320,74/mês", com cobrança anual e 10 % de desconto. O teste é de "7 dias de forma gratuita, sem precisar cadastrar o cartão de crédito".
 
-O que muda entre os planos não é acessório. A emissão de NF de Serviço, a maquininha integrada, o fluxo de caixa, o comissionamento automático, o CRM e o controle de ortodontia entram no Plus. Contratos integrados, armazenamento ilimitado de imagens, faceograma HOF e o gerenciador de indicações entram no Pro.
+O que muda entre os planos não é acessório. A emissão de NF de Serviço, a maquininha integrada, o fluxo de caixa, o comissionamento automático e o controle de ortodontia entram no Plus. Contratos integrados, armazenamento ilimitado de imagens, faceograma HOF, o funil de oportunidades (CRM) e o gerenciador de indicações entram no Pro.
 
 E tem uma linha na tabela deles que vale ler com calma antes de fechar a conta.
 
-> **Nem tudo que está listado no plano está incluído no preço.** A página de planos marca vários recursos com "*Serviços pagos à parte", e entre eles estão a emissão de NF de Serviço, a assinatura eletrônica, a confirmação automática por WhatsApp e a IA de criação de evoluções por voz. Pergunte a eles quanto custa cada um antes de comparar mensalidades.
+> **Nem tudo que está listado no plano está incluído no preço.** A página de planos marca vários recursos com "*Serviços pagos à parte", e entre eles estão a emissão de NF de Serviço, a assinatura eletrônica, a confirmação automática por WhatsApp e o assistente de IA por voz. Pergunte a eles quanto custa cada um antes de comparar mensalidades.
 
 A página não indica limite nem cobrança por profissional nos planos Basic, Plus e Pro. Redes e franquias têm um caminho separado no site.
 
@@ -121,7 +122,7 @@ O Dentalpin é a aposta contrária: o software da sua clínica não deveria ser 
 
 ## Fontes
 
-Todas consultadas em 4 de agosto de 2026:
+Todas consultadas em 4 de agosto de 2026, e revisadas de novo em 22 de agosto de 2026, quando se corrigiu a que plano pertence o funil de oportunidades (CRM):
 
 - [Simples Dental](https://www.simplesdental.com/): descrição do produto, número de clínicas, profissionais e pacientes, anos de mercado.
 - [Planos e preços](https://www.simplesdental.com/planos-e-precos): valores dos planos Basic, Plus e Pro, desconto anual, teste de 7 dias, recursos por plano e a nota "Serviços pagos à parte".

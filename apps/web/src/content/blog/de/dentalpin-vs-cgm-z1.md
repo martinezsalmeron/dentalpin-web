@@ -2,6 +2,7 @@
 title: "Dentalpin und CGM Z1.PRO im Vergleich: Server in der Praxis gegen Open Source auf Ihrem Server"
 description: "Ehrlicher Vergleich zwischen CGM Z1.PRO und Dentalpin: Betriebsart, Preismodell, TI-Komponenten und Module. Mit dem, was Dentalpin in Deutschland nicht kann."
 pubDate: 2026-08-04
+updatedDate: 2026-08-22
 tags: [vergleich, cgm-z1-pro, praxissoftware]
 ---
 
@@ -118,7 +119,7 @@ Was Dentalpin kostet, steht vollständig auf [der Preisseite](/de/preise/), und 
 
 ## Quellen
 
-Alle am 4. August 2026 abgerufen.
+Alle am 4. August 2026 abgerufen, und am 22. August 2026 ohne Änderungen erneut geprüft.
 
 - Produktübersicht Zahnarztpraxis, Preisaussage und Servicenetzwerk: [cgm.com/deu_de/loesungen/zahnarztpraxis.html](https://www.cgm.com/deu_de/loesungen/zahnarztpraxis.html)
 - Produktseite CGM Z1.PRO, Praxisformen, modularer Aufbau, TI-Komponenten in der Basisversion: [cgm.com/deu_de/produkte/zahnarztpraxis/cgm-z1-pro-1.html](https://www.cgm.com/deu_de/produkte/zahnarztpraxis/cgm-z1-pro-1.html)

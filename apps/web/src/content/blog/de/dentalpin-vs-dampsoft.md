@@ -2,6 +2,7 @@
 title: "Dentalpin und Dampsoft im Vergleich: was jedes von beiden heute wirklich kann"
 description: "Ehrlicher Vergleich zwischen Dampsoft (DS-WIN, DS4) und Dentalpin: Betriebsart, Preise, KZV-Abrechnung, Telematikinfrastruktur und Datenhoheit. Mit dem, was Dentalpin in Deutschland heute noch nicht leistet."
 pubDate: 2026-07-30
+updatedDate: 2026-08-22
 tags: [vergleich, dampsoft, praxissoftware]
 ---
 
@@ -102,7 +103,7 @@ Was Dentalpin kostet, steht vollständig auf [der Preisseite](/de/preise/), und 
 
 ## Quellen
 
-Alle am 30. Juli 2026 abgerufen.
+Alle am 30. Juli 2026 abgerufen, und am 22. August 2026 ohne Änderungen erneut geprüft.
 
 - Produktübersicht Dampsoft (DS-WIN, DS4, e-connect, AIVA, ATHENA): [dampsoft.de/produkte](https://www.dampsoft.de/produkte/)
 - Selbstbeschreibung, 40. Jubiläum und Hinweis auf die EDV-Statistik 2025 der KZBV vom 24.07.2026: [dampsoft.de/unternehmen](https://www.dampsoft.de/unternehmen/)
