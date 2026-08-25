@@ -31,13 +31,13 @@ Dental practice management software from Infomed, in two product lines:
 - **Gesden G5**: a desktop application, requires Windows 10 or later.
 - **Gesden ONE**: a cloud version, reached through a browser.
 
-G5 comes in four editions by seat count: *Easy* for clinics with 1 to 3 computers, *Profesional* for 4 to 6, *Grandes Clínicas* with unlimited licences, and *Multicentro* for running several sites together.
+G5 comes in four editions by seat count: *Easy* for clinics with 1 to 3 computers, *Profesional* for 4 to 6, *Grandes Clínicas* with unlimited licences, and *Multicentro* for running several sites together on a single application and database.
 
 Functionally it is a deep, mature product: clinical records with an odontogram, a periodontogram with evolution comparison, multi-cabinet and multi-site scheduling, budgets, a full billing cycle, insurance claim assistance, 150+ configurable report types, recalls, expense and supplier control, and an orthodontics module.
 
 Around that core sit **optional modules** contracted separately: `dentIA` (AI radiograph analysis), `CLINIPAD` (digital signatures), SMS and emailing, `ONE PAY` (payments), a Dashboard, `DIDACTIC` (3D case presentation), mobile scheduling and online booking.
 
-**Verifactu is not one of them.** An earlier version of this post said it was, and Infomed's own page says otherwise: GESDEN G5 5.54 and GESDEN ONE 1.585.0 are already compatible with the Veri\*Factu system. What you need to reach those versions is a live maintenance fee, and that same page tells clinics without one to call their area coordinator and activate it.
+Verifactu is not one of them: its page states "El software GESDEN ya es compatible con el sistema Veri*Factu, tanto en su versión escritorio GESDEN G5 5.54, como en su versión en la nube, GESDEN ONE 1.585.0" (GESDEN is already Veri*Factu-compatible, in both its desktop edition G5 5.54 and its cloud edition ONE 1.585.0). Reaching that version requires an active maintenance subscription; clinics without one are told to call their area coordinator to reactivate it.
 
 ## What Dentalpin is
 
@@ -59,9 +59,9 @@ Verifiable rows only. Where there is no public figure, we say so.
 |---|---|---|
 | Model | Commercial licence | Open source (BSL 1.1 → Apache 2.0 after 4 years) |
 | Deployment | Windows 10+ desktop · ONE in the cloud | Your server, your provider, or local |
-| Published price | ✗ Does not publish rates | ✓ €0, everything included |
+| Published price | ~ Only the Pack Premium module bundle (€99/month); base licence not published | ✓ €0, everything included |
 | Modules | ~ Several contracted separately | ✓ All included |
-| Verifactu | ✓ From G5 5.54 and ONE 1.585.0 | ✓ Included module |
+| Verifactu | ✓ Included since G5 5.54 and ONE 1.585.0 | ✓ Included module |
 | Where data lives | Depends on product and deployment | ✓ Wherever you decide |
 | Auditable code | ✗ No | ✓ Published on GitHub |
 | Documented API | ✗ Not publicly | ✓ Full REST, OpenAPI |
@@ -71,7 +71,7 @@ Verifiable rows only. Where there is no public figure, we say so.
 
 On price it is worth being precise, because a lot of noise circulates.
 
-> **Infomed does not publish rates on its site.** It directs you to your area coordinator. Blogs quote wildly different figures, from €99/month to perpetual licences of €2,000–3,000, and **none of them is Infomed**. If the number matters to you, ask them.
+> **Infomed does not publish the G5 licence rate on its site.** It directs you to your area coordinator. What it does publish, since August 2026, is the price of a separate module bundle, the "Pack Premium" (WhatsApp, `ONE PAY`, Image ONE, `dentIA`, time-clock control and Dashboard): €99/month, after a €29/month launch promotion that ended on 31 July. That is not the base licence price. On the licence itself, blogs quote wildly different figures, from €99/month to perpetual licences of €2,000–3,000, and **none of them is Infomed**. If that number matters to you, ask them.
 
 ## Choose Gesden if
 
@@ -117,11 +117,12 @@ Dentalpin is the opposite bet: that your clinic's software should not be a rente
 
 ## Sources
 
-Consulted on 28 July 2026, re-checked with no changes on 8 August 2026, and re-checked again on 21 August 2026, when the editions count and the Verifactu claim above were corrected:
+Consulted 28 July 2026, re-checked with no changes on 8 August 2026, again on 16 August 2026 (Pack Premium began publishing a price; Verifactu was found to be included rather than sold separately; `gesdenone.com` was down and replaced with the equivalent page on `infomedsoftware.com`), and once more on 21 August 2026 (the edition breakdown was tightened to match the vendor's exact per-computer counts; `gesdenone.com` is still returning a 503 error):
 
 - [Gesden G5 · Infomed](https://www.infomedsoftware.com/software/gesden/gesden-g5/): editions, features, optional modules, Windows requirement, clinic counts, support and migration figures.
-- [Veri\*Factu · Infomed](https://www.infomedsoftware.com/software/gesden/verifactu/): the compatible versions and the maintenance fee.
-- [Gesden ONE](https://www.gesdenone.com/): the cloud product.
+- [Gesden ONE · Infomed](https://www.infomedsoftware.com/software/gesden/gesden-one/): the cloud product. (`gesdenone.com` has returned a 503 error since at least 15 August 2026.)
+- [Pack Premium · Infomed](https://www.infomedsoftware.com/software/pack-premium/): the module bundle's price, terms and contents.
+- [Veri\*Factu · Infomed](https://www.infomedsoftware.com/software/gesden/verifactu/): compatible versions and the maintenance subscription requirement.
 - [Dentalpin's licence](https://github.com/martinezsalmeron/dentalpin/blob/main/LICENSE) and [source](https://github.com/martinezsalmeron/dentalpin).
 
 Something wrong or out of date in this comparison? [Tell us](https://github.com/martinezsalmeron/dentalpin/discussions) and we will fix it. That goes for Infomed too.

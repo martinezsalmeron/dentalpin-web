@@ -2,6 +2,7 @@
 title: "Dentalpin frente a Odontonet: dos formas de que los datos se queden en tu clínica"
 description: "Comparativa entre Odontonet, instalado en la clínica y con más de 25 años a la espalda, y Dentalpin, open source y autoalojable. Con fuentes y fechas."
 pubDate: 2026-08-10
+updatedDate: 2026-08-15
 tags: [comparativa, odontonet, software-dental]
 ---
 
@@ -37,7 +38,7 @@ Está organizado por **especialidades**: odontología general, ortodoncia, perio
 
 Alrededor del núcleo hay **módulos que se contratan aparte**: inteligencia de negocio, financiación para pacientes, sala de espera, centralita VoIP, firma electrónica, WhatsApp, pagos integrados, check-in, control de fichajes, agenda en app, web del paciente y fidelización. Su propia página los agrupa en packs bajo el reclamo "Ahorra hasta un 50% si los compras en PACKS".
 
-Dos cosas más que publican y que cuentan a su favor. **Verifactu ya está**: "Odontonet es completamente compatible con Verifactu. La transición es rápida, sencilla y sin complicaciones técnicas para tu clínica dental." Y mantienen un **historial de versiones público** en su web, de la 52.2 a la 66.1, que es la señal más honesta que puede dar un fabricante de que el producto se sigue tocando.
+Dos cosas más que publican y que cuentan a su favor. **Verifactu ya está**: "Odontonet es completamente compatible con Verifactu. La transición es rápida, sencilla y sin complicaciones técnicas para tu clínica dental." Y mantienen un **historial de versiones público** en una sección dedicada de su web, de la 52.2 a la 66.1, que es la señal más honesta que puede dar un fabricante de que el producto se sigue tocando.
 
 ## Qué es Dentalpin
 
@@ -125,14 +126,15 @@ Lo que nosotros ponemos encima es otra cosa: el código publicado, el precio pub
 
 ## Fuentes
 
-Todas consultadas el 10 de agosto de 2026:
+Consultadas el 10 de agosto de 2026, y revisadas de nuevo el 15 de agosto de 2026 (sin cambios de fondo; se corrige la cita del historial de versiones a la página donde realmente está publicado):
 
 - [Quiénes somos · Odontonet](https://www.odontonet.es/quienes-somos/): Aseting Informática S.L., fundada en 1989, más de 25 años en software dental, más de 3500 profesionales, sello PYME Innovadora.
 - [Preguntas frecuentes](https://www.odontonet.es/faq/): dónde viven los datos, requisitos, Windows y macOS por virtualización, copias de seguridad, cambio de programa, tres versiones, qué incluye el mantenimiento.
 - [Precios](https://www.odontonet.es/precios/): configuración base de 3 puestos y 1 especialidad, funcionalidades incluidas, ampliaciones. Sin cifras.
 - [Módulos](https://www.odontonet.es/modulos/): catálogo de módulos y packs.
 - [Odontología general](https://www.odontonet.es/odontologia-general/): odontograma 3D, presupuestos, consentimientos, receta electrónica.
-- [Inicio](https://www.odontonet.es/): compatibilidad con Verifactu e historial de versiones.
+- [Inicio](https://www.odontonet.es/): compatibilidad con Verifactu.
+- [Versiones anteriores](https://www.odontonet.es/versiones-anteriores): historial de versiones público, de la 52.2 a la 66.1.
 - [Licencia de Dentalpin](https://github.com/martinezsalmeron/dentalpin/blob/main/LICENSE) y [código fuente](https://github.com/martinezsalmeron/dentalpin).
 
 ¿Ves algo mal o desactualizado en esta comparativa? [Dínoslo](https://github.com/martinezsalmeron/dentalpin/discussions) y lo corregimos. Vale también si eres de Aseting.
