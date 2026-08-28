@@ -20,6 +20,11 @@ const domains: { key: ModuleDomain; label: string; tagline: string }[] = [
 
 const moduleHref = (mod: ModuleEntry) => pagePath(locale, 'features', moduleSlug(mod, locale));
 const totalModules = MODULES.length;
+
+const heroAlt = (slug: string) => {
+  const mod = MODULES.find((m) => m.slug === slug);
+  return mod ? `Dentalpin · ${localised(mod.title, locale)}` : 'Dentalpin';
+};
 ---
 
 <BaseLayout locale={locale} title={`${dict.nav.features} · Dentalpin`}>
@@ -70,12 +75,12 @@ const totalModules = MODULES.length;
       <div class="md:col-span-2 md:row-span-2">
         <ScreenshotPlaceholder
           file="dental-chart.png"
-          alt="Dentalpin · Odontograma"
+          alt={heroAlt('odontograma')}
           class="h-full"
         />
       </div>
-      <ScreenshotPlaceholder file="schedule-week.png" alt="Dentalpin · Agenda" />
-      <ScreenshotPlaceholder file="budgets.png" alt="Dentalpin · Presupuestos" />
+      <ScreenshotPlaceholder file="schedule-week.png" alt={heroAlt('agenda')} />
+      <ScreenshotPlaceholder file="budgets.png" alt={heroAlt('presupuestos')} />
     </div>
   </Section>
 

@@ -16,7 +16,8 @@
     "openMenu": "Abrir menu",
     "closeMenu": "Fechar menu",
     "blog": "Blog",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "ariaMain": "Principal"
   },
   "megamenu": {
     "trigger": "Funcionalidades",
@@ -609,88 +610,6 @@
         "dentalpin": "Abre os relatórios e vê o que faturou, por tratamento e por profissional.",
         "image": "scene-owner-reports.png",
         "imageAlt": "Dona de clínica a rever relatórios no seu escritório"
-      }
-    ]
-  },
-  "whereYouWork": {
-    "eyebrow": "ONDE VOCÊ TRABALHAR, O DENTALPIN VAI",
-    "title": "A clínica não vive só no computador do escritório.",
-    "lead": "Você entra e sai, salta da cadeira para o balcão, responde a uma mensagem de casa. O seu software devia mover-se consigo.",
-    "syncPill": "Sincronizado em tempo real",
-    "scenes": [
-      {
-        "device": "Tablet",
-        "title": "Na cadeira",
-        "body": "Tablet ao lado do paciente: odontograma, histórico e fotografias a um toque. Sem se levantar para escrever."
-      },
-      {
-        "device": "Balcão",
-        "title": "No balcão",
-        "body": "Agenda do dia, chamadas por fazer, pagamentos e orçamentos assinados. Um único ecrã."
-      },
-      {
-        "device": "Telefone",
-        "title": "Fora da clínica",
-        "body": "Ver a agenda, aprovar um orçamento ou responder a uma urgência do telefone. De qualquer lugar."
-      }
-    ]
-  },
-  "demo": {
-    "eyebrow": "DEMO ONLINE",
-    "title": "Experimente você mesmo, sem instalar nada.",
-    "body": "Abrimos-lhe uma clínica de exemplo no navegador, já com pacientes e marcações. Veja como se sente, marque uma consulta, faça um orçamento. Não tem de se registar, nem deixar o email, nem descarregar nada.",
-    "url": "demo.dentalpin.com",
-    "stepsLabel": "Como entrar",
-    "steps": [
-      "Carregue no botão «Abrir a demo». Abre noutro separador.",
-      "Entre com a conta e a palavra-passe que vê abaixo.",
-      "Mexa sem medo: pacientes, agenda, orçamentos, faturas…"
-    ],
-    "credentials": {
-      "label": "Entre com isto",
-      "userLabel": "Conta",
-      "passwordLabel": "Palavra-passe",
-      "admin": "admin@demo.clinic",
-      "password": "demo1234",
-      "rolesNote": "Também há acessos de dentista, higienista, assistente e balcão. Todos com a mesma palavra-passe."
-    },
-    "disclaimer": "Todas as noites apagamos os dados. Não use dados reais de pacientes.",
-    "noInstall": "Funciona em qualquer computador, tablet ou telefone. Só precisa de um navegador.",
-    "cta": "Abrir a demo"
-  },
-  "stack": {
-    "eyebrow": "STACK TÉCNICA",
-    "title": "Uma stack moderna e deliberadamente aborrecida.",
-    "body": "Escolhemos o que escolhem as equipas sérias. Nada de exótico, nada de herdado."
-  },
-  "oss": {
-    "eyebrow": "LICENÇA",
-    "title": "BSL 1.1 hoje. Apache 2.0 amanhã.",
-    "body": "O Dentalpin é publicado sob a Business Source License 1.1: grátis para qualquer clínica, grátis para ler, fazer fork, contribuir e construir módulos por cima. A única linha vermelha: não pode lançar o Dentalpin como SaaS dentário concorrente. Ao fim de quatro anos, cada versão passa automaticamente a Apache 2.0.",
-    "ctaLicense": "Ler a licença completa →",
-    "ctaRepo": "Ver o repositório",
-    "sponsors": {
-      "title": "Apoie o projeto",
-      "github": "GitHub Sponsors",
-      "opencollective": "OpenCollective",
-      "backed": "Apoiado pela Dentaltix"
-    }
-  },
-  "roadmap": {
-    "eyebrow": "ROADMAP",
-    "title": "O que vem aí (sem prometer datas).",
-    "items": [
-      {
-        "title": "Módulo de pagamentos dedicado",
-        "body": "Ciclo completo: cobrar, devolver, anular, reconciliar. Com eventos para que os outros módulos reajam sozinhos."
-      },
-      {
-        "title": "Mais línguas",
-        "body": "DE e o que a comunidade acrescentar. A arquitetura já aguenta."
-      },
-      {
-        "title": "Agentes de IA a sério",
-        "body": "Agenda inteligente, seguimentos automáticos e apoio à decisão clínica. Sempre com uma pessoa a aprovar antes de executar."
       }
     ]
   },
@@ -1563,7 +1482,7 @@
     "setup": {
       "eyebrow": "ATIVAÇÃO",
       "title": "Quatro passos e já pode enviar.",
-      "body": "Instala-se em Admin → Módulos como qualquer módulo da comunidade. A configuração vive numa página de definições multilingue.",
+      "body": "Instala-se em Admin → Módulos como qualquer módulo da comunidade. A configuração vive numa página de definições traduzida nos 9 idiomas da app.",
       "steps": [
         {
           "title": "Instale o módulo",

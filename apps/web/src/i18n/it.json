@@ -16,7 +16,8 @@
     "openMenu": "Apri il menu",
     "closeMenu": "Chiudi il menu",
     "blog": "Blog",
-    "contact": "Contatti"
+    "contact": "Contatti",
+    "ariaMain": "Principale"
   },
   "megamenu": {
     "trigger": "Funzionalità",
@@ -609,88 +610,6 @@
         "dentalpin": "Apri i report e vedi quanto hai fatturato, per trattamento e per professionista.",
         "image": "scene-owner-reports.png",
         "imageAlt": "Titolare di studio che controlla i report nel suo ufficio"
-      }
-    ]
-  },
-  "whereYouWork": {
-    "eyebrow": "DOVE LAVORI TU, DENTALPIN C’È",
-    "title": "Lo studio non vive solo sul PC dell’ufficio.",
-    "lead": "Entri ed esci, passi dalla poltrona alla reception, rispondi a un messaggio da casa. Il tuo software dovrebbe muoversi con te.",
-    "syncPill": "Sincronizzato in tempo reale",
-    "scenes": [
-      {
-        "device": "Tablet",
-        "title": "Alla poltrona",
-        "body": "Tablet accanto al paziente: odontogramma, cartella e foto a un tocco. Senza alzarsi per digitare."
-      },
-      {
-        "device": "Reception",
-        "title": "In reception",
-        "body": "Agenda del giorno, chiamate da fare, incassi e preventivi firmati. Una sola schermata."
-      },
-      {
-        "device": "Telefono",
-        "title": "Fuori dallo studio",
-        "body": "Vedere l’agenda, approvare un preventivo o rispondere a un’urgenza dal telefono. Da qualsiasi posto."
-      }
-    ]
-  },
-  "demo": {
-    "eyebrow": "DEMO ONLINE",
-    "title": "Provalo tu stesso, senza installare niente.",
-    "body": "Ti apriamo uno studio di esempio nel browser, già con pazienti e appuntamenti. Guarda come si usa, segna un appuntamento, fai un preventivo. Non devi registrarti, né lasciare l’email, né scaricare nulla.",
-    "url": "demo.dentalpin.com",
-    "stepsLabel": "Come entrare",
-    "steps": [
-      "Premi il pulsante “Apri la demo”. Si apre in un’altra scheda.",
-      "Entra con l’utente e la password che vedi qui sotto.",
-      "Prova tutto senza paura: pazienti, agenda, preventivi, fatture…"
-    ],
-    "credentials": {
-      "label": "Entra con questi dati",
-      "userLabel": "Utente",
-      "passwordLabel": "Password",
-      "admin": "admin@demo.clinic",
-      "password": "demo1234",
-      "rolesNote": "Ci sono anche accessi come odontoiatra, igienista, assistente e reception. Tutti con la stessa password."
-    },
-    "disclaimer": "Ogni notte cancelliamo i dati. Non usare dati reali di pazienti.",
-    "noInstall": "Funziona su qualsiasi computer, tablet o telefono. Ti serve solo un browser.",
-    "cta": "Apri la demo"
-  },
-  "stack": {
-    "eyebrow": "TECH STACK",
-    "title": "Uno stack moderno e volutamente noioso.",
-    "body": "Scegliamo quello che scelgono i team seri. Niente di esotico, niente di ereditato."
-  },
-  "oss": {
-    "eyebrow": "LICENZA",
-    "title": "BSL 1.1 oggi. Apache 2.0 domani.",
-    "body": "Dentalpin è pubblicato sotto Business Source License 1.1: gratis per qualsiasi studio, gratis da leggere, forkare, migliorare e su cui costruire moduli. L’unica linea rossa: non puoi lanciare Dentalpin come SaaS odontoiatrico concorrente. Dopo quattro anni, ogni release passa automaticamente ad Apache 2.0.",
-    "ctaLicense": "Leggi la licenza completa →",
-    "ctaRepo": "Vedi il repository",
-    "sponsors": {
-      "title": "Sostieni il progetto",
-      "github": "GitHub Sponsors",
-      "opencollective": "OpenCollective",
-      "backed": "Sostenuto da Dentaltix"
-    }
-  },
-  "roadmap": {
-    "eyebrow": "ROADMAP",
-    "title": "Quello che arriva (senza promettere date).",
-    "items": [
-      {
-        "title": "Modulo Payments dedicato",
-        "body": "Ciclo completo: incassare, rimborsare, annullare, riconciliare. Con eventi perché gli altri moduli reagiscano da soli."
-      },
-      {
-        "title": "Più lingue",
-        "body": "PT, FR, DE, IT e quello che aggiungerà la community. L’architettura già lo regge."
-      },
-      {
-        "title": "Agenti IA veri",
-        "body": "Agenda intelligente, richiami automatici e supporto alla decisione clinica. Sempre con una persona che approva prima di eseguire."
       }
     ]
   },
@@ -1563,7 +1482,7 @@
     "setup": {
       "eyebrow": "ATTIVAZIONE",
       "title": "Quattro passaggi e si invia.",
-      "body": "Si installa da Admin → Moduli come qualsiasi modulo della community. La configurazione vive in una pagina di impostazioni bilingue.",
+      "body": "Si installa da Admin → Moduli come qualsiasi modulo della community. La configurazione vive in una pagina di impostazioni tradotta nelle 9 lingue dell’app.",
       "steps": [
         {
           "title": "Installa il modulo",

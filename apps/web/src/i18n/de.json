@@ -16,7 +16,8 @@
     "openMenu": "Menü öffnen",
     "closeMenu": "Menü schließen",
     "blog": "Blog",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "ariaMain": "Hauptnavigation"
   },
   "megamenu": {
     "trigger": "Funktionen",
@@ -609,88 +610,6 @@
         "dentalpin": "Sie öffnen die Auswertungen und sehen den Umsatz, pro Behandlung und pro Behandler.",
         "image": "scene-owner-reports.png",
         "imageAlt": "Praxisinhaberin sieht sich in ihrem Büro Auswertungen an"
-      }
-    ]
-  },
-  "whereYouWork": {
-    "eyebrow": "WO SIE ARBEITEN, DA IST DENTALPIN",
-    "title": "Die Praxis lebt nicht nur auf dem Rechner im Büro.",
-    "lead": "Sie gehen rein und raus, springen vom Stuhl zur Rezeption, beantworten eine Nachricht von zu Hause. Ihre Software sollte mitgehen.",
-    "syncPill": "In Echtzeit synchronisiert",
-    "scenes": [
-      {
-        "device": "Tablet",
-        "title": "Am Behandlungsstuhl",
-        "body": "Tablet neben dem Patienten: Zahnschema, Historie und Fotos, ein Fingertipp entfernt. Ohne aufzustehen, um zu tippen."
-      },
-      {
-        "device": "Rezeption",
-        "title": "An der Rezeption",
-        "body": "Tagesplan, offene Rückrufe, Zahlungen und unterschriebene Kostenvoranschläge. Ein einziger Bildschirm."
-      },
-      {
-        "device": "Handy",
-        "title": "Außerhalb der Praxis",
-        "body": "Termine sehen, einen Kostenvoranschlag freigeben oder auf einen Notfall antworten, vom Handy aus. Von überall."
-      }
-    ]
-  },
-  "demo": {
-    "eyebrow": "ONLINE-DEMO",
-    "title": "Testen Sie es selbst, ohne etwas zu installieren.",
-    "body": "Wir öffnen Ihnen eine Beispielpraxis im Browser, mit Patienten und Terminen. Sehen Sie, wie es sich anfühlt, tragen Sie einen Termin ein, machen Sie einen Kostenvoranschlag. Ohne Registrierung, ohne E-Mail, ohne Download.",
-    "url": "demo.dentalpin.com",
-    "stepsLabel": "So kommen Sie rein",
-    "steps": [
-      "Klicken Sie auf „Demo öffnen“. Sie öffnet sich in einem neuen Tab.",
-      "Melden Sie sich mit dem Benutzer und dem Passwort unten an.",
-      "Probieren Sie alles aus: Patienten, Termine, Kostenvoranschläge, Rechnungen…"
-    ],
-    "credentials": {
-      "label": "Damit kommen Sie rein",
-      "userLabel": "Benutzer",
-      "passwordLabel": "Passwort",
-      "admin": "admin@demo.clinic",
-      "password": "demo1234",
-      "rolesNote": "Es gibt auch Zugänge als Zahnärztin, Dentalhygienikerin, Assistenz und Rezeption. Alle mit demselben Passwort."
-    },
-    "disclaimer": "Jede Nacht löschen wir die Daten. Nutzen Sie keine echten Patientendaten.",
-    "noInstall": "Läuft auf jedem Rechner, Tablet oder Handy. Sie brauchen nur einen Browser.",
-    "cta": "Demo öffnen"
-  },
-  "stack": {
-    "eyebrow": "TECH-STACK",
-    "title": "Ein moderner und bewusst langweiliger Stack.",
-    "body": "Wir wählen, was ernsthafte Teams wählen. Nichts Exotisches, nichts Geerbtes."
-  },
-  "oss": {
-    "eyebrow": "LIZENZ",
-    "title": "BSL 1.1 heute. Apache 2.0 morgen.",
-    "body": "Dentalpin erscheint unter der Business Source License 1.1: kostenlos für jede Praxis, kostenlos zum Lesen, Forken, Beitragen und für eigene Module. Die einzige rote Linie: Sie dürfen Dentalpin nicht als konkurrierendes Dental-SaaS anbieten. Nach vier Jahren geht jedes Release automatisch in Apache 2.0 über.",
-    "ctaLicense": "Die ganze Lizenz lesen →",
-    "ctaRepo": "Repository ansehen",
-    "sponsors": {
-      "title": "Das Projekt unterstützen",
-      "github": "GitHub Sponsors",
-      "opencollective": "OpenCollective",
-      "backed": "Unterstützt von Dentaltix"
-    }
-  },
-  "roadmap": {
-    "eyebrow": "ROADMAP",
-    "title": "Was kommt (ohne Datumsversprechen).",
-    "items": [
-      {
-        "title": "Eigenes Payments-Modul",
-        "body": "Der ganze Zyklus: kassieren, erstatten, stornieren, abgleichen. Mit Events, damit die anderen Module von selbst reagieren."
-      },
-      {
-        "title": "Mehr Sprachen",
-        "body": "PT, FR, DE, IT und was die Community beisteuert. Die Architektur trägt es schon."
-      },
-      {
-        "title": "Echte KI-Agenten",
-        "body": "Intelligente Terminplanung, automatisches Nachfassen und Unterstützung bei klinischen Entscheidungen. Immer mit einem Menschen, der vor der Ausführung freigibt."
       }
     ]
   },
@@ -1563,7 +1482,7 @@
     "setup": {
       "eyebrow": "AKTIVIERUNG",
       "title": "Vier Schritte und Sie senden.",
-      "body": "Die Installation läuft über Admin → Module wie bei jedem Community-Modul. Die Konfiguration liegt auf einer zweisprachigen Einstellungsseite.",
+      "body": "Die Installation läuft über Admin → Module wie bei jedem Community-Modul. Die Konfiguration liegt auf einer Einstellungsseite, die in alle 9 Sprachen der App übersetzt ist.",
       "steps": [
         {
           "title": "Modul installieren",

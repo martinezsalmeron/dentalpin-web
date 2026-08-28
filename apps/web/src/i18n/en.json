@@ -16,7 +16,8 @@
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "blog": "Blog",
-    "contact": "Contact"
+    "contact": "Contact",
+    "ariaMain": "Main"
   },
   "megamenu": {
     "trigger": "Features",
@@ -609,88 +610,6 @@
         "dentalpin": "Open reports and see what you billed, by treatment and by practitioner.",
         "image": "scene-owner-reports.png",
         "imageAlt": "Clinic owner reviewing reports in the office"
-      }
-    ]
-  },
-  "whereYouWork": {
-    "eyebrow": "DENTALPIN GOES WHERE YOU WORK",
-    "title": "Your clinic doesn't only live on the back-office PC.",
-    "lead": "You walk in and out, jump from the chair to reception, answer a message from home. Your software should move with you.",
-    "syncPill": "Synced in real time",
-    "scenes": [
-      {
-        "device": "Tablet",
-        "title": "Chair-side",
-        "body": "Tablet next to the patient: odontogram, history and photos one tap away. No need to stand up and type."
-      },
-      {
-        "device": "Reception",
-        "title": "At reception",
-        "body": "Today's calendar, missed calls, pending payments and signed quotes. One screen."
-      },
-      {
-        "device": "Mobile",
-        "title": "Outside the clinic",
-        "body": "Check the calendar, approve a quote or answer an emergency on your phone. From anywhere."
-      }
-    ]
-  },
-  "demo": {
-    "eyebrow": "ONLINE DEMO",
-    "title": "Try it yourself, no install needed.",
-    "body": "We spin up a sample clinic in your browser, already filled with patients and appointments. Have a look around, book an appointment, draft a quote. No sign-up, no email required, nothing to download.",
-    "url": "demo.dentalpin.com",
-    "stepsLabel": "How to get in",
-    "steps": [
-      "Click the \"Open the demo\" button. It opens in a new tab.",
-      "Sign in with the username and password shown below.",
-      "Click around freely: patients, calendar, quotes, invoices…"
-    ],
-    "credentials": {
-      "label": "Use these to log in",
-      "userLabel": "Username",
-      "passwordLabel": "Password",
-      "admin": "admin@demo.clinic",
-      "password": "demo1234",
-      "rolesNote": "There are also dentist, hygienist, assistant and reception logins. Same password for all of them."
-    },
-    "disclaimer": "We wipe everything every night. Don't upload real patient data.",
-    "noInstall": "Works on any computer, tablet or phone. All you need is a browser.",
-    "cta": "Open the demo"
-  },
-  "stack": {
-    "eyebrow": "TECH STACK",
-    "title": "A modern, deliberately boring stack.",
-    "body": "We pick what serious teams pick. Nothing exotic, nothing legacy."
-  },
-  "oss": {
-    "eyebrow": "LICENSE",
-    "title": "BSL 1.1 today. Apache 2.0 tomorrow.",
-    "body": "Dentalpin ships under Business Source License 1.1: free for any clinic, free to read, fork, contribute and build modules on top. The only line in the sand: you can't launch Dentalpin as a competing dental SaaS. After four years, each release flips automatically to Apache 2.0.",
-    "ctaLicense": "Read the full license →",
-    "ctaRepo": "Browse the repository",
-    "sponsors": {
-      "title": "Support the project",
-      "github": "GitHub Sponsors",
-      "opencollective": "OpenCollective",
-      "backed": "Backed by Dentaltix"
-    }
-  },
-  "roadmap": {
-    "eyebrow": "ROADMAP",
-    "title": "What's next (without pretending we have dates).",
-    "items": [
-      {
-        "title": "Dedicated Payments module",
-        "body": "Full lifecycle: charge, refund, void, reconcile. With events so other modules can react on their own."
-      },
-      {
-        "title": "More locales",
-        "body": "PT, FR, DE and whatever the community ships next. The architecture is already there."
-      },
-      {
-        "title": "Real AI agents",
-        "body": "Smart scheduling, automatic follow-ups and clinical decision support. Always with a human in the approval loop."
       }
     ]
   },
@@ -1563,7 +1482,7 @@
     "setup": {
       "eyebrow": "ACTIVATION",
       "title": "Four steps and you’re sending.",
-      "body": "Install it from Admin → Modules like any community module. Configuration lives on a bilingual settings page.",
+      "body": "Install it from Admin → Modules like any community module. Configuration lives on a settings page translated into all 9 app languages.",
       "steps": [
         {
           "title": "Install the module",

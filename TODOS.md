@@ -1,23 +1,20 @@
-# Capturas pendientes (bloqueante para quitar placeholders)
+# Capturas pendientes (los placeholders desaparecen solos al existir el PNG)
 
 Deja los archivos en `apps/web/public/screenshots/`. En cuanto existan, el
 componente `ScreenshotPlaceholder.astro` los renderiza automáticamente.
 
 Resolución mínima 1440×900, PNG, Chrome tema claro:
 
-- [ ] `home.png` — dashboard principal (hero).
-- [ ] `dental-chart.png` — odontograma.
-- [ ] `schedule-week.png` — agenda semanal.
-- [ ] `schedule-day.png` — agenda diaria.
-- [ ] `patients.png` — lista pacientes + detalle.
-- [ ] `patient-timeline.png` — timeline del paciente.
-- [ ] `treatment-plan.png` — plan de tratamiento.
-- [ ] `budgets.png` — builder de presupuestos.
-- [ ] `invoices.png` — facturación.
-- [ ] `reports.png` — dashboard de reportes.
 - [ ] `modules-manager.png` — gestor de módulos (install/uninstall).
 - [ ] `api-docs.png` — OpenAPI auto-generada.
-- [ ] `ai-approval-queue.png` — cola de aprobación (o placeholder prolongado, es roadmap).
+- [ ] `verifactu-dashboard.png` — pantalla Veri*Factu.
+- [ ] `whatsapp-conversation.png` — conversación WhatsApp desde la ficha.
+- [ ] `gst-invoice.png` — factura con desglose GST (clínica demo india, `--lang en --country in`).
+- [ ] `recalls.png` — lista mensual de recitas.
+- [ ] `migration-import.png` — importador de migración.
+
+Hechas: home, dental-chart, schedule-week/day/canban, patients, patient-timeline,
+treatment-plan, budgets, invoices, reports, ai-copilot, periodontogram.
 
 ---
 
@@ -28,7 +25,6 @@ se haya validado el flujo básico (demo → lead → email), abordar en este ord
 
 ## Contenido
 
-- [ ] Blog con Content Collections + feed RSS (`apps/web/src/pages/[lang]/blog/`).
 - [ ] Casos de estudio / testimonios reales de clínicas.
 - [ ] Pricing page con toggle mensual/anual y tabla comparativa de planes.
 - [ ] Integración CMS (Directus self-host en Coolify) cuando marketing no-dev escriba.

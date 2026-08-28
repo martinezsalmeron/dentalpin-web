@@ -57,6 +57,5 @@ Tokens CSS idénticos a la app (`DESIGN.md` en el repo de producto).
 
 ## i18n
 
-Rutas con prefijo: `/es/` (default) y `/en/`.
-- `apps/web`: i18n nativo Astro.
-- `apps/docs`: i18n nativo Starlight.
+- `apps/web`: 9 locales bajo `/[lang]/` — `es` (default), `en`, `fr`, `pt`, `de`, `it`, `pl` más las variantes regionales `pt-br` y `es-mx`. Sistema propio en `apps/web/src/i18n/index.ts`: un diccionario JSON plano por idioma, tabla de slugs por página (`LOCALE_PATHS`) y las variantes como parches (`*.overrides.json`) sobre el idioma padre. El copy de módulos vive en `apps/web/src/data/modules.ts`.
+- `apps/docs`: i18n nativo Starlight (`es` y `en`).

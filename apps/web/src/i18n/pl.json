@@ -16,7 +16,8 @@
     "openMenu": "Otwórz menu",
     "closeMenu": "Zamknij menu",
     "blog": "Blog",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "ariaMain": "Główna"
   },
   "megamenu": {
     "trigger": "Funkcje",
@@ -609,88 +610,6 @@
         "dentalpin": "Otwierasz raporty i widzisz, co zafakturowałeś, po zabiegu i po lekarzu.",
         "image": "scene-owner-reports.png",
         "imageAlt": "Właścicielka kliniki przeglądająca raporty w swoim gabinecie"
-      }
-    ]
-  },
-  "whereYouWork": {
-    "eyebrow": "GDZIE TY PRACUJESZ, TAM JEST DENTALPIN",
-    "title": "Klinika nie mieszka wyłącznie w komputerze w gabinecie.",
-    "lead": "Wchodzisz i wychodzisz, skaczesz od fotela do recepcji, odpowiadasz na wiadomość z domu. Twój program powinien ruszać się razem z tobą.",
-    "syncPill": "Synchronizacja w czasie rzeczywistym",
-    "scenes": [
-      {
-        "device": "Tablet",
-        "title": "Przy fotelu",
-        "body": "Tablet obok pacjenta: diagram zębowy, dokumentacja i zdjęcia na jedno dotknięcie. Bez wstawania do klawiatury."
-      },
-      {
-        "device": "Recepcja",
-        "title": "W recepcji",
-        "body": "Kalendarz dnia, telefony do wykonania, płatności i podpisane kosztorysy. Jeden ekran."
-      },
-      {
-        "device": "Telefon",
-        "title": "Poza kliniką",
-        "body": "Zobaczyć kalendarz, zatwierdzić kosztorys albo odpowiedzieć na nagły przypadek z telefonu. Z dowolnego miejsca."
-      }
-    ]
-  },
-  "demo": {
-    "eyebrow": "DEMO ONLINE",
-    "title": "Wypróbuj sam, bez instalowania czegokolwiek.",
-    "body": "Otwieramy ci przykładową klinikę w przeglądarce, już z pacjentami i wizytami. Zobacz, jak się z tym pracuje, zapisz wizytę, zrób kosztorys. Nie musisz się rejestrować, zostawiać maila ani nic pobierać.",
-    "url": "demo.dentalpin.com",
-    "stepsLabel": "Jak wejść",
-    "steps": [
-      "Naciśnij przycisk „Otwórz demo\". Otworzy się w nowej karcie.",
-      "Zaloguj się użytkownikiem i hasłem, które widzisz poniżej.",
-      "Klikaj bez obaw: pacjenci, kalendarz, kosztorysy, faktury…"
-    ],
-    "credentials": {
-      "label": "Zaloguj się tym",
-      "userLabel": "Użytkownik",
-      "passwordLabel": "Hasło",
-      "admin": "admin@demo.clinic",
-      "password": "demo1234",
-      "rolesNote": "Są też dostępy jako lekarz, higienistka, asystentka i recepcja. Wszystkie z tym samym hasłem."
-    },
-    "disclaimer": "Co noc czyścimy dane. Nie używaj prawdziwych danych pacjentów.",
-    "noInstall": "Działa na każdym komputerze, tablecie i telefonie. Potrzebujesz tylko przeglądarki.",
-    "cta": "Otwórz demo"
-  },
-  "stack": {
-    "eyebrow": "TECH STACK",
-    "title": "Stack nowoczesny i celowo nudny.",
-    "body": "Wybieramy to, co wybierają poważne zespoły. Nic egzotycznego, nic odziedziczonego."
-  },
-  "oss": {
-    "eyebrow": "LICENCJA",
-    "title": "BSL 1.1 dziś. Apache 2.0 jutro.",
-    "body": "Dentalpin jest publikowany na licencji Business Source License 1.1: darmowy dla każdej kliniki, darmowy do czytania, forkowania, współtworzenia i budowania modułów na nim. Jedna czerwona linia: nie możesz wypuścić Dentalpina jako konkurencyjnego SaaS-a dla stomatologii. Po czterech latach każde wydanie automatycznie przechodzi na Apache 2.0.",
-    "ctaLicense": "Przeczytaj całą licencję →",
-    "ctaRepo": "Zobacz repozytorium",
-    "sponsors": {
-      "title": "Wesprzyj projekt",
-      "github": "GitHub Sponsors",
-      "opencollective": "OpenCollective",
-      "backed": "Wspierane przez Dentaltix"
-    }
-  },
-  "roadmap": {
-    "eyebrow": "ROADMAP",
-    "title": "Co przed nami (bez obiecywania dat).",
-    "items": [
-      {
-        "title": "Dedykowany moduł Payments",
-        "body": "Pełny cykl: pobrać, zwrócić, anulować, uzgodnić. Ze zdarzeniami, żeby reszta modułów reagowała sama."
-      },
-      {
-        "title": "Więcej języków",
-        "body": "PT, FR, DE i to, co dorzuci społeczność. Architektura już to udźwignie."
-      },
-      {
-        "title": "Prawdziwi agenci AI",
-        "body": "Inteligentny kalendarz, automatyczne kontakty po wizycie i wsparcie decyzji klinicznych. Zawsze z człowiekiem, który zatwierdza przed wykonaniem."
       }
     ]
   },
@@ -1563,7 +1482,7 @@
     "setup": {
       "eyebrow": "WŁĄCZENIE",
       "title": "Cztery kroki i wysyłasz.",
-      "body": "Instaluje się z Admin → Moduły jak każdy moduł społeczności. Konfiguracja mieszka na dwujęzycznej stronie ustawień.",
+      "body": "Instaluje się z Admin → Moduły jak każdy moduł społeczności. Konfiguracja mieszka na stronie ustawień przetłumaczonej na 9 języków aplikacji.",
       "steps": [
         {
           "title": "Zainstaluj moduł",

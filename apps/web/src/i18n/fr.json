@@ -16,7 +16,8 @@
     "openMenu": "Ouvrir le menu",
     "closeMenu": "Fermer le menu",
     "blog": "Blog",
-    "contact": "Contact"
+    "contact": "Contact",
+    "ariaMain": "Principale"
   },
   "megamenu": {
     "trigger": "Fonctionnalités",
@@ -609,88 +610,6 @@
         "dentalpin": "Vous ouvrez les rapports et vous voyez ce que vous avez facturé, par acte et par praticien.",
         "image": "scene-owner-reports.png",
         "imageAlt": "Propriétaire de cabinet consultant ses rapports dans son bureau"
-      }
-    ]
-  },
-  "whereYouWork": {
-    "eyebrow": "LÀ OÙ VOUS TRAVAILLEZ, DENTALPIN VOUS SUIT",
-    "title": "Le cabinet ne vit pas seulement sur le PC du bureau.",
-    "lead": "Vous entrez et sortez, vous passez du fauteuil à l'accueil, vous répondez à un message depuis chez vous. Votre logiciel devrait bouger avec vous.",
-    "syncPill": "Synchronisé en temps réel",
-    "scenes": [
-      {
-        "device": "Tablette",
-        "title": "Au fauteuil",
-        "body": "Tablette à côté du patient : odontogramme, dossier et photos en un geste. Sans se lever pour taper."
-      },
-      {
-        "device": "Accueil",
-        "title": "À l'accueil",
-        "body": "Agenda du jour, appels à passer, encaissements et devis signés. Un seul écran."
-      },
-      {
-        "device": "Mobile",
-        "title": "Hors du cabinet",
-        "body": "Voir l'agenda, valider un devis ou répondre à une urgence depuis votre téléphone. De n'importe où."
-      }
-    ]
-  },
-  "demo": {
-    "eyebrow": "DÉMO EN LIGNE",
-    "title": "Essayez par vous-même, sans rien installer.",
-    "body": "On vous ouvre un cabinet d'exemple dans votre navigateur, déjà rempli de patients et de rendez-vous. Regardez ce que ça donne, posez un rendez-vous, faites un devis. Sans inscription, sans laisser votre email, sans rien télécharger.",
-    "url": "demo.dentalpin.com",
-    "stepsLabel": "Comment entrer",
-    "steps": [
-      "Cliquez sur « Ouvrir la démo ». Elle s'ouvre dans un autre onglet.",
-      "Connectez-vous avec l'identifiant et le mot de passe ci-dessous.",
-      "Essayez tout sans crainte : patients, agenda, devis, factures…"
-    ],
-    "credentials": {
-      "label": "Connectez-vous avec ceci",
-      "userLabel": "Identifiant",
-      "passwordLabel": "Mot de passe",
-      "admin": "admin@demo.clinic",
-      "password": "demo1234",
-      "rolesNote": "Il y a aussi des accès praticien, hygiéniste, assistante et accueil. Tous avec le même mot de passe."
-    },
-    "disclaimer": "Les données sont effacées chaque nuit. N'utilisez pas de vraies données de patients.",
-    "noInstall": "Fonctionne sur n'importe quel ordinateur, tablette ou téléphone. Il suffit d'un navigateur.",
-    "cta": "Ouvrir la démo"
-  },
-  "stack": {
-    "eyebrow": "PILE TECHNIQUE",
-    "title": "Une pile moderne et délibérément ennuyeuse.",
-    "body": "Nous choisissons ce que choisissent les équipes sérieuses. Rien d'exotique, rien d'hérité."
-  },
-  "oss": {
-    "eyebrow": "LICENCE",
-    "title": "BSL 1.1 aujourd'hui. Apache 2.0 demain.",
-    "body": "Dentalpin est publié sous Business Source License 1.1 : gratuit pour tout cabinet, gratuit pour lire, forker, contribuer et construire des modules par-dessus. La seule ligne rouge : vous ne pouvez pas lancer Dentalpin comme SaaS dentaire concurrent. Au bout de quatre ans, chaque version passe automatiquement en Apache 2.0.",
-    "ctaLicense": "Lire la licence complète →",
-    "ctaRepo": "Voir le dépôt",
-    "sponsors": {
-      "title": "Soutenir le projet",
-      "github": "GitHub Sponsors",
-      "opencollective": "OpenCollective",
-      "backed": "Soutenu par Dentaltix"
-    }
-  },
-  "roadmap": {
-    "eyebrow": "FEUILLE DE ROUTE",
-    "title": "Ce qui arrive (sans promettre de dates).",
-    "items": [
-      {
-        "title": "Module Paiements dédié",
-        "body": "Le cycle complet : encaisser, rembourser, annuler, rapprocher. Avec des événements pour que les autres modules réagissent tout seuls."
-      },
-      {
-        "title": "Plus de langues",
-        "body": "PT, DE et ce que la communauté ajoutera. L'architecture le supporte déjà."
-      },
-      {
-        "title": "De vrais agents IA",
-        "body": "Agenda intelligent, relances automatiques et aide à la décision clinique. Toujours avec un humain qui valide avant l'exécution."
       }
     ]
   },
@@ -1563,7 +1482,7 @@
     "setup": {
       "eyebrow": "ACTIVATION",
       "title": "Quatre étapes et vous envoyez.",
-      "body": "Il s'installe depuis Admin → Modules comme n'importe quel module de la communauté. La configuration vit sur une page de réglages multilingue.",
+      "body": "Il s'installe depuis Admin → Modules comme n'importe quel module de la communauté. La configuration vit sur une page de réglages traduite dans les 9 langues de l'app.",
       "steps": [
         {
           "title": "Installez le module",
