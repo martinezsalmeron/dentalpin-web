@@ -95,10 +95,9 @@ The market decides the language, not the vendor's nationality:
   Germany, and it carries into Austria and German-speaking Switzerland
   without a second post.
 - OrisDent, XDENT, GipoDental, AlfaDocs, Appuntoo → **IT**. Italy only.
-- **PL has no section in Queue A yet.** The site publishes in Polish, but
-  no Polish vendor has been verified from its own site, and this document
-  bars adding one from memory. Until that verification happens, Polish
-  takes topic posts only.
+- Estomed, ProDentis, Medfile, SmartDental, Proassist → **PL**. Poland
+  only. Verified from their own sites on 28 August 2026; until then
+  Polish took topic posts only.
 
 **A comparison for Brazil or Mexico goes in that market's directory**, not
 in the parent's. `blog/pt-br/dentalpin-vs-simples-dental.md` for a Brazilian
@@ -480,16 +479,16 @@ This is still derivable from the filesystem, so the state rule holds:
 count the comparison slugs already published per locale, take the
 smallest. Nothing new to keep in sync.
 
-The reason is arithmetic. Queue A holds 47 targets grouped by market:
-10 Spanish, 8 English, 7 French, 7 Portuguese, 8 German, 7 Italian. Taken in
+The reason is arithmetic. Queue A holds 91 targets grouped by market:
+19 Spanish (Spain, Latin America and Mexico), 20 English, 11 French,
+11 Portuguese (Portugal and Brazil), 12 German, 11 Italian, 7 Polish. Taken in
 file order at twenty-one comparisons a week, Spanish fills the first week and
 the locales that launched most recently, with the emptiest blogs, wait the
 longest. Rotating gives every language a comparison
 roughly once a month starting from week one, and Polish, German and
 Italian lead the tie-break because they are the newest locales and their
-blogs are still empty. Polish leads it in principle and gets skipped in
-practice until Queue A has a verified Polish section, and Mexico is skipped
-the same way until a Mexican vendor is verified. Brazil is not skipped: A5
+blogs are still empty. Polish and Mexican vendors were verified
+on 28 August 2026, so neither language is skipped any more. Brazil is not skipped: A5
 already holds three verified Brazilian vendors, and their posts belong in
 `blog/pt-br/`.
 
@@ -619,6 +618,10 @@ deserves to be drained first, not because the two need different posts.
 | Odontonet | `dentalpin-vs-odontonet` | Dental-only, already ships Verifactu and WhatsApp — the closest competitor we have, so the hardest post to write honestly. **Check their pricing page: they may publish rates, which would make the usual "no publica precios" line wrong here.** |
 | Klinikare | `dentalpin-vs-klinikare` | Cloud, claims 2.500+ clinics and 20.000+ professionals over 16 years, ISO 27001, own AI features. Multi-vertical (dental, aesthetics, physio), which is a real difference worth stating rather than a weakness |
 | Clinic Cloud | `dentalpin-vs-clinic-cloud` | Cloud-native, SMB. **Checked 14 August 2026: two things this row did not know. It is published by Doctoralia España SL · Doctoralia Internet S.L. and its own *Sobre nosotros* page says "Clinic Cloud forma parte de Doctoralia", so it is a Docplanner-group product, like GipoDental in A7. And it publishes a full four-plan tariff (Mini 29 €, Pro 49 €, Max 79 €, Enterprise "A convenir", all al mes + IVA), so the usual "no publica precios" line is wrong here. The decisive dental detail is in their own plan table: "Odontograma y periodontograma" is absent from Mini, "Consultar" on Pro and included only from Max. The published post is built around that.** |
+| Software Dental Julia (Grupo Kalma) | `dentalpin-vs-julia` | `softwaredentaljulia.es`, verified 28 August 2026. Cloud, dental-only, sold in Spain only per its own site. **Publishes prices: Basic 69 €/mes, Advance 78 €/mes (`/tarifas/`), so the usual "no publica precios" line is wrong here** |
+| Nubimed | `dentalpin-vs-nubimed` | `nubimed.com`, dental vertical at `/software-clinica-dental/`, verified 28 August 2026. Cloud, multi-vertical medical (dental, physio, psychology, aesthetics), a real difference to state plainly, as with Klinikare |
+| DASI | `dentalpin-vs-dasi` | `dasi.es/software-odontologia/`, verified 28 August 2026. 30 years, 700+ clients, Spain and Latin America. Advertises a free tier in its own page title, so it belongs in the `software-clinica-dental-gratis` post too |
+| Dendoo | `dentalpin-vs-dendoo` | `dendoo.es`, verified 28 August 2026. Young SaaS on European AWS, 120+ pilot clients. **Publishes prices: 20-50 €/mes (`/planes-precios`)**. Small vendor with no legal entity visible: verify it still trades the run this is written |
 | — | `alternativa-open-source-gesden` / `open-source-alternative-to-gesden` | Highest-intent query in the whole space |
 | — | `software-clinica-dental-gratis` / `free-dental-practice-software` | Broad head term |
 
@@ -635,7 +638,11 @@ region without a Mexican pitch stays in `blog/es/`.
 | Dentalink | `dentalpin-vs-dentalink` | Leader in Chile, strong across LatAm and Spain |
 | Doctocliq | `dentalpin-vs-doctocliq` | Dental + medical, positions itself LatAm-wide. **Checked 20 August 2026: it publishes a full four-plan tariff in dollars (Gratis USD 0 with a 30 patients/month limit, Individual USD 19, Básico USD 29, Avanzado USD 49, all al mes), so the usual "no publica precios" line is wrong here. Two more things the row did not know: the legal entity is ZOLUPRO S.A.C. (Peru), and its own terms give a fifteen-day window around cancellation to request your data plus deletion within ninety days. Electronic invoicing is "Disponible para Ecuador y Perú" only. Its tariff and its funcionalidades page disagree on whether consentimientos informados are in the Básico plan or a paid add-on; the published post states both and cites each.** |
 | DentalCore | `dentalpin-vs-dentalcore` | Argentina-first, clinical records + AI claims |
-| — | `software-dental-gratis-mexico` | Head term, Mexican phrasing, in `blog/es-mx/`. **No Mexican vendor has been verified from its own site yet: verify two or three before writing this one, or write it without naming any.** |
+| Odontosys | `dentalpin-vs-odontosys` | `odontosys.com` (**the www subdomain does not resolve, always link the apex**), verified 28 August 2026. 25 years, claims 400+ users across 20+ Spanish-speaking countries, cloud on AWS. Argentina-based, sells region-wide, so it stays in `blog/es/` |
+| Dentum | `dentalpin-vs-dentum` | Mexico, so `blog/es-mx/`. `dentum.app`, verified 28 August 2026. "Hecho en México", NOM-004 record, prices in pesos on its own site (they render via JS: confirm the figures the run this is written). Formerly DentOS; no legal entity visible |
+| Medware OdontoWare | `dentalpin-vs-odontoware` | Mexico, so `blog/es-mx/`. `medware.com.mx`, verified 28 August 2026. 19 years, CFDI 4.0. **Publishes prices: 599-4.499 MXN/mes (`/precios`)**. Multi-vertical ERP vendor; the dental product is OdontoWare, and the post is about that product |
+| AgendaPro | `dentalpin-vs-agendapro` | Mexico, so `blog/es-mx/`. `agendapro.com/mx`, verified 28 August 2026. Claims 135.000+ professionals. **Publishes prices: 299-4.500 MXN/mes (`/mx/planes`)**. Heavily multi-vertical (beauty, physio, barbershops) and Chilean in origin: state both plainly, as with Klinikare |
+| — | `software-dental-gratis-mexico` | Head term, Mexican phrasing, in `blog/es-mx/`. **Unblocked 28 August 2026: Dentum, Medware OdontoWare and AgendaPro verified from their own sites. None of the three is actually free, and that honest finding is the post.** |
 
 ### A3 · United States and English-speaking markets — English posts rank here
 
@@ -649,6 +656,18 @@ region without a Mexican pitch stays in `blog/es/`.
 | Software of Excellence (Henry Schein One) | `dentalpin-vs-software-of-excellence` | UK and Asia-Pacific incumbent |
 | NexHealth | `dentalpin-vs-nexhealth` | Patient-experience layer, not a full PMS — say so |
 | Apexo | `dentalpin-vs-apexo` | Open source, offline-first |
+| Denticon (Planet DDS) | `dentalpin-vs-denticon` | `planetdds.com`, verified 28 August 2026. Cloud, claims 13.000+ practices. The US cloud incumbent for groups and DSOs |
+| CareStack | `dentalpin-vs-carestack` | `carestack.com`, verified 28 August 2026. Cloud all-in-one, claims 3.000+ practices, sells in the US and UK |
+| Sensei Cloud (Carestream Dental) | `dentalpin-vs-sensei-cloud` | `gosensei.com`, verified 28 August 2026. Carestream Dental's cloud PMS, a separate brand from its imaging line: cite it as Sensei by Carestream Dental |
+| Practice-Web | `dentalpin-vs-practice-web` | `practice-web.com`, verified 28 August 2026. Since 1988, claims 1.700+ clients. **Publishes prices: 149-322 $/month (`/pricing`)**. Shares code lineage with Open Dental, which makes it the natural second post for the open-source angle: verify how they state that relationship themselves before repeating it |
+| tab32 | `dentalpin-vs-tab32` | `tab32.com` (**www redirects to the apex**), verified 28 August 2026. Cloud, claims 1.000+ practices in 40+ states. **Publishes prices (`/pricing/`)** |
+| Archy | `dentalpin-vs-archy` | `archy.com`, verified 28 August 2026. Cloud, claims 32.000+ active users, "replace 5+ products with one" pitch: the consolidation argument, met head-on |
+| ABELDent (ABELSoft) | `dentalpin-vs-abeldent` | `abeldent.com`, verified 28 August 2026. Canada-first, claims 5.000+ practices, sells both cloud and on-premise, which is our own deployment argument stated by them |
+| Aerona | `dentalpin-vs-aerona` | `aerona.com`, verified 28 August 2026. Cloud, UK and Ireland, claims 6.000 users |
+| ClearDent | `dentalpin-vs-cleardent` | `cleardent.com`, verified 28 August 2026. Canada only, 20+ years, cloud, on-premise and hybrid, data hosted in Canada |
+| Systems for Dentists | `dentalpin-vs-systems-for-dentists` | `sfd.co` (**sfd.co.uk serves a bad certificate, always link sfd.co**), verified 28 August 2026. UK, 30+ years, cloud and on-premise |
+| Oryx | `dentalpin-vs-oryx` | `oryxdental.com` (**the old oryxdentalsoftware.com 301-redirects here, link the new domain**), verified 28 August 2026. Cloud, claims 15.000+ clinicians. **Publishes prices (`/pricing/`)** |
+| iDentalSoft | `dentalpin-vs-identalsoft` | `identalsoft.com`, verified 28 August 2026. Cloud, claims 2.300+ dentists. **Publishes prices (`/dental-software-pricing`)** |
 
 ### A4 · France — French posts rank here
 
@@ -667,8 +686,17 @@ run you write.
 | Veasy (Groupe Visiodent) | `dentalpin-vs-veasy` | `veasy-solution.com` / `visiodent.com`. Cloud-only, sold since 2018, claims "plus de 7 000 utilisateurs"; the group claims 10.000 chirurgiens-dentistes and 500 centres. Acquired by Cegedim in Feb 2024 per Visiodent's own site — the closest French analogue to the cloud-versus-your-server argument |
 | Desmos (Orisha Healthcare) | `dentalpin-vs-desmos` | `healthcare.orisha.com`. Web-only, claims "plus de 8000 utilisateurs au quotidien" and "le logiciel le plus utilisé en centre dentaire". Strong in centres de santé, which is a different buyer from a two-chair cabinet. **Checked 13 August 2026: the "8000 utilisateurs" figure is not on their site today and was not reused. What they publish now is "600 centres de santé déjà équipés" (with "plus de 700 centres équipés" further down the same page) and, on the cabinet page, "plus de 18 000 professionnels de santé" for their dental solutions as a whole. Two things the row did not know: the Centre Dentaire page publishes "Engagement de 48 mois" next to "Tarif sur devis", which is a published contract length with no published price, and the patient portal and quote follow-up are sold as options rather than in the base. The published post is built around both.**|
 | Doctolib Pro | `dentalpin-vs-doctolib` | Enormous brand recognition with French dentists. **Scope it first: establish from doctolib.fr whether Doctolib Pro is a full practice management system for dentists or booking plus agenda, and say exactly which.** Same treatment as NexHealth in A3 — if it is a layer, not a PMS, that is the post |
+| CS Trophy Gestion (Carestream Dental) | `dentalpin-vs-trophy-gestion` | `carestreamdental.com/fr-fr`, verified 28 August 2026. Desktop PMS tied to the Carestream imaging ecosystem, Sesam Vitale and 100% Santé. No discontinuation notice on its page, but check that first: the vendor's visible push is toward Sensei Cloud |
+| Weclever Dental | `dentalpin-vs-weclever` | `weclever-dental.com`, verified 28 August 2026. 100% cloud, HDS, claims 2.000+ chirurgiens-dentistes. **Publishes prices: 68 €/mois par praticien (`/tarifs/`)**. `macdent.fr` redirects here today: MacDent was absorbed, do not write it as a separate target |
+| Matisse (Substances Actives) | `dentalpin-vs-matisse` | `matisse-dentaire.com`, verified 28 August 2026. Since 2003, hybrid local server + cloud, HDS, ISO 27001. Its AI and automation claims are marketing without a source: compare on what is verifiable |
+| Dentra | `dentalpin-vs-dentra` | `dentra.fr`, verified 28 August 2026. 100% cloud, hosted in France. **Publishes prices: 49-149 €/mois on the home page**. Small and young, no legal entity visible: verify it still trades the run this is written |
 | — | `logiciel-dentaire-gratuit` | Head term. Native post, French vendors, not a translation of the Spanish one |
 | — | `alternative-open-source-a-julie` | Highest-intent French query in the space |
+
+Checked 28 August 2026 and **not** added: MacDent (absorbed, `macdent.fr`
+redirects to Weclever), e-dent (Belgian software for the Belgian market),
+and Galaxie (`openxtrem.com`, aimed at multidisciplinary centres de santé,
+not cabinets dentaires).
 
 The French e-invoicing reform is the local counterpart to Verifactu and
 belongs in Queue B as its own French post, not as a translation of the
@@ -715,12 +743,21 @@ type. That is a per-post choice, not a reason to split the queue.
 | Dental Office | Brazil, so `blog/pt-br/`. 25 years, ~40.000 dentists |
 | NewSoft DS (Imaginasoft) | Portugal. `imaginasoft.pt`, claims 30 years, "+2000 clínicas", "+6800 licenças" |
 | Doctusware (Imaginasoft) | Portugal. `doctusware.pt`, cloud-only. Same publisher as NewSoft, so the post has to explain how the two differ. **Checked 11 August 2026: two corrections to this row. The "desde 1997" in the site footer is Imaginasoft's heritage, not the product's: `sobre_nos.html` dates the Doctusware project to 2017 and states "Em 2025 a Imaginasoft adquire a Certain Cypher e o projeto DOCTUSWARE". And it is one of the very few vendors in any market that publishes a full tariff (35 €/mês with 3 users, +8 €/mês each additional), so the usual "não publica preços" line is wrong here. The published post carries both.** |
+| Codental | Brazil, so `blog/pt-br/`. `codental.com.br`, verified 28 August 2026. Cloud, dental-only, claims 20.000+ dentists. **Publishes prices: R$ 89,90-134,90/mês (`/preco`)** |
+| BlueDental (Morelli) | Brazil, so `blog/pt-br/`. `bluedental.com.br`, verified 28 August 2026, CNPJ 65.441.255/0001-35. Markets itself as 100% free, funded by Morelli (orthodontics supplier): the one genuinely free vendor found in any market, so it anchors the `software-odontologico-gratuito` head term, and the free-versus-free comparison has to be careful and fair, as with Appuntoo |
+| INTELIDENTE (Grupo LUME) | Brazil, so `blog/pt-br/`. `intelidente.com`, verified 28 August 2026. 100% online, 8+ years, unlimited professionals, pricing "proportional to patient volume" with no figures |
+| Clínica nas Nuvens (Bionexo) | Brazil, so `blog/pt-br/`. `clinicanasnuvens.com.br`, verified 28 August 2026. Claims 35.000+ users. Multi-vertical (dental, psychology, general medicine): state it plainly |
 | `software-odontologico-gratuito` | Head term, Brazilian phrasing, in `blog/pt-br/`. Native post naming Brazilian vendors, not a translation |
 | `software-gestao-clinica-dentaria-gratis` | Head term, Portuguese phrasing. A different query in the same language, not a variant of the row above |
 
 Checked and **not** added: Globalsoft (Oralcloud, Portugal). Its site
 returned HTTP 403 on 29 July 2026 and could not be verified from a page
-it publishes. It goes in the queue the day it can be.
+it publishes. It goes in the queue the day it can be. Also checked
+28 August 2026 and not added: Odontobox (`odontobox.com.br` does not
+resolve), iDent (`ident.com.br` is a dental education platform, not a
+PMS), DentalSpeed (resells Simples Dental, no PMS of its own), and
+EasyDental (`easydental.com.br` returned HTTP 403 twice; retry with a
+real browser before adding).
 
 ### A6 · Germany — German posts rank here
 
@@ -742,8 +779,18 @@ to be re-sourced the run the post is written.
 | EVIDENT | `dentalpin-vs-evident` | `evident.de`, EVIDENT GmbH. Claims over 50 years and a modular build that "grows with your requirements", so the module argument has to be made on substance, not on the word |
 | ivoris (Computer konkret AG) | `dentalpin-vs-ivoris` | `ivoris.de`. Splits into ivoris dent, ortho and clinic. A per-speciality split is a real difference from one product with modules. **Checked 13 August 2026: the "none of them published a price" line above is wrong for this row. `ivoris.de/preise/` redirects to a full price list PDF (`2026-7-preisliste.pdf`, valid 1.7. to 31.8.2026) with a monthly rent for every product, module and service. It is the only German vendor in A6 that does, and the published post is built around it.** |
 | LinuDent (PHARMATECHNIK) | `dentalpin-vs-linudent` | `linudent.de`. Verify what it is before writing: PHARMATECHNIK's roots are pharmacy software, and the size of the dental line is the first thing to establish |
+| DENSoffice (DENS GmbH) | `dentalpin-vs-densoffice` | `zahnarztsoftware.de` (yes, DENS GmbH operates that generic domain), verified 28 August 2026. Classic Windows PMS plus DENSvisuell patient education. Its user counts circulate only in third-party sources: use what its own site states or nothing |
+| dios ZX (Spitta GmbH) | `dentalpin-vs-dios-zx` | `dios.de`, a brand of Spitta GmbH, verified 28 August 2026. Sells dios ZX for billing and practice management; its historic strength is hygiene documentation (dios MP), so establish the PMS's real weight before writing |
+| teemer (ARZ.dent GmbH) | `dentalpin-vs-teemer` | `teemer.de`, verified 28 August 2026. 100% cloud, from anamnesis to billing, part of the ARZ Haan group. Young product with no published install base |
+| ZaWin (Martin Engineering AG) | `dentalpin-vs-zawin` | `zawin.ch`, verified 28 August 2026. Switzerland only, 40+ years, claims 15.000+ daily users, sold as on-premise ZaWin or ZaWin Cloud. The German post already carries into Switzerland; write it for the Swiss reader, prices in CHF |
 | — | `zahnarztsoftware-kostenlos` | Head term. Native post naming German vendors, not a translation of the Spanish one |
 | — | `open-source-alternative-zu-dampsoft` | Highest-intent German query in the space |
+
+Checked 28 August 2026 and **not** added: stoma-soft (no German site
+exists; the only Stomasoft is Czech) and PraxisOne (no reachable vendor
+site; `henryscheinone.de` fails TLS). Henry Schein One Austria
+(`henryscheinoneaustria.at`, Power.Dent) was seen but not verified: a
+candidate for the next extension.
 
 The German e-invoicing mandate is the local counterpart to Verifactu and
 belongs in Queue B as its own German post. The dates come from the BMF,
@@ -764,8 +811,19 @@ None of them published a price.
 | GipoDental (GIPO) | `dentalpin-vs-gipodental` | `gipo.it`. **Checked 6 August 2026: the pricing pages exist (`/prezzi`, `/prezzi-gipodental`) and list what each plan contains, but carry no figure, only "Prezzo calcolato individualmente". So the "non pubblica i prezzi" line holds, with that precision.** Ownership: the site's legal entity is Docplanner Italy Srl, and the same group owns MioDottore, which GipoDental integrates with. Verified from their own site |
 | AlfaDocs | `dentalpin-vs-alfadocs` | `alfadocs.com`. Cloud-first, positioned around the dentist-patient relationship rather than the back office. A different pitch from ours, which makes "scegli AlfaDocs se" the section that carries the post |
 | Appuntoo | `dentalpin-vs-appuntoo` | `appuntoo.com`. Aims at small and medium practices and markets a free tier, so it is the one Italian row where free-versus-free has to be compared carefully and fairly |
+| UNO (Dental Trey s.r.l.) | `dentalpin-vs-uno` | `dentaltrey-uno.it`, verified 28 August 2026. 30+ years of dental software, claims 8.000 professionals, cloud ("MyBusiness Cloud"). Dental Trey is first a supplies distributor; the software division is the target. The product is UNO: no product named "Evolution" exists on its site |
+| Windent (Quaderno Elettronico S.r.l.) | `dentalpin-vs-windent` | `quadernoelettronico.it`, verified 28 August 2026. Desktop with mobile access, claims 20.000+ professionals. Aggregators attribute it to Zucchetti while its own site declares Quaderno Elettronico S.r.l.: state ownership only as its own site does |
+| DentalOpera (MedicalOpera srl) | `dentalpin-vs-dentalopera` | `dentalopera.it`, verified 28 August 2026. 100% cloud, founded 2017. **Publishes prices: da 88 €/mese on its home page, so the usual "non pubblica i prezzi" line is wrong here** |
+| Dentus (jErgoSoft Srl) | `dentalpin-vs-dentus` | `dentus.it`, verified 28 August 2026. Desktop since 2000, claims 15.000+ clients. **Publishes prices: 33,20-135 €/mese (`/it/prezzi-software-dentale/`)** |
 | — | `software-gestionale-dentisti-gratis` | Head term. Native post naming Italian vendors |
 | — | `alternativa-open-source-a-xdent` | Highest-intent Italian query in the space |
+
+Checked 28 August 2026 and **not** added: EasyDent (`easydent.it` does
+not resolve; the EasyDent that exists is American), and no Italian PMS
+named Julia exists (the real Software Dental Julia is Spanish and sits in
+A1). FELG Dent (`felgdent.com`, a Polish company with an Italian site,
+claims 4.000+ clinics) was reached but its Italian product site was
+flaky: a candidate for the next extension.
 
 **Sistema Tessera Sanitaria is the Italian compliance moat.** Every
 practice in Italy files patient spending to the STS, and Italian vendors
@@ -773,7 +831,36 @@ advertise it as a feature. Establish what Dentalpin does and does not do
 there before the first Italian comparison goes out, and say it plainly
 either way. It belongs in Queue B as its own Italian post.
 
-### A8 · Blocked on language — do not write these yet
+### A8 · Poland — Polish posts rank here
+
+Unblocked 28 August 2026: every row below was reached at the vendor's own
+domain that day, which is what the rotation was waiting for. **These are
+written in Polish only.** One market quirk decides the shape of these
+posts: most Polish vendors publish prices, so the "does not publish
+prices" line that carries other markets is mostly unavailable here, and
+the comparison has to win on deployment, data ownership and openness
+instead. Prices go in złoty.
+
+| Target | Slug | Why |
+|---|---|---|
+| Estomed | `dentalpin-vs-estomed` | `estomed.pl`, verified 28 August 2026. Dental-only, 20+ years, claims 3.500+ clinics, hybrid desktop + cloud + mobile app. **Publishes prices (`/cennik/`): e.g. a Basic licence at 2.000 zł per workstation plus 73 zł/month service** |
+| ProDentis (INFOTEL SOFTWARE) | `dentalpin-vs-prodentis` | `prodentis.com.pl`, verified 28 August 2026. Dental-only, 20+ years, claims 3.600+ clients, ISO 9001 and 27001, integrates e-Recepta and e-Skierowanie, which is the Polish compliance moat to meet head-on. **Publishes module prices (`/pl/Pages/Cennik`)** |
+| Medfile | `dentalpin-vs-medfile` | `medfile.pl/program-dla-dentysty`, verified 28 August 2026. Cloud SaaS, multi-vertical medical with a dedicated dental module and landing: state that plainly. **Publishes prices in PLN (`/cennik`)** |
+| SmartDental (Software Clinic sp. z o.o.) | `dentalpin-vs-smartdental` | `software-clinic.pl`, verified 28 August 2026. Desktop for Windows and Linux, lifetime licence, written by a practising dentist and positioned against the cloud: the closest Polish analogue to our own self-hosted argument, so the post has to separate "runs on your machine" from "open source" carefully. **Publishes prices (`/cennik-oprogramowania-stomatologicznego.html`)** |
+| Proassist | `dentalpin-vs-proassist` | `proassist.pl/wybor-dla/stomatologia/`, verified 28 August 2026. Cloud, multi-vertical, claims 670+ medical facilities, bundles an outsourced phone reception service, which is a real difference worth stating |
+| — | `darmowy-program-dla-gabinetu-stomatologicznego` | Head term. Native post naming Polish vendors, not a translation |
+| — | `alternatywa-open-source-dla-estomed` | Highest-intent Polish query in the space |
+
+Checked 28 August 2026 and **not** added: Gabos (`gabos.com.pl` is alive
+but shows no dental product). FELG Dent (`felgdent.com`) is Polish, was
+reached and claims 4.000+ clinics, but publishes no prices there and its
+product site was flaky: a candidate for the next extension.
+
+The KSeF row in Queue B is the Polish compliance post this section makes
+newly urgent: the vendors above advertise e-Recepta and EDM integration,
+and the comparison pages will want to link it.
+
+### A9 · Blocked on language — do not write these yet
 
 Real vendors, real markets, and a post in a language we publish reaches
 almost none of the people choosing between them and us. Move a row up
@@ -819,6 +906,7 @@ official sources, not translations of each other.
 | Copias de seguridad en una clínica dental: qué guardar y cada cuánto | `copias-seguridad-clinica-dental` / `dental-clinic-backups` / `sauvegardes-cabinet-dentaire` / `copias-seguranca-clinica-dentaria` / `datensicherung-zahnarztpraxis` / `backup-studio-dentistico` | copia seguridad clínica dental |
 | Cómo reducir las ausencias a citas en la clínica | `reducir-ausencias-citas-dental` / `reduce-dental-no-shows` / `reduire-rendez-vous-non-honores` / `reduzir-faltas-a-consultas` / `terminausfaelle-zahnarztpraxis-reduzieren` / `ridurre-le-mancate-presentazioni` | ausencias citas dental |
 | Recordatorios de cita por WhatsApp: qué permite la normativa | `recordatorios-cita-whatsapp-dental` / `whatsapp-appointment-reminders-dental` / `rappels-rendez-vous-whatsapp-dentaire` / `lembretes-de-consulta-whatsapp` / `whatsapp-terminerinnerungen-zahnarztpraxis` / `promemoria-appuntamenti-whatsapp` | recordatorios cita whatsapp |
+| SMS, WhatsApp o email: costes reales y entregabilidad de los recordatorios | `sms-whatsapp-email-recordatorios` / `sms-whatsapp-email-reminders` / `sms-whatsapp-email-rappels` / `sms-whatsapp-email-lembretes` / `sms-whatsapp-oder-email-erinnerungen` / `sms-whatsapp-email-promemoria` | canal recordatorios citas · The WhatsApp row above covers the rules; this one covers cost per message and deliverability, and must not repeat it |
 | Odontograma digital: qué debe registrar y por qué | `odontograma-digital` / `digital-odontogram` / `odontogramme-numerique` / `odontograma-digital` / `digitales-zahnschema` / `odontogramma-digitale` | odontograma digital |
 | Presupuestos dentales con firma digital: validez y flujo | `presupuestos-dentales-firma-digital` / `dental-quotes-digital-signature` / `devis-dentaire-signature-electronique` / `orcamentos-dentarios-assinatura-digital` / `kostenvoranschlag-digitale-signatur` / `preventivi-dentali-firma-digitale` | presupuesto dental firma |
 | Historia clínica electrónica: qué exige la ley en España | `historia-clinica-electronica-dental` / `electronic-dental-records-spain` / — / — / — / — | historia clínica electrónica · **country-locked: ES** |
@@ -834,6 +922,7 @@ official sources, not translations of each other.
 | Presupuestos que no se aceptan: cómo hacer seguimiento | `seguimiento-presupuestos-dentales` / `follow-up-dental-treatment-quotes` / `relancer-devis-dentaires` / `acompanhar-orcamentos-dentarios` / `kostenvoranschlaege-nachfassen` / `follow-up-preventivi-dentali` | aceptación presupuestos dentales |
 | Deuda de pacientes y pagos fraccionados: llevar el control | `control-deuda-pacientes` / `patient-payment-plans-tracking` / `suivi-impayes-cabinet-dentaire` / `controlo-de-dividas-de-pacientes` / `ratenzahlung-patienten-verwalten` / `gestione-insoluti-pazienti` | pagos pacientes clínica dental |
 | Caja diaria y arqueo en la clínica | `caja-diaria-clinica-dental` / `daily-cash-reconciliation-dental` / `caisse-quotidienne-cabinet-dentaire` / `caixa-diaria-clinica` / `tagesabschluss-zahnarztpraxis` / `chiusura-cassa-studio-dentistico` | arqueo caja clínica |
+| TPV y datáfono en recepción: conciliar cobros sin cuadrar a mano | `tpv-datafono-clinica-dental` / `card-payments-dental-front-desk` / `tpe-cabinet-dentaire` / `tpa-na-clinica-dentaria` / `kartenzahlung-zahnarztpraxis` / `pos-studio-dentistico` | datáfono clínica dental |
 | KPIs: los números que mirar cada mes | `kpis-clinica-dental` / `dental-practice-kpis` / `indicateurs-cabinet-dentaire` / `kpis-clinica-dentaria` / `kennzahlen-zahnarztpraxis` / `kpi-studio-dentistico` | kpi clínica dental |
 | Ocupación de sillón: medirla y mejorarla | `ocupacion-sillon-dental` / `chair-utilization-dental` / `taux-occupation-fauteuil` / `ocupacao-da-cadeira` / `stuhlauslastung-zahnarztpraxis` / `utilizzo-del-riunito` | ocupación sillón dental |
 | Control de stock de material | `control-stock-clinica-dental` / `dental-inventory-management` / `gestion-stock-cabinet-dentaire` / `gestao-de-stock-clinica` / `materialverwaltung-zahnarztpraxis` / `gestione-magazzino-studio-dentistico` | inventario clínica dental |
@@ -850,10 +939,16 @@ official sources, not translations of each other.
 | Exportar tus datos: el formato que debes exigir | `exportar-datos-software-dental` / `export-dental-software-data` / `exporter-donnees-logiciel-dentaire` / `exportar-dados-do-software` / `daten-export-zahnarztsoftware` / `esportare-dati-gestionale` | exportar datos software dental |
 | Qué pasa si tu proveedor de software cierra | `proveedor-software-cierra` / `dental-software-vendor-shuts-down` / `editeur-logiciel-ferme` / `fornecedor-de-software-fecha` / `softwareanbieter-stellt-ein` / `fornitore-software-chiude` | proveedor software cierra |
 | Software libre frente a propietario en sanidad | `software-libre-sanidad` / `open-source-vs-proprietary-healthcare` / `logiciel-libre-sante` / `software-livre-na-saude` / `open-source-software-gesundheitswesen` / `software-libero-sanita` | software libre sanidad |
+| La API de tu software: qué deberías poder hacer con tus propios datos | `api-software-clinica-dental` / `dental-software-api` / `api-logiciel-dentaire` / `api-software-clinica-dentaria` / `api-zahnarztsoftware` / `api-gestionale-dentistico` | api software dental |
+| Cómo evaluar un proyecto open source antes de confiarle tu clínica | `evaluar-open-source-clinica` / `evaluate-open-source-for-your-clinic` / `evaluer-open-source-cabinet` / `avaliar-open-source-clinica` / `open-source-projekt-bewerten` / `valutare-open-source-studio` | software open source clínica |
+| Qué es la licencia BSL y qué te deja hacer | `licencia-bsl-explicada` / `bsl-license-explained` / `licence-bsl-expliquee` / `licenca-bsl-explicada` / `bsl-lizenz-erklaert` / `licenza-bsl-spiegata` | *(technical, EN-first — our own licence, explained before someone else does)* |
+| Montar servicios de integración sobre software dental open source | `servicios-integracion-software-dental` / `dental-software-integration-business` / `services-integration-logiciel-dentaire` / `servicos-integracao-software-dentario` / `it-dienstleistungen-zahnarztsoftware` / `servizi-integrazione-gestionale` | *(EN-first — aimed at the local IT provider or MSP, the natural distribution channel of a self-hosted product)* |
+| Self-hosting con tu informático de confianza: qué acordar | `self-hosting-con-tu-informatico` / `self-hosting-with-your-it-provider` / `auto-hebergement-avec-votre-informaticien` / `self-hosting-com-o-seu-informatico` / `self-hosting-mit-dem-it-dienstleister` / `self-hosting-con-il-tuo-informatico` | mantenimiento informático clínica dental · SLA, backups and updates agreed with a local integrator; the clinic-side counterpart of the row above |
 | Ransomware: el plan de la clínica pequeña | `ransomware-clinica-dental` / `ransomware-dental-practice` / `ransomware-cabinet-dentaire` / `ransomware-clinica` / `ransomware-zahnarztpraxis` / `ransomware-studio-dentistico` | ransomware clínica |
 | Accesos del personal: quién puede ver qué | `permisos-acceso-personal-clinica` / `staff-access-permissions-dental` / `droits-acces-personnel-cabinet` / `permissoes-de-acesso-equipa` / `zugriffsrechte-praxispersonal` / `permessi-accesso-personale` | control accesos historia clínica |
 | Auditoría de accesos a la historia clínica | `auditoria-accesos-historia-clinica` / `audit-trail-dental-records` / `journal-acces-dossier-patient` / `auditoria-de-acessos` / `zugriffsprotokoll-patientenakte` / `log-accessi-cartella-clinica` | registro accesos historia clínica |
 | Radiografías digitales: almacenarlas y compartirlas | `almacenar-radiografias-digitales` / `storing-dental-xrays` / `stockage-radiographies-dentaires` / `armazenar-radiografias` / `roentgenbilder-speichern` / `archiviare-radiografie` | almacenamiento radiografías |
+| Escáneres intraorales y radiología: integrar la imagen con la gestión | `integrar-radiologia-software-dental` / `dental-imaging-integration` / `integrer-imagerie-logiciel-dentaire` / `integrar-imagem-software-dentario` / `bildgebung-in-die-praxissoftware-integrieren` / `integrare-imaging-gestionale` | integración radiología software dental |
 | Enviar casos al laboratorio: flujo y datos | `enviar-casos-laboratorio-dental` / `dental-lab-case-workflow` / `envoyer-travaux-laboratoire` / `enviar-trabalhos-ao-laboratorio` / `laborauftraege-verwalten` / `gestione-lavori-laboratorio` | laboratorio dental flujo |
 | Varias sedes, una gestión | `gestionar-varias-clinicas` / `multi-location-dental-practice` / `gerer-plusieurs-cabinets` / `gerir-varias-clinicas` / `mehrere-standorte-verwalten` / `gestire-piu-sedi` | software multiclínica |
 | Los números que tu asesor fiscal necesita cada trimestre | `informes-para-la-gestoria` / `reports-for-your-accountant` / `rapports-pour-expert-comptable` / `relatorios-para-o-contabilista` / `berichte-fuer-den-steuerberater` / `report-per-il-commercialista` | informes gestoría clínica |
@@ -875,15 +970,15 @@ official sources, not translations of each other.
 | Faturar convênios odontológicos sem perder o controle | `faturar-convenios-odontologicos` in `blog/pt-br/` | convênios odontológicos · **country-locked: BR**. Source from ANS and the operators' own pages; say what Dentalpin automates today |
 | KSeF w gabinecie stomatologicznym: co się zmienia i kiedy | `ksef-gabinet-stomatologiczny` in `blog/pl/` | KSeF gabinet stomatologiczny · **country-locked: PL**, the Polish counterpart to the Verifactu row. Source the dates from podatki.gov.pl, never from another country's post |
 
-**The queues were extended on 3 August 2026.** Seven topic slots a week
-against the sixty-odd unwritten rows above is over two months of runway. Queue
-A is the tight one: twenty-one comparison slots a week against its forty-odd
-unwritten targets is about two weeks, after which the morning runs fall back
-to topics per the rule in *Two queues* — the loop keeps producing, but the
-high-intent pages stop. The mirror rule also holds: an afternoon run with no
-unwritten topic left takes a comparison instead.
+**The queues were extended on 3 August 2026 and again on 28 August 2026.**
+The August 28 extension added 32 vendors, each verified from its own site
+that day, opened the Polish section (A8) and unblocked Mexico, taking
+Queue A back to roughly a month of runway at twenty-one comparisons a
+week. When a queue runs dry the fallback rule in *Two queues* holds: a
+morning run with no comparison left takes a topic, and an afternoon run
+with no unwritten topic left takes a comparison instead.
 
-**Extending Queue A is therefore due now, and it cannot be done from memory.**
+**Extending Queue A cannot be done from memory.**
 Every new vendor row must be verified from the vendor's own site the day it is
 added — name, domain reached, market evidence — exactly like the existing
 rows were (and two of the first draft's rows still turned out to be wrong; see
