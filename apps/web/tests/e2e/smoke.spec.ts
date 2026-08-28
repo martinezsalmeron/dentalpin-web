@@ -141,3 +141,34 @@ test('contact API drops honeypot hits silently and rejects bad payloads', async 
   });
   expect(bad.status()).toBe(400);
 });
+
+// The India GST module page is generated from the same [slug].astro fan-out
+// as every other module, with per-locale slugs (india-gst → gst-inde).
+test('India GST module page exists and the picker translates its slug', async ({ page }) => {
+  await page.goto('/en/features/india-gst/');
+  await expect(page.getByRole('heading', { name: 'India GST' }).first()).toBeVisible();
+  // The picker label is localised: "Language" on /en/, "Idioma" on /es/.
+  await page.locator('summary[aria-label="Language"]').first().click();
+  await page.getByRole('menuitem', { name: /français/i }).click();
+  await expect(page).toHaveURL(/\/fr\/fonctionnalites\/gst-inde\/?$/);
+});
+
+// The features index carries the tier-2 catalog and the compliance table,
+// plus the real product numbers (35 modules, 9 languages).
+test('features index shows catalog, compliance and the 35 stat', async ({ page }) => {
+  await page.goto('/es/funcionalidades/');
+  await expect(page.locator('#catalog')).toBeVisible();
+  await expect(page.locator('#compliance')).toBeVisible();
+  await expect(page.locator('dd', { hasText: '35' }).first()).toBeVisible();
+});
+
+// The India strip mirrors the Verifactu strip: /en/ only. The mega-menu links
+// the module everywhere, so the check keys on the callout's own h2.
+test('India callout renders on /en/ and not on /es/', async ({ page }) => {
+  const callout = (p: import('@playwright/test').Page) =>
+    p.locator('a').filter({ has: p.locator('h2') }).filter({ hasText: /GST/ });
+  await page.goto('/en/');
+  await expect(callout(page).first()).toBeVisible();
+  await page.goto('/es/');
+  await expect(callout(page)).toHaveCount(0);
+});

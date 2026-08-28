@@ -881,7 +881,8 @@
       "country": "Portugal",
       "authority": "a AT",
       "title": "A faturação não está integrada com {authority}.",
-      "body": "Em {country}, o Dentalpin não comunica as suas faturas à {authority} nem emite documentos certificados. Vai ver documentos de faturação no ecrã e não são válidos como fatura: continue a emitir as suas faturas com o programa certificado que usa hoje. Todo o resto (agenda, pacientes, odontograma, planos de tratamento, orçamentos, cobranças, lembretes, WhatsApp, relatórios e copiloto de IA) funciona como em Espanha. As duas exceções são Espanha, onde a faturação está integrada com o Veri*Factu, e a Índia, onde o módulo de GST emite faturas conformes."
+      "body": "Em {country}, o Dentalpin não comunica as suas faturas à {authority} nem emite documentos certificados. Vai ver documentos de faturação no ecrã e não são válidos como fatura: continue a emitir as suas faturas com o programa certificado que usa hoje. Todo o resto (agenda, pacientes, odontograma, planos de tratamento, orçamentos, cobranças, lembretes, WhatsApp, relatórios e copiloto de IA) funciona como em Espanha. As duas exceções são Espanha, onde a faturação está integrada com o Veri*Factu, e a Índia, onde o módulo de GST emite faturas conformes.",
+      "link": "Ver o estado por país →"
     },
     "faq": {
       "title": "Perguntas frequentes",
@@ -953,6 +954,13 @@
       "lead": "Módulos oficiais e de comunidade que se instalam do gestor com um clique. Sem página própria aqui, com a mesma filosofia: ativa o que usa, desativa o resto.",
       "official": "Oficial",
       "community": "Comunidade"
+    },
+    "compliance": {
+      "eyebrow": "LOCALIZAÇÕES",
+      "title": "Conformidade fiscal, país a país.",
+      "lead": "O Dentalpin funciona em qualquer país. A faturação fiscal, porém, é local: aqui está o estado real de cada integração, sem letras pequenas.",
+      "integrated": "Integrado",
+      "planned": "No radar"
     }
   },
   "verifactuPage": {

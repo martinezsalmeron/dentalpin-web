@@ -1855,6 +1855,137 @@ export function moduleSlug(mod: ModuleEntry, locale: Locale): string {
 }
 
 /*
+ * Country compliance status shown on the features index (#compliance) and
+ * linked from the pricing fiscal note. Honest by design: only countries with
+ * a shipped compliance module are 'integrated'.
+ */
+export interface ComplianceRow {
+  country: string;
+  flag: string;
+  status: 'integrated' | 'planned';
+  /** Canonical (es) slug of the compliance module, resolved via moduleBySlug. */
+  moduleSlug?: string;
+  note: Localised;
+}
+
+export const COMPLIANCE: ComplianceRow[] = [
+  {
+    country: 'ES',
+    flag: '🇪🇸',
+    status: 'integrated',
+    moduleSlug: 'verifactu',
+    note: {
+      es: 'Facturación integrada con Veri*Factu de la AEAT: firma, cadena SHA-256, envío SOAP y QR tributario.',
+      en: 'Invoicing wired to AEAT’s Veri*Factu: signing, SHA-256 chain, SOAP submission and tax QR.',
+      fr: 'Facturation intégrée au Veri*Factu de l’AEAT : signature, chaîne SHA-256, envoi SOAP et QR fiscal.',
+      pt: 'Faturação integrada com o Veri*Factu da AEAT: assinatura, cadeia SHA-256, envio SOAP e QR fiscal.',
+      de: 'Rechnungsstellung an das Veri*Factu der AEAT angebunden: Signatur, SHA-256-Kette, SOAP-Versand und Steuer-QR.',
+      it: 'Fatturazione integrata con il Veri*Factu dell’AEAT: firma, catena SHA-256, invio SOAP e QR fiscale.',
+      pl: 'Fakturowanie zintegrowane z Veri*Factu urzędu AEAT: podpis, łańcuch SHA-256, wysyłka SOAP i podatkowy QR.',
+    },
+  },
+  {
+    country: 'IN',
+    flag: '🇮🇳',
+    status: 'integrated',
+    moduleSlug: 'gst-india',
+    note: {
+      es: 'Facturas conformes con el GST: GSTIN validado, CGST/SGST/IGST, códigos SAC y numeración por año fiscal.',
+      en: 'GST-compliant invoices: validated GSTIN, CGST/SGST/IGST, SAC codes and financial-year numbering.',
+      fr: 'Factures conformes à la GST : GSTIN validé, CGST/SGST/IGST, codes SAC et numérotation par exercice.',
+      pt: 'Faturas conformes com o GST: GSTIN validado, CGST/SGST/IGST, códigos SAC e numeração por ano fiscal.',
+      de: 'GST-konforme Rechnungen: geprüfte GSTIN, CGST/SGST/IGST, SAC-Codes und Nummerierung nach Geschäftsjahr.',
+      it: 'Fatture conformi alla GST: GSTIN convalidato, CGST/SGST/IGST, codici SAC e numerazione per anno fiscale.',
+      pl: 'Faktury zgodne z GST: walidowany GSTIN, CGST/SGST/IGST, kody SAC i numeracja według roku podatkowego.',
+    },
+  },
+  {
+    country: 'FR',
+    flag: '🇫🇷',
+    status: 'planned',
+    note: {
+      es: 'La reforma francesa de factura electrónica aún no está conectada: sigue facturando con tu sistema actual.',
+      en: 'France’s e-invoicing reform is not wired yet: keep invoicing with your current system.',
+      fr: 'La réforme de la facturation électronique n’est pas encore connectée : continuez à facturer avec votre système actuel.',
+      pt: 'A reforma francesa da fatura eletrónica ainda não está ligada: continue a faturar com o seu sistema atual.',
+      de: 'Frankreichs E-Rechnungsreform ist noch nicht angebunden: Rechnungen weiter mit dem bisherigen System stellen.',
+      it: 'La riforma francese della fattura elettronica non è ancora collegata: continua a fatturare con il tuo sistema attuale.',
+      pl: 'Francuska reforma e-fakturowania nie jest jeszcze podłączona: fakturuj dalej w obecnym systemie.',
+    },
+  },
+  {
+    country: 'PT',
+    flag: '🇵🇹',
+    status: 'planned',
+    note: {
+      es: 'La facturación certificada de la AT portuguesa aún no está conectada: sigue con tu sistema actual.',
+      en: 'Portugal’s AT certified invoicing is not wired yet: keep using your current system.',
+      fr: 'La facturation certifiée de l’AT portugaise n’est pas encore connectée : gardez votre système actuel.',
+      pt: 'A faturação certificada pela AT ainda não está ligada: continue com o seu sistema atual.',
+      de: 'Portugals zertifizierte AT-Rechnungsstellung ist noch nicht angebunden: beim bisherigen System bleiben.',
+      it: 'La fatturazione certificata dell’AT portoghese non è ancora collegata: resta sul tuo sistema attuale.',
+      pl: 'Certyfikowane fakturowanie portugalskiego AT nie jest jeszcze podłączone: zostań przy obecnym systemie.',
+    },
+  },
+  {
+    country: 'IT',
+    flag: '🇮🇹',
+    status: 'planned',
+    note: {
+      es: 'El Sistema di Interscambio italiano aún no está conectado: sigue facturando con tu sistema actual.',
+      en: 'Italy’s Sistema di Interscambio is not wired yet: keep invoicing with your current system.',
+      fr: 'Le Sistema di Interscambio italien n’est pas encore connecté : continuez avec votre système actuel.',
+      pt: 'O Sistema di Interscambio italiano ainda não está ligado: continue a faturar com o seu sistema atual.',
+      de: 'Italiens Sistema di Interscambio ist noch nicht angebunden: Rechnungen weiter im bisherigen System stellen.',
+      it: 'Il Sistema di Interscambio non è ancora collegato: continua a fatturare con il tuo sistema attuale.',
+      pl: 'Włoski Sistema di Interscambio nie jest jeszcze podłączony: fakturuj dalej w obecnym systemie.',
+    },
+  },
+  {
+    country: 'PL',
+    flag: '🇵🇱',
+    status: 'planned',
+    note: {
+      es: 'El KSeF polaco aún no está conectado: sigue facturando con tu sistema actual.',
+      en: 'Poland’s KSeF is not wired yet: keep invoicing with your current system.',
+      fr: 'Le KSeF polonais n’est pas encore connecté : continuez avec votre système actuel.',
+      pt: 'O KSeF polaco ainda não está ligado: continue a faturar com o seu sistema atual.',
+      de: 'Polens KSeF ist noch nicht angebunden: Rechnungen weiter im bisherigen System stellen.',
+      it: 'Il KSeF polacco non è ancora collegato: continua a fatturare con il tuo sistema attuale.',
+      pl: 'KSeF nie jest jeszcze podłączony: fakturuj dalej w obecnym systemie.',
+    },
+  },
+  {
+    country: 'MX',
+    flag: '🇲🇽',
+    status: 'planned',
+    note: {
+      es: 'El timbrado CFDI ante el SAT aún no está conectado: sigue facturando con tu sistema actual.',
+      en: 'CFDI stamping with Mexico’s SAT is not wired yet: keep invoicing with your current system.',
+      fr: 'Le timbrage CFDI auprès du SAT mexicain n’est pas encore connecté : gardez votre système actuel.',
+      pt: 'A emissão de CFDI junto do SAT mexicano ainda não está ligada: continue com o seu sistema atual.',
+      de: 'Die CFDI-Stempelung beim mexikanischen SAT ist noch nicht angebunden: beim bisherigen System bleiben.',
+      it: 'La bollatura CFDI presso il SAT messicano non è ancora collegata: resta sul tuo sistema attuale.',
+      pl: 'Stemplowanie CFDI w meksykańskim SAT nie jest jeszcze podłączone: zostań przy obecnym systemie.',
+    },
+  },
+  {
+    country: 'BR',
+    flag: '🇧🇷',
+    status: 'planned',
+    note: {
+      es: 'La nota fiscal electrónica brasileña aún no está conectada: sigue facturando con tu sistema actual.',
+      en: 'Brazil’s electronic nota fiscal is not wired yet: keep invoicing with your current system.',
+      fr: 'La nota fiscal électronique brésilienne n’est pas encore connectée : gardez votre système actuel.',
+      pt: 'A nota fiscal eletrónica brasileira ainda não está ligada: continue a faturar com o seu sistema atual.',
+      de: 'Brasiliens elektronische Nota Fiscal ist noch nicht angebunden: beim bisherigen System bleiben.',
+      it: 'La nota fiscal elettronica brasiliana non è ancora collegata: resta sul tuo sistema attuale.',
+      pl: 'Brazylijska elektroniczna nota fiscal nie jest jeszcze podłączona: zostań przy obecnym systemie.',
+    },
+  },
+];
+
+/*
  * Tier-2 catalog: modules that exist in the app but do not earn a full
  * marketing page. Title + one line only, no detail route. Source of truth:
  * docs/modules-catalog.md in the product repo.

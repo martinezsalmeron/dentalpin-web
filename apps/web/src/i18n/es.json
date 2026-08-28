@@ -881,7 +881,8 @@
       "country": "tu país",
       "authority": "la autoridad fiscal de tu país",
       "title": "La facturación no está integrada con {authority}.",
-      "body": "En {country}, Dentalpin no envía tus facturas a {authority}. Verás documentos de facturación en pantalla y no son válidos como factura fiscal: sigue emitiendo tus facturas con el sistema que usas hoy. Todo lo demás (agenda, pacientes, odontograma, planes de tratamiento, presupuestos, cobros, recordatorios, WhatsApp, informes y copiloto de IA) funciona igual que en España. Las dos excepciones son España, donde la facturación va integrada con Veri*Factu, e India, donde el módulo de GST emite facturas conformes."
+      "body": "En {country}, Dentalpin no envía tus facturas a {authority}. Verás documentos de facturación en pantalla y no son válidos como factura fiscal: sigue emitiendo tus facturas con el sistema que usas hoy. Todo lo demás (agenda, pacientes, odontograma, planes de tratamiento, presupuestos, cobros, recordatorios, WhatsApp, informes y copiloto de IA) funciona igual que en España. Las dos excepciones son España, donde la facturación va integrada con Veri*Factu, e India, donde el módulo de GST emite facturas conformes.",
+      "link": "Ver el estado por país →"
     },
     "faq": {
       "title": "Preguntas frecuentes",
@@ -953,6 +954,13 @@
       "lead": "Módulos oficiales y de comunidad que se instalan desde el gestor con un clic. Sin página propia aquí, con la misma filosofía: activa lo que uses, desactiva lo demás.",
       "official": "Oficial",
       "community": "Comunidad"
+    },
+    "compliance": {
+      "eyebrow": "LOCALIZACIONES",
+      "title": "Cumplimiento fiscal por país.",
+      "lead": "Dentalpin funciona en cualquier país. La facturación fiscal, en cambio, es local: aquí está el estado real de cada integración, sin letra pequeña.",
+      "integrated": "Integrado",
+      "planned": "En el radar"
     }
   },
   "verifactuPage": {

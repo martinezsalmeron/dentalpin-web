@@ -881,7 +881,8 @@
       "country": "your country",
       "authority": "your national tax authority",
       "title": "Invoicing is not wired to {authority}.",
-      "body": "In {country}, Dentalpin does not file your invoices with {authority}. You will see invoicing documents on screen and they are not valid as tax invoices: keep issuing your invoices with the system you use today. Everything else (scheduling, patients, dental chart, treatment plans, quotes, payments, reminders, WhatsApp, reports and the AI copilot) works exactly as it does in Spain. The two exceptions are Spain, where invoicing is wired to Veri*Factu, and India, where the GST module issues compliant invoices."
+      "body": "In {country}, Dentalpin does not file your invoices with {authority}. You will see invoicing documents on screen and they are not valid as tax invoices: keep issuing your invoices with the system you use today. Everything else (scheduling, patients, dental chart, treatment plans, quotes, payments, reminders, WhatsApp, reports and the AI copilot) works exactly as it does in Spain. The two exceptions are Spain, where invoicing is wired to Veri*Factu, and India, where the GST module issues compliant invoices.",
+      "link": "See the status per country →"
     },
     "faq": {
       "title": "Frequently asked questions",
@@ -953,6 +954,13 @@
       "lead": "Official and community modules you install from the manager in one click. No page of their own here, same philosophy: turn on what you use, turn off the rest.",
       "official": "Official",
       "community": "Community"
+    },
+    "compliance": {
+      "eyebrow": "LOCALISATIONS",
+      "title": "Tax compliance, country by country.",
+      "lead": "Dentalpin works in any country. Fiscal invoicing, though, is local: here is the real status of every integration, no fine print.",
+      "integrated": "Integrated",
+      "planned": "On the radar"
     }
   },
   "verifactuPage": {

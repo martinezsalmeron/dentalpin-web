@@ -881,7 +881,8 @@
       "country": "France",
       "authority": "la facturation électronique française",
       "title": "La facturation n'est pas raccordée à {authority}.",
-      "body": "En {country}, Dentalpin ne transmet pas vos factures dans le cadre de {authority}. Vous verrez des documents de facturation à l'écran et ils ne valent pas facture fiscale : continuez à émettre vos factures avec le système que vous utilisez aujourd'hui. Tout le reste (agenda, patients, schéma dentaire, plans de traitement, devis, encaissements, rappels, WhatsApp, rapports et copilote IA) fonctionne comme en Espagne. Les deux exceptions sont l’Espagne, où la facturation est intégrée à Veri*Factu, et l’Inde, où le module GST émet des factures conformes."
+      "body": "En {country}, Dentalpin ne transmet pas vos factures dans le cadre de {authority}. Vous verrez des documents de facturation à l'écran et ils ne valent pas facture fiscale : continuez à émettre vos factures avec le système que vous utilisez aujourd'hui. Tout le reste (agenda, patients, schéma dentaire, plans de traitement, devis, encaissements, rappels, WhatsApp, rapports et copilote IA) fonctionne comme en Espagne. Les deux exceptions sont l’Espagne, où la facturation est intégrée à Veri*Factu, et l’Inde, où le module GST émet des factures conformes.",
+      "link": "Voir l’état par pays →"
     },
     "faq": {
       "title": "Questions fréquentes",
@@ -953,6 +954,13 @@
       "lead": "Modules officiels et communautaires qui s’installent depuis le gestionnaire en un clic. Pas de page dédiée ici, même philosophie : activez ce que vous utilisez, désactivez le reste.",
       "official": "Officiel",
       "community": "Communauté"
+    },
+    "compliance": {
+      "eyebrow": "LOCALISATIONS",
+      "title": "Conformité fiscale, pays par pays.",
+      "lead": "Dentalpin fonctionne dans tous les pays. La facturation fiscale, elle, est locale : voici l’état réel de chaque intégration, sans petites lignes.",
+      "integrated": "Intégré",
+      "planned": "Dans le viseur"
     }
   },
   "verifactuPage": {

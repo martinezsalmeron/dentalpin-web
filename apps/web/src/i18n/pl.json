@@ -881,7 +881,8 @@
       "country": "Polsce",
       "authority": "KSeF",
       "title": "Fakturowanie nie jest zintegrowane z {authority}.",
-      "body": "W {country} Dentalpin nie wysyła twoich faktur do {authority}. Zobaczysz na ekranie dokumenty sprzedaży, które nie są ważne jako faktura: wystawiaj faktury dalej w systemie, którego używasz dziś. Cała reszta (grafik, pacjenci, diagram zębowy, plany leczenia, kosztorysy, płatności, przypomnienia, WhatsApp, raporty i asystent AI) działa tak samo jak w Hiszpanii. Dwa wyjątki to Hiszpania, gdzie fakturowanie jest zintegrowane z Veri*Factu, oraz Indie, gdzie moduł GST wystawia zgodne faktury."
+      "body": "W {country} Dentalpin nie wysyła twoich faktur do {authority}. Zobaczysz na ekranie dokumenty sprzedaży, które nie są ważne jako faktura: wystawiaj faktury dalej w systemie, którego używasz dziś. Cała reszta (grafik, pacjenci, diagram zębowy, plany leczenia, kosztorysy, płatności, przypomnienia, WhatsApp, raporty i asystent AI) działa tak samo jak w Hiszpanii. Dwa wyjątki to Hiszpania, gdzie fakturowanie jest zintegrowane z Veri*Factu, oraz Indie, gdzie moduł GST wystawia zgodne faktury.",
+      "link": "Zobacz status według kraju →"
     },
     "faq": {
       "title": "Częste pytania",
@@ -953,6 +954,13 @@
       "lead": "Moduły oficjalne i społeczności instalowane z menedżera jednym kliknięciem. Bez własnej strony tutaj, z tą samą filozofią: włącz to, czego używasz, wyłącz resztę.",
       "official": "Oficjalny",
       "community": "Społeczność"
+    },
+    "compliance": {
+      "eyebrow": "LOKALIZACJE",
+      "title": "Zgodność podatkowa, kraj po kraju.",
+      "lead": "Dentalpin działa w każdym kraju. Fakturowanie podatkowe jest jednak lokalne: oto rzeczywisty stan każdej integracji, bez drobnego druku.",
+      "integrated": "Zintegrowane",
+      "planned": "Na radarze"
     }
   },
   "verifactuPage": {

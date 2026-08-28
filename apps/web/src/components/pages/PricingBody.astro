@@ -478,6 +478,12 @@ const tick = 'mt-0.5 flex-none text-[var(--color-primary)]';
           <p class="mt-3 text-[14.5px] leading-[1.6] text-[var(--color-warning-text)]">
             {fillFiscal(p.fiscal.body)}
           </p>
+          <a
+            href={`${pagePath(locale, 'features')}#compliance`}
+            class="mt-3 inline-block text-[13.5px] font-medium text-[var(--color-warning-text)] underline underline-offset-2 hover:no-underline"
+          >
+            {p.fiscal.link}
+          </a>
         </div>
       </Section>
     )

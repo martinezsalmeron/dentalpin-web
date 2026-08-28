@@ -6,7 +6,7 @@ import Icon from '@dentalpin/ui/Icon.astro';
 import ScreenshotPlaceholder from '~/components/ScreenshotPlaceholder.astro';
 import ModularOrbit from '~/components/ModularOrbit.astro';
 import CTASection from '~/components/CTASection.astro';
-import { CATALOG, COUNTRY_FLAGS, MODULES, TOTAL_APP_MODULES, modulesByDomain, moduleSlug, type ModuleDomain, type ModuleEntry } from '~/data/modules';
+import { CATALOG, COMPLIANCE, COUNTRY_FLAGS, MODULES, TOTAL_APP_MODULES, moduleBySlug, modulesByDomain, moduleSlug, type ModuleDomain, type ModuleEntry } from '~/data/modules';
 
 interface Props { locale: Locale; }
 const { locale } = Astro.props;
@@ -206,6 +206,58 @@ const heroAlt = (slug: string) => {
       </Section>
     );
   })}
+
+  <Section padY="md" id="compliance">
+    <div class="max-w-2xl">
+      <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">
+        {dict.featuresIndex.compliance.eyebrow}
+      </p>
+      <h2 class="text-marketing-h2 mt-3 text-[var(--color-text)]">
+        {dict.featuresIndex.compliance.title}
+      </h2>
+      <p class="mt-4 text-[15px] leading-[1.6] text-[var(--color-text-muted)]">
+        {dict.featuresIndex.compliance.lead}
+      </p>
+    </div>
+    <ul class="mt-10 grid gap-3">
+      {COMPLIANCE.map((row) => {
+        const mod = row.moduleSlug ? moduleBySlug(row.moduleSlug) : undefined;
+        return (
+          <li class="flex flex-wrap items-start gap-x-4 gap-y-2 rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-surface)] px-5 py-4 sm:flex-nowrap">
+            <span class="flex w-16 flex-none items-center gap-2 pt-0.5">
+              <span aria-hidden="true" class="text-[18px] leading-none">{row.flag}</span>
+              <span class="text-[13px] font-semibold tracking-tight text-[var(--color-text)]">{row.country}</span>
+            </span>
+            <span
+              class={`inline-flex flex-none items-center rounded-[var(--radius-pill)] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.14em] ${
+                row.status === 'integrated'
+                  ? 'bg-[var(--color-primary-soft)] text-[var(--color-primary-soft-text)]'
+                  : 'bg-[var(--color-surface-muted)] text-[var(--color-text-muted)]'
+              }`}
+            >
+              {row.status === 'integrated'
+                ? dict.featuresIndex.compliance.integrated
+                : dict.featuresIndex.compliance.planned}
+            </span>
+            <span class="min-w-0 flex-1 text-[13.5px] leading-snug text-[var(--color-text-muted)]">
+              {localised(row.note, locale)}
+              {mod && (
+                <>
+                  {' '}
+                  <a
+                    href={moduleHref(mod)}
+                    class="whitespace-nowrap font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
+                  >
+                    {dict.featuresIndex.viewModule} →
+                  </a>
+                </>
+              )}
+            </span>
+          </li>
+        );
+      })}
+    </ul>
+  </Section>
 
   <Section padY="md" id="catalog">
     <div class="max-w-2xl">

@@ -881,7 +881,8 @@
       "country": "Ihrem Land",
       "authority": "der Steuerbehörde Ihres Landes",
       "title": "Die Rechnungsstellung ist nicht an {authority} angebunden.",
-      "body": "In {country} übermittelt Dentalpin Ihre Rechnungen nicht an {authority}. Sie sehen Rechnungsdokumente auf dem Bildschirm, und sie gelten steuerlich nicht als Rechnung: Stellen Sie Ihre Rechnungen weiter mit dem System aus, das Sie heute nutzen. Alles andere (Terminplanung, Patienten, Zahnschema, Behandlungspläne, Kostenvoranschläge, Zahlungen, Erinnerungen, WhatsApp, Auswertungen und KI-Copilot) funktioniert genauso wie in Spanien. Die beiden Ausnahmen sind Spanien, wo die Rechnungsstellung an Veri*Factu angebunden ist, und Indien, wo das GST-Modul konforme Rechnungen erstellt."
+      "body": "In {country} übermittelt Dentalpin Ihre Rechnungen nicht an {authority}. Sie sehen Rechnungsdokumente auf dem Bildschirm, und sie gelten steuerlich nicht als Rechnung: Stellen Sie Ihre Rechnungen weiter mit dem System aus, das Sie heute nutzen. Alles andere (Terminplanung, Patienten, Zahnschema, Behandlungspläne, Kostenvoranschläge, Zahlungen, Erinnerungen, WhatsApp, Auswertungen und KI-Copilot) funktioniert genauso wie in Spanien. Die beiden Ausnahmen sind Spanien, wo die Rechnungsstellung an Veri*Factu angebunden ist, und Indien, wo das GST-Modul konforme Rechnungen erstellt.",
+      "link": "Status je Land ansehen →"
     },
     "faq": {
       "title": "Häufige Fragen",
@@ -953,6 +954,13 @@
       "lead": "Offizielle und Community-Module, die sich mit einem Klick aus dem Manager installieren lassen. Ohne eigene Seite hier, mit derselben Philosophie: aktivieren, was Sie nutzen, der Rest bleibt aus.",
       "official": "Offiziell",
       "community": "Community"
+    },
+    "compliance": {
+      "eyebrow": "LOKALISIERUNGEN",
+      "title": "Steuer-Compliance, Land für Land.",
+      "lead": "Dentalpin funktioniert in jedem Land. Die steuerliche Rechnungsstellung ist jedoch lokal: hier der tatsächliche Stand jeder Integration, ohne Kleingedrucktes.",
+      "integrated": "Integriert",
+      "planned": "Auf dem Radar"
     }
   },
   "verifactuPage": {

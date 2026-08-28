@@ -881,7 +881,8 @@
       "country": "Italia",
       "authority": "il Sistema di Interscambio",
       "title": "La fatturazione non è integrata con {authority}.",
-      "body": "In {country}, Dentalpin non trasmette le tue fatture attraverso {authority} e non emette fattura elettronica. Vedrai documenti di fatturazione a schermo e non sono validi come fattura fiscale: continua a emettere le tue fatture con il sistema che usi oggi. Tutto il resto (agenda, pazienti, odontogramma, piani di trattamento, preventivi, incassi, promemoria, WhatsApp, report e copilota IA) funziona come in Spagna. Le due eccezioni sono la Spagna, dove la fatturazione è integrata con Veri*Factu, e l’India, dove il modulo GST emette fatture conformi."
+      "body": "In {country}, Dentalpin non trasmette le tue fatture attraverso {authority} e non emette fattura elettronica. Vedrai documenti di fatturazione a schermo e non sono validi come fattura fiscale: continua a emettere le tue fatture con il sistema che usi oggi. Tutto il resto (agenda, pazienti, odontogramma, piani di trattamento, preventivi, incassi, promemoria, WhatsApp, report e copilota IA) funziona come in Spagna. Le due eccezioni sono la Spagna, dove la fatturazione è integrata con Veri*Factu, e l’India, dove il modulo GST emette fatture conformi.",
+      "link": "Vedi lo stato per paese →"
     },
     "faq": {
       "title": "Domande frequenti",
@@ -953,6 +954,13 @@
       "lead": "Moduli ufficiali e della community che si installano dal gestore con un clic. Senza pagina propria qui, con la stessa filosofia: attiva ciò che usi, disattiva il resto.",
       "official": "Ufficiale",
       "community": "Community"
+    },
+    "compliance": {
+      "eyebrow": "LOCALIZZAZIONI",
+      "title": "Conformità fiscale, paese per paese.",
+      "lead": "Dentalpin funziona in qualsiasi paese. La fatturazione fiscale, però, è locale: ecco lo stato reale di ogni integrazione, senza asterischi.",
+      "integrated": "Integrato",
+      "planned": "Nel radar"
     }
   },
   "verifactuPage": {
