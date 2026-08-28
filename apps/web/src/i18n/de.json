@@ -873,7 +873,7 @@
       "country": "Ihrem Land",
       "authority": "der Steuerbehörde Ihres Landes",
       "title": "Die Rechnungsstellung ist nicht an {authority} angebunden.",
-      "body": "In {country} übermittelt Dentalpin Ihre Rechnungen nicht an {authority}. Sie sehen Rechnungsdokumente auf dem Bildschirm, und sie gelten steuerlich nicht als Rechnung: Stellen Sie Ihre Rechnungen weiter mit dem System aus, das Sie heute nutzen. Alles andere (Terminplanung, Patienten, Zahnschema, Behandlungspläne, Kostenvoranschläge, Zahlungen, Erinnerungen, WhatsApp, Auswertungen und KI-Copilot) funktioniert genauso wie in Spanien."
+      "body": "In {country} übermittelt Dentalpin Ihre Rechnungen nicht an {authority}. Sie sehen Rechnungsdokumente auf dem Bildschirm, und sie gelten steuerlich nicht als Rechnung: Stellen Sie Ihre Rechnungen weiter mit dem System aus, das Sie heute nutzen. Alles andere (Terminplanung, Patienten, Zahnschema, Behandlungspläne, Kostenvoranschläge, Zahlungen, Erinnerungen, WhatsApp, Auswertungen und KI-Copilot) funktioniert genauso wie in Spanien. Die beiden Ausnahmen sind Spanien, wo die Rechnungsstellung an Veri*Factu angebunden ist, und Indien, wo das GST-Modul konforme Rechnungen erstellt."
     },
     "faq": {
       "title": "Häufige Fragen",
@@ -1640,5 +1640,18 @@
     "text": "In einem anderen Land?",
     "cta": "Preise für Ihren Markt ansehen",
     "dismiss": "Schließen"
+  },
+  "indiaCallout": {
+    "eyebrow": "Praxen in Indien",
+    "badge": "IN",
+    "title": "GST-konforme Rechnungen, bereit für Praxen in Indien.",
+    "body": "Das optionale GST-Modul prüft Ihre GSTIN, teilt die Steuer je nach Leistungsort in CGST+SGST oder IGST auf und nummeriert Rechnungen nach dem indischen Geschäftsjahr. Die Oberfläche läuft auf Englisch, das Rechnungs-PDF gibt es auch auf Tamil.",
+    "cta": "Zum Modul GST Indien",
+    "bullets": [
+      "GSTIN mit Prüfziffer validiert",
+      "CGST+SGST oder IGST je nach Leistungsort",
+      "Nummerierung nach Geschäftsjahr (April bis März)",
+      "GST-Abstimmungsbericht mit CSV-Export"
+    ]
   }
 }

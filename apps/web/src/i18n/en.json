@@ -873,7 +873,7 @@
       "country": "your country",
       "authority": "your national tax authority",
       "title": "Invoicing is not wired to {authority}.",
-      "body": "In {country}, Dentalpin does not file your invoices with {authority}. You will see invoicing documents on screen and they are not valid as tax invoices: keep issuing your invoices with the system you use today. Everything else (scheduling, patients, dental chart, treatment plans, quotes, payments, reminders, WhatsApp, reports and the AI copilot) works exactly as it does in Spain."
+      "body": "In {country}, Dentalpin does not file your invoices with {authority}. You will see invoicing documents on screen and they are not valid as tax invoices: keep issuing your invoices with the system you use today. Everything else (scheduling, patients, dental chart, treatment plans, quotes, payments, reminders, WhatsApp, reports and the AI copilot) works exactly as it does in Spain. The two exceptions are Spain, where invoicing is wired to Veri*Factu, and India, where the GST module issues compliant invoices."
     },
     "faq": {
       "title": "Frequently asked questions",
@@ -1640,5 +1640,18 @@
     "text": "In another country?",
     "cta": "See the prices for your market",
     "dismiss": "Dismiss"
+  },
+  "indiaCallout": {
+    "eyebrow": "Clinics in India",
+    "badge": "IN",
+    "title": "GST-compliant invoicing, ready for clinics in India.",
+    "body": "The optional GST module validates your GSTIN, splits tax into CGST+SGST or IGST based on place of supply and numbers invoices on the Indian financial year. The interface works in English and invoice PDFs also come out in Tamil.",
+    "cta": "See the India GST module",
+    "bullets": [
+      "GSTIN validated with its check digit",
+      "CGST+SGST or IGST driven by place of supply",
+      "Financial-year numbering (April to March)",
+      "GST reconciliation report with CSV export"
+    ]
   }
 }

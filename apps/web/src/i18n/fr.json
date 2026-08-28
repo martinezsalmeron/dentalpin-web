@@ -873,7 +873,7 @@
       "country": "France",
       "authority": "la facturation électronique française",
       "title": "La facturation n'est pas raccordée à {authority}.",
-      "body": "En {country}, Dentalpin ne transmet pas vos factures dans le cadre de {authority}. Vous verrez des documents de facturation à l'écran et ils ne valent pas facture fiscale : continuez à émettre vos factures avec le système que vous utilisez aujourd'hui. Tout le reste (agenda, patients, schéma dentaire, plans de traitement, devis, encaissements, rappels, WhatsApp, rapports et copilote IA) fonctionne comme en Espagne."
+      "body": "En {country}, Dentalpin ne transmet pas vos factures dans le cadre de {authority}. Vous verrez des documents de facturation à l'écran et ils ne valent pas facture fiscale : continuez à émettre vos factures avec le système que vous utilisez aujourd'hui. Tout le reste (agenda, patients, schéma dentaire, plans de traitement, devis, encaissements, rappels, WhatsApp, rapports et copilote IA) fonctionne comme en Espagne. Les deux exceptions sont l’Espagne, où la facturation est intégrée à Veri*Factu, et l’Inde, où le module GST émet des factures conformes."
     },
     "faq": {
       "title": "Questions fréquentes",
@@ -1640,5 +1640,18 @@
     "text": "Vous êtes dans un autre pays ?",
     "cta": "Voir les tarifs de votre marché",
     "dismiss": "Fermer"
+  },
+  "indiaCallout": {
+    "eyebrow": "Cabinets en Inde",
+    "badge": "IN",
+    "title": "Facturation conforme à la GST, prête pour les cabinets en Inde.",
+    "body": "Le module optionnel GST valide votre GSTIN, répartit la taxe entre CGST+SGST ou IGST selon le lieu de prestation et numérote les factures sur l’exercice fiscal indien. L’interface fonctionne en anglais et le PDF de facture sort aussi en tamoul.",
+    "cta": "Voir le module GST Inde",
+    "bullets": [
+      "GSTIN validé avec sa clé de contrôle",
+      "CGST+SGST ou IGST selon le lieu de prestation",
+      "Numérotation par exercice fiscal (avril à mars)",
+      "Rapport de rapprochement GST avec export CSV"
+    ]
   }
 }

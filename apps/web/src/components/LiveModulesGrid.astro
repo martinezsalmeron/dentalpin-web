@@ -1,5 +1,6 @@
 ---
 import { useDict, pagePath, type Locale } from '~/i18n';
+import { COUNTRY_FLAGS, type ModuleCountry } from '~/data/modules';
 import Section from '@dentalpin/ui/Section.astro';
 import Icon from '@dentalpin/ui/Icon.astro';
 import ModuleIcon from './infographics/ModuleIcon.astro';
@@ -91,9 +92,9 @@ const featuresHref = pagePath(locale, 'features');
                   <span class="block truncate text-[13.5px] font-semibold text-[var(--color-text)]">
                     {mod.name}
                   </span>
-                  {mod.country === 'ES' && (
+                  {mod.country && (
                     <span class="inline-flex flex-none items-center gap-1 rounded-[var(--radius-pill)] border border-[var(--color-border-subtle)] bg-[var(--color-surface-muted)] px-1.5 py-0.5 font-mono text-[9px] font-semibold uppercase tracking-[0.14em] text-[var(--color-text-muted)]">
-                      <span aria-hidden="true">🇪🇸</span>ES
+                      <span aria-hidden="true">{COUNTRY_FLAGS[mod.country as ModuleCountry]}</span>{mod.country}
                     </span>
                   )}
                 </span>

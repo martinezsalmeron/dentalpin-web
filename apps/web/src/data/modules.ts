@@ -5,6 +5,10 @@
  */
 
 export type ModuleDomain = 'clinical' | 'operations' | 'platform';
+
+/** Countries with a dedicated compliance module. Drives the flag badge. */
+export type ModuleCountry = 'ES' | 'IN';
+export const COUNTRY_FLAGS: Record<ModuleCountry, string> = { ES: '🇪🇸', IN: '🇮🇳' };
 export type ModuleIcon =
   | 'tooth'
   | 'calendar'
@@ -39,7 +43,7 @@ export interface ModuleEntry {
   extraScreenshots?: { file: string; caption: Localised }[];
   status?: 'stable' | 'roadmap';
   /** ISO-3166 country code for country-locked modules (renders an "ES" badge etc). */
-  country?: 'ES';
+  country?: ModuleCountry;
   /** Set to true for modules that ship a custom feature page instead of the generic body. */
   customPage?: boolean;
 }
@@ -1027,6 +1031,113 @@ export const MODULES: ModuleEntry[] = [
       },
     ],
     screenshot: 'verifactu-dashboard.png',
+    status: 'stable',
+  },
+  {
+    slug: 'gst-india',
+    slugEn: 'india-gst',
+    slugFr: 'gst-inde',
+    slugPt: 'gst-india',
+    slugDe: 'gst-indien',
+    slugIt: 'gst-india',
+    slugPl: 'gst-indie',
+    domain: 'operations',
+    icon: 'shield',
+    country: 'IN',
+    title: { es: 'GST India', en: 'India GST', fr: 'GST Inde', pt: 'GST Índia', de: 'GST Indien', it: 'GST India', pl: 'GST Indie' },
+    tagline: {
+      es: 'Facturación con GST para clínicas en India: GSTIN, CGST/SGST/IGST y numeración por año fiscal.',
+      en: 'GST-compliant invoicing for clinics in India: GSTIN, CGST/SGST/IGST and financial-year numbering.',
+      fr: 'Facturation conforme à la GST pour les cabinets en Inde : GSTIN, CGST/SGST/IGST et numérotation par exercice fiscal.',
+      pt: 'Faturação com GST para clínicas na Índia: GSTIN, CGST/SGST/IGST e numeração por ano fiscal.',
+      de: 'GST-konforme Rechnungen für Praxen in Indien: GSTIN, CGST/SGST/IGST und Nummerierung nach Geschäftsjahr.',
+      it: 'Fatturazione conforme alla GST per studi in India: GSTIN, CGST/SGST/IGST e numerazione per anno fiscale.',
+      pl: 'Fakturowanie zgodne z GST dla klinik w Indiach: GSTIN, CGST/SGST/IGST i numeracja według roku podatkowego.',
+    },
+    description: {
+      es: 'Módulo opcional pensado exclusivamente para clínicas en India. Valida el GSTIN con dígito de control, decide entre CGST+SGST o IGST según el lugar de suministro, asigna códigos SAC por tratamiento, numera las facturas por año fiscal indio (abril a marzo) y guarda una foto inmutable de cada cálculo en la propia factura.',
+      en: 'Optional module built exclusively for clinics operating in India. It validates the GSTIN with its check digit, splits tax into CGST+SGST or IGST based on place of supply, assigns SAC codes per treatment, numbers invoices on the Indian financial year (April to March) and stores an immutable snapshot of every calculation on the invoice itself.',
+      fr: 'Module optionnel conçu uniquement pour les cabinets exerçant en Inde. Il valide le GSTIN avec sa clé de contrôle, répartit la taxe entre CGST+SGST ou IGST selon le lieu de prestation, attribue les codes SAC par traitement, numérote les factures sur l’exercice fiscal indien (avril à mars) et conserve une copie immuable de chaque calcul dans la facture.',
+      pt: 'Módulo opcional pensado exclusivamente para clínicas na Índia. Valida o GSTIN com o dígito de controlo, reparte o imposto entre CGST+SGST ou IGST conforme o local de prestação, atribui códigos SAC por tratamento, numera as faturas pelo ano fiscal indiano (abril a março) e guarda uma cópia imutável de cada cálculo na própria fatura.',
+      de: 'Optionales Modul ausschließlich für Praxen in Indien. Es prüft die GSTIN samt Prüfziffer, teilt die Steuer je nach Leistungsort in CGST+SGST oder IGST auf, ordnet jedem Treatment einen SAC-Code zu, nummeriert Rechnungen nach dem indischen Geschäftsjahr (April bis März) und legt eine unveränderliche Kopie jeder Berechnung in der Rechnung ab.',
+      it: 'Modulo opzionale pensato solo per studi in India. Convalida il GSTIN con la cifra di controllo, ripartisce l’imposta tra CGST+SGST o IGST in base al luogo della prestazione, assegna i codici SAC per trattamento, numera le fatture sull’anno fiscale indiano (da aprile a marzo) e conserva una copia immutabile di ogni calcolo nella fattura stessa.',
+      pl: 'Moduł opcjonalny pomyślany wyłącznie dla klinik w Indiach. Sprawdza GSTIN wraz z cyfrą kontrolną, dzieli podatek na CGST+SGST lub IGST według miejsca świadczenia, przypisuje kody SAC do zabiegów, numeruje faktury według indyjskiego roku podatkowego (od kwietnia do marca) i zapisuje niezmienną kopię każdego wyliczenia w samej fakturze.',
+    },
+    features: [
+      {
+        es: 'GSTIN validado con el formato oficial y su dígito de control, con aviso si no cuadra con el estado de la clínica.',
+        en: 'GSTIN validated against the official format and its check digit, with a warning when it does not match the clinic state.',
+        fr: 'GSTIN validé selon le format officiel et sa clé de contrôle, avec alerte s’il ne correspond pas à l’État du cabinet.',
+        pt: 'GSTIN validado com o formato oficial e o dígito de controlo, com aviso se não bater com o estado da clínica.',
+        de: 'GSTIN nach offiziellem Format samt Prüfziffer validiert, mit Warnung bei Abweichung vom Bundesstaat der Praxis.',
+        it: 'GSTIN convalidato con il formato ufficiale e la cifra di controllo, con avviso se non coincide con lo stato dello studio.',
+        pl: 'GSTIN walidowany według oficjalnego formatu i cyfry kontrolnej, z ostrzeżeniem przy niezgodności ze stanem kliniki.',
+      },
+      {
+        es: 'Reparto automático CGST+SGST dentro del mismo estado e IGST entre estados, según el lugar de suministro.',
+        en: 'Automatic CGST+SGST split within the same state and IGST across states, driven by place of supply.',
+        fr: 'Répartition automatique CGST+SGST dans le même État et IGST entre États, selon le lieu de prestation.',
+        pt: 'Reparto automático CGST+SGST dentro do mesmo estado e IGST entre estados, segundo o local de prestação.',
+        de: 'Automatische Aufteilung: CGST+SGST im selben Bundesstaat, IGST zwischen Bundesstaaten, je nach Leistungsort.',
+        it: 'Ripartizione automatica CGST+SGST nello stesso stato e IGST tra stati, in base al luogo della prestazione.',
+        pl: 'Automatyczny podział: CGST+SGST w tym samym stanie, IGST między stanami, według miejsca świadczenia.',
+      },
+      {
+        es: 'Códigos SAC por tratamiento con el código dental 999312 por defecto y tipo GST 18% creado al instalar.',
+        en: 'SAC codes per treatment with dental code 999312 as the default and a GST 18% tax type created on install.',
+        fr: 'Codes SAC par traitement avec le code dentaire 999312 par défaut et un type GST 18 % créé à l’installation.',
+        pt: 'Códigos SAC por tratamento com o código dentário 999312 por defeito e tipo GST 18% criado ao instalar.',
+        de: 'SAC-Codes je Treatment mit dem Dental-Code 999312 als Standard und einem bei der Installation angelegten GST-Satz von 18 %.',
+        it: 'Codici SAC per trattamento con il codice dentale 999312 di default e un’aliquota GST 18% creata all’installazione.',
+        pl: 'Kody SAC dla zabiegów z domyślnym kodem stomatologicznym 999312 i stawką GST 18% tworzoną przy instalacji.',
+      },
+      {
+        es: 'Numeración de facturas por año fiscal indio (FAC/FY26-27/0001), de abril a marzo, sin huecos.',
+        en: 'Invoice numbering on the Indian financial year (FAC/FY26-27/0001), April to March, gap-free.',
+        fr: 'Numérotation des factures sur l’exercice fiscal indien (FAC/FY26-27/0001), d’avril à mars, sans trous.',
+        pt: 'Numeração de faturas pelo ano fiscal indiano (FAC/FY26-27/0001), de abril a março, sem falhas.',
+        de: 'Rechnungsnummern nach dem indischen Geschäftsjahr (FAC/FY26-27/0001), April bis März, lückenlos.',
+        it: 'Numerazione delle fatture sull’anno fiscale indiano (FAC/FY26-27/0001), da aprile a marzo, senza buchi.',
+        pl: 'Numeracja faktur według indyjskiego roku podatkowego (FAC/FY26-27/0001), od kwietnia do marca, bez luk.',
+      },
+      {
+        es: 'Las notas de crédito heredan el lugar de suministro de la factura original y revierten el GST con los mismos importes.',
+        en: 'Credit notes inherit the place of supply from the original invoice and reverse GST with the exact same amounts.',
+        fr: 'Les avoirs héritent du lieu de prestation de la facture d’origine et annulent la GST avec les mêmes montants.',
+        pt: 'As notas de crédito herdam o local de prestação da fatura original e revertem o GST com os mesmos valores.',
+        de: 'Gutschriften übernehmen den Leistungsort der Originalrechnung und stornieren die GST mit exakt denselben Beträgen.',
+        it: 'Le note di credito ereditano il luogo della prestazione dalla fattura originale e stornano la GST con gli stessi importi.',
+        pl: 'Noty kredytowe dziedziczą miejsce świadczenia z pierwotnej faktury i odwracają GST na dokładnie te same kwoty.',
+      },
+      {
+        es: 'Informe de conciliación GST con resumen por cabeceras, detalle por factura y exportación CSV.',
+        en: 'GST reconciliation report with per-head summary, per-invoice detail and CSV export.',
+        fr: 'Rapport de rapprochement GST avec synthèse par rubrique, détail par facture et export CSV.',
+        pt: 'Relatório de conciliação GST com resumo por rubrica, detalhe por fatura e exportação CSV.',
+        de: 'GST-Abstimmungsbericht mit Zusammenfassung je Steuerart, Detail je Rechnung und CSV-Export.',
+        it: 'Report di riconciliazione GST con riepilogo per voce, dettaglio per fattura ed esportazione CSV.',
+        pl: 'Raport uzgodnienia GST z podsumowaniem według pozycji, szczegółem per faktura i eksportem CSV.',
+      },
+      {
+        es: 'PDF de factura con etiqueta GST, desglose estructurado y versión en tamil con tipografía Noto Sans Tamil.',
+        en: 'Invoice PDF with GST labels, a structured breakdown and a Tamil version set in Noto Sans Tamil.',
+        fr: 'PDF de facture avec libellés GST, ventilation structurée et version en tamoul composée en Noto Sans Tamil.',
+        pt: 'PDF de fatura com etiquetas GST, desglose estruturado e versão em tâmil com a tipografia Noto Sans Tamil.',
+        de: 'Rechnungs-PDF mit GST-Beschriftung, strukturierter Aufschlüsselung und einer Tamil-Version in Noto Sans Tamil.',
+        it: 'PDF della fattura con etichette GST, dettaglio strutturato e versione in tamil composta in Noto Sans Tamil.',
+        pl: 'PDF faktury z etykietami GST, ustrukturyzowanym zestawieniem i wersją tamilską złożoną krojem Noto Sans Tamil.',
+      },
+      {
+        es: 'Preajuste de país para India: rupias (INR), zona horaria Asia/Kolkata y los 36 códigos de estado oficiales.',
+        en: 'Country preset for India: rupees (INR), Asia/Kolkata timezone and all 36 official state codes.',
+        fr: 'Préréglage pays pour l’Inde : roupies (INR), fuseau Asia/Kolkata et les 36 codes d’État officiels.',
+        pt: 'Predefinição de país para a Índia: rupias (INR), fuso Asia/Kolkata e os 36 códigos de estado oficiais.',
+        de: 'Ländervoreinstellung für Indien: Rupien (INR), Zeitzone Asia/Kolkata und alle 36 offiziellen Bundesstaat-Codes.',
+        it: 'Preimpostazione paese per l’India: rupie (INR), fuso Asia/Kolkata e i 36 codici statali ufficiali.',
+        pl: 'Preset kraju dla Indii: rupie (INR), strefa Asia/Kolkata i wszystkie 36 oficjalnych kodów stanów.',
+      },
+    ],
+    screenshot: 'gst-invoice.png',
     status: 'stable',
   },
   {

@@ -1,6 +1,6 @@
 ---
 import { localised, pagePath, useDict, type Locale } from '~/i18n';
-import { modulesByDomain, moduleSlug, type ModuleDomain } from '~/data/modules';
+import { COUNTRY_FLAGS, modulesByDomain, moduleSlug, type ModuleDomain } from '~/data/modules';
 import Icon from '@dentalpin/ui/Icon.astro';
 
 interface Props {
@@ -55,10 +55,10 @@ const domains: { key: ModuleDomain; label: string }[] = [
                       <span class="text-[14px] font-semibold tracking-tight text-[var(--color-text)]">
                         {localised(mod.title, locale)}
                       </span>
-                      {mod.country === 'ES' && (
+                      {mod.country && (
                         <span class="inline-flex items-center gap-1 rounded-[var(--radius-pill)] border border-[var(--color-border-subtle)] bg-[var(--color-surface-muted)] px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-[0.14em] text-[var(--color-text-muted)]">
-                          <span aria-hidden="true">🇪🇸</span>
-                          ES
+                          <span aria-hidden="true">{COUNTRY_FLAGS[mod.country]}</span>
+                          {mod.country}
                         </span>
                       )}
                     </span>

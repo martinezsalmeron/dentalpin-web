@@ -873,7 +873,7 @@
       "country": "Italia",
       "authority": "il Sistema di Interscambio",
       "title": "La fatturazione non è integrata con {authority}.",
-      "body": "In {country}, Dentalpin non trasmette le tue fatture attraverso {authority} e non emette fattura elettronica. Vedrai documenti di fatturazione a schermo e non sono validi come fattura fiscale: continua a emettere le tue fatture con il sistema che usi oggi. Tutto il resto (agenda, pazienti, odontogramma, piani di trattamento, preventivi, incassi, promemoria, WhatsApp, report e copilota IA) funziona come in Spagna."
+      "body": "In {country}, Dentalpin non trasmette le tue fatture attraverso {authority} e non emette fattura elettronica. Vedrai documenti di fatturazione a schermo e non sono validi come fattura fiscale: continua a emettere le tue fatture con il sistema che usi oggi. Tutto il resto (agenda, pazienti, odontogramma, piani di trattamento, preventivi, incassi, promemoria, WhatsApp, report e copilota IA) funziona come in Spagna. Le due eccezioni sono la Spagna, dove la fatturazione è integrata con Veri*Factu, e l’India, dove il modulo GST emette fatture conformi."
     },
     "faq": {
       "title": "Domande frequenti",
@@ -1640,5 +1640,18 @@
     "text": "Sei in un altro paese?",
     "cta": "Vedi i prezzi del tuo mercato",
     "dismiss": "Chiudi"
+  },
+  "indiaCallout": {
+    "eyebrow": "Studi in India",
+    "badge": "IN",
+    "title": "Fatturazione conforme alla GST, pronta per gli studi in India.",
+    "body": "Il modulo opzionale GST convalida il GSTIN, ripartisce l’imposta tra CGST+SGST o IGST in base al luogo della prestazione e numera le fatture sull’anno fiscale indiano. L’interfaccia funziona in inglese e il PDF della fattura esce anche in tamil.",
+    "cta": "Vedi il modulo GST India",
+    "bullets": [
+      "GSTIN convalidato con cifra di controllo",
+      "CGST+SGST o IGST secondo il luogo della prestazione",
+      "Numerazione per anno fiscale (da aprile a marzo)",
+      "Report di riconciliazione GST con esportazione CSV"
+    ]
   }
 }

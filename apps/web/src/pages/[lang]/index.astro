@@ -6,6 +6,7 @@ import PillarsStrip from '~/components/PillarsStrip.astro';
 import DayInClinic from '~/components/DayInClinic.astro';
 import LiveModulesGrid from '~/components/LiveModulesGrid.astro';
 import VerifactuCallout from '~/components/VerifactuCallout.astro';
+import IndiaGstCallout from '~/components/IndiaGstCallout.astro';
 import ForDevelopers from '~/components/ForDevelopers.astro';
 import LiveDemoCard from '~/components/LiveDemoCard.astro';
 import AiAgentCallout from '~/components/AiAgentCallout.astro';
@@ -30,6 +31,12 @@ const locale = lang as Locale;
     almost nothing.
   */}
   {locale === 'es' && <VerifactuCallout locale={locale} />}
+
+  {/*
+    Same logic for India, on the English page only: /en/ is the locale an
+    Indian clinic lands on, and GST compliance is its highest-intent hook.
+  */}
+  {locale === 'en' && <IndiaGstCallout locale={locale} />}
 
   {/*
     The agent moves up to three. It was 502px of a 10,703px page — five

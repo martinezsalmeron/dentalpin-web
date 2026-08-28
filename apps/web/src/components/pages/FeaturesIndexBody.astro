@@ -6,7 +6,7 @@ import Icon from '@dentalpin/ui/Icon.astro';
 import ScreenshotPlaceholder from '~/components/ScreenshotPlaceholder.astro';
 import ModularOrbit from '~/components/ModularOrbit.astro';
 import CTASection from '~/components/CTASection.astro';
-import { MODULES, modulesByDomain, moduleSlug, type ModuleDomain, type ModuleEntry } from '~/data/modules';
+import { COUNTRY_FLAGS, MODULES, modulesByDomain, moduleSlug, type ModuleDomain, type ModuleEntry } from '~/data/modules';
 
 interface Props { locale: Locale; }
 const { locale } = Astro.props;
@@ -172,10 +172,10 @@ const heroAlt = (slug: string) => {
                     <Icon name={mod.icon} size={20} />
                   </span>
                   <div class="flex items-center gap-1.5">
-                    {mod.country === 'ES' && (
+                    {mod.country && (
                       <span class="inline-flex items-center gap-1 rounded-[var(--radius-pill)] border border-[var(--color-border-subtle)] bg-[var(--color-surface-muted)] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--color-text-muted)]">
-                        <span aria-hidden="true">🇪🇸</span>
-                        ES
+                        <span aria-hidden="true">{COUNTRY_FLAGS[mod.country]}</span>
+                        {mod.country}
                       </span>
                     )}
                     {mod.status === 'roadmap' && (

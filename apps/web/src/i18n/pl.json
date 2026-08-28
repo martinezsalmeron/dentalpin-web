@@ -873,7 +873,7 @@
       "country": "Polsce",
       "authority": "KSeF",
       "title": "Fakturowanie nie jest zintegrowane z {authority}.",
-      "body": "W {country} Dentalpin nie wysyła twoich faktur do {authority}. Zobaczysz na ekranie dokumenty sprzedaży, które nie są ważne jako faktura: wystawiaj faktury dalej w systemie, którego używasz dziś. Cała reszta (grafik, pacjenci, diagram zębowy, plany leczenia, kosztorysy, płatności, przypomnienia, WhatsApp, raporty i asystent AI) działa tak samo jak w Hiszpanii."
+      "body": "W {country} Dentalpin nie wysyła twoich faktur do {authority}. Zobaczysz na ekranie dokumenty sprzedaży, które nie są ważne jako faktura: wystawiaj faktury dalej w systemie, którego używasz dziś. Cała reszta (grafik, pacjenci, diagram zębowy, plany leczenia, kosztorysy, płatności, przypomnienia, WhatsApp, raporty i asystent AI) działa tak samo jak w Hiszpanii. Dwa wyjątki to Hiszpania, gdzie fakturowanie jest zintegrowane z Veri*Factu, oraz Indie, gdzie moduł GST wystawia zgodne faktury."
     },
     "faq": {
       "title": "Częste pytania",
@@ -1640,5 +1640,18 @@
     "text": "Jesteś w innym kraju?",
     "cta": "Zobacz ceny dla swojego rynku",
     "dismiss": "Zamknij"
+  },
+  "indiaCallout": {
+    "eyebrow": "Kliniki w Indiach",
+    "badge": "IN",
+    "title": "Fakturowanie zgodne z GST, gotowe dla klinik w Indiach.",
+    "body": "Opcjonalny moduł GST sprawdza GSTIN, dzieli podatek na CGST+SGST lub IGST według miejsca świadczenia i numeruje faktury według indyjskiego roku podatkowego. Interfejs działa po angielsku, a PDF faktury wychodzi także po tamilsku.",
+    "cta": "Zobacz moduł GST Indie",
+    "bullets": [
+      "GSTIN walidowany z cyfrą kontrolną",
+      "CGST+SGST lub IGST według miejsca świadczenia",
+      "Numeracja według roku podatkowego (kwiecień-marzec)",
+      "Raport uzgodnienia GST z eksportem CSV"
+    ]
   }
 }

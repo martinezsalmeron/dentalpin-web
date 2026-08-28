@@ -58,7 +58,7 @@
   "pricing.fiscal.country": "Brasil",
   "pricing.fiscal.authority": "a nota fiscal eletrônica",
   "pricing.fiscal.title": "O faturamento não está integrado com {authority}.",
-  "pricing.fiscal.body": "No {country}, o Dentalpin não emite {authority}. Você vai ver documentos de faturamento na tela e eles não valem como nota fiscal: continue emitindo as suas notas pelo sistema que usa hoje. Todo o resto (agenda, pacientes, odontograma, planos de tratamento, orçamentos, cobranças, lembretes, WhatsApp, relatórios e copiloto de IA) funciona igual.",
+  "pricing.fiscal.body": "No {country}, o Dentalpin não emite {authority}. Você vai ver documentos de faturamento na tela e eles não valem como nota fiscal: continue emitindo as suas notas pelo sistema que usa hoje. Todo o resto (agenda, pacientes, odontograma, planos de tratamento, orçamentos, cobranças, lembretes, WhatsApp, relatórios e copiloto de IA) funciona igual. As duas exceções são a Espanha, onde o faturamento é integrado ao Veri*Factu, e a Índia, onde o módulo de GST emite faturas em conformidade.",
   "pricing.faq.items[0].q": "Por que preciso abrir uma conta na Hetzner? Vocês não podem hospedar?",
   "contact.reasons.managed": "Hospedagem gerenciada",
   "localeHint.text": "Você está no Brasil?",
