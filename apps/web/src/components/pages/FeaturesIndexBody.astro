@@ -6,7 +6,7 @@ import Icon from '@dentalpin/ui/Icon.astro';
 import ScreenshotPlaceholder from '~/components/ScreenshotPlaceholder.astro';
 import ModularOrbit from '~/components/ModularOrbit.astro';
 import CTASection from '~/components/CTASection.astro';
-import { COUNTRY_FLAGS, MODULES, modulesByDomain, moduleSlug, type ModuleDomain, type ModuleEntry } from '~/data/modules';
+import { CATALOG, COUNTRY_FLAGS, MODULES, TOTAL_APP_MODULES, modulesByDomain, moduleSlug, type ModuleDomain, type ModuleEntry } from '~/data/modules';
 
 interface Props { locale: Locale; }
 const { locale } = Astro.props;
@@ -19,7 +19,9 @@ const domains: { key: ModuleDomain; label: string; tagline: string }[] = [
 ];
 
 const moduleHref = (mod: ModuleEntry) => pagePath(locale, 'features', moduleSlug(mod, locale));
-const totalModules = MODULES.length;
+const totalModules = TOTAL_APP_MODULES;
+/* The nine UI languages of the product, not of this site. */
+const productLanguages = 9;
 
 const heroAlt = (slug: string) => {
   const mod = MODULES.find((m) => m.slug === slug);
@@ -52,10 +54,10 @@ const heroAlt = (slug: string) => {
         </div>
         <div>
           <dt class="text-[11px] font-medium uppercase tracking-wider text-[var(--color-text-subtle)]">
-            {dict.featuresIndex.stats.domains}
+            {dict.featuresIndex.stats.languages}
           </dt>
           <dd class="mt-2 text-[32px] font-semibold leading-none tracking-tight text-[var(--color-text)]">
-            {domains.length}
+            {productLanguages}
           </dd>
         </div>
         <div>
@@ -204,6 +206,50 @@ const heroAlt = (slug: string) => {
       </Section>
     );
   })}
+
+  <Section padY="md" id="catalog">
+    <div class="max-w-2xl">
+      <p class="text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)]">
+        {dict.featuresIndex.catalog.eyebrow}
+      </p>
+      <h2 class="text-marketing-h2 mt-3 text-[var(--color-text)]">
+        {dict.featuresIndex.catalog.title}
+      </h2>
+      <p class="mt-4 text-[15px] leading-[1.6] text-[var(--color-text-muted)]">
+        {dict.featuresIndex.catalog.lead}
+      </p>
+    </div>
+    <ul class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {CATALOG.map((entry) => (
+        <li class="flex items-start gap-3.5 rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-surface)] p-5">
+          <span class="mt-0.5 inline-flex h-9 w-9 flex-none items-center justify-center rounded-[var(--radius-md)] bg-[var(--color-primary-soft)] text-[var(--color-primary-soft-text)]">
+            <Icon name={entry.icon} size={17} />
+          </span>
+          <div class="min-w-0">
+            <p class="flex flex-wrap items-center gap-1.5">
+              <span class="text-[14.5px] font-semibold tracking-tight text-[var(--color-text)]">
+                {localised(entry.title, locale)}
+              </span>
+              <span class="inline-flex rounded-[var(--radius-pill)] border border-[var(--color-border-subtle)] bg-[var(--color-surface-muted)] px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-[0.14em] text-[var(--color-text-muted)]">
+                {entry.category === 'official'
+                  ? dict.featuresIndex.catalog.official
+                  : dict.featuresIndex.catalog.community}
+              </span>
+              {entry.country && (
+                <span class="inline-flex items-center gap-1 rounded-[var(--radius-pill)] border border-[var(--color-border-subtle)] bg-[var(--color-surface-muted)] px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-[0.14em] text-[var(--color-text-muted)]">
+                  <span aria-hidden="true">{COUNTRY_FLAGS[entry.country]}</span>
+                  {entry.country}
+                </span>
+              )}
+            </p>
+            <p class="mt-1 text-[13px] leading-snug text-[var(--color-text-muted)]">
+              {localised(entry.tagline, locale)}
+            </p>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </Section>
 
   <CTASection locale={locale} />
 </BaseLayout>

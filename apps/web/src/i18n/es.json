@@ -26,7 +26,8 @@
       "operations": "Operaciones",
       "platform": "Plataforma"
     },
-    "footer": "Ver todas las funcionalidades →"
+    "footer": "Ver todas las funcionalidades →",
+    "footerCatalog": "Ver los 35 módulos →"
   },
   "hero": {
     "eyebrow": "Ninguna clínica debería ser rehén de su software.",
@@ -137,7 +138,7 @@
       {
         "name": "Portal del paciente",
         "icon": "globe",
-        "soon": false,
+        "soon": true,
         "defaultOn": false
       },
       {
@@ -154,9 +155,16 @@
         "country": "ES"
       },
       {
+        "name": "GST India",
+        "icon": "shield",
+        "soon": false,
+        "defaultOn": false,
+        "country": "IN"
+      },
+      {
         "name": "WhatsApp Business",
         "icon": "message",
-        "soon": true,
+        "soon": false,
         "defaultOn": false
       },
       {
@@ -525,7 +533,7 @@
     ],
     "pluggable": "Módulos oficiales",
     "community": "Módulos de la comunidad",
-    "communityNote": "En camino. Constrúyelos tú o únete a quien ya los está montando.",
+    "communityNote": "Ya son doce los módulos de comunidad publicados. Instálalos, construye el tuyo o únete a quien ya está montando el siguiente.",
     "addYours": "Crea el tuyo",
     "legend": {
       "official": "Oficial",
@@ -538,20 +546,20 @@
         "icon": "message"
       },
       {
-        "label": "Stripe",
-        "icon": "card"
+        "label": "Inventario",
+        "icon": "box"
       },
       {
         "label": "Laboratorio",
         "icon": "flask"
       },
       {
-        "label": "Marketing",
-        "icon": "sparkles"
+        "label": "Gastos",
+        "icon": "chart"
       },
       {
-        "label": "Aseguradoras",
-        "icon": "shield"
+        "label": "Tareas de equipo",
+        "icon": "clipboard"
       }
     ],
     "cta": "Ver la arquitectura en GitHub →"
@@ -931,13 +939,20 @@
     "modulesLabel": "módulos",
     "stats": {
       "modules": "Módulos disponibles",
-      "domains": "Dominios funcionales",
-      "openSource": "Open source"
+      "openSource": "Open source",
+      "languages": "Idiomas del producto"
     },
     "domains": {
       "clinical": "Lo que tu equipo clínico toca cada día.",
       "operations": "Lo que mantiene la clínica funcionando como un negocio.",
       "platform": "La base sobre la que todo se monta y se extiende."
+    },
+    "catalog": {
+      "eyebrow": "CATÁLOGO",
+      "title": "Y todavía hay más módulos.",
+      "lead": "Módulos oficiales y de comunidad que se instalan desde el gestor con un clic. Sin página propia aquí, con la misma filosofía: activa lo que uses, desactiva lo demás.",
+      "official": "Oficial",
+      "community": "Comunidad"
     }
   },
   "verifactuPage": {

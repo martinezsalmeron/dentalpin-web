@@ -26,7 +26,8 @@
       "operations": "Operations",
       "platform": "Platform"
     },
-    "footer": "See all features →"
+    "footer": "See all features →",
+    "footerCatalog": "See all 35 modules →"
   },
   "hero": {
     "eyebrow": "No clinic should be a hostage to its software.",
@@ -137,7 +138,7 @@
       {
         "name": "Patient portal",
         "icon": "globe",
-        "soon": false,
+        "soon": true,
         "defaultOn": false
       },
       {
@@ -154,9 +155,16 @@
         "country": "ES"
       },
       {
+        "name": "India GST",
+        "icon": "shield",
+        "soon": false,
+        "defaultOn": false,
+        "country": "IN"
+      },
+      {
         "name": "WhatsApp Business",
         "icon": "message",
-        "soon": true,
+        "soon": false,
         "defaultOn": false
       },
       {
@@ -525,7 +533,7 @@
     ],
     "pluggable": "Official modules",
     "community": "Community modules",
-    "communityNote": "On the way. Build them yourself or join who is already shipping them.",
+    "communityNote": "Twelve community modules are published already. Install them, build your own or join whoever is building the next one.",
     "addYours": "Build your own",
     "legend": {
       "official": "Official",
@@ -538,20 +546,20 @@
         "icon": "message"
       },
       {
-        "label": "Stripe",
-        "icon": "card"
+        "label": "Inventory",
+        "icon": "box"
       },
       {
-        "label": "Lab",
+        "label": "Lab orders",
         "icon": "flask"
       },
       {
-        "label": "Marketing",
-        "icon": "sparkles"
+        "label": "Expenses",
+        "icon": "chart"
       },
       {
-        "label": "Insurers",
-        "icon": "shield"
+        "label": "Staff tasks",
+        "icon": "clipboard"
       }
     ],
     "cta": "See the architecture on GitHub →"
@@ -931,13 +939,20 @@
     "modulesLabel": "modules",
     "stats": {
       "modules": "Modules available",
-      "domains": "Functional domains",
-      "openSource": "Open source"
+      "openSource": "Open source",
+      "languages": "Product languages"
     },
     "domains": {
       "clinical": "What your clinical team touches every day.",
       "operations": "What keeps the clinic running as a business.",
       "platform": "The foundation everything is built on and extends from."
+    },
+    "catalog": {
+      "eyebrow": "CATALOG",
+      "title": "And there are more modules still.",
+      "lead": "Official and community modules you install from the manager in one click. No page of their own here, same philosophy: turn on what you use, turn off the rest.",
+      "official": "Official",
+      "community": "Community"
     }
   },
   "verifactuPage": {

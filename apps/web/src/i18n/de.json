@@ -26,7 +26,8 @@
       "operations": "Praxisbetrieb",
       "platform": "Plattform"
     },
-    "footer": "Alle Funktionen ansehen →"
+    "footer": "Alle Funktionen ansehen →",
+    "footerCatalog": "Alle 35 Module ansehen →"
   },
   "hero": {
     "eyebrow": "Keine Praxis sollte Geisel ihrer Software sein.",
@@ -137,7 +138,7 @@
       {
         "name": "Patientenportal",
         "icon": "globe",
-        "soon": false,
+        "soon": true,
         "defaultOn": false
       },
       {
@@ -154,9 +155,16 @@
         "country": "ES"
       },
       {
+        "name": "GST Indien",
+        "icon": "shield",
+        "soon": false,
+        "defaultOn": false,
+        "country": "IN"
+      },
+      {
         "name": "WhatsApp Business",
         "icon": "message",
-        "soon": true,
+        "soon": false,
         "defaultOn": false
       },
       {
@@ -525,7 +533,7 @@
     ],
     "pluggable": "Offizielle Module",
     "community": "Community-Module",
-    "communityNote": "In Arbeit. Bauen Sie sie selbst oder machen Sie mit bei denen, die schon dran sind.",
+    "communityNote": "Zwölf Community-Module sind bereits veröffentlicht. Installieren Sie sie, bauen Sie Ihr eigenes oder schließen Sie sich denen an, die am nächsten arbeiten.",
     "addYours": "Bauen Sie Ihr eigenes",
     "legend": {
       "official": "Offiziell",
@@ -538,20 +546,20 @@
         "icon": "message"
       },
       {
-        "label": "Stripe",
-        "icon": "card"
+        "label": "Inventar",
+        "icon": "box"
       },
       {
         "label": "Labor",
         "icon": "flask"
       },
       {
-        "label": "Marketing",
-        "icon": "sparkles"
+        "label": "Ausgaben",
+        "icon": "chart"
       },
       {
-        "label": "Versicherungen",
-        "icon": "shield"
+        "label": "Team-Aufgaben",
+        "icon": "clipboard"
       }
     ],
     "cta": "Die Architektur auf GitHub ansehen →"
@@ -931,13 +939,20 @@
     "modulesLabel": "Module",
     "stats": {
       "modules": "Verfügbare Module",
-      "domains": "Funktionsbereiche",
-      "openSource": "Open Source"
+      "openSource": "Open Source",
+      "languages": "Produktsprachen"
     },
     "domains": {
       "clinical": "Was Ihr Behandlungsteam jeden Tag anfasst.",
       "operations": "Was die Praxis als Betrieb am Laufen hält.",
       "platform": "Die Basis, auf der alles aufsetzt und erweitert wird."
+    },
+    "catalog": {
+      "eyebrow": "KATALOG",
+      "title": "Und es gibt noch mehr Module.",
+      "lead": "Offizielle und Community-Module, die sich mit einem Klick aus dem Manager installieren lassen. Ohne eigene Seite hier, mit derselben Philosophie: aktivieren, was Sie nutzen, der Rest bleibt aus.",
+      "official": "Offiziell",
+      "community": "Community"
     }
   },
   "verifactuPage": {

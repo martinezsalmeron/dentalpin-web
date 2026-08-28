@@ -74,12 +74,18 @@ const domains: { key: ModuleDomain; label: string }[] = [
       ))}
     </div>
 
-    <div class="mt-6 border-t border-[var(--color-border-subtle)] pt-4">
+    <div class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-[var(--color-border-subtle)] pt-4">
       <a
         href={pagePath(locale, 'features')}
         class="inline-flex items-center gap-1 text-[13px] font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
       >
         {dict.megamenu.footer}
+      </a>
+      <a
+        href={`${pagePath(locale, 'features')}#catalog`}
+        class="inline-flex items-center gap-1 text-[13px] font-medium text-[var(--color-text-muted)] hover:text-[var(--color-primary)]"
+      >
+        {dict.megamenu.footerCatalog}
       </a>
     </div>
     </div>

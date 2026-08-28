@@ -26,7 +26,8 @@
       "operations": "Gestione",
       "platform": "Piattaforma"
     },
-    "footer": "Vedi tutte le funzionalità →"
+    "footer": "Vedi tutte le funzionalità →",
+    "footerCatalog": "Vedi i 35 moduli →"
   },
   "hero": {
     "eyebrow": "Nessuno studio dovrebbe essere ostaggio del proprio software.",
@@ -137,7 +138,7 @@
       {
         "name": "Portale del paziente",
         "icon": "globe",
-        "soon": false,
+        "soon": true,
         "defaultOn": false
       },
       {
@@ -154,9 +155,16 @@
         "country": "ES"
       },
       {
+        "name": "GST India",
+        "icon": "shield",
+        "soon": false,
+        "defaultOn": false,
+        "country": "IN"
+      },
+      {
         "name": "WhatsApp Business",
         "icon": "message",
-        "soon": true,
+        "soon": false,
         "defaultOn": false
       },
       {
@@ -525,7 +533,7 @@
     ],
     "pluggable": "Moduli ufficiali",
     "community": "Moduli della community",
-    "communityNote": "In arrivo. Costruiscili tu o unisciti a chi li sta già montando.",
+    "communityNote": "I moduli della community pubblicati sono già dodici. Installali, costruisci il tuo o unisciti a chi sta preparando il prossimo.",
     "addYours": "Crea il tuo",
     "legend": {
       "official": "Ufficiale",
@@ -538,20 +546,20 @@
         "icon": "message"
       },
       {
-        "label": "Stripe",
-        "icon": "card"
+        "label": "Magazzino",
+        "icon": "box"
       },
       {
         "label": "Laboratorio",
         "icon": "flask"
       },
       {
-        "label": "Marketing",
-        "icon": "sparkles"
+        "label": "Spese",
+        "icon": "chart"
       },
       {
-        "label": "Assicurazioni",
-        "icon": "shield"
+        "label": "Attività del team",
+        "icon": "clipboard"
       }
     ],
     "cta": "Vedi l’architettura su GitHub →"
@@ -931,13 +939,20 @@
     "modulesLabel": "moduli",
     "stats": {
       "modules": "Moduli disponibili",
-      "domains": "Aree funzionali",
-      "openSource": "Open source"
+      "openSource": "Open source",
+      "languages": "Lingue del prodotto"
     },
     "domains": {
       "clinical": "Quello che il tuo team clinico tocca ogni giorno.",
       "operations": "Quello che tiene lo studio in piedi come attività.",
       "platform": "La base su cui tutto si monta e si estende."
+    },
+    "catalog": {
+      "eyebrow": "CATALOGO",
+      "title": "E ci sono ancora altri moduli.",
+      "lead": "Moduli ufficiali e della community che si installano dal gestore con un clic. Senza pagina propria qui, con la stessa filosofia: attiva ciò che usi, disattiva il resto.",
+      "official": "Ufficiale",
+      "community": "Community"
     }
   },
   "verifactuPage": {

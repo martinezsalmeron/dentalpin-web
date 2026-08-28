@@ -26,7 +26,8 @@
       "operations": "Operacje",
       "platform": "Platforma"
     },
-    "footer": "Zobacz wszystkie funkcje →"
+    "footer": "Zobacz wszystkie funkcje →",
+    "footerCatalog": "Zobacz 35 modułów →"
   },
   "hero": {
     "eyebrow": "Żadna klinika nie powinna być zakładnikiem swojego programu.",
@@ -137,7 +138,7 @@
       {
         "name": "Portal pacjenta",
         "icon": "globe",
-        "soon": false,
+        "soon": true,
         "defaultOn": false
       },
       {
@@ -154,9 +155,16 @@
         "country": "ES"
       },
       {
+        "name": "GST Indie",
+        "icon": "shield",
+        "soon": false,
+        "defaultOn": false,
+        "country": "IN"
+      },
+      {
         "name": "WhatsApp Business",
         "icon": "message",
-        "soon": true,
+        "soon": false,
         "defaultOn": false
       },
       {
@@ -525,7 +533,7 @@
     ],
     "pluggable": "Moduły oficjalne",
     "community": "Moduły społeczności",
-    "communityNote": "W drodze. Zbuduj je sam albo dołącz do tych, którzy już je składają.",
+    "communityNote": "Opublikowanych modułów społeczności jest już dwanaście. Zainstaluj je, zbuduj własny albo dołącz do tych, którzy budują kolejny.",
     "addYours": "Stwórz swój",
     "legend": {
       "official": "Oficjalny",
@@ -538,20 +546,20 @@
         "icon": "message"
       },
       {
-        "label": "Stripe",
-        "icon": "card"
+        "label": "Magazyn",
+        "icon": "box"
       },
       {
         "label": "Laboratorium",
         "icon": "flask"
       },
       {
-        "label": "Marketing",
-        "icon": "sparkles"
+        "label": "Wydatki",
+        "icon": "chart"
       },
       {
-        "label": "Ubezpieczyciele",
-        "icon": "shield"
+        "label": "Zadania zespołu",
+        "icon": "clipboard"
       }
     ],
     "cta": "Zobacz architekturę na GitHubie →"
@@ -931,13 +939,20 @@
     "modulesLabel": "modułów",
     "stats": {
       "modules": "Dostępnych modułów",
-      "domains": "Obszarów funkcjonalnych",
-      "openSource": "Open source"
+      "openSource": "Open source",
+      "languages": "Języki produktu"
     },
     "domains": {
       "clinical": "To, czego twój zespół kliniczny dotyka codziennie.",
       "operations": "To, co utrzymuje klinikę w ruchu jako biznes.",
       "platform": "Fundament, na którym wszystko stoi i się rozszerza."
+    },
+    "catalog": {
+      "eyebrow": "KATALOG",
+      "title": "A modułów jest jeszcze więcej.",
+      "lead": "Moduły oficjalne i społeczności instalowane z menedżera jednym kliknięciem. Bez własnej strony tutaj, z tą samą filozofią: włącz to, czego używasz, wyłącz resztę.",
+      "official": "Oficjalny",
+      "community": "Społeczność"
     }
   },
   "verifactuPage": {

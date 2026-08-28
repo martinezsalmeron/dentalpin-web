@@ -21,7 +21,11 @@ type IconName =
   | 'flask'
   | 'whatsapp'
   | 'lock'
-  | 'bell';
+  | 'bell'
+  | 'box'
+  | 'users'
+  | 'clipboard'
+  | 'pill';
 
 interface Props {
   name: IconName;
@@ -118,5 +122,29 @@ const titleId = label ? `icon-${name}-${Math.random().toString(36).slice(2, 8)}`
   )}
   {name === 'bell' && (
     <path d="M6 9a6 6 0 0112 0c0 5 2 6 2 6H4s2-1 2-6M10 20a2 2 0 004 0" />
+  )}
+  {name === 'box' && (
+    <>
+      <path d="M21 8l-9-5-9 5v8l9 5 9-5V8z" />
+      <path d="M3 8l9 5 9-5M12 13v8" />
+    </>
+  )}
+  {name === 'users' && (
+    <>
+      <circle cx="9" cy="8" r="3.5" />
+      <path d="M3 20c0-3 2.5-5 6-5s6 2 6 5M16 3.5a3.5 3.5 0 010 7M17.5 15.2c2.1.6 3.5 2.2 3.5 4.8" />
+    </>
+  )}
+  {name === 'clipboard' && (
+    <>
+      <rect x="5" y="4" width="14" height="17" rx="2" />
+      <path d="M9 2.5h6v3H9zM9 11h6M9 15h4" />
+    </>
+  )}
+  {name === 'pill' && (
+    <>
+      <rect x="4.2" y="9.5" width="15.6" height="5" rx="2.5" transform="rotate(-45 12 12)" />
+      <path d="M8.5 15.5l7-7" />
+    </>
   )}
 </svg>
