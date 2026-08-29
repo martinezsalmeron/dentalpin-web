@@ -2,6 +2,7 @@
 title: "Dentalpin vs Open Dental: the other open one, and what changed"
 description: "Open Dental went proprietary at version 24.4 and it publishes its prices. A sourced comparison with Dentalpin, which is open source and free to run."
 pubDate: 2026-08-07
+updatedDate: 2026-08-29
 tags: [comparison, open-dental, dental-software]
 ---
 
@@ -133,7 +134,7 @@ What we would not do is choose it for the name. It is proprietary from 24.4 by i
 
 ## Sources
 
-All consulted on 7 August 2026:
+All consulted on 7 August 2026, and re-checked on 29 August 2026, when a dead API source link was corrected:
 
 - [Open Dental home page](https://www.opendental.com/): product description, "100s of Bridges to Other Programs", "20+ Clearinghouses".
 - [License](https://www.opendental.com/site/license.html): the change from GPL to proprietary in version 24.4, and the statements about price, support and database access.
@@ -142,7 +143,7 @@ All consulted on 7 August 2026:
 - [Order Open Dental](https://www.opendental.com/site/order.html): what the monthly fee includes, the 12 month contract and the 90 day money-back guarantee.
 - [Computer Requirements](https://www.opendental.com/site/computerrequirements.html): supported Windows versions, Home edition and S mode caveats, Linux or macOS as an alternative server.
 - [Open Dental Cloud Requirements](https://www.opendental.com/site/opendentalcloudrequirements.html): ODCloudClient on Windows, bandwidth.
-- [API Developer Setup](https://www.opendental.com/site/apisetup.html) and [api.opendental.com](https://api.opendental.com/): where the API service runs and how requests reach the office.
+- [API Developer Setup](https://www.opendental.com/site/apisetup.html): where the API service runs and how requests reach the office.
 - [International Customers](https://www.opendental.com/site/countries.html): "Open Dental support is limited to English-speaking users."
 - [Database Schema](https://opendental.com/site/databaseschema.html): the published schema document.
 - [Dentalpin's licence](https://github.com/martinezsalmeron/dentalpin/blob/main/LICENSE) and [source](https://github.com/martinezsalmeron/dentalpin).

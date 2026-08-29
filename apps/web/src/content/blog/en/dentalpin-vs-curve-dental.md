@@ -2,6 +2,7 @@
 title: "Dentalpin vs Curve Dental: cloud-only, or a server you own"
 description: "Curve Dental states 80,000+ dental professionals and publishes no price. Dentalpin is open source and self-hosted. A sourced comparison of where each fits."
 pubDate: 2026-08-12
+updatedDate: 2026-08-29
 tags: [comparison, curve-dental, dental-software]
 ---
 
@@ -36,7 +37,7 @@ The module list on its own feature pages is wide:
 - **Money.** Patient billing, insurance billing, Curve Pay for "fully integrated payment processing, modern terminals, and next-day deposits", and Eligibility+, described as an "AI-powered, code-level insurance verification tool".
 - **AI and engagement.** Curve Care+, a "Voice-driven clinical AI suite" that "handles notes, charting, and perio as care is happening", and Curve GRO® for patient engagement.
 
-Thirty integration partners are listed across eleven categories, from insurance and claims to phone systems.
+28 integration partners are listed across 12 categories, from insurance and claims to phone systems.
 
 ### Where it runs, and what it needs
 
@@ -86,7 +87,7 @@ Verifiable rows only. Curve's figures are its own, from its own pages.
 | ePrescribe | ✓ Included | ✗ Not offered |
 | Insurance verification | ✓ Eligibility+, code-level | ✗ Not offered |
 | Clinical AI | ✓ Curve Care+, voice-driven | ~ Assistant over your data, no ambient notes |
-| Integration partners | ✓ 30 listed, 11 categories | ✗ Early ecosystem |
+| Integration partners | ✓ 28 listed, 12 categories | ✗ Early ecosystem |
 | Open API | ✗ Partner list, none published | ✓ Full REST, OpenAPI |
 | Data conversion | ✓ Staffed, 7,500+ completed | ~ Self-service import module |
 | Support | ✓ 24/7/365 stated | ~ Community and docs |
@@ -145,18 +146,18 @@ Dentalpin is the other bet: that the software holding clinical records should be
 
 ## Sources
 
-All Curve Dental pages consulted on 12 August 2026:
+All Curve Dental pages consulted on 12 August 2026, and re-checked on 29 August 2026, when the partner and category counts below were corrected:
 
 - [Curve Dental home](https://www.curvedental.com/): "#1 Ranked Cloud-Based Dental Software", "All-in-One Dental Software Solution", and the module line-up.
 - [Why Curve Rocks](https://www.curvedental.com/why-curve-rocks): "Curve now supports 80,000+ dental professionals, more than any other cloud-based platform", "We've been writing cloud software for over a decade", "Uptime Performance Excellence: 99.99%", the annual third-party security audits.
 - [Curve Dental Canada](https://www.curvedental.com/canada): "founded in Canada in 2004 as the first cloud-based dental practice management software on the market", the Calgary and Provo offices, "Over 3,500 Canada-based dental professionals who use Curve Hero", and PIPEDA.
 - [Pricing](https://www.curvedental.com/pricing): "Affordable & Transparent Pricing", "Get Pricing", "GET A PERSONALIZED QUOTE", the startup implementation and licence fee note, and no figure anywhere on the page.
 - [Feature overview](https://www.curvedental.com/feature-overview): charting, perio charting, imaging, treatment planning, ePrescribe, Smart Forms, reporting, Eligibility+, Curve Pay, Curve Care+ and Curve GRO®, in Curve's own wording.
-- [Hardware requirements](https://www.curvedental.com/hardware-requirements): Chrome as the only fully supported browser, the Windows and macOS versions, the 10 Mbps / 5 Mbps recommendation, and the RAM guidance.
+- [Hardware requirements](https://www.curvedental.com/system-requirements): Chrome as the only fully supported browser, the Windows and macOS versions, the 10 Mbps / 5 Mbps recommendation, and the RAM guidance.
 - [Data conversion](https://www.curvedental.com/data-conversion): "7,500+ conversions", the per-product counts for Dentrix, Eaglesoft, SoftDent, Open Dental and others, and "The final data conversion typically takes just three business days!".
 - [Implementation](https://www.curvedental.com/implementation): the four steps, the dedicated project manager, data migration specialist, trainer and account manager, "8 live, interactive webinar sessions", and 24/7/365 support.
 - [Data management](https://www.curvedental.com/data-management): AWS hosting, encryption in transit and at rest, intraday backups stored separately, ISO 9001 for Curve and ISO 27001 for AWS, and "You retain ownership of your data, and we manage it with expertise".
-- [Integration partners](https://www.curvedental.com/partner-list): the thirty partners and eleven categories, with no developer API programme published.
+- [Integration partners](https://www.curvedental.com/partner-list): the 28 partners and 12 categories, with no developer API programme published.
 - [FAQ](https://www.curvedental.com/faq): Curve Hero and Curve SuperHero™, and "Any PC or Mac using Curve Hero will need access to the Internet either directly or through a local area network."
 - [Dentalpin's licence](https://github.com/martinezsalmeron/dentalpin/blob/main/LICENSE) and [source](https://github.com/martinezsalmeron/dentalpin).
 

@@ -2,6 +2,7 @@
 title: "Dentalpin frente a Odontonet: dos formas de que los datos se queden en tu clínica"
 description: "Comparativa entre Odontonet, instalado en la clínica y con más de 25 años a la espalda, y Dentalpin, open source y autoalojable. Con fuentes y fechas."
 pubDate: 2026-08-10
+updatedDate: 2026-08-29
 tags: [comparativa, odontonet, software-dental]
 ---
 
@@ -125,7 +126,7 @@ Lo que nosotros ponemos encima es otra cosa: el código publicado, el precio pub
 
 ## Fuentes
 
-Todas consultadas el 10 de agosto de 2026:
+Todas consultadas el 10 de agosto de 2026, y revisadas de nuevo sin cambios el 29 de agosto de 2026:
 
 - [Quiénes somos · Odontonet](https://www.odontonet.es/quienes-somos/): Aseting Informática S.L., fundada en 1989, más de 25 años en software dental, más de 3500 profesionales, sello PYME Innovadora.
 - [Preguntas frecuentes](https://www.odontonet.es/faq/): dónde viven los datos, requisitos, Windows y macOS por virtualización, copias de seguridad, cambio de programa, tres versiones, qué incluye el mantenimiento.

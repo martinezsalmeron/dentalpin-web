@@ -2,7 +2,7 @@
 title: "Dentalpin vs Dentrix: what you are actually choosing between"
 description: "Dentrix states 35,000+ practices and publishes no price. Dentalpin is open source and free to run. A sourced comparison of where each one fits."
 pubDate: 2026-08-07
-updatedDate: 2026-08-08
+updatedDate: 2026-08-29
 tags: [comparison, dentrix, dental-software]
 ---
 
@@ -130,7 +130,7 @@ Dentalpin is the other bet: that the software holding clinical records should be
 
 ## Sources
 
-All Dentrix pages consulted on 7 August 2026, and re-checked with no changes on 8 August 2026:
+All Dentrix pages consulted on 7 August 2026, re-checked with no changes on 8 August 2026, and re-checked again with no changes on 29 August 2026:
 
 - [Why Dentrix](https://www.dentrix.com/about-us/why-dentrix/): "35,000+ Dental practices use Dentrix everyday", "30+ Years of continuous innovation and leadership", "150+ Connected technology partners", and Henry Schein One as the parent.
 - [Dentrix or Dentrix Ascend](https://www.dentrix.com/about-us/dentrix-or-dentrix-ascend/): the on-premises and cloud split, "Installed locally on office computers", "Local servers (practice-managed)", "Accessed via web browser from anywhere", and the IT maintenance trade-off.

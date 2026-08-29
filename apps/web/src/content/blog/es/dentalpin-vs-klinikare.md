@@ -2,6 +2,7 @@
 title: "Dentalpin frente a Klinikare: dos maneras de pagar por el software de tu clínica"
 description: "Comparativa entre Klinikare, 100% en la nube y con tarifa 2026 publicada, y Dentalpin, open source y autoalojable. Con cifras, fuentes y fechas."
 pubDate: 2026-08-12
+updatedDate: 2026-08-29
 tags: [comparativa, klinikare, software-dental]
 ---
 
@@ -130,7 +131,7 @@ Lo que nosotros ponemos encima es otra cosa: el código publicado, una cuota que
 
 ## Fuentes
 
-Todas consultadas el 12 de agosto de 2026:
+Todas consultadas el 12 de agosto de 2026, y revisadas de nuevo sin cambios el 29 de agosto de 2026:
 
 - [Inicio · Klinikare](https://klinikare.com/klinikare/p/home): "Más de 2.500 clínicas y +20.000 profesionales", "más de 16 años de experiencia en el sector sanitario", certificación ISO 27001, infraestructura cloud sobre Amazon AWS, asistentes de IA y verticales que cubren.
 - [Software de Gestión para Clínicas Dentales](https://klinikare.com/klinikare/p/software-gestion-clinica-dental): descripción del producto dental, odontograma, más de 2.500 clínicas y más de 16 años.
