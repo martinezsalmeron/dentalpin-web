@@ -13,6 +13,10 @@ export default defineConfig({
   server: { host: '0.0.0.0', port: 4321 },
   redirects: {
     '/': '/es/',
+    // The ai-ready module was renamed to agente-ia/ai-agent on 2026-06-25
+    // after ~2 months live; these keep any indexed links working.
+    '/es/funcionalidades/ai-ready': '/es/funcionalidades/agente-ia',
+    '/en/features/ai-ready': '/en/features/ai-agent',
   },
   prefetch: { prefetchAll: true, defaultStrategy: 'viewport' },
   markdown: {
