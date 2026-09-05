@@ -2,6 +2,7 @@
 title: "Dentalpin e Appuntoo a confronto: due modi diversi di essere gratis"
 description: "Confronto tra Appuntoo e Dentalpin: piano free a 30 pazienti, prezzi pubblicati, invio al Sistema TS e cosa manca a ciascuno dei due per uno studio odontoiatrico."
 pubDate: 2026-08-09
+updatedDate: 2026-09-05
 tags: [confronto, appuntoo, gestionale-dentistico]
 ---
 
@@ -15,7 +16,7 @@ Noi facciamo Dentalpin, quindi non siamo neutrali. Possiamo però essere esatti.
 
 **Appuntoo è un gestionale per professionisti sanitari, non un gestionale odontoiatrico.** Il suo sito lo propone a fisioterapisti, psicologi, nutrizionisti, dentisti, osteopati, logopedisti e altri. Fa benissimo le cose che tutti questi mestieri hanno in comune: calendario, prenotazioni online, promemoria WhatsApp, anamnesi, fatturazione e invio al Sistema Tessera Sanitaria. Il prezzo è pubblicato e parte da zero.
 
-**Dentalpin è un gestionale odontoiatrico e basta.** Odontogramma, parodontogramma, piano di cura e preventivi sono il centro del prodotto, non un modulo. È open source, si installa sul tuo server, non ha limiti di pazienti né di operatori. In compenso non manda niente al Sistema TS e l'interfaccia non è ancora in italiano.
+**Dentalpin è un gestionale odontoiatrico e basta.** Odontogramma, parodontogramma, piano di cura e preventivi sono il centro del prodotto, non un modulo. È open source, si installa sul tuo server, non ha limiti di pazienti né di operatori. In compenso non manda niente al Sistema TS.
 
 **La domanda che decide: la tua parte clinica sta in una scheda o in un odontogramma?** Se registri l'anamnesi e qualche nota, Appuntoo copre tutto il resto meglio di noi e costa poco. Se il lavoro quotidiano è dente per dente, con piani di cura e preventivi, quel pezzo in Appuntoo non c'è.
 
@@ -25,7 +26,7 @@ Noi facciamo Dentalpin, quindi non siamo neutrali. Possiamo però essere esatti.
 
 ## Cosa è Appuntoo
 
-Appuntoo si presenta come "il gestionale che tiene il tuo studio in ordine" ed è pubblicato da HeavylyTrade SRLS, partita IVA IT04635090618.
+Appuntoo si presenta come "il gestionale che tiene il tuo studio in ordine" ed è pubblicato da HeavenlyTrade SRLS, partita IVA IT04635090618.
 
 Non è pensato per una sola specialità. Il sito elenca fisioterapisti, psicologi, nutrizionisti, dentisti, osteopati, logopedisti, dermatologi, oculisti, podologi, pediatri, medici specialisti, studi e poliambulatori. Questa è una scelta di prodotto, non un difetto, e spiega bene sia i suoi punti di forza sia quello che gli manca per l'odontoiatria.
 
@@ -55,7 +56,7 @@ Dentalpin è un gestionale odontoiatrico pubblicato sotto Business Source Licens
 
 Il nucleo comprende agenda, anagrafica pazienti, odontogramma, parodontogramma, cartella clinica, piani di cura, preventivi con firma, fatturazione, pagamenti, richiami e report. Non ci sono piani né limiti: né di pazienti, né di operatori, né di riuniti. Tutto quello che fa l'interfaccia lo fa anche l'API REST documentata con OpenAPI.
 
-Quello che in Italia oggi **non** c'è, ed è meglio dirlo qui che alla terza schermata: nessun invio delle spese al Sistema Tessera Sanitaria, nessuna emissione di fattura elettronica verso lo SDI, nessuna contabilità e nessun promemoria WhatsApp compreso nel prodotto. L'interfaccia dell'applicazione esiste in inglese e spagnolo, ma non in italiano.
+Quello che in Italia oggi **non** c'è, ed è meglio dirlo qui che alla terza schermata: nessun invio delle spese al Sistema Tessera Sanitaria, nessuna emissione di fattura elettronica verso lo SDI, nessuna contabilità e nessun promemoria WhatsApp compreso nel prodotto. L'interfaccia dell'applicazione oggi è disponibile in italiano, tra nove lingue.
 
 ![Cartella del paziente in Dentalpin con l'odontogramma, gli alert clinici, il piano attivo e il prossimo appuntamento](/screenshots/dental-chart.png)
 
@@ -81,8 +82,8 @@ Solo righe verificabili. Dove Appuntoo non pubblica un dato, la riga lo dice inv
 | Imposta di bollo automatica | ✓ Sulle fatture esenti sopra soglia | ✗ Non presente |
 | Promemoria WhatsApp | ✓ 100 o 300 al mese secondo il piano | ~ Come canale di notifica, da configurare |
 | Prenotazioni online per il paziente | ✓ Senza registrazione | ✗ Non presente |
-| Interfaccia in italiano | ✓ Sì | ✗ No, oggi inglese e spagnolo |
-| Manutenzione del server | ✓ Nessuna, è un servizio | ✗ A carico tuo |
+| Interfaccia in italiano | ✓ Sì | ✓ Sì, tra nove lingue |
+| Manutenzione del server | ✓ Nessuna, è un servizio | ~ A carico tuo nel self-hosting gratuito, o a canone nel piano Gestito |
 | Dove stanno i dati | ~ Sui loro server | ✓ Sul tuo server, sempre |
 | Codice sorgente | ✗ No | ✓ Su GitHub, per intero |
 | API pubblica | ~ Non documentata sulle pagine pubbliche | ✓ REST, documentata con OpenAPI |
@@ -105,13 +106,12 @@ Due limiti, dichiarati da loro:
 ## Scegli Appuntoo se
 
 - **Vuoi che sia il gestionale a mandare le spese al Sistema TS.** Loro lo fanno già nel piano Free, noi no. È la ragione principale per cui questo confronto esiste.
-- **Ti serve l'interfaccia in italiano oggi.** La nostra non lo è ancora, e non c'è modo di girarci intorno.
 - **Non vuoi un server da gestire.** Appuntoo è un servizio: non c'è niente da installare, aggiornare o salvare. Per uno studio senza nessuno che si occupi di informatica, questo da solo può chiudere la discussione.
 - **Vuoi che i pazienti prenotino da soli**, senza registrarsi, e ricevano un promemoria WhatsApp. Sono funzioni comprese nei loro piani e da noi non ci sono in quella forma.
 - **La tua parte clinica è un'anamnesi e qualche documento.** Se lavori anche in altre discipline, o se lo studio ospita più professioni, il loro modello a moduli personalizzabili è pensato esattamente per quello.
 - **Vuoi sapere quanto spendi al mese senza chiamare nessuno.** Il prezzo è sul sito, con l'IVA dichiarata a parte.
 
-Se tre di questi sei punti ti riguardano, la risposta onesta è Appuntoo, e a 34,99 € al mese è una risposta ragionevole.
+Se due di questi cinque punti ti riguardano, la risposta onesta è Appuntoo, e a 34,99 € al mese è una risposta ragionevole.
 
 ## Scegli Dentalpin se
 
@@ -120,7 +120,7 @@ Se tre di questi sei punti ti riguardano, la risposta onesta è Appuntoo, e a 34
 - **Sei uno studio con più operatori.** Il confronto lì non è 0 € contro 0 €, è 0 € contro 79,99 € al mese più IVA.
 - **Vuoi i dati sul tuo server.** Il database è PostgreSQL, sta dove lo metti tu, e il dump lo fai quando vuoi senza chiedere il permesso a nessuno.
 - **Vuoi poter leggere il codice.** È su GitHub per intero, il che significa che un tuo consulente può verificare come vengono trattati i dati dei pazienti invece di fidarsi di una scheda prodotto.
-- **Hai qualcuno che sa gestire un server**, in studio o a contratto. Questo è il punto che decide davvero, e se la risposta è no il resto dell'elenco non conta.
+- **Hai qualcuno che sa gestire un server**, in studio o a contratto, e vuoi il self-hosting gratuito. Se la risposta è no esiste anche un piano Gestito a canone in cui installiamo e sorvegliamo noi il server, ma allora il confronto sul prezzo con Appuntoo cambia.
 
 ![Elenco fatture di Dentalpin con gli stati emessa, pagata, parziale, scaduta e bozza](/screenshots/invoices.png)
 
@@ -141,12 +141,14 @@ Il passaggio da un gestionale all'altro è il momento in cui si perdono i dati, 
 
 ## Fonti
 
-Tutte le pagine sono di Appuntoo e sono state consultate il 9 agosto 2026.
+Tutte le pagine sono di Appuntoo e sono state consultate il 9 agosto 2026, riverificate il 5 settembre 2026.
 
-- Appuntoo, [home](https://www.appuntoo.com/): posizionamento, professioni servite, funzionalità principali, ragione sociale HeavylyTrade SRLS e partita IVA IT04635090618 nel piè di pagina.
-- Appuntoo, [prezzi](https://www.appuntoo.com/prezzi/): piano Free a 0 € con 1 account professionista e fino a 30 pazienti, Professionista a 34,99 € al mese più IVA con pazienti illimitati e 100 promemoria WhatsApp al mese, Studio a 79,99 € al mese più IVA con fino a 30 account collaboratori, gestione stanze, multi-sede e 300 promemoria WhatsApp al mese. Ricontrollata il 15 agosto 2026: il piano Free elenca "Fatturazione e Sistema Tessera Sanitaria", corretto in questa pagina.
-- Appuntoo, [funzionalità](https://www.appuntoo.com/funzionalita/): anagrafica pazienti, anamnesi, calendario, certificati e documenti, collaboratori, fatturazione, notifiche email, prenotazioni online, promemoria WhatsApp e statistiche.
-- Appuntoo, [fatturazione](https://www.appuntoo.com/funzionalita/fatturazione/): invio al Sistema Tessera Sanitaria con tipo spesa e natura IVA precompilati, registrazione del protocollo della ricevuta, numerazione automatica, imposta di bollo sulle fatture esenti sopra soglia, impossibilità di inviare al Sistema TS le fatture di pazienti con identificativo fiscale estero e blocco delle fatture già trasmesse.
-- Appuntoo, [anamnesi](https://www.appuntoo.com/funzionalita/anamnesi/): moduli personalizzabili con sei tipi di campo, campi a etichette per patologie, traumi e farmaci, testo libero per l'anamnesi prossima, esportazione in PDF.
+- Appuntoo, [home](https://www.appuntoo.com/): posizionamento, professioni servite, funzionalità principali, ragione sociale HeavenlyTrade SRLS e partita IVA IT04635090618 nel piè di pagina. Riverificata il 5 settembre 2026: invariata nel posizionamento, nelle dodici professioni elencate e nei dati societari; corretto in questa pagina un refuso nella ragione sociale ("HeavylyTrade" per "HeavenlyTrade").
+- Appuntoo, [prezzi](https://www.appuntoo.com/prezzi/): piano Free a 0 € con 1 account professionista e fino a 30 pazienti, Professionista a 34,99 € al mese più IVA con pazienti illimitati e 100 promemoria WhatsApp al mese, Studio a 79,99 € al mese più IVA con fino a 30 account collaboratori, gestione stanze, multi-sede e 300 promemoria WhatsApp al mese. Ricontrollata il 15 agosto 2026: il piano Free elenca "Fatturazione e Sistema Tessera Sanitaria", corretto in questa pagina. Riverificata il 5 settembre 2026 sulla tabella comparativa completa dei tre piani: prezzi, limiti di pazienti e account, promemoria WhatsApp e la voce "Invio al Sistema Tessera Sanitaria (TS)" invariati e presenti su tutti e tre i piani, Free incluso.
+- Appuntoo, [funzionalità](https://www.appuntoo.com/funzionalita/): anagrafica pazienti, anamnesi, calendario, certificati e documenti, collaboratori, fatturazione, notifiche email, prenotazioni online, promemoria WhatsApp e statistiche. Riverificata il 5 settembre 2026: stesso indice di funzionalità, nessuna voce aggiunta o rimossa.
+- Appuntoo, [fatturazione](https://www.appuntoo.com/funzionalita/fatturazione/): invio al Sistema Tessera Sanitaria con tipo spesa e natura IVA precompilati, registrazione del protocollo della ricevuta, numerazione automatica, imposta di bollo sulle fatture esenti sopra soglia, impossibilità di inviare al Sistema TS le fatture di pazienti con identificativo fiscale estero e blocco delle fatture già trasmesse. Riverificata il 5 settembre 2026: invariata.
+- Appuntoo, [anamnesi](https://www.appuntoo.com/funzionalita/anamnesi/): moduli personalizzabili con sei tipi di campo, campi a etichette per patologie, traumi e farmaci, testo libero per l'anamnesi prossima, esportazione in PDF. Riverificata il 5 settembre 2026: invariata.
 
-Quello che Appuntoo non pubblica non compare in questa pagina. In particolare, sulle pagine consultate non sono elencati odontogramma, parodontogramma, preventivi e piano di cura, non è documentata un'API pubblica e non è descritta una procedura di esportazione dei dati.
+Quello che Appuntoo non pubblica non compare in questa pagina. In particolare, sulle pagine consultate non sono elencati odontogramma, parodontogramma, preventivi e piano di cura, non è documentata un'API pubblica e non è descritta una procedura di esportazione dei dati. Confermato anche alla riverifica del 5 settembre 2026.
+
+Riverifica del 5 settembre 2026 sul prodotto Dentalpin: l'interfaccia dell'applicazione, verificata nel [repository](https://github.com/martinezsalmeron/dentalpin), oggi include l'italiano tra nove lingue disponibili. Il confronto è stato corretto di conseguenza, rimuovendo il punto "interfaccia in italiano" dai motivi per scegliere Appuntoo. La stessa riverifica ha trovato che, oltre al self-hosting gratuito, esiste ora un piano Gestito a canone mensile in cui il server viene installato e sorvegliato da noi: la riga sulla manutenzione del server e il punto sulla competenza tecnica necessaria sono stati aggiornati di conseguenza.

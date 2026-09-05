@@ -2,6 +2,7 @@
 title: "Dentalpin e OrisDent Q a confronto: cosa copre davvero ciascuno dei due"
 description: "Confronto tra OrisDent Q di OrisLine e Dentalpin: fattura elettronica, Sistema TS, suite di prodotti, prezzi pubblicati e proprietà dei dati. Con quello che noi non facciamo."
 pubDate: 2026-08-08
+updatedDate: 2026-09-05
 tags: [confronto, orisdent, orisline, gestionale-dentistico]
 ---
 
@@ -19,7 +20,7 @@ Questo confronto serve a uno studio italiano che sta valutando OrisDent Q e si c
 
 ## Cosa è OrisDent Q
 
-OrisDent Q è il gestionale per studi odontoiatrici della linea OrisLine, che sul proprio sito si presenta come "il software innovativo e moderno per potenziare il tuo Studio Dentistico". Il sito indica che "OrisDent è disponibile in diverse versioni e in modalità desktop e in cloud", quindi la scelta tra installazione locale e cloud la fai dentro la loro gamma.
+OrisDent Q è il gestionale per studi odontoiatrici della linea OrisLine, che sul proprio sito si presenta come "il software innovativo e moderno per potenziare il tuo Studio Dentistico". Il sito indica che "OrisDent è disponibile in diverse versioni e in modalità desktop e in cloud", quindi la scelta tra installazione locale e cloud la fai dentro la loro gamma. La pagina di gamma per gli studi descrive oggi tre modalità di gestione, "On-Premise, Cloud o IaaS", quest'ultima pensata per le realtà più strutturate.
 
 Dalla cartella clinica, scrive OrisLine, "è possibile gestire l'intero piano di trattamento del paziente, dal preventivo alla fatturazione", con cartelle specialistiche odontoiatrica, ortodontica, parodontale e gnatologica. La firma del paziente si raccoglie con la "Firma Elettronica Avanzata".
 
@@ -53,7 +54,7 @@ Sull'assistenza pubblicano un telefono e un indirizzo email, assistenza remota, 
 
 Dentalpin è un gestionale pubblicato sotto Business Source License 1.1: gratuito per qualsiasi studio, leggibile, forkabile, e quattro anni dopo ogni release la versione passa automaticamente ad Apache 2.0. Si installa con un `docker compose` sul tuo server, nel cloud che scegli o su una macchina in studio.
 
-Il nucleo comprende agenda, pazienti, odontogramma, cartella clinica, preventivi e fatturazione. In opzione si aggiungono parodontogramma, report, un agente di intelligenza artificiale che esegue le stesse operazioni dell'interfaccia e si ferma a chiedere conferma prima di ogni scrittura, e WhatsApp come canale di notifica.
+Il nucleo comprende agenda, pazienti, odontogramma, cartella clinica, preventivi e fatturazione. In opzione si aggiungono parodontogramma, report, un modulo base di ordini al laboratorio, un agente di intelligenza artificiale che esegue le stesse operazioni dell'interfaccia e si ferma a chiedere conferma prima di ogni scrittura, e WhatsApp come canale di notifica.
 
 Non ci sono canoni per riunito, per odontoiatra o per paziente, e non ci sono piani da cui sbloccare funzioni: i moduli ci sono tutti.
 
@@ -61,9 +62,8 @@ Quello che in Italia oggi **non** c'è, ed è meglio saperlo prima di leggere la
 
 - **Nessuna emissione di fattura elettronica verso lo SDI**, né sul ciclo attivo né su quello passivo.
 - **Nessun invio delle spese al Sistema Tessera Sanitaria.**
-- **Nessun modulo di laboratorio** e nessun canale verso l'odontotecnico.
+- **Nessuna filiera di laboratorio come OrisLab Q, MyLab e My.Doc**, e nessuno scambio elettronico con il software del laboratorio: c'è solo un modulo base che traccia gli ordini inviati e ricevuti.
 - **Nessun registro UDI** e nessun Passaporto Implantare.
-- **L'interfaccia dell'applicazione non esiste in italiano.** Oggi è in inglese e spagnolo, con altre lingue in roadmap e aperte come contributo della community sul [repository](https://github.com/martinezsalmeron/dentalpin).
 
 ## Fianco a fianco
 
@@ -78,8 +78,8 @@ Quello che in Italia oggi **non** c'è, ed è meglio saperlo prima di leggere la
 | Sistema Tessera Sanitaria | ✓ Invio delle spese | ✗ Non presente |
 | Contabilità | ✓ "Sezione contabile completa" | ✗ Non la facciamo |
 | Registro UDI e Passaporto Implantare | ✓ Incluso, senza costi aggiuntivi | ✗ Non presente |
-| Laboratorio odontotecnico | ✓ OrisLab Q, MyLab, My.Doc | ✗ Nessun modulo |
-| Interfaccia in italiano | ✓ Sì | ✗ No, oggi inglese e spagnolo |
+| Laboratorio odontotecnico | ✓ OrisLab Q, MyLab, My.Doc | ~ Modulo base di ordini al laboratorio, nessuna integrazione col software esterno |
+| Interfaccia in italiano | ✓ Sì | ✓ Sì, tra nove lingue |
 | Intelligenza artificiale | ✓ Maia, inclusa senza costi aggiuntivi | ✓ Agente che conferma prima di scrivere |
 | Desktop e cloud | ✓ Entrambi, secondo il loro sito | ~ Solo web, sul server che scegli tu |
 | Cartelle specialistiche | ✓ Odontoiatrica, ortodontica, parodontale, gnatologica | ~ Odontogramma e parodontogramma |
@@ -97,11 +97,10 @@ Le due righe con "non documentata" e "secondo il loro sito" dicono esattamente q
 
 - **Vuoi che sia il gestionale a chiudere il cerchio fiscale.** Fattura elettronica attiva e passiva e invio al Sistema TS dentro lo stesso programma. È la ragione principale per cui questo confronto esiste, e noi lì non ci siamo.
 - **Metti impianti e vuoi il registro UDI dove metti tutto il resto.** Un registro con lettore bar code dentro la cartella è un adempimento in meno gestito a parte.
-- **Lavori molto con il laboratorio.** OrisLab Q, MyLab e My.Doc sono un pezzo di catena che noi non copriamo affatto.
-- **Ti serve un'interfaccia in italiano oggi.** La nostra non lo è ancora, e non c'è modo di girarci intorno.
+- **Lavori molto con il laboratorio e ti serve lo scambio elettronico col loro software.** OrisLab Q, MyLab e My.Doc sono una filiera completa; da noi c'è solo un modulo base che traccia gli ordini inviati e ricevuti, senza integrazione con sistemi esterni.
 - **Vuoi un fornitore unico con un numero da chiamare.** Trent'anni di attività, oltre 60 persone dichiarate e una piattaforma di formazione sono infrastruttura vera; da noi risponde la community su GitHub.
 
-Se tre di questi cinque punti ti riguardano, la risposta onesta è OrisDent Q. Preferiremmo essere la risposta a tutto, ma in Italia oggi non lo siamo.
+Se tre di questi quattro punti ti riguardano, la risposta onesta è OrisDent Q. Preferiremmo essere la risposta a tutto, ma in Italia oggi non lo siamo.
 
 ## Scegli Dentalpin se
 
@@ -129,16 +128,16 @@ Se tre di questi cinque punti ti riguardano, la risposta onesta è OrisDent Q. P
 
 ## Fonti
 
-Tutte consultate l'8 agosto 2026 e riverificate il 9 agosto 2026, salvo la data indicata per le due pagine di news.
+Tutte consultate l'8 agosto 2026, riverificate il 9 agosto 2026 e riverificate di nuovo il 5 settembre 2026, salvo la data indicata per le due pagine di news.
 
-- Gamma di prodotti, ragione sociale e P. IVA nel piè di pagina: [orisline.com](https://orisline.com/it/) e [orisline.com/it/contatti](https://orisline.com/it/contatti/)
-- Anno di fondazione, appartenenza al Gruppo Henry Schein ONE, licenze installate e organico: [orisline.com/it, Chi siamo](https://orisline.com/it/orisline-sviluppo-software-per-dentisti/)
-- Assistenza, formazione e OrisLine Academy: [orisline.com/it/supporto-tecnico-orisline-e-formazione](https://orisline.com/it/supporto-tecnico-orisline-e-formazione/)
-- OrisDent Q, moduli, contabilità, fatture elettroniche attive e passive, invio al Sistema TS, cartelle specialistiche e Firma Elettronica Avanzata: [orisline.com/it/software-per-dentisti-orisdent-q](https://orisline.com/it/software-per-dentisti-orisdent-q/)
-- Versioni desktop e cloud e pagina di gamma per studi: [orisline.com/it/software-studio-dentistico](https://orisline.com/it/software-studio-dentistico/)
-- OrisDent Air, gestionale interamente in cloud: [orisline.com/it/gestionale-studio-dentistico-cloud](https://orisline.com/it/gestionale-studio-dentistico-cloud/)
-- Registro UDI e Passaporto Implantare, pagina del 21 dicembre 2023: [orisline.com/it/news/orisdent-gestisce-gia-il-passaporto-implantare](https://orisline.com/it/news/orisdent-gestisce-gia-il-passaporto-implantare/)
-- Maia, pagina del 16 aprile 2024: [orisline.com/it/news/maia-assistente-digitale-per-lo-studio-dentistico](https://orisline.com/it/news/maia-assistente-digitale-per-lo-studio-dentistico/)
-- Licenza e funzionalità di Dentalpin: [github.com/martinezsalmeron/dentalpin](https://github.com/martinezsalmeron/dentalpin) e la [pagina dei prezzi](/it/prezzi/)
+- Gamma di prodotti, ragione sociale e P. IVA nel piè di pagina: [orisline.com](https://orisline.com/it/) e [orisline.com/it/contatti](https://orisline.com/it/contatti/). Invariato alla riverifica del 5 settembre 2026.
+- Anno di fondazione, appartenenza al Gruppo Henry Schein ONE, licenze installate e organico: [orisline.com/it, Chi siamo](https://orisline.com/it/orisline-sviluppo-software-per-dentisti/). Invariato alla riverifica del 5 settembre 2026.
+- Assistenza, formazione e OrisLine Academy: [orisline.com/it/supporto-tecnico-orisline-e-formazione](https://orisline.com/it/supporto-tecnico-orisline-e-formazione/). Invariato alla riverifica del 5 settembre 2026.
+- OrisDent Q, moduli, contabilità, fatture elettroniche attive e passive, invio al Sistema TS, cartelle specialistiche e Firma Elettronica Avanzata: [orisline.com/it/software-per-dentisti-orisdent-q](https://orisline.com/it/software-per-dentisti-orisdent-q/). Invariato alla riverifica del 5 settembre 2026, prezzi ancora non pubblicati.
+- Versioni desktop e cloud e pagina di gamma per studi: [orisline.com/it/software-studio-dentistico](https://orisline.com/it/software-studio-dentistico/). Alla riverifica del 5 settembre 2026 la pagina descrive tre modalità, "On-Premise, Cloud o IaaS": la terza, pensata per le realtà più strutturate, non compariva nella versione precedente.
+- OrisDent Air, gestionale interamente in cloud: [orisline.com/it/gestionale-studio-dentistico-cloud](https://orisline.com/it/gestionale-studio-dentistico-cloud/). Invariato alla riverifica del 5 settembre 2026.
+- Registro UDI e Passaporto Implantare, pagina del 21 dicembre 2023: [orisline.com/it/news/orisdent-gestisce-gia-il-passaporto-implantare](https://orisline.com/it/news/orisdent-gestisce-gia-il-passaporto-implantare/). Pagina ancora online e invariata alla riverifica del 5 settembre 2026.
+- Maia, pagina del 16 aprile 2024: [orisline.com/it/news/maia-assistente-digitale-per-lo-studio-dentistico](https://orisline.com/it/news/maia-assistente-digitale-per-lo-studio-dentistico/). Pagina ancora online e invariata alla riverifica del 5 settembre 2026.
+- Licenza e funzionalità di Dentalpin: [github.com/martinezsalmeron/dentalpin](https://github.com/martinezsalmeron/dentalpin) e la [pagina dei prezzi](/it/prezzi/). Alla riverifica del 5 settembre 2026 risultano disponibili anche l'interfaccia in italiano (tra nove lingue) e un modulo base di ordini al laboratorio senza integrazione con software esterni, entrambi assenti l'8 agosto 2026; il testo sopra è stato corretto di conseguenza.
 
 Manca qualcosa, o in OrisDent è cambiato qualcosa che ci è sfuggito? [Scrivicelo](https://github.com/martinezsalmeron/dentalpin/discussions): correggiamo il testo e diciamo cosa abbiamo cambiato.

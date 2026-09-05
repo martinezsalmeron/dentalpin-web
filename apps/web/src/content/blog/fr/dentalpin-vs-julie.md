@@ -2,6 +2,7 @@
 title: "Dentalpin face à Julie : ce que chacun couvre vraiment dans un cabinet français"
 description: "Comparatif entre Julie Solutions et Dentalpin : télétransmission, CCAM, e-ordonnance, prix publiés et propriété des données. Avec ce que nous ne faisons pas."
 pubDate: 2026-08-05
+updatedDate: 2026-09-05
 tags: [comparatif, julie, logiciel-dentaire]
 ---
 
@@ -19,7 +20,7 @@ Si votre cabinet télétransmet des feuilles de soins électroniques et que vous
 
 ## Ce qu'est Julie
 
-Julie est édité par Julie Solutions, RCS 838 336 246, à Marne la Vallée. **LOGOSw a racheté Julie** : sa FAQ pose elle-même la question "Pourquoi LOGOSw a racheté Julie ?" et annonce que "le logiciel JULIE reste maintenu et continue d'évoluer". Les mentions légales de julie.fr ne nomment toujours aucun groupe propriétaire, mais l'information vient désormais de l'acquéreur et non des sites comparateurs. Ce que cela change au quotidien est traité dans notre [comparatif avec LOGOSw](/fr/blog/dentalpin-vs-logosw/).
+Julie est édité par Julie Solutions, RCS 838 336 246, à Marne la Vallée. **LOGOSw a racheté Julie** : sa FAQ pose elle-même la question "Pourquoi LOGOSw a racheté Julie ?" et annonce que "le logiciel JULIE reste maintenu et continue d'évoluer". La même FAQ évoque désormais une bascule facultative vers sa solution cloud JULiA "d'ici fin de l'année 2026" pour les cabinets qui le souhaitent, sans date fixée pour Julie elle-même. Les mentions légales de julie.fr ne nomment toujours aucun groupe propriétaire, mais l'information vient désormais de l'acquéreur et non des sites comparateurs. Ce que cela change au quotidien est traité dans notre [comparatif avec LOGOSw](/fr/blog/dentalpin-vs-logosw/).
 
 La page de présentation du logiciel énumère ses fonctions dans ces termes : "Agenda personnalisable et accessible à distance", "Rappels de rendez-vous par SMS", "Dossiers patient clairs et ergonomiques", "Saisie des actes performante et simple", "Une conformité permanente avec la réglementation en vigueur", "Rattachez vos radios et scanners directement à vos dossiers patients", "Une gestion sûre de vos stocks", "Une aide comptable intégrée" et un "Module de stérilisation intégré".
 
@@ -117,14 +118,14 @@ Ce que coûte Dentalpin tient sur la [page des tarifs](/fr/tarifs/), et c'est un
 
 ## Sources
 
-Sauf mention contraire, toutes consultées le 5 août 2026.
+Sauf mention contraire, toutes consultées le 5 août 2026 ; toutes revérifiées le 5 septembre 2026, contenu inchangé sauf indication contraire ci-dessous.
 
-- Fonctions du logiciel, sauvegarde HDS, systèmes d'imagerie compatibles et "plus de 20 000 utilisateurs" : [julie.fr/logiciel-cabinet-dentaire](https://www.julie.fr/logiciel-cabinet-dentaire/)
-- Fondation en 1983 et présentation de l'éditeur : [julie.fr](https://www.julie.fr/)
-- CCAM, feuilles de soins électroniques, ADRi, INS et ordonnancier : [julie.fr/reglementaire-evolution-profession-dentaire](https://www.julie.fr/reglementaire-evolution-profession-dentaire/)
-- E-ordonnance, module complémentaire, LAP certifié et base HAS v3 : [julie.fr/e-ordonnance](https://www.julie.fr/e-ordonnance/)
-- Éditeur, RCS 838 336 246 et absence de groupe propriétaire mentionné : [julie.fr/mentions-legales](https://www.julie.fr/mentions-legales/)
-- Rachat de Julie par LOGOSw et maintien du logiciel JULIE, consulté le 10 août 2026 : [logosw.net/faq](https://www.logosw.net/faq/)
-- Licence, modules et prix de Dentalpin : [github.com/martinezsalmeron/dentalpin](https://github.com/martinezsalmeron/dentalpin) et [dentalpin.com/fr/tarifs](/fr/tarifs/)
+- Fonctions du logiciel, sauvegarde HDS, systèmes d'imagerie compatibles et "plus de 20 000 utilisateurs" : [julie.fr/logiciel-cabinet-dentaire](https://www.julie.fr/logiciel-cabinet-dentaire/), revérifié le 5 septembre 2026, inchangé.
+- Fondation en 1983 et présentation de l'éditeur : [julie.fr](https://www.julie.fr/), revérifié le 5 septembre 2026, inchangé.
+- CCAM, feuilles de soins électroniques, ADRi, INS et ordonnancier : [julie.fr/reglementaire-evolution-profession-dentaire](https://www.julie.fr/reglementaire-evolution-profession-dentaire/), revérifié le 5 septembre 2026, inchangé.
+- E-ordonnance, module complémentaire, LAP certifié et base HAS v3 : [julie.fr/e-ordonnance](https://www.julie.fr/e-ordonnance/), revérifié le 5 septembre 2026 : toujours aucun tarif publié ; la page précise désormais que l'offre commerciale VIDAL Expert seule est arrêtée et que ces clients basculent vers e-ordonnance avec un crédit sur les mois restants.
+- Éditeur, RCS 838 336 246 et absence de groupe propriétaire mentionné : [julie.fr/mentions-legales](https://www.julie.fr/mentions-legales/), revérifié le 5 septembre 2026, inchangé.
+- Rachat de Julie par LOGOSw et maintien du logiciel JULIE, consulté le 10 août 2026, revérifié le 5 septembre 2026 : [logosw.net/faq](https://www.logosw.net/faq/). Toujours d'actualité, avec un ajout : la FAQ mentionne désormais une bascule facultative vers la solution cloud JULiA d'ici fin 2026.
+- Licence, modules et prix de Dentalpin : [github.com/martinezsalmeron/dentalpin](https://github.com/martinezsalmeron/dentalpin) et [dentalpin.com/fr/tarifs](/fr/tarifs/), cohérence revérifiée le 5 septembre 2026 avec les autres comparatifs français publiés depuis (aucune interface française, aucune télétransmission, aucun module de stérilisation à ce jour).
 
 Il manque quelque chose, ou quelque chose a changé chez Julie et nous est passé sous le nez ? [Écrivez-nous](https://github.com/martinezsalmeron/dentalpin/discussions) : nous corrigeons le texte et nous disons ce que nous avons changé.

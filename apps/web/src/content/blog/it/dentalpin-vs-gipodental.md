@@ -2,6 +2,7 @@
 title: "Dentalpin e GipoDental a confronto: due modi opposti di far girare uno studio"
 description: "Confronto tra GipoDental (Gruppo Docplanner) e Dentalpin: piani, prezzi, fattura elettronica, invio al Sistema TS, integrazione MioDottore e proprietà dei dati."
 pubDate: 2026-08-06
+updatedDate: 2026-09-05
 tags: [confronto, gipodental, gipo, gestionale-dentistico]
 ---
 
@@ -54,7 +55,7 @@ Dentalpin è un gestionale pubblicato sotto Business Source License 1.1: gratuit
 
 Il nucleo comprende agenda, pazienti, odontogramma, cartella clinica, preventivi e fatturazione. Si aggiungono parodontogramma, report, un agente IA che esegue le stesse operazioni dell'interfaccia e si ferma a chiedere conferma prima di ogni scrittura, e WhatsApp come canale di notifica. Non ci sono canoni per riunito, per odontoiatra o per paziente, e non ci sono piani: i moduli ci sono tutti.
 
-Quello che in Italia oggi **non** c'è, ed è meglio saperlo subito: nessuna emissione di fattura elettronica verso lo SDI, nessun invio delle spese al Sistema Tessera Sanitaria, nessuna conservazione digitale a norma, nessuna lettura della tessera sanitaria, nessun portale di prenotazione con un pubblico suo, e l'interfaccia esiste in inglese e spagnolo ma non in italiano.
+Quello che in Italia oggi **non** c'è, ed è meglio saperlo subito: nessuna emissione di fattura elettronica verso lo SDI, nessun invio delle spese al Sistema Tessera Sanitaria, nessuna conservazione digitale a norma, nessuna lettura della tessera sanitaria, nessun portale di prenotazione con un pubblico suo. L'interfaccia invece oggi è anche in italiano, insieme a inglese, spagnolo, francese, tedesco, portoghese, polacco, ungherese e tamil.
 
 ## Fianco a fianco
 
@@ -69,7 +70,7 @@ Quello che in Italia oggi **non** c'è, ed è meglio saperlo subito: nessuna emi
 | Conservazione digitale a norma | ✓ Nel piano Plus | ✗ Non presente |
 | Lettura tessera sanitaria | ✓ Sì | ✗ Non presente |
 | Prenotazioni online con portale | ✓ Integrazione MioDottore, stesso gruppo | ✗ Non presente |
-| Interfaccia in italiano | ✓ Sì | ✗ No, oggi inglese e spagnolo |
+| Interfaccia in italiano | ✓ Sì | ✓ Sì, tra nove lingue |
 | Assistenza e aggiornamenti | ✓ Dichiarati senza costi aggiuntivi | ~ Community su GitHub |
 | Distribuzione | Cloud, sui loro sistemi | Sul tuo server, o sul cloud che scegli |
 | Codice sorgente | ✗ No | ✓ Su GitHub, per intero |
@@ -82,11 +83,10 @@ La riga con "non documentata" dice esattamente questo e niente di più: non l'ab
 
 - **Vuoi che gli adempimenti partano dal gestionale.** Fattura elettronica e invio delle spese sanitarie sono il lavoro quotidiano di uno studio italiano, e loro li coprono. Noi no, ed è la ragione principale per cui questo confronto esiste.
 - **I pazienti nuovi sono il tuo problema, non l'organizzazione.** L'integrazione con MioDottore mette lo studio davanti a persone che stanno già cercando un dentista. Non abbiamo niente di paragonabile, e nessun software autoalloggiato ce l'ha.
-- **Ti serve l'interfaccia in italiano oggi.** La nostra non lo è ancora, e non c'è modo di girarci intorno.
 - **Vuoi la conservazione digitale a norma dentro il prodotto.** È nel loro piano Plus, e da noi non c'è.
-- **Non vuoi gestire un server.** Il loro è cloud, si aggiorna da solo, e assistenza e aggiornamenti sono dichiarati dentro il prezzo. Da noi il server è tuo, con tutto quello che comporta.
+- **Non vuoi gestire un server e non vuoi nemmeno un piano gestito a canone.** Il loro è cloud, si aggiorna da solo, e assistenza e aggiornamenti sono dichiarati dentro il prezzo. Da noi il self-hosting resta gratuito ma richiede un informatico; esiste anche un piano Gestito a canone in cui installiamo e sorvegliamo noi il server, ma è un costo mensile che nel piano di GipoDental non c'è.
 
-Se tre di questi cinque punti ti riguardano, la risposta onesta è GipoDental. Per uno studio italiano che parte oggi sono tre punti facili da raggiungere.
+Se due di questi quattro punti ti riguardano, la risposta onesta è GipoDental. Per uno studio italiano che parte oggi sono due punti facili da raggiungere.
 
 ## Scegli Dentalpin se
 
@@ -121,12 +121,12 @@ Quanto costa Dentalpin sta tutto sulla [pagina dei prezzi](/it/prezzi/), ed è u
 
 ## Fonti
 
-Tutte consultate il 6 agosto 2026.
+Tutte consultate il 6 agosto 2026, riverificate il 5 settembre 2026.
 
-- GipoDental, funzioni, cloud, integrazione MioDottore e assistenza senza costi aggiuntivi: [gipo.it/it/prodotto/il-software/gipodental](https://gipo.it/it/prodotto/il-software/gipodental)
-- Piani Starter e Plus di GipoDental e "Prezzo calcolato individualmente": [gipo.it/prezzi-gipodental](https://gipo.it/prezzi-gipodental)
-- GipoNext, piani Starter, Plus e VIP e la stessa formula sul prezzo: [gipo.it/prezzi](https://gipo.it/prezzi)
-- Ragione sociale Docplanner Italy Srl e gamma di prodotti: [gipo.it](https://www.gipo.it/)
-- Licenza e funzionalità di Dentalpin: [github.com/martinezsalmeron/dentalpin](https://github.com/martinezsalmeron/dentalpin) e [dentalpin.com/it/prezzi](/it/prezzi/)
+- GipoDental, funzioni, cloud, integrazione MioDottore e assistenza senza costi aggiuntivi: [gipo.it/it/prodotto/il-software/gipodental](https://gipo.it/it/prodotto/il-software/gipodental). Invariato alla riverifica, a parte una nuova frase comparativa sul costo ("GipoDental costa meno rispetto ai gestionali più diffusi") che non pubblica comunque alcuna cifra e quindi non cambia quanto scritto qui.
+- Piani Starter e Plus di GipoDental e "Prezzo calcolato individualmente": [gipo.it/prezzi-gipodental](https://gipo.it/prezzi-gipodental). Invariato alla riverifica, nessun prezzo numerico pubblicato.
+- GipoNext, piani Starter, Plus e VIP e la stessa formula sul prezzo: [gipo.it/prezzi](https://gipo.it/prezzi). Invariato alla riverifica, nessun prezzo numerico pubblicato.
+- Ragione sociale Docplanner Italy Srl e gamma di prodotti: [gipo.it](https://www.gipo.it/). Invariato alla riverifica: Docplanner Italy Srl, sede a Roma.
+- Licenza e funzionalità di Dentalpin: [github.com/martinezsalmeron/dentalpin](https://github.com/martinezsalmeron/dentalpin) e [dentalpin.com/it/prezzi](/it/prezzi/). Alla riverifica del 5 settembre 2026 l'interfaccia di Dentalpin risulta disponibile anche in italiano, cosa che il 6 agosto 2026 non risultava; il testo sopra è stato corretto di conseguenza. La stessa riverifica ha trovato che Dentalpin offre ora anche un piano Gestito a canone mensile, oltre al self-hosting gratuito: il bullet sul server è stato aggiornato per riflettere entrambe le opzioni.
 
 Manca qualcosa, o in GipoDental è cambiato qualcosa che ci è sfuggito? [Scrivicelo](https://github.com/martinezsalmeron/dentalpin/discussions): correggiamo il testo e diciamo cosa abbiamo cambiato.

@@ -2,6 +2,7 @@
 title: "Dentalpin und charly (solutio) im Vergleich: zwei Server, zwei Lizenzen"
 description: "Ehrlicher Vergleich zwischen charly von solutio und Dentalpin: Systemvoraussetzungen, veröffentlichte Preise, KZV-Abrechnung, Telematikinfrastruktur und Datenhoheit, mit dem, was Dentalpin in Deutschland heute nicht leistet."
 pubDate: 2026-08-08
+updatedDate: 2026-09-05
 tags: [vergleich, charly, solutio, praxissoftware]
 ---
 
@@ -122,7 +123,7 @@ Was Dentalpin kostet, steht vollständig auf [der Preisseite](/de/preise/), und 
 
 ## Quellen
 
-Alle am 8. August 2026 abgerufen.
+Alle am 8. August 2026 abgerufen, und am 5. September 2026 ohne Änderungen erneut geprüft.
 
 - Selbstbeschreibung als "universelles Praxisverwaltungssystem": [solutio.de](https://www.solutio.de/)
 - Funktionsumfang, Praxisformen und charly Abo: [solutio.de/software/zahnarztsoftware-charly-by-solutio](https://www.solutio.de/software/zahnarztsoftware-charly-by-solutio/)

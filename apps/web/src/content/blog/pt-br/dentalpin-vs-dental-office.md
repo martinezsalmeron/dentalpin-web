@@ -2,6 +2,7 @@
 title: "Dentalpin ou Dental Office: o que muda de verdade para a sua clínica"
 description: "Comparativo com fontes: a Dental Office publica quatro planos, do app a R$39,90 ao Completo a R$298,54. O Dentalpin é open source e roda no seu servidor."
 pubDate: 2026-08-08
+updatedDate: 2026-09-05
 tags: [comparacao, dental-office, software-odontologico]
 ---
 
@@ -133,15 +134,15 @@ O Dentalpin é a aposta contrária: o software da clínica não deveria ser uma 
 
 ## Fontes
 
-Todas consultadas em 8 de agosto de 2026:
+Todas consultadas em 8 de agosto de 2026, e revisadas de novo sem alterações em 5 de setembro de 2026:
 
-- [Dental Office](https://www.dentaloffice.com.br/): posicionamento do produto e navegação do site.
-- [Planos](https://www.dentaloffice.com.br/planos/): valores mensais e anuais dos quatro planos, usuários e dentistas por plano, armazenamento, quais funcionalidades entram em cada plano, as notas de contratação à parte e de créditos, e o FAQ sobre forma de cobrança, contrato mínimo e teste grátis.
-- [Quem somos](https://www.dentaloffice.com.br/company/): "mais de 25 anos e 45 mil profissionais da odontologia impactados todos os dias".
-- [Funcionalidades do software](https://www.dentaloffice.com.br/dental-office/): acesso 100% on-line, agenda digital com status por cor e autoagendamento, integração com WhatsApp Business, controle financeiro, maquininha, Pix, boleto com baixa automática e cheques.
-- [Prontuário Eletrônico](https://www.dentaloffice.com.br/prontuario/): odontograma, anexos de imagens e exames, receitas digitais com assinatura eletrônica, ambiente criptografado e dados em nuvem.
-- [Assistente de Voz por IA](https://www.dentaloffice.com.br/assistente-de-voz-por-ia/): descrição do recurso e integração com o prontuário.
-- [Política de Privacidade](https://www.dentaloffice.com.br/politica-de-privacidade/): identificação da Dental Office S.A. e o papel de operador quanto a dados sensíveis de pacientes.
+- [Dental Office](https://www.dentaloffice.com.br/): posicionamento do produto e navegação do site. Revisado em 5 de setembro de 2026, sem alterações.
+- [Planos](https://www.dentaloffice.com.br/planos/): valores mensais e anuais dos quatro planos, usuários e dentistas por plano, armazenamento, quais funcionalidades entram em cada plano, as notas de contratação à parte e de créditos, e o FAQ sobre forma de cobrança, contrato mínimo e teste grátis. Revisado em 5 de setembro de 2026: os quatro valores e as seis linhas de contratação à parte continuam idênticos; a página agora lista também um "Diagnóstico por Inteligência Artificial" pago por créditos, que não afeta nenhuma linha deste comparativo.
+- [Quem somos](https://www.dentaloffice.com.br/company/): "mais de 25 anos e 45 mil profissionais da odontologia impactados todos os dias". Revisado em 5 de setembro de 2026, sem alterações.
+- [Funcionalidades do software](https://www.dentaloffice.com.br/dental-office/): acesso 100% on-line, agenda digital com status por cor e autoagendamento, integração com WhatsApp Business, controle financeiro, maquininha, Pix, boleto com baixa automática e cheques. Revisado em 5 de setembro de 2026, sem alterações.
+- [Prontuário Eletrônico](https://www.dentaloffice.com.br/prontuario/): odontograma, anexos de imagens e exames, receitas digitais com assinatura eletrônica, ambiente criptografado e dados em nuvem. Revisado em 5 de setembro de 2026, sem alterações.
+- [Assistente de Voz por IA](https://www.dentaloffice.com.br/assistente-de-voz-por-ia/): descrição do recurso e integração com o prontuário. Revisado em 5 de setembro de 2026, sem alterações.
+- [Política de Privacidade](https://www.dentaloffice.com.br/politica-de-privacidade/): identificação da Dental Office S.A. e o papel de operador quanto a dados sensíveis de pacientes. Revisado em 5 de setembro de 2026, sem alterações.
 - [Licença do Dentalpin](https://github.com/martinezsalmeron/dentalpin/blob/main/LICENSE) e [código-fonte](https://github.com/martinezsalmeron/dentalpin).
 
 Viu algo errado ou desatualizado neste comparativo? [Fale com a gente](https://github.com/martinezsalmeron/dentalpin/discussions) e corrigimos. Vale também se você for da Dental Office.
