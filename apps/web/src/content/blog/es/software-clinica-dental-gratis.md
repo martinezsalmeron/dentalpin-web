@@ -2,6 +2,7 @@
 title: "Software de clínica dental gratis: qué hay de verdad en España"
 description: "Qué es gratis de verdad en software dental en España, qué publica cada fabricante en su propia web y por qué el tope de pacientes decide más que el precio."
 pubDate: 2026-08-17
+updatedDate: 2026-09-07
 tags: [comparativa, software-dental, gratis]
 ---
 
@@ -16,6 +17,8 @@ Nosotros hacemos Dentalpin, que es una de las opciones gratuitas de esta página
 **El único plan gratuito permanente que hemos encontrado publicado por un fabricante español es el plan FREE de Dasi eClinic.** Su tarifa lo pone a "0€/mes + IVA" con este alcance: "Hasta 100 pacientes, 1 centro, 1 usuario, Soporte y actualizaciones, Formación, 2 GB img y archivos".
 
 **Cien pacientes es el modelo de negocio, no un detalle.** Una clínica con dos gabinetes pasa de esa cifra en el primer año, y a partir de ahí la tarifa publicada empieza en 29 €/mes + IVA. Eso no lo convierte en mala opción, pero sí cambia la pregunta: no es cuánto cuesta hoy, es cuándo dejas de estar en el plan gratuito.
+
+> **Para una clínica dental hay un tope antes que el de los 100 pacientes.** En la tabla de extras de su propia tarifa, el odontograma aparece marcado como no disponible en el plan FREE, y como extra de 10 €/mes en los cuatro planes de pago. Comprobado el 7 de septiembre de 2026. Es decir, el plan gratuito español que existe sirve para agenda, historia clínica y cobros, pero no para registrar diente a diente.
 
 La otra vía gratuita no tiene tope porque no tiene contador: el open source. A cambio, el servidor y las copias de seguridad son tuyos, y ese es el punto que de verdad decide.
 
@@ -38,7 +41,7 @@ Un precio de entrada bajo no es una quinta categoría, es otra conversación. Un
 
 Todo lo de esta lista está consultado el 17 de agosto de 2026 en la web del propio fabricante.
 
-- **Dasi eClinic**, de Dasi Informatica S.L., publica la tarifa completa, que en este mercado es raro. FREE a "0€/mes + IVA" con hasta 100 pacientes, 1 centro y 1 usuario; BASIC a "29€/mes + IVA"; PROFESIONAL a "39€/mes + IVA"; CLÍNICA a "69€/mes + IVA" con 5 usuarios simultáneos; PREMIUM a "99€/mes +IVA" con 15. El pago anual lleva un 15% de descuento y la página añade "SIN INSTALACIÓN, NI CUOTA DE ALTA, NI PERMANENCIA".
+- **Dasi eClinic**, de Dasi Informatica S.L., publica la tarifa completa, que en este mercado es raro. FREE a "0€/mes + IVA" con hasta 100 pacientes, 1 centro y 1 usuario; BASIC a "29€/mes + IVA"; PROFESIONAL a "39€/mes + IVA"; CLÍNICA a "69€/mes + IVA" con 5 usuarios simultáneos; PREMIUM a "99€/mes +IVA" con 15. El pago anual lleva un 15% de descuento y la página añade "SIN INSTALACIÓN, NI CUOTA DE ALTA, NI PERMANENCIA". Bajo esa tabla, y comprobado el 7 de septiembre de 2026, publican otra de "funcionalidades extra mensuales": el odontograma no está disponible en FREE y cuesta 10 €/mes en los cuatro planes de pago, el pack de odontograma con presupuestos 12 €/mes, y el módulo de presupuestos suelto 6 €/mes en BASIC y PROFESIONAL. Está desarrollado en la [comparativa con DASI](/es/blog/dentalpin-vs-dasi/).
 - **Doctocliq** publica un plan gratuito sin fecha de caducidad, topado en 30 citas al mes, con historia clínica, odontograma, agenda, presupuestos y recordatorios por WhatsApp y correo. Los planes de pago aparecen como "desde USD 19 al mes", sin desglose en la página. Su web se describe como el software "de Latinoamérica", declara "+20 PAÍSES" y no menciona España entre ellos.
 - **Clinic Cloud** publica cuatro planes: Mini, Pro y Max, con tarifa de 29 €, 49 € y 79 € al mes y un descuento vigente que los deja en 14,5 €, 24,5 € y 39,5 €, más un plan Enterprise "A convenir". No hay plan gratuito. El dato que importa a una clínica dental está en su propia tabla: el odontograma y el periodontograma aparecen a partir del plan Max.
 - **Odontonet** tiene página de precios y no publica ninguna cifra en ella. La llamada a la acción es "Quiero informarme". Tampoco publica versión gratuita.
@@ -55,10 +58,11 @@ Solo filas verificables. Donde el fabricante no publica el dato, la fila lo dice
 | Coste publicado | ✓ 0 €/mes + IVA | ✓ 0 € | ✓ 0 € autoalojado |
 | Tope del plan | ✗ 100 pacientes, 1 centro, 1 usuario | ✗ 30 citas al mes | ✓ Sin tope |
 | Almacenamiento incluido | ✗ 2 GB | No publicado | ✓ El de tu servidor |
+| Odontograma en el plan gratis | ✗ No disponible en FREE | ✓ Incluido | ✓ Incluido |
 | Permanencia | ✓ "Ni cuota de alta, ni permanencia" | No publicada | ✓ Ninguna |
 | Precio de los planes de pago | ✓ Publicado, 29 a 99 €/mes + IVA | ~ Solo "desde USD 19 al mes" | ✓ No hay planes de pago |
 | Mercado que declara su web | ✓ España | ✗ Latinoamérica, no cita España | ✓ España |
-| Verifactu | ~ "implementará", sin fecha propia | No mencionado | ✓ Módulo incluido |
+| Verifactu | ✓ En los cinco planes de su tarifa | No mencionado | ✓ Módulo incluido |
 | Soporte y formación en el plan gratis | ✓ "Soporte y actualizaciones, Formación" | ✓ Centro de ayuda y tutoriales | ✗ Telegram y GitHub |
 | Servidor que mantener | ✓ Ninguno | ✓ Ninguno | ✗ El tuyo |
 | Años en el mercado | ✓ 30 | No publicado | ✗ Desde 2026 |
@@ -76,7 +80,9 @@ Es la parte donde más fácil es copiar una fecha equivocada, así que va con la
 
 Las fechas en vigor las fijó el **Real Decreto-ley 15/2025, de 2 de diciembre** (BOE núm. 290, de 3 de diciembre de 2025), que modificó la disposición final cuarta del Real Decreto 1007/2023: los contribuyentes del artículo 3.1.a) deben tener adaptados los sistemas "antes del 1 de enero de 2027", y el resto de obligados "antes del 1 de julio de 2027".
 
-> **Cualquier página que siga citando 2026 se escribió antes de ese cambio.** Es el caso de la página de Verifactu de Dasi, que nombra el 1 de enero de 2026 para empresas y el 1 de julio de 2026 para el resto, y que sobre su propio producto dice "Dasi eClinic implementará el sistema Verifactu en todo su proceso de facturación". Es un compromiso en futuro, sin fecha propia publicada, consultado el 17 de agosto de 2026.
+> **Cualquier página que siga citando 2026 se escribió antes de ese cambio.** Era el caso de la página de Verifactu de Dasi el 17 de agosto de 2026, que nombraba el 1 de enero de 2026 para empresas y el 1 de julio de 2026 para el resto, y que sobre su propio producto decía "Dasi eClinic implementará el sistema Verifactu en todo su proceso de facturación", en futuro y sin fecha propia.
+
+**Eso ha cambiado y conviene decirlo.** Comprobado el 7 de septiembre de 2026, su tarifa publica una fila "Verifactu 2025" marcada en los cinco planes, el FREE incluido, así que ya no es un compromiso en futuro sino una función que su propia tabla asigna a cada plan. Sus preguntas frecuentes siguen citando el 1 de julio de 2025 como fecha de obligación, que no es el calendario que fijó el Real Decreto-ley 15/2025.
 
 Con el calendario en 2027, que un plan gratuito no facture aún en Verifactu no descarta nada hoy. Lo que sí conviene es preguntarlo por escrito, con versión y fecha, antes de meter dentro la facturación de la clínica. Lo que la norma exige al programa está desarrollado en nuestra [guía de Verifactu para clínicas dentales](/es/blog/verifactu-clinicas-dentales/).
 
@@ -131,8 +137,9 @@ Lo que resuelve el open source es la parte que después nadie devuelve: los dato
 
 ## Fuentes
 
-Todas consultadas el 17 de agosto de 2026.
+Todas consultadas el 17 de agosto de 2026, y las de Dasi revisadas de nuevo el 7 de septiembre de 2026, cuando se corrigió lo que aquí se decía sobre su Verifactu y se añadió lo del odontograma.
 
+- Dasi Informatica S.L., [tabla de funcionalidades extra mensuales](https://www.dasi.es/precios/), consultada el 7 de septiembre de 2026: odontograma marcado como no disponible en FREE y a 10 €/mes en BASIC, PROFESIONAL, CLÍNICA y PREMIUM; "Odontograma + Presupuestos" a 12 €/mes; "Módulo Presupuestos" a 6 €/mes en BASIC y PROFESIONAL; fila "Verifactu 2025" marcada en los cinco planes.
 - Dasi Informatica S.L., [precios de Dasi eClinic](https://www.dasi.es/precios/): plan FREE a "0€/mes + IVA" con "Hasta 100 pacientes, 1 centro, 1 usuario, Soporte y actualizaciones, Formación, 2 GB img y archivos"; BASIC "29€/mes + IVA"; PROFESIONAL "39€/mes + IVA"; CLÍNICA "69€/mes + IVA"; PREMIUM "99€/mes +IVA"; 15% de descuento en pago anual; "SIN INSTALACIÓN, NI CUOTA DE ALTA, NI PERMANENCIA".
 - Dasi Informatica S.L., [software de odontología](https://www.dasi.es/software-odontologia/): "Dasi eClinic", 30 años de experiencia, odontograma infantil y adulto, gestión de facturación de pacientes privados y mutuas.
 - Dasi Informatica S.L., [Verifactu](https://www.dasi.es/verifactu/): "Dasi eClinic implementará el sistema Verifactu en todo su proceso de facturación", y las fechas de 1 de enero de 2026 y 1 de julio de 2026 citadas en esa página.
@@ -146,6 +153,6 @@ Todas consultadas el 17 de agosto de 2026.
 - [Real Decreto 1007/2023, de 5 de diciembre](https://www.boe.es/buscar/act.php?id=BOE-A-2023-24840), texto consolidado.
 - Dentalpin, [licencia y código fuente](https://github.com/martinezsalmeron/dentalpin) y [precios](/es/precios/).
 
-Lo que un fabricante no publica no aparece en esta página. En concreto, no hemos encontrado tarifa publicada en Odontonet, Klinikare ni Gesden, ni desglose de los planes de pago de Doctocliq, ni fecha propia de implantación de Verifactu en Dasi. Son preguntas que hacerles a ellos, no conclusiones que sacar de aquí.
+Lo que un fabricante no publica no aparece en esta página. En concreto, no hemos encontrado tarifa publicada en Odontonet, Klinikare ni Gesden, ni desglose de los planes de pago de Doctocliq. Son preguntas que hacerles a ellos, no conclusiones que sacar de aquí.
 
 ¿Ves algo mal o desactualizado en esta página? [Dínoslo](https://github.com/martinezsalmeron/dentalpin/discussions) y lo corregimos. Vale también si eres uno de los productos citados.

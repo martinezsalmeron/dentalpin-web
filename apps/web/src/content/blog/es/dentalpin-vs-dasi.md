@@ -64,7 +64,9 @@ Bajo el titular "Compara nuestros planes y funcionalidades extra mensuales", su 
 
 > **La suma que le sale a un dentista.** El plan BASIC con el pack de odontograma y presupuestos son 29 € + 12 €, es decir **41 € al mes más IVA para un usuario simultáneo**. El plan CLÍNICA ya trae presupuestos, así que ahí la cuenta es 69 € + 10 € de odontograma, **79 € al mes más IVA para cinco**. Ninguna de las dos cifras es la que aparece en la tabla de planes.
 
-Hay una cosa que sí va incluida en los cinco planes, el gratuito incluido, y es de las mejores noticias de esta comparativa para quien esté mirando la tarifa: **Verifactu 2025**. Sus FAQ lo explican y le ponen fecha: "Verifactu, obligatorio desde el 1 de julio de 2025, es un sistema de la Agencia Tributaria para garantizar la autenticidad de las facturas electrónicas".
+Hay una cosa que sí va incluida en los cinco planes, el gratuito incluido, y es de las mejores noticias de esta comparativa para quien esté mirando la tarifa: la fila **Verifactu 2025** aparece marcada en FREE, BASIC, PROFESIONAL, CLÍNICA y PREMIUM.
+
+> **La fecha que da su web ya no es el calendario en vigor.** Su ficha de Verifactu, firmada en enero de 2025, dice "Verifactu, obligatorio desde el 1 de julio de 2025". Ese plazo se movió después, y las fechas que aplican hoy están en nuestra [guía de Verifactu para clínicas dentales](/es/blog/verifactu-clinicas-dentales/). Lo que sí es de ellos y sí está publicado es que el módulo entra en los cinco planes.
 
 ### Dónde viven los datos
 
