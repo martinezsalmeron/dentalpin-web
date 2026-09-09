@@ -173,5 +173,3 @@ Todas consultadas el 8 de septiembre de 2026.
 - Dentalpin, precios: [/es/precios/](/es/precios/)
 
 ¿Ves algo mal o desactualizado en esta comparativa? [Dínoslo](https://github.com/martinezsalmeron/dentalpin/discussions) y lo corregimos. Vale también si eres de Dendoo.
-</content>
-</invoke>

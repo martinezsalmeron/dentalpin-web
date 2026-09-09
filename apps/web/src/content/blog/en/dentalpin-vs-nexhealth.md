@@ -164,5 +164,3 @@ All NexHealth pages consulted on 18 August 2026.
 - [Dentalpin's licence](https://github.com/martinezsalmeron/dentalpin/blob/main/LICENSE) and [source](https://github.com/martinezsalmeron/dentalpin).
 
 Something wrong or out of date in this comparison? [Tell us](https://github.com/martinezsalmeron/dentalpin/discussions) and we will fix it. That goes for NexHealth too.
-</content>
-</invoke>

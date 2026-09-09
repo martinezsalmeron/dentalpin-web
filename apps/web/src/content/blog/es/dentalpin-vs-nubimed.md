@@ -171,5 +171,3 @@ Todas consultadas el 7 de septiembre de 2026.
 - Nubimed, aviso legal: <https://www.nubimed.com/aviso-legal/>
 - Nubimed, privacidad y condiciones: <https://www.nubimed.com/privacidad-y-condiciones/>
 - Dentalpin, precios: [/es/precios/](/es/precios/)
-</content>
-</invoke>

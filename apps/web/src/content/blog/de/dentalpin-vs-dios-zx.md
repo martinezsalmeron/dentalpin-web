@@ -173,5 +173,3 @@ Alle am 4. September 2026 abgerufen.
 - Lizenz und Funktionsumfang von Dentalpin: [github.com/martinezsalmeron/dentalpin](https://github.com/martinezsalmeron/dentalpin) und [die Preisseite](/de/preise/)
 
 Fehlt hier etwas, oder hat sich bei dios etwas geändert, das wir übersehen haben? [Schreiben Sie es uns](https://github.com/martinezsalmeron/dentalpin/discussions), wir korrigieren den Text und schreiben dazu, was geändert wurde.
-</content>
-</invoke>
