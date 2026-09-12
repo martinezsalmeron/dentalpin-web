@@ -2,6 +2,7 @@
 title: "Dentalpin vs Eaglesoft: server-based incumbent or code you own"
 description: "Eaglesoft states nearly 30,000 users and publishes no licence price. Dentalpin is open source and free to run. A sourced comparison of where each fits."
 pubDate: 2026-08-14
+updatedDate: 2026-09-12
 tags: [comparison, eaglesoft, dental-software]
 ---
 
@@ -29,7 +30,7 @@ Practice management software from Patterson Dental, and specifically the **serve
 
 That page also states Patterson serves "over 38,000 dental software customers" across the whole range, with "over 25 years building dental practice management software".
 
-The product itself is broad and long-refined. Patterson describes an interactive tooth chart, image acquisition and storage, scheduling, payment application down to line items, end of period processing, and SmartDoc for document storage. Around that sit revenue cycle add-ons: the Insurance Suite, eStatements, Card Payments, and ePrescriptions.
+The product itself is broad and long-refined. Patterson describes an interactive tooth chart, image acquisition and storage, scheduling, payment application down to line items, end of period processing, and SmartDoc for document storage. Around that sit revenue cycle add-ons: DentalXChange Insurance, DentalXChange Patient Statements, Card Payments, and ePrescriptions.
 
 ePrescriptions is a good example of the depth. Patterson's page describes submitting prescriptions electronically "for both controlled and non-controlled substances", with connectivity to 80,000+ pharmacies, prescription favorites, real-time benefit checks and a Drug Utilization Review summary. Nothing in Dentalpin touches that.
 
@@ -103,7 +104,7 @@ That table has a lot of green on their side, and it should. Eaglesoft has been d
 
 This section is meant seriously, not as a formality.
 
-- **You practise in the United States and insurance is the daily grind.** The Insurance Suite, eStatements and Card Payments are built for that market and refined over decades. Nothing we do touches this.
+- **You practise in the United States and insurance is the daily grind.** DentalXChange Insurance, DentalXChange Patient Statements and Card Payments are built for that market and refined over decades. Nothing we do touches this.
 - **You want imaging in the same product as the chart.** Image acquisition and storage are in Eaglesoft, with a tested list of supported sensors, scanners and printers. Dentalpin has no imaging module, and pretending otherwise would help nobody.
 - **You prescribe controlled substances.** ePrescriptions with 80,000+ pharmacies and a DUR summary is real infrastructure that we do not have.
 - **Your internet is unreliable.** Patterson states plainly that Eaglesoft does not need it to function. If your practice is somewhere the line drops, that is close to decisive.
@@ -148,7 +149,7 @@ Dentalpin is the other bet: that the software holding clinical records should be
 
 ## Sources
 
-All Patterson pages consulted on 14 August 2026:
+All Patterson pages consulted on 14 August 2026, and re-checked on 12 September 2026, when the Insurance Suite and eStatements naming below was corrected:
 
 - [Eaglesoft · Patterson Dental](https://www.pattersondental.com/cp/software/dental-practice-management-software/eaglesoft): "more than 30 years", "nearly 30,000 users", "over 55 authorized, trusted software solutions", SmartDoc, the interactive tooth chart, the Pearl add-ons, the conversion offer wording and the "Request a demo" call to action.
 - [Dental Practice Management Software · Patterson Dental](https://www.pattersondental.com/cp/software/dental-practice-management-software): Eaglesoft as "server-based software", Fuse as the cloud product, Dolphin for orthodontics, "over 38,000 dental software customers", "over 25 years building dental practice management software", and no published price.

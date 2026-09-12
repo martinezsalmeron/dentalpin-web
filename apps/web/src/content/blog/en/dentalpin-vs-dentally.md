@@ -2,6 +2,7 @@
 title: "Dentalpin vs Dentally: a published price, and a server you own"
 description: "Dentally publishes a full tariff, from £125 a month per site, with imaging only on the top plan. A sourced comparison with Dentalpin, open source and self-hosted."
 pubDate: 2026-08-15
+updatedDate: 2026-09-12
 tags: [comparison, dentally, dental-software]
 ---
 
@@ -25,7 +26,7 @@ The question that decides between them is whether you do NHS work. If you are su
 
 ## What Dentally is
 
-Cloud-only dental practice management software, described on its own home page as "The market leading cloud solution for faster, simpler dental practice management". There is no on-premises version and no local server, which is the design rather than a gap.
+Cloud-only dental practice management software. Its home page currently leads with "The dental software solution for stress-free dentistry", and still carries its older line, "The market leading cloud solution for faster, simpler dental practice management", in the footer. There is no on-premises version and no local server, which is the design rather than a gap.
 
 The company was "founded in 2013 by Nick and James", Nick Davies and James Harker, and "was acquired in 2020 by Henry Schein One". It is based "in the UK in Gillingham, Kent with offices internationally in Canada, Australia and New Zealand", and the footer names the trading entity as Henry Schein One UK LTD, company registration 02940919.
 
@@ -175,9 +176,9 @@ Dentalpin is the other bet: that the software holding clinical records should be
 
 ## Sources
 
-All Dentally pages consulted on 15 August 2026. Note that dentally.co now redirects to dentally.com.
+All Dentally pages consulted on 15 August 2026, and re-checked on 12 September 2026, when the homepage headline and the Integrations URL below were corrected. Note that dentally.co now redirects to dentally.com.
 
-- [Dentally home](https://www.dentally.com/en-gb/): "The market leading cloud solution for faster, simpler dental practice management", the three product names, and the Henry Schein One UK LTD company registration in the footer.
+- [Dentally home](https://www.dentally.com/en-gb/): the current homepage headline "The dental software solution for stress-free dentistry", the older tagline "The market leading cloud solution for faster, simpler dental practice management" still shown in the footer, the three product names, and the Henry Schein One UK LTD company registration in the footer.
 - [Our story](https://www.dentally.com/en-gb/resources/our-story): "founded in 2013 by Nick and James", "Dentally was acquired in 2020 by Henry Schein One", "70,000+ practitioners across the UK, Ireland, Canada, Australia and New Zealand use Dentally", "over 80,000 worldwide" after the New Zealand launch, and the Gillingham headquarters.
 - [Pricing](https://www.dentally.com/en-gb/pricing): the surgeries-per-site slider, the eight priced steps for Starter (£125 to £575), Essentials (£220 to £720) and Pro (£320 to £945), "Excluding VAT", "Contact us" at nine surgeries, unlimited users and storage, the AI clinical note allowances and the Northern Ireland and Republic of Ireland exclusion, the integrations and support rows, and the ticks showing Dentally Vision on Pro only and Dentally Portal from Essentials.
 - [Clinical features](https://www.dentally.com/en-gb/dental-software-features/clinical): "Smarter charting, clearer care", "Perio, perfected", "Talk. Summarise. Done", and the Dentally Vision wording.
@@ -185,7 +186,7 @@ All Dentally pages consulted on 15 August 2026. Note that dentally.co now redire
 - [NHS solutions](https://www.dentally.com/en-gb/solutions/nhs): "Fully integrated with NHS in England, Wales, Scotland and HSC in Northern Ireland", UDA progress and contract tracking, and the per-nation detail including GP17 digital signing, CHI and SIMD lookups.
 - [Cloud-based dental software](https://www.dentally.com/en-gb/cloud-based-dental-software): "all you need is Google Chrome", "no on-site server", "no per-device licensing", and the 3G/4G fallback.
 - [Security](https://www.dentally.com/en-gb/security): end to end encryption, "Only you have the key", two-factor authentication, access boundaries and activity monitoring, and no hosting location, certification, backup or uptime claim on the page.
-- [Integrations](https://www.dentally.com/en-gb/integrations): the partner categories, the named partners, and "API access is only available to approved Dentally integration partners".
+- [Integrations](https://www.dentally.com/en-gb/partners): the partner categories, the named partners, and "API access is only available to approved Dentally integration partners" (this page moved from /integrations to /partners after 15 August 2026; content is unchanged).
 - [Dentalpin's licence](https://github.com/martinezsalmeron/dentalpin/blob/main/LICENSE) and [source](https://github.com/martinezsalmeron/dentalpin).
 
 Something wrong or out of date in this comparison? [Tell us](https://github.com/martinezsalmeron/dentalpin/discussions) and we will fix it. That goes for Dentally too.

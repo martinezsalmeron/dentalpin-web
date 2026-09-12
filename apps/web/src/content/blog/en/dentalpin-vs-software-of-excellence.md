@@ -2,6 +2,7 @@
 title: "Dentalpin vs Software of Excellence: an installed EXACT, and code you can read"
 description: "Software of Excellence installs EXACT into your practice and publishes no price. A sourced comparison with Dentalpin, which is open source and self-hosted."
 pubDate: 2026-08-17
+updatedDate: 2026-09-12
 tags: [comparison, software-of-excellence, dental-software]
 ---
 
@@ -42,12 +43,12 @@ Henry Schein One's own product page states the market plainly: "Software of Exce
 
 EXACT is sold as a core system with a long list of separately named products around it, and their own descriptions are the clearest guide to what each one is for:
 
-- **Recall Manager** "Ensures that the recall process runs seamlessly, keeping your appointment book full."
+- **Recall Manager** "Ensures that the recall process runs seamlessly and improves the practice workflow."
 - **Utilisation Manager** is "Designed to make best use of all available surgery time by recognising when an appointment is booked within a defined period."
-- **Care Manager** "Provides a clear view of all outstanding treatments in one single dashboard."
-- **Workflow Manager** is "Customised to your practice settings to ensure that patients are always rebooked, whilst identifying outstanding debt and incomplete patient details."
+- **Care Manager** "Makes it easy to follow up and manage outstanding treatment plans using one single actionable dashboard."
+- **Workflow Manager** is "Customised to prompt the reception team to complete all critical tasks before the patient leaves the practice."
 - **Short Notice Lists** "enable critical appointment gaps to be automatically filled by patients who'd like to be seen sooner."
-- **Marketing Manager** "Allows you to create, schedule and send your marketing campaigns."
+- **Marketing Manager** "Allows you to create, automatically schedule and send marketing campaigns."
 
 Alongside those sit Examine Pro for imaging, which "Seamlessly integrate[s] digital images into one single database", My Practice Cloud for analytics you "Access ... from any device", MPC Pay for "automated associate dentist payments", Dentist Portal, Patient Portal, Clinipad, Online Booking, Chairsyde and Second Opinion AI.
 
@@ -57,7 +58,7 @@ That is a genuinely deep catalogue. What their site does not publish is which of
 
 For a UK practice this matters more than anything else on the page. EXACT's NHS pitch is built around prediction rather than paperwork: "Track your NHS contracts with our Predictive UDA Manager" and "Get intelligent predictions for your practice and individual dentists and hit your NHS contract targets".
 
-Their own description of the UDA Manager is that it is "A key feature for NHS practices, it provides intelligent predictions for the practice and individual dentists, so that you remain on target for each contract". They also claim "96% of practices in our Customer Success Programme hit their NHS contracts".
+Their own description of the UDA Manager on the EXACT solutions page is now that it "provides intelligent data to allow you to manage your NHS contracts", a softer claim than before. The NHS practices page keeps the stronger framing, promising to "Get intelligent predictions for your practice and individual dentists and hit your NHS contract targets". They also claim "96% of practices in our Customer Success Programme hit their NHS contracts".
 
 > **Their NHS page does not name which of the four nations it covers.** Consulted on 17 August 2026, it talks about contracts and UDAs without stating England, Wales, Scotland or Northern Ireland, and mentions no claim submission route by name. If you work in Scotland or Northern Ireland, get that in writing before you sign.
 
@@ -165,14 +166,14 @@ Dentalpin is the other bet: that the software holding clinical records should be
 
 ## Sources
 
-All pages consulted on 17 August 2026. Note that softwareofexcellence.co.uk redirects to softwareofexcellence.com/en-gb/.
+All pages consulted on 17 August 2026, and re-checked on 12 September 2026, when the module descriptions and the Chairsyde link above were corrected. Note that softwareofexcellence.co.uk redirects to softwareofexcellence.com/en-gb/.
 
 - [Software of Excellence home](https://www.softwareofexcellence.com/en-gb/): "The UK's number one dental practice software", "Join thousands of dental practices in the UK", the 48% private revenue claim, and the Gillingham address.
 - [Our story](https://www.softwareofexcellence.com/en-gb/company/our-story): founded in New Zealand in 1989, the 1000th UK customer in 2002, "became part of Henry Schein" in 2007, "the market leader with over 4,500 dental practice customers" in 2009, the 2020 line about supporting thousands of practices internationally, and the 2024 Second Opinion by Pearl integration.
 - [EXACT, the complete practice management system](https://www.softwareofexcellence.com/en-gb/solutions/exact): the descriptions of Recall Manager, Utilisation Manager, Care Manager, Workflow Manager, Short Notice Lists, Marketing Manager and the UDA Manager, and the "the complete practice management system you already know" line.
 - [NHS practices](https://www.softwareofexcellence.com/en-gb/solutions/exact/nhs-practices): "Track your NHS contracts with our Predictive UDA Manager", the intelligent predictions wording, "96% of practices in our Customer Success Programme hit their NHS contracts", and the absence of any named nation or claim submission route.
 - [Practice efficiency](https://www.softwareofexcellence.com/en-gb/solutions/practice-efficiency): Examine Pro "into one single database", My Practice Cloud "from any device", MPC Pay, Dentist Portal and Workflow Manager.
-- [Patient experience](https://www.softwareofexcellence.com/en-gb/solutions/patient-experience): Patient Portal, Second Opinion AI, Chairsyde, Online Booking and Clinipad.
+- [Patient experience](https://www.softwareofexcellence.com/en-gb/solutions/patient-experience): Patient Portal, Second Opinion AI, Online Booking and Clinipad. [Chairsyde](https://www.softwareofexcellence.com/en-gb/solutions/patient-experience/chairsyde): the consultation and patient-education platform, moved to its own page since 17 August 2026.
 - [Customer Success Programme](https://www.softwareofexcellence.com/en-gb/support/customer-success-programme): "your very own dental business coach" and the 92% impact claim.
 - [Contact us](https://www.softwareofexcellence.com/en-gb/contact-us): the phone numbers, the Gillingham address, "© 2026 Henry Schein One Inc." and no published price.
 - [EXACT on Henry Schein One](https://www.henryscheinone.com/products/exact/): "Software of Excellence is available in the UK, Australia and New Zealand", the remote install into the practice, the migration team connecting to your server and the Trial Review, the equipment checks and preconfigured IT, on-site training, and the Pearl AI description.
