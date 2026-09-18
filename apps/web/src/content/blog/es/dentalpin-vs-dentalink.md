@@ -31,12 +31,12 @@ La información se aloja, según su propia página de planes, "en los servidores
 
 El catálogo es amplio y está agrupado en su web en seis bloques: captación de pacientes, experiencia de pacientes, ingresos, fidelización, control de la operación e IA. Dentro hay odontograma y periodontograma, historia clínica, agenda, consentimientos informados, firma electrónica, módulo de ortodoncia, estética facial, control de caja y gastos, gestión de laboratorios e inventario, cálculo de pago a odontólogos, reportes en Excel y KPI, y una línea de funciones con IA que incluye análisis de RX, resumen clínico y notas clínicas.
 
-Se vende en tres planes, **Basic**, **Pro** y **Titanium**, y ahí está el detalle que más cambia el cálculo:
+Se vende en tres planes, **Esencial**, **Pro** y **Titanium**, y ahí está el detalle que más cambia el cálculo:
 
 - **El odontograma y el periodontograma están en los tres planes**, incluido el de entrada. Es la primera fila que hay que mirar en cualquier tarifa dental, y aquí sale bien.
-- **El inventario, los reportes KPI, los reportes en Excel y el multicentro empiezan en Pro**, no en Basic.
+- **El inventario, los reportes KPI, los reportes en Excel y el multicentro empiezan en Pro**, no en Esencial.
 - **Las encuestas NPS y el email marketing son exclusivos de Titanium.**
-- **El módulo de ortodoncia es un adicional** en Basic y Pro, y viene incluido solo en Titanium.
+- **El módulo de ortodoncia es un adicional** en Esencial y Pro, y viene incluido solo en Titanium.
 - **Los pagos presenciales y online y la telemedicina son adicionales en los tres planes.**
 
 Sobre el precio hay que ser preciso, porque es la pregunta que todo el mundo trae.
@@ -68,10 +68,10 @@ Solo filas verificables. Donde no hay dato público, lo decimos.
 | Precio publicado | ✗ "Solicita tu cotización" | ✓ 0 € autoalojado · 89 €/mes gestionado |
 | Permanencia | ✓ "Sin contratos o plazos mínimos de uso" | ✓ Ninguna |
 | Odontograma en el plan de entrada | ✓ En los tres planes | ✓ Incluido |
-| Ortodoncia | ~ Adicional en Basic y Pro | ✓ Incluida |
+| Ortodoncia | ~ Adicional en Esencial y Pro | ✓ Incluida |
 | Multicentro | ~ Desde el plan Pro | ✓ Incluido |
 | Dónde viven los datos | Servidores de AWS | ✓ Donde tú decidas |
-| Acceso si dejas de pagar | ✗ Se deshabilita a los 45 días | ✓ El servidor es tuyo |
+| Acceso si dejas de pagar | ✗ Se deshabilita a los 15 días y la cuenta se elimina a los 30 | ✓ El servidor es tuyo |
 | Exportar tus datos | ✓ "En cualquier momento" | ✓ Volcado estándar de PostgreSQL |
 | API | ~ Lectura y escritura, con coste asociado | ✓ REST completa, OpenAPI, incluida |
 | Código auditable | ✗ No | ✓ Publicado en GitHub |
@@ -84,7 +84,7 @@ Dos filas piden explicación, porque son las que de verdad separan a los dos pro
 
 **La API.** Dentalink tiene una, y con documentación pública: su centro de ayuda dice que "Dentalink cuenta con un API de integración, con puertos de lectura y también de escritura", que solo la cuenta ADMIN puede crear clientes, y que "Esta API tiene un costo asociado". Eso es más de lo que ofrece la mayoría del mercado español, donde la API directamente no existe. La diferencia con nosotros no es tenerla, es que aquí no se contrata aparte.
 
-> **El impago y los datos.** La propia web de Dentalink explica que "Si no se registra el pago tras 45 días del vencimiento, el acceso a la cuenta se deshabilita, impidiendo el acceso a la información". Es una política normal en software como servicio y está publicada, que ya es más de lo que hacen otros. Pero conviene leerla dos veces antes de firmar, porque describe exactamente qué pasa con tu historia clínica un mes y medio después de un recibo devuelto.
+> **El impago y los datos.** La propia web de Dentalink explica que "Si no se registra el pago tras 15 días del vencimiento, el acceso a la cuenta se deshabilita, impidiendo el acceso a la información. Adicional, pasado 30 días de no pago se elimina la cuenta definitivamente" (consultado el 18 de septiembre de 2026; el 19 de agosto de 2026 esa misma página daba 45 días para la deshabilitación y no mencionaba la eliminación). Es una política normal en software como servicio y está publicada, que ya es más de lo que hacen otros. Pero conviene leerla dos veces antes de firmar, porque describe exactamente qué pasa con tu historia clínica un mes después de un recibo devuelto.
 
 Para ser justos con el otro lado: también publican que puedes descargar tu información "en cualquier momento" y que puedes darte de baja cuando quieras y recuperarla avisando a tu ejecutivo de posventa.
 
@@ -134,7 +134,7 @@ Todas consultadas el 19 de agosto de 2026:
 
 - [Dentalink · portada](https://www.softwaredentalink.com/): "una marca de Healthatom", cifras de clientes, pacientes, citas y países.
 - [Dentalink España · sobre nosotros](https://www.softwaredentalink.com/es/sobre-nosotros): 15 años, más de 15.000 clínicas, Verifactu, RGPD, ISO 27001, AWS, teléfono +34 y horario local.
-- [Planes de Dentalink](https://www.softwaredentalink.com/b/planes): planes Basic, Pro y Titanium, qué incluye cada uno, "Solicita tu cotización", periodicidad de pago, permanencia, alojamiento en AWS, descarga de información, baja e impago a 45 días.
+- [Planes de Dentalink](https://www.softwaredentalink.com/b/planes): planes Esencial, Pro y Titanium, qué incluye cada uno, "Solicita tu cotización", periodicidad de pago, permanencia, alojamiento en AWS, descarga de información, baja e impago. **Reconsultada el 18 de septiembre de 2026**: el plan de entrada pasó a llamarse Esencial (antes Basic) y el plazo de impago cambió de 45 días a 15 para la deshabilitación más 30 para la eliminación de la cuenta. Las dos cifras son suyas, en la misma URL, con un mes de diferencia.
 - [Funcionalidades de Dentalink](https://www.softwaredentalink.com/funcionalidades): catálogo de módulos por bloques.
 - [Integración API · centro de ayuda de Dentalink](https://ayuda.softwaredentalink.com/es/articles/9493507-integracion-api): puertos de lectura y escritura, creación de clientes por la cuenta ADMIN, coste asociado.
 - [Documentación de la API de Dentalink](https://api.dentalink.healthatom.com/docs/): documentación pública de los endpoints.
