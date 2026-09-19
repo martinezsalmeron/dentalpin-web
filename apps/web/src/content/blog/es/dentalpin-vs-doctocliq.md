@@ -2,6 +2,7 @@
 title: "Dentalpin frente a Doctocliq: tarifa publicada en dólares o tu propio servidor"
 description: "Comparativa entre Doctocliq, software dental en la nube con precios públicos desde USD 0, y Dentalpin, open source y autoalojable. Con fuentes y fechas."
 pubDate: 2026-08-20
+updatedDate: 2026-09-19
 tags: [comparativa, doctocliq, software-dental]
 ---
 
@@ -134,7 +135,7 @@ Dentalpin es la apuesta contraria: que el software de tu clínica no debería se
 
 ## Fuentes
 
-Todas consultadas el 20 de agosto de 2026:
+Todas consultadas el 20 de agosto de 2026, y revisadas de nuevo sin cambios el 19 de septiembre de 2026:
 
 - [Doctocliq · portada](https://www.doctocliq.com/): "Software dental y médico", "Impulsa tu clínica sin perder el control", "+4000 DOCTORES", "+20 PAÍSES", "planes desde USD 19 al mes", "7 días gratis - Sin tarjeta de crédito".
 - [Planes y precios de Doctocliq](https://www.doctocliq.com/planes-y-precios): los cuatro planes, sus precios en dólares, los límites de pacientes, el almacenamiento, los cupos de recordatorios de WhatsApp y qué incluye cada plan.

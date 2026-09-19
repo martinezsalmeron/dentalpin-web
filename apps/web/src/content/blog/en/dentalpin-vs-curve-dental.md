@@ -2,7 +2,7 @@
 title: "Dentalpin vs Curve Dental: cloud-only, or a server you own"
 description: "Curve Dental states 80,000+ dental professionals and publishes no price. Dentalpin is open source and self-hosted. A sourced comparison of where each fits."
 pubDate: 2026-08-12
-updatedDate: 2026-08-29
+updatedDate: 2026-09-19
 tags: [comparison, curve-dental, dental-software]
 ---
 
@@ -28,7 +28,9 @@ The question that decides between them is who you want holding the clinical reco
 
 Cloud-only practice management software, sold as **Curve Hero** for practices and **Curve SuperHero™** for groups and DSOs, with **Curve Go** as the mobile app and **Curve Capture** as a desktop component, both listed with their own supported versions in its hardware requirements.
 
-The company describes itself as the "#1 Ranked Cloud-Based Dental Software" and an "All-in-One Dental Software Solution", with "80,000+ dental professionals, more than any other cloud-based platform". It runs offices in Calgary and in Provo, Utah, and states "Over 3,500 Canada-based dental professionals who use Curve Hero".
+The company describes itself as the "#1 Ranked Cloud-Based Dental Software" and "The #1 All-in-One Practice Management Software", with "80,000+ dental professionals, more than any other cloud-based platform" on its Why Curve Rocks and Canada pages. It runs offices in Calgary and in Provo, Utah, and states "Over 3,500 Canada-based dental professionals who use Curve Hero".
+
+> **Curve's own home page now states a different, larger figure.** Consulted 19 September 2026, it reads "100,000+ active users in U.S. & Canada" and "6,000+ practice locations", while Why Curve Rocks and the Canada page, both re-checked the same day, still say "80,000+ dental professionals". Both pages are Curve's own. We use the home page figure in the table below because it is the more prominent, more recently worded one, and note the discrepancy here rather than pick silently.
 
 The module list on its own feature pages is wide:
 
@@ -81,7 +83,7 @@ Verifiable rows only. Curve's figures are its own, from its own pages.
 | Where data lives | AWS, managed by Curve | ✓ Wherever you decide |
 | Works without internet | ✗ Internet access required | ~ Local network install possible |
 | Browser support | ~ Chrome only, fully supported | ✓ Any modern browser |
-| Dental professionals using it | ✓ 80,000+ stated | ✗ Very few so far |
+| Dental professionals using it | ✓ 100,000+ active users stated (80,000+ on some pages) | ✗ Very few so far |
 | On the market | ✓ Since 2004 | ✗ Since 2026 |
 | Imaging | ✓ Built in, stored in the cloud | ✗ Not offered |
 | ePrescribe | ✓ Included | ✗ Not offered |
@@ -146,9 +148,9 @@ Dentalpin is the other bet: that the software holding clinical records should be
 
 ## Sources
 
-All Curve Dental pages consulted on 12 August 2026, and re-checked on 29 August 2026, when the partner and category counts below were corrected:
+All Curve Dental pages consulted on 12 August 2026, re-checked on 29 August 2026, when the partner and category counts below were corrected, and re-checked again on 19 September 2026, when the home page's install-base figure and the "All-in-One" wording below were corrected:
 
-- [Curve Dental home](https://www.curvedental.com/): "#1 Ranked Cloud-Based Dental Software", "All-in-One Dental Software Solution", and the module line-up.
+- [Curve Dental home](https://www.curvedental.com/): "#1 Ranked Cloud-Based Dental Software" (structured data), "The #1 All-in-One Practice Management Software", "100,000+ active users in U.S. & Canada", "6,000+ practice locations", "Curve Mobile", and the module line-up.
 - [Why Curve Rocks](https://www.curvedental.com/why-curve-rocks): "Curve now supports 80,000+ dental professionals, more than any other cloud-based platform", "We've been writing cloud software for over a decade", "Uptime Performance Excellence: 99.99%", the annual third-party security audits.
 - [Curve Dental Canada](https://www.curvedental.com/canada): "founded in Canada in 2004 as the first cloud-based dental practice management software on the market", the Calgary and Provo offices, "Over 3,500 Canada-based dental professionals who use Curve Hero", and PIPEDA.
 - [Pricing](https://www.curvedental.com/pricing): "Affordable & Transparent Pricing", "Get Pricing", "GET A PERSONALIZED QUOTE", the startup implementation and licence fee note, and no figure anywhere on the page.

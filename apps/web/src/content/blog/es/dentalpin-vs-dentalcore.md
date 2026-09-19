@@ -2,6 +2,7 @@
 title: "Dentalpin frente a DentalCore: la nube argentina o tu propio servidor"
 description: "Comparativa entre DentalCore, software dental argentino con precios publicados y facturación ARCA, y Dentalpin, open source y autoalojable. Con fuentes."
 pubDate: 2026-08-20
+updatedDate: 2026-09-19
 tags: [comparativa, dentalcore, software-dental]
 ---
 
@@ -25,9 +26,9 @@ La pregunta que decide es geográfica antes que técnica. Si facturas en Argenti
 
 ## Qué es DentalCore
 
-Software dental en la nube para Argentina y Latinoamérica. Su portada se presenta como "El primer CDSS dental de Latinoamérica", con "13 motores que cruzan datos del paciente, alertan sobre contraindicaciones y sugieren protocolos en tiempo real".
+Software dental en la nube para Argentina y Latinoamérica. Su portada se presenta como "El primer CDSS dental de Latinoamérica", con "17 motores que cruzan datos del paciente, alertan sobre contraindicaciones y sugieren protocolos en el momento de decidir" (antes eran 13; consultado el 19 de septiembre de 2026).
 
-Lo firma una persona, y eso es parte de la propuesta. Su página *about* lo atribuye al odontólogo Alfredo Di Tullio (M.N. 40.973), de La Plata, que empezó a desarrollarlo en 2023 y publicó la primera versión en 2025, con la idea de ser "un odontólogo que aprendió a programar" en lugar de una empresa de tecnología entrando en odontología.
+Lo firma una persona, y eso es parte de la propuesta. Su página *about* lo atribuye al odontólogo Alfredo Di Tullio (M.N. 40.973), de La Plata, Argentina, con la idea de ser "un odontólogo que aprendió a programar" en lugar de una empresa de tecnología entrando en odontología. La página ya no publica en qué año empezó el desarrollo ni cuándo salió la primera versión, así que no repetimos esas fechas.
 
 El catálogo clínico es largo y está declarado módulo a módulo: odontograma digital, periodontograma, tratamiento periodontal, endodoncia, cirugía, ortodoncia, rehabilitación oral, restauraciones, estética facial, patología oral, urgencias, ATM, blanqueamiento, odontopediatría, radiografías y derivaciones profesionales.
 
@@ -75,7 +76,7 @@ Solo filas verificables. Donde no hay dato público, lo decimos.
 | Factura electrónica ARCA con CAE y QR | ✓ Dentro del sistema | ✗ No |
 | Obras sociales argentinas | ✓ 20+ convenios precargados | ✗ No |
 | Verifactu (España) | ✗ No lo mencionan | ✓ Incluido |
-| Motores de apoyo a la decisión clínica | ✓ 13 declarados | ✗ No los tenemos |
+| Motores de apoyo a la decisión clínica | ✓ 17 declarados | ✗ No los tenemos |
 | Dónde viven los datos | Supabase/AWS, posiblemente fuera de tu país | ✓ Donde tú decidas |
 | Acceso tras cancelar | ~ 30 días para exportar | ✓ El servidor es tuyo |
 | API documentada | ✗ No publican documentación | ✓ REST completa, OpenAPI, incluida |
@@ -135,12 +136,12 @@ Dentalpin es la apuesta contraria: que el software de tu clínica no debería se
 
 ## Fuentes
 
-Todas consultadas el 20 de agosto de 2026:
+Todas consultadas el 20 de agosto de 2026, y revisadas de nuevo el 19 de septiembre de 2026, cuando se corrigió el número de motores clínicos (de 13 a 17) y se retiraron las fechas de desarrollo y primera versión, que la página *about* ya no publica:
 
-- [DentalCore · portada](https://dentalcore.app/): "El primer CDSS dental de Latinoamérica", 13 motores clínicos, factura electrónica de ARCA con CAE y QR, 20+ convenios precargados, 9 automatizaciones de WhatsApp, asistente de voz Sani, patología oral "Gratis para siempre", dispositivo Sani "Próximamente".
+- [DentalCore · portada](https://dentalcore.app/): "El primer CDSS dental de Latinoamérica", 17 motores clínicos, factura electrónica de ARCA con CAE y QR, 20+ convenios precargados, 9 automatizaciones de WhatsApp, asistente de voz Sani, patología oral "Gratis para siempre", dispositivo Sani "Próximamente".
 - [Tarifa de DentalCore](https://dentalcore.app/pricing): planes Starter, Pro, Premium y Enterprise, precios en dólares, límites de profesionales, sedes y almacenamiento, prueba de 15 días sin tarjeta, cobro en moneda local.
 - [Funcionalidades de DentalCore](https://dentalcore.app/features): catálogo de módulos clínicos, obras sociales con autocálculo y facturación por lotes, portal del paciente, inventario, cuatro roles de usuario con registro de auditoría, Odontolatam.
-- [Sobre DentalCore](https://dentalcore.app/about): Alfredo Di Tullio (M.N. 40.973), desarrollo desde 2023, primera versión en 2025.
+- [Sobre DentalCore](https://dentalcore.app/about): Alfredo Di Tullio (M.N. 40.973), de La Plata, Argentina, "un odontólogo que aprendió a programar"; ya no publica en qué año empezó el desarrollo ni cuándo salió la primera versión.
 - [Términos y condiciones de DentalCore](https://dentalcore.app/terms): responsable y encargado del tratamiento, 30 días para exportar tras la cancelación y posible eliminación posterior, disponibilidad sin garantía del 100%, ley argentina.
 - [Política de privacidad de DentalCore](https://dentalcore.app/privacy): servidores de Supabase/AWS, posible almacenamiento fuera del país de residencia, cifrado en tránsito y en reposo, copias automáticas, Ley 25.326.
 - [Política de devoluciones de DentalCore](https://dentalcore.app/refunds): garantía de devolución del 100% dentro de los 14 días, renovación automática, cancelación desde el panel.

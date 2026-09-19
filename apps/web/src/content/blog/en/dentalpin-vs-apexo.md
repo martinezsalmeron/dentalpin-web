@@ -2,6 +2,7 @@
 title: "Dentalpin vs Apexo: two open source dental systems, built for different clinics"
 description: "Apexo is GPLv3, offline-first and genuinely free. Dentalpin is open source and browser-based. A comparison sourced only from what each project publishes."
 pubDate: 2026-08-20
+updatedDate: 2026-09-19
 tags: [comparison, apexo, dental-software]
 ---
 
@@ -43,7 +44,7 @@ What the manual documents in detail, screen by screen:
 - **Accounts** with two types, Admin and User, and "granular permission levels for patients, appointments, pre-op notes, post-op notes, photos, expenses, notes, and labworks".
 - **CSV import and export** of patients and appointments, with the field list published in the manual.
 
-The X-ray work is the most substantial thing in the recent changelog. Version 0.14.0 added the RVG import and a cross-platform viewer with windowing, colour maps, rotation, invert, a millimetre ruler and ROI statistics; 0.14.1 hardened it. The current published version is 0.14.1, so this is a pre-1.0 project that is being worked on hard.
+The X-ray work is the most substantial thing in the recent changelog. Version 0.14.0 added the RVG import and a cross-platform viewer with windowing, colour maps, rotation, invert, a millimetre ruler and ROI statistics; 0.14.1 hardened it. The current published version is 0.15.0, which added automatic server schema reconciliation on upgrade and closed a patient-portal access vulnerability, so this is a pre-1.0 project that is being worked on hard.
 
 ## What Dentalpin is
 
@@ -78,7 +79,7 @@ Verifiable rows only. Where a row says "not in the manual", that means Apexo's o
 | Invoicing | ~ Price and paid amount per appointment | ✓ Invoices, series, Verifactu in Spain |
 | Appointment reminders | ~ Not in the manual | ✓ WhatsApp module |
 | Patient self-service | ✓ QR link to appointments, payments and photos | ✗ Not a module today |
-| Version | 0.14.1, pre-1.0 | Shipping since 2026 |
+| Version | 0.15.0, pre-1.0 | Shipping since 2026 |
 
 Two rows need the detail behind them.
 
@@ -140,11 +141,11 @@ If it is not your practice, install Apexo. If you want to see the other shape of
 
 ## Sources
 
-All consulted on 20 August 2026:
+All consulted on 20 August 2026, and re-checked on 19 September 2026, when the current version below was corrected from 0.14.1 to 0.15.0:
 
 - [apexo.app](https://apexo.app/): the "Free Dental PMS" heading, the tagline, the eight capability cards including "Global ready: EN, AR, ES, PL, KU" and "Your data lives on your own servers", the download platforms, and "Licensed under GNU GPLv3".
 - [Apexo Manual](https://docs.apexo.app/) ([source](https://raw.githubusercontent.com/elselawi/apexo/master/manual.md)): server setup on PocketBase, the droplet storage figures, S3 configuration, scheduled backups, account types and permissions, the Patients screen and its tabs, the per-tooth chart in ISO 3950 notation, appointments, labworks, notes, expenses and receipt scanning, DICOM import and the X-ray viewer, settings, and the CSV import and export field lists.
-- [Apexo changelog](https://apexo.app/changelog) ([source](https://raw.githubusercontent.com/elselawi/apexo/master/CHANGELOG.md)): version 0.14.1 as current, the 0.14.0 DICOM/RVG import and viewer, and the field-level offline merge.
+- [Apexo changelog](https://apexo.app/changelog) ([source](https://raw.githubusercontent.com/elselawi/apexo/master/CHANGELOG.md)): version 0.15.0 as current (automatic server schema reconciliation, a patient-portal access fix), the 0.14.1 hardening release, the 0.14.0 DICOM/RVG import and viewer, and the field-level offline merge.
 - [Apexo on GitHub](https://github.com/elselawi/apexo).
 - [Dentalpin's licence](https://github.com/martinezsalmeron/dentalpin/blob/main/LICENSE) and [source](https://github.com/martinezsalmeron/dentalpin).
 
