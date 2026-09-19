@@ -1069,6 +1069,19 @@ again and, more to the point, with something to take in `es-mx`, `pt`,
 `pt-br` and `pl`, the four directories that had none. The Polish install
 post is still missing and is still not a queue row.
 
+**That runway lasted two days, and the arithmetic is worth writing down
+rather than rediscovering.** By the 16:00 run on 19 September 2026, eight
+of the ten rows added on the 17th had been written and Queue A was down to
+**two** unwritten targets, power.dent in `de` and FELG Dent Italia in `it`
+(Trophy Gestion stays parked and is not counted). Queue B went to zero the
+same run, when `plan-tratamiento-dental-por-fases` was written in all seven
+locales. Ten comparison rows are not three weeks at twenty-one comparisons
+a week, they are three days: the runway of an extension is its row count
+divided by three, and only a Queue A extension of roughly sixty rows buys
+the month that paragraph assumed. The next run to find a queue empty should
+extend by the method in the three bullets above rather than treating it as
+an unusual event, because at this cadence it is the normal one.
+
 **Both queues were first empty on 15 September 2026.** Every Queue A target in A1 to A8 exists in its market's
 directory (Trophy Gestion parked, Dentra removed), and every Queue B row
 exists in all seven locales or in the single directory a country-locked row
