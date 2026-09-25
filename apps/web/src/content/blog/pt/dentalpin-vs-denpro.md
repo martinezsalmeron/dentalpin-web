@@ -82,7 +82,10 @@ A entidade que contrata e factura é a **Elite Digital Services, LLC, 1111B S Go
 
 O alojamento está descrito com honestidade pouco comum: os dados ficam "em infra-estruturas de nuvem de terceiros no Espaço Económico Europeu" e "o Fornecedor não possui nem opera quaisquer centros de dados ou hardware de servidor". A lista de subcontratantes existe "mediante pedido" e nenhum é nomeado. O FAQ acrescenta encriptação AES-256, centros de dados certificados ISO 27001 na UE e registos de auditoria de todos os acessos.
 
-> **O único canal de contacto publicado é um número de WhatsApp com indicativo eslovaco, +421 944 063 272.** Não há endereço de email em nenhuma página consultada, incluindo as secções da política de privacidade sobre o exercício de direitos do titular dos dados, onde o texto anuncia um endereço e a seguir aparece o mesmo WhatsApp. A pessoa de contacto publicada é a Veronika Gregová.
+Sobre o canal de contacto, duas observações que saem das mesmas páginas:
+
+- **O único contacto publicado é um número de WhatsApp com indicativo eslovaco**, +421 944 063 272, com a Veronika Gregová identificada como pessoa de contacto.
+- **Não há endereço de email em nenhuma página consultada**, incluindo as três secções da política de privacidade sobre o exercício de direitos do titular dos dados, onde o texto anuncia um endereço e a seguir aparece o mesmo WhatsApp.
 
 Nada disto é impeditivo, e há fornecedores sérios com estruturas assim. É material para o contrato de subcontratação do artigo 28.º do RGPD, que deve pedir antes da proposta comercial e não depois: subcontratantes nomeados, país de alojamento, e um canal escrito para notificações que não seja uma aplicação de mensagens.
 
