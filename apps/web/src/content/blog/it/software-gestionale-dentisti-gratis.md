@@ -2,6 +2,7 @@
 title: "Software gestionale per dentisti gratis: cosa esiste davvero in Italia"
 description: "Cosa è davvero gratuito nel software per studi odontoiatrici in Italia, cosa pubblica ogni fornitore sul proprio sito e perché il Sistema TS decide la scelta."
 pubDate: 2026-08-15
+updatedDate: 2026-09-26
 tags: [confronto, gestionale-dentistico, gratis]
 ---
 
@@ -13,7 +14,7 @@ Noi facciamo Dentalpin, che è uno dei gratuiti di questa pagina. Quindi non sia
 
 ## In trenta secondi
 
-**Gratis con un tetto è la forma più diffusa.** Appuntoo pubblica un piano Free a 0 € con un account e fino a 30 pazienti, e in quel piano ci sono già la fatturazione e l'invio al Sistema Tessera Sanitaria. Trenta pazienti è un numero che uno studio avviato supera nel primo mese.
+**Gratis con un tetto è la forma più diffusa, e il tetto è lo stesso due volte.** Appuntoo pubblica un piano Free a 0 € con un account e fino a 30 pazienti, e in quel piano ci sono già la fatturazione e l'invio al Sistema Tessera Sanitaria. OpenStudio pubblica un Piano Standard a 0 € con lo stesso tetto di 30 pazienti, mono utente, ma senza invio al Sistema TS730 e con la fattura elettronica "solo xml". Trenta pazienti è un numero che uno studio avviato supera nel primo mese.
 
 **Gratis senza tetto esiste in due varianti.** Il freeware, come Dento, che si scarica e si usa ma resta di chi lo sviluppa. E l'open source, dove il codice è pubblicato sotto licenza, gira sul tuo server e nessuno può cambiare il modello sotto di te.
 
@@ -37,6 +38,7 @@ Un piano di ingresso economico non è la quinta categoria, è un'altra conversaz
 ## Cosa pubblica ognuno sul prezzo
 
 - **Appuntoo** pubblica tre piani. Free a "0 €/ mese" con "1 account professionista" e "Fino a 30 pazienti", Professionista a "34,99 €/ mese + IVA" con pazienti illimitati, Studio a "79,99 €/ mese + IVA" con fino a 30 account collaboratori. Il piano Free elenca agenda, cartella clinica e anamnesi, prenotazioni online, notifiche email illimitate, statistiche e contabilità, e "Fatturazione e Sistema Tessera Sanitaria". I promemoria WhatsApp non sono compresi nel Free e si comprano a pacchetti: 150 messaggi a 10 €, 300 a 19 €, 600 a 35 €, 1000 a 55 €.
+- **OpenStudio**, di OPEN S.R.L. (CF e P.IVA 12179040964), pubblica tre piani sulla sua pagina per dentisti: "Piano Standard € 0 mese" con "Gestione pazienti: max 30", "Mono utente", "1 GB per immagini e doc", "NO conservazione sostitutiva di tutte le fatture elettroniche" e "NO invio dati Sistema TS730"; "Piano Professional € 35 mese"; "Piano Business € 25 mese / utente" con minimo 2 utenti. Sotto il listino: "Fatturazione annuale anticipata, alla scadenza del periodo di prova gratuito. I prezzi indicati si intendono esclusi di iva vigente". La loro tabella di comparazione aggiunge cosa resta fuori dallo Standard: fattura elettronica attiva "solo xml", un solo tariffario, agenda "base", nessun accesso simultaneo, nessun invio email né promemoria appuntamenti, e assistenza limitata al "supporto di primo accesso". I preventivi e il login a due fattori con OTP, invece, ci sono anche nel piano gratuito.
 - **Dento** si presenta sulla propria home come "Dento, gratuito per tutti". È nato su Macintosh nel 1996 ed è costruito con FileMaker Pro. Per scaricarlo la pagina di download è esplicita: "Per poter scaricare una copia di Dento bisogna essere iscritti al blog ed effettuare il log in". Le versioni offerte lì sono Dento 6.9.8 per Windows e per Macintosh. Il sito indica il blog e il forum come strumento per chiedere spiegazioni su Dento, e pubblica sezioni dedicate ai corsi e all'assistenza.
 - **DrawDent Desktop**, di Il-Software (P.IVA 05975660878), non è gratuito ma è l'unico qui a pubblicare una licenza perpetua: "pagamento unico" da 79 €, con versioni superiori a 99 € e 129 €, e "Nessun rinnovo automatico della licenza". Sulla pagina consultata elenca cartella clinica digitale, odontogramma, fatturazione elettronica, Sistema TS, registro UDI dei dispositivi impiantabili, consensi firmati su tablet e magazzino. Nessuna versione di prova è descritta lì.
 - **AlfaDocs** non pubblica cifre. La pagina prezzi elenca i piani Light, Smart ed Elite e spiega perché: "Il prezzo dipende dalla specializzazione e dai moduli che usa davvero". L'ingresso è "Prenota una demo" o "Contattaci", con "Prova gratuita disponibile" e nessuna durata indicata. Sulla stessa pagina compaiono "Fatturazione elettronica (SDI)" e "Integrazione nativa con TS e SDI".
@@ -46,22 +48,22 @@ Un piano di ingresso economico non è la quinta categoria, è un'altra conversaz
 
 Solo righe verificabili. Dove il fornitore non pubblica il dato, la riga lo dice invece di ipotizzarlo.
 
-| | Appuntoo Free | Dento | DrawDent | AlfaDocs | Dentalpin |
-|---|---|---|---|---|---|
-| Costo | ✓ 0 €/mese | ✓ 0 €, freeware | ~ 79 € una tantum | ✗ Non pubblicato | ✓ 0 €, tutto incluso |
-| Prezzo pubblicato sul sito | ✓ Sì, tre piani | Non applicabile | ✓ Sì | ✗ No, solo demo | ✓ Sì |
-| Limite di pazienti | ✗ 30 | ✓ Nessuno pubblicato | ✓ Nessuno pubblicato | Non pubblicato | ✓ Nessuno |
-| Account compresi | ✗ 1 professionista | Non pubblicato | Non pubblicato | Non pubblicato | ✓ Senza limite |
-| Odontogramma | ✗ Non fra le funzionalità | Schede dentali | ✓ Sì | ✗ Non elencato nei piani | ✓ Sì |
-| Invio al Sistema TS | ✓ Compreso nel Free | Non pubblicato | ✓ Sì | ✓ Integrazione nativa | ✗ Non presente |
-| Fattura elettronica SDI | ✓ Compresa | Non pubblicato | ✓ Sì | ✓ Sì | ✗ Non presente |
-| Interfaccia in italiano | ✓ Sì | ✓ Sì | ✓ Sì | ✓ Sì | ✗ No, inglese e spagnolo |
-| Dove stanno i dati | ~ Sui loro server | ✓ Sul tuo computer | ✓ Sul tuo computer | ~ Sui loro server | ✓ Sul tuo server |
-| Codice sorgente pubblicato | ✗ No | ✗ No | ✗ No | ✗ No | ✓ Sì, su GitHub |
+| | Appuntoo Free | OpenStudio Standard | Dento | DrawDent | AlfaDocs | Dentalpin |
+|---|---|---|---|---|---|---|
+| Costo | ✓ 0 €/mese | ✓ 0 €/mese | ✓ 0 €, freeware | ~ 79 € una tantum | ✗ Non pubblicato | ✓ 0 €, tutto incluso |
+| Prezzo pubblicato sul sito | ✓ Sì, tre piani | ✓ Sì, tre piani | Non applicabile | ✓ Sì | ✗ No, solo demo | ✓ Sì |
+| Limite di pazienti | ✗ 30 | ✗ 30 | ✓ Nessuno pubblicato | ✓ Nessuno pubblicato | Non pubblicato | ✓ Nessuno |
+| Account compresi | ✗ 1 professionista | ✗ Mono utente | Non pubblicato | Non pubblicato | Non pubblicato | ✓ Senza limite |
+| Odontogramma | ✗ Non fra le funzionalità | ✗ Non fra le funzionalità | Schede dentali | ✓ Sì | ✗ Non elencato nei piani | ✓ Sì |
+| Invio al Sistema TS | ✓ Compreso nel Free | ✗ Solo dai piani a pagamento | Non pubblicato | ✓ Sì | ✓ Integrazione nativa | ✗ Non presente |
+| Fattura elettronica SDI | ✓ Compresa | ✗ Solo xml nel gratuito | Non pubblicato | ✓ Sì | ✓ Sì | ✗ Non presente |
+| Interfaccia in italiano | ✓ Sì | ✓ Sì | ✓ Sì | ✓ Sì | ✓ Sì | ✗ No, inglese e spagnolo |
+| Dove stanno i dati | ~ Sui loro server | ~ Germania, presso Hetzner | ✓ Sul tuo computer | ✓ Sul tuo computer | ~ Sui loro server | ✓ Sul tuo server |
+| Codice sorgente pubblicato | ✗ No | ✗ No | ✗ No | ✗ No | ✗ No | ✓ Sì, su GitHub |
 
 Le due righe fiscali sono quelle che pesano di più in uno studio italiano, e sono due righe che perdiamo. Vale la pena leggerle prima di tutte le altre.
 
-> **In Italia lo studio odontoiatrico trasmette le spese sanitarie al Sistema Tessera Sanitaria, e non è una funzione facoltativa del gestionale.** Se vuoi che se ne occupi il programma, Appuntoo lo fa già nel piano gratuito, DrawDent e AlfaDocs lo dichiarano nei loro, e Dentalpin no. Le scadenze e il testo di legge stanno nel nostro [approfondimento su fatturazione elettronica e Sistema TS](/it/blog/fatturazione-elettronica-studio-odontoiatrico/), con le fonti ufficiali.
+> **In Italia lo studio odontoiatrico trasmette le spese sanitarie al Sistema Tessera Sanitaria, e non è una funzione facoltativa del gestionale.** Se vuoi che se ne occupi il programma, Appuntoo lo fa già nel piano gratuito, DrawDent e AlfaDocs lo dichiarano nei loro, OpenStudio lo fa solo dai piani a pagamento, e Dentalpin no. Le scadenze e il testo di legge stanno nel nostro [approfondimento su fatturazione elettronica e Sistema TS](/it/blog/fatturazione-elettronica-studio-odontoiatrico/), con le fonti ufficiali.
 
 ![Elenco fatture con gli stati emessa, pagata, parziale, scaduta e bozza](/screenshots/invoices.png)
 
@@ -72,6 +74,7 @@ Le due righe fiscali sono quelle che pesano di più in uno studio italiano, e so
 Sono le due che cambiano il prezzo finale più di qualsiasi listino.
 
 - **"Illimitato" quasi sempre riguarda i pazienti, non le persone.** In Appuntoo i pazienti diventano illimitati già a 34,99 € al mese, ma resta un solo account professionista: per far entrare l'assistente e il secondo operatore si passa al piano Studio a 79,99 €. È la differenza tra 420 € e 960 € all'anno più IVA.
+- **"Gratis" raramente comprende la parte fiscale.** È la differenza fra i due piani a 0 € di questa pagina: quello di Appuntoo dichiara "Fatturazione e Sistema Tessera Sanitaria", quello di OpenStudio no, e sopra il tetto il Professional costa 35 € al mese più IVA con fatturazione annuale anticipata. Guarda la riga del Sistema TS prima della riga del prezzo.
 - **"Compreso" raramente comprende i messaggi.** I promemoria WhatsApp di Appuntoo sono pacchetti a parte, con il prezzo pubblicato. Chiedi sempre il totale annuo con dentro quello che il tuo studio usa davvero tutti i giorni, non il prezzo della riga di listino.
 
 Una terza cosa vale per il freeware e per l'open source insieme: nessuno dei due comprende qualcuno che risponde al telefono. Dento indica il blog e il forum, noi GitHub. Se lo studio si ferma alle nove del mattino, quella differenza si sente.
@@ -86,7 +89,7 @@ Vale come promemoria generale, non come critica: la licenza è l'unica cosa che 
 
 E vale sul serio. Per molti studi in Italia questa è la colonna giusta, e le ragioni sono concrete.
 
-- **Vuoi che sia il gestionale a mandare le spese al Sistema TS.** Appuntoo lo fa già nel piano gratuito, DrawDent e AlfaDocs lo pubblicano fra le loro funzioni. È il problema più costoso da risolvere altrove, e noi non lo risolviamo.
+- **Vuoi che sia il gestionale a mandare le spese al Sistema TS.** Appuntoo lo fa già nel piano gratuito, DrawDent e AlfaDocs lo pubblicano fra le loro funzioni, OpenStudio dai suoi piani a pagamento, dove mette anche la firma qualificata sulla fattura per conto tuo. È il problema più costoso da risolvere altrove, e noi non lo risolviamo.
 - **Ti serve l'interfaccia in italiano oggi.** La nostra non lo è ancora, e non c'è modo di girarci intorno.
 - **Non vuoi un server da gestire.** Con un servizio cloud non c'è niente da installare, aggiornare o salvare, e per uno studio senza nessuno che si occupi di informatica questo da solo può chiudere la discussione.
 - **Preferisci pagare una volta sola.** La licenza perpetua di DrawDent a 79 € con "Nessun rinnovo automatico" è un modello che in questo mercato è quasi scomparso, e per uno studio piccolo è una risposta legittima.
@@ -122,9 +125,10 @@ Quello che l'open source risolve è la parte che nessuno restituisce dopo: i dat
 
 ## Fonti
 
-Tutte consultate il 15 agosto 2026.
+Tutte consultate il 15 agosto 2026, tranne OpenStudio, consultata il 26 settembre 2026.
 
 - Appuntoo, [prezzi](https://appuntoo.com/prezzi/): piano Free a "0 €/ mese" con "1 account professionista" e "Fino a 30 pazienti", con agenda, cartella clinica e anamnesi, prenotazioni online, notifiche email illimitate, statistiche e contabilità e "Fatturazione e Sistema Tessera Sanitaria"; Professionista a "34,99 €/ mese + IVA" con pazienti illimitati; Studio a "79,99 €/ mese + IVA" con fino a 30 account collaboratori; promemoria WhatsApp esclusi dal Free e venduti a pacchetti da 150 messaggi a 10 €, 300 a 19 €, 600 a 35 € e 1000 a 55 €.
+- OpenStudio, [gestionale studio dentistico](https://www.openstudio.cloud/gestionale-studio-dentistico) e [comparazione piani tariffari](https://www.openstudio.cloud/comparazione-piani-tariffari): "Piano Standard € 0 mese" con "Gestione pazienti: max 30", "Mono utente", "1 GB per immagini e doc", "NO conservazione sostitutiva di tutte le fatture elettroniche" e "NO invio dati Sistema TS730"; "Piano Professional € 35 mese" e "Piano Business € 25 mese / utente" con minimo 2 utenti; "Fatturazione annuale anticipata, alla scadenza del periodo di prova gratuito. I prezzi indicati si intendono esclusi di iva vigente"; fattura elettronica attiva "solo xml" sullo Standard, "solo 1 tariffario", agenda "base", assistenza come "supporto di primo accesso", preventivi e login a due fattori su tutti i piani; "OPEN S.R.L. - CF e P.Iva 12179040964". Le loro [FAQ](https://www.openstudio.cloud/faq) aggiungono che "I Piani Standard sono completamenti gratuiti", che non serve la carta di credito, e che "i dati sono archiviati in Germania presso la società Hetzner Online". Il confronto completo è in [Dentalpin e OpenStudio a confronto](/it/blog/dentalpin-vs-openstudio/).
 - Dento, [home](https://dento.it/): "Dento, gratuito per tutti", l'origine su Macintosh dal 1996 e la costruzione con FileMaker Pro.
 - Dento, [download](https://dento.it/download-dento/): "Per poter scaricare una copia di Dento bisogna essere iscritti al blog ed effettuare il log in", le versioni Dento 6.9.8 per Windows e per Macintosh e l'accettazione delle condizioni d'uso prima del download.
 - Il-Software, [DrawDent Desktop](https://www.il-software.it/software_dentisti.htm): P.IVA 05975660878, licenza perpetua con "pagamento unico" da 79 € e versioni superiori a 99 € e 129 €, "Nessun rinnovo automatico della licenza", cartella clinica digitale, odontogramma, fatturazione elettronica, Sistema TS, registro UDI, consensi firmati su tablet e magazzino.
@@ -132,7 +136,7 @@ Tutte consultate il 15 agosto 2026.
 - Open Dental, [licenza](https://www.opendental.com/site/license.html): "In version 24.4, the Open Dental license changed from open source GPL to proprietary" e la precisazione che per i clienti non è cambiato nulla in prezzo, assistenza, accesso al database o uso del software.
 - Dentalpin, [licenza](https://github.com/martinezsalmeron/dentalpin/blob/main/LICENSE) e [codice sorgente](https://github.com/martinezsalmeron/dentalpin).
 
-Quello che un fornitore non pubblica non compare in questa pagina. In particolare non abbiamo trovato, sulle pagine consultate, un odontogramma fra le funzionalità di Appuntoo, un listino con cifre di AlfaDocs, né una descrizione del comportamento di Dento rispetto al Sistema TS e alla fattura elettronica. Sono domande da fare a loro, non conclusioni da trarre da qui.
+Quello che un fornitore non pubblica non compare in questa pagina. In particolare non abbiamo trovato, sulle pagine consultate, un odontogramma fra le funzionalità di Appuntoo né di OpenStudio, un listino con cifre di AlfaDocs, né una descrizione del comportamento di Dento rispetto al Sistema TS e alla fattura elettronica. Sono domande da fare a loro, non conclusioni da trarre da qui.
 
 Questa pagina non è una consulenza fiscale. Gli obblighi cambiano, e la lettura che vale per il tuo studio è quella del tuo commercialista.
 
