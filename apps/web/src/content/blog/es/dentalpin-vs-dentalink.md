@@ -2,6 +2,7 @@
 title: "Dentalpin frente a Dentalink: la nube de Healthatom o tu propio servidor"
 description: "Comparativa entre Dentalink, software dental en la nube con 15.000 clínicas declaradas, y Dentalpin, open source y autoalojable. Con fuentes y fechas."
 pubDate: 2026-08-19
+updatedDate: 2026-09-26
 tags: [comparativa, dentalink, software-dental]
 ---
 
@@ -130,7 +131,7 @@ Dentalpin es la apuesta contraria: que el software de tu clínica no debería se
 
 ## Fuentes
 
-Todas consultadas el 19 de agosto de 2026:
+Todas consultadas el 19 de agosto de 2026, y revisadas de nuevo sin cambios el 26 de septiembre de 2026:
 
 - [Dentalink · portada](https://www.softwaredentalink.com/): "una marca de Healthatom", cifras de clientes, pacientes, citas y países.
 - [Dentalink España · sobre nosotros](https://www.softwaredentalink.com/es/sobre-nosotros): 15 años, más de 15.000 clínicas, Verifactu, RGPD, ISO 27001, AWS, teléfono +34 y horario local.
