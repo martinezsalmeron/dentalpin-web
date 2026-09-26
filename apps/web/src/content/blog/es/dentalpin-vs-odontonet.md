@@ -2,7 +2,7 @@
 title: "Dentalpin frente a Odontonet: dos formas de que los datos se queden en tu clínica"
 description: "Comparativa entre Odontonet, instalado en la clínica y con más de 25 años a la espalda, y Dentalpin, open source y autoalojable. Con fuentes y fechas."
 pubDate: 2026-08-10
-updatedDate: 2026-08-29
+updatedDate: 2026-09-26
 tags: [comparativa, odontonet, software-dental]
 ---
 
@@ -14,11 +14,11 @@ Hacemos Dentalpin, así que no somos neutrales. Exactos sí podemos ser.
 
 ## En treinta segundos
 
-**Odontonet** lleva más de veinticinco años en clínicas españolas, lo mantiene una empresa fundada en 1989 y declara más de 3.500 profesionales usándolo. Es un programa nativo de Windows que se instala en los ordenadores de la clínica, y su propia web dice que ellos nunca tienen los datos de ningún cliente.
+**Odontonet** lleva más de veinticinco años en clínicas españolas, lo mantiene una empresa fundada en 1989 y declara más de 3.500 profesionales usándolo. Su producto insignia es un programa nativo de Windows instalado en los ordenadores de la clínica, y su FAQ dice que ellos nunca tienen los datos de ningún cliente; también venden Odontonet Online, una versión en la nube cuya base de datos vive en sus propios servidores, así que esa promesa no cubre todo lo que venden.
 
 **Dentalpin** es open source: el código está publicado, no hay licencia por sillón ni por profesional, y todo lo que en Odontonet son módulos aparte aquí va dentro. A cambio es de 2026 y no tenemos veinticinco años de rodaje.
 
-La pregunta que decide no es dónde viven los datos, porque en los dos casos viven en tu clínica. Es si prefieres un producto maduro con módulos que se contratan uno a uno, o uno joven cuyo código puedes leer.
+La pregunta que decide no es solo dónde viven los datos, porque Odontonet ya ofrece las dos opciones. Esta comparativa se centra en su producto instalado en la clínica, que es el que su propia empresa presenta como su seña de identidad; si lo que buscas es su versión en la nube, la pregunta pasa a ser la misma que con cualquier proveedor de software como servicio. Entre el instalado y Dentalpin, la cuestión es si prefieres un producto maduro con módulos que se contratan uno a uno, o uno joven cuyo código puedes leer.
 
 ![Pantalla de inicio de Dentalpin con las citas de hoy, quién está en la clínica, los pagos vencidos y los pacientes recientes](/screenshots/home.png)
 
@@ -30,7 +30,9 @@ Software de gestión para clínica dental de **Aseting Informática S.L.**, que 
 
 Sobre el despliegue son inusualmente claros, y conviene citarlos literalmente:
 
-> **"Los datos permanecen en la clínica y son propiedad de la misma. Nosotros nunca tenemos en nuestro poder datos de ningún cliente."** Es la respuesta de su propia página de preguntas frecuentes, consultada el 10 de agosto de 2026. En un mercado que lleva cinco años empujando a la nube, es una postura, no un descuido.
+> **"Los datos permanecen en la clínica y son propiedad de la misma. Nosotros nunca tenemos en nuestro poder datos de ningún cliente."** Es la respuesta de su propia página de preguntas frecuentes, consultada el 10 de agosto de 2026. En un mercado que lleva cinco años empujando a la nube, es una postura, no un descuido, para el producto que describe.
+
+Esa promesa no es universal en su catálogo. Aseting también vende **Odontonet Online**, cuya propia página dice "Base de datos en la nube sobre nuestros servidores de alto rendimiento" y ofrece copias de seguridad "gestionadas por nuestro departamento de soporte", en modalidad de pago por uso y con una variante adicional de servidor dedicado (consultado el 26 de septiembre de 2026). Ese producto no aparece enlazado desde el FAQ, precios ni módulos, pero está publicado y en venta, así que la afirmación de arriba describe su producto instalado, no todo lo que Aseting factura.
 
 El programa es **nativo de Windows**. Su FAQ dice que "funciona perfectamente en sistemas con macOS™ mediante virtualización sin necesidad de hacer ninguna partición", que casi cualquier ordenador actual sirve si el sistema operativo está al día, y que los equipos deben estar conectados en red. Las copias de seguridad las gestiona la clínica, con asesoramiento de ellos si hace falta.
 
@@ -61,9 +63,9 @@ Solo filas verificables. Donde Aseting no publica el dato, lo decimos en vez de 
 | | Odontonet | Dentalpin |
 |---|---|---|
 | Modelo | Licencia comercial | Open source (BSL 1.1 → Apache 2.0 a los 4 años) |
-| Despliegue | Nativo de Windows, instalado en la clínica | Navegador, sobre tu servidor |
+| Despliegue | Nativo de Windows en la clínica, o su versión en la nube (Odontonet Online) | Navegador, sobre tu servidor |
 | Uso en Mac | ~ Mediante virtualización | ✓ Navegador, sin virtualizar |
-| Dónde viven los datos | ✓ En la clínica | ✓ Donde tú decidas |
+| Dónde viven los datos | ~ En la clínica (producto instalado) o en sus servidores (Odontonet Online) | ✓ Donde tú decidas |
 | Precio publicado | ✗ No publica tarifas | ✓ 0 € autoalojado · 89 €/mes gestionado |
 | Módulos | ~ Se contratan aparte, con packs | ✓ Todos incluidos |
 | Verifactu | ✓ Disponible | ✓ Módulo incluido |
@@ -120,20 +122,22 @@ Aquí hay una ventaja que es suya y conviene reconocer. Su FAQ dice que, si deci
 
 ## Lo honesto
 
-Odontonet no es el competidor fácil de esta serie. Coincide con nosotros en lo que más defendemos, que los datos clínicos se queden donde el paciente los dejó, y encima lleva veinticinco años haciéndolo. Si tu clínica es de una especialidad concreta y quieres a alguien al teléfono, es una elección razonable.
+Odontonet no es el competidor fácil de esta serie. Su producto instalado coincide con nosotros en lo que más defendemos, que los datos clínicos se queden donde el paciente los dejó, y encima lleva veinticinco años haciéndolo; Odontonet Online, su versión en la nube, ya no hace esa promesa. Si tu clínica es de una especialidad concreta y quieres a alguien al teléfono, es una elección razonable.
 
 Lo que nosotros ponemos encima es otra cosa: el código publicado, el precio publicado y nada que contratar aparte. Puedes [probar la demo](https://demo.dentalpin.com) sin instalar nada, o [levantarlo en tu servidor en tres minutos](/es/blog/instalar-dentalpin-en-tres-minutos/) y juzgarlo tú.
 
 ## Fuentes
 
-Todas consultadas el 10 de agosto de 2026, y revisadas de nuevo sin cambios el 29 de agosto de 2026:
+Todas consultadas el 10 de agosto de 2026, revisadas de nuevo sin cambios el 29 de agosto de 2026, y revisadas otra vez el 26 de septiembre de 2026, cuando se añadió la existencia de Odontonet Online:
 
 - [Quiénes somos · Odontonet](https://www.odontonet.es/quienes-somos/): Aseting Informática S.L., fundada en 1989, más de 25 años en software dental, más de 3500 profesionales, sello PYME Innovadora.
-- [Preguntas frecuentes](https://www.odontonet.es/faq/): dónde viven los datos, requisitos, Windows y macOS por virtualización, copias de seguridad, cambio de programa, tres versiones, qué incluye el mantenimiento.
+- [Preguntas frecuentes](https://www.odontonet.es/faq/): dónde viven los datos del producto instalado, requisitos, Windows y macOS por virtualización, copias de seguridad, cambio de programa, tres versiones, qué incluye el mantenimiento.
 - [Precios](https://www.odontonet.es/precios/): configuración base de 3 puestos y 1 especialidad, funcionalidades incluidas, ampliaciones. Sin cifras.
 - [Módulos](https://www.odontonet.es/modulos/): catálogo de módulos y packs.
 - [Odontología general](https://www.odontonet.es/odontologia-general/): odontograma 3D, presupuestos, consentimientos, receta electrónica.
-- [Inicio](https://www.odontonet.es/): compatibilidad con Verifactu e historial de versiones.
+- [Inicio](https://www.odontonet.es/): compatibilidad con Verifactu.
+- [Versión 66.1](https://www.odontonet.es/odontonet-version-66-1/): la versión publicada más reciente y el enlace a las versiones anteriores, el historial público de versiones que cita el texto.
+- [Odontonet Online](https://www.odontonet.es/lp/odontonet-online/) y ["Nuevo Odontonet Online"](https://www.odontonet.es/nuevo-odontonet-online/): su versión en la nube, "base de datos en la nube sobre nuestros servidores de alto rendimiento", copias de seguridad gestionadas por su soporte, pago por uso, y las dos variantes (Escritorio y Servidor Dedicado). No enlazada desde el FAQ, precios ni módulos.
 - [Licencia de Dentalpin](https://github.com/martinezsalmeron/dentalpin/blob/main/LICENSE) y [código fuente](https://github.com/martinezsalmeron/dentalpin).
 
 ¿Ves algo mal o desactualizado en esta comparativa? [Dínoslo](https://github.com/martinezsalmeron/dentalpin/discussions) y lo corregimos. Vale también si eres de Aseting.
