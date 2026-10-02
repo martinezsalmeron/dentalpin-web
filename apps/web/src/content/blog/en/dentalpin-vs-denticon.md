@@ -2,6 +2,7 @@
 title: "Dentalpin vs Denticon: software built for DSOs, or software you own"
 description: "Denticon states 13,000+ practices, starts at $795 a month and runs on Windows only. Dentalpin is open source and self-hosted. A sourced comparison."
 pubDate: 2026-09-06
+updatedDate: 2026-09-26
 tags: [comparison, denticon, planet-dds, dental-software]
 ---
 
@@ -146,7 +147,7 @@ Dentalpin is the other bet: that the software holding clinical records should be
 
 ## Sources
 
-All Planet DDS pages consulted on 6 September 2026:
+All Planet DDS pages consulted on 6 September 2026, and revisited with no changes on 26 September 2026:
 
 - [Denticon](https://www.planetdds.com/denticon/): "the practice management system built to help DSOs scale", "the #1 cloud-based practice management system for growth", "Tried and tested by more than 13,000+ dental practices", and the feature list including AI Voice Perio, Revenue Cycle Management & Insurance, AutoEligibility, Analytics, Reporting & Data Share and Planet DDS Pay.
 - [Planet DDS home](https://www.planetdds.com/): "Dental software built to help DSOs improve efficiency and increase revenue", "more than 13,000 practices", and the DentalOS product line-up.

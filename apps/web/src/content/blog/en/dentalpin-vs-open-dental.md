@@ -2,7 +2,7 @@
 title: "Dentalpin vs Open Dental: the other open one, and what changed"
 description: "Open Dental went proprietary at version 24.4 and it publishes its prices. A sourced comparison with Dentalpin, which is open source and free to run."
 pubDate: 2026-08-07
-updatedDate: 2026-08-29
+updatedDate: 2026-09-26
 tags: [comparison, open-dental, dental-software]
 ---
 
@@ -28,7 +28,7 @@ The question that decides it: do you want the software to be someone's product w
 
 Windows practice management software, headquartered in the United States, and described on its own home page as "comprehensive, highly customizable dental practice management software at an affordable price for practices of any size."
 
-The deployment is a MySQL server plus Windows workstations. Open Dental lists Windows 11 and Windows Server 2016 through 2025 as supported, notes that Home editions "are sometimes unacceptable because of connection and networking limits", and says Windows 10 S and 11 S are not supported at all because the software cannot be installed through the Microsoft Store. For the server specifically it adds that "as an alternative to Windows, the server can run Linux or MacOS-X".
+The deployment is a MySQL server plus Windows workstations. Open Dental lists Windows 11 and Windows Server 2016 through 2025 as supported, notes that Home editions "are sometimes unacceptable because of connection and networking limits", and says Windows 11 S is not supported at all because the software cannot be installed through the Microsoft Store (Windows 10 itself is no longer listed as supported, matching Microsoft's own end-of-support date of 14 October 2025). For the server specifically it adds that "as an alternative to Windows, the server can run Linux or MacOS-X".
 
 There is a hosted option, Open Dental Cloud, and it is still a Windows story on the desk: "ODCloudClient must be installed on a Windows machine to bridge to third-party softwares", with 20 Mbps down and 10 Mbps up recommended.
 
@@ -67,7 +67,7 @@ Verifiable rows only, and the price rows are unusual in this series because both
 | Licence | ✗ Proprietary since v24.4 (GPL before) | ✓ Open source, BSL 1.1 → Apache 2.0 after 4 years |
 | Source code | ~ To certain large customers under NDA | ✓ Published on GitHub |
 | Published price | ✓ $199/month/location, $149 after 12 months | ✓ No licence fee |
-| Price outside the US | ✓ $89/month/location, free in developing countries | ✓ No licence fee |
+| Price outside the US | ✓ Canada $164/mo → $137/mo after 12 months; rest of world $89/mo; free in developing countries | ✓ No licence fee |
 | Providers included | ~ Up to 3, then $20/month each | ✓ No per-provider fee |
 | Contract | ~ 12 months, then month to month | ✓ None |
 | Money-back guarantee | ✓ 90 days | ~ Nothing to refund |
@@ -85,7 +85,7 @@ The **API** difference is architectural rather than a feature gap. Open Dental's
 
 The **monthly fee** is not the whole invoice, and Open Dental says so on the fees page. Several eServices are priced separately: eClipboard at $45/month/location, Web Sched Recall at $75/month/location, ODMobile at $35/month/location, eConfirmations at $25/month/location, and integrated texting at $5/month/location plus $0.04 per message. Data conversion from other software is explicitly not included.
 
-> **Compare like for like before deciding.** A US office with four providers, texting and recall booking is not paying $199. It is paying the base fee, plus $20 for the fourth provider, plus whichever eServices it turned on. All of those figures are published, which is exactly why Open Dental is easy to budget for and most of this market is not.
+> **Compare like for like before deciding.** A US office with four providers, texting and recall booking is not paying $199. It is paying the base fee, plus $20 for the fourth provider, plus whichever eServices it turned on. Canada is its own tier too, not the flat "outside the US" rate: $164/month/location for the first 12 months, $137/month/location after, billed in a currency whose fee "may vary each month depending on the exchange rate." All of those figures are published, which is exactly why Open Dental is easy to budget for and most of this market is not.
 
 ## Choose Open Dental if
 
@@ -95,6 +95,7 @@ This section is not a formality. For a large share of readers, especially in the
 - **You want a phone number in the price.** Full telephone support is inside the monthly fee, along with every release. We have a Telegram channel and a GitHub issue tracker.
 - **You want to know the number before you talk to anyone.** Open Dental publishes US, Canadian and international rates, per-provider add-ons and per-service fees on a public page. Almost no other vendor in any market we have looked at does this.
 - **You are in a developing country.** Their own fees page lists the licence as free there, which is a real and unusual commitment.
+- **You are in Canada.** The rate is its own tier, not the generic "outside the US" figure: $164/month/location for the first 12 months, $137/month/location after, subject to the exchange rate.
 - **Your imaging and third-party tools already bridge to it.** Working integrations beat theoretical ones every single time.
 - **You want a 90 day exit.** The money-back guarantee is published and dated in months, not left to a salesperson.
 
@@ -134,14 +135,14 @@ What we would not do is choose it for the name. It is proprietary from 24.4 by i
 
 ## Sources
 
-All consulted on 7 August 2026, and re-checked on 29 August 2026, when a dead API source link was corrected:
+All consulted on 7 August 2026, re-checked on 29 August 2026, when a dead API source link was corrected, and re-checked again on 26 September 2026, when the Canada pricing tier and the dropped Windows 10 S reference were corrected below:
 
 - [Open Dental home page](https://www.opendental.com/): product description, "100s of Bridges to Other Programs", "20+ Clearinghouses".
 - [License](https://www.opendental.com/site/license.html): the change from GPL to proprietary in version 24.4, and the statements about price, support and database access.
 - [Source Code](https://www.opendental.com/site/sourcecode.html): availability to certain large customers under NDA.
-- [Fees](https://www.opendental.com/site/fees.html): US, Canadian, international and developing country rates, the reduced rate after 12 months, per-provider add-ons, eServices pricing and data conversion.
+- [Fees](https://www.opendental.com/site/fees.html): US $199→$149/month, Canada $164→$137/month, other countries $89/month flat, free in developing countries, per-provider add-ons, eServices pricing and data conversion.
 - [Order Open Dental](https://www.opendental.com/site/order.html): what the monthly fee includes, the 12 month contract and the 90 day money-back guarantee.
-- [Computer Requirements](https://www.opendental.com/site/computerrequirements.html): supported Windows versions, Home edition and S mode caveats, Linux or macOS as an alternative server.
+- [Computer Requirements](https://www.opendental.com/site/computerrequirements.html): supported Windows versions (Windows 10 now listed as formerly supported, EOL 14 October 2025), Home edition and Windows 11 S mode caveats, Linux or macOS as an alternative server.
 - [Open Dental Cloud Requirements](https://www.opendental.com/site/opendentalcloudrequirements.html): ODCloudClient on Windows, bandwidth.
 - [API Developer Setup](https://www.opendental.com/site/apisetup.html): where the API service runs and how requests reach the office.
 - [International Customers](https://www.opendental.com/site/countries.html): "Open Dental support is limited to English-speaking users."
