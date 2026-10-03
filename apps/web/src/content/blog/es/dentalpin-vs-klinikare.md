@@ -2,7 +2,7 @@
 title: "Dentalpin frente a Klinikare: dos maneras de pagar por el software de tu clínica"
 description: "Comparativa entre Klinikare, 100% en la nube y con tarifa 2026 publicada, y Dentalpin, open source y autoalojable. Con cifras, fuentes y fechas."
 pubDate: 2026-08-12
-updatedDate: 2026-08-29
+updatedDate: 2026-10-03
 tags: [comparativa, klinikare, software-dental]
 ---
 
@@ -91,7 +91,7 @@ Y esto va en serio, no es un trámite:
 
 - **No quieres saber nada de servidores.** Ellos ponen AWS duplicado en Frankfurt y Dublín, las copias y las actualizaciones fuera de horario. Nosotros te pedimos que alguien se ocupe del servidor, o que nos pagues por ocuparnos.
 - **Necesitas soporte de verdad.** Soporte veinticuatro horas, aula virtual con sesiones diarias y una presentación inicial de 45 minutos con un técnico. Lo nuestro es un canal de Telegram, y la diferencia se nota el martes que algo no arranca.
-- **Tu clínica depende de la radiología.** Su tarifa lista doce sistemas con conexión directa: Vatech, Sidexis de Sirona, Vistascan de Dürr, Vixwin de Gendex, Digora, Romexis de Planmeca, Sopro, Carestream, CliniView, Scanora y AIS. Nosotros no publicamos ninguna integración de ese tipo.
+- **Tu clínica depende de la radiología.** Su tarifa lista doce líneas de conexión directa: Vatech/EasyDent, Sidexis 4/Sirona, Sidexis XG/Sirona, Vistascan/DBSwin de Dürr, Vixwin de Gendex, Digora/Satelec/AIS, Romexis de Planmeca, Sopro, Kodak/Carestream/Trophy, CliniView/Instrumentarium, Scanora/Soredex y AIS. Nosotros no publicamos ninguna integración de ese tipo.
 - **Te piden ISO 27001.** La tienen certificada y nosotros no.
 - **Tu centro no es solo dental.** Si conviven odontología con estética, fisioterapia o podología, una plataforma pensada para eso resuelve un problema que un producto solo dental no se plantea.
 - **Quieres Verifactu sin tocar nada.** Firman ellos ante la AEAT como Colaborador Solidario, que es un paso más de lo que hace un módulo que firma con tu certificado.
@@ -131,7 +131,7 @@ Lo que nosotros ponemos encima es otra cosa: el código publicado, una cuota que
 
 ## Fuentes
 
-Todas consultadas el 12 de agosto de 2026, y revisadas de nuevo sin cambios el 29 de agosto de 2026:
+Todas consultadas el 12 de agosto de 2026, revisadas de nuevo sin cambios el 29 de agosto de 2026, y revisadas otra vez el 3 de octubre de 2026, cuando se actualizó el detalle de software de radiografía compatible según la tarifa vigente (los precios y el resto de condiciones no han cambiado):
 
 - [Inicio · Klinikare](https://klinikare.com/klinikare/p/home): "Más de 2.500 clínicas y +20.000 profesionales", "más de 16 años de experiencia en el sector sanitario", certificación ISO 27001, infraestructura cloud sobre Amazon AWS, asistentes de IA y verticales que cubren.
 - [Software de Gestión para Clínicas Dentales](https://klinikare.com/klinikare/p/software-gestion-clinica-dental): descripción del producto dental, odontograma, más de 2.500 clínicas y más de 16 años.
