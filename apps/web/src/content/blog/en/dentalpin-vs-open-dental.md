@@ -2,7 +2,7 @@
 title: "Dentalpin vs Open Dental: the other open one, and what changed"
 description: "Open Dental went proprietary at version 24.4 and it publishes its prices. A sourced comparison with Dentalpin, which is open source and free to run."
 pubDate: 2026-08-07
-updatedDate: 2026-08-29
+updatedDate: 2026-10-03
 tags: [comparison, open-dental, dental-software]
 ---
 
@@ -28,7 +28,7 @@ The question that decides it: do you want the software to be someone's product w
 
 Windows practice management software, headquartered in the United States, and described on its own home page as "comprehensive, highly customizable dental practice management software at an affordable price for practices of any size."
 
-The deployment is a MySQL server plus Windows workstations. Open Dental lists Windows 11 and Windows Server 2016 through 2025 as supported, notes that Home editions "are sometimes unacceptable because of connection and networking limits", and says Windows 10 S and 11 S are not supported at all because the software cannot be installed through the Microsoft Store. For the server specifically it adds that "as an alternative to Windows, the server can run Linux or MacOS-X".
+The deployment is a MySQL server plus Windows workstations. Open Dental lists Windows 11 and Windows Server 2016 through 2025 as supported, notes that Home editions "are sometimes unacceptable because of connection and networking limits", and says Windows 11 S is not supported at all because the software cannot be installed through the Microsoft Store. For the server specifically it adds that "as an alternative to Windows, the server can run Linux or MacOS-X".
 
 There is a hosted option, Open Dental Cloud, and it is still a Windows story on the desk: "ODCloudClient must be installed on a Windows machine to bridge to third-party softwares", with 20 Mbps down and 10 Mbps up recommended.
 
@@ -134,7 +134,7 @@ What we would not do is choose it for the name. It is proprietary from 24.4 by i
 
 ## Sources
 
-All consulted on 7 August 2026, and re-checked on 29 August 2026, when a dead API source link was corrected:
+All consulted on 7 August 2026, re-checked on 29 August 2026, when a dead API source link was corrected, and re-checked again on 3 October 2026, when the computer requirements page's note on unsupported Windows S-mode editions was corrected (it now names only Windows 11 S, not 10 S). Pricing and the licence terms are unchanged:
 
 - [Open Dental home page](https://www.opendental.com/): product description, "100s of Bridges to Other Programs", "20+ Clearinghouses".
 - [License](https://www.opendental.com/site/license.html): the change from GPL to proprietary in version 24.4, and the statements about price, support and database access.

@@ -2,6 +2,7 @@
 title: "Dentalpin vs CareStack: a published price, and the cost of leaving"
 description: "CareStack publishes US plans from $829 a month, states 3,000+ practices, and charges hourly to export your data. Dentalpin is open source and self-hosted."
 pubDate: 2026-09-07
+updatedDate: 2026-10-03
 tags: [comparison, carestack, good-methods-global, dental-software]
 ---
 
@@ -107,9 +108,9 @@ Verifiable rows only. CareStack's figures are its own, from its own pages.
 
 There is more green on their side of that table than on ours, and there should be. A platform with 1,300 people behind it has solved problems we have not met yet.
 
-One number is worth flagging because it appears twice, differently.
+One number is worth a note on how it has moved.
 
-> **CareStack publishes two install-base figures on the same home page.** The hero says "More than 2500 dental practices trust CareStack" and a section further down says "Trusted by 3000+ Dental Practices" (both consulted 7 September 2026). The company page agrees with the larger one, so that is what the table uses. The UK site publishes a third, "Trusted by 300+ Dental Practices", for that market.
+> **CareStack's home page install-base figure has gone up.** At first check (7 September 2026) the hero read "More than 2500 dental practices trust CareStack" while a section further down already said "Trusted by 3000+ Dental Practices". As of this update (3 October 2026) the hero itself now says "More than 3000 dental practices trust CareStack", matching the lower section and the company page. The UK site publishes a separate, smaller figure, "Trusted by 300+ Dental Practices", for that market.
 
 ## Choose CareStack if
 
@@ -179,7 +180,7 @@ Dentalpin is the other bet: that the software holding clinical records should be
 
 ## Sources
 
-All CareStack pages consulted on 7 September 2026:
+All CareStack pages consulted on 7 September 2026, and re-checked on 3 October 2026, when the home page's hero install-base figure was corrected from "2500+" to "3000+" (it now matches the rest of the site); pricing, terms and every other figure are unchanged:
 
 - [CareStack home](https://carestack.com/): "Modern, Secure, Cloud-Based Dental Software for Growing Your Practice", "More than 2500 dental practices trust CareStack", "Trusted by 3000+ Dental Practices", and "CareStack is fully compliant with HIPAA and possesses SOC 2 Type 2 and ISO 27001:2022 certifications".
 - [Pricing](https://carestack.com/pricing): "All-in-one Dental Platform. Transparent Pricing.", Essentials "Starting at $829 / month", Intelligence "Starting at $1299 / month", the full feature comparison table in which only the four AI-Powered Diagnostics rows are marked "No" for Essentials, the implementation fee answer, the licensing answer, and the FAQ answer directing pricing to a demo.
