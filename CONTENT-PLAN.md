@@ -1692,6 +1692,64 @@ one search per market**, and the four markets that need it are `es-mx`, `pl`,
 `pt` and `pt-br`, in that order, which is the rotation's own order and has not
 changed in a week.
 
+**The 04:00 run on 6 October 2026 wrote the before/after row in all seven locales, and
+three things in that row needed correcting against the sources.** Queue A was at zero
+again, so the morning run took Queue B per the fallback, and the row it took was the last
+of the three added on 5 October. With it written, **both queues are empty from the next
+run onwards**: Queue A has no unwritten row outside the struck-through
+`dentalpin-vs-dentra`, and Queue B now exists in all seven locales for every row. The next
+run does not need to re-derive that, it needs to extend A.
+
+Four findings worth carrying forward, because the row was confident about things that
+turned out to be different:
+
+- **The AEPD case is not a dental clinic, and saying so matters.** PS/00130/2024
+  (EXP202403915) sanctions the owner of a **medicina estética** practice who published
+  another doctor's surgical before/after on his clinic's Facebook and Instagram. The 10.000 €
+  is two fines of 5.000 €, one under art. 6.1 RGPD and one under art. 9. What transfers to
+  dentistry is the reasoning, not the facts, and the post says which is which. The quotable
+  part is the consent's own wording, apartado 6, "con fines médicos científicos o
+  educativos", which the AEPD holds valid "solo para 'fines de avances en la educación
+  médica', no para fines de publicidad comercial".
+- **France, not Italy, holds the hardest line, and the row did not know it.** The ONCD's
+  own *Recommandations et explicitations* (version 19.06.2026, under décret n° 2020-1658 of
+  22/12/2020) state that professional secrecy "reste un principe à valeur absolue dont le
+  patient ne peut délier le praticien", and that a patient's face "doit être flouté même si
+  le patient souhaite donner une autorisation expresse de diffusion de son image". That is a
+  jurisdiction where consent is explicitly **not** sufficient, which is a stronger version of
+  the point the row was built on. Légifrance answers 403 to a plain fetch and to a browser
+  user agent alike, so French statute text has to come through the Ordre's own documents or
+  not at all: do not cite a LEGIARTI or JORFTEXT id that has not been fetched.
+- **Germany runs the other way, and the honest post says so.** § 11 Abs. 1 S. 3 Nr. 1 HWG
+  bans before/after only for the § 1 Abs. 1 Nr. 2 c "operative plastisch-chirurgische
+  Eingriffe ... ohne medizinische Notwendigkeit", and the BZÄK's own MBO commentary states
+  that since the 2012 HWG reform "Gleiches gilt für die sog. Vorher-Nachher-Darstellungen",
+  i.e. no longer forbidden. So the German post cannot be a translation of the Italian one:
+  what binds there is Art. 9 DSGVO, § 203 StGB and § 21 MBO, and § 7 Abs. 2 MBO expressly
+  lets the patient release the practitioner from confidentiality, the opposite of France.
+- **Poland is the mirror case: the ethics loosened, the statute did not.** The new KEL
+  (annex to uchwała nr 5 of 18 May 2024, in force 1 January 2025) dropped the blanket
+  advertising ban and art. 71 now permits "informacja o oferowanych usługach", while art. 14
+  of the ustawa o działalności leczniczej still says "Treść i forma tych informacji nie mogą
+  mieć cech reklamy". Any Polish post that cites only the KEL gets this backwards.
+
+One thing in the row was **not** written, deliberately: the Garante's 5.000 € research-ePoster
+case. The 20.000 € one is solid (provvedimento n. 769 of 12 December 2024, docweb 10095836,
+arts. 5 and 9 GDPR plus art. 2-septies comma 8 Codice privacy), but the ePoster case could not
+be reached at the Garante's own site this run, only in press coverage, so it was dropped rather
+than softened. The Italian post stands on the 769 provvedimento plus art. 1 comma 525 of legge
+145/2018, whose text is quoted verbatim in the FNOMCeO Commissione Albo Odontoiatri letter,
+because Normattiva and the Gazzetta Ufficiale both serve article text only through JavaScript.
+
+Two mechanics worth reusing: **`api.sejm.gov.pl/eli/acts/DU/<year>/<pos>/text.html` serves
+Polish consolidated statute text as fetchable HTML**, which is the cheapest primary source
+found so far for any locale; and **a product paragraph has to be checked against what other
+posts already claim**, because the first draft of these seven invented "versioned consent
+documents with a purpose field", which nothing in the repo supports. What the published posts
+do claim is consents in the patient record with author and date, a timeline showing when the
+patient was informed and when they signed, and images attached under the same permissions and
+access log as the rest of the record.
+
 ## Where the routine publishes and flags
 
 Nothing in this list stops a publish. The post goes to main like any
