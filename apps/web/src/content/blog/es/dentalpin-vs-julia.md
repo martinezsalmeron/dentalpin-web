@@ -2,6 +2,7 @@
 title: "Dentalpin frente a Software Dental Julia: qué cambia para tu clínica"
 description: "Comparativa entre Software Dental Julia y Dentalpin con las tarifas que Julia publica, sus condiciones de contratación y la fuente de cada dato."
 pubDate: 2026-09-06
+updatedDate: 2026-09-26
 tags: [comparativa, julia, software-dental]
 ---
 
@@ -146,7 +147,7 @@ Lo nuestro es la apuesta contraria: el código publicado, el servidor a nombre d
 
 ## Fuentes
 
-Todas consultadas el 6 de septiembre de 2026:
+Todas consultadas el 6 de septiembre de 2026, y revisadas de nuevo sin cambios el 26 de septiembre de 2026:
 
 - [Software Dental Julia · Programa de gestión dental](https://softwaredentaljulia.es/programa-de-gestion-dental/): "Sin instalación en tu ordenador, es online", "¡PRUEBA GRATIS 10 días y sin compromiso de permanencia!", "Sin pago inicial, y no como otros softwares", odontograma pediátrico, consentimientos y la nota "sólo se comercializa por ahora en España".
 - [Tarifas](https://softwaredentaljulia.es/tarifas/): Plan Basic 69 €, Plan Advance 78 €, importes anuales, licencias y accesos por plan, almacenamiento, usuario extra, descuentos por grupo y migración desde 150 €.
