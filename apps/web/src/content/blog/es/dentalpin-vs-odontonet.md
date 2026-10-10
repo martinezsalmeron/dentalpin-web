@@ -2,7 +2,7 @@
 title: "Dentalpin frente a Odontonet: dos formas de que los datos se queden en tu clínica"
 description: "Comparativa entre Odontonet, instalado en la clínica y con más de 25 años a la espalda, y Dentalpin, open source y autoalojable. Con fuentes y fechas."
 pubDate: 2026-08-10
-updatedDate: 2026-08-29
+updatedDate: 2026-10-10
 tags: [comparativa, odontonet, software-dental]
 ---
 
@@ -126,14 +126,15 @@ Lo que nosotros ponemos encima es otra cosa: el código publicado, el precio pub
 
 ## Fuentes
 
-Todas consultadas el 10 de agosto de 2026, y revisadas de nuevo sin cambios el 29 de agosto de 2026:
+Todas consultadas el 10 de agosto de 2026, revisadas de nuevo sin cambios el 29 de agosto de 2026, y revisadas otra vez sin cambios el 10 de octubre de 2026:
 
-- [Quiénes somos · Odontonet](https://www.odontonet.es/quienes-somos/): Aseting Informática S.L., fundada en 1989, más de 25 años en software dental, más de 3500 profesionales, sello PYME Innovadora.
+- [Quiénes somos · Odontonet](https://www.odontonet.es/quienes-somos/): Aseting Informática S.L., fundada en 1989, más de 25 años en software dental, más de 3500 profesionales, sello PYME Innovadora (vigente hasta el 22/06/2029 según la propia página).
 - [Preguntas frecuentes](https://www.odontonet.es/faq/): dónde viven los datos, requisitos, Windows y macOS por virtualización, copias de seguridad, cambio de programa, tres versiones, qué incluye el mantenimiento.
 - [Precios](https://www.odontonet.es/precios/): configuración base de 3 puestos y 1 especialidad, funcionalidades incluidas, ampliaciones. Sin cifras.
 - [Módulos](https://www.odontonet.es/modulos/): catálogo de módulos y packs.
 - [Odontología general](https://www.odontonet.es/odontologia-general/): odontograma 3D, presupuestos, consentimientos, receta electrónica.
-- [Inicio](https://www.odontonet.es/): compatibilidad con Verifactu e historial de versiones.
+- [Inicio](https://www.odontonet.es/): compatibilidad con Verifactu.
+- [Historial de versiones · Odontonet](https://www.odontonet.es/odontonet-version-66-1/): el archivo de versiones de la propia página confirma la 66.1 (11/02/2026) como la más reciente y lista versiones hasta la 52.2 dentro del mismo rango citado.
 - [Licencia de Dentalpin](https://github.com/martinezsalmeron/dentalpin/blob/main/LICENSE) y [código fuente](https://github.com/martinezsalmeron/dentalpin).
 
 ¿Ves algo mal o desactualizado en esta comparativa? [Dínoslo](https://github.com/martinezsalmeron/dentalpin/discussions) y lo corregimos. Vale también si eres de Aseting.

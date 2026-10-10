@@ -2,6 +2,7 @@
 title: "Dentalpin frente a Dentalink: la nube de Healthatom o tu propio servidor"
 description: "Comparativa entre Dentalink, software dental en la nube con 15.000 clínicas declaradas, y Dentalpin, open source y autoalojable. Con fuentes y fechas."
 pubDate: 2026-08-19
+updatedDate: 2026-10-10
 tags: [comparativa, dentalink, software-dental]
 ---
 
@@ -13,7 +14,7 @@ Nosotros hacemos Dentalpin, así que no somos neutrales. Exactos sí podemos ser
 
 ## En treinta segundos
 
-**Dentalink** es un producto rodado y grande. Su web declara más de 15.000 clientes en más de 20 países, la página española habla de 15 años perfeccionando el sistema, y hay un teléfono con prefijo +34 y soporte en horario local. Nada de eso lo tenemos nosotros.
+**Dentalink** es un producto rodado y grande. Su web declara más de 15.000 clientes en más de 20 países, la página española habla de 15 años perfeccionando el sistema, y publican un teléfono con prefijo +34, aunque solo está incluido desde el plan Pro (en Esencial el soporte es por chat y correo). Nada de eso lo tenemos nosotros.
 
 **Dentalpin** es open source y se instala donde tú decidas: sin licencia por sillón, por dentista ni por paciente, con el código publicado y la base de datos en una máquina que controlas.
 
@@ -27,9 +28,9 @@ La pregunta que decide es corta. Si mañana dejas de pagar, ¿quién sigue tenie
 
 Software de gestión dental 100% en la nube, descrito en su propia web como "una marca de Healthatom". Se usa desde el navegador, sin instalar nada, y su centro de ayuda recomienda Google Chrome y una conexión estable de al menos 2 Mbps.
 
-La información se aloja, según su propia página de planes, "en los servidores de Amazon Web Services". La página española añade certificación ISO 27001, cumplimiento del RGPD y facturación compatible con Verifactu, que describe como "Facturación electrónica inalterable y trazable".
+La información se aloja, según su propia página de planes, "en los servidores de Amazon Web Services". Su página de Verifactu explica que la norma obliga a que "las facturas no se puedan alterar ni eliminar sin dejar rastro". Su política de privacidad cita el cumplimiento del RGPD, y su política general de seguridad de la información dice comprometerse "no solo con los requerimientos de ISO 27001 y mejores prácticas de seguridad", sin declarar en ningún sitio que estén certificados contra esa norma.
 
-El catálogo es amplio y está agrupado en su web en seis bloques: captación de pacientes, experiencia de pacientes, ingresos, fidelización, control de la operación e IA. Dentro hay odontograma y periodontograma, historia clínica, agenda, consentimientos informados, firma electrónica, módulo de ortodoncia, estética facial, control de caja y gastos, gestión de laboratorios e inventario, cálculo de pago a odontólogos, reportes en Excel y KPI, y una línea de funciones con IA que incluye análisis de RX, resumen clínico y notas clínicas.
+El catálogo es amplio y está agrupado en su web en cinco bloques: atiende a más pacientes, experiencia de pacientes, gestión más simple, aumenta tus ingresos y fidelización a largo plazo; la inteligencia artificial tiene un apartado propio, "Novedades IA". Dentro hay odontograma y periodontograma, historia clínica, agenda, consentimientos informados, firma electrónica, módulo de ortodoncia, estética facial, control de caja y gastos, gestión de laboratorios e inventario, cálculo de pago a odontólogos, reportes en Excel, y en el apartado de IA, análisis de rayos X, resumen clínico y notas clínicas por voz.
 
 Se vende en tres planes, **Esencial**, **Pro** y **Titanium**, y ahí está el detalle que más cambia el cálculo:
 
@@ -75,10 +76,10 @@ Solo filas verificables. Donde no hay dato público, lo decimos.
 | Exportar tus datos | ✓ "En cualquier momento" | ✓ Volcado estándar de PostgreSQL |
 | API | ~ Lectura y escritura, con coste asociado | ✓ REST completa, OpenAPI, incluida |
 | Código auditable | ✗ No | ✓ Publicado en GitHub |
-| ISO 27001 | ✓ Declarada en su web | ✗ No |
+| ISO 27001 | ~ Compromiso con sus requisitos, sin certificación declarada | ✗ No |
 | Años en el mercado | ✓ 15 declarados | ✗ Desde 2026 |
 | Clínicas usándolo | ✓ Más de 15.000 declaradas | ✗ Muy pocas todavía |
-| Soporte en España | ✓ Teléfono +34 y horario local | ✗ Telegram y GitHub |
+| Soporte en España | ~ Teléfono +34 desde Pro; en Esencial, chat y correo | ✗ Telegram y GitHub |
 
 Dos filas piden explicación, porque son las que de verdad separan a los dos productos.
 
@@ -93,8 +94,8 @@ Para ser justos con el otro lado: también publican que puedes descargar tu info
 Y esto va en serio, no es un trámite:
 
 - **No quieres tener servidor ni pensar en él.** Dentalink es 100% en línea y su web lo vende así: "sin instalación de software adicional". Dentalpin se autoaloja, y alguien tiene que ocuparse de la máquina y de las copias.
-- **Quieres un teléfono en España al que llamar.** Publican un +34 y prometen "atención en tu idioma, en tu horario". Lo nuestro es un canal de Telegram y GitHub.
-- **Te pesa la certificación.** Declaran ISO 27001 en su web. Nosotros no la tenemos, y si tu aseguradora o tu grupo la exige en el pliego, la conversación se acaba ahí.
+- **Quieres un teléfono en España al que llamar.** Publican un +34, aunque el soporte telefónico solo está incluido desde el plan Pro (en Esencial es chat y correo). Lo nuestro es un canal de Telegram y GitHub.
+- **Te pesa la seguridad de la información.** Su política de seguridad declara un compromiso con los requisitos de ISO 27001, aunque sin afirmar que tengan el certificado. Nosotros no tenemos ni eso, y si tu aseguradora o tu grupo exige un certificado ISO 27001 en firme en el pliego, conviene pedírselo a ellos también.
 - **Quieres cobrar y financiar dentro del software.** Pagos presenciales y online, créditos en línea y cobro en cuotas son parte de su catálogo. Nosotros no somos pasarela de pago.
 - **Quince años y más de 15.000 clientes resuelven problemas** que un producto de 2026 todavía no sabe que existen. Es una ventaja real y no la vamos a disimular.
 
@@ -130,12 +131,17 @@ Dentalpin es la apuesta contraria: que el software de tu clínica no debería se
 
 ## Fuentes
 
-Todas consultadas el 19 de agosto de 2026:
+Consultadas el 19 de agosto de 2026, reconsultadas el 18 de septiembre de 2026 (ver nota en Planes) y revisadas otra vez el 10 de octubre de 2026, cuando se corrigieron tres cosas: el catálogo de funcionalidades pasó de seis bloques a cinco (la IA quedó como apartado propio), el soporte telefónico resultó estar incluido solo desde el plan Pro (no en Esencial), y la certificación ISO 27001 que la página española declaraba antes ya no aparece ahí — su política de seguridad solo dice comprometerse con los requisitos de esa norma, sin afirmar que estén certificados. El resto (15.000 clínicas, 20 países, 15 años, planes y su contenido, "Solicita tu cotización", impago a 15/30 días, API) se revisó sin cambios.
 
-- [Dentalink · portada](https://www.softwaredentalink.com/): "una marca de Healthatom", cifras de clientes, pacientes, citas y países.
-- [Dentalink España · sobre nosotros](https://www.softwaredentalink.com/es/sobre-nosotros): 15 años, más de 15.000 clínicas, Verifactu, RGPD, ISO 27001, AWS, teléfono +34 y horario local.
-- [Planes de Dentalink](https://www.softwaredentalink.com/b/planes): planes Esencial, Pro y Titanium, qué incluye cada uno, "Solicita tu cotización", periodicidad de pago, permanencia, alojamiento en AWS, descarga de información, baja e impago. **Reconsultada el 18 de septiembre de 2026**: el plan de entrada pasó a llamarse Esencial (antes Basic) y el plazo de impago cambió de 45 días a 15 para la deshabilitación más 30 para la eliminación de la cuenta. Las dos cifras son suyas, en la misma URL, con un mes de diferencia.
-- [Funcionalidades de Dentalink](https://www.softwaredentalink.com/funcionalidades): catálogo de módulos por bloques.
+- [Dentalink · portada](https://www.softwaredentalink.com/): "una marca de Healthatom", cifras de clientes (+15.000 clínicas), y países (+20).
+- [Dentalink España · sobre nosotros](https://www.softwaredentalink.com/es/sobre-nosotros): 15 años, teléfono +34. **Revisada el 10 de octubre de 2026**: esta página ya no menciona ISO 27001 ni RGPD; esas referencias se trasladaron a las páginas de seguridad y privacidad citadas más abajo.
+- [Planes de Dentalink](https://www.softwaredentalink.com/b/planes): planes Esencial, Pro y Titanium, qué incluye cada uno, "Solicita tu cotización", periodicidad de pago, permanencia, alojamiento en AWS, descarga de información, baja e impago, y la tabla de soporte por plan (chat y correo en los tres, llamada solo en Pro y Titanium). **Reconsultada el 18 de septiembre de 2026**: el plan de entrada pasó a llamarse Esencial (antes Basic) y el plazo de impago cambió de 45 días a 15 para la deshabilitación más 30 para la eliminación de la cuenta. **Reconsultada el 10 de octubre de 2026**: sin cambios en planes ni en la política de impago.
+- [Funcionalidades de Dentalink](https://www.softwaredentalink.com/funcionalidades): catálogo de módulos. **Revisada el 10 de octubre de 2026**: el catálogo se agrupa ahora en cinco bloques ("Atiende a más pacientes", "Experiencia de pacientes", "Gestión más simple", "Aumenta tus ingresos" y "Fideliza a largo plazo"), no en seis.
+- [Inteligencia artificial · Dentalink](https://www.softwaredentalink.com/inteligencia-artificial): consultada el 10 de octubre de 2026. Confirma los módulos de IA citados (análisis de rayos X, resumen clínico, notas clínicas por voz), con un apartado propio fuera del catálogo de funcionalidades.
+- [Soporte · Dentalink](https://www.softwaredentalink.com/soporte): consultada el 10 de octubre de 2026. Canales de soporte (chat, correo, teléfono por país) y confirmación, junto con la página de planes, de que la llamada no está incluida en Esencial.
+- [Política general de seguridad de la información · Dentalink](https://www.softwaredentalink.com/es/politica-general-de-seguridad-de-la-informacion): consultada el 10 de octubre de 2026. Compromiso con "los requerimientos de ISO 27001 y mejores prácticas de seguridad"; no afirma una certificación.
+- [Política de privacidad · Dentalink](https://www.softwaredentalink.com/es/politica-de-privacidad): consultada el 10 de octubre de 2026. Referencias al Reglamento General de Protección de Datos (RGPD).
+- [Verifactu · Dentalink](https://www.softwaredentalink.com/es/verifactu): consultada el 10 de octubre de 2026. Explica que la norma exige que "las facturas no se puedan alterar ni eliminar sin dejar rastro".
 - [Integración API · centro de ayuda de Dentalink](https://ayuda.softwaredentalink.com/es/articles/9493507-integracion-api): puertos de lectura y escritura, creación de clientes por la cuenta ADMIN, coste asociado.
 - [Documentación de la API de Dentalink](https://api.dentalink.healthatom.com/docs/): documentación pública de los endpoints.
 - [Healthatom](https://www.healthatom.com/): productos del grupo y cifras corporativas.

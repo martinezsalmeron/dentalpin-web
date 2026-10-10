@@ -2,6 +2,7 @@
 title: "Dentalpin vs Denticon: software built for DSOs, or software you own"
 description: "Denticon states 13,000+ practices, starts at $795 a month and runs on Windows only. Dentalpin is open source and self-hosted. A sourced comparison."
 pubDate: 2026-09-06
+updatedDate: 2026-10-10
 tags: [comparison, denticon, planet-dds, dental-software]
 ---
 
@@ -91,9 +92,9 @@ Verifiable rows only. Denticon's figures are its own, from its own pages.
 
 There is more green on their side of that table than on ours, and there should be. A twenty-three year old product serving thousands of offices has solved problems we have not met yet.
 
-One number is worth flagging because it appears twice, differently.
+One number is worth flagging because it appears several times, differently, and the gap has widened rather than closed.
 
-> **Planet DDS publishes two install-base figures on its own site.** The Denticon page says "Tried and tested by more than 13,000+ dental practices" and the home page says "more than 13,000 practices", while the Denticon overview page says "Trusted software partner of 10,000+ dental practices" (all consulted 6 September 2026). We have used the larger one in the table because it is the one on the product page.
+> **Planet DDS publishes at least three different install-base figures on its own site, and now a fourth phrasing.** The Denticon page says "Tried and tested by more than 13,000+ dental practices", the home page says "more than 13,000 practices" in one place and, elsewhere on the same page, "Join the tens of thousands of practices that trust Planet DDS", and the cloud-based dental software FAQ page says "Trusted software partner of 10,000+ dental practices" (consulted 6 September 2026 and re-checked 10 October 2026; the "tens of thousands" phrasing had not previously been noted, so the figures have diverged further rather than converged). We have used the figure stated on the Denticon product page itself in the table, since that is the number closest to the product being compared.
 
 ## Choose Denticon if
 
@@ -146,10 +147,10 @@ Dentalpin is the other bet: that the software holding clinical records should be
 
 ## Sources
 
-All Planet DDS pages consulted on 6 September 2026:
+All Planet DDS pages consulted on 6 September 2026, and re-checked with no changes on 10 October 2026, aside from one additional install-base phrasing found on the home page (noted below):
 
 - [Denticon](https://www.planetdds.com/denticon/): "the practice management system built to help DSOs scale", "the #1 cloud-based practice management system for growth", "Tried and tested by more than 13,000+ dental practices", and the feature list including AI Voice Perio, Revenue Cycle Management & Insurance, AutoEligibility, Analytics, Reporting & Data Share and Planet DDS Pay.
-- [Planet DDS home](https://www.planetdds.com/): "Dental software built to help DSOs improve efficiency and increase revenue", "more than 13,000 practices", and the DentalOS product line-up.
+- [Planet DDS home](https://www.planetdds.com/): "Dental software built to help DSOs improve efficiency and increase revenue", "more than 13,000 practices", "Join the tens of thousands of practices that trust Planet DDS" elsewhere on the same page, and the DentalOS product line-up.
 - [Cloud-based dental software](https://www.planetdds.com/cloud-based-dental-software/): the system requirements answer ("only operates on Windows operating systems", "not currently compatible with Mac operating systems"), "Denticon practice management software starts at $795 per month", the implementation answer ("an average of 60 days for solo practices and 8 weeks per location for DSOs"), "API integrations with more than 50 third-party solutions", and "Trusted software partner of 10,000+ dental practices".
 - [About](https://www.planetdds.com/about/): 2003, the Apteryx acquisition in 2020, the Cloud 9 acquisition in 2023, and "among the first cloud-based dental practice management systems".
 - [DentalOS with AI](https://www.planetdds.com/dentalos-with-ai/): "DentalOS is SOC 2, Type 2 and HIPAA compliant and enterprise-grade secure", and the Confirmation, Recall and rescheduling agents listed as available.
@@ -160,6 +161,6 @@ All Planet DDS pages consulted on 6 September 2026:
 - [Denticon pricing article](https://www.planetdds.com/blog/denticon-pricing-for-solo-and-private-practices-of-the-why-denticon-series/): carries no figure today and directs readers to a custom quote, which is why the $795 above is cited to the FAQ page instead.
 - [Dentalpin's licence](https://github.com/martinezsalmeron/dentalpin/blob/main/LICENSE) and [source](https://github.com/martinezsalmeron/dentalpin).
 
-Planet DDS's support portal (`support.planetdds.com`) returned HTTP 403 to every request this run, so nothing here is sourced from it. Contract length, uptime, support hours and the hosting location of patient data appear on none of the pages consulted, and are stated as absent from those pages rather than absent from the product.
+Planet DDS's support portal (`support.planetdds.com`) returned HTTP 403 to every request on both 6 September 2026 and 10 October 2026, so nothing here is sourced from it. Contract length, uptime, support hours and the hosting location of patient data appear on none of the pages consulted, and are stated as absent from those pages rather than absent from the product.
 
 Something wrong or out of date in this comparison? [Tell us](https://github.com/martinezsalmeron/dentalpin/discussions) and we will fix it. That goes for Planet DDS too.
