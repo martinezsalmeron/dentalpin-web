@@ -67,6 +67,8 @@ const xDefault = givenAlternates
   : `${site}${translatePath(pathname, DEFAULT_LOCALE)}`;
 const ogFull = ogImage.startsWith('http') ? ogImage : `${site}${ogImage}`;
 
+const beaconToken = import.meta.env.PUBLIC_CF_BEACON_TOKEN;
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
@@ -125,6 +127,24 @@ const jsonLd = {
     <meta name="twitter:image" content={ogFull} />
 
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+    {
+      /*
+        Cloudflare Web Analytics. Cookieless, so no consent banner and no
+        contradiction with the privacy policy, which states this site sets
+        strictly necessary cookies only. Anything that sets an analytics
+        cookie here needs prior opt-in under LSSI art. 22.2 and a rewrite
+        of that policy first.
+        Unset token = no beacon, which is what local and preview builds get.
+      */
+    }
+    {beaconToken && (
+      <script
+        defer
+        src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon={JSON.stringify({ token: beaconToken })}
+      />
+    )}
   </head>
   <body class="bg-[var(--color-canvas)] text-[var(--color-text)] antialiased">
     <a
