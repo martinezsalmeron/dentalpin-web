@@ -70,6 +70,45 @@ In practice:
   guts the post, rebuild the post around what survives verification and
   publish that; tell the user in the notification what was cut and why.
 
+### Which official law sources actually answer
+
+Two of the obvious ones do not, and a run that does not know this burns
+most of its budget finding out. Checked again on 12 October 2026:
+
+- **Légifrance returns 403 to everything**, every URL shape, every user
+  agent, from both WebFetch and curl. It is the origin blocking
+  datacentre traffic, not the egress proxy. **For France, source the
+  profession's duties from the ONCD** (`ordre-chirurgiens-dentistes.fr`
+  publishes dentist-specific PDFs that quote the code article by number
+  and reproduce the déontologie text) **and the practice guidance from
+  HAS**. Both are official bodies, neither is a blog, and the ONCD
+  document is better aimed at this reader than the code text anyway.
+- **Normattiva serves only its navigation tree.** Article bodies load
+  by script, and `caricaArticolo`, `caricaAttoIntero`, the `!vig=`
+  permalinks and the ELI paths all come back without the text. **For
+  Italy, use the FNOMCeO Codice di deontologia medica** (it governs
+  "l'esercizio professionale del medico chirurgo e dell'odontoiatra", so
+  it binds dentists) **and official regional linee guida**, which quote
+  the code articles verbatim in their footnotes. Brocardi, Filodiritto
+  and Studiocataldi carry the article texts and are barred: they are
+  legal publishers, not official sources.
+
+These do answer, and are worth going to first: `boe.es` (consolidated
+texts, fetch with `&tn=0` and grep locally, the pages are ~1 MB),
+`gesetze-im-internet.de` (curl, not WebFetch, which gets 503),
+`legislation.gov.uk`, `api.sejm.gov.pl/eli/acts/<publisher>/<year>/<pos>/text.html`
+for Poland with `/eli/acts/search?title=` to find the current tekst
+jednolity, and `pgdlisboa.pt` for consolidated Portuguese law, published
+by the Procuradoria-Geral Distrital de Lisboa. `diariodarepublica.pt` is
+a JavaScript shell that returns 2 KB to every client, so Portugal goes
+through pgdlisboa.
+
+When the text of a provision cannot be reached from an official source,
+**the provision is dropped from the post and the post says so**, with
+the reader sent to the body that can answer. That is what the Italian
+maltreatment post does about the obbligo di referto. It is not softening
+a claim, it is declining to make one.
+
 ## Which languages a post gets written in
 
 **The two queues localise differently, and getting this backwards is the
