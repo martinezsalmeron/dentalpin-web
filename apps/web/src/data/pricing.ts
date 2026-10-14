@@ -7,83 +7,49 @@ import type { Locale } from '~/i18n';
  * no Intl, no rounding rules. Amounts carry no "per month" suffix either —
  * that word is copy, and copy lives in the dictionaries.
  *
- * `price: null` is a market whose tariff is not published yet. It is a state,
- * not a hole: the page renders "let's talk" wherever a figure would go, and
- * opening the market later is filling in one object.
+ * The software is free everywhere. What is left is infrastructure, quoted at
+ * Hetzner's tariff as a reference: the clinic or its integrator may pick any
+ * other provider.
  */
-export type Price = {
-  monthly: string;
-  /** Paying yearly costs ten months instead of twelve. */
-  annual: string;
-  /** What those twelve months would have been, so the saving is visible. */
-  annualInstead: string;
-  setup: string;
-  migration: string;
-  /** Service + server + backups. Buyers add this up themselves, and badly. */
-  total: string;
-};
-
 export type Market = {
-  price: Price | null;
-  /** Charged by Hetzner straight to the clinic. True in every market. */
+  /** The software itself, in the market's currency. */
+  free: string;
   server: string;
   backups: string;
-  /** A closed migration price exists only where dental-bridge covers the source. */
-  migration: 'flat' | 'quote';
+  /** Server + backups. Buyers add this up themselves, and badly. */
+  total: string;
   /** Invoicing wired to the tax authority. Where it is not, the page says so. */
   fiscal: 'verifactu' | null;
   datacenter: 'nuremberg' | 'ashburn';
 };
 
 /** Hetzner's European tariff, same for every market served from Nuremberg. */
-const EU_INFRA = { server: '12-15 €', backups: '4 €' } as const;
-
-/** A market we serve but have not priced publicly yet. */
-const UNPRICED: Market = {
-  price: null,
-  ...EU_INFRA,
-  migration: 'quote',
+const EU: Market = {
+  free: '0 €',
+  server: '12-15 €',
+  backups: '4 €',
+  total: '16-19 €',
   fiscal: null,
   datacenter: 'nuremberg',
 };
 
 export const MARKET: Record<Locale, Market> = {
-  es: {
-    price: {
-      monthly: '89 €',
-      annual: '890 €',
-      annualInstead: '1.068 €',
-      setup: '490 €',
-      migration: '490 €',
-      total: '105 €',
-    },
-    ...EU_INFRA,
-    migration: 'flat',
-    fiscal: 'verifactu',
-    datacenter: 'nuremberg',
-  },
+  es: { ...EU, fiscal: 'verifactu' },
   'es-mx': {
-    price: {
-      monthly: 'MXN 899',
-      annual: 'MXN 8.990',
-      annualInstead: 'MXN 10.788',
-      setup: 'MXN 4.900',
-      migration: '',
-      total: 'MXN 1.300',
-    },
+    free: 'MXN 0',
     // Hetzner bills its US datacenter in dollars; these are that tariff carried
     // to pesos so the total adds up in one currency. Approximate on purpose.
     server: 'MXN 300-350',
     backups: 'MXN 70',
-    migration: 'quote',
+    total: 'MXN 370-420',
     fiscal: null,
     datacenter: 'ashburn',
   },
-  en: UNPRICED,
-  fr: UNPRICED,
-  pt: UNPRICED,
-  de: UNPRICED,
-  it: UNPRICED,
-  pl: UNPRICED,
-  'pt-br': UNPRICED,
+  en: EU,
+  fr: EU,
+  pt: EU,
+  de: EU,
+  it: EU,
+  pl: EU,
+  'pt-br': EU,
 };

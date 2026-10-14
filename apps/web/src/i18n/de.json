@@ -655,104 +655,61 @@
   },
   "pricing": {
     "meta": {
-      "title": "Preise und Hosting · Dentalpin",
-      "description": "Ihre Daten gehören Ihnen, der Code gehört Ihnen. Der Server gehört in beiden Fällen Ihrer Praxis: Sie betreiben ihn kostenlos selbst, oder wir installieren ihn und kümmern uns darum. Die vollständige Kostenaufstellung, ohne Kleingedrucktes."
+      "title": "Preise · Dentalpin",
+      "description": "Dentalpin ist kostenlos und vollständig, ohne Gebühren und ohne Lizenzen. Sie installieren es selbst oder ein IT-Dienstleister Ihres Vertrauens installiert und wartet es. Integratoren: Werden Sie Partner."
     },
-    "eyebrow": "PREISE UND HOSTING",
+    "eyebrow": "PREISE",
     "title": "Ihre Daten gehören Ihnen. Der Code gehört Ihnen.",
-    "subtitle": "Sie zahlen uns dafür, dass wir uns um Ihre Installation kümmern, nicht für die Erlaubnis, Ihre eigene Software zu benutzen. In beiden Fällen gehört der Server Ihrer Praxis.",
+    "subtitle": "Dentalpin ist kostenlos und vollständig. Sie installieren es auf Ihrem eigenen Server oder beauftragen einen IT-Dienstleister Ihres Vertrauens, der es installiert und betreut.",
     "proof": [
       "Ihre eigene Datenbank, auf Ihrem eigenen Server",
-      "Server in Deutschland, innerhalb der Europäischen Union",
+      "Keine Lizenzen, keine Gebühren, keine kostenpflichtigen Module",
       "Keine Kosten pro Nutzer, pro Behandler oder pro Stuhl"
     ],
-    "ctaPrimary": "Erzählen Sie uns von Ihrer Praxis",
-    "ctaSecondary": "Den Code ansehen",
+    "ctaPrimary": "Code ansehen",
+    "ctaSecondary": "Jemanden für die Installation finden",
     "anchor": {
-      "plan": "Betreut",
-      "per": "im Monat",
-      "note": "Der Server gehört Ihnen und wird direkt bei Hetzner gebucht, für rund 16 € im Monat. Erzählen Sie uns von Ihrer Praxis, dann nennen wir Ihnen die Servicegebühr für Ihren Markt.",
-      "quoted": "Sprechen wir",
-      "breakdown": "Vollständige Aufstellung ansehen"
-    },
-    "options": {
-      "eyebrow": "DIE ZWEI OPTIONEN",
-      "title": "Dieselbe Software. Es ändert sich nur, wer sich darum kümmert.",
-      "intro": "Es gibt keine beschnittene Gratisversion und eine gute Bezahlversion. Beide geben Ihnen das ganze Produkt, und in beiden gehört der Server Ihnen.",
-      "managed": {
-        "name": "Betreut",
-        "badge": "Empfohlen",
-        "tagline": "Wir installieren, aktualisieren und überwachen. Auf Ihrem Server und in Ihrem Konto.",
-        "features": [
-          "Installation und Inbetriebnahme",
-          "Updates eingespielt und geprüft",
-          "Backups eingerichtet, Wiederherstellung getestet",
-          "Überwachung: Wir merken es vor Ihnen, wenn etwas ausfällt",
-          "Support mit vertraglich zugesagten Reaktionszeiten"
-        ],
-        "cta": "Erzählen Sie uns von Ihrer Praxis"
-      },
-      "selfhost": {
-        "name": "Selbst gehostet",
-        "badge": "Kostenlos",
-        "price": "Kostenlos",
-        "tagline": "Sie betreiben es selbst, auf Ihrem Server oder dem Ihres IT-Dienstleisters. Ohne Gebühr und ohne jemanden um Erlaubnis zu fragen.",
-        "features": [
-          "Das ganze Produkt, keine beschnittenen Module",
-          "Öffentliche Docker-Images, ohne Konto und ohne Zugangsdaten",
-          "Installationsdokumentation Schritt für Schritt",
-          "Hilfe in GitHub Discussions",
-          "Heute BSL 1.1, nach vier Jahren Apache 2.0"
-        ],
-        "cta": "Repository ansehen",
-        "ctaAlt": "Demo ausprobieren"
-      },
-      "table": {
-        "priceRow": "Preis",
-        "rows": [
-          {
-            "label": "Wo es läuft",
-            "managed": "Ein Server auf Ihren Namen, in Ihrem Hetzner-Konto",
-            "selfhost": "Ihr Server oder der Ihres IT-Dienstleisters"
-          },
-          {
-            "label": "Wer installiert",
-            "managed": "Wir",
-            "selfhost": "Sie"
-          },
-          {
-            "label": "Wer aktualisiert und überwacht",
-            "managed": "Wir",
-            "selfhost": "Sie"
-          },
-          {
-            "label": "Backups",
-            "managed": "In Ihrem Konto, von uns eingerichtet, Wiederherstellung getestet",
-            "selfhost": "Ihre"
-          },
-          {
-            "label": "Wer das Hosting bucht",
-            "managed": "Sie, direkt bei Hetzner",
-            "selfhost": "Sie"
-          },
-          {
-            "label": "Für wen",
-            "managed": "Sie wollen volle Kontrolle ohne das Tagesgeschäft",
-            "selfhost": "Sie haben einen IT-Dienstleister oder kommen selbst zurecht"
-          }
-        ]
-      }
-    },
-    "hetzner": {
-      "title": "Den Server buchen Sie selbst, auf Ihren Namen.",
-      "body": "Das ist der Teil, der überrascht, deshalb sagen wir ihn früh: Für den Tarif Betreut eröffnen Sie ein eigenes Hetzner-Konto mit Ihrer Karte. Das ist keine Bürokratie von uns, sondern genau das, was den Server wirklich zu Ihrem macht.",
-      "points": [
-        "Der Hostingvertrag ist Ihrer. Wir sind für nichts Zwischenhändler.",
-        "Ihre Daten laufen über keine Infrastruktur von uns.",
-        "Sie können uns den Zugang jederzeit entziehen, aus Ihrer eigenen Konsole.",
-        "Wenn Sie eines Tages ohne uns weitermachen, gibt es nichts zu migrieren: Es liegt bereits bei Ihnen."
+      "plan": "Dentalpin",
+      "per": "dauerhaft",
+      "features": [
+        "Das ganze Produkt, keine beschnittenen Module",
+        "Öffentliche Docker-Images, ohne Konto und ohne Zugangsdaten",
+        "Installationsdokumentation Schritt für Schritt",
+        "Hilfe in GitHub Discussions",
+        "Heute BSL 1.1, nach vier Jahren Apache 2.0"
       ],
-      "note": "Das dauert etwa fünfzehn Minuten, und wir machen es gemeinsam im Termin zur Inbetriebnahme."
+      "note": "Sie zahlen nur den Server (etwa {total} im Monat) und, wenn Sie nicht selbst installieren, den Dienstleister, der ihn wartet.",
+      "demo": "Demo testen",
+      "breakdown": "Aufstellung ansehen"
+    },
+    "partners": {
+      "eyebrow": "PARTNER",
+      "title": "Sie wollen es nicht selbst installieren? Dafür gibt es Integratoren.",
+      "intro": "Jeder IT-Dienstleister, der einen Server betreiben kann, kann Dentalpin installieren und betreuen. Die Praxis ist die Technik los, und der Integrator hat eine Leistung, die er abrechnen kann.",
+      "clinics": {
+        "label": "Wenn Sie eine Praxis führen",
+        "title": "Suchen Sie sich einen Integrator Ihres Vertrauens",
+        "body": "Am besten einen IT-Dienstleister aus der Nähe, den Sie schon kennen oder der Ihnen empfohlen wurde. Er installiert Dentalpin auf einem Server, richtet die Sicherungen ein und hält alles aktuell. Bitten Sie ihn vorab darum:",
+        "points": [
+          "den Server auf Ihre Praxis laufen zu lassen, nicht auf ihn",
+          "Sicherungen einzurichten und die Wiederherstellung zu testen",
+          "Updates einzuspielen und Sie vorher zu informieren",
+          "mit Ihnen einen Auftragsverarbeitungsvertrag zu schließen"
+        ],
+        "cta": "Sie kennen keinen? Schreiben Sie uns"
+      },
+      "integrators": {
+        "label": "Wenn Sie Integrator sind",
+        "title": "Werden Sie Dentalpin-Partner",
+        "body": "Wenn Sie Systeme für Praxen oder kleine Unternehmen installieren und warten, ist Dentalpin eine weitere Leistung in Ihrem Angebot. Die Software kostet Ihre Kunden nichts, abgerechnet wird Ihre Arbeit.",
+        "points": [
+          "Keine Lizenzen zum Weiterverkaufen, keine Provision an uns",
+          "Wir vermitteln Ihnen Praxen aus Ihrer Region, die einen Installateur suchen",
+          "Sie sprechen direkt mit dem Team, das den Code schreibt",
+          "Öffentliche Docker-Images und Deployment-Dokumentation"
+        ],
+        "cta": "Ich möchte Partner werden"
+      }
     },
     "isolation": {
       "eyebrow": "IHRE PRAXIS, IHR SERVER",
@@ -782,24 +739,24 @@
           "body": "Es ist eine vollständige, standardisierte PostgreSQL-Kopie. Sie führen sie selbst aus und spielen sie ein, wo Sie wollen."
         },
         {
-          "title": "Die Software ist in beiden Optionen dieselbe",
-          "body": "Es ändert sich, wer sich kümmert, nicht was sie kann. Sie können allein anfangen und später um Hilfe bitten, ohne etwas zu migrieren."
+          "title": "Dieselbe Software, egal wer sie installiert",
+          "body": "Sie können selbst anfangen und die Installation später einem Integrator übergeben oder umgekehrt, ohne etwas zu migrieren."
         }
       ]
     },
     "data": {
       "eyebrow": "WO IHRE DATEN LIEGEN",
-      "title": "Auf einem Server von Ihnen, in {datacenter}.",
+      "title": "Auf Ihrem eigenen Server, wo Sie es entscheiden.",
       "datacenter": {
         "nuremberg": "Nürnberg, Deutschland",
         "ashburn": "Ashburn, USA"
       },
-      "bodyEu": "Gebiet der Europäischen Union, ohne internationale Datentransfers. Anbieter ist Hetzner, und den Vertrag unterschreiben Sie, weil Sie den Server buchen.",
-      "bodyOutsideEu": "Anbieter ist Hetzner, und den Vertrag unterschreiben Sie, weil Sie den Server buchen. Dieses Rechenzentrum steht in den USA, nicht in der Europäischen Union, und das sagen wir lieber, bevor Sie fragen.",
+      "bodyEu": "Wir empfehlen Hetzner in {datacenter}: Gebiet der Europäischen Union, keine internationalen Datenübermittlungen. Den Anbieter wählen aber Sie oder Ihr Integrator, und der Vertrag mit ihm ist Ihrer.",
+      "bodyOutsideEu": "Als Referenz nehmen wir Hetzner in {datacenter}, also in den Vereinigten Staaten und nicht in der Europäischen Union. Den Anbieter wählen Sie oder Ihr Integrator, und der Vertrag mit ihm ist Ihrer.",
       "points": [
-        "Server, die Ihrer Praxis allein gehören, verschlüsselt bei Übertragung und Speicherung",
-        "Auftragsverarbeitungsvertrag im Tarif Betreut",
-        "Minimaler Zugang, protokolliert und jederzeit von Ihnen widerrufbar"
+        "Eine eigene Datenbank für Ihre Praxis",
+        "Sicherungen sind Standard-PostgreSQL-Dateien",
+        "Wir haben keinen Zugriff auf Ihren Server"
       ],
       "ai": {
         "title": "Der KI-Copilot ist ab Werk ausgeschaltet.",
@@ -813,68 +770,40 @@
     },
     "cost": {
       "eyebrow": "WAS ES GENAU KOSTET",
-      "title": "Die ganze Rechnung, auch der Teil, den ein anderer kassiert.",
-      "subtitle": "Die Branche verkauft Lizenzen pro Arbeitsplatz und verweist auf „Kontaktieren Sie den Vertrieb“. Wir zeigen Ihnen lieber die Summe, bevor Sie sie selbst bilden.",
+      "title": "Was Sie zahlen, und an wen.",
+      "subtitle": "Die Software kostet nichts. Geld kosten der Server, auf dem sie läuft, und, wenn Sie nicht selbst installieren, die Arbeit dessen, der sie betreut.",
       "head": {
         "concept": "Posten",
         "who": "Wer kassiert",
         "amount": "Betrag"
       },
       "rows": {
+        "software": "Dentalpin, vollständig",
         "server": "Der Server Ihrer Praxis",
-        "backups": "Externe Backups",
-        "service": "Wartung, Updates, Überwachung und Support",
+        "backups": "Externe Sicherungen",
+        "integrator": "Installation und Wartung (optional)",
         "ai": "KI-Copilot (optional)"
       },
       "who": {
-        "hetzner": "Hetzner, direkt an Sie",
-        "us": "Dentalpin",
-        "ai": "Ihr KI-Anbieter, nach Verbrauch"
+        "us": "Niemand",
+        "provider": "Ihr Hosting-Anbieter",
+        "integrator": "Ihr Integrator",
+        "ai": "Ihr KI-Anbieter, nach Nutzung"
       },
-      "aiAmount": "Nur wenn Sie ihn einschalten",
-      "total": "Ungefähre Summe",
+      "integratorAmount": "Nach Vereinbarung",
+      "aiAmount": "Nur wenn Sie ihn aktivieren",
+      "total": "Server und Sicherungen, ca.",
       "perMonth": "im Monat",
-      "quoted": "Sprechen wir",
-      "note": "Infrastruktur kostet, was sie kostet, und Sie zahlen sie direkt an den Anbieter. Uns zahlen Sie dafür, dass wir uns darum kümmern: dass um acht Uhr morgens jemand antwortet, dass Backups tatsächlich schon einmal zurückgespielt wurden und dass ein Update Ihnen nicht den Terminkalender lahmlegt.",
-      "annual": "Bei jährlicher Zahlung zahlen Sie zehn Monate statt zwölf: {annual} statt {instead}."
-    },
-    "setup": {
-      "title": "Inbetriebnahme",
-      "oneOff": "Einmalzahlung",
-      "body": "Begleitete Server-Anmeldung, Installation, Domain, Konfiguration, Leistungskatalog und zwei Stunden Schulung mit Ihrem Team.",
-      "migrationTitle": "Migration Ihrer Daten",
-      "migrationFlat": "Von Gesden: {price} zum Festpreis, oder kostenlos bei zwölf Monaten Laufzeit. Von anderen Systemen: Angebot nach einem Testlauf.",
-      "migrationQuote": "Angebot nach einem Testlauf mit einer Kopie Ihrer Daten. Wir sagen Ihnen, was übernommen werden kann und was nicht, bevor Sie irgendetwas zahlen."
-    },
-    "flat": {
-      "eyebrow": "PAUSCHALPREIS",
-      "title": "Derselbe Preis mit einem Stuhl wie mit zehn.",
-      "body": "Keine Kosten pro Nutzer und keine pro Behandler. Stellen Sie ein, wen Sie brauchen, und eröffnen Sie so viele Behandlungszimmer, wie Sie wollen: Ihre Gebühr bleibt gleich.",
-      "why": "Und es lohnt sich zu sagen, warum das ehrlich ist: Unsere Kosten wachsen mit Ihren Stühlen ebenfalls nicht.",
-      "multisite": "Eine einzige Installation kann mehrere Praxen beherbergen.",
-      "multisiteCta": "Mehrere Standorte? Sprechen wir."
-    },
-    "included": {
-      "eyebrow": "WAS DIE GEBÜHR ABDECKT",
-      "title": "Was wir jeden Monat für Ihre Installation tun.",
-      "items": [
-        "Installation und Inbetriebnahme.",
-        "Updates eingespielt und geprüft, nicht nur veröffentlicht.",
-        "Backups eingerichtet und Wiederherstellung getestet.",
-        "Überwachung: Wir merken es vor Ihnen, wenn etwas ausfällt.",
-        "Support mit vertraglich zugesagten Reaktionszeiten."
-      ],
-      "verifactu": "Nachführung von Verifactu, wenn die spanische Steuerbehörde die Spezifikation ändert."
+      "note": "Die Serverbeträge sind Richtwerte auf Basis der Hetzner-Preise. Sie können einen anderen Anbieter oder einen vorhandenen Server nutzen."
     },
     "leave": {
       "eyebrow": "UND WENN ICH GEHEN WILL",
       "title": "Sie gehen, wann Sie wollen, und nehmen alles mit.",
       "items": [
-        "Sie nehmen eine vollständige, standardisierte Kopie Ihrer Datenbank mit.",
-        "Die Software ist Open Source: Nutzen Sie sie weiter, allein oder mit einem anderen Dienstleister.",
-        "Im Tarif Betreut gibt es nicht einmal etwas zu migrieren: Der Server gehört bereits Ihnen.",
-        "Wir ziehen unseren Zugang zurück und bestätigen das schriftlich.",
-        "Wenn Sie aufhören zu zahlen, läuft Ihre Installation weiter."
+        "Sie nehmen eine vollständige Standardkopie Ihrer Datenbank mit.",
+        "Die Software ist Open Source: Sie können sie selbst oder mit einem anderen Integrator weiter nutzen.",
+        "Es gibt nichts zu migrieren: Der Server gehört schon Ihnen.",
+        "Keine Lizenz zu kündigen und keine Mindestlaufzeit."
       ]
     },
     "fiscal": {
@@ -888,32 +817,28 @@
       "title": "Häufige Fragen",
       "items": [
         {
-          "q": "Warum muss ich ein Hetzner-Konto eröffnen? Können Sie es nicht selbst hosten?",
-          "a": "Genau das macht den Server und die Daten zu Ihren. Wäre der Hostingvertrag unserer, lägen Ihre Daten auf unserer Infrastruktur und Sie wären auf uns angewiesen, um sie herauszubekommen. So nicht: Das Konto ist Ihres, der Server ist Ihrer, und Sie können ohne jede Migration auf uns verzichten. Die Anmeldung dauert etwa fünfzehn Minuten, und wir machen sie gemeinsam im Termin zur Inbetriebnahme."
-        },
-        {
           "q": "Und wenn Dentalpin schließt?",
           "a": "Der Code ist Open Source und die Docker-Images sind öffentlich: Sie laden ohne Konto und ohne Zugangsdaten. Es gibt keine Lizenz zu aktivieren, keinen Anruf nach Hause und keinen Fernschalter. Ihre Installation läuft unbegrenzt weiter, und jeder IT-Dienstleister kann sie warten."
         },
         {
-          "q": "Haben Sie Zugriff auf die Patientenakten?",
-          "a": "Bei Selbst gehostet haben wir überhaupt keinen Zugriff. Im Tarif Betreut haben wir technischen Zugriff auf den Server, um ihn warten zu können, mit unterschriebenem Auftragsverarbeitungsvertrag, mit Protokoll über das, was getan wird, und von Ihnen jederzeit über Ihre Hetzner-Konsole widerrufbar. Das System am Laufen zu halten erfordert kein Lesen von Patientenakten."
+          "q": "Haben Sie Zugriff auf die Akten meiner Patienten?",
+          "a": "Nein. Die Installation gehört Ihnen und wir haben keinerlei Zugriff. Wenn ein Integrator sie wartet, hat er den technischen Zugriff, deshalb sollten Sie mit ihm einen Auftragsverarbeitungsvertrag schließen."
         },
         {
           "q": "Wer haftet bei einer Datenpanne?",
-          "a": "Ihre Praxis ist Verantwortliche für die Daten ihrer Patienten, wir sind im Tarif Betreut Auftragsverarbeiter. Der Vertrag regelt das im Einzelnen. Unser Teil sind konkrete Maßnahmen: Server in der Europäischen Union, Verschlüsselung, geprüfte Backups, minimaler und protokollierter Zugang und unverzügliche Benachrichtigung, wenn etwas passiert."
+          "a": "Ihre Praxis, als Verantwortliche für die Daten ihrer Patienten. Wartet ein Integrator den Server, ist er Auftragsverarbeiter, und Ihr Vertrag mit ihm sollte das regeln. Der Beitrag von Dentalpin: eine Datenbank nur für Sie und Standardsicherungen, die Sie überall wiederherstellen können."
         },
         {
-          "q": "Brauche ich einen IT-Dienstleister?",
-          "a": "Im Tarif Betreut nicht, dafür ist die Gebühr da. Bei Selbst gehostet brauchen Sie jemanden, der ein docker compose hochfahren und einen Server aktuell halten kann, ob das Ihr Dienstleister ist oder Sie selbst."
+          "q": "Brauche ich einen IT-Fachmann?",
+          "a": "Sie brauchen jemanden, der ein docker compose starten und einen Server aktuell halten kann. Das können Sie selbst sein oder ein IT-Dienstleister Ihres Vertrauens, der installiert und wartet. Wenn Sie keinen kennen, schreiben Sie uns."
         },
         {
-          "q": "Kann ich allein anfangen und später um Hilfe bitten?",
-          "a": "Ja. Es ist dieselbe Software, der Wechsel von Selbst gehostet zu Betreut besteht darin, uns Zugang zu geben, nicht darin, etwas zu migrieren."
+          "q": "Was kostet ein Integrator?",
+          "a": "Was Sie miteinander vereinbaren. Wir berechnen nichts und nehmen keine Provision. Lassen Sie sich Installation, monatliche Wartungspauschale und den Umgang mit Sicherungen aufschlüsseln."
         },
         {
-          "q": "Was passiert, wenn ich einen Monat nicht zahle?",
-          "a": "Wir schreiben Ihnen, wie jeder andere auch. Klärt sich das nicht, ziehen wir unseren Zugang zurück und warten das System nicht mehr. Ihre Installation läuft weiter und Ihre Daten bleiben, wo sie waren: auf Ihrem Server."
+          "q": "Ich bin IT-Dienstleister. Darf ich Dentalpin bei meinen Kunden installieren und abrechnen?",
+          "a": "Ja. Es auf dem Server jeder Praxis zu installieren und den Service abzurechnen, ist erlaubt. Die Lizenz verbietet nur, Dentalpin als konkurrierendes Dental-SaaS anzubieten. Schreiben Sie uns, dann erklären wir Ihnen, wie wir mit Partnern arbeiten."
         },
         {
           "q": "Sieht die KI die Daten meiner Patienten?",
@@ -926,10 +851,10 @@
       ]
     },
     "cta": {
-      "title": "Erzählen Sie uns, wie Ihre Praxis aussieht.",
-      "body": "Wir sagen Ihnen, ob Dentalpin passt, und wenn es passt, richten wir es mit Ihnen ein. Es liest ein Mensch, kein Formular.",
+      "title": "Sie suchen jemanden für die Installation, oder Sie wollen für andere installieren?",
+      "body": "Schreiben Sie uns in beiden Fällen. Es liest ein Mensch, kein Formular.",
       "primary": "Mit uns sprechen",
-      "secondary": "Demo ausprobieren"
+      "secondary": "Demo testen"
     }
   },
   "featuresIndex": {
@@ -1602,7 +1527,7 @@
       "submit": "Senden"
     },
     "reasons": {
-      "managed": "Betreutes Hosting",
+      "partner": "Partner und Integratoren",
       "demo": "Eine Demo mit meinen Daten sehen",
       "migration": "Von einer anderen Software wechseln",
       "install": "Hilfe bei der Installation",

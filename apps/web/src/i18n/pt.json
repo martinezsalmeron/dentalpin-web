@@ -655,104 +655,61 @@
   },
   "pricing": {
     "meta": {
-      "title": "Preços e alojamento · Dentalpin",
-      "description": "Os seus dados são seus e o código é seu. O servidor é da sua clínica nas duas opções: instala-o você gratuitamente, ou instalamo-lo e cuidamos dele nós. O detalhe completo dos custos, sem letras pequenas."
+      "title": "Preços · Dentalpin",
+      "description": "O Dentalpin é gratuito e completo, sem mensalidades nem licenças. Instala-o você ou uma empresa de informática de confiança instala-o e mantém-no. Se é integrador, torne-se parceiro."
     },
-    "eyebrow": "PREÇOS E ALOJAMENTO",
+    "eyebrow": "PREÇOS",
     "title": "Os seus dados são seus. O código é seu.",
-    "subtitle": "Paga-nos para cuidarmos da sua instalação, não para ter permissão de usar o seu software. Nas duas opções, o servidor é da sua clínica.",
+    "subtitle": "O Dentalpin é gratuito e completo. Instala-o no seu servidor, ou pede a uma empresa de informática de confiança que o instale e trate dele por si.",
     "proof": [
       "A sua própria base de dados, no seu próprio servidor",
-      "Servidores na Alemanha, dentro da União Europeia",
+      "Sem licenças, sem mensalidades e sem módulos pagos",
       "Sem custo por utilizador, por profissional nem por gabinete"
     ],
-    "ctaPrimary": "Fale-nos da sua clínica",
-    "ctaSecondary": "Ver o código",
+    "ctaPrimary": "Ver o código",
+    "ctaSecondary": "Encontre quem o instale",
     "anchor": {
-      "plan": "Gerido",
-      "per": "por mês",
-      "note": "O servidor é seu, contratado diretamente à Hetzner por cerca de 16 € por mês. Fale-nos da sua clínica e dizemos-lhe a mensalidade do serviço para o seu mercado.",
-      "quoted": "Falamos",
-      "breakdown": "Ver o detalhe completo"
-    },
-    "options": {
-      "eyebrow": "AS DUAS OPÇÕES",
-      "title": "O mesmo programa. Só muda quem cuida dele.",
-      "intro": "Não há uma versão reduzida gratuita e outra boa paga. Nas duas tem o produto inteiro, e nas duas o servidor é seu.",
-      "managed": {
-        "name": "Gerido",
-        "badge": "Recomendado",
-        "tagline": "Instalamos, atualizamos e vigiamos nós. No seu servidor e na sua conta.",
-        "features": [
-          "Instalação e arranque",
-          "Atualizações aplicadas e verificadas",
-          "Cópias de segurança configuradas e restauro testado",
-          "Vigilância: sabemos antes de si se alguma coisa falha",
-          "Suporte com tempos de resposta assumidos por contrato"
-        ],
-        "cta": "Fale-nos da sua clínica"
-      },
-      "selfhost": {
-        "name": "Autoalojado",
-        "badge": "Grátis",
-        "price": "Grátis",
-        "tagline": "Instala-o você, no seu servidor ou no do seu informático. Sem mensalidade e sem pedir autorização a ninguém.",
-        "features": [
-          "O produto inteiro, sem módulos capados",
-          "Imagens Docker públicas, sem conta nem credenciais",
-          "Documentação de instalação passo a passo",
-          "Ajuda em GitHub Discussions",
-          "BSL 1.1 hoje, Apache 2.0 ao fim de quatro anos"
-        ],
-        "cta": "Ver o repositório",
-        "ctaAlt": "Experimentar a demo"
-      },
-      "table": {
-        "priceRow": "Preço",
-        "rows": [
-          {
-            "label": "Onde vive",
-            "managed": "Um servidor em seu nome, na sua conta Hetzner",
-            "selfhost": "O seu servidor ou o do seu informático"
-          },
-          {
-            "label": "Quem instala",
-            "managed": "Nós",
-            "selfhost": "Você"
-          },
-          {
-            "label": "Quem atualiza e vigia",
-            "managed": "Nós",
-            "selfhost": "Você"
-          },
-          {
-            "label": "Cópias de segurança",
-            "managed": "Na sua conta, configuradas por nós e com restauro testado",
-            "selfhost": "Suas"
-          },
-          {
-            "label": "Quem contrata o alojamento",
-            "managed": "Você, diretamente com a Hetzner",
-            "selfhost": "Você"
-          },
-          {
-            "label": "Para quem é",
-            "managed": "Quer controlo total sem tratar do dia a dia",
-            "selfhost": "Tem informático ou desenrasca-se"
-          }
-        ]
-      }
-    },
-    "hetzner": {
-      "title": "O servidor é você que o contrata, em seu nome.",
-      "body": "É a parte que surpreende, por isso dizemo-la cedo: no plano Gerido abre uma conta própria na Hetzner com o seu cartão. Não é burocracia nossa, é exatamente o que faz com que o servidor seja mesmo seu.",
-      "points": [
-        "O contrato de alojamento é seu. Não somos intermediários de nada.",
-        "Os seus dados não passam por infraestrutura nossa.",
-        "Pode retirar-nos o acesso quando quiser, a partir do seu painel.",
-        "Se um dia prescindir de nós, não há migração: já está em sua casa."
+      "plan": "Dentalpin",
+      "per": "para sempre",
+      "features": [
+        "O produto inteiro, sem módulos capados",
+        "Imagens Docker públicas, sem conta nem credenciais",
+        "Documentação de instalação passo a passo",
+        "Ajuda em GitHub Discussions",
+        "BSL 1.1 hoje, Apache 2.0 ao fim de quatro anos"
       ],
-      "note": "São uns quinze minutos e fazemo-lo consigo na chamada de arranque."
+      "note": "Só paga o servidor (cerca de {total} por mês) e, se não o instalar você, a quem o mantiver.",
+      "demo": "Experimentar a demo",
+      "breakdown": "Ver o detalhe"
+    },
+    "partners": {
+      "eyebrow": "PARCEIROS",
+      "title": "Não quer instalá-lo você? É para isso que existem os integradores.",
+      "intro": "Qualquer empresa de informática que saiba manter um servidor pode instalar o Dentalpin e tratar dele. A clínica livra-se do trabalho técnico e o integrador ganha um serviço para cobrar.",
+      "clinics": {
+        "label": "Se tem uma clínica",
+        "title": "Procure um integrador de confiança",
+        "body": "De preferência uma empresa de informática próxima, que já conheça ou que lhe recomendem. Instala o Dentalpin num servidor, configura as cópias e mantém-no atualizado. Antes de começar, peça-lhe que:",
+        "points": [
+          "Ponha o servidor em nome da sua clínica, não no dele",
+          "Configure cópias de segurança e teste o restauro",
+          "Aplique as atualizações e o avise antes",
+          "Assine consigo um contrato de subcontratante"
+        ],
+        "cta": "Não conhece nenhum? Escreva-nos"
+      },
+      "integrators": {
+        "label": "Se é integrador",
+        "title": "Torne-se parceiro do Dentalpin",
+        "body": "Se instala e mantém sistemas em clínicas ou PME, o Dentalpin é mais um serviço para oferecer. O software não custa nada aos seus clientes, por isso o que cobra é o seu trabalho.",
+        "points": [
+          "Sem licenças para revender nem comissões para nos pagar",
+          "Passamos-lhe as clínicas da sua zona que nos pedem instalador",
+          "Fala diretamente com a equipa que escreve o código",
+          "Imagens Docker públicas e documentação de implementação"
+        ],
+        "cta": "Quero ser parceiro"
+      }
     },
     "isolation": {
       "eyebrow": "A SUA CLÍNICA, O SEU SERVIDOR",
@@ -782,24 +739,24 @@
           "body": "É uma cópia completa e padrão de PostgreSQL, executa-a você e restaura-a onde quiser."
         },
         {
-          "title": "O programa é o mesmo nas duas opções",
-          "body": "Muda quem cuida dele, não o que faz. Pode começar sozinho e pedir-nos ajuda depois sem migrar nada."
+          "title": "O programa é o mesmo, seja quem for que o instale",
+          "body": "Pode começar sozinho e passar a instalação a um integrador mais tarde, ou o contrário, sem migrar nada."
         }
       ]
     },
     "data": {
       "eyebrow": "ONDE ESTÃO OS SEUS DADOS",
-      "title": "Num servidor seu, em {datacenter}.",
+      "title": "Num servidor seu, onde decidir.",
       "datacenter": {
         "nuremberg": "Nuremberga, Alemanha",
         "ashburn": "Ashburn, Estados Unidos"
       },
-      "bodyEu": "Território da União Europeia, sem transferências internacionais de dados. O fornecedor é a Hetzner e o contrato é assinado por si, que é quem contrata o servidor.",
-      "bodyOutsideEu": "O fornecedor é a Hetzner e o contrato é assinado por si, que é quem contrata o servidor. Este centro de dados fica nos Estados Unidos, não na União Europeia, e preferimos dizê-lo antes de o perguntar.",
+      "bodyEu": "Recomendamos a Hetzner em {datacenter}: território da União Europeia, sem transferências internacionais de dados. Mas o fornecedor escolhe-o você ou o seu integrador, e o contrato com ele é seu.",
+      "bodyOutsideEu": "Usamos como referência a Hetzner em {datacenter}, que fica nos Estados Unidos e não na União Europeia. O fornecedor escolhe-o você ou o seu integrador, e o contrato com ele é seu.",
       "points": [
-        "Servidores dedicados à sua clínica, cifrados em trânsito e em repouso",
-        "Contrato de subcontratante assinado no plano Gerido",
-        "Acesso mínimo, registado e revogável por si a qualquer momento"
+        "Uma base de dados dedicada à sua clínica",
+        "As cópias são ficheiros PostgreSQL padrão",
+        "Nós não temos acesso ao seu servidor"
       ],
       "ai": {
         "title": "O copiloto de IA vem desativado.",
@@ -813,68 +770,40 @@
     },
     "cost": {
       "eyebrow": "QUANTO CUSTA, EXATAMENTE",
-      "title": "A fatura inteira, incluindo a parte que cobra outro.",
-      "subtitle": "O setor vende licenças por posto e remete para “contacte-nos”. Preferimos mostrar-lhe a soma antes de a fazer você.",
+      "title": "O que paga, e a quem.",
+      "subtitle": "O software não custa nada. O que tem custo é o servidor onde funciona e, se não o instalar você, o trabalho de quem trata dele.",
       "head": {
         "concept": "Rubrica",
         "who": "Quem cobra",
         "amount": "Valor"
       },
       "rows": {
+        "software": "Dentalpin, completo",
         "server": "O servidor da sua clínica",
         "backups": "Cópias de segurança externas",
-        "service": "Manutenção, atualizações, vigilância e suporte",
+        "integrator": "Instalação e manutenção (opcional)",
         "ai": "Copiloto de IA (opcional)"
       },
       "who": {
-        "hetzner": "Hetzner, diretamente a si",
-        "us": "Dentalpin",
+        "us": "Ninguém",
+        "provider": "O seu fornecedor de alojamento",
+        "integrator": "O seu integrador",
         "ai": "O seu fornecedor de IA, conforme o uso"
       },
+      "integratorAmount": "Combinado entre vocês",
       "aiAmount": "Só se o ativar",
-      "total": "Total aproximado",
+      "total": "Servidor e cópias, aproximado",
       "perMonth": "por mês",
-      "quoted": "Falamos",
-      "note": "A infraestrutura custa o que custa e paga-a diretamente ao fornecedor. A nós paga-nos para tratarmos dela: para que alguém responda às oito da manhã, para que as cópias tenham sido mesmo restauradas e para que uma atualização não lhe deite a agenda abaixo.",
-      "annual": "Pagando ao ano, paga dez meses em vez de doze: {annual} em vez de {instead}."
-    },
-    "setup": {
-      "title": "Arranque",
-      "oneOff": "Pagamento único",
-      "body": "Abertura da conta de servidor acompanhada, instalação, domínio, configuração, catálogo de tratamentos e duas horas de formação com a sua equipa.",
-      "migrationTitle": "Migração dos seus dados",
-      "migrationFlat": "A partir do Gesden, {price} a preço fechado, ou grátis com permanência de doze meses. A partir de outros sistemas, orçamento após um ensaio.",
-      "migrationQuote": "Orçamento após um ensaio sobre uma cópia dos seus dados. Dizemos-lhe o que se pode trazer e o que não antes de pagar seja o que for."
-    },
-    "flat": {
-      "eyebrow": "TARIFA ÚNICA",
-      "title": "O mesmo preço com um gabinete ou com dez.",
-      "body": "Sem custo por utilizador e sem custo por profissional. Contrate quem precisar e abra os gabinetes que quiser: a sua mensalidade não se mexe.",
-      "why": "E vale a pena dizer porque é honesto: o nosso custo também não cresce com os seus gabinetes.",
-      "multisite": "Uma mesma instalação pode alojar várias clínicas.",
-      "multisiteCta": "Tem várias clínicas? Falamos."
-    },
-    "included": {
-      "eyebrow": "O QUE A MENSALIDADE INCLUI",
-      "title": "O que fazemos todos os meses pela sua instalação.",
-      "items": [
-        "Instalação e arranque.",
-        "Atualizações aplicadas e verificadas, não apenas publicadas.",
-        "Cópias de segurança configuradas e restauro testado.",
-        "Vigilância: sabemos nós antes de si se alguma coisa falha.",
-        "Suporte com tempos de resposta assumidos por contrato."
-      ],
-      "verifactu": "Acompanhamento do Verifactu conforme a autoridade fiscal espanhola muda as especificações."
+      "note": "Os valores do servidor são indicativos, com a tabela da Hetzner como referência. Pode usar outro fornecedor ou um servidor que já tenha."
     },
     "leave": {
       "eyebrow": "E SE EU QUISER SAIR",
       "title": "Sai quando quiser e leva tudo consigo.",
       "items": [
         "Leva uma cópia completa e padrão da sua base de dados.",
-        "O software é open source: pode continuar a usá-lo sozinho ou com outro fornecedor.",
-        "No plano Gerido nem sequer há que migrar: o servidor já é seu.",
-        "Retiramos o nosso acesso e confirmamo-lo por escrito.",
-        "Se deixar de nos pagar, a sua instalação continua a funcionar."
+        "O software é open source: pode continuar a usá-lo sozinho ou com outro integrador.",
+        "Não há nada para migrar: o servidor já é seu.",
+        "Não há licença para cancelar nem fidelização."
       ]
     },
     "fiscal": {
@@ -888,32 +817,28 @@
       "title": "Perguntas frequentes",
       "items": [
         {
-          "q": "Porque tenho de abrir uma conta na Hetzner? Não podem alojá-lo vocês?",
-          "a": "É precisamente o que faz com que o servidor e os dados sejam seus. Se o contrato de alojamento fosse nosso, os seus dados viveriam em infraestrutura nossa e dependeria de nós para os tirar de lá. Assim não: a conta é sua, o servidor é seu e pode prescindir de nós sem migrar nada. A inscrição são uns quinze minutos e fazemo-la consigo na chamada de arranque."
-        },
-        {
           "q": "E se o Dentalpin fechar?",
           "a": "O código é open source e as imagens Docker são públicas: descarregam-se sem conta e sem credenciais. Não há licença para ativar, nem chamada a casa, nem interruptor remoto, por isso a sua instalação continua a funcionar indefinidamente e qualquer informático a pode manter."
         },
         {
-          "q": "Têm acesso aos processos clínicos dos meus pacientes?",
-          "a": "Em Autoalojado não temos acesso nenhum. No plano Gerido temos acesso técnico ao servidor para o poder manter, com contrato de subcontratante assinado, com registo do que é feito e revogável por si a partir do seu painel Hetzner quando quiser. Manter o sistema não exige ler processos clínicos."
+          "q": "Têm acesso às fichas clínicas dos meus pacientes?",
+          "a": "Não. A instalação é sua e nós não temos qualquer acesso. Se um integrador a mantiver, quem tem o acesso técnico é ele, e por isso convém assinar com ele um contrato de subcontratante."
         },
         {
           "q": "Quem é responsável se houver uma violação de dados?",
-          "a": "A sua clínica é a responsável pelo tratamento dos dados dos seus pacientes e nós somos subcontratantes no plano Gerido. O contrato detalha-o. A nossa parte são medidas concretas: servidores na União Europeia, cifra, cópias verificadas, acesso mínimo e registado, e avisá-lo sem demora se acontecer alguma coisa."
+          "a": "A sua clínica, como responsável pelo tratamento dos dados dos seus pacientes. Se um integrador mantiver o servidor, atua como subcontratante e o contrato com ele deve prevê-lo. A parte do Dentalpin é uma base de dados só sua e cópias padrão que pode restaurar onde quiser."
         },
         {
-          "q": "Preciso de informático?",
-          "a": "Com o plano Gerido não: é para isso que serve a mensalidade. Em Autoalojado precisa de alguém que saiba levantar um docker compose e manter um servidor em dia, seja o seu informático ou você."
+          "q": "Preciso de um informático?",
+          "a": "Precisa de alguém que saiba levantar um docker compose e manter um servidor atualizado. Pode ser você ou uma empresa de informática de confiança que o instale e o mantenha. Se não conhecer nenhuma, escreva-nos."
         },
         {
-          "q": "Posso começar sozinho e pedir ajuda mais tarde?",
-          "a": "Sim. É o mesmo software, por isso passar de Autoalojado a Gerido é dar-nos acesso, não migrar nada."
+          "q": "Quanto cobra um integrador?",
+          "a": "O que combinarem entre vocês. Nós não cobramos nada nem ficamos com comissão. Peça-lhe o detalhe da instalação, da mensalidade de manutenção e do que faz com as cópias de segurança."
         },
         {
-          "q": "O que acontece se não pagar um mês?",
-          "a": "Escrevemos-lhe, como qualquer um faria. Se a coisa não se resolver, retiramos o nosso acesso e deixamos de manter o sistema. A sua instalação continua a funcionar e os seus dados continuam onde estavam: no seu servidor."
+          "q": "Sou informático. Posso instalar o Dentalpin aos meus clientes e cobrar-lhes?",
+          "a": "Sim. Instalá-lo no servidor de cada clínica e cobrar pelo serviço é permitido. A única coisa que a licença não permite é lançar o Dentalpin como SaaS dentário concorrente. Escreva-nos e explicamos como trabalhamos com parceiros."
         },
         {
           "q": "A IA vê os dados dos meus pacientes?",
@@ -926,8 +851,8 @@
       ]
     },
     "cta": {
-      "title": "Conte-nos como é a sua clínica.",
-      "body": "Dizemos-lhe se o Dentalpin encaixa e, se encaixar, montamo-lo consigo. Lê-o uma pessoa, não um formulário.",
+      "title": "Procura quem o instale, ou quer instalá-lo a outros?",
+      "body": "Escreva-nos nos dois casos. Quem o lê é uma pessoa, não um formulário.",
       "primary": "Falar connosco",
       "secondary": "Experimentar a demo"
     }
@@ -1602,7 +1527,7 @@
       "submit": "Enviar"
     },
     "reasons": {
-      "managed": "Alojamento gerido",
+      "partner": "Parceiros e integradores",
       "demo": "Uma demo com os meus dados",
       "migration": "Mudar de outro software",
       "install": "Ajuda com a instalação",

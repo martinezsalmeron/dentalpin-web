@@ -655,104 +655,61 @@
   },
   "pricing": {
     "meta": {
-      "title": "Pricing and hosting · Dentalpin",
-      "description": "Your data is yours and the code is yours. The server belongs to your clinic either way: run it yourself for free, or we install it and look after it. The full cost breakdown, no small print."
+      "title": "Pricing · Dentalpin",
+      "description": "Dentalpin is free and complete, with no fees and no licences. Install it yourself or have a trusted IT company install and maintain it. If you are an integrator, become a partner."
     },
-    "eyebrow": "PRICING AND HOSTING",
+    "eyebrow": "PRICING",
     "title": "Your data is yours. The code is yours.",
-    "subtitle": "You pay us to look after your installation, not for permission to use your own software. Either way, the server belongs to your clinic.",
+    "subtitle": "Dentalpin is free and complete. Install it on your own server, or ask an IT company you trust to install it and look after it for you.",
     "proof": [
       "Your own database, on your own server",
-      "Servers in Germany, inside the European Union",
+      "No licences, no fees and no paid modules",
       "No per-user, per-dentist or per-chair pricing"
     ],
-    "ctaPrimary": "Tell us about your clinic",
-    "ctaSecondary": "See the code",
+    "ctaPrimary": "See the code",
+    "ctaSecondary": "Find someone to install it",
     "anchor": {
-      "plan": "Managed",
-      "per": "a month",
-      "note": "The server is yours, contracted directly with Hetzner for around €16 a month. Tell us about your clinic and we will give you the service fee for your market.",
-      "quoted": "Let's talk",
-      "breakdown": "See the full breakdown"
-    },
-    "options": {
-      "eyebrow": "THE TWO OPTIONS",
-      "title": "The same software. All that changes is who looks after it.",
-      "intro": "There is no cut-down free version and a good paid one. Both give you the whole product, and in both the server is yours.",
-      "managed": {
-        "name": "Managed",
-        "badge": "Recommended",
-        "tagline": "We install it, update it and watch it. On your server and in your account.",
-        "features": [
-          "Installation and setup",
-          "Updates applied and verified",
-          "Backups configured and restores tested",
-          "Monitoring: we find out before you do when something breaks",
-          "Support with response times committed in the contract"
-        ],
-        "cta": "Tell us about your clinic"
-      },
-      "selfhost": {
-        "name": "Self-hosted",
-        "badge": "Free",
-        "price": "Free",
-        "tagline": "You run it, on your server or your IT person's. No fee and no permission needed from anyone.",
-        "features": [
-          "The whole product, no crippled modules",
-          "Public Docker images, no account and no credentials",
-          "Step-by-step installation docs",
-          "Help in GitHub Discussions",
-          "BSL 1.1 today, Apache 2.0 after four years"
-        ],
-        "cta": "See the repository",
-        "ctaAlt": "Try the demo"
-      },
-      "table": {
-        "priceRow": "Price",
-        "rows": [
-          {
-            "label": "Where it lives",
-            "managed": "A server in your name, in your Hetzner account",
-            "selfhost": "Your server or your IT person's"
-          },
-          {
-            "label": "Who installs it",
-            "managed": "We do",
-            "selfhost": "You do"
-          },
-          {
-            "label": "Who updates and watches it",
-            "managed": "We do",
-            "selfhost": "You do"
-          },
-          {
-            "label": "Backups",
-            "managed": "In your account, configured by us, restores tested",
-            "selfhost": "Yours"
-          },
-          {
-            "label": "Who contracts the hosting",
-            "managed": "You do, directly with Hetzner",
-            "selfhost": "You do"
-          },
-          {
-            "label": "Who it is for",
-            "managed": "You want full control without the day-to-day",
-            "selfhost": "You have an IT person, or you manage fine"
-          }
-        ]
-      }
-    },
-    "hetzner": {
-      "title": "You contract the server yourself, in your own name.",
-      "body": "This is the part that surprises people, so we say it early: for the Managed plan you open your own Hetzner account with your own card. That is not our paperwork, it is exactly what makes the server truly yours.",
-      "points": [
-        "The hosting contract is yours. We are nobody's middleman.",
-        "Your data never passes through infrastructure of ours.",
-        "You can revoke our access whenever you want, from your own panel.",
-        "If you ever drop us, there is nothing to migrate: it is already at home."
+      "plan": "Dentalpin",
+      "per": "for good",
+      "features": [
+        "The whole product, no crippled modules",
+        "Public Docker images, no account and no credentials",
+        "Step-by-step installation docs",
+        "Help in GitHub Discussions",
+        "BSL 1.1 today, Apache 2.0 after four years"
       ],
-      "note": "It takes about fifteen minutes and we do it together on the setup call."
+      "note": "You only pay for the server (around {total} a month) and, if you don't install it yourself, whoever maintains it.",
+      "demo": "Try the demo",
+      "breakdown": "See the breakdown"
+    },
+    "partners": {
+      "eyebrow": "PARTNERS",
+      "title": "Don't want to install it yourself? That's what integrators are for.",
+      "intro": "Any IT company that can run a server can install Dentalpin and look after it. The clinic gets rid of the technical work and the integrator gets a service to bill for.",
+      "clinics": {
+        "label": "If you run a clinic",
+        "title": "Find an integrator you trust",
+        "body": "Ideally a local IT company, one you already know or one that comes recommended. They install Dentalpin on a server, set up backups and keep it up to date. Before you start, ask them to:",
+        "points": [
+          "Put the server in your clinic's name, not theirs",
+          "Set up backups and test restoring them",
+          "Apply updates and tell you beforehand",
+          "Sign a data processing agreement with you"
+        ],
+        "cta": "Don't know one? Write to us"
+      },
+      "integrators": {
+        "label": "If you are an integrator",
+        "title": "Become a Dentalpin partner",
+        "body": "If you install and maintain systems for clinics or small businesses, Dentalpin is one more service to offer. The software costs your clients nothing, so what you bill for is your work.",
+        "points": [
+          "No licences to resell and no commission to pay us",
+          "We pass on clinics in your area that ask us for an installer",
+          "You talk directly to the team that writes the code",
+          "Public Docker images and deployment docs"
+        ],
+        "cta": "I want to be a partner"
+      }
     },
     "isolation": {
       "eyebrow": "YOUR CLINIC, YOUR SERVER",
@@ -782,24 +739,24 @@
           "body": "It is a complete, standard PostgreSQL dump. You can run it yourself and restore it wherever you like."
         },
         {
-          "title": "The software is the same in both options",
-          "body": "What changes is who looks after it, not what it does. You can start on your own and ask us for help later without migrating anything."
+          "title": "Same software, whoever installs it",
+          "body": "You can start on your own and hand the installation to an integrator later, or the other way round, without migrating anything."
         }
       ]
     },
     "data": {
       "eyebrow": "WHERE YOUR DATA LIVES",
-      "title": "On a server of yours, in {datacenter}.",
+      "title": "On a server of yours, wherever you decide.",
       "datacenter": {
         "nuremberg": "Nuremberg, Germany",
         "ashburn": "Ashburn, United States"
       },
-      "bodyEu": "European Union territory, with no international data transfers. Hetzner is the provider and you sign the contract, because you are the one contracting the server.",
-      "bodyOutsideEu": "Hetzner is the provider and you sign the contract, because you are the one contracting the server. This datacenter is in the United States, not in the European Union, and we would rather tell you before you ask.",
+      "bodyEu": "We recommend Hetzner in {datacenter}: European Union territory, no international data transfers. But you or your integrator choose the provider, and the contract with them is yours.",
+      "bodyOutsideEu": "Our reference is Hetzner in {datacenter}, which is in the United States, not the European Union. You or your integrator choose the provider, and the contract with them is yours.",
       "points": [
-        "Servers dedicated to your clinic, encrypted in transit and at rest",
-        "Data processing agreement signed on the Managed plan",
-        "Minimal access, logged, and revocable by you at any time"
+        "A database dedicated to your clinic",
+        "Backups are standard PostgreSQL files",
+        "We have no access to your server"
       ],
       "ai": {
         "title": "The AI copilot ships switched off.",
@@ -813,68 +770,40 @@
     },
     "cost": {
       "eyebrow": "WHAT IT COSTS, EXACTLY",
-      "title": "The whole invoice, including the part somebody else charges.",
-      "subtitle": "This industry sells per-seat licences and points you at “contact sales”. We would rather show you the sum before you do it yourself.",
+      "title": "What you pay, and to whom.",
+      "subtitle": "The software costs nothing. What does cost money is the server it runs on and, if you don't install it yourself, the work of whoever looks after it.",
       "head": {
         "concept": "Item",
         "who": "Who charges it",
         "amount": "Amount"
       },
       "rows": {
+        "software": "Dentalpin, complete",
         "server": "Your clinic's server",
         "backups": "Off-site backups",
-        "service": "Maintenance, updates, monitoring and support",
+        "integrator": "Installation and maintenance (optional)",
         "ai": "AI copilot (optional)"
       },
       "who": {
-        "hetzner": "Hetzner, directly to you",
-        "us": "Dentalpin",
+        "us": "Nobody",
+        "provider": "Your hosting provider",
+        "integrator": "Your integrator",
         "ai": "Your AI provider, by usage"
       },
+      "integratorAmount": "Agreed between you",
       "aiAmount": "Only if you turn it on",
-      "total": "Approximate total",
+      "total": "Server and backups, approx.",
       "perMonth": "a month",
-      "quoted": "Let's talk",
-      "note": "Infrastructure costs what it costs and you pay it straight to the provider. What you pay us for is looking after it: someone answering at eight in the morning, backups that have actually been restored, and updates that do not take your schedule down.",
-      "annual": "Pay yearly and you pay ten months instead of twelve: {annual} rather than {instead}."
-    },
-    "setup": {
-      "title": "Setup",
-      "oneOff": "One-off payment",
-      "body": "Guided server signup, installation, domain, configuration, treatment catalogue and two hours of training with your team.",
-      "migrationTitle": "Migrating your data",
-      "migrationFlat": "From Gesden, {price} at a fixed price, or free if you stay twelve months. From other systems, a quote after a dry run.",
-      "migrationQuote": "A quote after a dry run on a copy of your data. We tell you what can come across and what cannot before you pay anything."
-    },
-    "flat": {
-      "eyebrow": "FLAT RATE",
-      "title": "The same price with one chair or with ten.",
-      "body": "No per-user cost and no per-dentist cost. Hire whoever you need and open as many chairs as you want: your fee does not move.",
-      "why": "And it is worth saying why that is honest: our cost does not grow with your chairs either.",
-      "multisite": "A single installation can host more than one clinic.",
-      "multisiteCta": "Several sites? Let's talk."
-    },
-    "included": {
-      "eyebrow": "WHAT THE FEE COVERS",
-      "title": "What we do for your installation every month.",
-      "items": [
-        "Installation and setup.",
-        "Updates applied and verified, not merely published.",
-        "Backups configured and restores tested.",
-        "Monitoring: we find out before you do when something breaks.",
-        "Support with response times committed in the contract."
-      ],
-      "verifactu": "Verifactu tracking as the Spanish tax agency changes its specification."
+      "note": "Server figures are a guide, using Hetzner's prices as a reference. You can use another provider or a server you already have."
     },
     "leave": {
       "eyebrow": "AND IF I WANT TO LEAVE",
-      "title": "You leave whenever you like, and you take everything with you.",
+      "title": "Leave whenever you like and take everything with you.",
       "items": [
-        "You take a complete, standard dump of your database.",
-        "The software is open source: keep using it yourself or with another provider.",
-        "On Managed there is nothing to migrate: the server is already yours.",
-        "We withdraw our access and confirm it in writing.",
-        "If you stop paying us, your installation keeps working."
+        "You take a full, standard copy of your database.",
+        "The software is open source: keep using it yourself or with another integrator.",
+        "There is nothing to migrate: the server is already yours.",
+        "No licence to cancel and no minimum term."
       ]
     },
     "fiscal": {
@@ -888,32 +817,28 @@
       "title": "Frequently asked questions",
       "items": [
         {
-          "q": "Why do I have to open a Hetzner account? Can't you host it yourselves?",
-          "a": "That is precisely what makes the server and the data yours. If the hosting contract were ours, your data would live on our infrastructure and you would depend on us to get it out. This way the account is yours, the server is yours, and you can drop us without migrating anything. Signing up takes about fifteen minutes and we do it with you on the setup call."
-        },
-        {
           "q": "What if Dentalpin shuts down?",
           "a": "The code is open source and the Docker images are public: they download without an account and without credentials. There is no licence to activate, no phoning home and no remote switch, so your installation keeps working indefinitely and any IT person can maintain it."
         },
         {
-          "q": "Do you have access to my patients' clinical records?",
-          "a": "On Self-hosted we have no access at all. On Managed we have technical access to the server so we can maintain it, with a signed data processing agreement, with a log of what gets done, and revocable by you from your Hetzner panel whenever you want. Keeping the system running does not require reading clinical records."
+          "q": "Do you have access to my patients' records?",
+          "a": "No. The installation is yours and we have no access at all. If an integrator maintains it, they have the technical access, which is why you should sign a data processing agreement with them."
         },
         {
-          "q": "Who is liable if there is a breach?",
-          "a": "Your clinic is the controller of its patients' data and we are the processor on the Managed plan. The contract spells it out. Our side is specific measures: servers in the European Union, encryption, verified backups, minimal and logged access, and telling you without delay if something happens."
+          "q": "Who is responsible if there is a breach?",
+          "a": "Your clinic, as the controller of its patients' data. If an integrator maintains the server, they act as processor and your contract with them should say so. Dentalpin's part is a database that is yours alone and standard backups you can restore anywhere."
         },
         {
           "q": "Do I need an IT person?",
-          "a": "Not on Managed: that is what the fee is for. On Self-hosted you need someone who can bring up a docker compose and keep a server current, whether that is your IT person or you."
+          "a": "You need someone who can bring up a docker compose and keep a server up to date. That can be you or an IT company you trust to install and maintain it. If you don't know one, write to us."
         },
         {
-          "q": "Can I start on my own and ask for help later?",
-          "a": "Yes. It is the same software, so moving from Self-hosted to Managed means giving us access, not migrating anything."
+          "q": "How much does an integrator charge?",
+          "a": "Whatever you agree between you. We charge nothing and take no commission. Ask them to break down installation, the monthly maintenance fee and what they do with backups."
         },
         {
-          "q": "What happens if I miss a payment?",
-          "a": "We write to you, like anyone would. If it does not get resolved, we withdraw our access and stop maintaining the system. Your installation keeps working and your data stays where it was: on your server."
+          "q": "I work in IT. Can I install Dentalpin for my clients and charge them?",
+          "a": "Yes. Installing it on each clinic's server and charging for the service is allowed. The only thing the licence rules out is launching Dentalpin as a competing dental SaaS. Write to us and we'll tell you how we work with partners."
         },
         {
           "q": "Does the AI see my patients' data?",
@@ -926,8 +851,8 @@
       ]
     },
     "cta": {
-      "title": "Tell us what your clinic looks like.",
-      "body": "We will tell you whether Dentalpin fits and, if it does, we set it up with you. A person reads this, not a form.",
+      "title": "Looking for someone to install it, or want to install it for others?",
+      "body": "Write to us either way. A person reads it, not a form.",
       "primary": "Talk to us",
       "secondary": "Try the demo"
     }
@@ -1602,7 +1527,7 @@
       "submit": "Send"
     },
     "reasons": {
-      "managed": "Managed hosting",
+      "partner": "Partners and integrators",
       "demo": "A demo with my own data",
       "migration": "Migrating from another system",
       "install": "Help with the install",

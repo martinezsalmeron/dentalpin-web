@@ -52,7 +52,7 @@ test('features page renders Bento grid', async ({ page }) => {
 
 // The country hint reads Cloudflare's /cdn-cgi/trace, which does not exist off
 // production, so the tests serve it themselves. A Mexican landing on the
-// Spanish page is the real case: he would otherwise read 89 € and Verifactu.
+// Spanish page is the real case: he would otherwise read euros and Verifactu.
 const fromCountry = (page: import('@playwright/test').Page, loc: string) =>
   page.route('**/cdn-cgi/trace', (route) =>
     route.fulfill({ status: 200, body: `fl=xx1\nloc=${loc}\n` }),
@@ -79,31 +79,28 @@ test('no hint when the country already matches the page', async ({ page }) => {
   await expect(page.locator('[data-locale-hint]:not([hidden])')).toHaveCount(0);
 });
 
-// The pricing page is driven by src/data/pricing.ts: a market with a published
-// tariff shows figures and a total, one without shows "let's talk" instead.
-// Spain is also the only market with the invoicing integration, so it must be
-// the only one that does not carry the tax warning.
-test('Spanish pricing shows the fee, the total and no tax warning', async ({ page }) => {
+// The pricing page is driven by src/data/pricing.ts: the software is free in
+// every market and only the server costs money. Spain is also the only market
+// with the invoicing integration, so it must be the only one without the tax warning.
+test('Spanish pricing shows the free plan, the server total and no tax warning', async ({ page }) => {
   await page.goto('/es/precios');
   await expect(page.getByRole('heading', { level: 1 })).toContainText('Tus datos son tuyos');
-  await expect(page.getByText('105 € al mes')).toBeVisible();
-  await expect(page.getByRole('row', { name: /Total aproximado/ })).toContainText('105 €');
+  await expect(page.getByText('0 €', { exact: true }).first()).toBeVisible();
+  await expect(page.getByRole('row', { name: /Servidor y copias/ })).toContainText('16-19 €');
+  await expect(page.getByText(/89 €/)).toHaveCount(0);
   await expect(page.getByText(/no está integrada con/)).toHaveCount(0);
 });
 
-test('an unpriced market quotes instead of publishing a figure', async ({ page }) => {
+test('other markets carry the invoicing warning', async ({ page }) => {
   await page.goto('/fr/tarifs');
-  await expect(page.getByText('Parlons-en').first()).toBeVisible();
-  await expect(page.getByText(/89/)).toHaveCount(0);
-  // The invoicing warning is a legal must in markets without the integration.
   await expect(page.getByRole('heading', { name: /n'est pas raccordée/ })).toBeVisible();
 });
 
-test('pricing CTAs preselect the managed reason on the contact form', async ({ page }) => {
+test('partner CTAs preselect the partner reason on the contact form', async ({ page }) => {
   await page.goto('/es/precios');
-  await page.getByRole('link', { name: 'Cuéntanos tu caso' }).first().click();
-  await expect(page).toHaveURL(/\/es\/contacto\/\?reason=managed$/);
-  await expect(page.locator('select[name="reason"]')).toHaveValue('managed');
+  await page.getByRole('link', { name: 'Quiero ser partner' }).click();
+  await expect(page).toHaveURL(/\/es\/contacto\/\?reason=partner$/);
+  await expect(page.locator('select[name="reason"]')).toHaveValue('partner');
 });
 
 test('contact form shows validation on empty submit', async ({ page }) => {

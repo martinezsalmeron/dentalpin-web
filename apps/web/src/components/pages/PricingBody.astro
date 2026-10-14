@@ -3,7 +3,6 @@ import { pagePath, useDict, type Locale } from '~/i18n';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Section from '@dentalpin/ui/Section.astro';
 import Button from '@dentalpin/ui/Button.astro';
-import Badge from '@dentalpin/ui/Badge.astro';
 import Icon from '@dentalpin/ui/Icon.astro';
 import CostBreakdown from '~/components/pricing/CostBreakdown.astro';
 import TenancyDiagram from '~/components/pricing/TenancyDiagram.astro';
@@ -17,11 +16,10 @@ const { locale } = Astro.props;
 const dict = useDict(locale);
 const p = dict.pricing;
 const market = MARKET[locale];
-const price = market.price;
 
-// The managed plan is the paid path, so every primary CTA lands on the contact
-// form with that reason already chosen. One less field for the visitor.
-const contactUrl = `${pagePath(locale, 'contact')}?reason=managed`;
+// Clinics looking for someone to install it and integrators wanting to be that
+// someone both land on the contact form with the reason already chosen.
+const contactUrl = `${pagePath(locale, 'contact')}?reason=partner`;
 const datacenter = p.data.datacenter[market.datacenter];
 
 // Both the heading and the body of the tax warning name the country and the
@@ -70,8 +68,8 @@ const tick = 'mt-0.5 flex-none text-[var(--color-primary)]';
           }
         </ul>
         <div class="mt-8 flex flex-wrap gap-3">
-          <Button href={contactUrl} size="lg">{p.ctaPrimary}</Button>
-          <Button href={GITHUB_REPO} variant="outline" size="lg">{p.ctaSecondary}</Button>
+          <Button href={GITHUB_REPO} size="lg">{p.ctaPrimary}</Button>
+          <Button href="#partners" variant="outline" size="lg">{p.ctaSecondary}</Button>
         </div>
       </div>
 
@@ -79,57 +77,15 @@ const tick = 'mt-0.5 flex-none text-[var(--color-primary)]';
         class="rounded-[var(--radius-xl)] border-[1.5px] border-[var(--color-primary)] bg-[var(--color-surface)] p-7 shadow-[var(--shadow-md)]"
       >
         <p class="text-caption text-[var(--color-text-muted)]">{p.anchor.plan}</p>
-        {
-          price ? (
-            <p class="mt-2 flex items-baseline gap-2">
-              <span class="tnum text-[44px] leading-none font-bold tracking-tight text-[var(--color-text)]">
-                {price.monthly}
-              </span>
-              <span class="text-[14px] text-[var(--color-text-muted)]">{p.anchor.per}</span>
-            </p>
-          ) : (
-            <p class="mt-2 text-[26px] leading-tight font-bold tracking-tight text-[var(--color-text)]">
-              {p.anchor.quoted}
-            </p>
-          )
-        }
-        <p class="mt-3 text-[14px] leading-[1.55] text-[var(--color-text-muted)]">
-          {p.anchor.note}
+        <p class="mt-2 flex items-baseline gap-2">
+          <span class="tnum text-[44px] leading-none font-bold tracking-tight text-[var(--color-text)]">
+            {market.free}
+          </span>
+          <span class="text-[14px] text-[var(--color-text-muted)]">{p.anchor.per}</span>
         </p>
-        <a
-          href="#desglose"
-          class="mt-5 inline-flex items-center gap-1 text-[14px] font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
-        >
-          {p.anchor.breakdown} →
-        </a>
-      </aside>
-    </div>
-  </Section>
-
-  <!-- 2. The two options. Same software, different caretaker. -->
-  <Section padY="md">
-    <p class="text-micro font-semibold uppercase tracking-wider text-[var(--color-primary)]">
-      {p.options.eyebrow}
-    </p>
-    <h2 class="text-marketing-h2 mt-3 text-[var(--color-text)]">{p.options.title}</h2>
-    <p class="mt-4 max-w-2xl text-[15px] leading-[1.6] text-[var(--color-text-muted)]">
-      {p.options.intro}
-    </p>
-
-    <div class="mt-10 grid gap-4 lg:grid-cols-2">
-      <article
-        class={`${card} border-[1.5px] border-[var(--color-primary)] shadow-[var(--shadow-md)]`}
-      >
-        <div class="flex items-center justify-between gap-3">
-          <h3 class="text-[20px] font-semibold tracking-tight">{p.options.managed.name}</h3>
-          <Badge role="primary">{p.options.managed.badge}</Badge>
-        </div>
-        <p class="mt-4 text-[14px] leading-[1.55] text-[var(--color-text-muted)]">
-          {p.options.managed.tagline}
-        </p>
-        <ul class="mt-6 flex-1 space-y-2.5 text-[14px]">
+        <ul class="mt-6 space-y-2.5 text-[14px]">
           {
-            p.options.managed.features.map((f) => (
+            p.anchor.features.map((f) => (
               <li class="flex items-start gap-2">
                 <span class={tick}>
                   <Icon name="check" size={16} />
@@ -139,134 +95,67 @@ const tick = 'mt-0.5 flex-none text-[var(--color-primary)]';
             ))
           }
         </ul>
-        <Button href={contactUrl} size="md" class="mt-8 w-full">{p.options.managed.cta}</Button>
-      </article>
-
-      <article class={card}>
-        <div class="flex items-center justify-between gap-3">
-          <h3 class="text-[20px] font-semibold tracking-tight">{p.options.selfhost.name}</h3>
-          <Badge>{p.options.selfhost.badge}</Badge>
-        </div>
-        <p class="mt-4 text-[14px] leading-[1.55] text-[var(--color-text-muted)]">
-          {p.options.selfhost.tagline}
+        <p class="mt-5 text-[14px] leading-[1.55] text-[var(--color-text-muted)]">
+          {p.anchor.note.replace('{total}', market.total)}
         </p>
-        <ul class="mt-6 flex-1 space-y-2.5 text-[14px]">
-          {
-            p.options.selfhost.features.map((f) => (
-              <li class="flex items-start gap-2">
-                <span class="mt-0.5 flex-none text-[var(--color-text-subtle)]">
-                  <Icon name="check" size={16} />
-                </span>
-                <span class="text-[var(--color-text-muted)]">{f}</span>
-              </li>
-            ))
-          }
-        </ul>
-        <div class="mt-8 flex flex-col gap-2 sm:flex-row">
-          <Button href={GITHUB_REPO} variant="outline" size="md" class="w-full"
-            >{p.options.selfhost.cta}</Button
-          >
-          <Button href={DEMO_URL} variant="ghost" size="md" class="w-full"
-            >{p.options.selfhost.ctaAlt}</Button
-          >
+        <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-[14px] font-medium">
+          <a href={DEMO_URL} class="text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]">
+            {p.anchor.demo} →
+          </a>
+          <a href="#desglose" class="text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]">
+            {p.anchor.breakdown} →
+          </a>
         </div>
-      </article>
-    </div>
-
-    <!-- The comparison table. On a phone it stops being a table and becomes
-         two stacked blocks, because a 3-column grid at 375px is unreadable. -->
-    <div
-      class="mt-4 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
-    >
-      <table class="w-full border-collapse text-left text-[14px]">
-        <thead class="hidden sm:table-header-group">
-          <tr class="border-b border-[var(--color-border)] text-[var(--color-text-muted)]">
-            <th scope="col" class="text-micro px-5 py-3 font-medium uppercase tracking-wider"></th>
-            <th
-              scope="col"
-              class="text-micro px-5 py-3 font-medium uppercase tracking-wider text-[var(--color-primary)]"
-            >
-              {p.options.managed.name}
-            </th>
-            <th scope="col" class="text-micro px-5 py-3 font-medium uppercase tracking-wider">
-              {p.options.selfhost.name}
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            p.options.table.rows.map((row) => (
-              <tr class="block border-b border-[var(--color-border-subtle)] px-5 py-4 sm:table-row sm:px-0 sm:py-0">
-                <th
-                  scope="row"
-                  class="block text-left text-[12.5px] font-medium uppercase tracking-wider text-[var(--color-text-subtle)] sm:table-cell sm:px-5 sm:py-3.5 sm:text-[14px] sm:font-normal sm:normal-case sm:tracking-normal sm:text-[var(--color-text-muted)]"
-                >
-                  {row.label}
-                </th>
-                <td class="block pt-1.5 text-[var(--color-text)] sm:table-cell sm:px-5 sm:py-3.5">
-                  <span class="text-micro mr-2 uppercase tracking-wider text-[var(--color-primary)] sm:hidden">
-                    {p.options.managed.name}
-                  </span>
-                  {row.managed}
-                </td>
-                <td class="block pt-1 text-[var(--color-text-muted)] sm:table-cell sm:px-5 sm:py-3.5">
-                  <span class="text-micro mr-2 uppercase tracking-wider text-[var(--color-text-subtle)] sm:hidden">
-                    {p.options.selfhost.name}
-                  </span>
-                  {row.selfhost}
-                </td>
-              </tr>
-            ))
-          }
-          <tr class="block bg-[var(--color-surface-sunken)] px-5 py-4 sm:table-row sm:px-0 sm:py-0">
-            <th
-              scope="row"
-              class="block text-left text-[12.5px] font-medium uppercase tracking-wider text-[var(--color-text-subtle)] sm:table-cell sm:px-5 sm:py-3.5 sm:text-[14px] sm:font-normal sm:normal-case sm:tracking-normal sm:text-[var(--color-text-muted)]"
-            >
-              {p.options.table.priceRow}
-            </th>
-            <td
-              class="tnum block pt-1.5 font-semibold text-[var(--color-text)] sm:table-cell sm:px-5 sm:py-3.5"
-            >
-              {price ? `${price.monthly} ${p.cost.perMonth}` : p.anchor.quoted}
-            </td>
-            <td
-              class="block pt-1 font-semibold text-[var(--color-text-muted)] sm:table-cell sm:px-5 sm:py-3.5"
-            >
-              {p.options.selfhost.price}
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      </aside>
     </div>
   </Section>
 
-  <!-- 3. The Hetzner account. Said early and plainly, per the brief. -->
-  <Section padY="sm" maxWidth="narrow">
-    <div
-      class="rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface-sunken)] p-8"
-    >
-      <h2 class="text-[22px] font-semibold tracking-tight text-[var(--color-text)]">
-        {p.hetzner.title}
-      </h2>
-      <p class="mt-3 text-[15px] leading-[1.6] text-[var(--color-text-muted)]">{p.hetzner.body}</p>
-      <ul class="mt-6 grid gap-2.5 sm:grid-cols-2">
-        {
-          p.hetzner.points.map((point) => (
-            <li class="flex items-start gap-2 text-[14px] text-[var(--color-text)]">
-              <span class={tick}>
-                <Icon name="check" size={16} />
-              </span>
-              {point}
-            </li>
-          ))
-        }
-      </ul>
-      <p class="mt-6 text-[14px] font-medium text-[var(--color-text)]">{p.hetzner.note}</p>
+  <!-- 2. Who installs it. Clinics find an integrator, integrators become partners. -->
+  <Section padY="md" id="partners">
+    <p class="text-micro font-semibold uppercase tracking-wider text-[var(--color-primary)]">
+      {p.partners.eyebrow}
+    </p>
+    <h2 class="text-marketing-h2 mt-3 max-w-3xl text-[var(--color-text)]">{p.partners.title}</h2>
+    <p class="mt-4 max-w-2xl text-[15px] leading-[1.6] text-[var(--color-text-muted)]">
+      {p.partners.intro}
+    </p>
+
+    <div class="mt-10 grid gap-4 lg:grid-cols-2">
+      {
+        [p.partners.clinics, p.partners.integrators].map((side, i) => (
+          <article
+            class={`${card} ${i === 1 ? 'border-[1.5px] border-[var(--color-primary)] shadow-[var(--shadow-md)]' : ''}`}
+          >
+            <p class="text-micro font-semibold uppercase tracking-wider text-[var(--color-text-subtle)]">
+              {side.label}
+            </p>
+            <h3 class="mt-2 text-[20px] font-semibold tracking-tight">{side.title}</h3>
+            <p class="mt-4 text-[14px] leading-[1.55] text-[var(--color-text-muted)]">{side.body}</p>
+            <ul class="mt-6 flex-1 space-y-2.5 text-[14px]">
+              {side.points.map((f) => (
+                <li class="flex items-start gap-2">
+                  <span class={tick}>
+                    <Icon name="check" size={16} />
+                  </span>
+                  <span class="text-[var(--color-text)]">{f}</span>
+                </li>
+              ))}
+            </ul>
+            <Button
+              href={contactUrl}
+              variant={i === 1 ? 'solid' : 'outline'}
+              size="md"
+              class="mt-8 w-full"
+            >
+              {side.cta}
+            </Button>
+          </article>
+        ))
+      }
     </div>
   </Section>
 
-  <!-- 4. Your clinic, your server. The hardest idea, with room. -->
+  <!-- 3. Your clinic, your server. The hardest idea, with room. -->
   <Section padY="md">
     <p class="text-micro font-semibold uppercase tracking-wider text-[var(--color-primary)]">
       {p.isolation.eyebrow}
@@ -294,7 +183,7 @@ const tick = 'mt-0.5 flex-none text-[var(--color-primary)]';
     </ul>
   </Section>
 
-  <!-- 5. Where the data lives, and the AI copilot. -->
+  <!-- 4. Where the data lives, and the AI copilot. -->
   <Section padY="md">
     <div class="grid gap-10 lg:grid-cols-2 lg:gap-16">
       <div>
@@ -302,10 +191,13 @@ const tick = 'mt-0.5 flex-none text-[var(--color-primary)]';
           {p.data.eyebrow}
         </p>
         <h2 class="text-marketing-h2 mt-3 text-[var(--color-text)]">
-          {p.data.title.replace('{datacenter}', datacenter)}
+          {p.data.title}
         </h2>
         <p class="mt-4 text-[15px] leading-[1.6] text-[var(--color-text-muted)]">
-          {market.datacenter === 'nuremberg' ? p.data.bodyEu : p.data.bodyOutsideEu}
+          {(market.datacenter === 'nuremberg' ? p.data.bodyEu : p.data.bodyOutsideEu).replace(
+            '{datacenter}',
+            datacenter,
+          )}
         </p>
         <ul class="mt-6 space-y-2.5">
           {
@@ -349,7 +241,7 @@ const tick = 'mt-0.5 flex-none text-[var(--color-primary)]';
     </div>
   </Section>
 
-  <!-- 6. The invoice, whole. Where the sale is won or lost. -->
+  <!-- 5. The invoice, whole. Where the sale is won or lost. -->
   <Section padY="md" id="desglose">
     <p class="text-micro font-semibold uppercase tracking-wider text-[var(--color-primary)]">
       {p.cost.eyebrow}
@@ -363,88 +255,9 @@ const tick = 'mt-0.5 flex-none text-[var(--color-primary)]';
       <CostBreakdown market={market} t={p.cost} />
     </div>
 
-    <!-- One-off costs, kept out of the monthly table so the total stays honest. -->
-    <div class="mt-4 grid gap-4 md:grid-cols-2">
-      <div
-        class="rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6"
-      >
-        <div class="flex items-baseline justify-between gap-3">
-          <h3 class="text-[16px] font-semibold tracking-tight text-[var(--color-text)]">
-            {p.setup.title}
-          </h3>
-          <span class="tnum text-[16px] font-semibold whitespace-nowrap text-[var(--color-text)]">
-            {price ? price.setup : p.anchor.quoted}
-          </span>
-        </div>
-        <p class="mt-1 text-[12.5px] uppercase tracking-wider text-[var(--color-text-subtle)]">
-          {p.setup.oneOff}
-        </p>
-        <p class="mt-3 text-[14px] leading-[1.55] text-[var(--color-text-muted)]">{p.setup.body}</p>
-      </div>
-
-      <div
-        class="rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6"
-      >
-        <h3 class="text-[16px] font-semibold tracking-tight text-[var(--color-text)]">
-          {p.setup.migrationTitle}
-        </h3>
-        <p class="mt-3 text-[14px] leading-[1.55] text-[var(--color-text-muted)]">
-          {
-            market.migration === 'flat' && price
-              ? p.setup.migrationFlat.replace('{price}', price.migration)
-              : p.setup.migrationQuote
-          }
-        </p>
-      </div>
-    </div>
   </Section>
 
-  <!-- 7. Flat rate. A headline, not a footnote. -->
-  <Section padY="md" maxWidth="narrow">
-    <div
-      class="rounded-[var(--radius-xl)] border-[1.5px] border-[var(--color-primary)] bg-[var(--color-surface)] p-8 sm:p-10"
-    >
-      <p class="text-micro font-semibold uppercase tracking-wider text-[var(--color-primary)]">
-        {p.flat.eyebrow}
-      </p>
-      <h2 class="text-marketing-h2 mt-3 text-[var(--color-text)]">{p.flat.title}</h2>
-      <p class="mt-4 text-[16px] leading-[1.6] text-[var(--color-text)]">{p.flat.body}</p>
-      <p class="mt-3 text-[15px] leading-[1.6] text-[var(--color-text-muted)]">{p.flat.why}</p>
-      <p class="mt-6 text-[14px] text-[var(--color-text-muted)]">
-        {p.flat.multisite}{' '}
-        <a
-          href={contactUrl}
-          class="font-medium text-[var(--color-primary)] underline underline-offset-2 hover:text-[var(--color-primary-hover)]"
-        >
-          {p.flat.multisiteCta}
-        </a>
-      </p>
-    </div>
-  </Section>
-
-  <!-- 8. What the fee buys. Concrete, no adjectives. -->
-  <Section padY="md">
-    <p class="text-micro font-semibold uppercase tracking-wider text-[var(--color-primary)]">
-      {p.included.eyebrow}
-    </p>
-    <h2 class="text-marketing-h2 mt-3 text-[var(--color-text)]">{p.included.title}</h2>
-    <ul class="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-      {
-        [...p.included.items, ...(market.fiscal === 'verifactu' ? [p.included.verifactu] : [])].map(
-          (item) => (
-            <li class="rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6">
-              <span class="text-[var(--color-primary)]">
-                <Icon name="check" size={18} />
-              </span>
-              <p class="mt-3 text-[14px] leading-[1.55] text-[var(--color-text)]">{item}</p>
-            </li>
-          ),
-        )
-      }
-    </ul>
-  </Section>
-
-  <!-- 9. Leaving. Almost no software site has this section, which is why it works. -->
+  <!-- 6. Leaving. Almost no software site has this section, which is why it works. -->
   <Section padY="md" maxWidth="narrow">
     <p class="text-micro font-semibold uppercase tracking-wider text-[var(--color-primary)]">
       {p.leave.eyebrow}
@@ -465,7 +278,7 @@ const tick = 'mt-0.5 flex-none text-[var(--color-primary)]';
   </Section>
 
   {
-    /* 10. Markets with no fiscal integration must read this before buying, not
+    /* 7. Markets with no fiscal integration must read this before buying, not
       after. It sits in the page, not only in the FAQ. */
   }
   {
@@ -489,7 +302,7 @@ const tick = 'mt-0.5 flex-none text-[var(--color-primary)]';
     )
   }
 
-  <!-- 11. Real objections. -->
+  <!-- 8. Real objections. -->
   <Section padY="md" maxWidth="narrow">
     <h2 class="text-marketing-h2 text-[var(--color-text)]">{p.faq.title}</h2>
     <ul class="mt-8 divide-y divide-[var(--color-border-subtle)]">
@@ -515,7 +328,7 @@ const tick = 'mt-0.5 flex-none text-[var(--color-primary)]';
     <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
   </Section>
 
-  <!-- 12. One action. -->
+  <!-- 9. One action. -->
   <Section padY="md">
     <div
       class="rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface-sunken)] p-10 text-center"
@@ -541,10 +354,10 @@ const tick = 'mt-0.5 flex-none text-[var(--color-primary)]';
         {p.anchor.plan}
       </p>
       <p class="tnum truncate text-[15px] font-semibold text-[var(--color-text)]">
-        {price ? `${price.monthly} ${p.cost.perMonth}` : p.anchor.quoted}
+        {market.free} {p.anchor.per}
       </p>
     </div>
-    <Button href={contactUrl} size="sm">{p.ctaPrimary}</Button>
+    <Button href="#partners" size="sm">{p.ctaSecondary}</Button>
   </div>
   <div class="h-16 lg:hidden" aria-hidden="true"></div>
 </BaseLayout>
