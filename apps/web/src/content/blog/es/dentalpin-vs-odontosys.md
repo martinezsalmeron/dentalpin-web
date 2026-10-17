@@ -2,6 +2,7 @@
 title: "Dentalpin frente a Odontosys: casi 25 años en la nube o tu propio servidor"
 description: "Comparativa entre Odontosys, software dental en la nube usado en más de 20 países de habla hispana, y Dentalpin, open source y autoalojable. Con fuentes."
 pubDate: 2026-09-09
+updatedDate: 2026-10-17
 tags: [comparativa, odontosys, software-dental]
 ---
 
@@ -154,13 +155,13 @@ Dentalpin es la apuesta contraria: que el software de tu clínica no debería se
 
 ## Fuentes
 
-Todas consultadas el 9 de septiembre de 2026:
+Todas consultadas el 9 de septiembre de 2026, y revisadas de nuevo sin cambios el 17 de octubre de 2026:
 
 - [Odontosys, portada](https://odontosys.com/): descripción del producto, características, testimonios, sección *Acerca de* con las cifras de trayectoria, usuarios y países, y las preguntas frecuentes sobre precio, seguridad, migración y baja del servicio.
 - [Odontosys, política de privacidad](https://odontosys.com/privacidad.html) (actualizada en julio de 2026): alojamiento en AWS, cifrado, respaldos, RGPD y Ley N.º 18.331 de Uruguay, rol de encargado del tratamiento, integraciones de Google y WhatsApp.
 - [Odontosys, política e instrucciones para la eliminación de datos](https://odontosys.com/eliminacion-de-datos.html) (actualizada en junio de 2026): plazos, entrega obligatoria de respaldo, opciones A y B de eliminación, ejemplo de subdominio.
 - [Odontosys en Google Play](https://play.google.com/store/apps/details?id=com.app.odontosys.com) (última actualización 25 de julio de 2026): módulo de laboratorio, cobros en una o varias monedas, roles y auditoría, reportes y exportación.
-- Odontosys, tarifas: `odontosys.com/precios/` y `odontosys.com/planes/` devolvieron HTTP 404. El centro de ayuda `help.odontosys.com` devolvió HTTP 403 y no se usó como fuente.
+- Odontosys, tarifas: `odontosys.com/precios/` y `odontosys.com/planes/` devolvieron HTTP 404, sin cambios el 17 de octubre de 2026. El centro de ayuda `help.odontosys.com`, que devolvía HTTP 403, ya responde (revisado el 17 de octubre de 2026); no publica ninguna tarifa, solo artículos de ayuda, así que sigue sin usarse como fuente de precio.
 - [Licencia de Dentalpin](https://github.com/martinezsalmeron/dentalpin/blob/main/LICENSE) y [código fuente](https://github.com/martinezsalmeron/dentalpin).
 - Dentalpin, precios: [/es/precios/](/es/precios/)
 

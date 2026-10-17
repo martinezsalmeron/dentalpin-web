@@ -2,6 +2,7 @@
 title: "Dentalpin frente a Nubimed: dos tarifas publicadas y qué entra en cada plan"
 description: "Comparativa entre Nubimed, software clínico en la nube de Blue Lemon Developers, y Dentalpin, open source y autoalojable. Con precios, fuentes y fechas."
 pubDate: 2026-09-07
+updatedDate: 2026-10-17
 tags: [comparativa, nubimed, software-dental]
 ---
 
@@ -157,7 +158,7 @@ El módulo de migración y las fuentes que cubre están en la página de [precio
 
 ## Fuentes
 
-Todas consultadas el 7 de septiembre de 2026.
+Todas consultadas el 7 de septiembre de 2026, y revisadas de nuevo sin cambios el 17 de octubre de 2026.
 
 - Nubimed, página de inicio: <https://www.nubimed.com/>
 - Nubimed, planes y precios (página fechada el 17 de marzo de 2026): <https://www.nubimed.com/planes-precios/>

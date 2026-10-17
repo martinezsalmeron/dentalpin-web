@@ -2,6 +2,7 @@
 title: "Dentalpin vs Practice-Web: published prices, Windows only, and one clause worth reading"
 description: "Practice-Web publishes every price, has sold since 1988 and installs on Windows. Its agreement also licenses client data for AI training. A sourced comparison."
 pubDate: 2026-09-08
+updatedDate: 2026-10-17
 tags: [comparison, practice-web, fullsteam, dental-software]
 ---
 
@@ -25,7 +26,7 @@ The question that decides between them is whether you are billing American denta
 
 ## What Practice-Web is
 
-Practice management software for dental offices, installed on Windows, sold since 1988. Their home page states "more than 1,700 highly successful clients around the country", and their Serving You page puts the same figure as "more than 1,700 dentists".
+Practice management software for dental offices, installed on Windows, sold since 1988. Their home page states "more than 1,700 highly successful clients around the country", and their Serving You page puts the same figure as "more than 1,700 dentists". The same home page now also carries a separate stats bar giving different numbers: "1994" under "Serving Dentists Since" and "2000" under "Successful Dentists", neither of which matches the "since 1988" / "1,700" figures in the page's own body text. Both sets of numbers are theirs; we are not picking one.
 
 The product modules named on their own overview are Appointments, Dental and Perio Charts, Treatment Plans, Imaging and X-rays, Accounts and Billing, Management and Reports, Patient Texting and Reviews, Paperless and Online Forms, and Dentist and Patient Portals. Around that sits a second catalogue they call Smart Tools, which is priced separately and covered below.
 
@@ -173,7 +174,7 @@ Dentalpin is the other bet: that the software holding clinical records should be
 
 ## Sources
 
-All Practice-Web pages consulted on 8 September 2026:
+All Practice-Web pages consulted on 8 September 2026, and re-checked on 17 October 2026, when the home page's new, conflicting stats bar ("1994" / "2000") was added to the note above. Pricing, the system requirements, the MSA's AI data clause, and the contract term were all re-checked with no changes:
 
 - [Practice-Web home](https://www.practice-web.com/): "serving the dental community since 1988" and "more than 1,700 highly successful clients around the country".
 - [Serving You](https://www.practice-web.com/why-us/serving-you): "more than 1,700 dentists around the country".

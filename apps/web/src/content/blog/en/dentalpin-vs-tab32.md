@@ -2,6 +2,7 @@
 title: "Dentalpin vs tab32: a published tariff, a Year 2 that doubles, and where the open API lives"
 description: "tab32 publishes a full tariff, per-use AI rates and its own cost calculator. Its open API sits in the enterprise tier. A sourced comparison, September 2026."
 pubDate: 2026-09-09
+updatedDate: 2026-10-17
 tags: [comparison, tab32, cloud, dental-software]
 ---
 
@@ -27,7 +28,9 @@ The question that decides between them is whether your practice bills American d
 
 A cloud-native platform, founded in 2012 by CEO Kiltesh Patel, headquartered in Sacramento, California and running on Google Cloud. Their About page describes "tab32's team of 50+ across engineering, data science, product, and customer success" and two products on one codebase: Alpine for private practices, Summit for multi-location groups and DSOs.
 
-The numbers they publish about themselves are specific, and unusually for this market they include an uptime figure: "The platform delivers 99.95% uptime since 2017, with full HIPAA compliance and SOC 2 certification." The same page states 40+ US states, 11M+ patient records and 500M+ treatment records. Their home page states "Trusted by 1,000+ dental practices across California, Texas, Florida, New York, and 40+ states."
+The numbers they publish about themselves are specific, and unusually for this market they include an uptime figure: "The platform delivers 99.95% uptime since 2017, with full HIPAA compliance and SOC 2 certification." The same page states 40+ US states, 11M+ patient records and 500M+ treatment records. The page's own meta description now gives a different, higher figure for the first of those: "the platform powering 13M+ patient records." Both numbers are tab32's own, on the same page, and we are not picking one.
+
+Their home page states "Trusted by 1,000+ dental practices across California, Texas, Florida, New York, and 40+ states."
 
 The feature list is broad and genuinely all-in-one: scheduling with an ASAP list and waitlist, clinical charting with odontogram and perio, digital imaging (X-rays, pano, photos), treatment plans, insurance management, claims with e-attachments, Stripe payments and reports. On top sits a pay-per-use AI layer they call PiAI: voice scribes, voice perio charting, eligibility verification, ERA and EOB auto-posting, appeals handling.
 
@@ -180,7 +183,7 @@ Dentalpin is the other bet: that the software holding clinical records should be
 
 ## Sources
 
-All tab32 pages consulted on 9 September 2026:
+All tab32 pages consulted on 9 September 2026, and re-checked on 17 October 2026, when the About page's new, higher "13M+ patient records" meta-description figure was added to the note above. Pricing, the Alpine/Summit API split, the Terms of Use content licence, and the Privacy Policy retention terms were all re-checked with no changes:
 
 - [Pricing](https://tab32.com/pricing/): the three plans and their caps ("up to 3 providers", "up to 5 providers", "Custom Pricing"), "Year 1: $125/mo · Year 2+: $225/mo", "$0.20/claim · $0.50/claim attachments", the AutoRemind terms ("500 messages included per month", "After Year 1: $69/mo. Overage: $0.08 per message beyond 500/mo."), the Summit "Available Options" block naming Data Warehouse Access, MCP Server and Open API Access, the "Coming soon" labels on Online Booking, Patient Membership Plans, ePrescribe and AI Imaging, the calculator's $311 and $461 estimates, "No setup fee for the Start-Up Package", the migration scope and systems, and the 2-3 day and 2-4 week go-live answers.
 - [Home](https://tab32.com/): "Trusted by 1,000+ dental practices across California, Texas, Florida, New York, and 40+ states", "Claims processing is $0.20/claim, attachments $0.50/claim, and eligibility verification $1.25/check", "Yes, tab32 is 100% cloud-based dental software", and the FAQ describing built-in online booking and imaging.

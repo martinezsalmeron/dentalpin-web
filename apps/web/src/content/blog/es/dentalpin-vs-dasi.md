@@ -2,6 +2,7 @@
 title: "Dentalpin frente a DASI: el odontograma es un extra de 10 € en todos los planes"
 description: "Comparativa entre DASI eClinic, el software en la nube de Dasi Informatica, y Dentalpin, open source y autoalojable. Con precios, fuentes y fechas."
 pubDate: 2026-09-07
+updatedDate: 2026-10-17
 tags: [comparativa, dasi, software-dental]
 ---
 
@@ -170,7 +171,7 @@ Lo que no encaja es el reparto: en un producto que cubre diecisiete especialidad
 
 ## Fuentes
 
-Todas consultadas el 7 de septiembre de 2026:
+Todas consultadas el 7 de septiembre de 2026, y revisadas de nuevo sin cambios el 17 de octubre de 2026:
 
 - [Software Odontología · DASI](https://www.dasi.es/software-odontologia/): los 30 años, "más de 700 clientes en España y Latinoamérica", odontograma infantil y adulto, control de índice de placa y periodoncia, presupuestos con odontograma, radiovisografía, exportación del historial.
 - [Precios · DASI](https://www.dasi.es/precios/): los cinco planes, las cifras mensuales y anuales, el 15 % de descuento anual, "SIN INSTALACIÓN, NI CUOTA DE ALTA, NI PERMANENCIA", la tabla de "funcionalidades extra mensuales" con odontograma, presupuestos, mutuas, multicentro, usuario adicional, API y receta electrónica, y el período mínimo de un mes.

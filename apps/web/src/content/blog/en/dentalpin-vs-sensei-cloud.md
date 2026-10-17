@@ -2,6 +2,7 @@
 title: "Dentalpin vs Sensei Cloud: the packages, the contract, and your data on the way out"
 description: "Sensei Cloud publishes three packages and no price, and gives you 60 days to retrieve your data after termination. A sourced comparison with Dentalpin."
 pubDate: 2026-09-08
+updatedDate: 2026-10-17
 tags: [comparison, sensei-cloud, carestream-dental, dental-software]
 ---
 
@@ -166,7 +167,7 @@ Dentalpin is the other bet: that the software holding clinical records should be
 
 ## Sources
 
-All Carestream Dental pages consulted on 8 September 2026:
+All Carestream Dental pages consulted on 8 September 2026, and re-checked with no changes on 17 October 2026:
 
 - [Sensei Cloud home](https://gosensei.com/): "Smarter Software. Better Patient Care.", "one connected, end-to-end platform", and the footer "Sensei, Sensei Cloud, & the Sensei Logo are trademarks of Carestream Dental LLC. © 2026 Carestream Dental LLC."
 - [Packages](https://gosensei.com/packages-pricing/): the Yellow Belt, Black Belt and Dojo tiers for all four specialties, "1st provider included", "Unlimited users", "Unlimited cloud storage", "Data backup of Sensei Cloud", "Electronic Claims 300 per month per provider", the Patient Manager Essentials contents at Dojo, and the eleven add-ons including "Additional Providers", "Practice Management Data Conversion" and "Imaging Data Conversion". No price figure appears on the page.

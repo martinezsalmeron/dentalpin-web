@@ -2,6 +2,7 @@
 title: "Dentalpin frente a Dendoo: tarifa publicada, contrato publicado y una cosa que falta"
 description: "Comparativa entre Dendoo, software dental en la nube con tarifa y contrato públicos, y Dentalpin, open source y autoalojable. Con precios, fuentes y fechas."
 pubDate: 2026-09-08
+updatedDate: 2026-10-17
 tags: [comparativa, dendoo, software-dental]
 ---
 
@@ -33,7 +34,7 @@ En informes publican una lista larga: pagos y descuentos, cálculo automático d
 
 También publican lo que no hacen, y eso es raro y honesto: su propia página dice que el producto "no incluye inventario ni app móvil".
 
-> **Dendoo publica su tarifa dos veces y no coinciden.** La página de planes fija Agenda en 19 €/mes, Pro en 25 €/mes y Clínica en 59 €/mes + IVA. La sección de preguntas frecuentes de la portada, bajo "¿Qué planes de pago existen?", dice "Plan Pro: 20 €/mes + IVA (1 usuario). Plan Clínica: 50 €/mes + IVA (10 usuarios, 120 GB)", y no menciona el plan Agenda. Antes de firmar, pide por escrito cuál de las dos rige.
+La página de planes fija Agenda en 19 €/mes, Pro en 25 €/mes y Clínica en 59 €/mes + IVA. La sección de preguntas frecuentes de la portada, bajo "¿Qué planes de pago existen?", cita las mismas cifras para Pro y Clínica ("Plan Pro: 25 €/mes + IVA (1 usuario). Plan Clínica: 59 €/mes + IVA (10 usuarios, 120 GB)"), aunque sigue sin mencionar el plan Agenda.
 
 Sobre el IVA, el contrato zanja lo que la tabla deja a medias: en la página de planes el rótulo "+ IVA" solo acompaña al plan Clínica, pero la cláusula 4.2 dice que "Todos los precios se muestran sin IVA, salvo mención expresa".
 
@@ -90,7 +91,6 @@ Solo filas verificables. Donde no hay dato público, lo decimos.
 | Modelo | Licencia de uso SaaS | Open source (BSL 1.1 → Apache 2.0 a los 4 años) |
 | Despliegue | ✓ Navegador, sin servidor propio | ~ Tu servidor, tu proveedor, o local |
 | Precio publicado | ✓ 19, 25 y 59 €/mes + IVA | ✓ 0 €, todo incluido |
-| Coherencia de la tarifa | ✗ Dos cifras distintas por plan | ✓ Una sola |
 | Plan gratuito | ~ Limitado: 1 usuario, 500 pacientes | ✓ Completo |
 | WhatsApp | ✗ 19 €/mes + IVA por canal | ✓ Incluido |
 | Control horario del personal | ✓ Con vacaciones e informes | ✗ No lo tenemos |
@@ -160,7 +160,7 @@ Dentalpin es la apuesta contraria: que el software de tu clínica no debería se
 
 ## Fuentes
 
-Todas consultadas el 8 de septiembre de 2026.
+Todas consultadas el 8 de septiembre de 2026, y revisadas de nuevo el 17 de octubre de 2026, cuando se corrigió que la tarifa de la portada y la de la página de planes ya coinciden para Pro y Clínica (antes la portada decía 20 €/mes y 50 €/mes, ahora dice 25 €/mes y 59 €/mes, igual que la página de planes).
 
 - Dendoo, página de inicio, con las cifras de disponibilidad, seguridad, clientes escuchados, clínicas piloto y las preguntas frecuentes de precio: <https://dendoo.es/>
 - Dendoo, planes y precios, con la tabla de los tres planes, los extras, el modo gratuito limitado y la línea de implantación: <https://dendoo.es/planes-precios>
