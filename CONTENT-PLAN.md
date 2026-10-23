@@ -95,13 +95,31 @@ most of its budget finding out. Checked again on 12 October 2026:
 
 These do answer, and are worth going to first: `boe.es` (consolidated
 texts, fetch with `&tn=0` and grep locally, the pages are ~1 MB),
-`gesetze-im-internet.de` (curl, not WebFetch, which gets 503),
-`legislation.gov.uk`, `api.sejm.gov.pl/eli/acts/<publisher>/<year>/<pos>/text.html`
+`gesetze-im-internet.de` (**checked 23 October 2026: the advice here was
+backwards that run. curl was reset by the egress proxy on every attempt and
+user agent, and WebFetch answered. Try both before giving up on a German
+provision**), `legislation.gov.uk`,
+`api.sejm.gov.pl/eli/acts/<publisher>/<year>/<pos>/text.html`
 for Poland with `/eli/acts/search?title=` to find the current tekst
-jednolity, and `pgdlisboa.pt` for consolidated Portuguese law, published
+jednolity (**the `text.html` endpoint returned 200 with a zero-byte body on
+23 October 2026; `text.pdf` served the full consolidated act, so fall back to
+the PDF and `pdftotext` it**), and `pgdlisboa.pt` for consolidated Portuguese law, published
 by the Procuradoria-Geral Distrital de Lisboa. `diariodarepublica.pt` is
 a JavaScript shell that returns 2 KB to every client, so Portugal goes
 through pgdlisboa.
+
+Two more that answered on 23 October 2026 and are worth knowing about.
+**Italian articles can be read from `gazzettaufficiale.it` even though
+Normattiva will not serve them**: open the act's `vediMenuHTML` index, take
+the `caricaArticolo` link for the article you want, and fetch that. That is
+how the 2023 amendment to art. 2 of legge 409/1985 was sourced. And for
+**German case law, `nrwe.justiz.nrw.de` returns 503 to WebFetch and resets
+the connection to curl**, but the Landeszahnärztekammer Baden-Württemberg
+Urteilsdatenbank on `lzk-bw.de` reproduces the Leitsätze and the citation
+chain of the decisions that matter, and it is a chamber of public law rather
+than a legal publisher. The Bundeszahnärztekammer's own
+`BZAEK_MBO-Kommentar.pdf`, hosted on the same site, is the best German source
+on the limits of the Approbation and quotes § 1 Abs. 3 ZHG directly.
 
 When the text of a provision cannot be reached from an official source,
 **the provision is dropped from the post and the post says so**, with
