@@ -98,7 +98,14 @@ texts, fetch with `&tn=0` and grep locally, the pages are ~1 MB),
 `gesetze-im-internet.de` (**checked 23 October 2026: the advice here was
 backwards that run. curl was reset by the egress proxy on every attempt and
 user agent, and WebFetch answered. Try both before giving up on a German
-provision**), `legislation.gov.uk`,
+provision. **A later run the same day found neither working**: WebFetch
+answered 503 to `__630c.html` on three attempts, curl was reset, and
+`recht.bund.de` 404s. So this source is intermittent within a single day,
+and a German provision it will not serve is dropped per the rule below,
+not sourced from dejure or another legal publisher. For zahnärztliches
+Berufsrecht the chamber sources answer reliably: the BZÄK
+`BZAEK_MBO-Kommentar.pdf` and the Berufsordnung PDF, both on
+`lzk-bw.de`**), `legislation.gov.uk`,
 `api.sejm.gov.pl/eli/acts/<publisher>/<year>/<pos>/text.html`
 for Poland with `/eli/acts/search?title=` to find the current tekst
 jednolity (**the `text.html` endpoint returned 200 with a zero-byte body on
