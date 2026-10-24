@@ -2,6 +2,7 @@
 title: "Dentalpin vs iDentalSoft: $395 a month per practice, and what the order form decides"
 description: "iDentalSoft publishes a $395 starter price charged per practice, not per user. What their own pricing page and terms add to that, checked September 2026."
 pubDate: 2026-09-11
+updatedDate: 2026-10-24
 tags: [comparison, identalsoft, usa, dental-software]
 ---
 
@@ -50,7 +51,7 @@ A third block, "Setup and Support Services", lists data and image migration per 
 
 > **The AI is the marketing and the AI is the add-on.** The home page presents the AI tools as "built-in dental AI tools" that "eliminate manual steps across clinical and front office workflows. No third-party systems needed." The pricing page lists those same tools outside the Starter plan, and the integrations page names BetterDiagnostic for AI imaging, GetHelpDesk for the AI receptionist and Dragon Voice for perio dictation. Both pages are theirs. Ask which of the two describes the quote you are given.
 
-Their pages also disagree on what has shipped. The home page describes an AI Dental Scribe and an AI Dental EOB as current tools; the pricing page lists "AI Scribe", "AI EOB & ERA Auto Post", "AI Eligibility Coverage Update" and "AI Voice Confirmation" under "Upcoming". The mobile app is "Available this September" on the home page, with no year stated.
+The mobile app is "Available this September" on the home page, with no year stated.
 
 The annual option is published as an option and not as a number: "Choose an annual subscription for added discount."
 
@@ -172,7 +173,7 @@ Where we would push back is on everything the order form decides. A published $3
 
 ## Sources
 
-All consulted on 11 September 2026.
+All consulted on 11 September 2026, and re-checked on 24 October 2026, when a sentence about the pricing page labelling four AI tools "Upcoming" was removed: those tools ("AI Scribe", "AI EOB & ERA Auto Post", "AI Eligibility Coverage Update", "AI Voice Confirmation") are now simply listed among the other unpriced, contact-us AI add-ons, with no "Upcoming" distinction.
 
 - [iDentalSoft home page](https://www.identalsoft.com/): the "cloud-based, all-in-one" description, "2,300+ dentists", the feature lists for patient engagement, clinical workflows and practice finances, HL7 support, "private cloud infrastructure with isolated data storage", the AI tools block including "No third-party systems needed", the mobile app "Available this September", the FQHC/RHC/CHC block with UDS reporting and CMS-1450 (UB-04), and the four onboarding steps with migration "within a week".
 - [Dental software pricing](https://www.identalsoft.com/dental-software-pricing): "as low as $395/month", the full Starter plan feature list, the "Tools you can include in your plan" block with "Contact us for package options and pricing", the Setup and Support Services list, the annual discount line, "Chosen by 2,300+ dental practices nationwide", and the FAQ answers on per-practice pricing, removing an add-on, data export on ending the subscription and the view-only plan.

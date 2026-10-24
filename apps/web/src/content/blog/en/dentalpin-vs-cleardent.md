@@ -2,6 +2,7 @@
 title: "Dentalpin vs ClearDent: three ways to deploy, one Microsoft stack"
 description: "ClearDent sells on-premise, cloud and hybrid, and every path runs on Microsoft. Sourced from ClearDent's own pages, specs and contract, September 2026."
 pubDate: 2026-09-10
+updatedDate: 2026-10-24
 tags: [comparison, cleardent, canada, dental-software]
 ---
 
@@ -182,7 +183,7 @@ Dentalpin is the other bet: that the software holding a practice's clinical reco
 
 ## Sources
 
-All consulted on 10 September 2026.
+All consulted on 10 September 2026, and re-checked with no changes on 24 October 2026.
 
 - [About ClearDent](https://www.cleardent.com/about/): founding year, founders, Burnaby address, "over 20 years".
 - [ClearDent home page](https://www.cleardent.com/): the three platforms, "over 35,000 Canadian dental professionals", "over 2,000,000 patient records", the FAQ on deployment options and Canadian hosting.

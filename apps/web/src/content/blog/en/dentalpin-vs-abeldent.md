@@ -2,6 +2,7 @@
 title: "Dentalpin vs ABELDent: a genuinely free tier, a Windows-only cloud, and 1977"
 description: "ABELDent has served practices since 1977 and gives a working version away free. Its cloud still runs on Windows workstations. Sourced, September 2026."
 pubDate: 2026-09-10
+updatedDate: 2026-10-24
 tags: [comparison, abeldent, canada, dental-software]
 ---
 
@@ -152,7 +153,7 @@ Dentalpin is the other bet: that software holding clinical records should be rea
 
 ## Sources
 
-All ABELDent pages consulted on 10 September 2026:
+All ABELDent pages consulted on 10 September 2026, and re-checked with no changes on 24 October 2026:
 
 - [Home](https://www.abeldent.com/): "Built for Canadian and U.S. dental practices", "5,000+ Dental Practices", "40,000+ ABELDent Users", "4.9 Google Approval Rating", the ABELDent Scribe and AI Radiograph Analysis descriptions, the "Electronic Claims" feature entry, and the Microsoft Marketplace purchase links.
 - [About](https://www.abeldent.com/about/): "Serving healthcare professionals since 1977, ABELDent Inc.", the Burlington, Ontario and Buffalo, New York addresses, "company owners Arun Rele, Chairman & CEO and Bina Rele, V.P. Sales", and the six employees with thirty or more years of service.

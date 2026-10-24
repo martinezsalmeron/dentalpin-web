@@ -2,6 +2,7 @@
 title: "Dentalpin vs Aerona: per treatment room, unlimited users, no published figure"
 description: "Aerona prices AeronaDental per treatment room with unrestricted users, but publishes no figure. Sourced from their own pages and contract, September 2026."
 pubDate: 2026-09-10
+updatedDate: 2026-10-24
 tags: [comparison, aerona, uk, ireland, dental-software]
 ---
 
@@ -156,7 +157,7 @@ Dentalpin is the other bet: that software holding clinical records should be rea
 
 ## Sources
 
-All Aerona pages consulted on 10 September 2026:
+All Aerona pages consulted on 10 September 2026, and re-checked with no changes on 24 October 2026:
 
 - [Home](https://aerona.com/) and [Dental Software](https://aerona.com/dental-software/): "AeronaDental is a cloud-based practice management software solution that delivers best in class functionality for clinicians and business owners", "Why do 6000 worldwide users choose AeronaDental?", and "No hardware costs, no licence costs".
 - [About Us](https://aerona.com/aboutaeronasoftware/): "founded in 2003 by Brigeen Peto", "In 2005, AeronaDental was launched as a desktop software solution", "In 2010 AeronaDental again evolved to become one of the very first Cloud-based software solutions", "AeronaDental was purchased by Soho Capital France in summer 2022", "part of a family of European dental software companies across France, Portugal & Poland", the Derry/Londonderry headquarters address, and the DSSA and Innovate NI footer marks.

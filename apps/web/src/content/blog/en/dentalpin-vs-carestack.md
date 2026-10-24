@@ -2,6 +2,7 @@
 title: "Dentalpin vs CareStack: a published price, and the cost of leaving"
 description: "CareStack publishes US plans from $829 a month, states 3,000+ practices, and charges hourly to export your data. Dentalpin is open source and self-hosted."
 pubDate: 2026-09-07
+updatedDate: 2026-10-24
 tags: [comparison, carestack, good-methods-global, dental-software]
 ---
 
@@ -109,7 +110,7 @@ There is more green on their side of that table than on ours, and there should b
 
 One number is worth flagging because it appears twice, differently.
 
-> **CareStack publishes two install-base figures on the same home page.** The hero says "More than 2500 dental practices trust CareStack" and a section further down says "Trusted by 3000+ Dental Practices" (both consulted 7 September 2026). The company page agrees with the larger one, so that is what the table uses. The UK site publishes a third, "Trusted by 300+ Dental Practices", for that market.
+> **CareStack's home page no longer shows two different install-base figures.** The hero now reads "More than 3000 dental practices trust CareStack", matching the "Trusted by 3000+ Dental Practices" section further down the same page (it read "2500" in the hero at an earlier check). The company page's headline figure agrees, so that is what the table uses — though its "our story" section separately states it supports "over 1,500 dental practices in the United States", which reads as a US-only subset of the global total rather than a contradiction. The UK site still publishes a third figure, "Trusted by 300+ Dental Practices", for that market.
 
 ## Choose CareStack if
 
@@ -136,7 +137,7 @@ This section is meant seriously, not as a formality.
 
 Their contract is clear that the data is yours: "Customer shall retain all right, title and interest in and to the Customer Data, including all intellectual property rights therein." That sentence is better than a lot of what we read in this market, and it should be said first.
 
-What follows it is the part to read before signing. Under the same SaaS Customer Agreement, getting a copy out works like this:
+What follows it is the part to read before signing. Under the same SaaS Customer Agreement, clause 7.4 scopes this specifically to termination of the agreement by CareStack for its convenience, not to every way the agreement can end, and within that scope, getting a copy out works like this:
 
 1. **You ask in writing**, at least 10 days before the date you want the export.
 2. **CareStack picks the format**, "in a format selected by CareStack (in its discretion)".
@@ -179,7 +180,7 @@ Dentalpin is the other bet: that the software holding clinical records should be
 
 ## Sources
 
-All CareStack pages consulted on 7 September 2026:
+All CareStack pages consulted on 7 September 2026, and re-checked on 24 October 2026, when the home page's install-base figure was corrected (the hero now reads 3000, matching the figure further down the page) and the data-export clause (7.4) was clarified as scoped to termination by CareStack for its convenience:
 
 - [CareStack home](https://carestack.com/): "Modern, Secure, Cloud-Based Dental Software for Growing Your Practice", "More than 2500 dental practices trust CareStack", "Trusted by 3000+ Dental Practices", and "CareStack is fully compliant with HIPAA and possesses SOC 2 Type 2 and ISO 27001:2022 certifications".
 - [Pricing](https://carestack.com/pricing): "All-in-one Dental Platform. Transparent Pricing.", Essentials "Starting at $829 / month", Intelligence "Starting at $1299 / month", the full feature comparison table in which only the four AI-Powered Diagnostics rows are marked "No" for Essentials, the implementation fee answer, the licensing answer, and the FAQ answer directing pricing to a demo.

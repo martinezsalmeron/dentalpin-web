@@ -2,6 +2,7 @@
 title: "Dentalpin vs Archy: one published price, three unpriced suites, and a contract worth reading"
 description: "Archy publishes $899/month per location with unlimited users and providers. The three AI suites are unpriced. A sourced comparison, September 2026."
 pubDate: 2026-09-09
+updatedDate: 2026-10-24
 tags: [comparison, archy, cloud, dental-software]
 ---
 
@@ -13,7 +14,7 @@ We make Dentalpin, so we are not neutral. What we can be is accurate.
 
 ## In thirty seconds
 
-**Archy** is cloud dental practice management software from Archy Dental, Inc., pitched as "Replace 5+ products with one cloud software" and stating "32,000+" active users. It runs on AWS, needs no server in the practice, and costs $899 a month per location with unlimited users and unlimited providers included.
+**Archy** is cloud dental practice management software from Archy Dental, Inc., pitched as "Replace 5+ products with one cloud software" and stating "35,000+" active users. It runs on AWS, needs no server in the practice, and costs $899 a month per location with unlimited users and unlimited providers included.
 
 **Dentalpin** is open source and costs nothing to license: no fee per chair, per dentist or per patient, the code published, the records on hardware you choose. In exchange it is from 2026, somebody has to own the server, and it has no imaging and nothing for US insurance.
 
@@ -27,7 +28,7 @@ The question that decides between them is whether you want the practice's softwa
 
 A cloud-native, all-in-one platform for US dental practices, built by Jon Rat (CEO) and Ben Kolin (CTO), described on their About page as former Uber colleagues who started the company after Rat's wife, a practising dentist, kept fighting her own software. The team is spread across "6 Countries" and "5 Time Zones", and their About page states "Our U.S.-based support team, made up of former dental office managers".
 
-The numbers they publish about themselves are usage figures rather than a practice count: "4.3 MILLION+" patients, "2.5 MILLION+" claims created, "60 MILLION+" images processed, and "ACTIVE USERS: 32,000+". No count of practices or locations appears on any page consulted, so the 32,000 is people, not offices.
+The numbers they publish about themselves are usage figures rather than a practice count: "5.2 MILLION+" patients, "3 MILLION+" claims created, "60 MILLION+" images processed, and "ACTIVE USERS: 35,000+". No count of practices or locations appears on any page consulted, so the 35,000 is people, not offices.
 
 The platform itself is broad and genuinely all-in-one. Scheduling with an ASAP list, appointment finder, online forms and kiosk mode; clinical charting, treatment planning, integrated imaging and clinical notes; insurance claim management and billing; online, in-person and text-to-pay payments; a patient portal, two-way and bulk texting, email marketing; reporting, team chat and time tracking. There is a native mobile app for x-rays, texting and the schedule.
 
@@ -63,7 +64,7 @@ It runs in any modern browser, on Windows, macOS or Linux. What it does not have
 
 ## Side by side
 
-Verifiable rows only. Archy's figures are its own, from its own pages, consulted 9 September 2026.
+Verifiable rows only. Archy's figures are its own, from its own pages, consulted 9 September 2026 and re-checked 24 October 2026.
 
 | | Archy | Dentalpin |
 |---|---|---|
@@ -88,7 +89,7 @@ Verifiable rows only. Archy's figures are its own, from its own pages, consulted
 | HIPAA business associate agreement | ✓ Published as Exhibit A to the MSA | ✗ Not offered |
 | Published uptime or SLA | ✗ None on the pages consulted | ✗ None published |
 | Own security certification | ✗ None on the pages consulted | ✗ None |
-| People using it | ✓ 32,000+ active users stated | ✗ Very few so far |
+| People using it | ✓ 35,000+ active users stated | ✗ Very few so far |
 | Documented API | ✗ None on the pages consulted | ✓ REST with OpenAPI, in every install |
 | Direct SQL access to your data | ✗ Not offered | ✓ It is your database |
 | Auditable code | ✗ No | ✓ Published on GitHub |
@@ -175,10 +176,10 @@ Dentalpin is the other bet: that the software holding clinical records should be
 
 ## Sources
 
-All Archy pages consulted on 9 September 2026:
+All Archy pages consulted on 9 September 2026, and re-checked on 24 October 2026, when the home page's usage figures were corrected (patients, claims created and active users had all grown; images processed was unchanged):
 
 - [Pricing](https://www.archy.com/pricing): "Run your practice on Archy for $899/month", "One platform price per location", "No seat-based pricing. No provider-based pricing.", the included list ("Unlimited users", "Unlimited providers", "Unlimited claim submissions", "Unlimited eligibility checks", "Unlimited texting"), the new-practice offer ("$400 /month until 400 patients or 1 year per location"), and the Clinical, Front Office and Marketing Suites plus the add-on block, each carrying a "Get Pricing" button and no figure.
-- [Home](https://www.archy.com): "Replace 5+ products with one cloud software", "4.3 MILLION+" patients, "2.5 MILLION+" claims created, "ACTIVE USERS: 32,000+", "60 MILLION+" images processed, and the "80 hours" and "$8,000" savings claims.
+- [Home](https://www.archy.com): "Replace 5+ products with one cloud software", "5.2 MILLION+" patients, "3 MILLION+" claims created, "ACTIVE USERS: 35,000+", "60 MILLION+" images processed, and the "80 hours" and "$8,000" savings claims.
 - [Archy AI Agents](https://www.archy.com/ai): Archy Revenue, Archy Scribe and Archy Intelligence marked "Live today"; Archy Verify and Archy Connect marked "Coming soon".
 - [Cloud Benefits](https://www.archy.com/solutions/cloud): the AWS hosting description, "ISO 9001 and SSAE 18 certifications", "HIPAA-compliant Amazon Web Services based infrastructure", the backup description, "Gone are the days of requiring a server for Active Directory", and "retrieving your data is hassle-free and costs nothing, it's your data".
 - [Master Service Agreement](https://www.archy.com/legal/master-service-agreement), last updated 18 March 2025: Archy Dental, Inc. d/b/a Archy; the *Rights in Customer Data* clause on ownership and the "solely" grant, plus the Aggregate/Anonymous Data definition; the *Fees* clause on non-refundable payments; the *Renewals* clause on monthly auto-renewal, 30 days' notice and no cancellation except for cause; the *Customer Data Retrieval* clause on the one-time free export and the $200/month post-termination access fee; and the Business Associate Agreement at Exhibit A.
