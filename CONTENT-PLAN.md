@@ -167,6 +167,68 @@ three of them are whole-act PDFs rather than article pages.
   a legal publisher or an interest group, so the German copy of the row was not
   written rather than sourced from one.
 
+**Checked again on 24 October 2026, filling the `fr`, `pt` and `de` copies of
+that same accessibility row.** All three had been dropped the run before for
+want of an official source, and all three turned out to be reachable by another
+route. The pattern worth reusing: when the consolidated statute is blocked, go
+to the body that enforces the statute, or to the official gazette PDF.
+
+- **Portugal is not blocked after all: the ELI address with a `/pdf` suffix
+  serves the official gazette.** `data.dre.pt/eli/<type>/<no>/<year>/<mm>/<dd>/p/dre/pt/pdf`
+  redirects to `files.diariodarepublica.pt` and returned the full Diário da
+  República issue (2.2 MB for d.l. 82/2022, 1.3 MB for Portaria 220/2023). The
+  `/html` shape on the same ELI path still returns only the 2 KB OutSystems
+  shell, which is what the note above recorded. **So Portugal goes through
+  `data.dre.pt` with `/pdf`, not through pgdlisboa, and the earlier conclusion
+  that Portugal had to be dropped was wrong.** Run `pdftotext -layout` on these:
+  the Portaria sets the requirements in a two-column "Requisitos previstos /
+  Exemplos indicativos" table that interleaves unreadably without it (the
+  opposite of the Italian GU advice above).
+- **Germany: `gesetze-im-internet.de` failed a fifth and sixth time** (503 to
+  WebFetch, `Recv failure: Connection reset by peer` to curl on three URL
+  shapes), and the proxy's own `recentRelayFailures` listed the host. Two
+  official routes answered instead. **The Bundestag document server serves
+  statute text and its Begründung as PDF**: `dserver.bundestag.de/btd/19/286/1928653.pdf`
+  is the government bill for the BFSG, 102 pages, and carries § 2 Nr. 17 and
+  Nr. 26 verbatim plus the reasoning on what the e-commerce category covers.
+  It is the bill rather than the consolidated text, so **confirm the paragraph
+  numbering against the enforcing authority before quoting it**. That authority
+  is the second route: the **MLBF** (Marktüberwachungsstelle der Länder, an
+  Anstalt öffentlichen Rechts) at `mlbf-barrierefrei.de`, whose FAQ and
+  "Informationen für Unternehmen" pages state the closed list of covered
+  services, the Kleinstunternehmen thresholds, the § 38 transitional dates and
+  the Anlage 3 information duty. `gewerbeaufsicht.bayern.de` corroborates dates
+  and competence. `marktueberwachungsstelle.de` does not resolve; the site is
+  `mlbf-barrierefrei.de`.
+- **France: Légifrance still returns 403**, so that note stands for a third
+  run. **`francenum.gouv.fr` is the find**: the State's business-digitisation
+  service publishes a detailed page on e-commerce accessibility that gives the
+  official definition, the thresholds, the five items of the annex to art.
+  D. 412-57, the annex to D. 412-60, and the contravention amounts. **Arcom PDFs
+  quote code articles verbatim** with footnote references, and
+  `entreprendre.service-public.gouv.fr` answers (note `service-public.fr`
+  301-redirects to `service-public.gouv.fr`; WebFetch returns the redirect
+  rather than following it). **`economie.gouv.fr` returns 403 to both WebFetch
+  and curl**, so the DGCCRF's own fiches are not readable from here even though
+  the DGCCRF is the enforcing authority. **`handicap.gouv.fr` PDFs load through
+  WebFetch but not curl**, which returns a 6 KB interstitial.
+- **EUR-Lex could not be read again, and neither could the Parliament.** The
+  HTML, TXT, PDF and ELI shapes on `eur-lex.europa.eu`, plus
+  `data.europa.eu/eli/...` and `europarl.europa.eu/doceo/...`, all returned
+  **HTTP 202 with a zero-byte body**. `ec.europa.eu` does answer. Treat the
+  directive text as unavailable and cite the national transposition, which is
+  the better source anyway; where a transposition defers its definitions to the
+  directive, as Portugal's art. 3.º does, say so in the post and decline to
+  quote the definition.
+
+One correction to this row's own source list, which named the wrong French
+instrument: **France transposed the directive into the Code de la consommation,
+art. L. 412-13** (by art. 16 of loi n° 2023-171 du 9 mars 2023), with décret
+n° 2023-931 and arts. D. 412-57 and D. 412-60. Loi 2005-102 art. 47 is the
+public-sector website rule and is not the provision that binds a cabinet. The
+row also suggested reading the BFSG "on dejure.org", which this document bars
+as a legal publisher; use the two German routes above instead.
+
 When the text of a provision cannot be reached from an official source,
 **the provision is dropped from the post and the post says so**, with
 the reader sent to the body that can answer. That is what the Italian
@@ -1388,7 +1450,7 @@ official sources, not translations of each other.
 | El paciente llega con el trabajo de otro dentista: qué se le dice, qué se anota y qué no se critica | `paciente-viene-de-otro-dentista` / `new-patient-previous-dentist-work` / `reprise-de-soins-patient-d-un-confrere` / `paciente-vem-de-outro-dentista` / `patient-vom-vorbehandler-zahnarztpraxis` / `paziente-da-un-altro-dentista` | paciente viene de otro dentista · Added 8 October 2026, intent verified this run in French and German, clinic-side in both (French: MACSF "Un chirurgien-dentiste peut-il reprendre des soins à la suite d'un confrère ?" and its piece on an imprudent certificate about a colleague's work; German: zwp-online on VG Minden 2005, where a Kammer reprimand for criticising a Vorbehandler was overturned, iww on Schweigepflicht and a colleague's Behandlungsfehler, and the Landeszahnärztekammer Berufsordnungen). Polish slug `pacjent-od-innego-dentysty`. Distinct from `derivacion-pacientes-clinica-dental` (a planned transfer between two clinics that agree) and `tercero-pide-la-historia-clinica-dental` (records requests); this row is the unplanned arrival: documenting the findings factually, what may be said about the previous work, and when the patient must be told. Sources: Code de la santé publique R.4127-259 and the reprise-de-soins article of the code de déontologie on Légifrance; § 630c Abs. 2 Satz 2 BGB on dejure.org; the Código Español de Ética y Deontología Dental chapter on relations between colleagues. |
 | Pacientes que traen pacientes: qué se puede ofrecer a cambio de una recomendación y qué no | `pacientes-que-recomiendan-clinica-dental` / `patient-referral-rewards-dental-practice` / `parrainage-patients-cabinet-dentaire` / `indicacao-de-pacientes-clinica-dentaria` / `patienten-werben-patienten-zahnarztpraxis` / `passaparola-pazienti-studio-dentistico` | programa de referidos clínica dental · Added 8 October 2026, intent verified this run in German and French, clinic-side in both (German: zwp-online and iww on Werberecht, zm-online on Empfehlungsmarketing, all treating "Patienten werben Patienten" as a practice question; French: ONCD documents on the déontologie of publicité and inducements). **The Spanish check came back thin**: translated growth-library pages and the code of ethics, no Spanish trade-press piece, so the Spanish post should answer the deontology question rather than chase a marketing query. Polish slug `polecenia-pacjentow-gabinet-stomatologiczny`. Distinct from `resenas-google-clinica-dental` (public reviews, where incentives are a platform-policy problem) and `marketing-local-clinica-dental`; this row is the private recommendation and the reward attached to it, which is where the law bites: § 7 HWG (Zuwendungen und Werbegaben) and § 11 HWG as reformed in 2012 on dejure.org, Code de la santé publique R.4127-215 as amended by the décret of 22 December 2020 on Légifrance, and arts. 55-56 of the Spanish code of ethics. |
 | Primera visita gratis: qué dice la norma, qué se registra igual y por qué puede salir cara | `primera-visita-gratis-clinica-dental` / `free-first-dental-consultation` / `premiere-consultation-gratuite-dentiste` / `primeira-consulta-gratis-dentista` / `kostenlose-erstberatung-zahnarztpraxis` / `prima-visita-gratuita-dentista` | primera visita gratuita clínica dental legal · Added 8 October 2026, intent verified this run in German and Spanish, clinic-side in both (German: zm-online "Werbung für kostenlose Implantat-Sprechstunde ist rechtswidrig", iww on GOZ and Berufsordnung for free or discounted services, zwp-online on what dental advertising may do; Spanish: the COEM advertising decálogo and the coverage of the iDental "primera revisión gratis" model). **Target the clinic-side phrasing: bare "primera visita gratis dentista" is a patient bargain query.** Polish slug `bezplatna-pierwsza-wizyta-u-dentysty`. Distinct from `publicidad-clinica-dental-normativa` (whose price rule is the full-treatment price) and from `convertir-consultas-en-citas-dental`; this row is the zero-price service itself: the GOZ minimum-fee rule (§§ 2 and 5 GOZ) in Germany, art. 20 TRLGDCU and RD 1907/1996 in Spain, and the fact that a free visit is still a full clinical record and, where a market requires it, a document of the transaction. |
-| La web de la clínica y la ley de accesibilidad: cuándo obliga y qué cambia si se reserva online | `accesibilidad-web-clinica-dental` / `website-accessibility-dental-practice` / `accessibilite-site-cabinet-dentaire` / `acessibilidade-site-clinica-dentaria` / `barrierefreie-website-zahnarztpraxis` / `accessibilita-sito-studio-dentistico` | accesibilidad web clínica dental · Added 8 October 2026, intent verified this run in German and French, clinic-side in both (German: zm-online "Mehr als nur Farbe und große Schrift" and "Barrierefreiheit meets Customer Journey", zwp-online "Digitale Barrierefreiheit in der Zahnarztpraxis" and its 2024 warning on Abmahnungen, Forvis Mazars on the BFSG for practices; French: law-firm and DGCCRF-enforcement pieces on the 28 June 2025 obligation applied to cabinets). Polish slug `dostepnosc-strony-gabinetu-stomatologicznego`. **The finding worth the post**: the obligation attaches to a booking service offered on the site, not to the site as a brochure, so linking out to a third-party booking page and embedding one are different answers, and the micro-enterprise exemption (under 10 staff and 2 M€) removes many clinics entirely. Distinct from `reserva-citas-online-dental` (whether to open the diary) and the web section of `marketing-local-clinica-dental`. Sources: Directive (EU) 2019/882; BFSG on dejure.org; loi 2005-102 art. 47 as amended in 2023 on Légifrance; Spain's Ley 11/2023 on boe.es, which the writer must read before saying anything about Spain. |
+| La web de la clínica y la ley de accesibilidad: cuándo obliga y qué cambia si se reserva online | `accesibilidad-web-clinica-dental` / `website-accessibility-dental-practice` / `accessibilite-site-cabinet-dentaire` / `acessibilidade-site-clinica-dentaria` / `barrierefreie-website-zahnarztpraxis` / `accessibilita-sito-studio-dentistico` | accesibilidad web clínica dental · Added 8 October 2026, intent verified this run in German and French, clinic-side in both (German: zm-online "Mehr als nur Farbe und große Schrift" and "Barrierefreiheit meets Customer Journey", zwp-online "Digitale Barrierefreiheit in der Zahnarztpraxis" and its 2024 warning on Abmahnungen, Forvis Mazars on the BFSG for practices; French: law-firm and DGCCRF-enforcement pieces on the 28 June 2025 obligation applied to cabinets). Polish slug `dostepnosc-strony-gabinetu-stomatologicznego`. **The finding worth the post**: the obligation attaches to a booking service offered on the site, not to the site as a brochure, so linking out to a third-party booking page and embedding one are different answers, and the micro-enterprise exemption (under 10 staff and 2 M€) removes many clinics entirely. Distinct from `reserva-citas-online-dental` (whether to open the diary) and the web section of `marketing-local-clinica-dental`. Sources: Spain's Ley 11/2023 on boe.es; Italy's d.lgs. 82/2022 on gazzettaufficiale.it; Poland's ustawa of 26 April 2024 on eli.gov.pl; Portugal's d.l. 82/2022 and Portaria 220/2023 via `data.dre.pt` with the `/pdf` suffix; Germany's BFSG via BT-Drs. 19/28653 on dserver.bundestag.de plus the MLBF at mlbf-barrierefrei.de; France's Code de la consommation art. L. 412-13 (loi n° 2023-171 art. 16, décret n° 2023-931, arts. D. 412-57 and D. 412-60) via francenum.gouv.fr and Arcom, because Légifrance returns 403. **Written: 24 October 2026, all seven languages.** |
 | Atender en residencias de mayores: el convenio, la visita y la historia clínica fuera de la clínica | `odontologia-en-residencias-de-mayores` / `dental-care-in-care-homes` / `soins-dentaires-en-ehpad` / `medicina-dentaria-em-lares-de-idosos` / `zahnarzt-pflegeheim-kooperationsvertrag` / `odontoiatria-nelle-rsa` | odontología en residencias de mayores · Added 8 October 2026, intent verified this run in German and French, clinic-side in both (German: zwp-online and zm-online on Kooperationsverträge and aufsuchende Betreuung, KZBV and KZV circulars; French: the ONCD EHPADENT and DOMIDENT documents and ARS pages on organising dental care in EHPAD). The Spanish check was not run to a conclusion, so the Spanish post leans on the practical half. Polish slug `stomatolog-w-domu-opieki`. **The clinic leaves the building**: a blocked agenda for the visit, records written off-site (and the offline question `clinica-sin-internet` raises), consent from a resident with a guardian, and the agreement with the home. Sources: § 119b and § 22a SGB V on dejure.org and the KZBV framework agreement; for France the bilan bucco-dentaire at entry to EHPAD from 1 January 2025 under the convention nationale dentaire, read on ameli.fr and Légifrance. Nearest row `pacientes-menores-tutores` covers minors, not adults under guardianship. |
 
 **The queues were extended on 3 August 2026 and again on 28 August 2026.**
