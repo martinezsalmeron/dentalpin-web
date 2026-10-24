@@ -128,6 +128,45 @@ than a legal publisher. The Bundeszahnärztekammer's own
 `BZAEK_MBO-Kommentar.pdf`, hosted on the same site, is the best German source
 on the limits of the Approbation and quotes § 1 Abs. 3 ZHG directly.
 
+**Checked again on 24 October 2026, writing the EU accessibility row.** Four
+sources answered and four did not, and the pattern is worth reusing because
+three of them are whole-act PDFs rather than article pages.
+
+- **Poland: `eli.gov.pl` serves the full act as a PDF** and is the official
+  Dziennik Ustaw portal. `eli.gov.pl/eli/DU/<year>/<pos>/ogl/pol/pdf` returned
+  the 29-page consolidated act, and `pdftotext -layout` then greps cleanly.
+  Prefer it to the `api.sejm.gov.pl` `text.html` endpoint, which the
+  23 October note already records as serving a zero-byte body. The
+  `api.sejm.gov.pl/eli/acts/DU/<year>/<pos>/text.pdf` shape did work for
+  Prawo przedsiębiorców.
+- **Italy: the whole Gazzetta issue PDF is the fastest route**, not the
+  `caricaArticolo` loop. `gazzettaufficiale.it/eli/gu/<yyyy>/<mm>/<dd>/<issue>/sg/pdf`
+  returned the complete d.lgs. 82/2022. Run `pdftotext` **without**
+  `-layout` for GU PDFs: the two-column layout interleaves columns otherwise
+  and the article text comes out unreadable.
+- **`legislation.gov.uk` answers normally**, per section and per schedule, and
+  is the source for anything about the Equality Act 2010.
+- **`ada.gov` answers** and is the official US source. Note that its guidance
+  pages state they are not legally binding, so cite them as the Department's
+  position rather than as the standard.
+- **`eur-lex.europa.eu` could not be read at all this run**: the HTML, TXT and
+  ELI URL shapes all returned an empty body to WebFetch, and curl got HTTP 202
+  with zero bytes. The directive text was therefore never quoted directly; each
+  post cites its own national transposition, which is the better source anyway.
+- **Légifrance still returns 403**, confirming the note above, so the French
+  copy of the accessibility row was not written.
+- **`diariodarepublica.pt` is still a JavaScript shell** and returned an empty
+  body through both the `data.dre.pt` ELI redirect and the direct detail URL.
+  pgdlisboa does not appear to carry this decree. Portugal was dropped for that
+  row. Careful with secondary sources here: Portugal's accessibility decree and
+  Italy's share the number 82/2022, and at least one vendor accessibility
+  statement found this run cites the Italian one as Portuguese law.
+- **`gesetze-im-internet.de` failed four times in a row** (503 to WebFetch on
+  `/bfsg/`, `/bfsg/BJNR297000021.html` and `/bfsg/__1.html`, connection reset to
+  curl), and `recht.bund.de` 404s. Every other copy of the BFSG that surfaced is
+  a legal publisher or an interest group, so the German copy of the row was not
+  written rather than sourced from one.
+
 When the text of a provision cannot be reached from an official source,
 **the provision is dropped from the post and the post says so**, with
 the reader sent to the body that can answer. That is what the Italian
