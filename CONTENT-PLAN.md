@@ -229,6 +229,43 @@ public-sector website rule and is not the provision that binds a cabinet. The
 row also suggested reading the BFSG "on dejure.org", which this document bars
 as a legal publisher; use the two German routes above instead.
 
+**Checked again on 25 October 2026, writing the collaborator/Scheinselbstständigkeit
+row.** Four findings, one of them a new French route worth keeping.
+
+- **`gesetze-im-internet.de` answered curl this run, which inverts the note above
+  again.** `/sgb_4/__7.html` and `/sgb_4/__7a.html` returned 200 to curl on the
+  first attempt; `/sgb_4/__25.html` and `/stgb/__266a.html` were reset on the
+  first attempt and both returned 200 on the second. So the 25 October reading is:
+  **the host is intermittent per URL, not per run, and the second attempt is
+  usually the one that works.** Prefer curl plus local tag-stripping over WebFetch
+  here: WebFetch summarises and caps quotes at 125 characters, which is useless
+  when the post needs the provision verbatim. The Zahnärzte-ZV lives at
+  `zo-zahn_rzte/__32b.html`, not at any `zahnaerzte-zv` or `zahn_rzte-zv` shape.
+- **The ONCD publishes its *Guide des contrats* as well as the note d'information,
+  and it is the France answer for contract duties.** `ordre-chirurgiens-dentistes.fr/download/55973`
+  is a 141-page PDF that yields to `pdftotext -layout` and carries the
+  art. L. 4113-9 one-month communication duty, the conseil départemental's
+  conformity check, the disciplinary sanction in the last paragraph of L. 4113-9,
+  the contrat type versus modèle de contrat distinction, and the conciliation
+  clause referring to art. R. 4127-259 as it appears in every model contract.
+  Caveat: that edition quotes 2017 VAT thresholds, so date-sensitive figures in it
+  are stale even though the statutory duties are not.
+- **Légifrance returned 403 for a fourth run**, this time behind a Cloudflare
+  interstitial, so the note above stands. For a Cour de cassation decision,
+  `courdecassation.fr/recherche-judilibre` is a JavaScript shell that returns an
+  empty body, and the fallback used here was **Juricaf** (`juricaf.org`), the
+  jurisprudence base of the francophone cassation courts edited by AHJUCAF, which
+  served the full arrêt including the Réponse de la Cour. It is an association of
+  the supreme courts rather than a commercial legal publisher, so it is not barred
+  by the rule above, but say in the post where the text was read.
+- **Check the holding, not the moyen, before citing a decision.** This row's own
+  note suggested Cass. soc. 21 September 2022, n° 21-14.171 for the requalification
+  test. It is nothing of the kind: it is a procedural decision holding that a
+  prior-conciliation clause is a fin de non-recevoir which suspends the
+  prescription, and the pourvoi was rejected. It was still worth citing, on a
+  different point than the one it was filed under.
+
+
 When the text of a provision cannot be reached from an official source,
 **the provision is dropped from the post and the post says so**, with
 the reader sent to the body that can answer. That is what the Italian
