@@ -1452,6 +1452,9 @@ official sources, not translations of each other.
 | Primera visita gratis: qué dice la norma, qué se registra igual y por qué puede salir cara | `primera-visita-gratis-clinica-dental` / `free-first-dental-consultation` / `premiere-consultation-gratuite-dentiste` / `primeira-consulta-gratis-dentista` / `kostenlose-erstberatung-zahnarztpraxis` / `prima-visita-gratuita-dentista` | primera visita gratuita clínica dental legal · Added 8 October 2026, intent verified this run in German and Spanish, clinic-side in both (German: zm-online "Werbung für kostenlose Implantat-Sprechstunde ist rechtswidrig", iww on GOZ and Berufsordnung for free or discounted services, zwp-online on what dental advertising may do; Spanish: the COEM advertising decálogo and the coverage of the iDental "primera revisión gratis" model). **Target the clinic-side phrasing: bare "primera visita gratis dentista" is a patient bargain query.** Polish slug `bezplatna-pierwsza-wizyta-u-dentysty`. Distinct from `publicidad-clinica-dental-normativa` (whose price rule is the full-treatment price) and from `convertir-consultas-en-citas-dental`; this row is the zero-price service itself: the GOZ minimum-fee rule (§§ 2 and 5 GOZ) in Germany, art. 20 TRLGDCU and RD 1907/1996 in Spain, and the fact that a free visit is still a full clinical record and, where a market requires it, a document of the transaction. |
 | La web de la clínica y la ley de accesibilidad: cuándo obliga y qué cambia si se reserva online | `accesibilidad-web-clinica-dental` / `website-accessibility-dental-practice` / `accessibilite-site-cabinet-dentaire` / `acessibilidade-site-clinica-dentaria` / `barrierefreie-website-zahnarztpraxis` / `accessibilita-sito-studio-dentistico` | accesibilidad web clínica dental · Added 8 October 2026, intent verified this run in German and French, clinic-side in both (German: zm-online "Mehr als nur Farbe und große Schrift" and "Barrierefreiheit meets Customer Journey", zwp-online "Digitale Barrierefreiheit in der Zahnarztpraxis" and its 2024 warning on Abmahnungen, Forvis Mazars on the BFSG for practices; French: law-firm and DGCCRF-enforcement pieces on the 28 June 2025 obligation applied to cabinets). Polish slug `dostepnosc-strony-gabinetu-stomatologicznego`. **The finding worth the post**: the obligation attaches to a booking service offered on the site, not to the site as a brochure, so linking out to a third-party booking page and embedding one are different answers, and the micro-enterprise exemption (under 10 staff and 2 M€) removes many clinics entirely. Distinct from `reserva-citas-online-dental` (whether to open the diary) and the web section of `marketing-local-clinica-dental`. Sources: Spain's Ley 11/2023 on boe.es; Italy's d.lgs. 82/2022 on gazzettaufficiale.it; Poland's ustawa of 26 April 2024 on eli.gov.pl; Portugal's d.l. 82/2022 and Portaria 220/2023 via `data.dre.pt` with the `/pdf` suffix; Germany's BFSG via BT-Drs. 19/28653 on dserver.bundestag.de plus the MLBF at mlbf-barrierefrei.de; France's Code de la consommation art. L. 412-13 (loi n° 2023-171 art. 16, décret n° 2023-931, arts. D. 412-57 and D. 412-60) via francenum.gouv.fr and Arcom, because Légifrance returns 403. **Written: 24 October 2026, all seven languages.** |
 | Atender en residencias de mayores: el convenio, la visita y la historia clínica fuera de la clínica | `odontologia-en-residencias-de-mayores` / `dental-care-in-care-homes` / `soins-dentaires-en-ehpad` / `medicina-dentaria-em-lares-de-idosos` / `zahnarzt-pflegeheim-kooperationsvertrag` / `odontoiatria-nelle-rsa` | odontología en residencias de mayores · Added 8 October 2026, intent verified this run in German and French, clinic-side in both (German: zwp-online and zm-online on Kooperationsverträge and aufsuchende Betreuung, KZBV and KZV circulars; French: the ONCD EHPADENT and DOMIDENT documents and ARS pages on organising dental care in EHPAD). The Spanish check was not run to a conclusion, so the Spanish post leans on the practical half. Polish slug `stomatolog-w-domu-opieki`. **The clinic leaves the building**: a blocked agenda for the visit, records written off-site (and the offline question `clinica-sin-internet` raises), consent from a resident with a guardian, and the agreement with the home. Sources: § 119b and § 22a SGB V on dejure.org and the KZBV framework agreement; for France the bilan bucco-dentaire at entry to EHPAD from 1 January 2025 under the convention nationale dentaire, read on ameli.fr and Légifrance. Nearest row `pacientes-menores-tutores` covers minors, not adults under guardianship. |
+| El agua del sillón y la legionela: qué plan tiene que tener la clínica y cada cuánto se controla | `legionela-clinica-dental` / `dental-unit-waterlines-legionella` / `legionelle-unit-dentaire` / `legionella-clinica-dentaria` / `wasserhygiene-zahnarztpraxis` / `legionella-studio-odontoiatrico` | legionela clínica dental · Added 25 October 2026, intent verified this run in Spanish and German and clinic-side in both (Spanish: the COEM publishes a model Plan Sanitario frente a Legionella for dental clinics; German: zm-online and zwp-online carry practice water hygiene as a recurring compliance item). **Seven locales, and each copy cites its own national source: never translate this one.** The Spanish half is settled and was read verbatim from the BOE this run, so the writing run does not have to re-derive it: **RD 487/2022 (BOE-A-2022-10297), anexo I punto 14, lists «sistemas de agua a presión en tratamientos dentales»** among the «Relación no exhaustiva de instalaciones y equipos», pulled into scope by **art. 3.1**; **art. 7.1** lets the titular choose between a PPCL and a PSL; and **art. 9.4 requires instalaciones prioritarias to base the plan «preferiblemente» on a PSL**, where **art. 2.11 defines instalaciones prioritarias as including «centros sanitarios»** — so a dental clinic is a priority installation and the PSL is the expected plan, which is the finding the Spanish post turns on and which no vendor blog states. **Entry into force is 2 January 2023** (disposición final tercera: «el día dos de enero del año siguiente al de su publicación»), so **the «2 de enero de 2024» a dental distributor publishes is wrong** and is the trap in this row. **The German half is the better half and is where the post earns its place, but it must be verified before writing because the trade press has it backwards twice over.** First, water behind a safety device in a dental unit is **Betriebswasser and not part of the Trinkwasserinstallation**, so the TrinkwV does not govern it, which is the opposite of what most practice articles assert. Second, **the KRINKO 2006 recommendation that every German article cites has not been listed among the RKI's current recommendations since early 2021**, per the Niedersächsisches Landesgesundheitsamt (`nlga.niedersachsen.de/download/170635`), an official state health authority, which adds that it may still serve as a reference while nothing newer exists. **Settle both from the RKI and the NLGA directly, never from zwp-online or a filter manufacturer**, and note that the KBE figures in the trade press contradict each other on the denominator alone (100 KBE/ml in one article, 100 KBE/10 ml in another): quote no limit value that is not on an official page. The AWMF S2k-Leitlinie «Hygienische Anforderungen an das Wasser in zahnärztlichen Behandlungseinheiten» (DGKH/DGZMK) is the other candidate source and is itself flagged as more than five years un-updated. Software surface is real and is what earns the product mention: the flushing log, the sampling dates and the per-chair maintenance record are exactly the documentation an inspection asks to see, and `inventario-mantenimiento-equipos-clinica-dental` is the post to link rather than to repeat |
+| El colaborador que factura: cuándo deja de ser autónomo y pasa a ser una relación laboral | — / — / `collaborateur-liberal-requalification-dentaire` / — / `scheinselbststaendigkeit-zahnarztpraxis` / — | scheinselbstständigkeit zahnarztpraxis · collaborateur libéral requalification · Added 25 October 2026. **DE and FR only, and that is deliberate**: the Spanish check returned press, union and judgment coverage rather than a clinic asking how to structure the relationship, and the Italian check returned practice start-up and VAT guides with nothing on the subordination question, so neither market met the clinic-side test. **The two markets that did meet it answer with completely different tests, which is the whole post and the reason it is two posts and not one translated.** Germany asks whether the person is weisungsgebunden and eingegliedert under **§ 7 Abs. 1 SGB IV**, and the route is the Statusfeststellungsverfahren at the DRV Clearingstelle under **§ 7a SGB IV**, read from `gesetze-im-internet.de` this run (it answered on the second attempt for `/sgb_4/__7a.html`; `/sgb_5/__136a.html` failed once and answered on retry, so retry that host rather than giving up on it). **The mechanic that makes the German post actionable is § 7a Abs. 5**: where the status application is filed **within one month of taking up the activity** and the DRV then finds employment, the day the decision is announced counts as the start of the employment relationship, provided the person agrees and held comparable health and pension cover in the interim, and the Gesamtsozialversicherungsbeitrag only falls due once that decision is unanfechtbar. That is a deadline a practice can still meet, as against the retroactive liability the trade press leads with. **Note § 7a Abs. 7: Abs. 2 Satz 2 and 3, Abs. 4a to 4c and Abs. 6 Satz 2 expire on 30 June 2027**, so check the provision again the run this is written rather than reusing this note. Clinic-side intent is confirmed by zm-online's own 2026 piece «Die Ersparnis von heute ist die Nachzahlung von morgen», which names Praxisvertreter and external billing staff as the typical cases. **France does not use the subordination test at all for this, and getting that wrong would make the French post a mistranslation of the German one.** The ONCD's own *Les contrats de collaboration · Note d'information* (fetched this run from `ordre-chirurgiens-dentistes.fr/download/52724`; it defeats a plain fetch and yields to `pdftotext -layout`, the mechanic this file already records) states that requalification follows where the collaborator is unable **«soit de se constituer une clientèle personnelle de droit»**, meaning the contract contains clauses preventing it, **«soit de se constituer une clientèle personnelle de fait»**, meaning they are materially prevented from doing so. The same note sets out the written-contract requirement on pain of nullity and the rétrocession d'honoraires. **Verify the Ordre filing duty and its one-month deadline (art. L. 4113-9 CSP) from the ONCD rather than Légifrance, which this file records as returning 403 to everything**, and check the outcome of **Cass. soc., 21 September 2022, n° 21-14.171** before citing it: the search surfaced the moyen and not the holding. The software surface is unusually direct and belongs in the French post: whether the practice's agenda and records let a collaborator hold a clientèle personnelle at all is a question the PMS answers, and the ONCD model contract's own clause on a patient who consults the collaborator exclusively for more than N months is a report, not a legal opinion |
+| La garantía de una prótesis: qué estás obligado a rehacer gratis y qué no deberías prometer en el presupuesto | `garantia-protesis-dental` / — / `garantie-prothese-dentaire` / — / `gewaehrleistung-zahnersatz` / — | garantía prótesis dental · gewährleistung zahnersatz · garantie prothèse dentaire · Added 25 October 2026. **ES, FR and DE only**: those are the three markets whose rule was established this run, and a locale is added to this row only once its own rule has been verified, because the answer comes from a different legal instrument in each and there is nothing to translate. **The German rule is settled and was read verbatim from `gesetze-im-internet.de` this run** (it answered on the second attempt): **§ 136a Abs. 4 Satz 3 SGB V**, «Der Zahnarzt übernimmt für Füllungen und die Versorgung mit Zahnersatz eine zweijährige Gewähr», with Satz 4 requiring identical and partial repeats of fillings and the renewal or restoration of Zahnersatz including crowns to be done **kostenfrei** in that period, exceptions set by the **KZBV and the GKV-Spitzenverband**, and longer periods available by agreement and — expressly — advertisable to patients. **Two things in that same paragraph are what the German post is for.** The statute says «**§ 195 des Bürgerlichen Gesetzbuchs bleibt unberührt**», so the two-year Gewähr and the three-year Verjährung are different things that sit side by side, which is the origin of the «drei Jahre» confusion a ZWP seminar Q&A had to correct. And the two years is a **GKV rule in SGB V**, not a general consumer guarantee, so a privately paid restoration is not automatically inside it. **France answers with neither a period nor a statute but with the moyens/résultat split, and the split is contested**: the obligation de résultat for the conception and confection of the prosthesis runs from Cass. 15 November 1988 through 23 November 2004 (published) and 9 December 2010, but the MACSF flags **an arrêt of 20 March 2013** asserting an obligation de moyens for a care act that includes delivering an appareillage. **Settle that from Judilibre before writing and do not state the French rule from the insurer's summary**; if the 2013 position cannot be pinned down, the post says the question is unsettled and gives both lines with their dates, which is still better than what the sector publishes. **Spain is the locale with the trap and the one to write most carefully.** The top results are consumer-side and contradict each other outright: the OCU and Consumoteca say three years for the prosthesis as a producto sanitario under consumer law, a patient-facing dental site says two, and five-year commercial guarantees on crowns are described as normal practice. **None of that is a source**: settle it from the TRLGDCU text and from **RD 192/2023** directly, and carry across the distinction Consumoteca at least frames correctly, that the material and the treatment are not the same thing because the practitioner owes an obligación de medios and not de resultado. `declaracion-conformidad-protesis-dental` already covers the conformity declaration and RD 192/2023's ten-year and fifteen-year retention, so **link it and do not re-derive it**; the duplication grep was run this run and «garantía» appears in no published post in this sense. The product mention writes itself and must stay at the end: the guarantee clock starts at insertion, so what the clinic needs is the insertion date, the lab, the batch and the conformity declaration retrievable per piece years later |
 
 **The queues were extended on 3 August 2026 and again on 28 August 2026.**
 The August 28 extension added 32 vendors, each verified from its own site
@@ -2373,6 +2376,117 @@ row says). Three Queue B candidates found by two independent searches
 (whitening, botox and hyaluronic acid, the equipment log) went in once. The
 morning runs have comparisons again, and an empty-queue run should not be
 needed for weeks.
+
+**Both queues were empty again at the 08:00 run on 25 October 2026, the eleventh
+consecutive extension to record it, and the first since the 8 October Queue A
+extension of 35 rows was consumed.** That extension bought seventeen days, which
+is the measured answer to the question the last four entries argued about: at
+three comparison runs a day, 35 comparison targets last about two and a half
+weeks. Both queues were derived from the filesystem rather than trusted, by the
+scripted method the 5 October entry made standard. Queue A: every slug-bearing
+row in A1-A4 and A6-A8 resolved against its own market's directory, 124 of them,
+with no miss, the two struck rows in A4 excluded by the `~~` wrapper; A5 carries
+no slug column and was checked by vendor name, 17 Portugal rows against
+`blog/pt/` and 22 Brazil rows against `blog/pt-br/`, all present, plus the four
+head terms. The rotation ran its full tie-break and found nothing: `de` and `fr`
+tied lowest at 12 published comparisons each, `de` wins that tie-break and A6 is
+complete (12 vendors and both head terms), `fr` likewise, then `it` at 13, `es`
+at 16, `pl` at 17, `pt` at 19, `es-mx` at 20, `en` at 21 and `pt-br` at 22, every
+one of them complete. Queue B: 145 rows, every one present in every directory it
+was due in.
+
+**The `translationKey` frontmatter field is the cheap way to check Polish and
+this entry is recording it, because the Queue B table has no `pl` column and
+three previous entries reached for a count-based check digit instead.** Every
+`es` post is the origin and carries no key; every other locale's copy carries
+`translationKey: <the Spanish slug>`. So mapping the key across the nine
+directories answers coverage per target directly, with no arithmetic. Run that
+way, exactly one row reads as incomplete, `reglamento-ia-clinica-dental` with no
+`en` copy, and its English cell is `—` because neither the US nor the UK is bound
+by Regulation (EU) 2024/1689, so the row is done. Use this check in place of the
+`pl` file-count digit.
+
+Three Queue B rows were added, each with the duplication grep run first against
+the published Spanish posts (the 8 October entry's cheaper-first rule, which
+worked: it is what confirmed «legionela» appears in no post and «garantía» in
+none in the warranty sense), then a two-market clinic-side intent check, then the
+central provision read from a primary source. All three came back with the shape
+this file now expects, a sentence the profession repeats that the statute does
+not support, and two of them came back with an official source saying the
+opposite of the trade press.
+
+- **The water in the chair.** The Spanish half was read verbatim from the BOE and
+  is settled: RD 487/2022 anexo I.14 names «sistemas de agua a presión en
+  tratamientos dentales», art. 2.11 makes a centro sanitario an instalación
+  prioritaria, and art. 9.4 therefore expects a PSL rather than the PPCL a clinic
+  would otherwise choose under art. 7.1. **The German half is where the row is
+  worth writing and it inverts the trade press twice**: water behind a safety
+  device in a dental unit is Betriebswasser and outside the TrinkwV, and the
+  KRINKO 2006 recommendation every German article treats as binding has not been
+  listed among the RKI's current recommendations since early 2021, per the
+  Niedersächsisches Landesgesundheitsamt, which is a state health authority and
+  not a publisher.
+- **The collaborator who invoices.** Two markets, two unrelated tests, which is
+  why it is a DE + FR row and not a seven-locale one. Germany turns on
+  weisungsgebunden and eingegliedert under § 7 Abs. 1 SGB IV with the § 7a
+  Clearingstelle route; France does not use subordination for this at all, and
+  the ONCD's own note makes requalification turn on whether the collaborator can
+  build a clientèle personnelle **de droit** and **de fait**. The useful mechanic
+  is § 7a Abs. 5, a one-month filing window that converts retroactive liability
+  into a forward-dated start, and it is the kind of deadline a practice can still
+  act on.
+- **The guarantee on a prosthesis.** Germany has a hard statutory figure,
+  § 136a Abs. 4 Satz 3 SGB V's zweijährige Gewähr, and the same paragraph
+  explains the confusion around it by saying § 195 BGB bleibt unberührt: the
+  two-year Gewähr and the three-year Verjährung are different clocks. Spain has
+  no equivalent and the field is held by consumer-side sources that contradict
+  each other at two, three and five years, so the Spanish copy has to be built
+  from the TRLGDCU and RD 192/2023 rather than from the top of the results page.
+
+Three sourcing facts established this run:
+
+- **`gesetze-im-internet.de` is intermittent rather than down, and retrying is
+  worth it.** `/sgb_4/__7a.html` returned 200 on the first attempt in the same
+  batch where `/sgb_5/__136a.html` returned nothing at all; the identical request
+  for § 136a then returned 200 twice in a row moments later. Four previous
+  entries in this file record the host as 503 and reach for dejure instead. **Try
+  it twice before substituting a legal publisher**, because the official text is
+  worth one retry.
+- **`boe.es/buscar/act.php?id=<id>&tn=0` served RD 487/2022 in full at 256 kB**,
+  so the 8 October finding holds that it is specifically the very long codes that
+  come back as a navigation shell. Strip the tags locally and grep the result; the
+  consolidated-PDF route was not needed here.
+- **The ONCD PDF route works and is the France answer again.** The note on
+  collaboration contracts came back as binary through the fetch tool and
+  extracted cleanly with `pdftotext -layout`, confirming the 7 October mechanic
+  for chamber and college PDFs. With Légifrance still at 403, the Ordre's own
+  notes and model contracts remain the French primary source.
+
+One candidate was checked and **deliberately not added**, and it failed the
+two-market test from the opposite direction to the usual: **the employment status
+question in Spain and Italy**. It is not rejected as a topic, it is already a row
+above, but the Spanish and Italian copies of it were considered and dropped.
+Spain returned redaccionmedica pieces on a TSJ Madrid judgment and a CESM call
+for inspections, which is press and union intent; Italy returned partita IVA and
+regime forfettario guides for a dentist setting up, with nothing on whether a
+collaborator is a disguised employee. Both come back if a later run can name
+clinic-side intent, and the Spanish one probably will, because the owner-side
+question plainly exists even though the results page is held by news.
+
+**The structural point is unchanged and this run could not fix it either, but it
+is now measurable.** The 8 October extension added 35 Queue A rows and they were
+gone in seventeen days, which means **a Queue A extension buys about a day of
+runway for every two rows added**. Three morning comparison runs a day against a
+catalogue that is, by this run's own count, exhausted in all nine directories, is
+not a cadence that an extension of the size this file keeps asking for will fix
+for long: sixty rows is under five weeks. The honest description of this routine
+remains **four topic runs a day**, and the decision asked for in two previous
+entries is still the one that matters — either Queue A is extended on a schedule
+of its own, or the 04:00, 08:00 and 11:00 runs are re-pointed at Queue B
+explicitly so that three runs a day stop opening by searching a catalogue that
+has nothing left in it. A run that spends its first several minutes proving the
+comparison queue is empty, for the eleventh time, is spending them on the wrong
+thing.
 
 ## Where the routine publishes and flags
 
