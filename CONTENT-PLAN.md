@@ -297,6 +297,70 @@ DE and PL.** Everything answered, and three mechanics are worth reusing.
   official index puts the Viertes Kapitel at §§ 69 to 140h. Verify that from the
   index rather than assuming it, because the whole German post rests on it.
 
+**Checked again on 26 October 2026, writing the permits row in ES and PL.** Every
+source answered, and the two corrections below are to this file's own row rather
+than to a host.
+
+- **The ES half of that row had the two authorisations the wrong way round.** The
+  row says the authorisation "is **previa**, so it is sought before installing and
+  not before opening". Read from the BOE this run, art. 3.2 RD 1277/2003 says the
+  opposite about which act is universal: the **funcionamiento** authorisation is the
+  one «se exigirá con carácter preceptivo por las comunidades autónomas de modo
+  previo al inicio» of the activity, so it is precisely the one sought before
+  opening, while the **instalación** one «podrá ser exigida» by each comunidad, as
+  may the **cierre** one. So three of the four acts in art. 2.e) are autonomic
+  options and only funcionamiento is national. Art. 3.2 also carries two things the
+  row did not mention and that are better clinic-side material than the ones it did:
+  the funcionamiento authorisation is granted per centro **and per each servicio of
+  its oferta asistencial**, renewable with whatever periodicity each comunidad sets,
+  and the modificación one covers a change of **titularidad** as well as of structure
+  or oferta. Art. 3.3 is the sourced answer to the municipal-licence confusion: a
+  non-health administration competent to authorise a centre's puesta en marcha must
+  «recabar que aquél cuente previamente con la autorización de funcionamiento».
+- **The PL half's 14-day deadline is in the statute, not only in the inspection
+  protocols.** The row says to read the Minister of Health rozporządzenie before the
+  post states it. No rozporządzenie was needed: **art. 107 ust. 1 ustawy o
+  działalności leczniczej** carries it verbatim, with art. 107 ust. 2 setting the
+  penalty at up to ten times the minimalne wynagrodzenie (48 060 zł in 2026, from
+  Dz. U. 2025 poz. 1242 § 1). What the rozporządzenie under **art. 105 ust. 4**
+  actually governs is the *szczegółowy zakres danych objętych wpisem*, which is a
+  different question and was left unread and said so in the post. The row's main
+  finding, art. 106 ust. 1 pkt 1 and 2 splitting the register keeper by legal form,
+  checked out verbatim, and art. 111 ust. 1 closes it: the organ that keeps the
+  register is the organ that inspects, so the legal form chosen on day one picks
+  both.
+- **`boe.es` answered normally for both acts** with `&tn=0` plus local tag
+  stripping. RD 1277/2003 came back at 172 kB, not the ~1 MB this file warns about,
+  and anexo I and anexo II are both in that single consolidated page, so C.2.5.1 and
+  U.44 need no second fetch.
+- **`eli.gov.pl` served three acts this run, and the `curl -L` note from the
+  insurance row holds.** `eli.gov.pl/eli/DU/<year>/<pos>/ogl/pol/pdf` returned the
+  ustawa o działalności leczniczej (Dz. U. 2026 poz. 156, 61 pages), the pomieszczenia
+  rozporządzenie (tekst jednolity Dz. U. 2022 poz. 402) and the minimum-wage
+  rozporządzenie (Dz. U. 2025 poz. 1242, one page), all clean under
+  `pdftotext -layout`. `api.sejm.gov.pl/eli/acts/search?title=` is still the way to
+  find which tekst jednolity is current.
+- **Two Spanish regional sources answered and one did not, and the dead one matters
+  because this file's row named it.** `euskadi.eus` serves the dental authorisation
+  trámite in full, with Basque-specific deadlines (two years to apply for
+  funcionamiento after the instalación notification, five years' validity, renewal
+  three months before, one month for non-substantial modifications, three months'
+  notice to close); note the page is ~120 kB of text and WebFetch reads only the
+  first 100 kB. The **Andalusian inspection protocol** for C.2.5.1/U.44, version 6
+  of August 2022, is on `cdn.juntadeandalucia.es` and is the strongest clinic-side
+  document found: it is the inspector's own form, it checks that the premises match
+  the scaled plans in the expediente, and it reproduces which art. 15.2 Ley 41/2002
+  contents are required outside hospitalisation. WebFetch returns it as binary, so
+  take the saved file and `pdftotext` it. **`comunidad.madrid`'s
+  `lista_de_verificacion_para_clinicas_dentales.pdf` now 404s**, serving a Drupal
+  error page that `file` reports as HTML.
+- **Castilla-La Mancha was dropped for want of a primary source.** `jccm.es` serves
+  only the August 2025 *borrador* of the orden on requisitos técnico-sanitarios de
+  clínicas dentales; the enacted Orden 162/2025 of 28 October (DOCM 11 November 2025)
+  is corroborated only by vLex, which this file bars as a legal publisher, and by
+  INAP's news page, and `docm.jccm.es`'s search returned HTTP 500. Two regional
+  examples were enough for the post, so no third was forced.
+
 When the text of a provision cannot be reached from an official source,
 **the provision is dropped from the post and the post says so**, with
 the reader sent to the body that can answer. That is what the Italian
