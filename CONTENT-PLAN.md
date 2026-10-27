@@ -414,6 +414,54 @@ Queue B topic, per *Two queues*. Five findings.
   carries no note. This is the failure mode this file warns about in a new place: not
   an aggregator blog, but a summary of official pages. Open the page.
 
+**Checked again on 27 October 2026, writing the higienista/Delegation row in ES
+and DE.** Every source answered on the first attempt, so the findings are about the
+row rather than the hosts.
+
+- **`boe.es` answered four acts with `&tn=0` plus local tag-stripping**, all on the
+  first attempt and all well under the ~1 MB this file warns about: RD 1594/1994
+  (57 kB), Ley 10/1986 (57 kB), Ley 44/2003 (272 kB) and RD 769/2014 (288 kB).
+  Worth knowing: **the consolidated page states its own amendment history** under
+  "Seleccionar redacción". RD 1594/1994 offers only "Texto inicial publicado el
+  08/09/1994", which is how this run could state that the decree has never been
+  amended, and Ley 10/1986 names its last update as 25 July 2013. Check that
+  selector before writing that a provision is current.
+- **Watch the BOE id for Ley 10/1986: it is BOE-A-1986-7436, not -7050.** The
+  wrong id resolves to a different 1994 Resolución and `act.php` 302-redirects to
+  `doc.php` for it, which looks like a working fetch and is not one. Follow
+  redirects and check the title of what came back.
+- **`gesetze-im-internet.de` answered on the first attempt for both `/zhg/__1.html`
+  and `/zhg/__18.html`**, via curl plus local tag-stripping. Sixth consecutive
+  entry recommending curl over WebFetch for this host.
+- **The BZÄK Delegationsrahmen is at the Zahnärztekammer Nordrhein** under
+  `wp-content/uploads/praxisteam/ausbildung-zur-zum-zfa/`, 161 kB, 6 pages, clean
+  under `pdftotext -layout`, Fassung Juli 2021. The `bzaek.de` page the PDF names
+  as its own Quelle also returns 200 and confirms the title, so the version can be
+  checked without relying on the mirror. This is a second chamber route alongside
+  the `lzk-bw.de` ones above.
+- **Two corrections to that row, both from the text.** It says both markets use "a
+  closed statutory list plus a reserved core". **Germany's list is not closed**:
+  § 1 Abs. 5 and Abs. 6 ZHG both open with «insbesondere», so the enumeration is
+  expressly non-exhaustive, and a post built on a symmetry with Spain's closed
+  art. 11.2 would be wrong on its central point. And it says the Delegationsrahmen
+  supplies "what Spain's decree does not spell out, the conditions". **Spain has
+  conditions, just not in RD 1594/1994**: art. 9.4 LOPS requires the terms of a
+  delegation inside a team to be established *previamente* and the recipient's
+  capacity to be «objetivable, siempre que fuere posible, con la oportuna
+  acreditación». Check the general professional statute before concluding that a
+  sector decree is the whole of the national answer.
+- **Two smaller fixes.** Art. 11.3 RD 1594/1994 excludes «la dosificación de
+  medicamentos» and «la extensión de recetas» as two separate items, not the row's
+  "la dosificación y prescripción de medicamentos"; and the Delegationsrahmen
+  carries a ninth condition the row's list omits, that the patient is aware the
+  service is a delegated one.
+- **The subgingival question the row flags is half-answered by the sources, and
+  that half is quotable.** Both § 1 Abs. 5 ZHG and section 5 f) of the
+  Delegationsrahmen name «Entfernung von weichen und harten sowie klinisch
+  erreichbaren subgingivalen Belägen». Neither draws a line for subgingivale
+  Kürettage as a therapeutic act, so the post states the first and declines the
+  second, per the rule below.
+
 When the text of a provision cannot be reached from an official source,
 **the provision is dropped from the post and the post says so**, with
 the reader sent to the body that can answer. That is what the Italian
