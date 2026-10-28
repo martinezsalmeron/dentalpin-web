@@ -462,6 +462,81 @@ row rather than the hosts.
   Kürettage as a therapeutic act, so the post states the first and declines the
   second, per the rule below.
 
+**Checked on 28 October 2026, writing the Notfallmanagement/emergenze row in DE
+and IT.** Every source answered on the first attempt, which is unusual enough to
+record, and the row's two open questions are both settled.
+
+- **The current consolidated QM-RL is pinned.** The G-BA richtlinie page
+  (`g-ba.de/richtlinien/87/`) names the Fassung vom 17.12.2015, geändert
+  18.06.2026, BAnz AT 19.08.2026 B4, in Kraft 20.08.2026, and links the
+  consolidated text at `g-ba.de/downloads/62-492-4205/QM-RL_2026-06-18_iK-2026-08-20.pdf`
+  (355 kB, clean under `pdftotext -layout`). **Go to the richtlinie page first, not
+  to a search**: a domain-restricted search over `g-ba.de` returns the 2015
+  Erstfassung and the 2020 Fassung above the current one, which is the trap this
+  row's own entry warned about.
+- **Both quotes the row carried check out verbatim, and the row's placement of
+  them is wrong.** Notfallmanagement sits in **Teil A § 4 Absatz 2**, among the
+  *Anwendungsbereiche*, not among the Methoden und Instrumente, which are Absatz 1.
+  The whole provision is two sentences and the post quotes them in full. Four
+  further things in the same text are better clinic-side material than the
+  Beschluss history: Teil B Abschnitt III makes the Bezugspunkt «immer die
+  zahnärztliche Einrichtung als solche», its § 2 gives three years from Zulassung,
+  Anlage 2 Abschnitt II sets the KZV sample at «entweder jährlich mindestens 2,5 %
+  oder zweijährlich 4%» with those drawn removed from the next draw, and **Anlage 2
+  Frage 24 is the real checklist**, three named options plus «keine spezifischen
+  Regelungen zu Notfällen». Frage 8 and Frage 10 carry Notfallversorgung/Erste Hilfe
+  and «Kontrolle der Notfallausstattung». **The word Defibrillator does not occur in
+  the richtlinie at all**, which is the sourced form of the row's "never write that a
+  Notfallkoffer is prescribed".
+- **The German Erste-Hilfe half has an official source and it is BAuA.** ASR A4.3
+  at `baua.de/DE/Angebote/Regelwerk/ASR/pdf/ASR-A4-3.pdf?__blob=publicationFile`
+  answers directly, Ausgabe Dezember 2010, zuletzt geändert GMBl 2024 S. 914
+  (4.11.2024), and concretises ArbStättV § 3a Abs. 1, § 4 Abs. 5 and Punkt 4.3 des
+  Anhangs with Vermutungswirkung. Tabelle 1 scales Verbandkästen by Betriebsart and
+  Beschäftigtenzahl. **It does not list a Zahnarztpraxis as a Betriebsart**, so do
+  not assign a Praxis to one of its rows; the post states the rule and declines the
+  assignment. This is the clean boundary the DE post is built on: QM-RL protects
+  patients and is sampled by the KZV, ASR A4.3 protects Beschäftigte and is not.
+- **The LZK BW negative was not checked this run and the post does not assert it.**
+  The row's claim that the PRAXIS-Handbuch publishes no Notfallmanagement module is
+  still unverified. The post did not need it, so a future run should not read it as
+  settled.
+- **Italy's DAE question is answered, and it is a no.** Legge 4 agosto 2021, n. 116
+  came back whole from `gazzettaufficiale.it/eli/gu/2021/08/13/193/sg/pdf`. Art. 1
+  comma 1 lists where diffusion is favoured and a private studio is not in it; art. 2
+  comma 3 lets enti territoriali only «incentivare» installation in strutture aperte
+  al pubblico. **DM 18 marzo 2011 was not needed** and is not the provision to read
+  for this question. Two articles are better material than the obligation that does
+  not exist: **art. 6** makes any soggetto pubblico o privato already holding a DAE
+  notify the 118 centrale operativa with ubicazione and the scadenza of «batterie e
+  piastre adesive», and **art. 3** rewrites art. 1 legge 120/2001 so that use is
+  permitted to trained non-medical staff and, absent them, to anyone in sospetto
+  arresto cardiaco, with art. 54 c.p. applying.
+- **The 2014 OMCEO Milano document is still published, and the Ordine's own page is
+  the source, not the ATS Bergamo copy.** `omceomi.it/2014/08/05/dotazione-farmacologica-di-emergenza/12543/`
+  serves it: «In realtà non esiste un elenco ufficiale», the carrello essentials, the
+  aghi cannula 20 and 22 G, the drug list and the BLS argument, signed by Dr.
+  Giammaria Paolillo in the first person. Attributed as his recommendation and the
+  drug list deliberately not tabulated, per the row.
+- **The Italian occupational half is the half with a sanction, and the route to it is
+  `ispettorato.gov.it`.** Normattiva will not serve article bodies, but the
+  Ispettorato Nazionale del Lavoro publishes the consolidated Testo Unico as a PDF
+  (`ispettorato.gov.it/files/2025/01/TU-81-08-Ed.-Gennaio-2025-1.pdf`, 20 MB, 1282
+  pages, clean under `pdftotext -layout`). It carries art. 45 verbatim **and prints
+  the sanction next to each article**: for art. 45 comma 1, «arresto da due a quattro
+  mesi o ammenda da 1.067,88 a 5.695,36 euro» under art. 55 co. 5 lett. a). That is
+  the strongest number in the IT post and it exists nowhere in the clinical half.
+- **DM 388/2003 came from the GU issue PDF** (`/eli/gu/2004/02/03/27/sg/pdf`), and the
+  gruppo split is the practical answer: gruppo B is three or more lavoratori, gruppo C
+  fewer than three, so the headcount picks cassetta (allegato 1) or pacchetto
+  (allegato 2). **Allegati 3 and 4 are images in that PDF and do not extract**, so the
+  minimum course hours are not stated in the post. Run `pdftotext` without `-layout`
+  on GU issues, as this file already records.
+- **Queue A is still drained as of 28 October 2026**, so the 11:00 run took a Queue B
+  topic. Every row in A1 to A8 exists in the directory its section names, A9 is empty,
+  and the A5 rows carry no slug column, so count them by vendor rather than by
+  filename.
+
 When the text of a provision cannot be reached from an official source,
 **the provision is dropped from the post and the post says so**, with
 the reader sent to the body that can answer. That is what the Italian
