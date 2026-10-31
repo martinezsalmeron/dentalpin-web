@@ -2,7 +2,7 @@
 title: "Software de clínica dental gratis: qué hay de verdad en España"
 description: "Qué es gratis de verdad en software dental en España, qué publica cada fabricante en su propia web y por qué el tope de pacientes decide más que el precio."
 pubDate: 2026-08-17
-updatedDate: 2026-09-07
+updatedDate: 2026-10-31
 tags: [comparativa, software-dental, gratis]
 ---
 
@@ -43,7 +43,7 @@ Todo lo de esta lista está consultado el 17 de agosto de 2026 en la web del pro
 
 - **Dasi eClinic**, de Dasi Informatica S.L., publica la tarifa completa, que en este mercado es raro. FREE a "0€/mes + IVA" con hasta 100 pacientes, 1 centro y 1 usuario; BASIC a "29€/mes + IVA"; PROFESIONAL a "39€/mes + IVA"; CLÍNICA a "69€/mes + IVA" con 5 usuarios simultáneos; PREMIUM a "99€/mes +IVA" con 15. El pago anual lleva un 15% de descuento y la página añade "SIN INSTALACIÓN, NI CUOTA DE ALTA, NI PERMANENCIA". Bajo esa tabla, y comprobado el 7 de septiembre de 2026, publican otra de "funcionalidades extra mensuales": el odontograma no está disponible en FREE y cuesta 10 €/mes en los cuatro planes de pago, el pack de odontograma con presupuestos 12 €/mes, y el módulo de presupuestos suelto 6 €/mes en BASIC y PROFESIONAL. Está desarrollado en la [comparativa con DASI](/es/blog/dentalpin-vs-dasi/).
 - **Doctocliq** publica un plan gratuito sin fecha de caducidad, topado en 30 citas al mes, con historia clínica, odontograma, agenda, presupuestos y recordatorios por WhatsApp y correo. Los planes de pago aparecen como "desde USD 19 al mes", sin desglose en la página. Su web se describe como el software "de Latinoamérica", declara "+20 PAÍSES" y no menciona España entre ellos.
-- **Clinic Cloud** publica cuatro planes: Mini, Pro y Max, con tarifa de 29 €, 49 € y 79 € al mes y un descuento vigente que los deja en 14,5 €, 24,5 € y 39,5 €, más un plan Enterprise "A convenir". No hay plan gratuito. El dato que importa a una clínica dental está en su propia tabla: el odontograma y el periodontograma aparecen a partir del plan Max.
+- **Clinic Cloud** publica cuatro planes: Mini, Pro y Max, con tarifa de 29 €, 49 € y 79 € al mes, más un plan Enterprise "A convenir". No hay plan gratuito. El dato que importa a una clínica dental está en su propia tabla: el odontograma y el periodontograma aparecen a partir del plan Max.
 - **Odontonet** tiene página de precios y no publica ninguna cifra en ella. La llamada a la acción es "Quiero informarme". Tampoco publica versión gratuita.
 - **Klinikare** no publica precios ni versión gratuita en la página consultada. Sí publica su tamaño: "Más de 2.500 clínicas y +20.000 profesionales ya utilizan Klinikare" y "más de 16 años".
 - **Gesden**, de Infomed, tampoco publica tarifas: "En Infomed disponemos de tarifas muy competitivas... Consulta con tu coordinadora de zona la mejor oferta". La misma página declara 14.000 clínicas, más de 50 técnicos de soporte y más de 400 traspasos al año.
@@ -137,7 +137,7 @@ Lo que resuelve el open source es la parte que después nadie devuelve: los dato
 
 ## Fuentes
 
-Todas consultadas el 17 de agosto de 2026, y las de Dasi revisadas de nuevo el 7 de septiembre de 2026, cuando se corrigió lo que aquí se decía sobre su Verifactu y se añadió lo del odontograma.
+Todas consultadas el 17 de agosto de 2026, las de Dasi revisadas de nuevo el 7 de septiembre de 2026, cuando se corrigió lo que aquí se decía sobre su Verifactu y se añadió lo del odontograma, y revisadas otra vez el 31 de octubre de 2026, cuando se quitó el descuento de Clinic Cloud que su tarifa ya no muestra, y se añadió la página de planes de Doctocliq porque su portada ya no publica el precio de entrada (el dato en sí, "desde USD 19 al mes", sigue siendo exacto: el plan Individual de Doctocliq cuesta hoy 19 USD/mes).
 
 - Dasi Informatica S.L., [tabla de funcionalidades extra mensuales](https://www.dasi.es/precios/), consultada el 7 de septiembre de 2026: odontograma marcado como no disponible en FREE y a 10 €/mes en BASIC, PROFESIONAL, CLÍNICA y PREMIUM; "Odontograma + Presupuestos" a 12 €/mes; "Módulo Presupuestos" a 6 €/mes en BASIC y PROFESIONAL; fila "Verifactu 2025" marcada en los cinco planes.
 - Dasi Informatica S.L., [precios de Dasi eClinic](https://www.dasi.es/precios/): plan FREE a "0€/mes + IVA" con "Hasta 100 pacientes, 1 centro, 1 usuario, Soporte y actualizaciones, Formación, 2 GB img y archivos"; BASIC "29€/mes + IVA"; PROFESIONAL "39€/mes + IVA"; CLÍNICA "69€/mes + IVA"; PREMIUM "99€/mes +IVA"; 15% de descuento en pago anual; "SIN INSTALACIÓN, NI CUOTA DE ALTA, NI PERMANENCIA".
@@ -145,7 +145,8 @@ Todas consultadas el 17 de agosto de 2026, y las de Dasi revisadas de nuevo el 7
 - Dasi Informatica S.L., [Verifactu](https://www.dasi.es/verifactu/): "Dasi eClinic implementará el sistema Verifactu en todo su proceso de facturación", y las fechas de 1 de enero de 2026 y 1 de julio de 2026 citadas en esa página.
 - Doctocliq, [software dental gratis](https://www.doctocliq.com/software-dental-gratis-doctocliq): plan gratuito sin fecha de caducidad topado en 30 citas al mes, 7 días de prueba con funciones avanzadas, historia clínica, odontograma, agenda, presupuestos y recordatorios.
 - Doctocliq, [página principal](https://www.doctocliq.com/): "+20 PAÍSES", planes "desde USD 19 al mes", presencia declarada en Latinoamérica y sin mención de España.
-- Clinic Cloud, [tarifas](https://clinic-cloud.com/tarifas): planes Mini, Pro y Max con tarifa de 29 €, 49 € y 79 € al mes y descuento vigente a 14,5 €, 24,5 € y 39,5 €; plan Enterprise "A convenir"; odontograma y periodontograma a partir de Max.
+- Clinic Cloud, [tarifas](https://clinic-cloud.com/tarifas): planes Mini, Pro y Max con tarifa de 29 €, 49 € y 79 € al mes, sin descuento activo a 31 de octubre de 2026; plan Enterprise "A convenir"; odontograma y periodontograma a partir de Max.
+- Doctocliq, [planes y precios](https://www.doctocliq.com/planes-y-precios), consultada el 31 de octubre de 2026: plan Gratis "Siempre Gratis" topado en 30 pacientes o citas al mes y 1 usuario doctor; plan Individual a 19 USD/mes.
 - Odontonet, [precios](https://www.odontonet.es/precios/): página de precios sin ninguna cifra publicada, con la llamada a la acción "Quiero informarme".
 - Klinikare, [klinikare.com](https://www.klinikare.com/): "Más de 2.500 clínicas y +20.000 profesionales ya utilizan Klinikare", "más de 16 años", sin precios ni versión gratuita en la página consultada.
 - Infomed, [Gesden G5](https://www.infomedsoftware.com/software/gesden/gesden-g5/): "En Infomed disponemos de tarifas muy competitivas... Consulta con tu coordinadora de zona la mejor oferta", 14.000 clínicas, más de 50 técnicos de soporte, más de 400 traspasos al año.

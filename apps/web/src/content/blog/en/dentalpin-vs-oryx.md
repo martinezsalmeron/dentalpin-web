@@ -2,6 +2,7 @@
 title: "Dentalpin vs Oryx: a published tariff, priced per dentist"
 description: "Oryx publishes its whole tariff: $650 to $1,399 a month for two providers, plus $100 for each one after that. Sourced from their own pages, September 2026."
 pubDate: 2026-09-11
+updatedDate: 2026-10-31
 tags: [comparison, oryx, usa, canada, dental-software]
 ---
 
@@ -97,7 +98,7 @@ Only verifiable rows. Where nothing is published, the row says so.
 | Patient portal | ✓ In every plan | ✗ Listed as coming soon |
 | AI clinical scribe and voice perio | ✓ In the AI plan | ~ Assistant runs tasks, does not chart |
 | Years in market | ✓ Founded 2016 | ✗ Since 2026 |
-| Install base | ✓ "15,000+ Clinicians" | ✗ Very few so far |
+| Install base | ✓ "20,000+ Clinicians" | ✗ Very few so far |
 | Published support line and hours | ✓ Phone, Mon to Fri, 8am to 7pm CT | ✗ GitHub Discussions |
 | Staffed migration | ✓ 50+ source systems, test conversion | ~ Self-service import tool |
 | Published backup and recovery policy | ✓ 90 days, 7-day point-in-time | ✗ Yours to configure |
@@ -177,9 +178,9 @@ Where we would push back is the pricing shape rather than the amount. Per dentis
 
 ## Sources
 
-All consulted on 11 September 2026.
+All consulted on 11 September 2026, and re-checked on 31 October 2026, when the home page's clinician and payments-processed figures were corrected (both had grown).
 
-- [Oryx home page](https://www.oryxdental.com/): "cloud-based, AI-powered platform built by dentists, for dentistry", "Trusted by 15,000+ Clinicians and Growing", "~2,000 Practices Across 5 Continents", "7M Patients Served Worldwide", "$5B+ in Payments Processed", the 99.9% uptime claim, and the Pearl and Overjet imaging AI.
+- [Oryx home page](https://www.oryxdental.com/): "cloud-based, AI-powered platform built by dentists, for dentistry", "Trusted by 20,000+ Clinicians and Growing", "~2,000 Practices Across 5 Continents", "7M Patients Served Worldwide", "$6B+ in Payments Processed", the 99.9% uptime claim, and the Pearl and Overjet imaging AI.
 - [Pricing](https://www.oryxdental.com/pricing/): all US and CAD plan prices, the per-provider fees, the startup offer and its $1 setup fee and 200-patient limit, the full included-features tables, and the FAQ answers on the 12-month contract, what counts as a provider, plan changes, the setup, data-conversion and image-conversion fees, the Canadian feature differences, per-location pricing, the two-to-three-month onboarding and the list of source systems migrated from.
 - [Security and privacy](https://www.oryxdental.com/security-privacy/): AES-256 and TLS, daily backups held 90 days with seven-day point-in-time recovery, the data ownership and export answers including CSV and DICOM, the US and Montréal hosting regions, the PHIPA Section 17 statement for Ontario, and the commitment that patient data never trains AI models.
 - [About Oryx](https://www.oryxdental.com/about/): "FOUNDED IN 2016", Dr. Rania Saleh as founder and CEO, "Over 2,500 practices across 5 continents", the Kois Center endorsement, the Academy of General Dentistry partnership and the self-funded statement.

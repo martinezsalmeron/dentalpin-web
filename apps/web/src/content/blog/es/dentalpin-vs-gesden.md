@@ -2,7 +2,7 @@
 title: "Dentalpin frente a Gesden: qué cambia realmente para tu clínica"
 description: "Comparativa honesta entre Gesden, el software dental más usado de España, y Dentalpin, que es open source y gratuito. Con fuentes y sin adjetivos."
 pubDate: 2026-07-28
-updatedDate: 2026-09-12
+updatedDate: 2026-10-31
 tags: [comparativa, gesden, software-dental]
 ---
 
@@ -117,7 +117,7 @@ Dentalpin es la apuesta contraria: que el software de tu clínica no debería se
 
 ## Fuentes
 
-Todas consultadas el 28 de julio de 2026, revisadas de nuevo el 16 de agosto de 2026, cuando se corrigió lo que aquí se decía sobre Verifactu, y revisadas otra vez el 12 de septiembre de 2026, cuando se corrigió el número de versiones de G5:
+Todas consultadas el 28 de julio de 2026, revisadas de nuevo el 16 de agosto de 2026, cuando se corrigió lo que aquí se decía sobre Verifactu, revisadas otra vez el 12 de septiembre de 2026, cuando se corrigió el número de versiones de G5, y revisadas otra vez sin cambios el 31 de octubre de 2026:
 
 - [Gesden G5 · Infomed](https://www.infomedsoftware.com/software/gesden/gesden-g5/): versiones, funcionalidades, módulos opcionales, requisitos Windows, cifras de clínicas, soporte y migraciones.
 - [Gesden ONE · Infomed](https://www.infomedsoftware.com/software/gesden/gesden-one/): producto cloud.

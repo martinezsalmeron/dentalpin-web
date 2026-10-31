@@ -2,6 +2,7 @@
 title: "Free dental practice software: what actually exists"
 description: "What is genuinely free in dental practice software, what each vendor publishes on its own site, and why the CDT code set decides the answer in the US."
 pubDate: 2026-08-19
+updatedDate: 2026-10-31
 tags: [comparison, dental-software, free]
 ---
 
@@ -41,7 +42,7 @@ Everything below was read on the vendor's own site on 19 August 2026.
 - **Apexo** publishes itself as a "Free Dental PMS", "An open-source, offline-first dental practice manager" licensed under "GNU GPLv3". Its own page says "Your data lives on your own servers" and describes creating that server yourself, plus offline use ("Local-first data. No internet? No problem."), sync across devices, automated daily backups and interface languages EN, AR, ES, PL and KU. There is no tariff because there is no product to buy.
 - **Open Dental** publishes a full fee table, which in this market is rare. In the United States it is "$199/month/location or office" on a twelve month contract, dropping to "$149/month/location" month to month after twelve consecutive months. Canada is "$164/month/location" then "$137/month/location", other countries "$89/month/location or office", medical and institutional "$110/month/FTE provider", and providers from the third onward "$20/month/provider". Four to nine offices are "$169/month/office". Prepayment discounts run 5% for six months, 10% for a year and 15% for two to three years.
 - **Practice-Web** also publishes a full tariff: "$179/mo (reg. $199/mo) for 12 mo, then $129/mo (reg. $149/mo)" for a first office, "$129/mo" for an additional office, and a database conversion at "$1,195 (reg. $1,295)". There is no free edition on that page. The "Free 30-day trial" label appears against individual add-ons such as texting, online scheduling and patient forms.
-- **Dentally** publishes its UK pricing per surgery: Starter at "£125/month" for one surgery rising to "£575/month" at nine, Essentials at "£220/month" to "£720/month", and Pro at "£320/month" to "£945/month", all excluding VAT. No free plan is listed.
+- **Dentally** publishes its UK pricing per surgery: Starter from "£134/month" rising to "£618/month", Essentials from "£238/month" to "£778/month", and Pro from "£346/month" to "£1,021/month", all excluding VAT. No free plan is listed.
 - **Curve Dental** publishes no figure on its pricing page. The page carries "GET A PERSONALIZED QUOTE" and the claim that "Curve offers the tools you need to run a successful dental practice at a fraction of the usual costs", which is a comparison without a number.
 - **Dentrix** publishes no figure either. Its product page runs on "Request a Demo" and states "35,000+ Practices rely on Dentrix to streamline operations".
 - **Dentalpin** is published under Business Source License 1.1, which converts automatically to Apache 2.0 four years after each release. Self-hosting is free, the whole product ships, and there is no fee per chair, per dentist or per patient.
@@ -123,12 +124,14 @@ They apply to every product on this page, free or not, and the order matters.
 
 ## Sources
 
-- Apexo, apexo.app, consulted 19 August 2026: https://apexo.app/
-- Open Dental fees, consulted 19 August 2026: https://www.opendental.com/site/fees.html
-- Open Dental trial version, consulted 19 August 2026: https://www.opendental.com/site/trial.html
-- Open Dental licence change, consulted 19 August 2026: https://www.opendental.com/site/license.html
-- American Dental Association, licensing for commercial users, consulted 19 August 2026: https://www.ada.org/publications/ada-store-products/licensing-for-commercial-users
-- Practice-Web pricing, consulted 19 August 2026: https://www.practice-web.com/pricing/
-- Dentally pricing, consulted 19 August 2026: https://www.dentally.com/pricing
-- Curve Dental pricing, consulted 19 August 2026: https://www.curvedental.com/pricing/
-- Dentrix product page, consulted 19 August 2026: https://www.dentrix.com/products/dentrix
+All consulted on 19 August 2026, and re-checked on 31 October 2026, when Dentally's prices were corrected (they rose across all three plans since August) and the dead Curve Dental pricing link below was fixed:
+
+- Apexo, apexo.app: https://apexo.app/
+- Open Dental fees: https://www.opendental.com/site/fees.html
+- Open Dental trial version: https://www.opendental.com/site/trial.html
+- Open Dental licence change: https://www.opendental.com/site/license.html
+- American Dental Association, licensing for commercial users: https://www.ada.org/publications/ada-store-products/licensing-for-commercial-users
+- Practice-Web pricing: https://www.practice-web.com/pricing/
+- Dentally pricing: https://www.dentally.com/pricing
+- Curve Dental pricing: https://www.curvedental.com/pricing
+- Dentrix product page: https://www.dentrix.com/products/dentrix

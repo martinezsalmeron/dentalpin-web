@@ -2,6 +2,7 @@
 title: "Alternativa open source a Gesden: qué existe de verdad"
 description: "Qué alternativas open source a Gesden existen hoy para una clínica en España, con la licencia de cada una verificada en la web de su propio fabricante."
 pubDate: 2026-08-16
+updatedDate: 2026-10-31
 tags: [comparativa, gesden, open-source, software-dental]
 ---
 
@@ -13,7 +14,7 @@ Nosotros hacemos Dentalpin, que es una de las opciones que aparecen aquí abajo,
 
 ## En treinta segundos
 
-**Gesden es el producto maduro**, y esa parte no está en discusión: Infomed declara más de 30 años, 14.000 clínicas y más de 50 técnicos de soporte de lunes a viernes de 8 a 21 horas. Ninguna alternativa open source tiene nada parecido a eso.
+**Gesden es el producto maduro**, y esa parte no está en discusión: Infomed declara más de 30 años, 14.000 clínicas y más de 50 técnicos de soporte de lunes a viernes de 08:30h a 20:00h. Ninguna alternativa open source tiene nada parecido a eso.
 
 **Si por open source entiendes "que pueda leer y conservar el código", hoy quedan dos productos dentales**: Apexo, bajo GPLv3, y Dentalpin, bajo BSL 1.1 que pasa a Apache 2.0 a los cuatro años. Los dos se instalan en tu servidor y ninguno cobra licencia.
 
@@ -86,9 +87,9 @@ Solo filas verificables. Donde no hay dato público, se dice.
 | Dónde viven los datos | Según producto y despliegue | ✓ Donde tú decidas |
 | Años en el mercado | ✓ Más de 30 | ✗ Desde 2026 |
 | Clínicas usándolo | ✓ 14.000 declaradas | ✗ Muy pocas todavía |
-| Soporte | ✓ Más de 50 técnicos, de lunes a viernes de 8 a 21 | ✗ Telegram y GitHub |
+| Soporte | ✓ Más de 50 técnicos, de lunes a viernes de 08:30h a 20:00h | ✗ Telegram y GitHub |
 | Migraciones al año | ✓ Más de 400 declaradas | ✗ Sin cifra que enseñar |
-| Equipo de I+D | ✓ Más de 40 ingenieros | ✗ Equipo pequeño |
+| Equipo de I+D | ✓ Más de 40 técnicos | ✗ Equipo pequeño |
 
 Las cuatro últimas filas son de ellos y no hay manera honesta de disimularlas. Un producto con 14.000 clínicas detrás ha resuelto problemas que nosotros todavía no sabemos que existen.
 
@@ -129,9 +130,9 @@ Si quieres verlo funcionando antes de decidir nada, se [levanta en tu servidor e
 
 ## Fuentes
 
-Todas consultadas el 16 de agosto de 2026:
+Todas consultadas el 16 de agosto de 2026, y revisadas de nuevo el 31 de octubre de 2026, cuando se corrigió el horario de soporte de Infomed (de "8 a 21" a "08:30h a 20:00h", que es lo que dice su página hoy) y se corrigió "ingenieros de I+D" por "técnicos de I+D", que es como los llama su propia página:
 
-- [Gesden G5 · Infomed](https://www.infomedsoftware.com/software/gesden/gesden-g5/): versiones, requisitos de Windows, módulos opcionales, cifras de clínicas, años, soporte, ingenieros de I+D y migraciones, y la frase sobre tarifas.
+- [Gesden G5 · Infomed](https://www.infomedsoftware.com/software/gesden/gesden-g5/): versiones, requisitos de Windows, módulos opcionales, cifras de clínicas, años, soporte, técnicos de I+D y migraciones, y la frase sobre tarifas.
 - [Gesden ONE · Infomed](https://www.infomedsoftware.com/software/gesden/gesden-one/): producto web y módulos.
 - [Veri\*Factu · Infomed](https://www.infomedsoftware.com/software/gesden/verifactu/): versiones compatibles y cuota de mantenimiento.
 - [Open Dental · License](https://www.opendental.com/site/license.html): el cambio de GPL a propietario en la versión 24.4.
