@@ -107,6 +107,50 @@ most of its budget finding out. Checked again on 12 October 2026:
   and Studiocataldi carry the article texts and are barred: they are
   legal publishers, not official sources.
 
+**Checked on 3 November 2026, writing the Brazilian raio-X row. Anvisa's
+Datalegis works, but only with the full parameter set, and the short URL this
+file recorded is what fails.** The 08:00 run of the same day logged
+`anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&tipo=RDC&numeroAto=00000611&seqAto=000&valorAno=2022`
+as serving the RDC text. This run it returned the portal navigation shell and
+the message "URL inválida. Acesse o sistema novamente", to curl and to WebFetch
+alike, with and without a PHPSESSID obtained from `acao=acessarModuloCidadao`.
+**Appending `&orgao=RDC/DC/ANVISA/MS&codTipo=&desItem=&desItemFim=&cod_menu=1696&cod_modulo=134&pesquisa=true`
+served the complete act, all 87 articles.** So the act parameters alone are not
+enough: the `orgao`, `cod_modulo` and `pesquisa` parameters are what the
+endpoint keys on. The full shape is printed on the shell page itself, as the
+target of its "Acessar o sistema" link, so when the short URL fails, grep the
+response for `abrirAtoPublico` and `sgl_orgao` and rebuild the URL from it. Two
+more mechanics. The page is **ISO-8859-1**, so decode it as latin-1 and
+unescape the HTML entities before grepping, or every accented article reads as
+mojibake and greps miss. And **Datalegis does print a status line**: this act
+showed "Vigente" above the ementa, which is the opposite of the CFO note below,
+where neither act printed one. On that host, therefore, the absence of a status
+line is meaningful and its presence settles the standing in-force check.
+
+**Anvisa's Instruções Normativas are a separate problem with a clean answer.**
+`antigo.anvisa.gov.br/documents/10181/...` returns 403 to curl and to WebFetch,
+confirming the note above; `ses.sp.bvs.br` resets the connection; and
+`cvs.saude.sp.gov.br/zip/<act>.pdf` returns 503. **The Centro Estadual de
+Vigilância em Saúde do Rio Grande do Sul serves them, to plain curl, as the
+Anvisa PDFs themselves** (the Ministério da Saúde / ANVISA letterhead and the
+DOU publication line are on the documents):
+`cevs.rs.gov.br/upload/arquivos/202107/<slug>.pdf`, listed from
+`cevs.rs.gov.br/legislacao-sanitaria-atualizada-area-de-radiacoes`, which also
+carries IN 90, 91, 92, 93, 96 and 97. That page is the route to any 2021
+radiology IN. **The IN 94 / IN 95 mapping the 2 November row left unsettled is
+now read from the texts: IN 94 is extraoral, IN 95 is intraoral**, from art. 1º
+of each, and both entered into force on 1 July 2021 per their art. 7º.
+
+Three Brazilian routes that did not work this run, so nobody retries them:
+`in.gov.br` returned **HTTP 502 to WebFetch** on both the `/web/dou/-/` and the
+`/en/web/dou/-/` shapes and an empty reply to curl, `pesquisa.in.gov.br`'s
+INPDFViewer gave `PROTOCOL_ERROR`, and the **gov.br hospital-network copies of
+DOU prints are behind authentication** ("É necessário autenticar para visualizar
+essa página"), despite being indexed as public PDFs. The act's own Datalegis
+footer printed "PUB D.O.U., 16/03/2022 - Seção 1", so the date and seção are
+sourceable from the act text, but **the edição and página still are not** and
+were left out of the published post rather than taken from an index.
+
 These do answer, and are worth going to first: `boe.es` (consolidated
 texts, fetch with `&tn=0` and grep locally, the pages are ~1 MB),
 `gesetze-im-internet.de` (**checked 23 October 2026: the advice here was
