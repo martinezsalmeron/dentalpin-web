@@ -2,7 +2,7 @@
 title: "Dentalpin vs NexHealth: a front-office layer and a record system"
 description: "NexHealth is not a practice management system, it syncs on top of one. A sourced comparison with Dentalpin, which is the record system and is open source."
 pubDate: 2026-08-18
-updatedDate: 2026-09-12
+updatedDate: 2026-11-07
 tags: [comparison, nexhealth, dental-software]
 ---
 
@@ -14,7 +14,7 @@ We make Dentalpin, so we are not neutral. What we can be is accurate.
 
 ## In thirty seconds
 
-**NexHealth** does the things a record system is usually bad at: online booking, digital intake, reminders, reviews, insurance eligibility and card payments. Its own homepage headline is "One clean system.", and its integrations page leads with "Keep your system. Lose the busywork." It states that "More than 20,000 healthcare practices run on NexHealth".
+**NexHealth** does the things a record system is usually bad at: online booking, digital intake, reminders, reviews, insurance eligibility and card payments. Its own homepage headline is now "We keep your practice healthy.", and its integrations page carries the same line. It states it is "TRUSTED BY 20,000+ PRACTICES".
 
 **Dentalpin** is the other half of that sentence. Odontogram, periodontal charting, clinical records, treatment plans, quotes, invoicing and reports, open source, installed on a server you own, with no licence per chair, per dentist or per patient.
 
@@ -26,7 +26,7 @@ The question that decides between them is not which one to buy. It is whether yo
 
 ## What NexHealth is
 
-A patient experience platform that sits on top of an existing electronic health record. Its own summary of the product is "Scheduling, intake, and payments that sync to the patient record. Every appointment. Zero reconciliation."
+A patient experience platform that sits on top of an existing electronic health record. Its own summary of the product is now "Last-minute cancellations are filled. Patients are verified before they walk in. The ledger and charts stay up to date."
 
 The products it publishes are Scheduling (online booking, waitlist, one-click recalls), Communications (messaging, automated reminders, reviews, marketing campaigns), Forms, Payments, Insurance Verification and Insights.
 
@@ -36,9 +36,9 @@ Everything above depends on one piece of infrastructure, and NexHealth is refres
 
 It describes the Synchronizer as "proprietary technology built by NexHealth to work independently from health record systems", meaning it does not need the record vendor's cooperation. On the scheduling page it commits to a number: "You can automatically read and write to your health record system within 10-15 seconds for most integrations via the NexHealth Synchronizer."
 
-Two different counts appear on two different pages, and they cover different things. The integrations page lists more than eighty systems marked "Supported", including Dentrix, Eaglesoft, Open Dental, Curve Dental, Carestack, Easy Dental and DentiMax on the dental side, and Epic, Cerner, athenahealth, eClinicalWorks and NextGen on the medical side. The developer-facing API at synchronizer.nexhealth.com says something narrower: "We sync with 15+ EHRs behind the scenes so you never have to."
+Two different counts appear on two different pages, and they cover different things. The integrations page runs an "Is my system supported?" checker listing around 87 systems, including Dentrix, Eaglesoft, Open Dental, Curve Dental, Carestack, Easy Dental and DentiMax on the dental side, and Epic, Cerner, athenahealth, eClinicalWorks and NextGen on the medical side, though it no longer labels any of them "Supported". The developer-facing API at synchronizer.nexhealth.com says something narrower: "One API for 15+ practice management systems. Unlocks 200K practices."
 
-> **Dentalpin is not on that list.** Consulted 18 August 2026, no Dentalpin entry appears among the supported systems. The page does carry an "Other" option, which says "We don't have a dedicated sync built for that system just yet. But you can still use many of NexHealth's great features." So the two products do not currently pair, and that is a fact about us as much as about them.
+> **Dentalpin is not on that list.** Consulted again on 7 November 2026, no Dentalpin entry appears among the roughly 87 systems in the checker. The list now simply ends in an unlabelled "Other" entry, with no explanatory text next to it. So the two products do not currently pair, and that is a fact about us as much as about them.
 
 ### What it does that a record system usually does not
 
@@ -50,7 +50,7 @@ Two different counts appear on two different pages, and they cover different thi
 
 ### What it costs
 
-> **NexHealth publishes no prices.** The pricing page consulted on 18 August 2026 carries a quote calculator and no dollar figure for any package. What it does publish is the shape of the contract, which is more than most: "When you choose the month-to-month option, you'll be charged every month. For our yearly subscription, you'll pay the full year up front", and "There are no cancellation fees. Just provide us with notice that you don't want to renew."
+> **NexHealth publishes no prices.** The pricing page, consulted again on 7 November 2026, still carries a quote calculator and no dollar figure for any package. What it does publish is the shape of the contract, which is more than most: "When you choose the month-to-month option, you'll be charged every month. For our yearly subscription, you'll pay the full year up front", "There are no cancellation fees", and separate notice periods: a full billing cycle's notice on monthly contracts, 90 days' notice on annual ones.
 
 Adding sites is a sales conversation: "Contact your sales rep to increase your locations and upgrade your package."
 
@@ -150,18 +150,18 @@ Dentalpin is a different bet: that the software holding clinical records should 
 
 ## Sources
 
-All NexHealth pages consulted on 18 August 2026, and re-checked on 12 September 2026, when the practice count and homepage headline above were corrected.
+All NexHealth pages consulted on 18 August 2026, re-checked on 12 September 2026, when the practice count and homepage headline above were corrected, and re-checked again on 7 November 2026, when the homepage and integrations headline, the product summary line, the integrations checker and its system count, the developer-API wording and the pricing contract-notice wording were all updated to match the site as it now reads.
 
-- [NexHealth home](https://www.nexhealth.com/): "One clean system.", "Scheduling, intake, and payments that sync to the patient record. Every appointment. Zero reconciliation.", and "More than 20,000 healthcare practices run on NexHealth".
-- [Integrations](https://www.nexhealth.com/integrations): "Keep your system. Lose the busywork.", the 80+ systems marked "Supported" including Dentrix, Eaglesoft, Open Dental, Curve Dental, Carestack, Easy Dental, DentiMax, Epic, Cerner, athenahealth, eClinicalWorks and NextGen, the absence of any Dentalpin entry, and the "Other" wording: "We don't have a dedicated sync built for that system just yet. But you can still use many of NexHealth's great features."
+- [NexHealth home](https://www.nexhealth.com/): "We keep your practice healthy.", "Last-minute cancellations are filled. Patients are verified before they walk in. The ledger and charts stay up to date.", and "TRUSTED BY 20,000+ PRACTICES".
+- [Integrations](https://www.nexhealth.com/integrations): now headed "We keep your practice healthy." too, the "Is my system supported?" checker listing roughly 87 systems including Dentrix, Eaglesoft, Open Dental, Curve Dental, Carestack, Easy Dental, DentiMax, Epic, Cerner, athenahealth, eClinicalWorks and NextGen, the absence of any Dentalpin entry, and an unlabelled "Other" entry at the end of the list.
 - [NexHealth Synchronizer](https://www.nexhealth.com/features/nexhealth-synchronizer): "proprietary technology built by NexHealth to work independently from health record systems", "Most practice management software wasn't built to connect to the internet... The Synchronizer bridges that gap", and read and write across dozens of systems.
 - [Scheduling](https://www.nexhealth.com/features/scheduling): "Automatically syncs your schedule with your health record system", and "You can automatically read and write to your health record system within 10-15 seconds for most integrations via the NexHealth Synchronizer."
 - [Features index](https://www.nexhealth.com/features): the product names, Scheduling, Communications, Forms, Payments, Insurance Verification, Insights and the Synchronizer.
 - [Verification](https://www.nexhealth.com/features/nexhealth-verification): "Verify insurance with 1,200+ carriers", "Automatically check patients' insurance up to a week before each visit", and "Save eligibility summaries to your health record system automatically".
 - [Payments](https://www.nexhealth.com/features/payments): terminals and text-to-pay, "all major credit cards, Apple Pay, Google Pay and Affirm", "fully syncs with Eaglesoft, OpenDental, and Dentrix", payments that "won't sync to your ledger just yet" elsewhere, and the 2.6% + $0.07 and 2.9% + $0.30 processing rates.
-- [Pricing](https://www.nexhealth.com/pricing): no dollar figures for any package, the month-to-month and annual wording, "There are no cancellation fees. Just provide us with notice that you don't want to renew.", and "Contact your sales rep to increase your locations and upgrade your package."
+- [Pricing](https://www.nexhealth.com/pricing): no dollar figures for any package, the month-to-month and annual wording, "There are no cancellation fees", the separate monthly and annual notice-period wording, and "Contact your sales rep to increase your locations and upgrade your package."
 - [Included usage and overage fees, NexHealth Help Center](https://help.nexhealth.com/en/articles/11584920-included-usage-overage-fees): 800 verifications a month then "$0.20", and "5,000 SMS messages via NexHealth Campaigns per location every month" then "$0.012/SMS message".
-- [Synchronizer developer API](https://synchronizer.nexhealth.com/) (synchronizer.io and nexhealth.com/api both redirect here): "Query normalized patient, scheduling, and billing data from a single API. We sync with 15+ EHRs behind the scenes so you never have to.", and "Usage-based pricing at $0.10 per API call".
+- [Synchronizer developer API](https://synchronizer.nexhealth.com/) (synchronizer.io and nexhealth.com/api both redirect here): "One API for 15+ practice management systems. Unlocks 200K practices.", and "$0.10 per API call" on the Builder plan, with a free sandbox on Starter.
 - [Dentalpin's licence](https://github.com/martinezsalmeron/dentalpin/blob/main/LICENSE) and [source](https://github.com/martinezsalmeron/dentalpin).
 
 Something wrong or out of date in this comparison? [Tell us](https://github.com/martinezsalmeron/dentalpin/discussions) and we will fix it. That goes for NexHealth too.
