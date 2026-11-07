@@ -2,7 +2,7 @@
 title: "Dentalpin frente a Clinic Cloud: qué trae cada plan y dónde viven tus datos"
 description: "Comparativa entre Clinic Cloud, del grupo Doctoralia y con tarifa completa publicada, y Dentalpin, open source y autoalojable. Con cifras, fuentes y fechas."
 pubDate: 2026-08-14
-updatedDate: 2026-09-12
+updatedDate: 2026-11-07
 tags: [comparativa, clinic-cloud, software-dental]
 ---
 
@@ -63,7 +63,7 @@ Tres cosas más de su misma tabla, porque cambian la cuenta:
 
 1. **Las agendas extra se pagan.** El tooltip de esa fila dice "+10 EUR/ agenda extra hasta alcanzar el límite de cada plan". Mini tiene el límite en una agenda, Pro en cinco, y Max y Enterprise lo tienen abierto.
 2. **El asistente de IA es una suscripción aparte.** Noa Notes se anuncia a "20€ al mes + IVA (1 usuario)". El selector de la propia página de tarifas pone el plan Mini con Noa en 49 €, el Pro con tres licencias en 79 € y el Max con tres licencias en 109 €.
-3. **La rebaja que vimos en agosto ya no está activa.** El 14 de agosto los planes llevaban la etiqueta "2 meses al 50% Dto", que dejaba Mini en 14,5 €, Pro en 24,5 € y Max en 39,5 € durante ese periodo. Hoy esa etiqueta ha desaparecido y en su lugar la web conserva una plantilla distinta ("Black Friday, 50% dto 3 meses") que tampoco está activa en este momento. Lo único fiable es la tarifa de lista de la tabla de arriba, que es la que pagarás salvo que veas una promoción activa el día que entres en su web.
+3. **Siempre hay algún descuento activo, y nunca es el mismo.** El 14 de agosto los planes llevaban la etiqueta "2 meses al 50% Dto", que dejaba Mini en 14,5 €, Pro en 24,5 € y Max en 39,5 € durante ese periodo. El 7 de noviembre esa etiqueta ha sido sustituida por una de Black Friday ("🔥 ¡50% dto 3 meses!"), con la cabecera "El precio más bajo del año está aquí", que deja los mismos tres planes en los mismos 14,5 €, 24,5 € y 39,5 € al mes, esta vez durante tres meses en vez de dos. La tarifa de lista no ha cambiado entre una revisión y la otra. Lo único fiable es esa tarifa de lista de la tabla de arriba, que es la que pagarás en cuanto termine la promoción vigente el día que entres en su web.
 
 Nuestra tarifa está en [precios](/es/precios/): 0 € si lo montas tú, o 490 € de puesta en marcha y 89 € al mes si lo mantenemos nosotros, más 12 a 15 € del servidor y 4 € de copias que contratas directamente a Hetzner.
 
@@ -143,7 +143,7 @@ Lo nuestro es otra apuesta: el código publicado, la historia clínica dental co
 
 ## Fuentes
 
-Todas consultadas el 14 de agosto de 2026, y revisadas de nuevo el 12 de septiembre de 2026, cuando se actualizó lo que aquí se decía sobre la promoción activa:
+Todas consultadas el 14 de agosto de 2026, revisadas de nuevo el 12 de septiembre de 2026, cuando se actualizó lo que aquí se decía sobre la promoción activa, y revisadas otra vez el 7 de noviembre de 2026, cuando se corrigió de nuevo la promoción activa (de "2 meses al 50% Dto" a "Black Friday, 50% dto 3 meses") y se confirmó que la tarifa de lista, las cifras corporativas, la certificación ISO/IEC 27001 y el resto de la comparativa seguían igual:
 
 - [Tarifas y precios · Clinic Cloud](https://clinic-cloud.com/tarifas): los cuatro planes con sus precios "al mes + IVA", lo que incluye cada uno, la promoción "2 meses al 50% Dto", la comparativa completa de planes con las filas "Alta gratuita", "Sin permanencia", "Agendas" y "Odontograma y periodontograma", el tooltip "+10 EUR/ agenda extra hasta alcanzar el límite de cada plan", el precio de Noa Notes y las menciones a "Recomendado por más de 3.000 consultas y clínicas en España" e ISO/IEC 27001.
 - [Software clínica dental](https://clinic-cloud.com/software-clinica-dental-programa-odontologico): odontogramas, periodontogramas, agendas para odontólogos, presupuestos y análisis de productividad.
