@@ -2,7 +2,7 @@
 title: "Dentalpin vs Software of Excellence: an installed EXACT, and code you can read"
 description: "Software of Excellence installs EXACT into your practice and publishes no price. A sourced comparison with Dentalpin, which is open source and self-hosted."
 pubDate: 2026-08-17
-updatedDate: 2026-09-12
+updatedDate: 2026-11-07
 tags: [comparison, software-of-excellence, dental-software]
 ---
 
@@ -34,7 +34,7 @@ Its published history is unusually specific, and worth reading before anyone cal
 - **2002.** "This was a landmark year as we reached our 1000th customer in the UK."
 - **2007.** "Software of Excellence became part of Henry Schein."
 - **2009.** "An important landmark as we became the market leader with over 4,500 dental practice customers."
-- **2020.** They "continued to support thousands of practices internationally with our practice management software solution."
+- **2020.** "During the COVID-19 pandemic our business became a hybrid remote working environment."
 - **2024.** "Added AI capabilities to EXACT with Second Opinion by Pearl integration."
 
 Henry Schein One's own product page states the market plainly: "Software of Excellence is available in the UK, Australia and New Zealand." There is also an Irish site at the same domain.
@@ -166,10 +166,10 @@ Dentalpin is the other bet: that the software holding clinical records should be
 
 ## Sources
 
-All pages consulted on 17 August 2026, and re-checked on 12 September 2026, when the module descriptions and the Chairsyde link above were corrected. Note that softwareofexcellence.co.uk redirects to softwareofexcellence.com/en-gb/.
+All pages consulted on 17 August 2026, re-checked on 12 September 2026, when the module descriptions and the Chairsyde link above were corrected, and re-checked again on 7 November 2026, when the 2020 timeline entry below was corrected; everything else held. Note that softwareofexcellence.co.uk redirects to softwareofexcellence.com/en-gb/.
 
 - [Software of Excellence home](https://www.softwareofexcellence.com/en-gb/): "The UK's number one dental practice software", "Join thousands of dental practices in the UK", the 48% private revenue claim, and the Gillingham address.
-- [Our story](https://www.softwareofexcellence.com/en-gb/company/our-story): founded in New Zealand in 1989, the 1000th UK customer in 2002, "became part of Henry Schein" in 2007, "the market leader with over 4,500 dental practice customers" in 2009, the 2020 line about supporting thousands of practices internationally, and the 2024 Second Opinion by Pearl integration.
+- [Our story](https://www.softwareofexcellence.com/en-gb/company/our-story): founded in New Zealand in 1989, the 1000th UK customer in 2002, "became part of Henry Schein" in 2007, "the market leader with over 4,500 dental practice customers" in 2009, the rewritten 2020 entry about becoming a hybrid remote working environment during the pandemic, and the 2024 Second Opinion by Pearl integration.
 - [EXACT, the complete practice management system](https://www.softwareofexcellence.com/en-gb/solutions/exact): the descriptions of Recall Manager, Utilisation Manager, Care Manager, Workflow Manager, Short Notice Lists, Marketing Manager and the UDA Manager, and the "the complete practice management system you already know" line.
 - [NHS practices](https://www.softwareofexcellence.com/en-gb/solutions/exact/nhs-practices): "Track your NHS contracts with our Predictive UDA Manager", the intelligent predictions wording, "96% of practices in our Customer Success Programme hit their NHS contracts", and the absence of any named nation or claim submission route.
 - [Practice efficiency](https://www.softwareofexcellence.com/en-gb/solutions/practice-efficiency): Examine Pro "into one single database", My Practice Cloud "from any device", MPC Pay, Dentist Portal and Workflow Manager.
