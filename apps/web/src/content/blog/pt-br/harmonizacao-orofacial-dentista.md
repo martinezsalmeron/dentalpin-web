@@ -32,7 +32,7 @@ O processo é a Ação Civil Pública nº 1003948-83.2019.4.01.3400, movida cont
 2. **Segunda instância, agosto de 2026.** Quatro anos depois, a 8ª Turma do TRF-1 "votou pelo provimento das apelações do CFM e da SBD", segundo o portal do CFM. O fundamento relatado é que "a Constituição atribui à União competência para legislar sobre as condições para o exercício das profissões e que os conselhos profissionais não podem ampliar, por meio de resoluções, atribuições sem respaldo legal".
 3. **Depois disso.** O CFO informa, em nota de posicionamento de 21 de setembro de 2026, que "não há trânsito em julgado da ação" e que "diversos recursos e estratégias judiciais já estão sendo adotados, e outros virão, cada um em seu tempo oportuno".
 
-Vale registrar o que a sentença de 2022 citou das duas leis, porque é o eixo jurídico da discussão e os dois textos aparecem nela transcritos. Da Lei 5.081/1966, que regula a Odontologia, o art. 6º, inciso I, atribui ao cirurgião-dentista praticar todos os atos pertinentes à Odontologia decorrentes de conhecimentos adquiridos em curso regular ou em cursos de pós-graduação. Da Lei 12.842/2013, a Lei do Ato Médico, o § 6º do art. 4º dispõe que o disposto naquele artigo não se aplica ao exercício da Odontologia, no âmbito de sua atuação.
+Vale registrar o que a sentença de 2022 citou das duas leis, porque é o eixo jurídico da discussão e os dois textos aparecem nela transcritos. Da Lei 5.081/1966, que regula a Odontologia, o art. 6º, inciso I, atribui ao cirurgião-dentista praticar todos os atos pertinentes à Odontologia decorrentes de conhecimentos adquiridos em curso regular ou em cursos de pós-graduação. Da Lei 12.842/2013, a Lei do Ato Médico, o § 6º do art. 4º dispõe que "o disposto neste artigo não se aplica ao exercício da Odontologia, no âmbito de sua área de atuação".
 
 ## As duas leituras oficiais, lado a lado
 
@@ -74,7 +74,7 @@ A transição é o ponto. Pelo art. 3º, inciso II, o registro em CEOF pela via 
 3. Tempo mínimo de três anos de registro em cada uma das duas especialidades.
 4. Requerimento no CRO da inscrição principal no prazo de 60 dias contados da publicação.
 
-Ou seja, a especialidade nova foi construída em cima do registro na especialidade que a Justiça depois anulou, e o prazo de 60 dias já se encerrou. O art. 5º da mesma resolução diz que os procedimentos consagrados pelas normas que reconhecem HOF e CTBMF "não serão restritos por esta Resolução". Como essas duas peças se combinam depois do julgamento é precisamente o que o acórdão responderia.
+Ou seja, a especialidade nova foi construída em cima do registro na especialidade que a Justiça depois anulou. O prazo de 60 dias do inciso II corre da publicação do ato, e não da data em que ele foi assinado: a data de publicação no Diário Oficial da União não pôde ser confirmada nesta consulta, então confirme no seu CRO se ainda há prazo antes de descartar essa via. O art. 5º da mesma resolução diz que os procedimentos consagrados pelas normas que reconhecem HOF e CTBMF "não serão restritos por esta Resolução". Como essas duas peças se combinam depois do julgamento é precisamente o que o acórdão responderia.
 
 A formação em CEOF é outra ordem de grandeza: o art. 11 exige carga horária mínima de 3.000 horas em no mínimo 36 meses, contra as 500 horas da HOF. O art. 13 limita a turma a doze alunos, com um professor para cada quatro em atividade prática.
 
