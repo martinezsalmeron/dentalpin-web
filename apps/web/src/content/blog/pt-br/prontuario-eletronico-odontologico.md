@@ -53,7 +53,7 @@ Um trecho do art. 11 costuma passar batido e é o mais relevante para quem escol
 
 ## Teleodontologia também gera prontuário
 
-A resolução que hoje regula a teleodontologia é a CFO-SEC-278, de 25 de novembro de 2025, que substituiu as normas de 2020 e está alinhada à Lei 14.510/2022 e à LGPD. Ela detalha as modalidades de atendimento remoto (teleconsulta, teletriagem, telediagnóstico, telemonitoramento, teleinterconsulta e teleorientação), e o registro em prontuário vale para o atendimento remoto como para qualquer outro.
+A resolução que hoje regula a teleodontologia é a CFO-SEC-278, de 25 de novembro de 2025, que substituiu as normas de 2020 e está alinhada à Lei 14.510/2022 e à LGPD. Ela detalha dez modalidades de atendimento remoto, entre elas a teleconsulta, a teletriagem, o telediagnóstico, o telemonitoramento, a teleinterconsulta e a teleorientação, e o registro em prontuário vale para o atendimento remoto como para qualquer outro.
 
 ![Atividade do paciente: consulta agendada, plano de tratamento criado, consulta concluída e tratamento realizado, cada linha com data e hora](/screenshots/patient-timeline.png)
 
