@@ -32,7 +32,22 @@ O processo é a Ação Civil Pública nº 1003948-83.2019.4.01.3400, movida cont
 2. **Segunda instância, agosto de 2026.** Quatro anos depois, a 8ª Turma do TRF-1 "votou pelo provimento das apelações do CFM e da SBD", segundo o portal do CFM. O fundamento relatado é que "a Constituição atribui à União competência para legislar sobre as condições para o exercício das profissões e que os conselhos profissionais não podem ampliar, por meio de resoluções, atribuições sem respaldo legal".
 3. **Depois disso.** O CFO informa, em nota de posicionamento de 21 de setembro de 2026, que "não há trânsito em julgado da ação" e que "diversos recursos e estratégias judiciais já estão sendo adotados, e outros virão, cada um em seu tempo oportuno".
 
-Vale registrar o que a sentença de 2022 citou das duas leis, porque é o eixo jurídico da discussão e os dois textos aparecem nela transcritos. Da Lei 5.081/1966, que regula a Odontologia, o art. 6º, inciso I, atribui ao cirurgião-dentista praticar todos os atos pertinentes à Odontologia decorrentes de conhecimentos adquiridos em curso regular ou em cursos de pós-graduação. Da Lei 12.842/2013, a Lei do Ato Médico, o § 6º do art. 4º dispõe que "o disposto neste artigo não se aplica ao exercício da Odontologia, no âmbito de sua área de atuação".
+Vale registrar o que a sentença de 2022 citou das duas leis, porque é o eixo jurídico da discussão. Os textos abaixo foram conferidos no acervo de Legislação Informatizada da Câmara dos Deputados, não apenas na transcrição da sentença.
+
+A Lei do Ato Médico precisa ser lida em quatro pedaços, e ler só um deles é o que produz as páginas erradas sobre o assunto.
+
+- **Art. 4º, caput.** "São atividades privativas do médico:".
+- **Art. 4º, inciso III.** Inclui a "indicação da execução e execução de procedimentos invasivos, sejam diagnósticos, terapêuticos ou estéticos". Lido isolado, parece encerrar a discussão em favor do CFM.
+- **Art. 4º, § 4º.** Define o que é invasivo para efeitos da lei, e a definição é estreita. Os incisos I e II do parágrafo foram vetados, de modo que o único critério que restou em vigor é o inciso III: "invasão dos orifícios naturais do corpo, atingindo órgãos internos".
+- **Art. 4º, § 6º.** "O disposto neste artigo não se aplica ao exercício da Odontologia, no âmbito de sua área de atuação."
+
+É esse § 4º que a sentença de 2022 usou para decidir. Ela registra que o inciso III "num primeiro momento, passa a impressão de que todo e qualquer procedimento invasivo seria ato privativo do médico", e então vai ao parágrafo seguinte para mostrar que a lei define invasivo de forma restrita.
+
+A mesma sentença reproduz o § 7º do artigo, que preserva as competências próprias de assistente social, biólogo, biomédico, enfermeiro, farmacêutico, fisioterapeuta, fonoaudiólogo, nutricionista, profissional de educação física, psicólogo, terapeuta ocupacional e técnico e tecnólogo de radiologia. A Odontologia está no § 6º, em dispositivo separado dessa lista.
+
+Do outro lado está a Lei 5.081/1966, que regula a Odontologia. O art. 6º abre com "Compete ao cirurgião-dentista:", e o inciso I é amplo: "praticar todos os atos pertinentes a Odontologia". O inciso VI, também invocado pela resolução, trata de outra coisa, a analgesia e a hipnose, "desde que comprovadamente habilitado, quando constituírem meios eficazes para o tratamento".
+
+Nenhum desses dispositivos foi alterado pelo julgamento de 2026. A Lei 13.270/2016 alterou a Lei do Ato Médico, mas no art. 6º, que trata da denominação "médico", e o acervo da Câmara não registra alteração no art. 4º nem nos seus parágrafos.
 
 ## As duas leituras oficiais, lado a lado
 
@@ -82,7 +97,7 @@ A formação em CEOF é outra ordem de grandeza: o art. 11 exige carga horária 
 
 Independentemente do julgamento, a Resolução CFO-SEC-286/2026 trouxe requisitos de ambiente que os CROs fiscalizam. O art. 10 é explícito: os ambientes "serão obrigatoriamente fiscalizados pelos Conselhos Regionais de Odontologia", que podem "determinar a suspensão cautelar do atendimento até a regularização das condições exigidas".
 
-O Manual de Fiscalização da Odontologia publicado pelo CFO em 2026 usa os arts. 4º, 6º, 7º e 9º dessa resolução como base normativa dos seus roteiros de inspeção. Os três ambientes:
+O Manual de Fiscalização da Odontologia publicado pelo CFO em 2026 usa os arts. 4º, 6º, 7º e 9º dessa resolução como base normativa dos seus roteiros de inspeção. A Resolução CFO-SEC nº 286/2026 é citada sete vezes no manual, e um dos roteiros remete também às "normas que regulamentam a especialidade de Harmonização Orofacial (HOF), quanto à otomodelação". Vale notar a data: o manual foi lançado em 27 de agosto de 2026, uma semana depois do julgamento. Os três ambientes:
 
 | Requisito | Tipo I | Tipo II | Tipo III |
 |---|---|---|---|
@@ -132,4 +147,7 @@ No [DentalPin](/pt-br/precos/) cada entrada do prontuário guarda autor e horár
 - CFO, "Nota de posicionamento: Resolução nº 198/2019 e a Harmonização Orofacial", 21 de setembro de 2026: [website.cfo.org.br](https://website.cfo.org.br/nota-de-posicionamento-resolucao-no-198-2019-e-a-harmonizacao-orofacial/). Consultado em 9 de novembro de 2026.
 - CFO, Manual de Fiscalização da Odontologia (2026), que usa os arts. 4º, 6º, 7º e 9º da Resolução CFO-SEC nº 286/2026 como base normativa dos roteiros de inspeção: [website.cfo.org.br/wp-content/uploads/2026/08/Manual_Fiscalizacao_CFO_E-book_v2.pdf](https://website.cfo.org.br/wp-content/uploads/2026/08/Manual_Fiscalizacao_CFO_E-book_v2.pdf). Consultado em 9 de novembro de 2026.
 
-O inteiro teor do acórdão da 8ª Turma do TRF-1 não foi lido nesta consulta, e por isso este texto não afirma o alcance da decisão: ele relata o que cada conselho publica sobre ela. Os textos da Lei 5.081/1966 e da Lei 12.842/2013 estão citados como transcritos na sentença de 2022, porque o portal da Presidência da República recusou as requisições em 9 de novembro de 2026.
+- [Lei nº 5.081, de 24 de agosto de 1966](https://www2.camara.leg.br/legin/fed/lei/1960-1969/lei-5081-24-agosto-1966-364652-normaatualizada-pl.html), texto da norma atualizada no acervo de Legislação Informatizada da Câmara dos Deputados. Art. 6º, caput e incisos I e VI. Consultada em 10 de novembro de 2026.
+- [Lei nº 12.842, de 10 de julho de 2013](https://www2.camara.leg.br/legin/fed/lei/2013/lei-12842-10-julho-2013-776473-normaatualizada-pl.html), texto da norma atualizada no mesmo acervo. Art. 4º, caput, inciso III, § 4º (incisos I e II vetados), § 6º e § 7º. A página registra que a Lei 13.270/2016 alterou o art. 6º, não o art. 4º. Consultada em 10 de novembro de 2026.
+
+O inteiro teor do acórdão da 8ª Turma do TRF-1 não foi lido nesta consulta, e por isso este texto não afirma o alcance da decisão: ele relata o que cada conselho publica sobre ela. Quatro vias oficiais foram tentadas em 10 de novembro de 2026 e nenhuma respondeu: `processual.trf1.jus.br` devolveu HTTP 403, `jurisprudencia.trf1.jus.br` não resolve neste ambiente, a consulta pública do PJe de segundo grau exige sessão interativa e a API do Diário de Justiça Eletrônico Nacional respondeu HTTP 403 por bloqueio geográfico. Quem precisa do teor consulta o processo pelo número acima. As duas leis federais, antes citadas aqui apenas como transcritas na sentença de 2022 porque o portal da Presidência da República recusa as requisições deste ambiente, passaram a ser conferidas no acervo da Câmara dos Deputados, linkado acima.
