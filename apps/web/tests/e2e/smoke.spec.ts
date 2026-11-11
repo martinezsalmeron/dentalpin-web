@@ -103,6 +103,33 @@ test('partner CTAs preselect the partner reason on the contact form', async ({ p
   await expect(page.locator('select[name="reason"]')).toHaveValue('partner');
 });
 
+test('pricing links to the integrator directory', async ({ page }) => {
+  await page.goto('/es/precios');
+  await page.getByRole('link', { name: 'Ver integradores' }).click();
+  await expect(page).toHaveURL(/\/es\/integradores\/$/);
+  await expect(page.getByRole('heading', { name: 'THL Desenvolvimento' })).toBeVisible();
+});
+
+test('integrator filters narrow the list and show an empty state', async ({ page }) => {
+  await page.goto('/es/integradores');
+  await expect(page.getByText('Todavía no hay integradores en España')).toBeVisible();
+  await page.getByRole('button', { name: /Brasil/ }).click();
+  await expect(page).toHaveURL(/country=BR/);
+  await expect(page.getByRole('heading', { name: 'THL Desenvolvimento' })).toBeVisible();
+  await page.goto('/es/integradores/?country=XX');
+  await expect(page.getByText('Ningún integrador con esos filtros')).toBeVisible();
+  await page.getByRole('button', { name: 'Quitar filtros' }).click();
+  await expect(page.getByRole('heading', { name: 'THL Desenvolvimento' })).toBeVisible();
+});
+
+test('pt-br preselects Brazil and the join CTA reaches the partner form', async ({ page }) => {
+  await page.goto('/pt-br/integradores');
+  await expect(page.getByRole('button', { name: /Brasil/ })).toHaveAttribute('aria-pressed', 'true');
+  await page.goto('/es/integradores');
+  await page.getByRole('link', { name: 'Solicitar aparecer en el directorio' }).click();
+  await expect(page).toHaveURL(/\/es\/contacto\/\?reason=partner$/);
+});
+
 test('contact form shows validation on empty submit', async ({ page }) => {
   await page.goto('/es/contacto');
   await page.getByRole('button', { name: /enviar/i }).click();

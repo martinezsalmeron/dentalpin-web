@@ -7,6 +7,7 @@
     "features": "Features",
     "technology": "Technology",
     "pricing": "Pricing",
+    "integrators": "Integrators",
     "manifesto": "Manifesto",
     "docs": "Documentation",
     "community": "Community",
@@ -638,6 +639,7 @@
     "links": {
       "features": "Features",
       "pricing": "Pricing",
+      "integrators": "Integrators",
       "manifesto": "Manifesto",
       "modules": "Module system",
       "api": "API",
@@ -696,7 +698,8 @@
           "Apply updates and tell you beforehand",
           "Sign a data processing agreement with you"
         ],
-        "cta": "Don't know one? Write to us"
+        "cta": "Don't know one? Write to us",
+        "directory": "Browse integrators"
       },
       "integrators": {
         "label": "If you are an integrator",
@@ -855,6 +858,67 @@
       "body": "Write to us either way. A person reads it, not a form.",
       "primary": "Talk to us",
       "secondary": "Try the demo"
+    }
+  },
+  "integrators": {
+    "meta": {
+      "title": "Dentalpin integrators · Companies that install and maintain it",
+      "description": "Directory of IT companies that install, migrate and maintain Dentalpin for dental clinics, sorted by country. Contact them directly, no middleman."
+    },
+    "eyebrow": "INTEGRATORS",
+    "title": "Companies that set up Dentalpin for your clinic",
+    "subtitle": "Dentalpin is free, but someone has to put it on a server, move your data over and be there when something breaks. These companies do that. You contact them directly and agree the price with them. We take no commission.",
+    "ctaFind": "Browse the directory",
+    "ctaJoin": "I'm an integrator",
+    "filters": {
+      "country": "Country",
+      "service": "Service",
+      "all": "All",
+      "resultsOne": "{n} integrator",
+      "resultsMany": "{n} integrators"
+    },
+    "services": {
+      "install": "Installation",
+      "migration": "Data migration",
+      "support": "Support",
+      "training": "Training",
+      "custom": "Custom development"
+    },
+    "card": {
+      "languages": "Languages",
+      "whatsapp": "WhatsApp",
+      "email": "Email",
+      "website": "Website",
+      "whatsappText": "Hi, I found you in the Dentalpin integrator directory and I'd like some information for my clinic.",
+      "emailSubject": "Enquiry from the Dentalpin directory"
+    },
+    "noLocal": {
+      "title": "No integrators in {country} yet",
+      "body": "We're looking for companies in your area. In the meantime, anyone comfortable with Docker can install it using the guide, or write to us and we'll help you find someone.",
+      "contact": "Help me find one",
+      "docs": "Installation guide",
+      "join": "Based here? Join"
+    },
+    "empty": {
+      "title": "No integrators match those filters",
+      "body": "Try another country or service. If you can't find what you need, write to us and we'll put you in touch with someone.",
+      "reset": "Clear filters"
+    },
+    "disclaimer": "Integrators are independent companies. Dentalpin takes no commission, plays no part in pricing and isn't responsible for their services. Before you hire one, ask for references and a data processing agreement.",
+    "join": {
+      "eyebrow": "FOR INTEGRATORS",
+      "title": "Get listed in the directory",
+      "body": "If you install and maintain systems for clinics or small businesses, Dentalpin is one more service you can offer. Being listed here is free.",
+      "needTitle": "What we need to list you",
+      "need": [
+        "Trading name and registered company name",
+        "Country and city you work in",
+        "Services you offer",
+        "Website, email and phone or WhatsApp",
+        "Your logo as PNG or SVG"
+      ],
+      "cta": "Apply to be listed",
+      "note": "We review every application by hand and reply by email."
     }
   },
   "featuresIndex": {

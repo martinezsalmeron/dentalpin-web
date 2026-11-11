@@ -65,5 +65,13 @@
   "pricing.cost.rows.backups": "Backups externos",
   "pricing.cost.total": "Servidor e backups, aproximado",
   "pricing.leave.items[0]": "Você leva uma cópia completa e padrão do seu banco de dados.",
-  "pricing.cta.primary": "Falar conosco"
+  "pricing.cta.primary": "Falar conosco",
+  "integrators.meta.description": "Diretório de empresas de informática que instalam, migram e mantêm o Dentalpin em clínicas odontológicas, organizado por país. Contato direto, sem intermediários.",
+  "integrators.subtitle": "O Dentalpin é gratuito, mas alguém precisa colocá-lo em um servidor, migrar seus dados e estar lá quando algo der errado. Essas empresas cuidam disso. Você fala direto com elas e combina o preço. Nós não cobramos comissão.",
+  "integrators.services.training": "Treinamento",
+  "integrators.services.custom": "Desenvolvimento sob medida",
+  "integrators.card.whatsappText": "Olá, encontrei vocês no diretório de integradores do Dentalpin e gostaria de informações para minha clínica.",
+  "integrators.empty.body": "Tente outro país ou outro serviço. Se não encontrar o que procura, fale com a gente e colocamos você em contato com alguém.",
+  "integrators.disclaimer": "Os integradores são empresas independentes. O Dentalpin não cobra comissão, não interfere no preço e não responde pelos serviços deles. Antes de contratar, peça referências e um contrato de operador de dados conforme a LGPD.",
+  "integrators.join.need[4]": "Seu logotipo em PNG ou SVG"
 }

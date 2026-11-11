@@ -41,5 +41,8 @@
   "pricing.cost.total": "Servidor y respaldos, aproximado",
   "pricing.faq.items[1].q": "¿Ustedes tienen acceso a los expedientes clínicos de mis pacientes?",
   "pricing.faq.items[2].a": "Tu consultorio, como responsable del tratamiento de los datos de sus pacientes. Si un integrador mantiene el servidor, actúa como encargado del tratamiento y el contrato con él debe recogerlo. Dentalpin pone de su parte una base de datos solo tuya y respaldos estándar que puedes restaurar donde quieras.",
-  "pricing.faq.items[4].a": "Lo que acuerden entre ustedes. Nosotros no cobramos nada ni nos llevamos comisión. Pídele que te detalle la instalación, la cuota de mantenimiento y qué hace con los respaldos."
+  "pricing.faq.items[4].a": "Lo que acuerden entre ustedes. Nosotros no cobramos nada ni nos llevamos comisión. Pídele que te detalle la instalación, la cuota de mantenimiento y qué hace con los respaldos.",
+  "integrators.subtitle": "Dentalpin es gratis, pero alguien tiene que montarlo en un servidor, pasar tus datos y estar ahí si algo falla. Estas empresas se encargan. Las contactas directamente y el precio lo acuerdan entre ustedes: nosotros no cobramos comisión.",
+  "integrators.card.whatsappText": "Hola, los encontré en el directorio de integradores de Dentalpin y me gustaría información para mi consultorio.",
+  "integrators.noLocal.contact": "Ayúdenme a encontrar uno"
 }

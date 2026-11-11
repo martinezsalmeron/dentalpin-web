@@ -7,6 +7,7 @@
     "features": "Fonctionnalités",
     "technology": "Technologie",
     "pricing": "Tarifs",
+    "integrators": "Intégrateurs",
     "manifesto": "Manifeste",
     "docs": "Documentation",
     "community": "Communauté",
@@ -638,6 +639,7 @@
     "links": {
       "features": "Fonctionnalités",
       "pricing": "Tarifs",
+      "integrators": "Intégrateurs",
       "manifesto": "Manifeste",
       "modules": "Système de modules",
       "api": "API",
@@ -696,7 +698,8 @@
           "Appliquer les mises à jour en vous prévenant avant",
           "Signer avec vous un contrat de sous-traitance des données"
         ],
-        "cta": "Vous n'en connaissez pas ? Écrivez-nous"
+        "cta": "Vous n'en connaissez pas ? Écrivez-nous",
+        "directory": "Voir les intégrateurs"
       },
       "integrators": {
         "label": "Si vous êtes intégrateur",
@@ -855,6 +858,67 @@
       "body": "Écrivez-nous dans les deux cas. C'est une personne qui vous lit, pas un formulaire.",
       "primary": "Nous écrire",
       "secondary": "Essayer la démo"
+    }
+  },
+  "integrators": {
+    "meta": {
+      "title": "Intégrateurs Dentalpin · Les entreprises qui l’installent et le maintiennent",
+      "description": "Annuaire des sociétés informatiques qui installent, migrent et maintiennent Dentalpin dans les cabinets dentaires, classées par pays. Contact direct, sans intermédiaire."
+    },
+    "eyebrow": "INTÉGRATEURS",
+    "title": "Les entreprises qui installent Dentalpin dans votre cabinet",
+    "subtitle": "Dentalpin est gratuit, mais il faut bien quelqu’un pour l’installer sur un serveur, reprendre vos données et intervenir en cas de panne. Ces entreprises s’en chargent. Vous les contactez directement et fixez le prix avec elles. Nous ne prenons aucune commission.",
+    "ctaFind": "Voir l’annuaire",
+    "ctaJoin": "Je suis intégrateur",
+    "filters": {
+      "country": "Pays",
+      "service": "Service",
+      "all": "Tous",
+      "resultsOne": "{n} intégrateur",
+      "resultsMany": "{n} intégrateurs"
+    },
+    "services": {
+      "install": "Installation",
+      "migration": "Reprise de données",
+      "support": "Support",
+      "training": "Formation",
+      "custom": "Développement sur mesure"
+    },
+    "card": {
+      "languages": "Langues",
+      "whatsapp": "WhatsApp",
+      "email": "E-mail",
+      "website": "Site web",
+      "whatsappText": "Bonjour, je vous ai trouvé dans l’annuaire des intégrateurs Dentalpin et j’aimerais des informations pour mon cabinet.",
+      "emailSubject": "Demande depuis l’annuaire Dentalpin"
+    },
+    "noLocal": {
+      "title": "Pas encore d’intégrateur en {country}",
+      "body": "Nous cherchons des entreprises dans votre région. En attendant, un informaticien à l’aise avec Docker peut l’installer en suivant le guide, ou écrivez-nous et nous vous aiderons à trouver quelqu’un.",
+      "contact": "Aidez-moi à en trouver un",
+      "docs": "Guide d’installation",
+      "join": "Vous êtes intégrateur ici ? Inscrivez-vous"
+    },
+    "empty": {
+      "title": "Aucun intégrateur pour ces filtres",
+      "body": "Essayez un autre pays ou un autre service. Si vous ne trouvez pas, écrivez-nous et nous vous mettrons en contact avec quelqu’un.",
+      "reset": "Effacer les filtres"
+    },
+    "disclaimer": "Les intégrateurs sont des entreprises indépendantes. Dentalpin ne prend aucune commission, n’intervient pas sur les prix et ne répond pas de leurs prestations. Avant de signer, demandez des références et un contrat de sous-traitance RGPD.",
+    "join": {
+      "eyebrow": "POUR LES INTÉGRATEURS",
+      "title": "Figurez dans l’annuaire",
+      "body": "Si vous installez et maintenez des systèmes pour des cabinets ou des PME, Dentalpin est un service de plus à proposer. L’inscription est gratuite.",
+      "needTitle": "Ce qu’il nous faut pour vous inscrire",
+      "need": [
+        "Nom commercial et raison sociale",
+        "Pays et ville où vous intervenez",
+        "Services proposés",
+        "Site web, e-mail et téléphone ou WhatsApp",
+        "Votre logo en PNG ou SVG"
+      ],
+      "cta": "Demander mon inscription",
+      "note": "Nous examinons chaque demande à la main et répondons par e-mail."
     }
   },
   "featuresIndex": {

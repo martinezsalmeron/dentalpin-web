@@ -225,6 +225,17 @@ export const LOCALE_PATHS = {
     'pt-br': 'precos',
     'es-mx': 'precios',
   },
+  integrators: {
+    es: 'integradores',
+    en: 'integrators',
+    fr: 'integrateurs',
+    pt: 'integradores',
+    de: 'integratoren',
+    it: 'integratori',
+    pl: 'integratorzy',
+    'pt-br': 'integradores',
+    'es-mx': 'integradores',
+  },
   contact: {
     es: 'contacto',
     en: 'contact',

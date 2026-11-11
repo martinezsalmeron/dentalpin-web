@@ -7,6 +7,7 @@
     "features": "Funcionalidades",
     "technology": "Tecnologia",
     "pricing": "Preços",
+    "integrators": "Integradores",
     "manifesto": "Manifesto",
     "docs": "Documentação",
     "community": "Comunidade",
@@ -638,6 +639,7 @@
     "links": {
       "features": "Funcionalidades",
       "pricing": "Preços",
+      "integrators": "Integradores",
       "manifesto": "Manifesto",
       "modules": "Sistema de módulos",
       "api": "API",
@@ -696,7 +698,8 @@
           "Aplique as atualizações e o avise antes",
           "Assine consigo um contrato de subcontratante"
         ],
-        "cta": "Não conhece nenhum? Escreva-nos"
+        "cta": "Não conhece nenhum? Escreva-nos",
+        "directory": "Ver integradores"
       },
       "integrators": {
         "label": "Se é integrador",
@@ -855,6 +858,67 @@
       "body": "Escreva-nos nos dois casos. Quem o lê é uma pessoa, não um formulário.",
       "primary": "Falar connosco",
       "secondary": "Experimentar a demo"
+    }
+  },
+  "integrators": {
+    "meta": {
+      "title": "Integradores Dentalpin · Empresas que o instalam e mantêm",
+      "description": "Diretório de empresas de informática que instalam, migram e mantêm o Dentalpin em clínicas dentárias, organizado por país. Contacto direto, sem intermediários."
+    },
+    "eyebrow": "INTEGRADORES",
+    "title": "Empresas que instalam o Dentalpin na sua clínica",
+    "subtitle": "O Dentalpin é gratuito, mas alguém tem de o pôr num servidor, passar os seus dados e estar lá quando algo falha. Estas empresas tratam disso. Fala diretamente com elas e combinam o preço entre si. Nós não cobramos comissão.",
+    "ctaFind": "Ver o diretório",
+    "ctaJoin": "Sou integrador",
+    "filters": {
+      "country": "País",
+      "service": "Serviço",
+      "all": "Todos",
+      "resultsOne": "{n} integrador",
+      "resultsMany": "{n} integradores"
+    },
+    "services": {
+      "install": "Instalação",
+      "migration": "Migração de dados",
+      "support": "Suporte",
+      "training": "Formação",
+      "custom": "Desenvolvimento à medida"
+    },
+    "card": {
+      "languages": "Idiomas",
+      "whatsapp": "WhatsApp",
+      "email": "Email",
+      "website": "Site",
+      "whatsappText": "Olá, encontrei-vos no diretório de integradores do Dentalpin e gostaria de informações para a minha clínica.",
+      "emailSubject": "Pedido de informação pelo diretório Dentalpin"
+    },
+    "noLocal": {
+      "title": "Ainda não há integradores em {country}",
+      "body": "Estamos à procura de empresas na sua zona. Entretanto, qualquer informático que saiba usar Docker pode instalá-lo com o guia, ou escreva-nos e ajudamos a encontrar alguém.",
+      "contact": "Ajudem-me a encontrar um",
+      "docs": "Guia de instalação",
+      "join": "É integrador aqui? Inscreva-se"
+    },
+    "empty": {
+      "title": "Nenhum integrador com esses filtros",
+      "body": "Experimente outro país ou outro serviço. Se não encontrar o que procura, escreva-nos e pomo-lo em contacto com alguém.",
+      "reset": "Limpar filtros"
+    },
+    "disclaimer": "Os integradores são empresas independentes. O Dentalpin não cobra comissão, não intervém no preço e não responde pelos seus serviços. Antes de contratar, peça referências e um contrato de subcontratante de dados.",
+    "join": {
+      "eyebrow": "PARA INTEGRADORES",
+      "title": "Apareça no diretório",
+      "body": "Se instala e mantém sistemas em clínicas ou PME, o Dentalpin é mais um serviço que pode oferecer. Aparecer aqui é gratuito.",
+      "needTitle": "O que precisamos para o inscrever",
+      "need": [
+        "Nome comercial e denominação social",
+        "País e cidade onde trabalha",
+        "Serviços que oferece",
+        "Site, email e telefone ou WhatsApp",
+        "O seu logótipo em PNG ou SVG"
+      ],
+      "cta": "Pedir para aparecer no diretório",
+      "note": "Revemos cada pedido à mão e respondemos por email."
     }
   },
   "featuresIndex": {

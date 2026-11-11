@@ -7,6 +7,7 @@
     "features": "Funktionen",
     "technology": "Technologie",
     "pricing": "Preise",
+    "integrators": "Integratoren",
     "manifesto": "Manifest",
     "docs": "Dokumentation",
     "community": "Community",
@@ -638,6 +639,7 @@
     "links": {
       "features": "Funktionen",
       "pricing": "Preise",
+      "integrators": "Integratoren",
       "manifesto": "Manifest",
       "modules": "Modulsystem",
       "api": "API",
@@ -696,7 +698,8 @@
           "Updates einzuspielen und Sie vorher zu informieren",
           "mit Ihnen einen Auftragsverarbeitungsvertrag zu schließen"
         ],
-        "cta": "Sie kennen keinen? Schreiben Sie uns"
+        "cta": "Sie kennen keinen? Schreiben Sie uns",
+        "directory": "Integratoren ansehen"
       },
       "integrators": {
         "label": "Wenn Sie Integrator sind",
@@ -855,6 +858,67 @@
       "body": "Schreiben Sie uns in beiden Fällen. Es liest ein Mensch, kein Formular.",
       "primary": "Mit uns sprechen",
       "secondary": "Demo testen"
+    }
+  },
+  "integrators": {
+    "meta": {
+      "title": "Dentalpin-Integratoren · Firmen, die es installieren und betreuen",
+      "description": "Verzeichnis von IT-Dienstleistern, die Dentalpin in Zahnarztpraxen installieren, migrieren und betreuen, sortiert nach Land. Direkter Kontakt ohne Vermittler."
+    },
+    "eyebrow": "INTEGRATOREN",
+    "title": "Firmen, die Dentalpin in Ihrer Praxis einrichten",
+    "subtitle": "Dentalpin ist kostenlos, aber jemand muss es auf einem Server einrichten, Ihre Daten übernehmen und da sein, wenn etwas klemmt. Diese Firmen übernehmen das. Sie kontaktieren sie direkt und vereinbaren den Preis mit ihnen. Wir nehmen keine Provision.",
+    "ctaFind": "Zum Verzeichnis",
+    "ctaJoin": "Ich bin Integrator",
+    "filters": {
+      "country": "Land",
+      "service": "Leistung",
+      "all": "Alle",
+      "resultsOne": "{n} Integrator",
+      "resultsMany": "{n} Integratoren"
+    },
+    "services": {
+      "install": "Installation",
+      "migration": "Datenübernahme",
+      "support": "Support",
+      "training": "Schulung",
+      "custom": "Individualentwicklung"
+    },
+    "card": {
+      "languages": "Sprachen",
+      "whatsapp": "WhatsApp",
+      "email": "E-Mail",
+      "website": "Website",
+      "whatsappText": "Hallo, ich habe Sie im Integratorenverzeichnis von Dentalpin gefunden und hätte gern Informationen für meine Praxis.",
+      "emailSubject": "Anfrage über das Dentalpin-Verzeichnis"
+    },
+    "noLocal": {
+      "title": "Noch keine Integratoren in {country}",
+      "body": "Wir suchen Firmen in Ihrer Region. Bis dahin kann jeder, der sich mit Docker auskennt, Dentalpin nach der Anleitung installieren. Oder Sie schreiben uns und wir helfen bei der Suche.",
+      "contact": "Helfen Sie mir bei der Suche",
+      "docs": "Installationsanleitung",
+      "join": "Integrator vor Ort? Eintragen lassen"
+    },
+    "empty": {
+      "title": "Keine Integratoren für diese Filter",
+      "body": "Versuchen Sie ein anderes Land oder eine andere Leistung. Wenn Sie nicht fündig werden, schreiben Sie uns und wir stellen den Kontakt her.",
+      "reset": "Filter zurücksetzen"
+    },
+    "disclaimer": "Die Integratoren sind unabhängige Unternehmen. Dentalpin nimmt keine Provision, hat keinen Einfluss auf die Preise und haftet nicht für deren Leistungen. Fragen Sie vor der Beauftragung nach Referenzen und einem Auftragsverarbeitungsvertrag (AVV).",
+    "join": {
+      "eyebrow": "FÜR INTEGRATOREN",
+      "title": "Ins Verzeichnis aufnehmen lassen",
+      "body": "Wenn Sie IT für Praxen oder kleine Unternehmen installieren und betreuen, ist Dentalpin eine weitere Leistung, die Sie anbieten können. Der Eintrag ist kostenlos.",
+      "needTitle": "Was wir für Ihren Eintrag brauchen",
+      "need": [
+        "Markenname und Firmenname",
+        "Land und Stadt, in denen Sie tätig sind",
+        "Ihre Leistungen",
+        "Website, E-Mail und Telefon oder WhatsApp",
+        "Ihr Logo als PNG oder SVG"
+      ],
+      "cta": "Eintrag beantragen",
+      "note": "Wir prüfen jede Anfrage persönlich und antworten per E-Mail."
     }
   },
   "featuresIndex": {

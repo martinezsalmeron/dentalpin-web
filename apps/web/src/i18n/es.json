@@ -7,6 +7,7 @@
     "features": "Funcionalidades",
     "technology": "Tecnología",
     "pricing": "Precios",
+    "integrators": "Integradores",
     "manifesto": "Manifiesto",
     "docs": "Documentación",
     "community": "Comunidad",
@@ -638,6 +639,7 @@
     "links": {
       "features": "Funcionalidades",
       "pricing": "Precios",
+      "integrators": "Integradores",
       "manifesto": "Manifiesto",
       "modules": "Sistema de módulos",
       "api": "API",
@@ -696,7 +698,8 @@
           "Aplique las actualizaciones y te avise antes",
           "Firme contigo un contrato de encargado del tratamiento"
         ],
-        "cta": "¿No conoces ninguno? Escríbenos"
+        "cta": "¿No conoces ninguno? Escríbenos",
+        "directory": "Ver integradores"
       },
       "integrators": {
         "label": "Si eres integrador",
@@ -855,6 +858,67 @@
       "body": "Escríbenos en los dos casos. Te lee una persona, no un formulario.",
       "primary": "Hablar con nosotros",
       "secondary": "Probar la demo"
+    }
+  },
+  "integrators": {
+    "meta": {
+      "title": "Integradores de Dentalpin · Empresas que lo instalan y mantienen",
+      "description": "Directorio de empresas de informática que instalan, migran y mantienen Dentalpin en clínicas dentales, ordenado por país. Contacto directo y sin intermediarios."
+    },
+    "eyebrow": "INTEGRADORES",
+    "title": "Empresas que instalan Dentalpin en tu clínica",
+    "subtitle": "Dentalpin es gratis, pero alguien tiene que montarlo en un servidor, pasar tus datos y estar ahí si algo falla. Estas empresas se encargan. Las contactas directamente y el precio lo acordáis entre vosotros: nosotros no cobramos comisión.",
+    "ctaFind": "Ver el directorio",
+    "ctaJoin": "Soy integrador",
+    "filters": {
+      "country": "País",
+      "service": "Servicio",
+      "all": "Todos",
+      "resultsOne": "{n} integrador",
+      "resultsMany": "{n} integradores"
+    },
+    "services": {
+      "install": "Instalación",
+      "migration": "Migración de datos",
+      "support": "Soporte",
+      "training": "Formación",
+      "custom": "Desarrollo a medida"
+    },
+    "card": {
+      "languages": "Idiomas",
+      "whatsapp": "WhatsApp",
+      "email": "Email",
+      "website": "Web",
+      "whatsappText": "Hola, os he encontrado en el directorio de integradores de Dentalpin y me gustaría información para mi clínica.",
+      "emailSubject": "Consulta desde el directorio de Dentalpin"
+    },
+    "noLocal": {
+      "title": "Todavía no hay integradores en {country}",
+      "body": "Estamos buscando empresas en tu zona. Mientras tanto, cualquier informático que sepa manejar Docker puede instalarlo con la guía, o nos escribes y te ayudamos a encontrar a alguien.",
+      "contact": "Ayudadme a encontrar uno",
+      "docs": "Guía de instalación",
+      "join": "¿Eres integrador aquí? Apúntate"
+    },
+    "empty": {
+      "title": "Ningún integrador con esos filtros",
+      "body": "Prueba con otro país u otro servicio. Si no das con lo que buscas, escríbenos y te ponemos en contacto con alguien.",
+      "reset": "Quitar filtros"
+    },
+    "disclaimer": "Los integradores son empresas independientes. Dentalpin no cobra comisión, no interviene en el precio y no responde de sus servicios. Antes de contratar, pide referencias y un contrato de encargado del tratamiento.",
+    "join": {
+      "eyebrow": "PARA INTEGRADORES",
+      "title": "Aparece en el directorio",
+      "body": "Si instalas y mantienes sistemas en clínicas o pymes, Dentalpin es un servicio más que puedes ofrecer. Aparecer aquí es gratis.",
+      "needTitle": "Qué necesitamos para darte de alta",
+      "need": [
+        "Nombre comercial y razón social",
+        "País y ciudad donde trabajas",
+        "Servicios que ofreces",
+        "Web, email y teléfono o WhatsApp",
+        "Tu logo en PNG o SVG"
+      ],
+      "cta": "Solicitar aparecer en el directorio",
+      "note": "Revisamos cada solicitud a mano y te contestamos por email."
     }
   },
   "featuresIndex": {

@@ -7,6 +7,7 @@
     "features": "Funzionalità",
     "technology": "Tecnologia",
     "pricing": "Prezzi",
+    "integrators": "Integratori",
     "manifesto": "Manifesto",
     "docs": "Documentazione",
     "community": "Community",
@@ -638,6 +639,7 @@
     "links": {
       "features": "Funzionalità",
       "pricing": "Prezzi",
+      "integrators": "Integratori",
       "manifesto": "Manifesto",
       "modules": "Sistema di moduli",
       "api": "API",
@@ -696,7 +698,8 @@
           "Applicare gli aggiornamenti avvisandoti prima",
           "Firmare con te un contratto di responsabile del trattamento"
         ],
-        "cta": "Non ne conosci nessuno? Scrivici"
+        "cta": "Non ne conosci nessuno? Scrivici",
+        "directory": "Vedi gli integratori"
       },
       "integrators": {
         "label": "Se sei un integratore",
@@ -855,6 +858,67 @@
       "body": "Scrivici in entrambi i casi. Ti legge una persona, non un modulo.",
       "primary": "Parla con noi",
       "secondary": "Prova la demo"
+    }
+  },
+  "integrators": {
+    "meta": {
+      "title": "Integratori Dentalpin · Le aziende che lo installano e lo gestiscono",
+      "description": "Elenco delle aziende informatiche che installano, migrano e gestiscono Dentalpin negli studi dentistici, ordinate per paese. Contatto diretto, senza intermediari."
+    },
+    "eyebrow": "INTEGRATORI",
+    "title": "Le aziende che installano Dentalpin nel tuo studio",
+    "subtitle": "Dentalpin è gratuito, ma qualcuno deve metterlo su un server, trasferire i tuoi dati ed esserci quando qualcosa non va. Queste aziende se ne occupano. Le contatti direttamente e il prezzo lo concordate tra voi. Noi non prendiamo commissioni.",
+    "ctaFind": "Vedi l’elenco",
+    "ctaJoin": "Sono un integratore",
+    "filters": {
+      "country": "Paese",
+      "service": "Servizio",
+      "all": "Tutti",
+      "resultsOne": "{n} integratore",
+      "resultsMany": "{n} integratori"
+    },
+    "services": {
+      "install": "Installazione",
+      "migration": "Migrazione dati",
+      "support": "Assistenza",
+      "training": "Formazione",
+      "custom": "Sviluppo su misura"
+    },
+    "card": {
+      "languages": "Lingue",
+      "whatsapp": "WhatsApp",
+      "email": "Email",
+      "website": "Sito web",
+      "whatsappText": "Buongiorno, vi ho trovato nell’elenco degli integratori Dentalpin e vorrei qualche informazione per il mio studio.",
+      "emailSubject": "Richiesta dall’elenco Dentalpin"
+    },
+    "noLocal": {
+      "title": "Ancora nessun integratore in {country}",
+      "body": "Stiamo cercando aziende nella tua zona. Nel frattempo, chiunque sappia usare Docker può installarlo seguendo la guida, oppure scrivici e ti aiutiamo a trovare qualcuno.",
+      "contact": "Aiutatemi a trovarne uno",
+      "docs": "Guida all’installazione",
+      "join": "Sei un integratore qui? Iscriviti"
+    },
+    "empty": {
+      "title": "Nessun integratore con questi filtri",
+      "body": "Prova un altro paese o un altro servizio. Se non trovi quello che cerchi, scrivici e ti mettiamo in contatto con qualcuno.",
+      "reset": "Azzera i filtri"
+    },
+    "disclaimer": "Gli integratori sono aziende indipendenti. Dentalpin non prende commissioni, non interviene sui prezzi e non risponde dei loro servizi. Prima di affidare il lavoro, chiedi referenze e un contratto di nomina a responsabile del trattamento.",
+    "join": {
+      "eyebrow": "PER GLI INTEGRATORI",
+      "title": "Entra nell’elenco",
+      "body": "Se installi e gestisci sistemi per studi o piccole imprese, Dentalpin è un servizio in più da offrire. Essere in elenco è gratis.",
+      "needTitle": "Cosa ci serve per inserirti",
+      "need": [
+        "Nome commerciale e ragione sociale",
+        "Paese e città in cui lavori",
+        "Servizi che offri",
+        "Sito web, email e telefono o WhatsApp",
+        "Il tuo logo in PNG o SVG"
+      ],
+      "cta": "Chiedi di entrare nell’elenco",
+      "note": "Controlliamo ogni richiesta a mano e rispondiamo via email."
     }
   },
   "featuresIndex": {

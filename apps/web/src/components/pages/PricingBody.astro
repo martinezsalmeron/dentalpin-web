@@ -141,14 +141,23 @@ const tick = 'mt-0.5 flex-none text-[var(--color-primary)]';
                 </li>
               ))}
             </ul>
-            <Button
-              href={contactUrl}
-              variant={i === 1 ? 'solid' : 'outline'}
-              size="md"
-              class="mt-8 w-full"
-            >
-              {side.cta}
-            </Button>
+            {'directory' in side ? (
+              <>
+                <Button href={pagePath(locale, 'integrators')} variant="outline" size="md" class="mt-8 w-full">
+                  {side.directory}
+                </Button>
+                <a
+                  href={contactUrl}
+                  class="mt-3 text-center text-[14px] font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]"
+                >
+                  {side.cta}
+                </a>
+              </>
+            ) : (
+              <Button href={contactUrl} variant="solid" size="md" class="mt-8 w-full">
+                {side.cta}
+              </Button>
+            )}
           </article>
         ))
       }

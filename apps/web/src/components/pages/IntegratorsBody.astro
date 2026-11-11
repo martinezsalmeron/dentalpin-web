@@ -1,0 +1,404 @@
+---
+import { HTML_LANG, pagePath, useDict, type Locale } from '~/i18n';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Section from '@dentalpin/ui/Section.astro';
+import Button from '@dentalpin/ui/Button.astro';
+import Badge from '@dentalpin/ui/Badge.astro';
+import Icon from '@dentalpin/ui/Icon.astro';
+import { INTEGRATORS, SERVICES, flag, prettyPhone } from '~/data/integrators';
+import { DOCS_URL } from '~/config/links';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const dict = useDict(locale);
+const t = dict.integrators;
+const joinPoints = dict.pricing.partners.integrators.points;
+
+// The visitor's market, guessed from the locale. English has no country.
+const LOCAL_COUNTRY: Partial<Record<Locale, string>> = {
+  es: 'ES',
+  'es-mx': 'MX',
+  pt: 'PT',
+  'pt-br': 'BR',
+  fr: 'FR',
+  de: 'DE',
+  it: 'IT',
+  pl: 'PL',
+};
+
+const regionName = new Intl.DisplayNames([HTML_LANG[locale]], { type: 'region' });
+const languageName = new Intl.DisplayNames([HTML_LANG[locale]], { type: 'language' });
+const collator = new Intl.Collator(HTML_LANG[locale]);
+
+// Countries sorted by localised name, integrators alphabetical inside each.
+const groups = [...new Set(INTEGRATORS.map((i) => i.country))]
+  .map((cc) => ({
+    cc,
+    name: regionName.of(cc) ?? cc,
+    items: INTEGRATORS.filter((i) => i.country === cc).sort((a, b) =>
+      collator.compare(a.name, b.name),
+    ),
+  }))
+  .sort((a, b) => collator.compare(a.name, b.name));
+
+const usedServices = SERVICES.filter((s) => INTEGRATORS.some((i) => i.services.includes(s)));
+
+const local = LOCAL_COUNTRY[locale];
+const localHasIntegrators = !!local && groups.some((g) => g.cc === local);
+const localName = local ? regionName.of(local) : undefined;
+
+const joinUrl = `${pagePath(locale, 'contact')}?reason=partner`;
+const helpUrl = `${pagePath(locale, 'contact')}?reason=install`;
+const fill = (s: string, vars: Record<string, string>) =>
+  s.replace(/\{(\w+)\}/g, (_, k) => vars[k] ?? `{${k}}`);
+
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: t.meta.title,
+  itemListElement: INTEGRATORS.map((i, n) => ({
+    '@type': 'ListItem',
+    position: n + 1,
+    item: {
+      '@type': 'Organization',
+      name: i.name,
+      legalName: i.legalName,
+      url: i.website,
+      email: i.email,
+      telephone: i.whatsapp ? `+${i.whatsapp}` : undefined,
+      logo: i.logo ? new URL(i.logo, Astro.site ?? 'https://dentalpin.com').href : undefined,
+      address: { '@type': 'PostalAddress', addressLocality: i.city, addressCountry: i.country },
+    },
+  })),
+};
+
+const chip =
+  'inline-flex items-center gap-1.5 rounded-[var(--radius-pill)] border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-1.5 text-[13.5px] font-medium text-[var(--color-text-muted)] transition-colors hover:border-[var(--color-primary)] hover:text-[var(--color-text)] aria-pressed:border-[var(--color-primary)] aria-pressed:bg-[var(--color-primary-soft)] aria-pressed:text-[var(--color-primary-soft-text)]';
+const contactBtn =
+  'inline-flex items-center gap-1.5 rounded-[var(--radius-md)] border border-[var(--color-border)] px-3 py-2 text-[13.5px] font-medium text-[var(--color-text)] transition-colors hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]';
+const tick = 'mt-0.5 flex-none text-[var(--color-primary)]';
+---
+
+<BaseLayout locale={locale} title={t.meta.title} description={t.meta.description}>
+  <!-- 1. What this page is, and the two ways in. -->
+  <Section padY="md">
+    <p class="text-micro font-semibold uppercase tracking-wider text-[var(--color-primary)]">
+      {t.eyebrow}
+    </p>
+    <h1 class="text-marketing-h1 mt-3 max-w-3xl text-[var(--color-text)]">{t.title}</h1>
+    <p class="mt-5 max-w-2xl text-[16px] leading-[1.6] text-[var(--color-text-muted)]">
+      {t.subtitle}
+    </p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <Button href="#directorio" size="lg">{t.ctaFind}</Button>
+      <Button href="#unete" variant="outline" size="lg">{t.ctaJoin}</Button>
+    </div>
+  </Section>
+
+  <!-- 2. The directory. Filters are a progressive enhancement: without JS
+       every card is visible and the chips stay hidden. -->
+  <Section padY="sm" id="directorio">
+    {
+      !localHasIntegrators && localName && (
+        <div class="mb-8 rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface-sunken)] p-6">
+          <h2 class="text-[17px] font-semibold tracking-tight text-[var(--color-text)]">
+            {flag(local!)} {fill(t.noLocal.title, { country: localName })}
+          </h2>
+          <p class="mt-2 max-w-2xl text-[14px] leading-[1.6] text-[var(--color-text-muted)]">
+            {t.noLocal.body}
+          </p>
+          <div class="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-[14px] font-medium">
+            <a href={helpUrl} class="text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]">
+              {t.noLocal.contact} →
+            </a>
+            <a href={DOCS_URL} target="_blank" rel="noopener" class="text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]">
+              {t.noLocal.docs} →
+            </a>
+            <a href="#unete" class="text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]">
+              {t.noLocal.join} →
+            </a>
+          </div>
+        </div>
+      )
+    }
+
+    <div
+      data-filters
+      data-default-country={localHasIntegrators ? local : ''}
+      hidden
+      class="z-20 md:sticky md:top-14 -mx-6 mb-8 border-b border-[var(--color-border-subtle)] bg-[color-mix(in_oklab,var(--color-canvas)_92%,transparent)] px-6 py-4 backdrop-blur sm:-mx-8 sm:px-8"
+    >
+      <div class="flex flex-col gap-3">
+        <div class="flex flex-wrap items-center gap-2" role="group" aria-label={t.filters.country}>
+          <span class="text-micro mr-1 w-full font-semibold uppercase tracking-wider text-[var(--color-text-subtle)] sm:w-auto">
+            {t.filters.country}
+          </span>
+          <button type="button" class={chip} data-country="" aria-pressed="true">{t.filters.all}</button>
+          {
+            groups.map((g) => (
+              <button type="button" class={chip} data-country={g.cc} aria-pressed="false">
+                <span aria-hidden="true">{flag(g.cc)}</span>
+                {g.name}
+                <span class="tnum text-[var(--color-text-subtle)]">{g.items.length}</span>
+              </button>
+            ))
+          }
+        </div>
+        <div class="flex flex-wrap items-center gap-2" role="group" aria-label={t.filters.service}>
+          <span class="text-micro mr-1 w-full font-semibold uppercase tracking-wider text-[var(--color-text-subtle)] sm:w-auto">
+            {t.filters.service}
+          </span>
+          <button type="button" class={chip} data-service="" aria-pressed="true">{t.filters.all}</button>
+          {
+            usedServices.map((s) => (
+              <button type="button" class={chip} data-service={s} aria-pressed="false">
+                {t.services[s]}
+              </button>
+            ))
+          }
+        </div>
+      </div>
+      <p class="mt-3 text-[13px] text-[var(--color-text-muted)]" aria-live="polite" data-count data-one={t.filters.resultsOne} data-many={t.filters.resultsMany}></p>
+    </div>
+
+    <div class="flex flex-col gap-12">
+      {
+        groups.map((g) => (
+          <section data-group={g.cc} aria-labelledby={`country-${g.cc}`}>
+            <h2
+              id={`country-${g.cc}`}
+              class="flex items-center gap-2 text-[22px] font-semibold tracking-tight text-[var(--color-text)]"
+            >
+              <span aria-hidden="true">{flag(g.cc)}</span>
+              {g.name}
+              <span class="tnum text-[15px] font-normal text-[var(--color-text-subtle)]">
+                {g.items.length}
+              </span>
+            </h2>
+            <ul class="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {g.items.map((i) => (
+                <li
+                  data-card
+                  data-country={i.country}
+                  data-services={i.services.join(' ')}
+                  class="flex flex-col rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6"
+                >
+                  <div class="flex items-start gap-4">
+                    {i.logo ? (
+                      <img
+                        src={i.logo}
+                        alt=""
+                        width="56"
+                        height="56"
+                        loading="lazy"
+                        class="size-14 flex-none rounded-[var(--radius-md)] border border-[var(--color-border-subtle)] bg-white object-contain p-1.5"
+                      />
+                    ) : (
+                      <span class="flex size-14 flex-none items-center justify-center rounded-[var(--radius-md)] bg-[var(--color-primary-soft)] text-[20px] font-bold text-[var(--color-primary-soft-text)]">
+                        {i.name[0]}
+                      </span>
+                    )}
+                    <div class="min-w-0">
+                      <h3 class="text-[17px] font-semibold tracking-tight text-[var(--color-text)]">{i.name}</h3>
+                      <p class="mt-1 text-[13.5px] text-[var(--color-text-muted)]">
+                        {i.city}, {regionName.of(i.country)}
+                      </p>
+                      <p class="mt-1 text-[12.5px] text-[var(--color-text-subtle)]">
+                        {t.card.languages}: {i.languages.map((l) => languageName.of(l)).join(', ')}
+                      </p>
+                    </div>
+                  </div>
+
+                  <ul class="mt-5 flex flex-wrap gap-1.5" aria-label={t.filters.service}>
+                    {i.services.map((s) => (
+                      <li>
+                        <Badge role="primary">{t.services[s]}</Badge>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div class="mt-6 flex flex-1 flex-wrap content-end gap-2">
+                    {i.whatsapp && (
+                      <a
+                        class={contactBtn}
+                        href={`https://wa.me/${i.whatsapp}?text=${encodeURIComponent(t.card.whatsappText)}`}
+                        target="_blank"
+                        rel="noopener"
+                        aria-label={`${t.card.whatsapp} ${i.name}`}
+                      >
+                        <Icon name="whatsapp" size={16} />
+                        {t.card.whatsapp}
+                      </a>
+                    )}
+                    {i.email && (
+                      <a
+                        class={contactBtn}
+                        href={`mailto:${i.email}?subject=${encodeURIComponent(t.card.emailSubject)}`}
+                        aria-label={`${t.card.email} ${i.name}`}
+                      >
+                        <Icon name="message" size={16} />
+                        {t.card.email}
+                      </a>
+                    )}
+                    {i.website && (
+                      <a
+                        class={contactBtn}
+                        href={i.website}
+                        target="_blank"
+                        rel="noopener"
+                        aria-label={`${t.card.website} ${i.name}`}
+                      >
+                        <Icon name="globe" size={16} />
+                        {t.card.website}
+                      </a>
+                    )}
+                  </div>
+                  {i.whatsapp && (
+                    <a
+                      href={`tel:+${i.whatsapp}`}
+                      class="tnum mt-3 text-[13px] text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
+                    >
+                      {prettyPhone(i.whatsapp)}
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))
+      }
+    </div>
+
+    <div
+      data-empty
+      hidden
+      class="rounded-[var(--radius-xl)] border border-dashed border-[var(--color-border)] p-10 text-center"
+    >
+      <h2 class="text-[18px] font-semibold tracking-tight text-[var(--color-text)]">{t.empty.title}</h2>
+      <p class="mx-auto mt-2 max-w-lg text-[14px] leading-[1.6] text-[var(--color-text-muted)]">
+        {t.empty.body}
+      </p>
+      <div class="mt-5 flex flex-wrap justify-center gap-3">
+        <button type="button" data-reset class="text-[14px] font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]">
+          {t.empty.reset}
+        </button>
+        <a href={helpUrl} class="text-[14px] font-medium text-[var(--color-primary)] hover:text-[var(--color-primary-hover)]">
+          {t.noLocal.contact} →
+        </a>
+      </div>
+    </div>
+
+    <p class="mt-10 max-w-3xl text-[12.5px] leading-[1.6] text-[var(--color-text-subtle)]">
+      {t.disclaimer}
+    </p>
+  </Section>
+
+  <!-- 3. For integrators who want to be listed. -->
+  <Section padY="md" id="unete">
+    <div
+      class="grid gap-10 rounded-[var(--radius-xl)] border-[1.5px] border-[var(--color-primary)] bg-[var(--color-surface)] p-8 shadow-[var(--shadow-md)] lg:grid-cols-2 lg:gap-16 lg:p-12"
+    >
+      <div>
+        <p class="text-micro font-semibold uppercase tracking-wider text-[var(--color-primary)]">
+          {t.join.eyebrow}
+        </p>
+        <h2 class="text-marketing-h2 mt-3 text-[var(--color-text)]">{t.join.title}</h2>
+        <p class="mt-4 text-[15px] leading-[1.6] text-[var(--color-text-muted)]">{t.join.body}</p>
+        <ul class="mt-6 space-y-2.5 text-[14px]">
+          {
+            joinPoints.map((f) => (
+              <li class="flex items-start gap-2">
+                <span class={tick}>
+                  <Icon name="check" size={16} />
+                </span>
+                <span class="text-[var(--color-text)]">{f}</span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div class="flex flex-col">
+        <h3 class="text-[16px] font-semibold tracking-tight text-[var(--color-text)]">{t.join.needTitle}</h3>
+        <ol class="mt-4 flex-1 space-y-3 text-[14px]">
+          {
+            t.join.need.map((n, idx) => (
+              <li class="flex items-start gap-3">
+                <span class="tnum flex size-6 flex-none items-center justify-center rounded-full bg-[var(--color-primary-soft)] text-[12px] font-semibold text-[var(--color-primary-soft-text)]">
+                  {idx + 1}
+                </span>
+                <span class="pt-0.5 text-[var(--color-text)]">{n}</span>
+              </li>
+            ))
+          }
+        </ol>
+        <Button href={joinUrl} size="lg" class="mt-8 w-full">{t.join.cta}</Button>
+        <p class="mt-3 text-center text-[13px] text-[var(--color-text-muted)]">{t.join.note}</p>
+      </div>
+    </div>
+  </Section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+</BaseLayout>
+
+<script>
+  const bar = document.querySelector<HTMLElement>('[data-filters]');
+  if (bar) {
+    const cards = [...document.querySelectorAll<HTMLElement>('[data-card]')];
+    const groups = [...document.querySelectorAll<HTMLElement>('[data-group]')];
+    const empty = document.querySelector<HTMLElement>('[data-empty]')!;
+    const count = bar.querySelector<HTMLElement>('[data-count]')!;
+    const tpl = { one: count.dataset.one ?? '', many: count.dataset.many ?? '' };
+    const params = new URLSearchParams(location.search);
+    const state = {
+      country: params.get('country') ?? bar.dataset.defaultCountry ?? '',
+      service: params.get('service') ?? '',
+    };
+
+    const render = (writeUrl = true) => {
+      bar.querySelectorAll<HTMLButtonElement>('[data-country]').forEach((b) => {
+        b.setAttribute('aria-pressed', String(b.dataset.country === state.country));
+      });
+      bar.querySelectorAll<HTMLButtonElement>('[data-service]').forEach((b) => {
+        b.setAttribute('aria-pressed', String(b.dataset.service === state.service));
+      });
+      let shown = 0;
+      for (const c of cards) {
+        const ok =
+          (!state.country || c.dataset.country === state.country) &&
+          (!state.service || c.dataset.services!.split(' ').includes(state.service));
+        c.hidden = !ok;
+        if (ok) shown++;
+      }
+      for (const g of groups) g.hidden = !g.querySelector('[data-card]:not([hidden])');
+      empty.hidden = shown > 0;
+      count.textContent = (shown === 1 ? tpl.one : tpl.many).replace('{n}', String(shown));
+
+      // Only user choices go in the URL; the locale default stays implicit.
+      if (!writeUrl) return;
+      const url = new URL(location.href);
+      for (const k of ['country', 'service'] as const) {
+        if (state[k]) url.searchParams.set(k, state[k]);
+        else url.searchParams.delete(k);
+      }
+      history.replaceState(null, '', url);
+    };
+
+    bar.addEventListener('click', (e) => {
+      const b = (e.target as HTMLElement).closest<HTMLButtonElement>('button');
+      if (!b) return;
+      if (b.dataset.country !== undefined) state.country = b.dataset.country;
+      if (b.dataset.service !== undefined) state.service = b.dataset.service;
+      render();
+    });
+    document.querySelector('[data-reset]')?.addEventListener('click', () => {
+      state.country = '';
+      state.service = '';
+      render();
+    });
+
+    bar.hidden = false;
+    render(false);
+  }
+</script>

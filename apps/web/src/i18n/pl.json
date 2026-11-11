@@ -7,6 +7,7 @@
     "features": "Funkcje",
     "technology": "Technologia",
     "pricing": "Cennik",
+    "integrators": "Integratorzy",
     "manifesto": "Manifest",
     "docs": "Dokumentacja",
     "community": "Społeczność",
@@ -638,6 +639,7 @@
     "links": {
       "features": "Funkcje",
       "pricing": "Cennik",
+      "integrators": "Integratorzy",
       "manifesto": "Manifest",
       "modules": "System modułów",
       "api": "API",
@@ -696,7 +698,8 @@
           "Wgrywał aktualizacje i uprzedzał cię wcześniej",
           "Podpisał z tobą umowę powierzenia przetwarzania danych"
         ],
-        "cta": "Nie znasz żadnego? Napisz do nas"
+        "cta": "Nie znasz żadnego? Napisz do nas",
+        "directory": "Zobacz integratorów"
       },
       "integrators": {
         "label": "Jeśli jesteś integratorem",
@@ -855,6 +858,67 @@
       "body": "W obu przypadkach napisz do nas. Czyta to człowiek, nie formularz.",
       "primary": "Porozmawiaj z nami",
       "secondary": "Wypróbuj demo"
+    }
+  },
+  "integrators": {
+    "meta": {
+      "title": "Integratorzy Dentalpin · Firmy, które go wdrażają i utrzymują",
+      "description": "Katalog firm IT, które instalują, migrują i utrzymują Dentalpin w gabinetach stomatologicznych, według krajów. Bezpośredni kontakt, bez pośredników."
+    },
+    "eyebrow": "INTEGRATORZY",
+    "title": "Firmy, które wdrożą Dentalpin w Twoim gabinecie",
+    "subtitle": "Dentalpin jest darmowy, ale ktoś musi postawić go na serwerze, przenieść Twoje dane i pomóc, gdy coś przestanie działać. Tym zajmują się te firmy. Kontaktujesz się z nimi bezpośrednio i sami ustalacie cenę. Nie pobieramy prowizji.",
+    "ctaFind": "Przejdź do katalogu",
+    "ctaJoin": "Jestem integratorem",
+    "filters": {
+      "country": "Kraj",
+      "service": "Usługa",
+      "all": "Wszystkie",
+      "resultsOne": "Integratorzy: {n}",
+      "resultsMany": "Integratorzy: {n}"
+    },
+    "services": {
+      "install": "Instalacja",
+      "migration": "Migracja danych",
+      "support": "Wsparcie",
+      "training": "Szkolenia",
+      "custom": "Rozwój na zamówienie"
+    },
+    "card": {
+      "languages": "Języki",
+      "whatsapp": "WhatsApp",
+      "email": "E-mail",
+      "website": "Strona",
+      "whatsappText": "Dzień dobry, znalazłem Państwa w katalogu integratorów Dentalpin i chciałbym uzyskać informacje dla mojego gabinetu.",
+      "emailSubject": "Zapytanie z katalogu Dentalpin"
+    },
+    "noLocal": {
+      "title": "Nie ma jeszcze integratorów w kraju: {country}",
+      "body": "Szukamy firm w Twojej okolicy. Do tego czasu każdy, kto zna Dockera, zainstaluje go według przewodnika. Możesz też do nas napisać, a pomożemy kogoś znaleźć.",
+      "contact": "Pomóżcie mi kogoś znaleźć",
+      "docs": "Przewodnik instalacji",
+      "join": "Działasz tutaj? Dołącz"
+    },
+    "empty": {
+      "title": "Brak integratorów dla tych filtrów",
+      "body": "Wybierz inny kraj lub usługę. Jeśli nie znajdziesz tego, czego szukasz, napisz do nas, a skontaktujemy Cię z kimś.",
+      "reset": "Wyczyść filtry"
+    },
+    "disclaimer": "Integratorzy to niezależne firmy. Dentalpin nie pobiera prowizji, nie wpływa na ceny i nie odpowiada za ich usługi. Przed zleceniem poproś o referencje i umowę powierzenia przetwarzania danych.",
+    "join": {
+      "eyebrow": "DLA INTEGRATORÓW",
+      "title": "Dołącz do katalogu",
+      "body": "Jeśli instalujesz i utrzymujesz systemy w gabinetach lub małych firmach, Dentalpin to kolejna usługa w Twojej ofercie. Wpis jest bezpłatny.",
+      "needTitle": "Czego potrzebujemy do wpisu",
+      "need": [
+        "Nazwa handlowa i pełna nazwa firmy",
+        "Kraj i miasto, w którym działasz",
+        "Oferowane usługi",
+        "Strona, e-mail i telefon lub WhatsApp",
+        "Logo w PNG lub SVG"
+      ],
+      "cta": "Zgłoś firmę do katalogu",
+      "note": "Każde zgłoszenie sprawdzamy ręcznie i odpowiadamy e-mailem."
     }
   },
   "featuresIndex": {

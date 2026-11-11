@@ -40,27 +40,32 @@ const mobileDomains: { key: ModuleDomain; label: string }[] = [
     <ul class="hidden flex-1 items-center gap-1 lg:flex">
       <li><MegaMenuFeatures locale={locale} /></li>
       <li>
-        <a class="rounded-[var(--radius-sm)] px-3 py-2 text-[14px] text-[var(--color-text-muted)] hover:bg-[var(--color-surface-muted)] hover:text-[var(--color-text)]" href={pagePath(locale, 'technology')}>
+        <a class="rounded-[var(--radius-sm)] px-2 py-2 text-[14px] xl:px-3 text-[var(--color-text-muted)] hover:bg-[var(--color-surface-muted)] hover:text-[var(--color-text)]" href={pagePath(locale, 'technology')}>
           {dict.nav.technology}
         </a>
       </li>
       <li>
-        <a class="rounded-[var(--radius-sm)] px-3 py-2 text-[14px] text-[var(--color-text-muted)] hover:bg-[var(--color-surface-muted)] hover:text-[var(--color-text)]" href={pagePath(locale, 'pricing')}>
+        <a class="rounded-[var(--radius-sm)] px-2 py-2 text-[14px] xl:px-3 text-[var(--color-text-muted)] hover:bg-[var(--color-surface-muted)] hover:text-[var(--color-text)]" href={pagePath(locale, 'pricing')}>
           {dict.nav.pricing}
         </a>
       </li>
       <li>
-        <a class="rounded-[var(--radius-sm)] px-3 py-2 text-[14px] text-[var(--color-text-muted)] hover:bg-[var(--color-surface-muted)] hover:text-[var(--color-text)]" href={pagePath(locale, 'manifesto')}>
+        <a class="rounded-[var(--radius-sm)] px-2 py-2 text-[14px] xl:px-3 text-[var(--color-text-muted)] hover:bg-[var(--color-surface-muted)] hover:text-[var(--color-text)]" href={pagePath(locale, 'integrators')}>
+          {dict.nav.integrators}
+        </a>
+      </li>
+      <li>
+        <a class="rounded-[var(--radius-sm)] px-2 py-2 text-[14px] xl:px-3 text-[var(--color-text-muted)] hover:bg-[var(--color-surface-muted)] hover:text-[var(--color-text)]" href={pagePath(locale, 'manifesto')}>
           {dict.nav.manifesto}
         </a>
       </li>
       <li>
-        <a class="rounded-[var(--radius-sm)] px-3 py-2 text-[14px] text-[var(--color-text-muted)] hover:bg-[var(--color-surface-muted)] hover:text-[var(--color-text)]" href={pagePath(locale, 'blog')}>
+        <a class="rounded-[var(--radius-sm)] px-2 py-2 text-[14px] xl:px-3 text-[var(--color-text-muted)] hover:bg-[var(--color-surface-muted)] hover:text-[var(--color-text)]" href={pagePath(locale, 'blog')}>
           {dict.nav.blog}
         </a>
       </li>
       <li>
-        <a class="rounded-[var(--radius-sm)] px-3 py-2 text-[14px] text-[var(--color-text-muted)] hover:bg-[var(--color-surface-muted)] hover:text-[var(--color-text)]" href={pagePath(locale, 'contact')}>
+        <a class="rounded-[var(--radius-sm)] px-2 py-2 text-[14px] xl:px-3 text-[var(--color-text-muted)] hover:bg-[var(--color-surface-muted)] hover:text-[var(--color-text)]" href={pagePath(locale, 'contact')}>
           {dict.nav.contact}
         </a>
       </li>
@@ -72,7 +77,7 @@ const mobileDomains: { key: ModuleDomain; label: string }[] = [
         href={githubUrl}
         target="_blank"
         rel="noopener"
-        class="hidden h-9 items-center gap-1.5 rounded-[var(--radius-sm)] px-3 text-[13px] font-medium text-[var(--color-text-muted)] hover:bg-[var(--color-surface-muted)] hover:text-[var(--color-text)] md:inline-flex"
+        class="hidden h-9 items-center gap-1.5 rounded-[var(--radius-sm)] px-3 text-[13px] font-medium text-[var(--color-text-muted)] hover:bg-[var(--color-surface-muted)] hover:text-[var(--color-text)] md:inline-flex lg:hidden xl:inline-flex"
         aria-label="GitHub"
       >
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -167,6 +172,11 @@ const mobileDomains: { key: ModuleDomain; label: string }[] = [
             <li>
               <a class="block rounded-[var(--radius-sm)] px-3 py-2.5 text-[15px] font-medium text-[var(--color-text)] hover:bg-[var(--color-surface-muted)]" href={pagePath(locale, 'pricing')}>
                 {dict.nav.pricing}
+              </a>
+            </li>
+            <li>
+              <a class="block rounded-[var(--radius-sm)] px-3 py-2.5 text-[15px] font-medium text-[var(--color-text)] hover:bg-[var(--color-surface-muted)]" href={pagePath(locale, 'integrators')}>
+                {dict.nav.integrators}
               </a>
             </li>
             <li>
