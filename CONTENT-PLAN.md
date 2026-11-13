@@ -4329,3 +4329,57 @@ extension schedule of its own, or three of the four daily runs are re-pointed at
 country-locked rows for the two regional variants, and the variant sweep that is now feeding it is a finite seam:
 it has roughly as many subjects left as the full-breadth catalogue has regulatory posts, and every run spends
 some of them.
+
+
+**The 16:00 run of 13 November 2026 wrote `acidente-perfurocortante-consultorio-odontologico` in `blog/pt-br/`**,
+the first of the three rows the 11:00 run added the same day. The hour picked the queue, Queue B parsed to 202
+rows, and the three new rows at lines 1999 to 2001 were the only unwritten ones: the single older hole is the
+parked `harmonizacao-orofacial-dentista` row, skipped again on its own 12 November instruction. **PR #38 was not
+re-checked for content** because this run's target is a different row; the parked row was not touched.
+
+**The best find of the run is dental-specific and this file did not have it: RDC 1002/2025 art. 115.** «O serviço
+deve manter um protocolo de encaminhamento para atendimento em caso de acidente de trabalho com exposição a
+material biológico», and the same protocol is a named item of the SDBPF at **art. 113, XIV**, «Protocolo de
+encaminhamento do profissional, em caso de acidentes com perfurocortantes». So the Anvisa norm for dental services
+requires the clinic to have written down **where it sends the person** before anyone is stuck, which is the
+practical answer the whole post turns on. **Carry this**: several `pt-br` rows that touch biosafety or the SDBPF
+will want arts. 111 to 115, and the 13 November Datalegis fetch of RDC 1002 also confirmed that the norm contains
+**zero occurrences of `vacina` and `imuniza`**, so the vaccination duty is NR-32's (32.2.4.17.1) and must never be
+attributed to the Anvisa norm.
+
+**The row's two "must come from the PCDT's own tables" requirements were met, and saliva behaved exactly as the row
+predicted.** Quadro 2 lists **saliva in the SEM risco column**, and the decisive text is the column's footnote (a):
+«A presença de sangue nessas secreções torna esses materiais potencialmente infectantes, caso em que o uso de PEP
+pode ser indicado.» A post that reproduced only the table would have told a Brazilian dentist the opposite of the
+answer. The four-step assessment came from Quadro 1 verbatim. **The edition question the row flagged was settled by
+fetching the annex the Ministry's own page links**: the page prints «Anexo Alterado em 20/03/2025», and the PDF it
+serves is the annex to **Portaria SECTICS/MS nº 14, de 8 de abril de 2024**, 49 pages. That is the pairing to cite,
+rather than the loose "2024 PDF" or "2025 PDF" copies circulating on state and municipal sites.
+
+**One scope limit was established from the statute and put in the post rather than glossed.** **Lei nº 8.213/91
+art. 19** defines acidente do trabalho as what happens «a serviço de empresa ou de empregador doméstico ou pelo
+exercício do trabalho dos segurados referidos no inciso VII do art. 11», and **art. 11, VII is the segurado
+especial**, the rural worker. The **contribuinte individual is art. 11, V and is not in that definition**, so the
+CAT machinery is written for the vínculo de emprego and not for the owner-dentist who sticks himself. The post says
+so and explicitly declines to deduce which benefit follows, because that is previdenciária law this run did not
+read. **Do not let a future run "fix" this by reasoning from the CAT duty to a benefit.**
+
+**Environment notes, all from this run.** `gov.br/saude` (PCDT page and its `@@download/file` annex),
+`gov.br/trabalho-e-emprego` (the NR-32 Comissão Tripartite PDF, the 12 November route, still correct),
+`www2.camara.leg.br` (Legin, first attempt, no reset this time) and `anvisalegis.datalegis.net` with the full
+parameter set all answered **200 to plain curl**. **Two regressions against the 11:00 note of the same day.**
+**Nota Técnica nº 222/2025-CGHA/DATHI/SVSA/MS now returns HTTP 401** on `gov.br/aids`, on the bare `.pdf`, on
+`@@download/file` and on `@@display-file/file`, to curl and to WebFetch alike, and the `notas-tecnicas/2026`
+listing page returns 200 but **does not contain the string `222`**; the note was therefore **dropped, not
+softened**, and the published post says in its own limits section that it was unreachable and that nothing from it
+was used. And **`gov.br/inss` serves «Conteúdo Restrito / É necessário autenticar para visualizar essa página»** on
+the CAT page, so the eSocial filing mechanics could not be sourced officially; the post states the art. 22 prazo and
+the § 2º legitimados from the statute and says plainly that it makes no claim about how the CAT is transmitted
+today. Two hosts that answered at 11:00 and refuse at 16:00 is worth knowing: **re-check `gov.br/aids` and
+`gov.br/inss` per run rather than trusting a same-day note.**
+
+The decision named on 12 November is unchanged and still cannot be taken inside a run. **Queue B now has two rows
+left**, both added this morning (`pacientes-menores-consultorio-dental` for `es-mx` and
+`suspeita-maus-tratos-consultorio-odontologico` for `pt-br`), which at the current cadence is two runs of material
+for a schedule that fires four times a day. Either Queue A gets an extension schedule of its own, or three of the
+four daily runs are re-pointed at Queue B and this file says so.
