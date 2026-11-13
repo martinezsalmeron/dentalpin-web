@@ -2,7 +2,7 @@
 title: "Dentalpin vs Eaglesoft: server-based incumbent or code you own"
 description: "Eaglesoft states nearly 30,000 users and publishes no licence price. Dentalpin is open source and free to run. A sourced comparison of where each fits."
 pubDate: 2026-08-14
-updatedDate: 2026-09-12
+updatedDate: 2026-11-07
 tags: [comparison, eaglesoft, dental-software]
 ---
 
@@ -149,7 +149,7 @@ Dentalpin is the other bet: that the software holding clinical records should be
 
 ## Sources
 
-All Patterson pages consulted on 14 August 2026, and re-checked on 12 September 2026, when the Insurance Suite and eStatements naming below was corrected:
+All Patterson pages consulted on 14 August 2026, re-checked on 12 September 2026, when the Insurance Suite and eStatements naming below was corrected, and re-checked again on 7 November 2026, without further changes: the same hardware requirements document (Rev 035, 03.27.2026), the same Eaglesoft 25.00 release, and all the figures below were still current.
 
 - [Eaglesoft · Patterson Dental](https://www.pattersondental.com/cp/software/dental-practice-management-software/eaglesoft): "more than 30 years", "nearly 30,000 users", "over 55 authorized, trusted software solutions", SmartDoc, the interactive tooth chart, the Pearl add-ons, the conversion offer wording and the "Request a demo" call to action.
 - [Dental Practice Management Software · Patterson Dental](https://www.pattersondental.com/cp/software/dental-practice-management-software): Eaglesoft as "server-based software", Fuse as the cloud product, Dolphin for orthodontics, "over 38,000 dental software customers", "over 25 years building dental practice management software", and no published price.
