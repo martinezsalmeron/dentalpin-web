@@ -4204,6 +4204,54 @@ twenty-one comparison slots a week are still producing nothing, and the queue is
 country-locked rows for the two regional variants.
 
 
+**The 08:00 run of 13 November 2026 found Queue A drained for the eighteenth consecutive day and wrote
+`atender-adolescente-desacompanhado-odontologia` in `blog/pt-br/`.** Queue A was proved empty per section again:
+comparisons per directory came to `de` 12 and `fr` 12 tied lowest, `it` 13, `es` 16, `pl` 17, `pt` 19, `es-mx` 20,
+`en` 21 and `pt-br` 22, the tie-break handed the run to German, and A6 is drained including both head-term rows, as
+are A4, A7, A1+A2-in-`es/`, A8, A5 and A3. **Queue B parsed to 199 rows with two holes**, the
+`harmonizacao-orofacial-dentista` row still parked on PR #38 (open, now four days old; nine PRs open, #5, #7, #26,
+#31, #32, #33, #35, #37, #38) and the adolescente row added at 11:00 yesterday, which is the one this run took.
+**PRs were checked before any research**, per the 10 November instruction.
+
+**Both of the row's "still to settle" items are now settled, and one of them changes the answer.** The Código de
+Ética **has** been amended since 2012, by **Resolução CFO-SEC-271, de 18 de junho de 2025**, read verbatim this
+run from the CFO act system in cumprimento a decisão do CADE no processo 08700.002535/2020-91. It alters the
+incisos VIII and X of art. 20 and the inciso XIV of art. 44 and revokes the inciso XIII of art. 32, and **touches
+none of the articles this subject turns on**, so art. 11, art. 9º and art. 14 stand with their 2012 wording. That
+same resolution supplies the publication reference the CFO's own code PDF omits: **DOU Seção 1 de 14.6.2012, págs.
+118 a 121**, worth carrying into any future post that cites the code. A **Comissão para Alteração do Código de
+Ética Odontológica** exists, created by Decisão CFO 13/2026 and staffed by Portaria CFO-SEC-71, de 23 de março de
+2026, so this is a row whose answer can move. The Código Civil line was settled from the Câmara text, arts. 3º, 4º
+and 5º with the redação da Lei 13.146/2015, including the six emancipation hypotheses of the parágrafo único.
+
+**The find that made the post, and it is a source this file did not know the CFO published.** The
+**Manual do Prontuário do Paciente em Odontologia** (CFO, Comissão de Legislação, 1ª ed., Brasília, 2026, ISBN
+978-65-979340-1-0) ships with a **FAQ whose pergunta 26 is this row's question verbatim**: "pacientes menores de
+idade, que comparecem às consultas sem acompanhante adulto/Responsável Legal, podem assinar o prontuário?", answered
+with the Código Civil split spelled out, under 16 absolutamente incapazes who "não podem assinar", 16 to 18 able to
+sign subject to later corroboration by the responsável legal. **That is the dental regulator answering the question
+directly**, which is what the row was missing, and it removes any need to reason by analogy from a CFM parecer.
+Both PDFs sit under `website.cfo.org.br/wp-content/uploads/2026/03/` and fetch cleanly. **Carry them**: the manual
+also covers prontuário in urgência ("de forma reduzida em algumas partes") and the six situations that justify
+postponing the TCLE, which several other `pt-br` rows will want.
+
+**The scoping call the row demanded was made and is in the post.** The 2017 Nota Técnica is addressed to Unidades
+Básicas de Saúde, so it is reported as an instruction to the public network and as an argument against turning the
+responsável into a barrier to access, never as a licence for a private consultório to treat without consent. **A
+second federal document, newer and on a gov.br domain, now carries that scoping for us**:
+**Nota Técnica nº 2/2022-COSAJ/CGCIVI/DAPES/SAPS/MS**, which updates the Nota Técnica nº 4 de 3 de abril de 2017
+that the odontological note was built on, and whose **item 3.4.1 points back at the professional codes**: "Na
+continuidade do cuidado, pode ser necessária a autorização dos pais ou responsáveis, a depender do que diz o código
+de ética das profissões e a natureza do tratamento." Its item 3.2.1 also supplies the three practical steps the post
+uses. **The 2017 note was still not found on a federal domain** after four searches, so it is cited by SEI number
+(processo 25000.417286/2017-46, documento 0203313, assinada 08/08/2017) with the Ribeirão Preto copy named as where
+it was read, and the post says so in its own limits section.
+
+**One route fact worth keeping.** `sistemas.cfo.org.br/visualizar/atos/<TIPO>/SEC/<ano>/<numero>` serves every CFO
+act as a domPDF file that WebFetch returns as binary and `pdftotext -layout` reads cleanly, the 8 November route
+again. It is the way to check whether a CFO resolution has been amended, since the CFO's own code PDFs are never
+consolidated.
+
 ## Where the routine publishes and flags
 
 Nothing in this list stops a publish. The post goes to main like any
