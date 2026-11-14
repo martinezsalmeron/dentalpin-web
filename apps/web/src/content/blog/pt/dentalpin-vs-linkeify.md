@@ -1,7 +1,8 @@
 ---
 title: "Dentalpin ou Linkeify: o que muda para uma clínica dentária em Portugal"
-description: "Comparação entre a Linkeify, com mais de 25 módulos e preço sob consulta, e o Dentalpin, open source e gratuito. Com fontes, datas e o que falta a cada um."
+description: "Comparação entre a Linkeify, com mais de 25 módulos e preço sob consulta, e o Dentalpin, com código-fonte público e software gratuito. Com fontes, datas e o que falta a cada um."
 pubDate: 2026-10-16
+updatedDate: 2026-11-14
 tags: [comparacao, linkeify, software-gestao-dentaria]
 ---
 
@@ -15,9 +16,9 @@ Nós fazemos o Dentalpin, por isso não somos neutros. O que podemos ser é exat
 
 **A Linkeify é o catálogo de módulos mais longo que lemos neste mercado.** Mais de 25, pelo número que ela própria publica, e vale dizer que "a plataforma portuguesa mais completa" é a formulação deles e não a nossa: odontograma com Shade Guide e modo estética, faceograma, rastreabilidade de implantes por lote, stock com lógica FEFO, portal do laboratório, prescrição eletrónica SPMS v4.1, débitos diretos SEPA, portal do paciente e quatro assistentes de inteligência artificial. Não há servidor para manter.
 
-**O Dentalpin é open source e não tem licença.** Sem custo por local, por membro da equipa ou por paciente, com o código publicado, uma API REST documentada que lê e escreve, odontograma e periodontograma incluídos, e a base de dados no servidor que a clínica escolher. Em troca é de 2026 e autoaloja-se.
+**O Dentalpin tem o código-fonte público, sob licença BSL 1.1, e o software não custa nada.** Sem custo de licença por local, por membro da equipa ou por paciente, com o código publicado, uma API REST documentada que lê e escreve, odontograma e periodontograma incluídos, e a base de dados no servidor que a clínica escolher. Em troca é de 2026, autoaloja-se e o alojamento paga-se à parte.
 
-A pergunta que decide não é qual tem mais módulos, porque essa já está respondida. É se a clínica aceita pedir uma proposta para saber o preço e assinar antes de ler três documentos que hoje não estão publicados.
+A pergunta que decide não é qual tem mais módulos, porque essa já está respondida. É se a clínica prefere um serviço cloud gerido, com preço por proposta, ou um software que instala e controla ela própria.
 
 ![Página inicial do Dentalpin com as consultas de hoje, quem está na clínica, pagamentos em atraso e pacientes recentes](/screenshots/home.png)
 
@@ -50,19 +51,19 @@ Vale isolar isto porque é um ponto onde perdemos e não é pequeno. A Linkeify 
 
 Diz onde usa IA (apoio clínico, marcação, transcrição de áudio, leitura de faturas de fornecedores, redação de textos). Diz que "todo o conteúdo gerado ou assistido por IA é identificado como tal no ecrã" e que o paciente é informado quando fala com um assistente automático. Diz que "nenhuma sugestão de IA é gravada na ficha clínica sem confirmação expressa de um profissional" e que cada clínica pode desativar as funcionalidades de IA. E diz duas coisas sobre os dados que quase ninguém escreve: que "os pedidos enviados aos modelos de IA não são utilizados para treinar modelos" e que fica registado "quem pediu, quando, que funcionalidade e se a sugestão foi aceite".
 
-> **Nós não publicamos o equivalente.** O Dentalpin tem um assistente de IA e tem o código aberto, o que permite a qualquer pessoa verificar o que ele faz, mas não temos uma página de política de IA com esta estrutura. A deles é o padrão a atingir e é uma linha verde na tabela.
+> **Nós não publicamos o equivalente.** O Dentalpin tem um assistente de IA e tem o código público, o que permite a qualquer pessoa verificar o que ele faz, mas não temos uma página de política de IA com esta estrutura. A deles é o padrão a atingir e é uma linha verde na tabela.
 
-## A faturação certificada diz duas coisas diferentes
+## A faturação certificada faz-se por integração
 
-Esta é a parte da comparação que exige cuidado, e resolve-se citando as duas páginas em vez de escolher uma.
+Na primeira versão desta comparação, o site da Linkeify dava duas formulações diferentes, e citámos as duas.
 
 No cartão de funcionalidades da página inicial, a Linkeify escreve: **"Faturação Certificada AT. Emissão de faturas em conformidade com a Autoridade Tributária. Integração direta com a AT, exportação SAFT-PT e validação em tempo real."** As etiquetas por baixo são "AT Certificada", "SAFT-PT" e "Fatura-Recibo".
 
 Nas perguntas frequentes das páginas por região, a resposta à pergunta "A Linkeify tem faturação certificada pela AT?" é outra: **"Sim, a Linkeify integra com sistemas de faturação certificados pela Autoridade Tributária portuguesa, permitindo emitir faturas, recibos e notas de crédito diretamente a partir dos tratamentos da clínica."**
 
-Integrar com sistemas certificados e ser um programa certificado não são a mesma coisa, e a diferença importa a quem assina. As duas frases são publicadas por eles, com dias de diferença no mesmo site, por isso ficam as duas aqui.
+**A Linkeify esclareceu-nos que a emissão de faturas é feita através da integração com um programa de faturação certificado de um parceiro.** É o modelo da segunda frase: a fatura sai de um programa certificado pela AT, a partir dos tratamentos registados na Linkeify. É um modelo legal e comum em Portugal.
 
-> **O registo da Autoridade Tributária não pudemos consultar nesta sessão.** O endereço `portaldasfinancas.gov.pt/pt/consultaProgCertificadosM24.action` responde hoje com a página de autenticação do acesso.gov.pt em vez da lista de programas certificados. **Não dizemos que a Linkeify não é certificada**, porque a sua própria resposta nas perguntas frequentes descreve um modelo de integração que é perfeitamente legal e comum. Dizemos o que se pergunta por escrito antes de assinar: qual é o programa certificado que emite a fatura e qual é o número de certificado, que por lei tem de aparecer na própria fatura.
+> **Vale para qualquer programa, incluindo este.** O número de certificado do programa que emite a fatura tem de aparecer, por lei, na própria fatura, e é aí que se confirma.
 
 ## O preço é a pergunta sem resposta
 
@@ -78,7 +79,7 @@ Duas leituras desta tabela que são factos e não opiniões.
 
 **A faturação certificada só aparece a partir do plano Profissional.** O plano de entrada, Clínicas, não a inclui. Numa clínica portuguesa isso não é um módulo opcional, é a razão pela qual o programa existe, por isso o plano que decide o preço é o do meio e não o de baixo.
 
-**A API e os webhooks só aparecem no Enterprise**, o plano "Personalizado". Quem quiser ligar a Linkeify a outra coisa está no plano mais alto por definição.
+**A API e os webhooks só aparecem no Enterprise**, o plano "Personalizado". As integrações já feitas pela Linkeify, como a radiologia Carestream, a Will Master, a Dentium, o terminal POS Stripe ou a faturação certificada, são outra coisa e não estão limitadas a esse plano: o que fica no Enterprise é o acesso à API para ligações próprias.
 
 Nenhuma página do site tem um valor em euros. O modelo é explicado nas perguntas frequentes como "um modelo modular, paga apenas pelos módulos que ativa. Experimente grátis durante 3 dias ou contacte-nos para uma proposta personalizada", e os add-ons nomeados no bloco de planos são "Automação, IA, Pagamentos".
 
@@ -88,7 +89,9 @@ Há um número no site, e não serve para nada: os dados estruturados das págin
 
 ## O que é o Dentalpin
 
-Software de gestão dental open source. Descarrega-se o código, instala-se no servidor da clínica ou no fornecedor de cloud que ela escolher, e não há licença por local, por membro da equipa nem por paciente.
+Software de gestão dental com o código-fonte público, sob licença BSL 1.1. Descarrega-se o código, instala-se no servidor da clínica ou no fornecedor de cloud que ela escolher, e não há custo de licença por local, por membro da equipa nem por paciente.
+
+O software custa 0 €. O que se paga é a infraestrutura: um servidor de 12 a 15 € por mês e cópias de segurança de 4 € por mês, ao preço de referência da Hetzner, ou o que cobrar outro fornecedor. Se a clínica entregar a instalação e a manutenção a um técnico ou integrador, esse custo soma-se.
 
 Odontograma, **periodontograma**, agenda, histórico clínico, planos de tratamento, orçamentos com assinatura, faturação, pagamentos, recalls e relatórios, todos incluídos, sem planos e sem módulos a ativar. Uma API REST documentada com OpenAPI, que lê e escreve, disponível na instalação e não num plano. Um assistente de IA que executa tarefas sobre os dados da clínica respeitando as permissões de cada utilizador.
 
@@ -104,12 +107,12 @@ Tudo o que está na coluna da Linkeify sai das páginas listadas em Fontes, cons
 
 | | Linkeify | Dentalpin |
 |---|---|---|
-| Modelo | Licença comercial, modular | Open source (BSL 1.1) |
+| Modelo | Licença comercial, modular | Código-fonte público (BSL 1.1) |
 | Implantação | Cloud, sem instalação | Autoalojado, no servidor da clínica |
-| Preço publicado | ✗ Sob consulta nos três planos | ✓ 0 €, sem licença |
+| Preço publicado | ✗ Sob consulta nos três planos | ✓ 0 € pelo software; alojamento e cópias de segurança à parte (16-19 €/mês) |
 | Período de teste | ~ 3 dias | ✓ Demonstração pública e instalação própria |
 | Nº de módulos | ✓ Mais de 25, pelo seu próprio número | ~ Um produto, tudo incluído |
-| Faturação certificada AT | ✓ Sim, com duas formulações diferentes no site | ✗ Não |
+| Faturação certificada AT | ✓ Por integração com programa certificado de um parceiro | ✗ Não |
 | Prescrição eletrónica SNS / PEM | ✓ Integração SPMS v4.1 | ✗ Não |
 | Leitor de Cartão de Cidadão | ✓ Sim | ✗ Não |
 | Assinatura qualificada (CMD / Autenticação.GOV) | ✓ Sim | ✗ Assinatura em orçamentos, não qualificada |
@@ -122,22 +125,22 @@ Tudo o que está na coluna da Linkeify sai das páginas listadas em Fontes, cons
 | Política de utilização de IA publicada | ✓ Sim, citando o Regulamento (UE) 2024/1689 | ✗ Não publicamos o equivalente |
 | Periodontograma | ✗ Não nomeado em nenhuma página consultada | ✓ Incluído, seis locais por dente |
 | API | ~ Só no plano Enterprise | ✓ REST documentada, lê e escreve, incluída |
-| Onde ficam os dados | ✗ Não publicado em nenhuma página consultada | ✓ No servidor que a clínica escolher |
-| Termos, privacidade e RGPD | ✗ Ligados no rodapé mas sem página | ✓ Publicados |
-| Código fonte | ✗ Fechado | ✓ Público |
-| Anos no mercado | ~ Lançamento anunciado para novembro de 2026 | ✗ Desde 2026 |
+| Onde ficam os dados | ~ Não publicado no site; informado à clínica pela Linkeify | ✓ No servidor que a clínica escolher |
+| Termos, privacidade e RGPD | ~ Não publicados no site; entregues à clínica antes da assinatura | ✓ Publicados |
+| Código fonte | ✗ Fechado | ✓ Público (BSL 1.1) |
+| Anos no mercado | ✓ Lançamento oficial em janeiro de 2026, projeto com cinco anos | ✗ Desde 2026 |
 
-Seis linhas desta tabela são deles sem discussão, e são as seis da conformidade portuguesa: faturação certificada, prescrição eletrónica pelo SNS, Cartão de Cidadão, assinatura qualificada, SAFT-PT e débito direto SEPA. Nenhuma delas se resolve com código aberto.
+Seis linhas desta tabela são deles sem discussão, e são as seis da conformidade portuguesa: faturação certificada, prescrição eletrónica pelo SNS, Cartão de Cidadão, assinatura qualificada, SAFT-PT e débito direto SEPA. Nenhuma delas se resolve com código público.
 
-## Três documentos que o rodapé promete e não entrega
+## Três documentos que não estão no site
 
 O rodapé do site tem uma secção "Legal" com quatro ligações: Termos de Utilização, Política de Privacidade, RGPD e Política de Utilização de IA.
 
-**Só a última abre.** As outras três apontam para `#`, ou seja, não vão a nenhum lado, e nenhuma delas existe no `sitemap.xml` do site, que tem 615 endereços: a página inicial, o `/login`, o `/clinicas` e 612 páginas de captação por região e setor.
+À data da consulta só a última abria: as outras três apontavam para `#` e nenhuma existia no `sitemap.xml` do site. **A Linkeify esclareceu-nos que esses documentos são entregues às clínicas antes da assinatura.** A diferença, portanto, é entre o que está publicado no site e o que a clínica recebe no processo de contratação.
 
-Isto não é uma acusação, é uma data. A Linkeify anuncia no seu próprio site a presença no **Congresso OMD 2026, Stand 371, 19, 20 e 21 de novembro, FIL Lisboa**, o que situa o lançamento comercial a um mês daqui. A leitura generosa, e provavelmente a correta, é que o site está a ser construído e os documentos vêm a caminho.
+A Linkeify fez o lançamento oficial em **janeiro de 2026**, depois de cinco anos de projeto, e estará no **Congresso OMD 2026, Stand 371, 19, 20 e 21 de novembro, FIL Lisboa**.
 
-O que não muda com essa leitura é o conselho prático: **são esses três documentos que dizem quem trata os dados dos seus pacientes, em que país, com que subcontratantes e o que acontece quando o contrato acaba.** Nenhuma página consultada diz onde ficam alojados os dados. Não assine antes de os ter por escrito, com a Linkeify ou com qualquer outro fornecedor, incluindo nós.
+O conselho prático vale para qualquer fornecedor, incluindo nós: **são esses documentos que dizem quem trata os dados dos seus pacientes, em que país, com que subcontratantes e o que acontece quando o contrato acaba.** O site não diz onde ficam alojados os dados; essa informação é dada às clínicas pela Linkeify. Leia-os antes de assinar.
 
 Na mesma linha, não encontrámos **NIPC nem número de contribuinte** em nenhuma página, apenas o nome da entidade, a cidade, o e-mail e o telefone. O rodapé liga corretamente o Livro de Reclamações eletrónico, que é obrigatório. O grupo publica também o `app.encontreaqui.pt`, um portal de orçamentos para serviços domésticos, ligado a partir do rodapé da Linkeify: é o mesmo grupo, não é o mesmo produto, e dizemos isto porque a especialização dentária é um argumento deles e vale saber de onde vem a casa.
 
@@ -153,10 +156,10 @@ Na mesma linha, não encontrámos **NIPC nem número de contribuinte** em nenhum
 
 ## Escolha o Dentalpin se
 
-- **Quer saber o preço antes de falar com alguém.** O nosso está [publicado](/pt/precos/) e é zero pelo software. O deles não está, em nenhum dos três planos.
+- **Quer saber o preço antes de falar com alguém.** O nosso está [publicado](/pt/precos/): zero pelo software, mais 16 a 19 € por mês de alojamento e cópias de segurança. O deles é por proposta, nos três planos.
 - **Faz periodontologia.** O periodontograma com os seis locais de sondagem por dente está incluído no Dentalpin, e as palavras periodontograma e parodontograma não aparecem em nenhuma página da Linkeify que consultámos. Confirme com eles antes de decidir, porque pode existir sem estar documentado.
-- **Quer os dados num servidor seu.** Escolhe o alojamento, a jurisdição e a política de cópias de segurança. Em Portugal, hoje, isso é uma resposta que o site deles não dá.
-- **Precisa de integrar com outra coisa.** A nossa API REST lê e escreve, está documentada e vem na instalação. A deles está no plano mais alto.
+- **Quer os dados num servidor seu.** Escolhe o alojamento, a jurisdição e a política de cópias de segurança.
+- **Precisa de integrar com outra coisa.** A nossa API REST lê e escreve, está documentada e vem na instalação. A API deles está no plano Enterprise.
 - **Quer ler o código.** Está público, e isso inclui o que o assistente de IA faz com os dados da clínica.
 - **Quer um produto sem planos.** Não há módulo a ativar nem funcionalidade atrás de um plano superior.
 
@@ -166,7 +169,7 @@ Na mesma linha, não encontrámos **NIPC nem número de contribuinte** em nenhum
 
 ## Como seria migrar
 
-A Linkeify publica que faz "Migração de Sistemas terceiros" com deduplicação de notas clínicas, isolamento multi-tenant, validação de integridade e "logs detalhados de cada importação". Não publica formatos aceites nem prazos, e o acompanhamento na migração aparece como parte do onboarding.
+A Linkeify publica que faz "Migração de Sistemas terceiros" com deduplicação de notas clínicas, isolamento multi-tenant, validação de integridade e "logs detalhados de cada importação". Os formatos aceites e os prazos não estão no site: a Linkeify indica-os à clínica, e o acompanhamento na migração faz parte do onboarding.
 
 Do nosso lado, o módulo `migration_import` importa através do [dental-bridge](https://github.com/dentaltix/dental-bridge), e de propósito não é um botão único:
 
@@ -177,19 +180,19 @@ Do nosso lado, o módulo `migration_import` importa através do [dental-bridge](
 
 **O passo 3 é onde falham quase todas as migrações.** Duas clínicas nunca codificam os tratamentos da mesma maneira, e uma equivalência adivinhada em silêncio produz faturas mal emitidas que ninguém deteta durante meses.
 
-A nota específica deste caso vale no sentido da saída, e é a pergunta a fazer antes de entrar, não depois. **Nenhuma página consultada da Linkeify descreve a exportação dos dados**: não há uma página de termos nem de RGPD onde essa cláusula normalmente vive, e a palavra exportação aparece no site aplicada ao SAFT-PT e aos PDF de tratamento, não ao processo clínico completo. Pergunte, por escrito, em que formato sai o odontograma, o faceograma, o plano de tratamento e o registo de implantes se um dia quiser sair, e em quanto tempo.
+No sentido da saída, **a Linkeify confirma que os dados clínicos podem ser exportados.** Com eles ou com qualquer fornecedor, vale a pena combinar antes de entrar em que formato sai o histórico clínico completo e em quanto tempo.
 
 ## O honesto
 
 Para uma clínica dentária em Portugal com duas ou três cadeiras, que coloca implantes, trabalha com laboratório, faz também estética facial, precisa de faturar certificado e prescrever pelo SNS, e não quer servidor nenhum, **a Linkeify está construída para ela e nós não estamos**. A lista de módulos deles é maior, é dentária, e cobre obrigações portuguesas que não cobrimos. Se esse é o perfil, fale com eles.
 
-O que fica em aberto do lado deles são cinco perguntas, e todas se respondem num e-mail: quanto custa o plano Profissional, qual é o programa certificado que emite a fatura e qual o seu número de certificado, onde ficam alojados os dados dos pacientes, se existe periodontograma em alguma parte do produto que não esteja documentada, e quando é que os termos, a política de privacidade e a página de RGPD passam a abrir. As três primeiras decidem um contrato e nenhuma está publicada hoje.
+O que fica para falar com eles é o normal num fornecedor com preço por proposta: quanto custa o plano com os módulos de que precisa, qual é o programa parceiro que emite a fatura, onde ficam alojados os dados e se existe periodontograma em alguma parte do produto que não esteja documentada no site.
 
 O Dentalpin é a aposta contrária: que o software da clínica não devia ser uma caixa negra alugada, e que o código e os dados deviam ser seus. Em Portugal, hoje, isso vem com um custo concreto, que é faturar, prescrever e assinar em programas à parte. Se esse custo for aceitável, pode [ver os preços](/pt/precos/), [experimentar a demonstração](https://demo.dentalpin.com) sem instalar nada, ou [instalá-lo no seu servidor em três minutos](/pt/blog/instalar-dentalpin-em-tres-minutos/) e julgar por si.
 
 ## Fontes
 
-Todas as páginas da Linkeify consultadas a **16 de outubro de 2026**. Nota de método: o site é renderizado no cliente e um pedido simples devolve cerca de 4 kB sem conteúdo, por isso tudo o que se cita aqui foi lido com a página renderizada num navegador. O `/login` não foi alcançado desta rede: responde "O acesso a partir desta rede ou localização foi bloqueado pelo administrador", pelo que nada nesta comparação descreve a aplicação por dentro, apenas as páginas públicas.
+Todas as páginas da Linkeify consultadas a **16 de outubro de 2026**. **Atualizado a 14 de novembro de 2026** com as correções enviadas pelo Grupo WA Tecnologias & Serviços sobre a data de lançamento, a exportação de dados, os documentos legais, o alojamento, as integrações e o modelo de faturação. Nota de método: o site é renderizado no cliente e um pedido simples devolve cerca de 4 kB sem conteúdo, por isso tudo o que se cita aqui foi lido com a página renderizada num navegador. O `/login` não foi alcançado desta rede: responde "O acesso a partir desta rede ou localização foi bloqueado pelo administrador", pelo que nada nesta comparação descreve a aplicação por dentro, apenas as páginas públicas.
 
 - [Página inicial da Linkeify](https://app.linkeify.com/): "Software completo para Gestão de Clínicas Dentárias"; "Automatize, Simplifique e Cresça"; o cartão "Faturação Certificada AT" com "Integração direta com a AT, exportação SAFT-PT e validação em tempo real" e as etiquetas "AT Certificada", "SAFT-PT", "Fatura-Recibo"; os módulos Odontograma Avançado ("por dente e superfícies múltiplas", "Modo Estética (facetas e planeamento estético)", "Shade Guide integrado (A1, BL1, etc.)"), Faceograma ("Mapeamento facial por regiões (frontal e perfil)", "Produtos, lotes e pontos de aplicação"), Laboratório/Prótese ("Portal do laboratório com acesso restrito", "pedido → entrega"), Stock ("Controlo de lotes com lógica FEFO"), Fornecedores, Implantes & Rastreabilidade ("Vinculação implante ↔ paciente ↔ dente", "Cartão do implante para o paciente", "Histórico clínico imutável para auditoria"), Radiologia Integrada ("Integração Carestream (CS Imaging) por protocolo", "Importação automática Will Master (JPGs locais)", "Sincronização Dentium via webhook"), "Prescrição Eletrónica SNS / PEM" com "Integração SPMS v4.1 com SNS", "Leitor de Cartão de Cidadão Integrado", "Assinatura Digital com Autenticação.GOV" com "Chave Móvel Digital e Cartão de Cidadão", LINK-PAY, "Terminal POS Stripe", "Notas de Crédito & Reembolsos" com "regras AT", "SAFT-PT Automático" com "Geração e envio mensal por email do SAFT-PT em ficheiro ZIP nomeado", "Migração de Sistemas terceiros" com "Deduplicação de notas clínicas" e "Isolamento estrito multi-tenant", e os quatro assistentes de IA, cada um com "Ferramenta de apoio clínico — a decisão final é sempre do Médico Dentista responsável"; o bloco PLANOS com "Clínicas — Sob consulta", "Profissional — Sob consulta", "Enterprise — Personalizado", "Preços configuráveis por empresa e módulos. Add-ons: Automação, IA, Pagamentos", e "API & webhooks" listado apenas no Enterprise; o anúncio "Conheça a LINKEIFY no Congresso OMD 2026, Stand 371, 19, 20 e 21 de novembro, FIL - Lisboa"; os contactos "geral@linkeify.com", "+351 910 495 919", "Porto, Portugal"; o rodapé "GRUPO WA TECNOLOGIAS & SERVIÇOS" e a secção Legal. **As ligações Termos de Utilização, Política de Privacidade e RGPD apontam todas para `#`; só a Política de Utilização de IA tem endereço próprio.** As palavras periodontograma e parodontograma não aparecem nesta página, nem indicação de onde ficam alojados os dados, nem NIPC, nem qualquer valor em euros. Os testemunhos dão apenas iniciais ("Dra. Sofia M."), por isso nenhum é citado aqui.
 - [Política de Utilização de Inteligência Artificial](https://app.linkeify.com/politica-ia): cumprimento do "Regulamento (UE) 2024/1689" e do "Regulamento (UE) 2016/679 (RGPD)"; "Doctor IA — apoio clínico, com hipóteses de trabalho e sugestões de conduta. Nunca emite diagnósticos definitivos"; "Todo o conteúdo gerado ou assistido por IA é identificado como tal no ecrã onde é apresentado"; "Nenhuma sugestão de IA é gravada na ficha clínica sem confirmação expressa de um profissional"; "Cada clínica pode desativar as funcionalidades de IA"; "Os pedidos enviados aos modelos de IA não são utilizados para treinar modelos"; "Os pedidos ficam registados para auditoria: quem pediu, quando, que funcionalidade e se a sugestão foi aceite"; literacia em IA "conforme o artigo 4.º do Regulamento (UE) 2024/1689"; e o rodapé citando o "artigo 50.º (transparência)" e o "artigo 14.º (supervisão humana)".
@@ -204,4 +207,4 @@ Todas as páginas da Linkeify consultadas a **16 de outubro de 2026**. Nota de m
 
 Esta comparação não é aconselhamento jurídico nem fiscal. Para saber se um programa concreto cumpre as suas obrigações de faturação, confirme o número de certificado na própria fatura e, em caso de dúvida, pergunte ao seu contabilista ou à Autoridade Tributária.
 
-Vê aqui alguma coisa errada ou desatualizada? [Diga-nos](https://github.com/martinezsalmeron/dentalpin/discussions) e corrigimos. Vale também se for do Grupo WA Tecnologias & Serviços, e vale sobretudo para o preço, para o programa certificado que emite a fatura, para onde ficam alojados os dados e para o periodontograma.
+Vê aqui alguma coisa errada ou desatualizada? [Diga-nos](https://github.com/martinezsalmeron/dentalpin/discussions) e corrigimos. Vale também se for do Grupo WA Tecnologias & Serviços.
