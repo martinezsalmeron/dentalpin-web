@@ -42,6 +42,19 @@ export const INTEGRATORS: Integrator[] = [
     logo: '/integrators/thl.png',
     since: '2026-11',
   },
+  {
+    slug: '323-it',
+    name: '323 IT & Networking',
+    legalName: '323 IT & Networking Española SL',
+    city: 'Ontinyent',
+    country: 'ES',
+    languages: ['es'],
+    services: ['install', 'support'],
+    website: 'https://www.323-it.es',
+    email: 'info@323-it.es',
+    logo: '/integrators/323-it.png',
+    since: '2026-11',
+  },
 ];
 
 /** 🇧🇷 from 'BR': each letter maps to its regional indicator symbol. */
