@@ -22,6 +22,8 @@ export interface Integrator {
   email?: string;
   /** Digits only, E.164 without the plus: used for wa.me and tel: links. */
   whatsapp?: string;
+  /** Landline for integrators without WhatsApp, same digits-only format. */
+  phone?: string;
   logo?: string;
   /** Month the integrator joined the directory, YYYY-MM. */
   since: string;
@@ -52,6 +54,7 @@ export const INTEGRATORS: Integrator[] = [
     services: ['install', 'migration', 'support'],
     website: 'https://www.323-it.es',
     email: 'info@323-it.es',
+    phone: '34960038120',
     logo: '/integrators/323-it.png',
     since: '2026-11',
   },
@@ -65,4 +68,6 @@ export const flag = (cc: string) =>
 export const prettyPhone = (digits: string) =>
   digits.startsWith('55') && digits.length === 13
     ? `+55 (${digits.slice(2, 4)}) ${digits.slice(4, 9)}-${digits.slice(9)}`
-    : `+${digits}`;
+    : digits.startsWith('34') && digits.length === 11
+      ? `+34 ${digits.slice(2, 5)} ${digits.slice(5, 8)} ${digits.slice(8)}`
+      : `+${digits}`;

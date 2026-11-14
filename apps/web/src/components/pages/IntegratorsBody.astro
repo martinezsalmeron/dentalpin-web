@@ -67,7 +67,7 @@ const ld = {
       legalName: i.legalName,
       url: i.website,
       email: i.email,
-      telephone: i.whatsapp ? `+${i.whatsapp}` : undefined,
+      telephone: (i.phone ?? i.whatsapp) ? `+${i.phone ?? i.whatsapp}` : undefined,
       logo: i.logo ? new URL(i.logo, Astro.site ?? 'https://dentalpin.com').href : undefined,
       address: { '@type': 'PostalAddress', addressLocality: i.city, addressCountry: i.country },
     },
@@ -255,12 +255,12 @@ const tick = 'mt-0.5 flex-none text-[var(--color-primary)]';
                       </a>
                     )}
                   </div>
-                  {i.whatsapp && (
+                  {(i.phone ?? i.whatsapp) && (
                     <a
-                      href={`tel:+${i.whatsapp}`}
+                      href={`tel:+${i.phone ?? i.whatsapp}`}
                       class="tnum mt-3 text-[13px] text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
                     >
-                      {prettyPhone(i.whatsapp)}
+                      {prettyPhone((i.phone ?? i.whatsapp)!)}
                     </a>
                   )}
                 </li>
