@@ -2,7 +2,7 @@
 title: "Dentalpin vs Software of Excellence: an installed EXACT, and code you can read"
 description: "Software of Excellence installs EXACT into your practice and publishes no price. A sourced comparison with Dentalpin, which is open source and self-hosted."
 pubDate: 2026-08-17
-updatedDate: 2026-09-12
+updatedDate: 2026-11-14
 tags: [comparison, software-of-excellence, dental-software]
 ---
 
@@ -50,7 +50,7 @@ EXACT is sold as a core system with a long list of separately named products aro
 - **Short Notice Lists** "enable critical appointment gaps to be automatically filled by patients who'd like to be seen sooner."
 - **Marketing Manager** "Allows you to create, automatically schedule and send marketing campaigns."
 
-Alongside those sit Examine Pro for imaging, which "Seamlessly integrate[s] digital images into one single database", My Practice Cloud for analytics you "Access ... from any device", MPC Pay for "automated associate dentist payments", Dentist Portal, Patient Portal, Clinipad, Online Booking, Chairsyde and Second Opinion AI.
+Alongside those sit Examine Pro for imaging, which "Seamlessly integrate[s] digital images into one single database", MyPractice Cloud for analytics you "Access ... from any device", MPC Pay for "automated associate dentist payments", Dentist Portal, Patient Portal, Clinipad, Online Booking, Chairsyde and Second Opinion AI.
 
 That is a genuinely deep catalogue. What their site does not publish is which of those arrive with EXACT and which are bought separately, so that is a question for the call rather than a fact we can state here.
 
@@ -74,7 +74,7 @@ That is normal for this industry rather than a scandal, and it is worth naming b
 
 Their own onboarding description settles the deployment question without any inference needed. "Our team will remotely install EXACT into your practice, add your Examine Pro imaging software and any value-added products."
 
-The hardware is part of the sale too. "If you're purchasing new equipment, we'll go over system requirements with you", "If you're using existing equipment, we'll guide you through a quick system check", and they offer "Preconfigured, tested and professionally installed IT equipment from the most trusted partner in dentistry".
+Hardware gets a compatibility check either way: "If you're purchasing new equipment, we'll go over system requirements with you", and "If you're using existing equipment, we'll guide you through a quick system check". Henry Schein One separately sells "Preconfigured, tested and professionally installed IT equipment from the most trusted partner in dentistry" under its own TechCentral product, but EXACT's own pages do not state that TechCentral ships with every installation.
 
 So the records sit on a machine in the practice, which is closer to how we work than a cloud-only rival is. The difference is not where the data lives, it is who can open the software that holds it.
 
@@ -106,7 +106,7 @@ Verifiable rows only. Their figures are their own, from their own pages.
 | AI on radiographs | ✓ Second Opinion by Pearl | ✗ Not offered |
 | NHS contract tracking | ✓ Predictive UDA Manager | ✗ Not offered |
 | Data conversion | ✓ Their migration team runs it | ~ A tool you drive yourself |
-| Hardware supplied | ✓ Preconfigured and installed | ✗ Your problem |
+| Hardware supplied | ~ TechCentral, a separate Henry Schein One product, not stated to be bundled | ✗ Your problem |
 | On the market | ✓ Since 1989, UK since 1994 | ✗ Since 2026 |
 | Practices using it | ✓ Over 4,500 stated in 2009 | ✗ Very few so far |
 | Support | ✓ Phone, on-site training, a named consultant | ~ Community and docs |
@@ -122,7 +122,7 @@ This section is meant seriously, not as a formality.
 - **You do NHS work.** UDA prediction against contract targets is the daily reality of an NHS practice, they have built it, and we have not. No amount of open source makes up for a contract you miss.
 - **You want somebody else to own the switch.** Their migration team "will connect to your server to export your data", run a test trial, then hold a "Trial Review with your team and our Customer Success Consultant to verify that the data is accurate". That is a service, not a download.
 - **You want imaging from the same supplier.** Examine Pro puts digital images "into one single database" with the records, and Second Opinion by Pearl reads radiographs. We offer neither, and pretending otherwise would help nobody.
-- **You want the hardware handled.** They will check your machines or sell you preconfigured ones. A practice with no IT contact should weigh that heavily.
+- **You want the hardware handled.** They will check your machines, and Henry Schein One sells preconfigured equipment separately through TechCentral. A practice with no IT contact should weigh that heavily.
 - **You want a person, not a forum.** Their Customer Success Programme is "a one-to-one relationship with your very own dental business coach", and they claim "92% of customers told us the programme had either a significant or major impact on business outcomes". We have GitHub and a chat channel.
 - **You want training on site.** "Training is available both remotely and on-site." Ours is documentation.
 
@@ -166,17 +166,17 @@ Dentalpin is the other bet: that the software holding clinical records should be
 
 ## Sources
 
-All pages consulted on 17 August 2026, and re-checked on 12 September 2026, when the module descriptions and the Chairsyde link above were corrected. Note that softwareofexcellence.co.uk redirects to softwareofexcellence.com/en-gb/.
+All pages consulted on 17 August 2026, re-checked on 12 September 2026, when the module descriptions and the Chairsyde link above were corrected, and re-checked again on 14 November 2026, when "My Practice Cloud" was corrected to "MyPractice Cloud" and the preconfigured-IT claim above was corrected: it is Henry Schein One's separate TechCentral product, not a stated part of the EXACT sale. Note that softwareofexcellence.co.uk redirects to softwareofexcellence.com/en-gb/.
 
 - [Software of Excellence home](https://www.softwareofexcellence.com/en-gb/): "The UK's number one dental practice software", "Join thousands of dental practices in the UK", the 48% private revenue claim, and the Gillingham address.
 - [Our story](https://www.softwareofexcellence.com/en-gb/company/our-story): founded in New Zealand in 1989, the 1000th UK customer in 2002, "became part of Henry Schein" in 2007, "the market leader with over 4,500 dental practice customers" in 2009, the 2020 line about supporting thousands of practices internationally, and the 2024 Second Opinion by Pearl integration.
 - [EXACT, the complete practice management system](https://www.softwareofexcellence.com/en-gb/solutions/exact): the descriptions of Recall Manager, Utilisation Manager, Care Manager, Workflow Manager, Short Notice Lists, Marketing Manager and the UDA Manager, and the "the complete practice management system you already know" line.
 - [NHS practices](https://www.softwareofexcellence.com/en-gb/solutions/exact/nhs-practices): "Track your NHS contracts with our Predictive UDA Manager", the intelligent predictions wording, "96% of practices in our Customer Success Programme hit their NHS contracts", and the absence of any named nation or claim submission route.
-- [Practice efficiency](https://www.softwareofexcellence.com/en-gb/solutions/practice-efficiency): Examine Pro "into one single database", My Practice Cloud "from any device", MPC Pay, Dentist Portal and Workflow Manager.
+- [Practice efficiency](https://www.softwareofexcellence.com/en-gb/solutions/practice-efficiency): Examine Pro "into one single database", MyPractice Cloud "from any device", MPC Pay, Dentist Portal and Workflow Manager.
 - [Patient experience](https://www.softwareofexcellence.com/en-gb/solutions/patient-experience): Patient Portal, Second Opinion AI, Online Booking and Clinipad. [Chairsyde](https://www.softwareofexcellence.com/en-gb/solutions/patient-experience/chairsyde): the consultation and patient-education platform, moved to its own page since 17 August 2026.
 - [Customer Success Programme](https://www.softwareofexcellence.com/en-gb/support/customer-success-programme): "your very own dental business coach" and the 92% impact claim.
 - [Contact us](https://www.softwareofexcellence.com/en-gb/contact-us): the phone numbers, the Gillingham address, "© 2026 Henry Schein One Inc." and no published price.
-- [EXACT on Henry Schein One](https://www.henryscheinone.com/products/exact/): "Software of Excellence is available in the UK, Australia and New Zealand", the remote install into the practice, the migration team connecting to your server and the Trial Review, the equipment checks and preconfigured IT, on-site training, and the Pearl AI description.
+- [EXACT on Henry Schein One](https://www.henryscheinone.com/products/exact/): "Software of Excellence is available in the UK, Australia and New Zealand", the remote install into the practice, the migration team connecting to your server and the Trial Review, the equipment checks, on-site training, and the Pearl AI description. TechCentral's preconfigured-IT line appears in this site's product navigation, not on the EXACT page itself.
 - [Dentalpin's licence](https://github.com/martinezsalmeron/dentalpin/blob/main/LICENSE) and [source](https://github.com/martinezsalmeron/dentalpin).
 
 Something wrong or out of date in this comparison? [Tell us](https://github.com/martinezsalmeron/dentalpin/discussions) and we will fix it. That goes for Software of Excellence too.
