@@ -49,7 +49,7 @@ export const INTEGRATORS: Integrator[] = [
     city: 'Ontinyent',
     country: 'ES',
     languages: ['es'],
-    services: ['install', 'support'],
+    services: ['install', 'migration', 'support'],
     website: 'https://www.323-it.es',
     email: 'info@323-it.es',
     logo: '/integrators/323-it.png',
