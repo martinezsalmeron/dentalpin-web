@@ -730,6 +730,33 @@ the reader sent to the body that can answer. That is what the Italian
 maltreatment post does about the obbligo di referto. It is not softening
 a claim, it is declining to make one.
 
+**Checked on 15 November 2026, writing the Mexican honorarios row. The
+Semanario Judicial de la Federación is bot-blocked, and the SCJN's own
+engroses are the way around it.** `sjf2.scjn.gob.mx` sits behind Incapsula:
+`/detalle/tesis/<registro>`, `/services/tesis/<registro>` and
+`/api/tesis/<registro>` all return the same 212-byte
+`_Incapsula_Resource` shell, HTTP 200 with an empty body, to plain curl and
+to WebFetch alike. Do not read that as a missing tesis. **The engrose PDFs on
+`www2.scjn.gob.mx/juridica/engroses/<sala>/<year>/<month>/<id>_firmado.pdf`
+serve in full, and only through WebFetch**, which saves the real PDF to its
+tool-results directory even while reporting it as unreadable binary; plain
+curl gets the Incapsula shell from that host too. `pdftotext -layout` then
+reads them, the same route as the Anvisa and Planalto PDFs. Find the engrose
+URL with a WebSearch restricted to `scjn.gob.mx`. Two things the engroses give
+that an SJF record does not: the session date and the vote count, both
+quotable, and the full text of the contending criteria. **That last point is a
+trap worth naming.** An engrose transcribes the Tribunales Colegiados' theses
+verbatim before resolving them, so a passage inside quotation marks may be the
+criterion under review and not the Sala's holding. The Sala's own text is the
+one introduced by «la tesis que debe prevalecer con carácter de jurisprudencia»
+near the end. The 15 November run found the familiar «poder jurídico de mando
+... correlativo a un deber de obediencia» formulation only in those
+transcriptions, so it attributed the statutory anchor (art. 134 fracción III
+LFT) instead and quoted the Sala only from its own prevailing tesis. **What
+this route cannot do is confirm that a tesis is still current**, because that
+is what the SJF record carries. Cite the criterion with its session date, say
+in the post that the SJF could not be consulted, and do not assert vigencia.
+
 ## Which languages a post gets written in
 
 **The two queues localise differently, and getting this backwards is the
@@ -1168,6 +1195,18 @@ The old ordering was written when only Spanish and English existed and a
 post in the other markets could not rank. All those sections rank now, so
 grouping by market is only a way to organise the catalogue, not an
 instruction about what to write next.
+
+**Queue A ran dry on 15 November 2026.** That run audited every row of A1
+to A8 against the filesystem and found **no unwritten comparison target left in
+any of the nine directories**: A1 14/14, A2 26/26, A3 20/20, A4 14 live rows of
+16 (two struck), A5 all 22 Brazilian and all 17 Portuguese rows plus four head
+terms, A6 14/14, A7 15/15, A8 19/19. A9 is still empty. So the rotation in this
+section now has nothing to pick, every run takes Queue B, and **a morning run
+should not spend its budget re-deriving this**: read this paragraph, confirm it
+with a spot check rather than a nine-market audit, and go to Queue B. The
+comparison cadence resumes only when a new verified vendor is added to a
+section. Counts when it drained, for that spot check: es 18, en 23, fr 14,
+pt 20, de 14, it 15, pl 19, pt-br 23, es-mx 21.
 
 When the comparison queue runs dry, the morning run takes a topic target too
 and the site simply publishes ten topic targets a week. Do
