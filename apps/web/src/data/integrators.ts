@@ -12,9 +12,10 @@ export interface Integrator {
   name: string;
   /** Registered company name, for the JSON-LD. */
   legalName: string;
-  city: string;
-  /** ISO 3166-1 alpha-2. Country names are localised with Intl.DisplayNames. */
-  country: string;
+  /** Omitted for integrators that work remotely across several countries. */
+  city?: string;
+  /** ISO 3166-1 alpha-2, the card shows under each. Names are localised with Intl.DisplayNames. */
+  countries: string[];
   /** ISO 639-1 languages the integrator works in. */
   languages: string[];
   services: Service[];
@@ -35,7 +36,7 @@ export const INTEGRATORS: Integrator[] = [
     name: 'THL Desenvolvimento',
     legalName: 'THL DESENVOLVIMENTO DE SOFTWARES LTDA',
     city: 'Curitiba',
-    country: 'BR',
+    countries: ['BR'],
     languages: ['pt'],
     services: ['install', 'migration', 'support', 'training', 'custom'],
     website: 'https://thldesenvolvimentoltda.com.br',
@@ -49,13 +50,25 @@ export const INTEGRATORS: Integrator[] = [
     name: '323 IT & Networking',
     legalName: '323 IT & Networking Española SL',
     city: 'Ontinyent',
-    country: 'ES',
+    countries: ['ES'],
     languages: ['es'],
     services: ['install', 'migration', 'support'],
     website: 'https://www.323-it.es',
     email: 'info@323-it.es',
     phone: '34960038120',
     logo: '/integrators/323-it.png',
+    since: '2026-11',
+  },
+  {
+    slug: 'piecyfer',
+    name: 'PieCyfer',
+    legalName: 'PieCyfer',
+    countries: ['US', 'CA', 'GB', 'AU', 'ES'],
+    languages: ['en', 'es'],
+    services: ['install', 'migration', 'support', 'training', 'custom'],
+    website: 'https://piecyfer.com',
+    email: 'amirhamzabutt1985@gmail.com',
+    logo: '/integrators/piecyfer.png',
     since: '2026-11',
   },
 ];

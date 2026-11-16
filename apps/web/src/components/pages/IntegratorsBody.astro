@@ -33,11 +33,11 @@ const languageName = new Intl.DisplayNames([HTML_LANG[locale]], { type: 'languag
 const collator = new Intl.Collator(HTML_LANG[locale]);
 
 // Countries sorted by localised name, integrators alphabetical inside each.
-const groups = [...new Set(INTEGRATORS.map((i) => i.country))]
+const groups = [...new Set(INTEGRATORS.flatMap((i) => i.countries))]
   .map((cc) => ({
     cc,
     name: regionName.of(cc) ?? cc,
-    items: INTEGRATORS.filter((i) => i.country === cc).sort((a, b) =>
+    items: INTEGRATORS.filter((i) => i.countries.includes(cc)).sort((a, b) =>
       collator.compare(a.name, b.name),
     ),
   }))
@@ -69,7 +69,10 @@ const ld = {
       email: i.email,
       telephone: (i.phone ?? i.whatsapp) ? `+${i.phone ?? i.whatsapp}` : undefined,
       logo: i.logo ? new URL(i.logo, Astro.site ?? 'https://dentalpin.com').href : undefined,
-      address: { '@type': 'PostalAddress', addressLocality: i.city, addressCountry: i.country },
+      areaServed: i.countries,
+      address: i.city
+        ? { '@type': 'PostalAddress', addressLocality: i.city, addressCountry: i.countries[0] }
+        : undefined,
     },
   })),
 };
@@ -181,7 +184,8 @@ const tick = 'mt-0.5 flex-none text-[var(--color-primary)]';
               {g.items.map((i) => (
                 <li
                   data-card
-                  data-country={i.country}
+                  data-country={g.cc}
+                  data-slug={i.slug}
                   data-services={i.services.join(' ')}
                   class="flex flex-col rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6"
                 >
@@ -203,7 +207,7 @@ const tick = 'mt-0.5 flex-none text-[var(--color-primary)]';
                     <div class="min-w-0">
                       <h3 class="text-[17px] font-semibold tracking-tight text-[var(--color-text)]">{i.name}</h3>
                       <p class="mt-1 text-[13.5px] text-[var(--color-text-muted)]">
-                        {i.city}, {regionName.of(i.country)}
+                        {[i.city, ...i.countries.map((cc) => regionName.of(cc))].filter(Boolean).join(', ')}
                       </p>
                       <p class="mt-1 text-[12.5px] text-[var(--color-text-subtle)]">
                         {t.card.languages}: {i.languages.map((l) => languageName.of(l)).join(', ')}
@@ -363,15 +367,17 @@ const tick = 'mt-0.5 flex-none text-[var(--color-primary)]';
       bar.querySelectorAll<HTMLButtonElement>('[data-service]').forEach((b) => {
         b.setAttribute('aria-pressed', String(b.dataset.service === state.service));
       });
-      let shown = 0;
+      // A multi-country integrator has one card per country: count it once.
+      const shownSlugs = new Set<string>();
       for (const c of cards) {
         const ok =
           (!state.country || c.dataset.country === state.country) &&
           (!state.service || c.dataset.services!.split(' ').includes(state.service));
         c.hidden = !ok;
-        if (ok) shown++;
+        if (ok) shownSlugs.add(c.dataset.slug!);
       }
       for (const g of groups) g.hidden = !g.querySelector('[data-card]:not([hidden])');
+      const shown = shownSlugs.size;
       empty.hidden = shown > 0;
       count.textContent = (shown === 1 ? tpl.one : tpl.many).replace('{n}', String(shown));
 
