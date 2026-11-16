@@ -1,12 +1,12 @@
 ---
 title: "Dentalpin vs Dentally: a published price, and a server you own"
-description: "Dentally publishes a full tariff, from £125 a month per site, with imaging only on the top plan. A sourced comparison with Dentalpin, open source and self-hosted."
+description: "Dentally publishes a full tariff, from £134 a month per site, with imaging from the Essentials plan up. A sourced comparison with Dentalpin, open source and self-hosted."
 pubDate: 2026-08-15
-updatedDate: 2026-09-12
+updatedDate: 2026-11-14
 tags: [comparison, dentally, dental-software]
 ---
 
-Dentally is one of the few dental systems in any market that tells you what it costs before you speak to anyone, and the price list rewards a close reading: £125 a month for a single-surgery site on Starter, £575 at eight surgeries, and digital imaging only on the most expensive of the three plans.
+Dentally is one of the few dental systems in any market that tells you what it costs before you speak to anyone, and the price list rewards a close reading: £134 a month for a single-surgery site on Starter, £618 at eight surgeries, and digital imaging missing only from the cheapest of the three plans.
 
 We make Dentalpin, so we are not neutral. What we can be is accurate.
 
@@ -58,7 +58,7 @@ We should be equally unambiguous in the other direction. Dentalpin submits nothi
 
 > **Dentally publishes a full tariff, and almost nobody else in this market does.** The pricing page carries a slider, "How many surgeries do you have per site?", running from one to nine, and three plans priced against it. Every figure below is from that page, excluding VAT.
 
-At one surgery per site the plans are **Starter £125 a month, Essentials £220 and Pro £320**. At three surgeries they are **£265, £380 and £510**. At eight, the highest the slider prices, they are **£575, £720 and £945**. Move the slider to nine and every plan says "Contact us" instead.
+At one surgery per site the plans are **Starter £134 a month, Essentials £238 and Pro £346**. At three surgeries they are **£285, £410 and £551**. At eight, the highest the slider prices, they are **£618, £778 and £1,021**. Move the slider to nine and every plan says "Contact us" instead.
 
 Users and storage are unlimited on all three plans, so the meter runs on surgeries and not on headcount. That is a genuinely different shape from a per-user licence, and for a practice with a lot of part-time associates it is the friendlier one.
 
@@ -66,7 +66,7 @@ Users and storage are unlimited on all three plans, so the meter runs on surgeri
 
 The interesting part of a published price list is which rows are unticked, and here the answer is not the one the tier names suggest.
 
-- **Digital imaging is on Pro only.** Dentally Vision is unticked on Starter and unticked on Essentials. A practice that assumed imaging arrives with the middle plan is looking at £510 a month rather than £380 at three surgeries.
+- **Digital imaging starts at Essentials.** Dentally Vision is unticked on Starter only. A practice that assumed imaging needs the top plan can get it a tier down, at £410 a month rather than £551 at three surgeries.
 - **Dentally Portal starts at Essentials.** Digital forms, online booking, kiosk and concierge are not part of Starter.
 - **Integrations are "Approved partners" on Starter and Essentials**, and "Custom" only on Pro. Custom email domains are Pro only too.
 - **Support is "Chat" on Starter**, and "Chat & Phone" on Essentials and Pro. A customer success manager comes with Essentials, a dedicated one with Pro.
@@ -114,7 +114,7 @@ Verifiable rows only. Dentally's figures are its own, from its own pages.
 | Where data lives | ✗ Not published | ✓ Wherever you decide |
 | Browser support | ~ "All you need is Google Chrome" | ✓ Any modern browser |
 | NHS and HSC claims | ✓ England, Wales, Scotland, NI | ✗ Not offered |
-| Imaging | ✓ Dentally Vision, on Pro only | ✗ Not offered |
+| Imaging | ✓ Dentally Vision, from Essentials up | ✗ Not offered |
 | Patient portal | ✓ From Essentials up | ~ No patient-facing portal |
 | Ambient AI notes | ✓ Metered, 45 or 90 a surgery | ~ Assistant over your data, no dictation |
 | Practitioners using it | ✓ 70,000+ stated | ✗ Very few so far |
@@ -132,7 +132,7 @@ This section is meant seriously, not as a formality.
 - **You do any NHS or HSC work.** UDA tracking, exemptions, automatic fee updates, GP17 digital signing in Scotland, CHI and SIMD lookups. We do none of it, and no amount of open source makes up for a claim you cannot submit.
 - **You want to see the price before the call.** They publish it, on a slider, with the plan contents next to it. That is rare enough in this market that it deserves saying twice, and it is the thing we most want other vendors to copy.
 - **Unlimited users suits how you staff.** If you run associates, hygienists and part-time reception, a per-surgery meter with unlimited logins is likely cheaper and much simpler to predict than a per-seat licence.
-- **You want imaging and practice management from one supplier.** Dentally Vision is in the same product, on the Pro plan. Dentalpin has no imaging module and pretending otherwise would help nobody.
+- **You want imaging and practice management from one supplier.** Dentally Vision is in the same product, from the Essentials plan up. Dentalpin has no imaging module and pretending otherwise would help nobody.
 - **Nobody should have to think about a server.** No on-site hardware, updates daily with "no downtime or disruption", and someone to phone from Essentials up.
 - **You want dictated clinical notes now.** Their AI turns dictation into structured notes on your existing templates. Our assistant works on your data on request, which is a different thing.
 
@@ -170,17 +170,17 @@ If you want somebody else to own the migration end to end, that is a genuine rea
 
 For a UK practice doing NHS dentistry, Dentally is the better answer and this comparison is not going to pretend otherwise. The claim workflows across four nations are years of unglamorous work, they are the daily reality of the job, and we have not done them.
 
-What we would push back on is narrower. A price list is a real service to buyers, and theirs is undermined a little by imaging sitting on the top plan, so the number a practice first quotes itself is often not the number it will pay. And a security page that promises "Only you have the key" while naming no hosting region, no certification and no backup schedule is asking for more trust than it evidences.
+What we would push back on is narrower. A price list is a real service to buyers, and theirs is undermined a little by how much the per-surgery meter moves the number, so what a practice first quotes itself at one surgery is rarely close to what it pays at eight. And a security page that promises "Only you have the key" while naming no hosting region, no certification and no backup schedule is asking for more trust than it evidences.
 
 Dentalpin is the other bet: that the software holding clinical records should be readable and ownable by the practice it holds them for. It is younger and it shows. You can [try the demo](https://demo.dentalpin.com) without installing anything, or [stand it up on your own server in three minutes](/en/blog/install-dentalpin-in-three-minutes/) and judge it yourself.
 
 ## Sources
 
-All Dentally pages consulted on 15 August 2026, and re-checked on 12 September 2026, when the homepage headline and the Integrations URL below were corrected. Note that dentally.co now redirects to dentally.com.
+All Dentally pages consulted on 15 August 2026, re-checked on 12 September 2026, when the homepage headline and the Integrations URL below were corrected, and re-checked again on 14 November 2026, when every price in the tariff above had risen and Dentally Vision was found included on Essentials as well as Pro, not Pro only. Note that dentally.co now redirects to dentally.com.
 
 - [Dentally home](https://www.dentally.com/en-gb/): the current homepage headline "The dental software solution for stress-free dentistry", the older tagline "The market leading cloud solution for faster, simpler dental practice management" still shown in the footer, the three product names, and the Henry Schein One UK LTD company registration in the footer.
 - [Our story](https://www.dentally.com/en-gb/resources/our-story): "founded in 2013 by Nick and James", "Dentally was acquired in 2020 by Henry Schein One", "70,000+ practitioners across the UK, Ireland, Canada, Australia and New Zealand use Dentally", "over 80,000 worldwide" after the New Zealand launch, and the Gillingham headquarters.
-- [Pricing](https://www.dentally.com/en-gb/pricing): the surgeries-per-site slider, the eight priced steps for Starter (£125 to £575), Essentials (£220 to £720) and Pro (£320 to £945), "Excluding VAT", "Contact us" at nine surgeries, unlimited users and storage, the AI clinical note allowances and the Northern Ireland and Republic of Ireland exclusion, the integrations and support rows, and the ticks showing Dentally Vision on Pro only and Dentally Portal from Essentials.
+- [Pricing](https://www.dentally.com/en-gb/pricing): the surgeries-per-site slider, the eight priced steps for Starter (£134 to £618), Essentials (£238 to £778) and Pro (£346 to £1,021), "Excluding VAT", "Contact us" at nine surgeries, unlimited users and storage, the AI clinical note allowances and the Northern Ireland and Republic of Ireland exclusion, the integrations and support rows, and the ticks showing Dentally Vision from Essentials up and Dentally Portal from Essentials.
 - [Clinical features](https://www.dentally.com/en-gb/dental-software-features/clinical): "Smarter charting, clearer care", "Perio, perfected", "Talk. Summarise. Done", and the Dentally Vision wording.
 - [Practice admin features](https://www.dentally.com/en-gb/dental-software-features/practice-admin): the calendar and visits panel, "Clear practice insights", patient communication and family accounts.
 - [NHS solutions](https://www.dentally.com/en-gb/solutions/nhs): "Fully integrated with NHS in England, Wales, Scotland and HSC in Northern Ireland", UDA progress and contract tracking, and the per-nation detail including GP17 digital signing, CHI and SIMD lookups.
