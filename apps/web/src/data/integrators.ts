@@ -12,9 +12,12 @@ export interface Integrator {
   name: string;
   /** Registered company name, for the JSON-LD. */
   legalName: string;
-  /** Omitted for integrators that work remotely across several countries. */
+  /** Headquarters city, in countries[0]. */
   city?: string;
-  /** ISO 3166-1 alpha-2, the card shows under each. Names are localised with Intl.DisplayNames. */
+  /**
+   * ISO 3166-1 alpha-2, headquarters first; the card shows under each.
+   * Names are localised with Intl.DisplayNames.
+   */
   countries: string[];
   /** ISO 639-1 languages the integrator works in. */
   languages: string[];
@@ -63,6 +66,7 @@ export const INTEGRATORS: Integrator[] = [
     slug: 'piecyfer',
     name: 'PieCyfer',
     legalName: 'PieCyfer',
+    city: 'San Mateo',
     countries: ['US', 'CA', 'GB', 'AU', 'ES'],
     languages: ['en', 'es'],
     services: ['install', 'migration', 'support', 'training', 'custom'],

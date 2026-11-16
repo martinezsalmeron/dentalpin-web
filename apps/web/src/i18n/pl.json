@@ -886,6 +886,7 @@
     },
     "card": {
       "languages": "Języki",
+      "coverage": "Zasięg",
       "whatsapp": "WhatsApp",
       "email": "E-mail",
       "website": "Strona",

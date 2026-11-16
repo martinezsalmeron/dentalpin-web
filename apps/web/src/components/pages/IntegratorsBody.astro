@@ -207,8 +207,13 @@ const tick = 'mt-0.5 flex-none text-[var(--color-primary)]';
                     <div class="min-w-0">
                       <h3 class="text-[17px] font-semibold tracking-tight text-[var(--color-text)]">{i.name}</h3>
                       <p class="mt-1 text-[13.5px] text-[var(--color-text-muted)]">
-                        {[i.city, ...i.countries.map((cc) => regionName.of(cc))].filter(Boolean).join(', ')}
+                        {[i.city, regionName.of(i.countries[0])].filter(Boolean).join(', ')}
                       </p>
+                      {i.countries.length > 1 && (
+                        <p class="mt-1 text-[12.5px] text-[var(--color-text-subtle)]">
+                          {t.card.coverage}: {i.countries.map((cc) => regionName.of(cc)).join(', ')}
+                        </p>
+                      )}
                       <p class="mt-1 text-[12.5px] text-[var(--color-text-subtle)]">
                         {t.card.languages}: {i.languages.map((l) => languageName.of(l)).join(', ')}
                       </p>
