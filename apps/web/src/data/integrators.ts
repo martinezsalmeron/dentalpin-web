@@ -71,7 +71,7 @@ export const INTEGRATORS: Integrator[] = [
     languages: ['en', 'es'],
     services: ['install', 'migration', 'support', 'training', 'custom'],
     website: 'https://piecyfer.com',
-    email: 'amirhamzabutt1985@gmail.com',
+    email: 'info@piecyfer.com',
     logo: '/integrators/piecyfer.png',
     since: '2026-11',
   },
