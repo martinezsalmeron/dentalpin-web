@@ -757,6 +757,49 @@ this route cannot do is confirm that a tesis is still current**, because that
 is what the SJF record carries. Cite the criterion with its session date, say
 in the post that the SJF could not be consulted, and do not assert vigencia.
 
+**Checked on 19 November 2026, writing the Mexican punzocortante row. Three
+findings about the Mexican clinical-guideline route, and one of them bars a
+domain this file's own searches keep surfacing.**
+
+- **`cenetec-difusion.com` is no longer CENETEC and must never be cited.** It
+  now serves an online-casino affiliate page. The domain still ranks for
+  `Catálogo Maestro` queries and still appears in search results as
+  "Centro Nacional de Excelencia Tecnológica en Salud CENETEC", so a run that
+  fetches it without reading what came back will quote a casino page as a
+  health authority. Treat any `cenetec-difusion.com` hit as barred on sight.
+- **The Catálogo Maestro de GPC is gone from its official addresses.**
+  `cenetec.salud.gob.mx` does not resolve, `cenetec.gob.mx` resolves only to
+  redirect the old catalogue path to the `gob.mx/salud` homepage, and
+  `imss.gob.mx/profesionales-salud/gpc` is a stub with no index (last updated
+  23/09/2020). **So there is currently no official way to confirm that a GPC is
+  the latest version.** Source a guide by the publishing institution's own
+  canonical URL, `imss.gob.mx/sites/all/statics/guiasclinicas/<num>GER.pdf`,
+  state the date consulted, and where the guide's own programmed review window
+  has closed, say so and send the clinical decision back to the treating unit
+  rather than asserting the text is current. Do not fill the gap with a
+  third-party GPC search site; several exist and none is official.
+- **That IMSS guide URL 301s to the `www` host.** Plain `curl` without `-L`
+  returns HTTP 301 and a zero-byte file, which reads like a dead link. With
+  `-L` it is a clean 200 and `pdftotext -layout` gives usable text.
+
+**On the same run, the STPS labour-accident route: the official PDF and the
+official HTML page disagree, and the PDF is the stale one.** The aviso de
+accidente de trabajo changed this year. Artículo Séptimo of the Acuerdo
+published in the DOF on 27 May 2026 (`siaat.stps.gob.mx/pdf/acuerdo_SIAAT_27-05-2026.pdf`,
+200 to plain curl) eliminates the in-person modality of trámite STPS-09-001, so
+the aviso now goes through SIAAT only. But
+`siaat.stps.gob.mx/pdf/preguntas_frecuentes.pdf` still documents the presencial
+route with its printed formats, while `siaat.stps.gob.mx/preguntas_frecuentes.html`
+carries the 2026 change and links the new Acuerdo. **Prefer the HTML page over
+the PDF on that site**, and check the nav for a newer Acuerdo before describing
+any STPS filing route. The same HTML page is also the source for a point no
+secondary write-up gets right: under art. 76 of the Reglamento Federal de
+Seguridad y Salud en el Trabajo, filing with the social security institution
+relieves the patrón of the aviso **to the Secretaría only**, and the
+obligation to the Inspección del Trabajo and the Tribunal survives. Note the
+naming gap when quoting it: the LFT says «al Tribunal», the SIAAT FAQ still
+says «Junta de Conciliación y Arbitraje».
+
 ## Which languages a post gets written in
 
 **The two queues localise differently, and getting this backwards is the
