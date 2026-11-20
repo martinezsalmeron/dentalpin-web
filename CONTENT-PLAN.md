@@ -4885,3 +4885,66 @@ slugs do not name them. That makes the variant seam not merely the easiest sourc
 the only one, and it feeds two markets out of nine. Either Queue A gets an extension schedule of its own, or
 three of the four daily runs are re-pointed at Queue B and this file says so. **That decision cannot be taken
 inside a run and has now been deferred by thirteen consecutive runs.**
+
+**The 04:00 run of 20 November 2026 wrote `agua-unidad-dental-consultorio` in `blog/es-mx/`.** Queue A was spot-checked
+rather than re-audited, per the *Two queues* instruction: `git log --since` over `CONTENT-PLAN.md` shows no vendor added to
+any A-section since the 15 November drain, which is the only condition that restarts the comparison cadence, so the run
+took Queue B. Of the three rows added on 19 November, `accidente-punzocortante-consultorio-dental` was written the same
+day and the next hole in file order is this one. **The open pull requests were checked before any research**, per the
+10 November rule: ten are open (#5, #7, #26, #31, #32, #33, #35, #37, #38, #39), none of them this target, and PR #38 is
+now eleven days old with its blocker unchanged.
+
+**The row's own premise was wrong, and in the direction that matters.** It stated that «the Mexican instrument is one
+clause», meaning NOM-013 point 8.16, and built the whole row around that prohibition plus an absence. The positive
+obligation exists and sits in another norm: **NOM-005-SSA3-2018, point 6.4.6**, «La instalación hidráulica debe ser
+complementada con un sistema local de filtración del agua para aquella que se utiliza en la jeringa triple y en las piezas
+de mano. El agua a desechar deberá ser canalizada a la red de drenaje». That is a requirement about dental unit water,
+it is exigible today, and a post written to the row as drafted would have told Mexican readers no such requirement exists.
+**Apéndice B Normativo B.2.3** of the same norm also lists the unit's «sistema flush» among the required equipment. The
+lesson for the row format: a row that concludes «the instrument is one clause» has searched one norm, and the
+infrastructure norm is the second place to look for anything physical in a consultorio.
+
+**The cancellation chain is the trap worth carrying, and this file already had half of it.** NOM-013 is from 2016 and its
+Capítulo de Referencias cites **NOM-005-SSA3-2010** at point 3.2 and **NOM-127-SSA1-1994** at point 3.14. Both are
+superseded: the 2010 infrastructure norm was left without effect by NOM-005-SSA3-2018 (DOF 9 July 2020, in force
+7 September 2020), and the 1994 water norm by NOM-127-SSA1-2021 (DOF 2 May 2022, in force 27 April 2023). **What rescues
+every such reference is one phrase at the head of the chapter**, «o las que las sustituyan», so a dated citation inside
+NOM-013 redirects to the successor rather than failing. `aviso-funcionamiento-consultorio-dental` already carried the
+NOM-178 to NOM-005 half of this chain; the water half is new. **Always read a NOM's references chapter for that clause
+before reporting a citation as dead**, because the honest finding is usually «dated and self-correcting», not «broken».
+
+**The row's instruction to settle the 2021 entry-into-force date from the DOF text was followed and the three circulating
+dates are now resolved.** `sidof.segob.gob.mx/notas/docFuente/5650705` serves the complete act to plain curl (HTTP 200,
+2.1 MB of HTML, no parameters needed, unlike the Anvisa Datalegis route). Its point 11 reads «a los 360 días naturales
+contados a partir del día siguiente de su publicación», and PLATIICA records the resulting date as 27 April 2023. So the
+norm fixes the rule and PLATIICA fixes the date; neither secondary figure was used.
+
+**One scoping find that changes the answer for every future Mexican water question.** NOM-127-SSA1-2021 point 1.2 makes
+itself «de observancia obligatoria en el territorio nacional para los organismos responsables de los sistemas de
+abastecimiento de agua públicos y privados». A consultorio is not one, so the potability norm binds the supplier and not
+the clinic, and its microbiological limit is expressed per 100 mL (E. coli «<1» UFC/100 mL in Tabla 6), a distribution
+measure. Any post that reasons «the water arrives potable, therefore the unit is compliant» is wrong on the norm's own
+campo de aplicación.
+
+**The barred-figure rule was applied with one deliberate exception, and it is worth stating as a general case.** The row
+barred the 500 UFC/mL figure because it circulates through Redalyc and theses, which are literature. The figure also
+exists on the **CDC's own Dental Unit Water Quality page** (dated 15 May 2024), which is an official health authority
+publishing it directly, the same category this file already accepts for HAS and the ONCD in France. It is quoted from
+there, in English, and labelled in the post as US guidance that no COEPRIS verifier can enforce in Mexico. **The bar is on
+the source, not on the number**: a figure barred via an aggregator is admissible once an official body is found publishing
+it, provided the post says whose rule it is and that it is not Mexican law.
+
+**One honest absence survived verification and is the post's strongest section.** No norm consulted this run sets a UFC/mL
+limit for dental unit water, a purge, or an analysis frequency. Searching NOM-013 for «biopelícula» does not find a
+waterline rule either, because its point 4.1.8 defines the term as placa bacteriana, «responsables de la caries y
+enfermedades periodontales». NOM-013 also defines 51 terms and «procedimiento quirúrgico» is not among them, so the
+boundary that point 8.16 turns on is left to clinical judgement; the post states that rather than inventing a line.
+
+**Environment notes.** `dof.gob.mx/normasOficiales/<id>/<slug>/<slug>.html` serves a complete NOM as plain HTML to curl
+and is a better route than the PDF when one exists. `gob.mx/cms/uploads/attachment/file/<id>/` PDFs read cleanly with
+`pdftotext -layout`. PLATIICA answers WebFetch on `platiica.economia.gob.mx/normalizacion/<norm-slug>/` and carries the
+publication date, entry-into-force date and Estado de la Norma, but **a guessed slug 404s**: `nom-005-ssa3-2010` does not
+exist there, only `nom-005-ssa3-2018`, which is itself the signal that a norm was replaced.
+
+Queue B now holds one unwritten row, `laboratorio-protesis-dental-mexico`, so the 08:00 run has a target and the 11:00 run
+does not. The decision named on 12 November is unchanged and is now eight days further overdue.
