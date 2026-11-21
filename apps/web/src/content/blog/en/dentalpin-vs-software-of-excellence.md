@@ -2,7 +2,7 @@
 title: "Dentalpin vs Software of Excellence: an installed EXACT, and code you can read"
 description: "Software of Excellence installs EXACT into your practice and publishes no price. A sourced comparison with Dentalpin, which is open source and self-hosted."
 pubDate: 2026-08-17
-updatedDate: 2026-09-12
+updatedDate: 2026-11-21
 tags: [comparison, software-of-excellence, dental-software]
 ---
 
@@ -166,7 +166,7 @@ Dentalpin is the other bet: that the software holding clinical records should be
 
 ## Sources
 
-All pages consulted on 17 August 2026, and re-checked on 12 September 2026, when the module descriptions and the Chairsyde link above were corrected. Note that softwareofexcellence.co.uk redirects to softwareofexcellence.com/en-gb/.
+All pages consulted on 17 August 2026, re-checked on 12 September 2026, when the module descriptions and the Chairsyde link above were corrected, and re-checked again with no changes on 21 November 2026. Note that softwareofexcellence.co.uk redirects to softwareofexcellence.com/en-gb/.
 
 - [Software of Excellence home](https://www.softwareofexcellence.com/en-gb/): "The UK's number one dental practice software", "Join thousands of dental practices in the UK", the 48% private revenue claim, and the Gillingham address.
 - [Our story](https://www.softwareofexcellence.com/en-gb/company/our-story): founded in New Zealand in 1989, the 1000th UK customer in 2002, "became part of Henry Schein" in 2007, "the market leader with over 4,500 dental practice customers" in 2009, the 2020 line about supporting thousands of practices internationally, and the 2024 Second Opinion by Pearl integration.
