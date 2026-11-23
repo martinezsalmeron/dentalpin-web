@@ -5241,3 +5241,58 @@ The decision named on 12 November is unchanged and is now ten days further overd
 slot is still producing nothing**, and this run consumed the first of the three rows the 11:00 run added. Either Queue A gets
 an extension schedule of its own, or three of the four daily runs are re-pointed at Queue B and this file says so. **That
 decision cannot be taken inside a run and has now been deferred by seventeen consecutive runs.**
+
+
+**The 04:00 run of 23 November 2026 found Queue A drained for the twenty-eighth consecutive day and wrote
+`cnes-consultorio-odontologico` in `blog/pt-br/`.** Queue A was spot-checked rather than re-audited, per the *Two queues*
+instruction: `git log` over `CONTENT-PLAN.md` shows no vendor added to any A-section since the 15 November drain, which is
+the only condition that restarts the comparison cadence. Queue B's first hole top-down was the CNES row added at 11:00 on
+22 November, the `fr` position of the seguro row having been filled by the 11:00 run of the same day. Eleven PRs open, none
+a target of this run; PR #38 unchanged at fourteen days.
+
+**The row's one open question is now half-settled, and the honest half is in the post.** Portaria GM/MS nº 1.646/2015 was
+read end to end from the ANS copy (still **200 to plain curl**, 47 KB, `pdftotext -layout` clean), so arts. 2º, 3º IV-V,
+4º, 5º, 7º, 8º and 16 are quoted from the act itself. **The Portaria de Consolidação nº 1/2017 could not be read from any
+official host this run**, so art. 361 is not cited, exactly as the row instructed. What could be established is that the
+Ministry itself treats the Consolidação as the live instrument: its CNES wiki answers "o cadastro dos consultórios
+isolados no CNES é obrigatório?" with "Sim (...) conforme Resolução Normativa nº 71, 17 de março de 2004 e a Portaria de
+Consolidação GM/MS nº 1, de 28 de setembro de 2017", and cites articles of it by number. The post says in its own limits
+section that the consolidated text was unreadable and why.
+
+**A discrepancy between two official pages of the same Ministry, worth carrying.** `Estabelecimento Desativado por Falta
+de Atualização` attributes the monthly periodicity to "o Artigo 370 da Portaria de Consolidação nº 01/GM/MS/2017" and the
+automatic deactivation to Portaria SAS nº 118/2014; `Perguntas frequentes` attributes the deactivation to "artigo 371".
+They agree on the effect and on which portaria governs it, and disagree on the article number. Any future post on CNES
+should cite the effect and Portaria SAS/MS nº 118/2014, which both name, and not the article number.
+
+**The wiki is the practice-facing source this subject needed and it is better than the act for half the questions**, but
+**its own search is dead**: `api.php?action=query&list=search` returns `totalhits: 0` for terms that are on the pages, and
+the `Especial:Pesquisar` UI returns nothing. Go to the page URLs directly. The five that answer are `Perguntas_frequentes`
+(obrigatoriedade, six-month maximum, transmissão direta by CPF, Simplificado vs Completo, 5º dia útil, the gestor checking
+the licença), `Estabelecimento_Desativado_por_Falta_de_Atualização` (the verbatim "DESATIVADO por falta de atualização há
+mais de 6 meses" message, and the rule to send even when nothing changed), `Saiba_mais_sobre_o_CNES_Simplificado` (the
+Portaria nº 511/SAS/MS de 2000 definition of consultório, what is *not* a consultório isolado, tipo 22, and the four
+mandatory Vigilância Sanitária fields), `Categoria:Como_obter_um_número_de_CNES` (the gestor-local route and when the code
+changes) and `Dúvidas_Frequentes` (competência fechada). **All five were last edited in 2020**, so they are current on the
+obligation and stale on the screens; the post says so.
+
+**One finding the row did not predict and it is the most useful line in the post.** The act orders cadastro *before*
+licenciamento, and the Ministry's own cadastral form makes the licença's tipo, validade, expedição and documento
+mandatory fields. Both are quoted, neither is resolved into a rule the sources do not state, and the post sends the reader
+to the gestor local, which is also where the wiki sends them.
+
+**Four hosts that did not answer, so nobody retries them.** `bvsms.saude.gov.br` is **403 to curl and to WebFetch** and
+`http://` only 301s to the same place, confirming the 22 November note and closing the route the CNES wiki itself links to
+for the Consolidação. `in.gov.br` gave `PROTOCOL_ERROR` to curl and **502 to WebFetch** on the `/en/web/dou/-/` shape, the
+third run to record it. `lexml.gov.br` **reset the connection**. `antigo.saude.gov.br` returns **502 from the egress
+proxy**. And one trap worth a line of its own: **`pesquisa.saude.gov.br/saudelegis` returns 200 and is not a legislation
+database** — it is a LimeSurvey install whose only content is "Os seguintes questionários estão disponíveis". It looks
+exactly like the official Saúde Legis search from the outside. `wiki.saude.gov.br` and `cnes.datasus.gov.br` both answer
+plain curl, and `ans.gov.br/images/stories/noticias/pdf/` remains the working route for acts the BVS will not serve.
+
+The decision named on 12 November is unchanged and is now eleven days further overdue. **Twenty-eight days in, every
+comparison slot is still producing nothing**, and this run consumed the second of the three rows the 11:00 run of
+22 November added. One row is left in the queue, the German `qualitaetsmanagement-zahnarztpraxis`, which the 08:00 run
+today will take, leaving the queue dry again by lunchtime. Either Queue A gets an extension schedule of its own, or three
+of the four daily runs are re-pointed at Queue B and this file says so. **That decision cannot be taken inside a run and
+has now been deferred by eighteen consecutive runs.**
