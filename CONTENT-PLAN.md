@@ -5296,3 +5296,30 @@ comparison slot is still producing nothing**, and this run consumed the second o
 today will take, leaving the queue dry again by lunchtime. Either Queue A gets an extension schedule of its own, or three
 of the four daily runs are re-pointed at Queue B and this file says so. **That decision cannot be taken inside a run and
 has now been deferred by eighteen consecutive runs.**
+
+**The 08:00 run of 23 November 2026 took the last live row in either queue**, the German
+`qualitaetsmanagement-zahnarztpraxis`, and wrote it to `blog/de/` as the single directory the country-locked row names.
+Queue A was spot-checked rather than re-audited, per the 15 November instruction, and the `harmonizacao-orofacial-dentista`
+row was skipped on its own 12 November instruction. **Both queues are now empty**, so the 11:00 run falls into the
+empty-queue branch: add three new Queue B targets, commit only that, and stop. The decision named on 12 November is now
+nineteen runs overdue.
+
+**Every source answered on the first attempt, and two notes in the row itself were wrong.** The dated
+`g-ba.de/downloads/62-492-4205/QM-RL_2026-06-18_iK-2026-08-20.pdf` returns 200 and a `pdftotext -layout`-readable PDF to
+plain curl, and `g-ba.de/richtlinien/87/` confirms the Fassung from the Richtlinienseite, so the dated-filename rule the
+row records holds and the short slug URL was not touched. `gesetze-im-internet.de` answered plain curl for both § 135a and
+§ 72 **without any flakiness**, which contradicts the standing note on that host: try it before assuming it is down. Two
+corrections to the row: **`kzbv.de/aub/` is a 404**, the QM material lives at
+`kzbv.de/zahnaerzte/qualitaetsfoerderung/einrichtungsinternes-qualitaetsmanagement/`; and **the Qualitätsprüfungs-Richtlinie
+is not the source for the QM Stichprobe at all**. The Stichprobe is in Anlage 2 Abschnitt II of the QM-RL itself, and the
+"four-year and two-year exemptions" the row expected **do not exist**: the Richtlinie's only exception is that a practice
+drawn once is removed from the following draw. That negative is now the second callout of the post.
+
+**The KZBV QM-Bericht is what made the post more than a Richtlinie summary.** `KZBV2024_QM-Bericht.pdf` carries the 2023
+Erhebung in full: 37.619 Praxen as Grundgesamtheit, 1.516 drawn (4,03 %), 1.482 auswertbar, 97,8 % Rücklauf, the per-question
+results, and the KZBV's own admission that negative answers to Fragen 12, 21 and 23 are partly misunderstandings of the QM
+vocabulary rather than missing instruments. It also settles which of the two Anlage-2 modes is live: the KZBV fixed the
+**two-yearly 4 %** option bundeseinheitlich, in force since 2021. **The report for the 2025 Erhebung is not published on
+that page as of this run**, so the post dates its figures to 2023 and says so. Three negatives were grep-verified against
+the instrument before publishing: `Zertifiz` and `QM-Handbuch` return **zero** across the whole Richtlinie, and
+`Praxishandbuch` returns exactly one hit, in Teil B Abschnitt III § 3, which is the basis for the first callout.
