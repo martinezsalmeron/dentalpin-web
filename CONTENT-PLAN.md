@@ -4467,6 +4467,65 @@ The decision named on 12 November is unchanged and is now four days further over
 **The `zus.pl` article pages need the curl route, not the offset route.** `zus.pl/pl/ezla` and `zus.pl/-/uzyskanie-upowaznienia-do-wystawiania-zaswiadczen-lekarskich` are ~313 KB and ~1 MB of navigation, and WebFetch at `offset: 0` and `offset: 100000` returned menus both times, which is budget spent for nothing. Plain curl answers with HTTP 200, and the article body sits in a `journal-content-article` div: strip the tags locally and the whole `opis sprawy` is there, both routes and all three terminy. **The asystent medyczny facts the 23 November row could not use are now sourced from the statute itself**, so nothing on that subject has to come from infor.pl: the twelve-month cap is art. 54a ust. 2, the lekarz's liability for the assistant's errors is ust. 6, and the Rejestr Asystentów Medycznych is ust. 15.
 
 
+
+**Checked on 24 November 2026, writing the `rechazar-paciente-clinica-dental` row, and one citation in that row is
+wrong.** The row says art. **2.2.c)** of Ley 44/2003 lists «Dentistas». It does not. Art. 2.2 has only two letters:
+**2.2.a)** is the nivel Licenciado group and it names the title «Licenciado en Odontología», never the word
+«Dentistas»; the «Dentistas» epígrafe is **art. 6.2.c)**, which attributes the bucodental functions to Licenciados en
+Odontología and Médicos Especialistas en Estomatología by reference to Ley 10/1986. So the chain that reaches a
+dentist is **2.2.a) plus 6.2.c)**, and the post cites it that way. The `justificante-dentista-trabajo` row already
+had 6.2.c) right, so this was a transcription slip in one row and not a shared misreading, but **the French and
+Italian rows of the same family were written from the same session**, so check their article numbers against the
+source rather than against the row.
+
+**The row's open item about the Código is resolved, and the better source is the Consejo General's own portal.** The
+row recorded only a COEM copy of the January 2013 text and told the writing run to establish the version in force
+from `consejodentistas.es`. It is at
+`transparencia.consejodentistas.es/wp-content/uploads/2023/12/CODETICA_version_consolidada_final-2.pdf`, on the
+national body's transparency portal rather than a provincial colegio's, and its own footnote 1 states the version:
+**«Texto consolidado vigente a partir de junio de 2012», approved by Acuerdo AA17/1999 of the Asamblea General of 9
+and 10 July 1999 with the modifications marked in the text**, the relevant one being **Acuerdo AA06/2012**, which
+footnote 9 says gave their current wording to apartados **primero y tercero of art. 18**. Prefer this file over the
+COEM one for any future Spanish deontology row.
+
+**Art. 18.1 is longer than the row quoted it, and the missing clause matters.** The row carried «derecho a aceptar o
+rechazar la responsabilidad de atender y tratar a un paciente, salvo cuando éste se encuentre en peligro» and stopped
+there. The article continues **«y siempre y cuando esta elección y decisión cumpla las normas ético-deontológicas
+enmarcadas en este Código»**, which is the clause that subordinates the right to arts. 11, 19 and 20 instead of
+leaving it standing alone. Art. 18.3 was left out as the row instructed and no CNMC claim was made anywhere in the
+post. Art. 20 turned out to carry the two exits from an already-accepted relationship (**20.2** loss of the necessary
+confianza, **20.3** repeated non-compliance with the indications), both with the same duty to leave constancia and
+hand over «toda la información necesaria», which is what let the post answer the clinic's actual question.
+
+**Ley 15/2022 is the instrument this family of rows was missing and it should be carried.** It is what moves the
+discrimination boundary from deontology into statute for a private Spanish practice: **art. 3.1.e)** lists Sanidad
+among the ámbitos, **art. 2.4** extends the obligations to «las personas físicas o jurídicas de carácter privado que
+residan, se encuentren o actúen en territorio español», **art. 2.1** names «enfermedad o condición de salud, estado
+serológico y/o predisposición genética» among the prohibited grounds, and **art. 2.3** bars illness from sheltering
+any difference of treatment beyond the treatment process, objective limitations and public-health reasons. One
+reading rule worth keeping: **in art. 15 only apartados 2 and 6 are worded impersonally** («Nadie podrá ser
+excluido…»), while 1, 3, 4 and 5 address las administraciones sanitarias, so a post that cites art. 15 flat at a
+private consulta overstates it. Art. 15.2's own escape is «salvo que razones médicas debidamente acreditadas así lo
+justifiquen», which is the line between derivar and rechazar.
+
+**One nuance the row warned about, and the reading that survived it.** Art. 5.1.d) is four sentences and they do not
+share a scope. The «normativa explícita» sentence names «el sistema público» and «el ámbito privado por cuenta
+ajena»; the renuncia sentence opens «En esta situación», resting on that same supuesto; the constancia formal
+sentence says «En el ejercicio en el sistema público o privado» with no «por cuenta ajena». The post says exactly
+that and does not resolve the autónomo's case by assertion, because **art. 20.2 of the Código imposes the constancia
+independently**, so the practical answer is the same either way and the interpretive gap never has to be closed.
+
+**Route facts, both cheap and both about verbatim text.** **For BOE statute text, use curl and strip the tags
+locally, not WebFetch.** `boe.es/buscar/act.php?id=<id>` answers curl with HTTP 200 and the full consolidated text,
+but **WebFetch's summariser caps quotes at ~125 characters** and will not reproduce a four-sentence article, which is
+the same cap this file already records for Légifrance; a regex tag-strip plus `html.unescape` gives the article
+verbatim in one call. Both Ley 44/2003 and Ley 15/2022 came out this way, and the act.php page for Ley 44/2003 is
+135 KB, so the WebFetch route also truncates before the later articles. **The Consejo General's Código PDF reads with
+`pdftotext -layout`, but a verbatim grep against it fails twice over**: article bodies are interrupted mid-sentence
+by the footnote block and page footer (art. 19.2 breaks after «del diagnóstico y»), and long words are
+hyphen-broken across lines («ético-\ndeontológicas»). Normalise whitespace and expect both before concluding a quote
+is not in the file.
+
 ## Where the routine publishes and flags
 
 Nothing in this list stops a publish. The post goes to main like any
