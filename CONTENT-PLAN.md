@@ -4526,6 +4526,71 @@ by the footnote block and page footer (art. 19.2 breaks after «del diagnóstico
 hyphen-broken across lines («ético-\ndeontológicas»). Normalise whitespace and expect both before concluding a quote
 is not in the file.
 
+
+**Checked on 25 November 2026, writing the `rifiutare-un-paziente-studio-odontoiatrico` row, and the row missed the
+article that answers half its own question.** The row framed the already-accepted patient through art. 23
+(continuità delle cure). The article actually on point is **art. 28, «Risoluzione del rapporto fiduciario»**, read
+verbatim this run: the medico who considers the rapporto di fiducia interrupted «può risolvere la relazione di cura
+con tempestivo e idoneo avviso, proseguendo la sua opera sino alla sostituzione con altro collega, cui sono trasmesse
+le informazioni e la documentazione utili alla continuità delle cure, previo consenso scritto della persona
+assistita». That is three datable obligations and it is the Italian counterpart of the Spanish art. 20.2/20.3 pair.
+**Carry it**: any Italian row about ending a relationship with a patient wants art. 28, not art. 23, and art. 27
+(«La libera scelta del medico e del luogo di cura costituisce diritto della persona») is its frame.
+
+**Two readings the row would have got wrong, and both are about what a quote actually says.** **Art. 3 is routinely
+mis-cited as the patient-side non-discrimination clause.** Its wording is «senza discriminazione alcuna, quali che
+siano le condizioni istituzionali o sociali nelle quali opera», and that closing clause describes **the conditions
+in which the practitioner works**, not the patient's characteristics. The patient-facing formulation is **art. 6**
+(«contrastando ogni forma di discriminazione nell'accesso alle cure») and the **giuramento professionale**, which
+art. 1 declares «parte costitutiva del Codice stesso» («di curare ogni paziente con scrupolo e impegno, senza
+discriminazione alcuna»). A post that leans on art. 3 flat overstates it. And **art. 26 is not a studio article**:
+it describes the cartella clinica as «documento essenziale dell'evento ricovero», so what a private practice can
+take from it is the requirements (completezza, chiarezza, diligenza, tracciabilità, correzioni «motivate e
+sottoscritte»), with art. 25 carrying the disclosure duty. Say that rather than citing art. 26 as if a studio had a
+ricovero.
+
+**The version question has a cheap answer on that PDF and it should be the first thing any Codice row reads.** The
+FNOMCeO file's cover page lists every post-2014 modification and there are exactly four: **art. 54 (16 December
+2016), art. 56 (19 May 2016), art. 76 (15 December 2017) and the indirizzi applicativi allegati all'art. 17
+(6 February 2020)**. So for any other article, including arts. 3, 6, 8, 21, 22, 23, 25, 26, 27, 28 and 36, the 2014
+wording is the wording in force and the cover page is the citation for saying so. That retires the
+«establish the version in force» step this file keeps spending runs on for Italy.
+
+**Route facts, and the Italian picture is better than this file records.**
+**`portale.fnomceo.it/wp-content/uploads/2023/08/CODICE-DEONTOLOGIA-MEDICA-2014-e-aggiornamenti_acc.pdf` answers
+plain curl with HTTP 200** and `pdftotext -layout` reads it cleanly, single column, article rubrics on their own
+line, so `grep -n "^Art\. N$"` locates any article in one call. **Normattiva is still dead both ways**: the
+`caricaArticolo` shape was reset by the egress proxy to curl and returned **HTTP 500** to WebFetch, so the 2014 note
+in this file stands. **`gazzettaufficiale.it` is intermittent and the two URL shapes are not equivalent.** The
+`eli/id/<date>/<codice>/sg` shape returns the «Gazzetta in fase di caricamento» navigation shell to WebFetch, and a
+guessed `caricaArticolo` for a legge (codiceRedazionale 18G00006, legge 219/2017) returned the same shell, so **do
+not reconstruct a caricaArticolo URL from a codiceRedazionale you have not seen served**. What does work is the
+exact codice civile URL this file already carries from 5 October 2026: `art.idGruppo=284`,
+`art.flagTipoArticolo=2`, `art.codiceRedazionale=042U0262`, which served **art. 2237 in full on the first attempt**,
+all three commi, 1317 bytes, tags stripped locally. The professional's side of that article is **commi 2 and 3**
+(«Il prestatore d'opera può recedere dal contratto per giusta causa», «deve essere esercitato in modo da evitare
+pregiudizio al cliente»), which is new material: the 5 October row used only comma 1, the client's recesso. Expect
+`Recv failure: Connection reset by peer` on roughly half of all gazzettaufficiale attempts and **retry rather than
+conclude the host is blocked**, the same `www2.camara.leg.br` behaviour recorded on 17 November.
+
+**The Italian statutory anti-discrimination layer has an official source that is not Normattiva.**
+**`presidenza.governo.it/USRI/confessioni/norme/dlegislativo_215_2003.pdf` serves d.lgs. 215/2003 to plain curl**,
+64 KB, `pdftotext -layout` clean, articles under `Articolo N` headings. Its **art. 3, comma 1** is the useful
+finding: the parità principle «si applica a tutte le persone sia nel settore pubblico che privato ed è suscettibile
+di tutela giurisdizionale», and the listed aree include **lettera f) «assistenza sanitaria»** and lettera i) «accesso
+a beni e servizi». **Scope it honestly**: art. 2 ties the whole decree to razza and origine etnica and art. 3
+comma 2 excludes differences based on nationality, so it answers one ground and no other, and a post that presents it
+as a general ban on discriminatory refusal is wrong. The procedural articles (art. 4) have been amended since 2003
+and **the amendment history could not be read this run** (the GU act for the 2008 amendment, codiceRedazionale
+08A04058, was reset three times), so cite arts. 2 and 3 as read from that document on the date consulted and make no
+claim about the decree's consolidated state. **Legge 219/2017 art. 1 comma 6 was wanted as a statutory anchor for
+the refusal right and was not obtained**, for the caricaArticolo reason above; the post was written without it and
+does not need it, but a future Italian row that does should look for a route other than a guessed GU URL.
+
+**One thing deliberately left out, per the row's own instruction.** The 2019 Rome case and the ONVS-style
+signalement figures were not reconstructed from news coverage, and no disciplinary outcome is cited anywhere in the
+post.
+
 ## Where the routine publishes and flags
 
 Nothing in this list stops a publish. The post goes to main like any
