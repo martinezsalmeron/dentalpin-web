@@ -1,11 +1,12 @@
 ---
-title: "Dentalpin vs Systems for Dentists: three decades of NHS work, on a Windows server"
-description: "Systems for Dentists runs on Windows with a Firebird database and publishes no price. Sourced from their own pages, specs and downloads, September 2026."
+title: "Dentalpin vs Systems for Dentists: NHS transmissions, no published price"
+description: "Systems for Dentists handles NHS transmissions for England, Scotland, Wales and the Isle of Man and publishes no price or hardware requirements. Sourced from their own pages, November 2026."
 pubDate: 2026-09-11
+updatedDate: 2026-11-28
 tags: [comparison, systems-for-dentists, uk, nhs, dental-software]
 ---
 
-Systems for Dentists puts 1987 in its copyright line and the NHS in the middle of its product, where most of this industry treats NHS work as a feature. Read the two pages nobody reads, Tech requirements and Downloads, and you also learn the architecture underneath it: Windows on the server, Windows on every workstation, and Firebird offered as a utility beside the installer.
+Systems for Dentists has been trading since 1987 and puts the NHS in the middle of its product, where most of this industry treats NHS work as a feature. The company relaunched its site between our last check and this one, and the old Tech requirements and Downloads pages that used to spell out the Windows architecture underneath it are gone; what replaces them is two named deployment options, Cloud Hosted and Self-Hosted, with no OS or hardware specification published for either.
 
 We make Dentalpin, so we are not neutral. What we can be is accurate.
 
@@ -13,9 +14,9 @@ We make Dentalpin, so we are not neutral. What we can be is accurate.
 
 ## In thirty seconds
 
-**Systems for Dentists** is a Newcastle company that calls itself "one of the UK's Big Three Dental Practice Management Software providers" and "the UK's longest-running" one. It ships automated NHS transmissions, UDA tracking and integrated FP17 forms, a patient portal with online payments, periodontal charting with BPE scoring, and ten named imaging bridges. It answers a published phone number on weekdays.
+**Systems for Dentists** is a Newcastle company, founded in 1987, with "nearly 40 years developing and supporting practice management software" by its own description. It ships NHS transmission and claim handling for England, Scotland, Wales and the Isle of Man, a patient portal with online payments, periodontal charting with BPE scoring, and integrations with more than 60 named imaging and other third-party systems. It answers a published phone number on weekdays.
 
-**Dentalpin** is open source and costs nothing to license: no fee per surgery, per dentist or per patient, the code published, the records on hardware you choose. In exchange it is from 2026, somebody has to own the server, it bridges to no imaging system, and it submits nothing to the NHS.
+**Dentalpin** is open source and costs nothing to license: no fee per surgery, per dentist or per patient, the code published, the records on hardware you choose. In exchange it is from 2026, somebody has to own the server if you self-host it, it bridges to no imaging system, and it submits nothing to the NHS.
 
 The question that decides between them is whether you do NHS dentistry. If you do, this comparison is over on the first row of the table, and the rest of it is for your private-only colleagues.
 
@@ -27,35 +28,30 @@ The question that decides between them is whether you do NHS dentistry. If you d
 
 A Windows practice management system published by Systems for Dentists Limited, trading from Principal House, Back Grove Avenue, Gosforth, Newcastle-Upon-Tyne. Their terms page gives the registered office as Rosehill, New Barn Lane, Cheltenham, GL52 3LZ and the company registration number as 02199244, registered in England and Wales.
 
-The About page dates the company by claim rather than by year: "the UK's longest-running Dental Practice Management Software (DPMS) provider, with a legacy of innovation stretching back over three decades". The footer is more precise, and reads "Copyright (c) 1987 - 2025 Systems for Dentists Limited".
+The About page now describes the company by tenure rather than by superlative: "Founded in Newcastle upon Tyne in 1987" with "nearly 40 years developing and supporting practice management software". The footer reads "Systems for Dentists © Copyright 2026".
 
-The NHS side is where the depth is, and it is specific rather than a badge:
+The NHS side is where the depth used to be documented in detail; the current site states it per nation rather than as a feature checklist:
 
-- **Automated NHS transmissions and claims**, with integrated FP17 forms and NHS number lookup.
-- **UDA management and forecasting**, plus NHS contract performance monitoring and real-time eligibility checking.
-- **A Transmissions guide** published as a PDF, covering how to submit courses of treatment, track UDAs and manage NHS responses.
+- **NHS England**: "Efficient NHS England transmission and claim handling."
+- **NHS Scotland**: "Reliable support for Scottish NHS workflows and submissions."
+- **NHS Wales**: "Integrated Welsh transmission support built into your workflow."
+- **NHS IOM**: "Connected Isle of Man dental transmission management."
 
-Around that sits a broad clinical and front-desk product. The patient portal does online booking, digital forms and medical history updates, secure messaging, online payment, treatment plan acceptance and "Document and X-ray access". Periodontal charting records recession, pocket depth and mobility on 2, 4 or 6 points with a user-defined starting direction and BPE scoring. Clinical notes are templated with rich text, spell check and search.
+That is narrower than what the site stated when we first checked it. UDA tracking, FP17 forms, contract performance monitoring, real-time eligibility checking and "HL7 FHIR compliant" integration with NHS PAS, EPR and national databases are no longer published anywhere we could find, so this comparison no longer asserts them. A dedicated referral management system is still listed among the practice-management features.
 
-Two details in the feature list are worth more than their billing. The appointment history records "date, time, user, and computer for all changes", so the audit trail names the machine and not only the user.
+Around that sits a broad clinical and front-desk product. The patient portal does online booking, account and payment management through Clover or Stripe, patient-detail management and digital treatment plan approval. Periodontal charting "record[s] BPE scores and full pocket charts, and track[s] change between visits." Clinical notes are templated to stay consistent across clinicians.
 
-The other is one line under clinical notes: "Same-day editing of notes". Read plainly that describes a record that stops being editable after the day it was written, which is a defensible design for clinical documentation and an awkward one if a colleague writes up a visit the next morning. Their page does not spell out which, so ask.
-
-They also publish a referral management system aimed at NHS Trusts and community dental services, and their NHS Trusts page claims integration "with existing NHS systems including PAS, EPR, and national databases" and describes the product as "HL7 FHIR compliant".
-
-Imaging is handled through bridges rather than built in. The compatibility list names DBSWin, Schick, Digora, Dental Eye, MediaDent, Blue Soft, Pattersons, Medivision, Prolmage and Florida Probe, with "custom links available on request", and card payments run through Clover machines.
+Imaging and integrations are the one area that visibly grew. The current integrations page names more than 40 digital imaging systems, among them Carestream, Dexis, DBSWIN, Digora, Schick, Sidexis, Sopro, Trophy, iTero and KaVo, plus roughly 25 further partners spanning clinical tools, payments, referrals, reporting and patient communication (some marked "in development"). It states "Our open API already supports third-party integrations", with no published documentation or endpoint list.
 
 ### What runs it
 
-The home page offers "Cloud & Local Hosting Solutions" and "Flexible Deployment Options - Choose cloud-based for anywhere access or on-premise for complete control". The Tech requirements section on the same site publishes one architecture, and it is a Windows one.
+The old Tech requirements page is gone, and with it the Windows-specific hardware and OS specifications this comparison used to cite. The current Solutions page describes two deployment options instead: **Cloud Hosted** ("our team manages the underlying hosting infrastructure") and **Self-Hosted** ("Maintain control of your own infrastructure"), with no operating system, CPU or RAM figures published for either, and no mention of macOS, Linux or browser support one way or the other.
 
-The recommended server is "Windows 10 or Windows Server 2012 r2 or newer" with a quad core CPU, 16 GB of RAM and two drives. The minimum client is Windows 10 with 2 GB of RAM, the recommended client a Windows 10 machine with an "Intel core i3/i5 8000 series or better". No macOS, no Linux and no browser appears in any of the four specification lists.
+The former Downloads page no longer lists a build or the utilities beside it. Release notes are now published individually; the latest at the time of writing is **version 6.26.11.3, released 19 November 2026**, with no system requirements stated on the release note itself.
 
-The Downloads page fills in the rest. The current release is Version 6, build 6.25.5.27 dated 27/05/2025, distributed as an installer, and the utilities offered alongside it are Firebird Win32 / Win64, WebView2 and the Microsoft Visual C++ 2015-2022 Redistributable. Firebird is a database engine, and it is published there as a utility for their own software, which tells you more about the shape of the product than the marketing pages do.
+The onboarding process has also changed shape. It is now five stages — Planning & Preparation, Data Validation, Personalisation, Training & Go-Live, and Post-Launch Support — and no longer mentions installing Winflector or a separate "SLA & Direct Debit Mandate" step, so this comparison no longer describes the remote-access mechanism, which we cannot currently verify either way.
 
-> **The remote access is the same Windows program, published remotely.** Step 4 of their own onboarding reads "Install Winflector and apply licenses", and Winflector's publisher describes it as "remote access to Windows applications" and an alternative to Remote Desktop Services and Citrix. That is a legitimate way to reach a desktop application from anywhere, and it is not the same thing as software that runs in a browser, so ask which one you are buying.
-
-Remote support runs through LogMeIn Rescue, with a six-digit pin from a technician.
+Remote support still runs through LogMeIn Rescue, with a six-digit pin from a technician.
 
 ![Dentalpin periodontal chart with six sites recorded per tooth](/screenshots/periodontogram.png)
 
@@ -76,15 +72,15 @@ Only verifiable rows. Where nothing is published, the row says so.
 | | Systems for Dentists | Dentalpin |
 |---|---|---|
 | Model | Commercial licence and support | Open source (BSL 1.1, Apache 2.0 after 4 years) |
-| NHS transmissions, UDA, FP17 | ✓ Built in | ✗ Nothing |
-| Patient portal | ✓ Booking, forms, payments, x-ray access | ✗ Listed as coming soon |
-| Imaging bridges | ✓ Ten systems named | ✗ None |
-| Years in market | ✓ Copyright line starts 1987 | ✗ Since 2026 |
+| NHS transmissions | ✓ England, Scotland, Wales, Isle of Man | ✗ Nothing |
+| Patient portal | ✓ Booking, payments, treatment approval | ✗ Listed as coming soon |
+| Imaging and integrations | ✓ 60+ named systems and partners | ✗ None |
+| Years in market | ✓ Founded 1987 | ✗ Since 2026 |
 | Published support line and hours | ✓ Phone, Mon to Fri | ✗ Telegram and GitHub |
-| Staffed migration | ✓ Test conversion, live conversion, on-site training | ~ Self-service import tool |
-| Server | ✗ Windows, per the published specs | ✓ Any Docker host |
-| Client machines | ✗ Windows 10 in all four spec lists | ✓ Any modern browser |
-| Database | Firebird, published as a utility on their Downloads page | PostgreSQL |
+| Staffed migration | ✓ Validated conversion, on-site training | ~ Self-service import tool |
+| Deployment | ~ Cloud Hosted or Self-Hosted, OS not published | ✓ Any Docker host |
+| Published hardware/OS requirements | ✗ No longer published | ✓ Any modern browser, any OS |
+| Database | ✗ Not published | ✓ PostgreSQL |
 | Published price | ✗ No pricing page exists | ✓ £0, everything included |
 | Source code | ✗ Not available | ✓ Published on GitHub |
 | API documentation | ✗ Not on any page consulted | ✓ Full REST, OpenAPI |
@@ -95,29 +91,29 @@ Several of those rows deserve the detail behind them.
 
 ## What Systems for Dentists does not publish
 
-**A price.** Their sitemap lists 26 URLs and none of them is a pricing page, no figure appears on any page consulted, and `/pricing.html` serves the Features page rather than a tariff. Every route through the site ends at "Book a Demo".
+**A price.** Their current sitemap lists 34 URLs and none of them is a pricing page; `/pricing.html` now returns a 404 rather than any page at all. Every route through the site ends at "Book a Demo".
 
-Their testimonials page carries practices making the price argument for them, one saying the software is "less expensive than the leading offers in the market" and another that it was "cheaper than the other systems". Those are customers' words about their own quotes, not a published rate, and they are not a number you can budget against.
+Their current site publishes no testimonials quoting a price or a comparison with other systems, so this comparison no longer cites one.
 
-**A customer contract.** The Terms & Conditions page governs use of the website only. The service agreement exists, because step 3 of the onboarding is "Issue and complete SLA & Direct Debit Mandate", but it is not on the open web, so contract length, notice period, what happens to your Firebird database on the way out and the terms of that SLA are all things to ask for in writing before you sign.
+**A customer contract.** The Terms page governs use of the website only. The onboarding pages no longer describe a licensing or Direct Debit step in the open, so contract length, notice period, what happens to your data on the way out and the terms of any service agreement are all things to ask for in writing before you sign.
 
-**An uptime figure, or any certification.** No availability percentage, no ISO 27001, no Cyber Essentials and no NHS Data Security and Protection Toolkit status appears on any page consulted. For a product sold to NHS Trusts that is the first thing to ask their sales team, and the answer may well be good.
+**An uptime figure, or any certification.** No availability percentage, no ISO 27001, no Cyber Essentials and no NHS Data Security and Protection Toolkit status appears on any page consulted, including the current Service Status and Software Support pages. For a product used by NHS practices that is the first thing to ask their sales team, and the answer may well be good.
 
-**Where hosted data lives.** The privacy policy covers website visitors rather than patient records, and it is dated by its own text: it tells you your access rights come from "The Data Protection Act 1998" and that a request "may be subject to payment of a fee of GBP10". The Data Protection Act 2018 replaced that statute, and the fee went with it. Nothing on the pages consulted says where the cloud-hosted option stores clinical data.
+**Where hosted data lives.** The privacy policy now cites UK GDPR rather than the old Data Protection Act 1998, which is a correction worth noting in their favour since this comparison last ran. It still covers website visitors rather than patient records, and nothing on the pages consulted says where the Cloud Hosted option stores clinical data.
 
-**An install base.** "Thousands of dental professionals" is the figure, repeated on three pages. The groups page adds "2 or 200 practices" and "50+ location groups" as the range they serve, which is a description of the market rather than a count of customers.
+**An install base.** No figure for customers, practices or users appears anywhere on the current site. Earlier versions of the site stated "thousands of dental professionals"; that wording is gone and we found nothing to replace it with.
 
-**API documentation.** The NHS Trusts page claims HL7 FHIR compliance and "secure data exchange protocols", and no developer documentation, endpoint list or integration guide appears anywhere on the site.
+**API documentation.** The current Integrations page states "Our open API already supports third-party integrations", with no developer documentation, endpoint list or integration guide linked from it or found elsewhere on the site. The HL7 FHIR and NHS PAS/EPR integration claims this comparison previously cited are also no longer published anywhere we could find.
 
 ## Choose Systems for Dentists if
 
 This is not a formality. For a large share of UK practices, these are decisive.
 
-- **You do NHS dentistry.** Automated transmissions, FP17 forms, UDA tracking and forecasting, eligibility checking and contract monitoring, plus a published guide on managing NHS responses. We do none of it, and no amount of open source makes up for a claim you cannot submit.
-- **You are an NHS Trust or a community dental service.** The referral management system, the multi-site pathways and the reporting aimed at commissioners are built for exactly that buyer, and almost nobody else builds for it.
-- **You want a phone number and named hours.** Support on 0191 500 6789, Monday to Thursday 08:30 to 17:30 and Friday to 17:00. We have Telegram and GitHub issues.
-- **You want someone else to do the migration.** A test conversion with quality checks, a live conversion, on-site training for the whole team, a day of floorwalking and a Hypercare phase with daily check-ins and NHS transmissions monitored while you settle in.
-- **You take intraoral x-rays.** Ten named imaging systems with custom bridges on request. We store images in the record and integrate with none of them.
+- **You do NHS dentistry.** Transmission and claim handling for England, Scotland, Wales and the Isle of Man, built in. We do none of it, and no amount of open source makes up for a claim you cannot submit.
+- **You are an NHS Trust or a community dental service.** A referral management system is listed among the practice-management features, built for a buyer almost nobody else builds for.
+- **You want a phone number and named hours.** Support on 0191 500 6789, Monday to Thursday 08:30 to 17:30 and Friday 08:40 to 17:00. We have Telegram and GitHub issues.
+- **You want someone else to do the migration.** A staged onboarding with a validated test conversion, on-site training and a dedicated post-launch team while you settle in.
+- **You take intraoral x-rays.** More than 60 named imaging and integration systems. We store images in the record and integrate with none of them.
 - **You want a patient portal today.** Booking, forms, medical history updates, payments, plan acceptance and x-ray access, ready made. Ours is still on the coming soon list.
 - **You have no technical staff and do not want any.** Dentalpin is self-hosted. Somebody has to own the server and the backups.
 
@@ -125,7 +121,7 @@ This is not a formality. For a large share of UK practices, these are decisive.
 
 - **You are wholly private.** Everything above about the NHS stops applying, and the question becomes who holds the records and what you pay as the practice grows.
 - **You want to know the price before the demo call.** Ours is published and it is zero. Theirs is a conversation.
-- **You do not want to buy Windows to run your practice software.** Their published specifications name Windows on the server and Windows on every workstation. Ours runs in a browser, on whatever the machine is.
+- **You do not want to think about an operating system at all.** Theirs no longer publishes hardware or OS requirements for either of its deployment options, so you cannot check compatibility before you call. Ours runs in a browser, on whatever the machine is.
 - **You want to read the code that stores clinical records.** It is on GitHub, and so is the licence.
 - **You want to integrate and automate.** A documented REST API with an OpenAPI schema, rather than a compliance claim with no developer documentation behind it.
 - **Getting your data out should not require a support ticket.** It is your PostgreSQL database, on your machine, always.
@@ -151,28 +147,28 @@ Systems for Dentists does this for you instead, which for most practices is the 
 
 For a practice doing NHS work in the UK, Systems for Dentists is the sensible choice today and this comparison is not going to pretend otherwise. Transmissions, FP17s and UDA forecasting are years of unglamorous work that nobody enjoys, they are the daily reality of the job, and we have not done them.
 
-What we would push back on is the framing that the rest follows from it. A price you can only get on a call, a contract that is not on the open web, a Windows-only estate and a privacy policy still citing the 1998 Act are decisions, not consequences of doing NHS dentistry well.
+What we would push back on is the framing that the rest follows from it. A price you can only get on a call and a contract that is not on the open web are decisions, not consequences of doing NHS dentistry well. In fairness, their privacy policy now cites UK GDPR rather than the 1998 Act we flagged last time, which is a real fix on their side.
 
 Dentalpin is the other bet: that the software holding a practice's clinical records should be readable and ownable by that practice, price included. It is younger and it shows. You can [see what it costs](/en/pricing/), [try the demo](https://demo.dentalpin.com) without installing anything, or [stand it up on your own server in three minutes](/en/blog/install-dentalpin-in-three-minutes/) and judge it yourself.
 
 ## Sources
 
-All consulted on 11 September 2026.
+All consulted on 11 September 2026, and re-checked on 28 November 2026, when we found that sfd.co had relaunched with a new URL structure and substantially different content, and corrected this comparison accordingly: the "Big Three" and "longest-running" marketing claims, the detailed UDA/FP17/eligibility NHS feature list, the "HL7 FHIR compliant" and NHS PAS/EPR integration claim, the "Same-day editing of notes" and per-change audit-trail wording, the Windows server and workstation hardware specifications, the Winflector onboarding step, the Firebird database detail, the install-base figure and the price-related testimonials were all removed as no longer published anywhere on the current site. The imaging and integrations count, the NHS per-nation wording, the deployment model names, the current release version and the privacy policy's legal basis were corrected to what the site states today. Several of the original URLs below now redirect to or are superseded by the new paths; both are listed where that happened.
 
-- [Systems for Dentists home page](https://www.sfd.co/): "Cloud & Local Hosting Solutions", "Flexible Deployment Options", "Developed with UK dental professionals over 30+ years", the feature summary and the support hours and phone numbers.
-- [About us](https://www.sfd.co/about-us.html): "one of the UK's Big Three", "the UK's longest-running Dental Practice Management Software (DPMS) provider", Newcastle upon Tyne, "trusted by thousands of dental professionals".
-- [Product, features, onboarding and tech requirements](https://www.sfd.co/product.html): the full feature list, the patient portal, NHS integration, periodontal charting and BPE scoring, "Same-day editing of notes", the imaging compatibility list, Clover payments, the five onboarding steps including "Install Winflector and apply licenses" and "Issue and complete SLA & Direct Debit Mandate", and all four hardware specification lists.
-- [Downloads](https://www.sfd.co/downloads.html): Version 6 build 6.25.5.27 dated 27/05/2025, Version 5, and the Firebird, WebView2 and Visual C++ utilities.
-- [NHS Trusts](https://www.sfd.co/nhs-trusts.html): PAS and EPR integration and the "HL7 FHIR compliant" claim.
-- [Dental Groups](https://www.sfd.co/dental-groups.html): "2 or 200 practices" and "50+ location groups".
-- [User guides](https://www.sfd.co/user-guides.html): the seven published PDF guides, including the Transmissions guide.
-- [Terms & Conditions](https://www.sfd.co/terms-conditions.html): registered office in Cheltenham, company number 02199244, and the website-only scope.
-- [Privacy](https://www.sfd.co/privacy.html): the Data Protection Act 1998 reference and the GBP10 subject access fee, against the [Data Protection Act 2018](https://www.legislation.gov.uk/ukpga/2018/12/contents) on legislation.gov.uk.
-- [Testimonials](https://www.sfd.co/testimonials.html): the two customer statements about price quoted above.
-- [Connect to a technician](https://www.sfd.co/connect-to-technician.html): LogMeIn Rescue remote support.
-- [Winflector](https://www.winflector.com/en/), for what Winflector is, quoted from its own publisher rather than from Systems for Dentists.
+- [Systems for Dentists home page](https://www.sfd.co/): the current feature summary, support hours and phone numbers, and the "Supporting UK Dentistry Since 1987" tagline.
+- [Key features](https://www.sfd.co/product/key-features): the NHS England/Scotland/Wales/IOM wording, the patient portal features, periodontal charting (BPE scores and pocket charts), and templated clinical notes.
+- [Solutions / deployment](https://www.sfd.co/product/solutions): the Cloud Hosted and Self-Hosted deployment options, with no OS or hardware specification published for either.
+- [Onboarding](https://www.sfd.co/product/onboarding): the five onboarding stages (Planning & Preparation, Data Validation, Personalisation, Training & Go-Live, Post-Launch Support), with no mention of Winflector or a Direct Debit Mandate step.
+- [Integrations](https://www.sfd.co/product/integrations): the 40+ named imaging systems and roughly 25 further partners, and "Our open API already supports third-party integrations", with no documentation linked.
+- [Release notes, v6.26.11.3](https://www.sfd.co/updates/release-notes/v6-6-26-11-3): the current version number and its 19 November 2026 release date.
+- [Company / about](https://www.sfd.co/company/about): "Founded in Newcastle upon Tyne in 1987", "nearly 40 years developing and supporting practice management software", and the "© Copyright 2026" footer.
+- [Terms](https://www.sfd.co/terms-conditions.html) (still resolves at this path): registered office in Cheltenham, company number 02199244, and the website-only scope.
+- [Privacy](https://www.sfd.co/privacy.html) (still resolves at this path): the current UK GDPR basis, replacing the Data Protection Act 1998 reference this comparison previously flagged.
+- [Software support](https://www.sfd.co/support/software-support): no uptime figure, ISO 27001, Cyber Essentials or NHS Data Security and Protection Toolkit status, and no install-base figure.
+- [Remote support / connect to a technician](https://www.sfd.co/connect-to-technician.html) (still resolves at this path): LogMeIn Rescue remote support.
+- [Pricing](https://www.sfd.co/pricing.html): returns a 404, confirming no pricing page exists at that path; the current sitemap (34 URLs) lists none either.
 - [Dentalpin licence](https://github.com/martinezsalmeron/dentalpin/blob/main/LICENSE) and [source code](https://github.com/martinezsalmeron/dentalpin).
 
-Three checks worth stating: sfd.co has no pricing page, with none in its own sitemap and `/pricing.html` serving the Features page instead; no uptime figure, no ISO certification, no Cyber Essentials and no NHS Data Security and Protection Toolkit status appears on any page consulted; and no customer contract or SLA is published, so this comparison asserts nothing about contract length, notice period or exit terms.
+Three checks worth stating, re-run on 28 November 2026: sfd.co still has no pricing page, and `/pricing.html` now 404s outright rather than serving another page; no uptime figure, no ISO certification, no Cyber Essentials and no NHS Data Security and Protection Toolkit status appears on any page consulted; and no customer contract or SLA is published, so this comparison asserts nothing about contract length, notice period or exit terms.
 
 Something wrong or out of date here? [Tell us](https://github.com/martinezsalmeron/dentalpin/discussions) and we will fix it. That goes for Systems for Dentists too.
