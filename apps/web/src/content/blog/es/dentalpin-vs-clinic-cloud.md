@@ -2,7 +2,7 @@
 title: "Dentalpin frente a Clinic Cloud: qué trae cada plan y dónde viven tus datos"
 description: "Comparativa entre Clinic Cloud, del grupo Doctoralia y con tarifa completa publicada, y Dentalpin, open source y autoalojable. Con cifras, fuentes y fechas."
 pubDate: 2026-08-14
-updatedDate: 2026-09-12
+updatedDate: 2026-11-28
 tags: [comparativa, clinic-cloud, software-dental]
 ---
 
@@ -42,7 +42,7 @@ Software de gestión dental open source. Te descargas el código, lo levantas do
 
 Odontograma, periodontograma, agenda, historia clínica, planes de tratamiento, presupuestos con firma, facturación, pagos, recalls e informes. Verifactu va dentro. Y un asistente de IA que ejecuta tareas sobre tus datos respetando los permisos de cada usuario.
 
-Hay dos formas de tenerlo, y en las dos el servidor está a nombre de tu clínica: lo montas tú gratis, o lo instalamos y lo mantenemos nosotros por 89 € al mes más el servidor, que contratas tú directamente. El desglose está en [precios](/es/precios/).
+Hay dos formas de tenerlo, y en las dos el servidor está a nombre de tu clínica: lo montas tú gratis, o le pides a un integrador de confianza que lo instale y lo mantenga, por lo que acordéis entre vosotros. Dentalpin no cobra nada por el software ni se lleva comisión del integrador. El desglose está en [precios](/es/precios/).
 
 Es de 2026. Eso importa y volvemos a ello.
 
@@ -63,11 +63,11 @@ Tres cosas más de su misma tabla, porque cambian la cuenta:
 
 1. **Las agendas extra se pagan.** El tooltip de esa fila dice "+10 EUR/ agenda extra hasta alcanzar el límite de cada plan". Mini tiene el límite en una agenda, Pro en cinco, y Max y Enterprise lo tienen abierto.
 2. **El asistente de IA es una suscripción aparte.** Noa Notes se anuncia a "20€ al mes + IVA (1 usuario)". El selector de la propia página de tarifas pone el plan Mini con Noa en 49 €, el Pro con tres licencias en 79 € y el Max con tres licencias en 109 €.
-3. **La rebaja que vimos en agosto ya no está activa.** El 14 de agosto los planes llevaban la etiqueta "2 meses al 50% Dto", que dejaba Mini en 14,5 €, Pro en 24,5 € y Max en 39,5 € durante ese periodo. Hoy esa etiqueta ha desaparecido y en su lugar la web conserva una plantilla distinta ("Black Friday, 50% dto 3 meses") que tampoco está activa en este momento. Lo único fiable es la tarifa de lista de la tabla de arriba, que es la que pagarás salvo que veas una promoción activa el día que entres en su web.
+3. **Las promociones van y vienen, y hoy hay otra activa.** El 14 de agosto los planes llevaban la etiqueta "2 meses al 50% Dto". El 12 de septiembre esa rebaja ya no estaba y no había ninguna otra activa. El 28 de noviembre sí hay: la web muestra un banner de Black Friday ("El precio más bajo del año está aquí") con la etiqueta "🔥 ¡50% dto 3 meses!", que deja Mini en 14,5 €, Pro en 24,5 € y Max en 39,5 € durante esos tres meses. Lo único fiable es la tarifa de lista de la tabla de arriba, que es la que pagarás si no hay ninguna promoción activa el día que entres en su web.
 
-Nuestra tarifa está en [precios](/es/precios/): 0 € si lo montas tú, o 490 € de puesta en marcha y 89 € al mes si lo mantenemos nosotros, más 12 a 15 € del servidor y 4 € de copias que contratas directamente a Hetzner.
+Nuestra tarifa está en [precios](/es/precios/): el software es 0 € siempre. Lo único que se paga seguro es el servidor (12 a 15 €) y las copias (4 €) si usas Hetzner como referencia, contratado directamente por ti. Si no quieres montarlo tú, un integrador lo instala y lo mantiene por lo que acordéis con él, sin tarifa fija publicada porque no es un servicio que preste Dentalpin.
 
-> **Si comparas la opción gestionada, ellos salen más baratos y no vamos a disimularlo.** Clinic Cloud Max cuesta 79 € al mes con el alta gratis; nuestro plan gestionado se va a entre 105 y 108 € al mes contando servidor y copias, más 490 € de entrada. Nuestra opción de 0 € existe, pero se paga en trabajo tuyo: el servidor lo administras tú.
+> **Clinic Cloud tiene un precio que puedes comparar hoy mismo; nosotros no, y hay que decirlo así.** Su plan Max cuesta 79 € al mes con el alta gratis. Lo nuestro, si no lo montas tú, depende de lo que te cobre el integrador que elijas, porque quien instala y mantiene no es Dentalpin. Lo único que sí es un número fijo en nuestro lado es el servidor y las copias, 16 a 19 € al mes, si lo montas tú mismo sin pagar a nadie más.
 
 ## Cara a cara
 
@@ -76,12 +76,12 @@ Solo filas verificables. Donde Clinic Cloud no publica el dato, lo decimos en ve
 | | Clinic Cloud | Dentalpin |
 |---|---|---|
 | Modelo | Suscripción comercial | Open source (BSL 1.1 → Apache 2.0 a los 4 años) |
-| Despliegue | En su nube | Tu servidor, o el que te montamos |
+| Despliegue | En su nube | Tu servidor, o el que te monte un integrador |
 | Tarifa publicada | ✓ Sí, cuatro planes en su web | ✓ Sí, en la página de precios |
 | Odontograma y periodontograma | ~ Desde el plan Max | ✓ Incluidos |
 | Presupuestos | ~ Desde el plan Pro | ✓ Incluidos |
 | Qué limita la cuota | ~ Agendas, +10 € cada una extra | ✓ Ni agendas ni usuarios |
-| Alta y permanencia | ✓ Alta gratuita y sin permanencia | ~ 490 € de alta en el plan gestionado |
+| Alta y permanencia | ✓ Alta gratuita y sin permanencia | ✓ Sin alta ni permanencia si lo autoalojas; a convenir con un integrador si no |
 | Verifactu y TicketBai | ✓ Desde el plan Mini | ✓ Módulo incluido |
 | Dónde viven los datos | En su plataforma | ✓ Donde tú decidas |
 | Código auditable | ✗ No | ✓ Publicado en GitHub |
@@ -98,7 +98,7 @@ Dos precisiones sobre esa tabla. La fila de la API dice lo que dice: en clinic-c
 
 Y esto va en serio, no es un trámite:
 
-- **No quieres administrar nada.** Ellos ponen la plataforma, las copias y las actualizaciones. Nosotros te pedimos que alguien se ocupe del servidor, o que nos pagues por ocuparnos, y eso es más caro que su plan Max.
+- **No quieres administrar nada.** Ellos ponen la plataforma, las copias y las actualizaciones. Nosotros no prestamos ese servicio directamente: necesitas que alguien se ocupe del servidor, tú mismo o un integrador que contrates aparte.
 - **Quieres pacientes nuevos, no solo gestionarlos.** La integración con Doctoralia entra en todos los planes, con reserva de cita online 24/7 y portal de pacientes. Ese es un problema comercial que nosotros no resolvemos en absoluto.
 - **Te piden ISO 27001.** La declaran en su web y nosotros no la tenemos.
 - **Tu centro no es solo dental.** Si conviven odontología con estética, fisioterapia o psicología, una plataforma pensada para varias especialidades resuelve algo que un producto solo dental no se plantea.
@@ -113,7 +113,7 @@ Que un fabricante publique el precio de cada plan, lo que entra en cada uno y ha
 
 ## Elige Dentalpin si
 
-- **Eres una clínica dental y la historia clínica es el producto.** El odontograma y el periodontograma son el trabajo diario de un gabinete, no un extra del plan superior. Aquí vienen en la instalación, la montes tú o te la montemos nosotros.
+- **Eres una clínica dental y la historia clínica es el producto.** El odontograma y el periodontograma son el trabajo diario de un gabinete, no un extra del plan superior. Aquí vienen en la instalación, la montes tú o te la monte un integrador.
 - **Tu clínica va a crecer en profesionales.** Cada agenda adicional suya son 10 € más al mes. La nuestra no cambia porque entre el cuarto dentista.
 - **Quieres el servidor a tu nombre.** En Clinic Cloud tus datos viven en su plataforma. Aquí eliges tú dónde, incluido tu propio armario.
 - **Quieres poder auditar el código** que guarda historias clínicas. Está en GitHub y puedes leerlo hoy.
@@ -143,7 +143,7 @@ Lo nuestro es otra apuesta: el código publicado, la historia clínica dental co
 
 ## Fuentes
 
-Todas consultadas el 14 de agosto de 2026, y revisadas de nuevo el 12 de septiembre de 2026, cuando se actualizó lo que aquí se decía sobre la promoción activa:
+Todas consultadas el 14 de agosto de 2026, revisadas de nuevo el 12 de septiembre de 2026, cuando se actualizó lo que aquí se decía sobre la promoción activa, y revisadas otra vez el 28 de noviembre de 2026, cuando se actualizó de nuevo la promoción activa (Black Friday) y se corrigió lo que aquí se decía sobre nuestro propio plan gestionado: Dentalpin ya no instala ni mantiene servidores a 89 € al mes, eso lo hacen integradores independientes a un precio que se acuerda con cada uno, según la página de [precios](/es/precios/):
 
 - [Tarifas y precios · Clinic Cloud](https://clinic-cloud.com/tarifas): los cuatro planes con sus precios "al mes + IVA", lo que incluye cada uno, la promoción "2 meses al 50% Dto", la comparativa completa de planes con las filas "Alta gratuita", "Sin permanencia", "Agendas" y "Odontograma y periodontograma", el tooltip "+10 EUR/ agenda extra hasta alcanzar el límite de cada plan", el precio de Noa Notes y las menciones a "Recomendado por más de 3.000 consultas y clínicas en España" e ISO/IEC 27001.
 - [Software clínica dental](https://clinic-cloud.com/software-clinica-dental-programa-odontologico): odontogramas, periodontogramas, agendas para odontólogos, presupuestos y análisis de productividad.
